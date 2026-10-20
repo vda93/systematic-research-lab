@@ -1,12 +1,19 @@
-# What the evidence supports
+# Limits of the historical portfolio
 
-- Every observation is synthetic. There is no real trading ledger, vendor feed, market forecast or evidence of a tradable edge.
-- The concentration example was deliberately constructed to fail. It demonstrates arithmetic, grouping and decision discipline rather than discovering a phenomenon.
-- The calibration audits one artificial AR(1) family at fixed parameters. Its 80 trials are a finite Monte Carlo diagnostic. All specified methods under-cover nominal 95% in this run; this does not prove that block bootstrap always fails or that one length is generally optimal.
-- The supplied paths have explicit close-date net amounts, not portfolio NAV, flows, marked exposure or executable prices. CAGR, annualized Sharpe, account pass probabilities and economic viability are not inferred.
-- Event correspondence does not regenerate opportunities after changed exits, position overlap or risk constraints. No production strategy, position-sizing engine or broker integration is included.
-- Same-date record keys impose deterministic ordering for drawdown. Intraday timing is absent. Known synthetic costs are teaching inputs; financing and realistic fill costs are not modeled.
-- Results are conditional on the protocol and implementation. Cross-platform CI provides engineering evidence, not independent scientific replication or a proof of statistical coverage.
-- Hashes establish replay identity. They do not confer an earlier timestamp, establish unseen-data access or turn a constructed recipe into prospective validation.
+The public case studies report completed private research. Readers can inspect aggregate consistency, methods code and presentation reconstruction, but cannot independently replay the historical backtests here. Licensed feeds, private implementations and trade/event ledgers are excluded. Original MOMCONT result directories were unavailable during this review; primary recorded decisions and Drive handoffs supplied those aggregates. The [evidence register](evidence.md) makes the boundary explicit.
 
-Natural extensions would be a separately governed empirical study using redistributable data, a broader predeclared calibration grid with uncertainty on coverage, and additional inferential methods such as studentized intervals. They would create new evidence; none is implied by this release.
+Sample classification follows each experiment. Previously inspected or spent periods cannot become fresh validation. DE30's terminal access-history qualification remains unresolved beyond the recorded retrospective boundary check. This publication opened no sealed data.
+
+Matching and clustered inference support conditional associations under the stated design, not causal proof. Small paired samples, correlated parameter cells, block-length sensitivity, missing regimes and multiple hypothesis selection limit generalization. No intervals were invented where a source did not report them.
+
+R-space performance, monetary accounting, modeled account outcomes and live execution are separate. Parity does not certify historical fills, contract portability, current account rules, live risk behavior or deployment readiness. Public utilities illustrate narrow methods; they do not reconstruct private engines.
+
+The atlas distinguishes evidence maturity from economic success. A support block has no P&L conclusion. Invalid event coverage cannot establish a clean strategy loss. An unrun holdout stays unrun. Results apply to the tested lineages, not every possible strategy in a family.
+
+## Separate synthetic methods appendix
+
+The [synthetic study](study.md) intentionally constructs a concentration counterexample and calibrates one artificial AR(1) generator. Its 80 trials are a finite Monte Carlo diagnostic. All declared methods under-cover nominal 95% in that run; this does not prove block bootstrap always fails or identify a generally optimal length.
+
+Synthetic fixtures have explicit close-date amounts, not marked portfolio NAV, cash flows or executable prices. They do not identify CAGR, annualized Sharpe or account success probabilities. Same-date ordering is a deterministic convention rather than recovered intraday chronology.
+
+Deterministic replay and hashes establish repeatability and byte identity. They do not establish unbiased inference, independent preregistration, unseen-data access or historical truth. A future independently reproducible market study would need qualified redistributable data and its own evidence plan.

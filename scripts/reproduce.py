@@ -1,4 +1,4 @@
-"""Run the complete suite and replay the original synthetic experiment offline."""
+"""Verify historical aggregate presentations and replay the synthetic methods study."""
 
 from __future__ import annotations
 
@@ -17,6 +17,8 @@ sys.path[:0] = [str(ROOT / 'src'), str(ROOT)]
 from scripts.audit_public import audit_directory, safe_name
 from srl.study import load_protocol, run_study
 from srl.visuals import render_summary
+from scripts.render_historical import historical_artifacts
+from srl.diagnostics import derive_diagnostics
 
 
 def artifact_bytes(root: Path) -> dict[str, bytes]:
@@ -35,7 +37,7 @@ def write_output(destination: Path, artifacts: dict[str, bytes], source: dict) -
         raise ValueError('choose a new output directory; existing work is preserved')
     if any(not safe_name(name) or not isinstance(payload, bytes) for name, payload in artifacts.items()):
         raise ValueError('artifact names must be safe relative paths with byte payloads')
-    receipt = {'scope': 'SYNTHETIC_ONLY', 'python': platform.python_version(), 'source_sha256': source,
+    receipt = {'scope': 'PUBLIC_PRESENTATION_AND_SYNTHETIC_METHODS', 'python': platform.python_version(), 'source_sha256': source,
                'artifacts': {name: hashlib.sha256(payload).hexdigest() for name, payload in artifacts.items()}}
     destination.mkdir(parents=True)
     for name, payload in artifacts.items():
@@ -62,11 +64,15 @@ def main() -> int:
         print(json.dumps({'audit': audit}, indent=2, sort_keys=True))
         return 1
     artifacts = artifact_bytes(ROOT)
+    historical = json.loads((ROOT / 'data/historical-results.json').read_text(encoding='utf-8'))
+    artifacts.update(historical_artifacts(historical))
+    artifacts['results/aggregate-diagnostics.json'] = (json.dumps(
+        derive_diagnostics(historical),sort_keys=True,indent=2,allow_nan=False)+'\n').encode()
     differences = check_artifacts(ROOT, artifacts)
     if differences:
         print(json.dumps({'artifact_mismatch': differences}, indent=2))
         return 1
-    receipt = {'status': 'PASS', 'scope': 'SYNTHETIC_ONLY', 'python': platform.python_version(),
+    receipt = {'status': 'PASS', 'scope': 'PUBLIC_PRESENTATION_AND_SYNTHETIC_METHODS', 'python': platform.python_version(),
                'tests': tested.testsRun, 'skipped': len(tested.skipped),
                'source_files': len(audit['files']),
                'artifacts': {name: hashlib.sha256(payload).hexdigest() for name, payload in artifacts.items()}}

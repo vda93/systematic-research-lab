@@ -1,5 +1,7 @@
 # Estimands, controls and assumptions
 
+This page documents the **synthetic methods appendix** and its public utilities. For real historical studies, read [empirical methods](empirical-methods.md).
+
 ## Cost-explicit amounts
 
 For observation i, net amount is `gross_i - cost_i`; costs must be known, nonnegative and finite. Totals use explicit accurate floating-point summation with finite-result checks. Profit factor divides the sum of positive net amounts by the absolute sum of negative net amounts; it is undefined (`None`) when no negative contribution exists.
