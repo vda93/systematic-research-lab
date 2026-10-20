@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "evidence_role": "SYNTHETIC",
+  "constructed_teaching_example": true,
+  "cohort_design": {
+    "start_date": "2040-01-02",
+    "weeks": 24,
+    "days_per_cohort": 7,
+    "close_offsets_days": [2, 4],
+    "record_cost": 0.125,
+    "second_record_net": -0.25,
+    "control_base_weekly_net": -0.5,
+    "treatment_base_weekly_net": -1.0,
+    "special_weeks": [
+      {"index": 4, "control_weekly_net": 3.0, "treatment_weekly_net": 16.0},
+      {"index": 17, "control_weekly_net": 2.0, "treatment_weekly_net": 12.0}
+    ]
+  },
+  "inference": {"block_sizes": [7, 14, 28], "repetitions": 999, "seed": 41027},
+  "stop_rule": {"remove_cohorts": 2, "minimum_retained_net": 0.0},
+  "calibration": {
+    "trials": 80,
+    "days": 128,
+    "burn_in": 512,
+    "rho": 0.75,
+    "innovation_scale": 0.25,
+    "common_shock_scale": 0.125,
+    "block_sizes": [1, 8, 16],
+    "repetitions": 399,
+    "seed": 902611
+  }
+}

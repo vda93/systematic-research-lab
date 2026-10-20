@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 640" role="img" aria-labelledby="title description">
+  <title id="title">SYNTHETIC: concentration stress and a known-mean uncertainty audit</title>
+  <desc id="description">Left: supplied net totals and complete-cohort stress. Right: measured coverage in a fixed synthetic null experiment. Neither panel is historical trading performance.</desc>
+  <rect width="1240" height="640" fill="#f5f8fa" />
+  <g font-family="Arial, Helvetica, sans-serif" fill="#132d40">
+    <text x="42" y="48" font-size="30" fill="#132d40" text-anchor="start" font-weight="700">SYNTHETIC / Stress the conclusion</text>
+    <text x="42" y="82" font-size="18" fill="#516b7b" text-anchor="start" font-weight="400">A constructed concentration example and a known-zero-mean calibration. No market performance.</text>
+    <rect x="36" y="115" width="555" height="440" rx="5" fill="#ffffff" stroke="#d6e1e7" />
+    <rect x="612" y="115" width="590" height="440" rx="5" fill="#ffffff" stroke="#d6e1e7" />
+    <text x="62" y="153" font-size="22" fill="#132d40" text-anchor="start" font-weight="700">1 / Remove complete cohorts</text>
+    <text x="638" y="153" font-size="22" fill="#132d40" text-anchor="start" font-weight="700">2 / Check nominal 95% interval coverage</text>
+    <line x1="78" y1="305" x2="548" y2="305" stroke="#8ba0af" stroke-width="1.5" stroke-dasharray="" />
+    <text x="64" y="311" font-size="14" fill="#516b7b" text-anchor="start" font-weight="400">0</text>
+    <rect x="120" y="305" width="70" height="33.27272727272727" rx="5" fill="#b84e4a" stroke="none" />
+    <text x="155" y="363.27272727272725" font-size="25" fill="#b84e4a" text-anchor="middle" font-weight="700">-6</text>
+    <text x="155" y="482" font-size="16" fill="#132d40" text-anchor="middle" font-weight="400">Control</text>
+    <rect x="273" y="271.72727272727275" width="70" height="33.27272727272727" rx="5" fill="#167d8a" stroke="none" />
+    <text x="308" y="259.72727272727275" font-size="25" fill="#167d8a" text-anchor="middle" font-weight="700">+6</text>
+    <text x="308" y="482" font-size="16" fill="#132d40" text-anchor="middle" font-weight="400">Treatment</text>
+    <rect x="426" y="305" width="70" height="122.00000000000001" rx="5" fill="#b84e4a" stroke="none" />
+    <text x="461" y="452.0" font-size="25" fill="#b84e4a" text-anchor="middle" font-weight="700">-22</text>
+    <text x="461" y="482" font-size="16" fill="#132d40" text-anchor="middle" font-weight="400">Remove 2 cohorts</text>
+    <text x="62" y="522" font-size="20" fill="#b84e4a" text-anchor="start" font-weight="700">Rule decision: REJECT</text>
+    <line x1="662" y1="221.10000000000002" x2="1168" y2="221.10000000000002" stroke="#96561d" stroke-width="1.5" stroke-dasharray="5 4" />
+    <text x="662" y="209.10000000000002" font-size="15" fill="#96561d" text-anchor="start" font-weight="400">Nominal 95%</text>
+    <line x1="662" y1="432.0" x2="1168" y2="432.0" stroke="#cbd7df" stroke-width="1.5" stroke-dasharray="" />
+    <text x="654" y="437.0" font-size="13" fill="#516b7b" text-anchor="end" font-weight="400">0%</text>
+    <line x1="662" y1="321.0" x2="1168" y2="321.0" stroke="#cbd7df" stroke-width="1.5" stroke-dasharray="" />
+    <text x="654" y="326.0" font-size="13" fill="#516b7b" text-anchor="end" font-weight="400">50%</text>
+    <text x="654" y="215.0" font-size="13" fill="#516b7b" text-anchor="end" font-weight="400">100%</text>
+    <rect x="700.0" y="315.45" width="74" height="116.55000000000001" rx="5" fill="#167d8a" stroke="none" />
+    <text x="737.0" y="305.45" font-size="21" fill="#132d40" text-anchor="middle" font-weight="700">52.5%</text>
+    <text x="737.0" y="466" font-size="16" fill="#132d40" text-anchor="middle" font-weight="400">Block 1</text>
+    <text x="737.0" y="493" font-size="14" fill="#516b7b" text-anchor="middle" font-weight="400">SE 5.6 pp</text>
+    <rect x="850.0" y="251.625" width="74" height="180.375" rx="5" fill="#167d8a" stroke="none" />
+    <text x="887.0" y="241.625" font-size="21" fill="#132d40" text-anchor="middle" font-weight="700">81.2%</text>
+    <text x="887.0" y="466" font-size="16" fill="#132d40" text-anchor="middle" font-weight="400">Block 8</text>
+    <text x="887.0" y="493" font-size="14" fill="#516b7b" text-anchor="middle" font-weight="400">SE 4.4 pp</text>
+    <rect x="1000.0" y="248.85000000000002" width="74" height="183.14999999999998" rx="5" fill="#167d8a" stroke="none" />
+    <text x="1037.0" y="238.85000000000002" font-size="21" fill="#132d40" text-anchor="middle" font-weight="700">82.5%</text>
+    <text x="1037.0" y="466" font-size="16" fill="#132d40" text-anchor="middle" font-weight="400">Block 16</text>
+    <text x="1037.0" y="493" font-size="14" fill="#516b7b" text-anchor="middle" font-weight="400">SE 4.2 pp</text>
+    <text x="638" y="530" font-size="16" fill="#516b7b" text-anchor="start" font-weight="400">80 trials per block length; every outcome retained.</text>
+    <text x="42" y="594" font-size="16" fill="#516b7b" text-anchor="start" font-weight="400">Units: synthetic net amounts (left), coverage across synthetic trials (right).</text>
+    <text x="42" y="620" font-size="15" fill="#516b7b" text-anchor="start" font-weight="400">Source: experiments/protocol.json and results/study.json; generated by srl.visuals.</text>
+  </g>
+</svg>
