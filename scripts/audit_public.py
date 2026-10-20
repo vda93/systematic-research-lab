@@ -49,6 +49,22 @@ def text_findings(name: str, payload: bytes) -> list[str]:
     return [f'private-content pattern in {name}' for pattern in PRIVATE if pattern.search(text)]
 
 
+def heading_anchors(text: str) -> set[str]:
+    """GitHub-style slugs for the ordinary ATX headings used by this release."""
+    anchors, counts = set(), {}
+    fenced = False
+    for line in text.splitlines():
+        if line.lstrip().startswith(('```', '~~~')):
+            fenced = not fenced
+        match = None if fenced else re.match(r'^#{1,6}\s+(.+?)\s*#*$', line)
+        if match:
+            slug = re.sub(r'[^\w\- ]', '', match[1].lower()).replace(' ', '-')
+            count = counts.get(slug, 0)
+            counts[slug] = count + 1
+            anchors.add(slug + (f'-{count}' if count else ''))
+    return anchors
+
+
 def audit_directory(root: Path) -> dict:
     root = root.resolve()
     findings = []
@@ -78,13 +94,34 @@ def audit_directory(root: Path) -> dict:
             for raw in LINK.findall(payload.decode('utf-8')):
                 target = unquote(raw.strip('<>'))
                 parts = urlsplit(target)
-                if parts.scheme or not parts.path:
+                if parts.scheme or (not parts.path and not parts.fragment):
                     continue
-                named = (path.parent / parts.path).resolve()
+                named = (path.parent / parts.path).resolve() if parts.path else path
                 if not named.is_relative_to(root) or not named.exists():
                     findings.append(f'broken local link: {name}')
+                elif parts.fragment and named.suffix == '.md' and named.is_file():
+                    if parts.fragment not in heading_anchors(named.read_text(encoding='utf-8')):
+                        findings.append(f'broken heading fragment: {name} -> {target}')
     return {'status': 'PASS' if not findings else 'FAIL', 'files': hashes,
             'findings': sorted(set(findings))}
+
+
+def metadata_findings(metadata: str, *, merge: bool = False) -> list[str]:
+    """Allow the public owner and GitHub's public merge-service committer only."""
+    fields = metadata.splitlines()
+    if len(fields) < 4:
+        return ['incomplete Git metadata']
+    public_owner = lambda name, email: name == 'vda93' and bool(
+        re.fullmatch(r'\d+\+vda93@users\.noreply\.github\.com', email))
+    findings = []
+    if not public_owner(fields[0], fields[1]):
+        findings.append('unexpected Git author identity')
+    if not public_owner(fields[2], fields[3]) and not (
+            merge and fields[2] == 'GitHub' and fields[3] == 'noreply@github.com'):
+        findings.append('unexpected Git committer identity')
+    if any(pattern.search(metadata) for pattern in PRIVATE):
+        findings.append('private-content pattern in Git metadata')
+    return findings
 
 
 def audit_git(root: Path) -> dict:
@@ -115,13 +152,8 @@ def audit_git(root: Path) -> dict:
                     findings.extend(text_findings(name, git('cat-file', 'blob', oid)))
                     checked_blobs.add(oid)
             metadata = git('show', '-s', '--format=%an%n%ae%n%cn%n%ce%n%B', revision).decode('utf-8')
-            fields = metadata.splitlines()
-            if len(fields) < 4 or fields[0] != 'vda93' or fields[2] != 'vda93':
-                findings.append('unexpected Git author or committer identity')
-            if any(not re.fullmatch(r'\d+\+vda93@users\.noreply\.github\.com', fields[i]) for i in (1, 3)):
-                findings.append('Git metadata must use the public noreply address')
-            if any(pattern.search(metadata) for pattern in PRIVATE):
-                findings.append('private-content pattern in Git metadata')
+            parents = git('rev-list', '--parents', '-n', '1', revision).decode().split()
+            findings.extend(metadata_findings(metadata, merge=len(parents) > 2))
     except (subprocess.CalledProcessError, OSError, ValueError, IndexError):
         return {'status': 'FAIL', 'findings': ['Git audit could not complete']}
     return {'status': 'PASS' if not findings else 'FAIL', 'commits': len(revisions),

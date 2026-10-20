@@ -1,42 +1,56 @@
-# Systematic Research Lab
+# TradingBotHQ · Systematic Research Lab
 
-**Original synthetic experiments in robustness, dependent-data inference and research correctness.**
+**Empirical systematic-trading research: test the mechanism, challenge the backtest, verify the implementation, and stop when the evidence fails.**
 
-This portfolio asks two concrete questions: does a positive aggregate survive removal of its strongest complete cohorts, and does a bootstrap interval cover a known mean when observations are dependent?
+TradingBotHQ is my independent quantitative research program. This portfolio distills its real historical experiments into research case studies, selected aggregate results and original figures. The work spans momentum continuation, opening ranges, candle features, event-driven trading and the infrastructure needed to investigate them. It includes rejected hypotheses and unresolved questions alongside constructive findings.
 
-The [worked study](docs/study.md) keeps the uncomfortable answers. Its constructed positive total fails concentration stress. Its known-zero-mean simulation exposes undercoverage in every declared bootstrap setting. Neither result is historical trading performance.
+## Sixty seconds
 
-![Synthetic concentration stress and known-mean bootstrap coverage](figures/research-summary.svg)
+| Question | What the research found |
+| --- | --- |
+| Does a better recent exit deserve promotion? | XAU no-trail increased recent total from **+48.72R to +52.83R**, while drawdown rose from **6.22R to 12.66R**. Earlier eras and portfolio sensitivity did not justify replacing the canonical exit. [MOMCONT](studies/momentum-continuation.md) |
+| Can a positive backtest fail robustness? | DE30 development fell from **+41.46R to −5.43R** after removing its ten best complete entry-date cohorts. A separate sizing repair preserved **837/837** meaningful trade paths. [DE30](studies/de30-continuation.md) |
+| Can correct software implement an unsuccessful strategy? | USTEC ORB passed one OOS block and failed the next. A separate gold lineage passed final implementation parity but failed monetary qualification and its terminal holdout. [ORB](studies/opening-range.md) |
+| Does failed continuation imply profitable reversal? | NOWICK's matched continuation effect was **+0.079 percentage points**, with a 95% interval crossing zero. A separately frozen reversal study rejected all three tested cells. [NOWICK](studies/nowick.md) |
 
-## Reproduce the whole study
+R is normalized initial planned trade risk, not an account-return percentage. These are reported historical results. Sample roles, costs, uncertainty and source access limits are stated in each study and the [evidence register](docs/evidence.md).
 
-With Python 3.12 or later, from the repository root:
+![Historical momentum results: directional symmetry and cross-era exit comparison](figures/momentum.svg)
+
+## Five minutes
+
+Read a case study that interests you, then inspect how it was challenged:
+
+- [Research atlas](docs/research-atlas.md): the wider evidence survey, including studies that did not become flagships.
+- [Research engineering](studies/research-engineering.md): source manifests, mutation detection, evidence roles and reproducible closeout.
+- [Methods](docs/empirical-methods.md): estimands, occupancy, paired block inference, concentration and semantic parity.
+- [Timeline](docs/timeline.md): how hypotheses evolved and why the decisions changed.
+
+## Thirty minutes
+
+Follow a claim from a [case study](studies/momentum-continuation.md) to the [source register](docs/evidence.md), [machine-readable aggregates](data/historical-results.json), [generated tables](results/historical-tables.md) and [figure reconstruction](scripts/render_historical.py). The [aggregate diagnostics](results/aggregate-diagnostics.json) derive the concentration, risk-fill and cross-era comparisons directly in [inspectable code](src/srl/diagnostics.py). Then inspect the [paired resampling](src/srl/resampling.py), [cost accounting](src/srl/accounting.py) and [semantic comparator](src/srl/validation.py), with their [tests](tests).
+
+The original [synthetic methods study](docs/study.md) remains available as a supporting calibration exercise. It is explicitly synthetic and supplies no evidence of a market edge.
+
+## Rebuild and verify
+
+Python 3.12 or 3.13, in a fresh virtual environment:
 
 ```sh
+python -m pip install .
 python scripts/reproduce.py --check
 ```
 
-The command runs all tests, audits the public file inventory and local links, and recomputes the checked-in JSON and SVG. It needs only the standard library. To save a new result bundle with source/output hashes:
+This runs the tests, disclosure and link audit, rebuilds the historical aggregate tables and four Matplotlib figures, and replays the synthetic calibration. To retain a separate bundle with hashes:
 
 ```sh
 python scripts/reproduce.py --check --output build/my-run
 ```
 
-An optional package installation is `python -m pip install -e .`. CI checks Python 3.12 and 3.13 on Linux and Windows.
+CI runs on Linux and Windows with both Python versions. Historical backtests require private licensed inputs and are **not** reproduced by this command. The public verification boundary is [documented explicitly](docs/provenance.md).
 
-## What to inspect
+## Scope and authorship
 
-| Research question | Evidence and implementation |
-| --- | --- |
-| What carries the aggregate? | [Complete-cohort stress and the preserved rejection](docs/study.md#concentration-is-a-decision-gate); [cost-explicit accounting](src/srl/accounting.py). |
-| How much uncertainty survives dependence? | [Known-DGP calibration](docs/study.md#calibrate-the-inference-tool); [paired circular blocks](src/srl/resampling.py). |
-| Did the comparison change the events? | [Finite semantic parity and narrow tolerances](src/srl/validation.py), with [adversarial tests](tests/test_validation.py). |
-| Can another researcher reconstruct the decision? | [Exact protocol](experiments/protocol.json), [all simulation trials](results/study.json), [replay and tamper tests](tests/test_reproduction.py). |
+This is vda93's research portfolio, prepared with AI-assisted engineering and writing. Public prose, figures and methods code are released under [MIT](LICENSE). Private strategy implementations, raw market data, account records, production configurations and evidence bundles are excluded.
 
-For a five-minute technical review, read the [study](docs/study.md), [method assumptions](docs/methods.md) and tests beside each small module.
-
-## Interpretation and authorship
-
-Every numerical result is a **synthetic demonstration**. The constructed payoff example is a teaching counterexample; the calibration evaluates a specified artificial data generator. There is no estimated market edge, broker execution, proprietary strategy or claim of future profitability. The [limitations](docs/limitations.md) explain the remaining inference and engineering boundaries.
-
-This release was independently authored with AI-assisted engineering. All source, fixtures, prose and figures are original release material under [MIT](LICENSE). [Provenance and replay identities](docs/provenance.md) make the scope explicit.
+The strongest result is the ability to distinguish a promising observation, a failed test, a correct implementation and an unresolved economic question. The [limitations](docs/limitations.md) remain part of the research.

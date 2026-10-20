@@ -1,0 +1,29 @@
+{
+  "de30": {
+    "removed_top10_date_contribution_r": 46.89,
+    "risk_fill_pct_of_request": 99.21
+  },
+  "input_precision_note": "Arithmetic uses rounded published inputs. The derived 46.8900R date contribution differs from the source full-precision reported 46.8901R; it is not a trade-exact reconciliation.",
+  "limits": "No daily paths, new standard errors, independent replay or deployment conclusions can be recovered from these aggregates.",
+  "momentum": {
+    "drawdown_multiple": 2.034721105932,
+    "era_no_trail_minus_canonical_r": {
+      "EARLY": -14.129,
+      "MID": -6.7903,
+      "RECENT": 4.1118
+    },
+    "primary_paired_interval": "NOT_ESTIMABLE_IN_SOURCE",
+    "recent_no_trail_minus_canonical_r": 4.1118,
+    "retained_trade_count_pct": 33.333333333333
+  },
+  "nowick": {
+    "primary_ci_includes_zero": true,
+    "primary_interval_width_pp": 1.170806
+  },
+  "orb": {
+    "interpretation": "Descriptive total cannot override the frozen standalone OOS-B failure.",
+    "pooled_oos_r": 25.836566721678,
+    "standalone_b_total_positive": false
+  },
+  "scope": "DESCRIPTIVE_ARITHMETIC_ON_REPORTED_AGGREGATES"
+}

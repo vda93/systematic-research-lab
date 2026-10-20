@@ -1,4 +1,4 @@
-name: Verify synthetic research
+name: Verify research portfolio
 
 on:
   push:
@@ -23,6 +23,6 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - name: Install the original package from public dependencies
-        run: python -m pip --isolated install --no-deps --index-url https://pypi.org/simple .
+        run: python -m pip --isolated install --index-url https://pypi.org/simple .
       - name: Run all tests and reproduce checked artifacts
         run: python scripts/reproduce.py --check
