@@ -18,12 +18,12 @@ kiwisolver==1.5.1
 librt==0.16.0
 license-expression==30.4.4
 markdown-it-py==4.2.0
-matplotlib==3.10.7
+matplotlib==3.11.2
 mdurl==0.1.2
 msgpack==1.2.3
 mypy==2.4.0
 mypy-extensions==1.1.0
-numpy==2.5.1
+numpy==2.5.4
 packageurl-python==0.17.6
 packaging==26.3
 pathspec==1.1.1
@@ -40,7 +40,7 @@ python-dateutil==2.9.0.post0
 requests==2.34.2
 rich==15.0.0
 ruff==0.17.1
-setuptools==83.0.0
+setuptools==84.0.0
 six==1.17.0
 sortedcontainers==2.4.0
 tomli==2.5.0

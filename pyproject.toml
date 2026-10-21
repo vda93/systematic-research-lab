@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools==83.0.0"]
+requires = ["setuptools==84.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 license = "MIT"
 authors = [{name = "vda93"}]
-dependencies = ["matplotlib==3.10.7", "numpy==2.5.1"]
+dependencies = ["matplotlib==3.11.2", "numpy==2.5.4"]
 
 [project.optional-dependencies]
 dev = ["coverage==7.16.2", "mypy==2.4.0", "pip-audit==2.10.1", "ruff==0.17.1"]
