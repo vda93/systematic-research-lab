@@ -16,9 +16,10 @@
     "README.md": [
       {
         "kind": "public_replay",
-        "sha256": "3ad398416b202e52131757c4c5d0369911f8bb16db4c3d48b87c2584bef3ea03",
+        "sha256": "418e6da1e98f6a8349d505ea38caabc1fe102e765f9d2bddd7eaed03efdb3790",
         "source_ids": [
-          "BB3"
+          "BB3",
+          "BB4"
         ]
       },
       {
@@ -854,6 +855,11 @@
       {
         "kind": "methods",
         "sha256": "28673aa55436f7e8826b6c028eef6d2d7eded39f943f14d5c3ee094b59184fdf",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "9e68ec4a313322dd3e27d51ca5e881bede5c030abd70af3409f13d9d2a5f1751",
         "source_ids": []
       }
     ],
@@ -3242,6 +3248,32 @@
       {
         "kind": "methods",
         "sha256": "e0edf3d31dfe313860afa82510016c3435e4ccae1de73e3df2f7c2a118d931fa",
+        "source_ids": []
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "7f5f7889b70059cb86771292225fd52a3e77a00c89a2dc77fe4b2dbb0cfa69fe",
+        "source_ids": [
+          "BB4"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "fdd19df5e05b3d622f836fb393803535e86e1390964693c590a5a4aea1466316",
+        "source_ids": [
+          "BB4"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "62364faefbf33b3884b208e175df4cd6e8822f3b182debe1bd33b078d35a94b6",
+        "source_ids": [
+          "BB4"
+        ]
+      },
+      {
+        "kind": "methods",
+        "sha256": "7eab8c9de5eb87ba08511357bee59d02c2c7851365b2038c42272638420d1a94",
         "source_ids": []
       }
     ],
@@ -6173,6 +6205,13 @@
       "id": "BB3",
       "kind": "public_replay",
       "sample_role": "development"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "real_market_data",
+      "id": "BB4",
+      "kind": "public_replay",
+      "sample_role": "validation"
     }
   ],
   "version": 1

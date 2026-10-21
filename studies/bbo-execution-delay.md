@@ -60,6 +60,35 @@ python scripts/bbo_summarize.py --runs /private/stage-runs --stage development -
 
 The flag is an explicit caller assertion of separately reviewed rights, integrity and stage chronology. It is not inferred from a hash or a test pass. The command verifies complete private artifact inventories, source identities, the seven scientific calculation files and the aggregation module; runner/acquisition/CLI controls have separate operational version histories. Missing planned days stay visible, while an incomplete or changed existing run fails the whole comparison. No network access occurs. Raw quotes, event prices and timed intent ledgers remain private; derived worst observations and quantiles are intentionally published statistics.
 
+## Validation closeout
+
+All twelve fixed 2024 first-of-month days completed replay under the implementation publicly frozen after development. The [validation aggregate](../data/bbo-validation-results.json) contains **2,665 primary price-paired shocks** across 12 contributing days. Its equal-day descriptive mean saving is **−0.17343 bps**, with a primary 95% bootstrap interval of **[−0.28359, −0.04098] bps** and two-day-block interval **[−0.27163, −0.06692] bps**. These are conditional quote comparisons, not fills or net returns. [BB4](../docs/evidence.md#bb4)
+
+Validation remains **DESCRIPTIVE_VALIDATION**, with support.pass=false: coverage, future depth and missing-target support remain explicit below. All planned days, including those below 100 shocks, stay in the aggregate; an undefined day would remain visible rather than being converted to a zero. No side, control, fee or latency cell changes the primary rule.
+
+| Selected day | Eligible shocks | Price pairs | Mean saving, bps | 95% eligibility | 99% depth | No missing targets |
+| --- | ---: | ---: | ---: | --- | --- | --- |
+| 2024-01-01 | 277 | 266 | −0.32836 | fail | fail | fail |
+| 2024-02-01 | 281 | 263 | −0.14544 | fail | fail | fail |
+| 2024-03-01 | 302 | 286 | −0.38672 | pass | fail | fail |
+| 2024-04-01 | 807 | 751 | −0.26687 | fail | fail | fail |
+| 2024-05-01 | 522 | 478 | −0.34559 | fail | fail | fail |
+| 2024-06-01 | 29 | 23 | 0.13738 | fail | fail | fail |
+| 2024-07-01 | 102 | 96 | −0.21121 | fail | fail | fail |
+| 2024-08-01 | 167 | 153 | −0.43076 | fail | fail | fail |
+| 2024-09-01 | 83 | 79 | −0.09181 | fail | fail | fail |
+| 2024-10-01 | 119 | 107 | −0.14580 | fail | fail | fail |
+| 2024-11-01 | 130 | 121 | −0.21605 | fail | fail | fail |
+| 2024-12-01 | 52 | 42 | 0.35003 | fail | fail | fail |
+
+The [validation closeout](../data/bbo-validation-closeout.json) binds these result bytes to the same frozen source/test/dependency inventory. READY_FOR_FINAL means the validation replay completed with reviewed correctness; it does not mean economic support passed. The [acquisition chronology](../data/bbo-validation-acquisition.json) records retained local GET receipts after the public development/implementation closeout. These receipts are not independent authentication of provider-access history. Final data remain unaccessed at this validation closeout.
+
+After independently obtaining the declared source bytes under the provider's terms, replay each day into a new external `YYYY-MM-DD-v1` directory using implementation commit `28c779bd94e75b319dcaf065436c96b0359288d8` and the immutable development-closeout commit `e23ef8439a567ab3ad40c22180b3d48af9712dcb`. The worker accepts these through `--implementation-commit` and `--stage-commit`. Then compare every validation statistic offline:
+
+```sh
+python scripts/bbo_summarize.py --runs /private/stage-runs --stage validation --external-gates-passed --check data/bbo-validation-results.json
+```
+
 ## Rights and reproduction boundary
 
 [Tardis's use conditions](https://docs.tardis.dev/faq/general.md#what-can-i-use-the-data-for) permit research and publication of non-reconstructible statistics; raw redistribution remains prohibited. Binance BTCUSDT is used; Coinbase data are excluded. Free first-of-month access determines the sample and limits generalization. The [acquisition identity receipt](../data/bbo-acquisition.json) records the protocol, source, compressed-file hash and contemporaneous documentation hashes. Those retained receipts are evidence of the declared workflow, not independently authenticated network-access logs or candidate authorship.

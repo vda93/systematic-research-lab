@@ -10,7 +10,7 @@ I direct TradingBotHQ, a systematic-trading research project. This portfolio con
 
 Historical case studies reconstruct published aggregates from retained primary records. The [ECB FX study](studies/fx-reference-momentum.md) additionally replays real reference-rate observations from a permitted public snapshot. Its negative finding remains intact; reference marks do not establish executable fills or net trading returns. [Evidence and limitations](docs/evidence.md) distinguish these verification levels.
 
-The [BBO execution-delay study](studies/bbo-execution-delay.md) compares actual displayed bid/ask costs. Its separately frozen amendment now has twelve development days and 2,421 paired shock observations: a descriptive mean saving of −0.41005 bps, with failed coverage, missing-target and depth support. Validation and final results remain pending; no fills or trading profits are claimed.
+The [BBO execution-delay study](studies/bbo-execution-delay.md) compares actual displayed bid/ask costs. Its separately frozen amendment now has twelve development days and 2,421 paired shock observations: a descriptive mean saving of −0.41005 bps, with failed coverage, missing-target and depth support. The separate twelve-day validation sample contains 2,665 pairs and a descriptive mean of −0.17343 bps, also with failed support. Final results remain pending; no fills or trading profits are claimed.
 
 ## Five minutes
 
