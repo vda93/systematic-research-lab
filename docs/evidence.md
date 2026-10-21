@@ -10,131 +10,131 @@ Raw vendor data, strategy execution code, exact production settings and operatio
 
 ## M1
 
-**MOMCONT H021/H022 — Control parity before treatments.** Primary decision records and frozen experiment specs; reported archived controls, not rerun here.
+**MOMCONT H021/H022: Control parity before treatments.** Primary decision records and frozen experiment specs; reported archived controls, not rerun here.
 
 ## M2
 
-**MOMCONT H021 — Directional mirror rejected.** Completed primary decision record; long uncertainty also crosses zero.
+**MOMCONT H021: Directional mirror rejected.** Completed primary decision record; long uncertainty also crosses zero.
 
 ## M3
 
-**MOMCONT H022 — Exit ablation and occupancy.** Completed primary decision record; 64 XAU pairs, frozen primary interval not estimable.
+**MOMCONT H022: Exit ablation and occupancy.** Completed primary decision record; 64 XAU pairs, frozen primary interval not estimable.
 
 ## M4
 
-**MOMCONT H023A — Three-era robustness.** Completed primary decision record and era definitions; recent reused, early canonical negative.
+**MOMCONT H023A: Three-era robustness.** Completed primary decision record and era definitions; recent reused, early canonical negative.
 
 ## M5
 
-**MOMCONT H023A/H023B — Candidate freeze.** Frozen specs and primary decision records; selection remained separate from path archaeology.
+**MOMCONT H023A/H023B: Candidate freeze.** Frozen specs and primary decision records; selection remained separate from path archaeology.
 
 ## M6
 
-**MOMCONT H023B — Ratchet comparison.** Completed primary decision record; common-entry effect distinct from total path.
+**MOMCONT H023B: Ratchet comparison.** Completed primary decision record; common-entry effect distinct from total path.
 
 ## M7
 
-**MOMCONT H025 — Paired portfolio blocks.** Completed primary decision record and Drive handoff; 14/28/56-day sensitivity, account simulations conditional.
+**MOMCONT H025: Paired portfolio blocks.** Completed primary decision record and Drive handoff; 14/28/56-day sensitivity, account simulations conditional.
 
 ## M8
 
-**MOMCONT H025 — Stop condition.** Completed decision and handoff; no continuing exit search inferred.
+**MOMCONT H025: Stop condition.** Completed decision and handoff; no continuing exit search inferred.
 
 ## D1
 
-**DE30 H002 — Persistence development.** Completed primary decision; development only, costs included in reported net R.
+**DE30 H002: Persistence development.** Completed primary decision; development only, costs included in reported net R.
 
 ## D2
 
-**DE30 H003 — Concentration rejection.** Completed primary decision corroborated by archived private claim audit; full date-cohort stress.
+**DE30 H003: Concentration rejection.** Completed primary decision corroborated by archived private claim audit; full date-cohort stress.
 
 ## D3
 
-**DE30 H003/H004 — Terminal authorization after failure.** Recorded research chronology; prior failure retained.
+**DE30 H003/H004: Terminal authorization after failure.** Recorded research chronology; prior failure retained.
 
 ## D4
 
-**DE30 H004 — Terminal results and concentration.** Completed primary decision corroborated by prior source audit. Reported gates passed; concentration remains.
+**DE30 H004: Terminal results and concentration.** Completed primary decision corroborated by prior source audit. Reported gates passed; concentration remains.
 
 ## D5
 
-**DE30 H004 — Spent period and access qualification.** Completed-run retrospective boundary check. Entire pre-attempt access history was not independently reconstructed.
+**DE30 H004: Spent period and access qualification.** Completed-run retrospective boundary check. Entire pre-attempt access history was not independently reconstructed.
 
 ## D6
 
-**DE30 H002/H004 — Original under-risking.** Recorded engineering diagnostics; requested and actual exposure differ.
+**DE30 H002/H004: Original under-risking.** Recorded engineering diagnostics; requested and actual exposure differ.
 
 ## D7
 
-**DE30 H005 — Sizing repair and semantic paths.** Primary decision plus local final gate and canonicalization amendment inspected and hashed; known-data replay.
+**DE30 H005: Sizing repair and semantic paths.** Primary decision plus local final gate and canonicalization amendment inspected and hashed; known-data replay.
 
 The full canonical decision was refreshed for this release. Its later October 2026 production risk-input hotfix does not inherit certification from the earlier historical replay.
 
 ## D8
 
-**DE30 H005 — Narrow numerical amendment.** Local amendment inspected; exact semantic fields, two redundant price fields with absolute tolerance, no economic rerun.
+**DE30 H005: Narrow numerical amendment.** Local amendment inspected; exact semantic fields, two redundant price fields with absolute tolerance, no economic rerun.
 
 ## D9
 
-**MOMCONT H026 — Later portfolio inclusion.** Completed primary decision and later Drive handoff; evaluation inclusion rejected, funded inclusion conditional in bounded simulations.
+**MOMCONT H026: Later portfolio inclusion.** Completed primary decision and later Drive handoff; evaluation inclusion rejected, funded inclusion conditional in bounded simulations.
 
 ## O1
 
-**USTEC timing/mechanism — Representative selection and controls.** Completed primary selection and mechanism reports; discovery, 18 correlated cells, partial first year.
+**USTEC timing/mechanism: Representative selection and controls.** Completed primary selection and mechanism reports; discovery, 18 correlated cells, partial first year.
 
 ## O2
 
-**USTEC OOS-A/OOS-B — Conflicting standalone blocks.** Completed reports and decisions inspected; later burnoff is not signal eligibility. Monetary parity not certified.
+**USTEC OOS-A/OOS-B: Conflicting standalone blocks.** Completed reports and decisions inspected; later burnoff is not signal eligibility. Monetary parity not certified.
 
 ## O3
 
-**XAU Phase 8B final — Scientific parity passed.** Final full-parity manifest supersedes earlier failures; no new tester run in this publication.
+**XAU Phase 8B final: Scientific parity passed.** Final full-parity manifest supersedes earlier failures; no new tester run in this publication.
 
 ## O4
 
-**XAU Phase 8C/8D — Execution and monetary qualification.** Completed reports inspected: monetary reconciliation is narrower than deployment economics. Program postmortem covers financing.
+**XAU Phase 8C/8D: Execution and monetary qualification.** Completed reports inspected: monetary reconciliation is narrower than deployment economics. Program postmortem covers financing.
 
 ## O5
 
-**XAU 2026 terminal lockbox — Valid negative/flat terminal outcomes.** Completed compact review inspected; reported monetary PF rounded to two decimals; history spent.
+**XAU 2026 terminal lockbox: Valid negative/flat terminal outcomes.** Completed compact review inspected; reported monetary PF rounded to two decimals; history spent.
 
 ## O6
 
-**Historical ORB closeout — Tested lineages closed.** Primary final program postmortem read from connected decision system. Separate successor hypotheses and untested parked branches preserved.
+**Historical ORB closeout: Tested lineages closed.** Primary final program postmortem read from connected decision system. Separate successor hypotheses and untested parked branches preserved.
 
 ## OF
 
-**ORB-Fade baseline — Negative frozen baseline.** Completed baseline decision and aggregate analysis inspected. Separate successor economics not inferred.
+**ORB-Fade baseline: Negative frozen baseline.** Completed baseline decision and aggregate analysis inspected. Separate successor economics not inferred.
 
 ## N1
 
-**NOWICK H004 — Matched incremental event study.** Local completed analysis, brief and decision inspected and hashed; day-cluster individual CI in percentage points.
+**NOWICK H004: Matched incremental event study.** Local completed analysis, brief and decision inspected and hashed; day-cluster individual CI in percentage points.
 
 The refreshed original-family closeout explicitly labels rejection and shelving as a user decision; this supports the narrow personal-adjudication statement in the ownership disclosure.
 
 ## N2
 
-**ANTI-NOWICK R001 — Independent reversal rejection.** Local decision, fixed contract, cost model and source-parity audit inspected and hashed; week-cluster individual CIs, Holm p-values separately.
+**ANTI-NOWICK R001: Independent reversal rejection.** Local decision, fixed contract, cost model and source-parity audit inspected and hashed; week-cluster individual CIs, Holm p-values separately.
 
 ## E1
 
-**Research OS v004 — Evidence catalog and closeout.** Maintained private implementation documentation inspected; public description, no private code import.
+**Research OS v004: Evidence catalog and closeout.** Maintained private implementation documentation inspected; public description, no private code import.
 
 ## E2
 
-**Research OS v004 QA — Mutation and reference checks.** Private tests and recorded QA inspected; tests not rerun here. Synthetic fixtures are not historical economics.
+**Research OS v004 QA: Mutation and reference checks.** Private tests and recorded QA inspected; tests not rerun here. Synthetic fixtures are not historical economics.
 
 ## E3
 
-**Research guardrails — Separate evidence and authorization gates.** Private guardrail implementation inspected; no live qualification inferred.
+**Research guardrails: Separate evidence and authorization gates.** Private guardrail implementation inspected; no live qualification inferred.
 
 ## E4
 
-**Worktree freshness gate — Checkout identity and ancestry.** Reviewed private gate and documentation inspected; historical roots missing skills remain historical.
+**Worktree freshness gate: Checkout identity and ancestry.** Reviewed private gate and documentation inspected; historical roots missing skills remain historical.
 
 ## Engineering source register
 
-E1–E4 describe the maintained tooling checkout. Older research branches were inspected under an explicit read-only frozen-ancestry exception, with missing skills recorded privately. Their age was not repaired by rewriting scientific history. Tool availability is not deployment authorization.
+E1 to E4 describe the maintained tooling checkout. Older research branches were inspected under an explicit read-only frozen-ancestry exception, with missing skills recorded privately. Their age was not repaired by rewriting scientific history. Tool availability is not deployment authorization.
 
 ## Interpreting reported numbers
 
@@ -152,15 +152,15 @@ These source keys refer to the extended evidence census. They follow the same pr
 
 ## A-MOM-SCALE
 
-**MOMCONT H003–H010 scale and geometry.** Primary completed decision records. Later factorial evidence supersedes the primary economic-horizon explanation; interacting paths remain historical diagnostics.
+**MOMCONT H003 to H010 scale and geometry.** Primary completed decision records. Later factorial evidence supersedes the primary economic-horizon explanation; interacting paths remain historical diagnostics.
 
 ## A-MOM-DECAY
 
-**MOMCONT H011–H019 development and portability.** Completed decisions and semantic parity reports. Later recent sample is retrospectively reserved within a lineage that had previously viewed those dates; no globally untouched claim.
+**MOMCONT H011 to H019 development and portability.** Completed decisions and semantic parity reports. Later recent sample is retrospectively reserved within a lineage that had previously viewed those dates; no globally untouched claim.
 
 ## A-MOM-BTC
 
-**MOMBTC H001–H005 and branch closure.** Completed primary decisions; development mechanism failed recent stress, slower cells uncertain, future optional protocol unrun.
+**MOMBTC H001 to H005 and branch closure.** Completed primary decisions; development mechanism failed recent stress, slower cells uncertain, future optional protocol unrun.
 
 ## A-DE30-M30
 
@@ -168,7 +168,7 @@ These source keys refer to the extended evidence census. They follow the same pr
 
 ## A-VENOM-FEEDS
 
-**Venom H001–H007.** Completed primary cross-feed and telemetry decisions. Frozen candidate is development-only; H007 remains unrun in reviewed records.
+**Venom H001 to H007.** Completed primary cross-feed and telemetry decisions. Frozen candidate is development-only; H007 remains unrun in reviewed records.
 
 ## A-VENOM-ENGINEERING
 
@@ -406,12 +406,12 @@ Inspected the complete retrieved research registry and registered local experime
 
 ## FX1
 
-**ECB-FX-MOM20-v001 — public end-to-end reference-rate study.**
+**ECB-FX-MOM20-v001: public end-to-end reference-rate study.**
 
 The complete public pipeline qualifies a selected official ECB historical snapshot and rebuilds delayed momentum features, purged temporal roles, paired block inference and frozen robustness checks. The protocol and implementation were published at commit `3dd50f4bfe5299e345acf3fe0e2b8c697967fe2e` before acquisition. [Acquisition receipt](../data/ecb-acquisition.json), [execution receipt](../data/ecb-execution.json), [data conditions](../DATA_LICENSE.md), [protocol](../experiments/ecb-fx-mom20-protocol.md), [results](../data/ecb-fx-results.json) and [study](../studies/fx-reference-momentum.md) establish the public verification path. The dataset is a revised reference-rate vintage, not executable quotes or pristine prospective OOS. Independent recomputation checks implementation against the same provider, not independent provider truth.
 
 ## SYN1
 
-**Synthetic methods calibration — no historical market evidence.**
+**Synthetic methods calibration: no historical market evidence.**
 
 [Protocol](../experiments/protocol.json), [implementation](../src/srl/study.py) and [results](../results/study.json) define an entirely synthetic teaching/calibration exercise. This source is reserved for illustration and cannot support a historical-market alpha claim.

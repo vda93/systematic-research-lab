@@ -2,20 +2,20 @@
 
 [Portfolio](../README.md) · [Research atlas](../docs/research-atlas.md) · [Evidence register](../docs/evidence.md)
 
-These entries distinguish completed negative research, uncertain historical associations, support-only stops, data forensics, and engineering qualification. Numerical findings are retained experiment aggregates; this portfolio preparation did not rerun market studies. Underlying proprietary inputs and operational configurations remain private. A favorable historical aggregate, parity check, or accepted research hypothesis does not authorize deployment.
+The news research includes rejected filters, uncertain associations and a calendar-coverage failure. These are reported historical aggregates; the portfolio did not rerun the underlying studies. Proprietary inputs and operational configurations remain private, and none of these research or parity results authorizes deployment.
 
 ## MacroImpulse and NewsScope: controlled parity with bounded scope [B08](../docs/evidence.md#b08)
 
 The AI-assisted engineering program reconstructed an event-driven execution state machine and compared it with a NewsScopeEA reference under controlled events, broker ticks, and parameters. Recorded parity gates covered pending geometry, spread-aware stops, trigger/fill behavior, trailing ratchets, reverse-exit ordering, deletion, commission, and final balances on three FX instruments. This is a controlled engineering comparison. It does not establish full-year event-selection equivalence or standalone NewsScope profitability.
 
-A separate historical timestamp qualification found that the selected news source aligned directly with the qualified UTC clock, without a timestamp shift or DST adjustment. That frozen alignment is an input contract, not proof of publication latency. Preserving these distinctions prevents a successful state-machine comparison from becoming a claim about every broker, every configuration, or the reference vendor's broader performance. Unresolved comparator scope remains explicit rather than silently assumed.
+A separate historical timestamp qualification found that the selected news source aligned directly with the qualified UTC clock, without a timestamp shift or DST adjustment. That frozen alignment is an input contract, not proof of publication latency. The state-machine comparison covers the controlled events tested. Its scope remains unresolved beyond them, so it cannot establish behavior on every broker or configuration, or the reference vendor's broader performance.
 
 
 ## MacroImpulse baseline bridge and a rejected spread filter [B09](../docs/evidence.md#b09)
 
-The frozen high-impact baseline was evaluated on ten FX pair-year cells in 2023–2024. The recorded aggregate contained **1,396 trades**, spread-only P&L of **+$4,250.48**, and spread-only profit factor **3.6889**. All ten cells were positive. This is historical bridge evidence under its specified accounting, with commission excluded; it is not a net investable-return claim.
+The frozen high-impact baseline was evaluated on ten FX pair-year cells in 2023 to 2024. The recorded aggregate contained **1,396 trades**, spread-only P&L of **+$4,250.48**, and spread-only profit factor **3.6889**. All ten cells were positive. This is historical bridge evidence under its specified accounting, with commission excluded; it is not a net investable-return claim.
 
-A separately frozen spread-filter validation then ran twenty pair-year-arm cells in 2021–2022. Integrity passed, but the treatment reduced spread-only P&L by **$7.62**. No pair or year improved. The filter removed only three completed trades, all profitable, and did not remove the targeted double-trigger losses. The filter was **REJECTED** without retuning. The pair of studies shows why a favorable control and a plausible risk narrative are insufficient reasons to add a particular intervention.
+A separately frozen spread-filter validation then ran twenty pair-year-arm cells in 2021 to 2022. Integrity passed, but the treatment reduced spread-only P&L by **$7.62**. No pair or year improved. The filter removed only three completed trades, all profitable, and did not remove the targeted double-trigger losses. The filter was **REJECTED** without retuning. The pair of studies shows why a favorable control and a plausible risk narrative are insufficient reasons to add a particular intervention.
 
 
 ## Sequential reversals: correcting a misleading failure story [B10](../docs/evidence.md#b10)
@@ -29,7 +29,7 @@ Rapid sequences were still descriptively weak: the shortest observed latency gro
 
 EventPath research compared early post-trigger states with eventual trade development. The data contained statistical separation, but the frozen operational requirement also limited harm to delayed legitimate impulses. Within the early decision window and a 2% false-abort budget, failure capture did not reach the required 20%. Reported logistic capture was approximately 9.5%, 12.2%, and 7.3% at the tested early checkpoints, with weak leave-one-year-out stability.
 
-The generic early-abort hypothesis was **REJECTED**. Related blanket time stops all worsened spread-only counterfactual P&L, and simple reverse exits reduced failure losses while sacrificing too much successful exposure. These findings show why a useful research instrument and a discriminating classifier can coexist with a poor trading intervention. The relevant question was whether an action improved the complete decision problem, rather than whether failed trades looked different after the fact.
+The generic early-abort hypothesis was **REJECTED**. Related blanket time stops all worsened spread-only counterfactual P&L, and simple reverse exits reduced failure losses while sacrificing too much successful exposure. These findings show why a useful research instrument and a discriminating classifier can coexist with a poor trading intervention. The action had to improve the complete decision problem. Separating failed trades after the fact was insufficient.
 
 
 ## Trigger-time filters: preserving the information boundary [B12](../docs/evidence.md#b12)
@@ -48,16 +48,16 @@ However, family and information density were materially related. Adding both att
 
 ## Medium-impact research: costs changed the stability conclusion [B14](../docs/evidence.md#b14)
 
-Medium-impact MacroImpulse research used a separately defined event universe. The five-pair 2021–2024 Discovery aggregate contained **638 trades** and **+$1,036.06** spread-only P&L. Applying the documented commission model reduced that to **+$589.46**, with profit factor **1.5827**. A preregistered four-pair candidate improved the adjusted aggregate to **+$639.68** and profit factor **1.7328**.
+Medium-impact MacroImpulse research used a separately defined event universe. The five-pair 2021 to 2024 Discovery aggregate contained **638 trades** and **+$1,036.06** spread-only P&L. Applying the documented commission model reduced that to **+$589.46**, with profit factor **1.5827**. A preregistered four-pair candidate improved the adjusted aggregate to **+$639.68** and profit factor **1.7328**.
 
-The candidate still failed its every-year-positive stability requirement: 2021 was **-$16.29** after modeled commission. Commission sensitivity did not repair that failed year. The disposition remained **PARK**. The cost validation is explicitly **documentation-only**, since a same-account deal export was unavailable. This study demonstrates that positive aggregate accounting, positive retained instruments, and favorable concentration can all coexist with a failed frozen stability gate. It does not supply validated live economics or permission to tune away the weak year.
+The candidate still failed its every-year-positive stability requirement: 2021 was **-$16.29** after modeled commission. Commission sensitivity did not repair that failed year. The disposition remained **PARK**. The cost validation is explicitly **documentation-only**, since a same-account deal export was unavailable. The positive aggregate, retained instruments and favorable concentration did not satisfy the annual stability rule. Live economics remain unvalidated, and tuning away the weak year was not authorized.
 
 
 ## Calendar forensics: invalid data is different from strategy failure [B15](../docs/evidence.md#b15)
 
 A later medium-impact extension initially appeared to fail in a later historical period. Calendar forensics found a source-content coverage collapse beginning around late 2024. Records still parsed successfully, so a parser success marker could not establish that the event universe remained complete. The canonical interpretation became **INVALID_DATA_UNIVERSE**, superseding the earlier provisional clean-OOS failure.
 
-Vendor-statement context also showed substantial overlap in selected trades alongside different fills and outcomes, reinforcing the need to distinguish event selection, feed coverage, and execution sensitivity. That context does not independently validate the strategy or repair the calendar. The program remains shelved pending a newly qualified data universe. The useful finding is the withdrawal of an invalid scientific conclusion: damaged input coverage cannot earn either a clean strategy rejection or a retrospective success claim.
+Vendor-statement context also showed substantial overlap in selected trades alongside different fills and outcomes, reinforcing the need to distinguish event selection, feed coverage, and execution sensitivity. That context does not independently validate the strategy or repair the calendar. The program remains shelved pending a newly qualified data universe. The clean strategy-failure conclusion was withdrawn. Damaged coverage supports neither that rejection nor a retrospective success claim.
 
 The corrected primary record is more specific: vendor trading minutes were overwhelmingly HIGH-impact, so that activity cannot validate MEDIUM-event completeness. The full [data-forensics case study](data-forensics.md) explains the coverage break, unresolved extraction scopes and why execution integrity passed while scientific interpretation failed. [B15](../docs/evidence.md#b15)
 

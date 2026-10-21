@@ -45,7 +45,7 @@ Git. This was an environment correction, with no rule or sample change.
 The analysis starts in July 2016 because the [ECB documented a publication-time
 change effective 1 July 2016](https://www.ecb.europa.eu/press/pr/date/2015/html/pr151207.en.html).
 June is development-feature warmup. Development ends in 2019, validation covers
-2020–2022, and final historical evaluation covers 2023–2025. Signals and targets
+2020 to 2022, and final historical evaluation covers 2023 to 2025. Signals and targets
 crossing validation/final role boundaries are purged, including the feature
 lookback. The exact eligible target dates appear in the complete tables.
 
@@ -95,9 +95,9 @@ snapshot, not independent provider verification or economic validation.
 
 | Role | Paired targets | EURUSD mean difference | USDJPY mean difference | Equal-weight pooled mean |
 | --- | ---: | ---: | ---: | ---: |
-| Development, July 2016–2019 | 893 | −0.89131 | −1.80351 | −1.34741 |
-| Validation, 2020–2022 | 750 | +0.92137 | −3.21713 | −1.14788 |
-| Final historical, 2023–2025 | 744 | +0.08918 | −2.53750 | −1.22416 |
+| Development, July 2016 to 2019 | 893 | −0.89131 | −1.80351 | −1.34741 |
+| Validation, 2020 to 2022 | 750 | +0.92137 | −3.21713 | −1.14788 |
+| Final historical, 2023 to 2025 | 744 | +0.08918 | −2.53750 | −1.22416 |
 
 All support minima passed. The pooled figures and earlier roles are descriptive,
 not additional confirmatory tests. The complete [generated tables](../results/fx-tables.md)

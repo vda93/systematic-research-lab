@@ -4,7 +4,7 @@
 
 ![Historical opening-range evidence, with sample and inference limitations](../figures/orb.svg)
 
-This opening-range breakout program ended with several different decisions: rejected economic hypotheses, mixed-evidence candidates stopped by a later gate, and promising Discovery candidates parked before OOS. None had deployment authorization when the historical program closed on September 30, 2026. Its value lies in preserving those distinctions. A branch closed for budget or governance reasons has not thereby failed an unperformed test. [O6](../docs/evidence.md#o6)
+The opening-range breakout program closed on September 30, 2026 without authorizing deployment. Some economic hypotheses had failed; some candidates stopped after conflicting validation; others were parked with promising Discovery results and unopened OOS. Budget or governance closure did not turn those unperformed tests into failures. [O6](../docs/evidence.md#o6)
 
 One filtered momentum candidate illustrates the boundary: its Discovery record showed 114 trades, approximately +44.67R, profit factor 2.79 and seven positive calendar years. Its sealed OOS was never opened under that lineage. It was parked and remains scientifically unadjudicated out of sample; the closure must not be rewritten as an OOS rejection. The separate atlas retains that branch and the other exploratory ridges alongside the completed negative studies. [A04](../docs/evidence.md#a04)
 
@@ -15,11 +15,11 @@ This case study covers separate index and gold research lineages. Their results 
 | System and instruments | ORB opening-range breakout research engine, with Python research and MQL5 parity lineages; USTEC2 Nasdaq equity-index CFD and XAUUSD2 gold CFD. |
 | Clock | Intraday opening-range windows, M5 signal confirmation and tick-level trade lifecycle accounting. These clocks serve different purposes. |
 | Comparison | A timing-region representative versus frozen gates and width-preserving geometry controls; the separate gold lineage additionally tests implementation and monetary accounting. |
-| Sample | Index Discovery: 2020–2024; sequential validation blocks in 2025 and 2026. Gold Discovery: 2019–2023, validation: 2024–2025, terminal: eligible January–June 2026 sessions. |
+| Sample | Index Discovery: 2020 to 2024; sequential validation blocks in 2025 and 2026. Gold Discovery: 2019 to 2023, validation: 2024 to 2025, terminal: eligible January to June 2026 sessions. |
 | Decision | Index second-block failure; gold parity pass followed by economic/terminal failure. Unopened Discovery successors remain unadjudicated. |
 | Contribution | Experiment governance and preserved negative decisions; automated searches and replay, with AI-assisted public engineering. [Ownership](../docs/ownership.md) |
 
-Sources: [O1–O6](../docs/evidence.md#o1). Specific eligibility and lifecycle fences below take precedence over these short calendar summaries.
+Sources: [O1 to O6](../docs/evidence.md#o1). Specific eligibility and lifecycle fences below take precedence over these short calendar summaries.
 
 ## Selecting a representative region
 
@@ -27,7 +27,7 @@ The index study began with 1,728 timing configurations on available Discovery hi
 
 For that index mechanism study, new Discovery signals were eligible only through November 30, 2024. December supplied lifecycle completion, not another eligible signal month. The physical data span and the scientific entry window therefore differ. [O1](../docs/evidence.md#o1)
 
-The selection rule chose a representative medoid from that plateau, rather than the configuration with the highest historical return. The representative produced 545 trades, approximately +29.87 price-space R and a profit factor of 1.09. Its value was its place in the region, not an exceptional headline. [O1](../docs/evidence.md#o1)
+The selection rule chose a medoid to represent the plateau. It produced 545 trades, approximately +29.87 price-space R and a profit factor of 1.09. Selection used its position within the region instead of the highest historical return. [O1](../docs/evidence.md#o1)
 
 Concentration diagnostics made the distinction concrete. The surface's global maximum had approximately +120.37R overall, but one trade contributed +163.65R. Removing that single largest absolute-R observation left approximately −43.28R. This sensitivity did not delete or amend the authoritative backtest. It showed why a dramatic maximum can be a poor research candidate. [O1](../docs/evidence.md#o1)
 
@@ -61,7 +61,7 @@ Combining the two blocks still produced positive cumulative OOS R. That did not 
 
 ## A separate gold lineage: correct implementation first
 
-The gold research asked a different set of questions on Discovery history in 2019–2023 and validation history in 2024–2025. Eligibility fences excluded the final month of each segment from new signals while permitting existing lifecycle completion. Three candidates were frozen before the later checks.
+The gold research asked a different set of questions on Discovery history in 2019 to 2023 and validation history in 2024 to 2025. Eligibility fences excluded the final month of each segment from new signals while permitting existing lifecycle completion. Three candidates were frozen before the later checks.
 
 Reproducing the scientific behavior between Python and MT5 required forensic work. Comparisons joined canonical scientific keys and examined opening ranges, signals, decisions, orders, fills, trade outcomes and path diagnostics. The completed final parity record passed for all three candidates with zero semantic mismatches. Earlier failed attempts remained part of the record; they were superseded by the documented final certificate. [O3](../docs/evidence.md#o3)
 
@@ -79,8 +79,8 @@ This changed the order I would use for future research. A strategy that depends 
 
 ## Valid terminal tests, unsuccessful candidates
 
-The final opened gold holdout covered eligible January–June 2026 sessions, with July reserved for lifecycle completion. A produced 53 trades and profit factor 0.68: economically negative. C produced 51 trades and profit factor 1.00 after rounding: economically flat. Both runs were valid and complete. Neither result supported economic continuation. That holdout is now spent historical evidence. [O5](../docs/evidence.md#o5)
+The final opened gold holdout covered eligible January to June 2026 sessions, with July reserved for lifecycle completion. A produced 53 trades and profit factor 0.68: economically negative. C produced 51 trades and profit factor 1.00 after rounding: economically flat. Both runs were valid and complete. Neither result supported economic continuation. That holdout is now spent historical evidence. [O5](../docs/evidence.md#o5)
 
-A separate failed-breakout Fade baseline supplied another useful negative result. On its frozen 2003–2014 Discovery sample it closed 781 trades, lost approximately 320.30 net R, and recorded profit factor 0.251. None of its 12 calendar years was positive. Integrity checks passed before economic analysis, and the baseline was rejected without opening its OOS gate. It demonstrated that a visually persuasive reversal pattern can fail decisively under executable accounting. [OF](../docs/evidence.md#of)
+A separate failed-breakout Fade baseline supplied another useful negative result. On its frozen 2003 to 2014 Discovery sample it closed 781 trades, lost approximately 320.30 net R, and recorded profit factor 0.251. None of its 12 calendar years was positive. Integrity checks passed before economic analysis, and the baseline was rejected without opening its OOS gate. It demonstrated that a visually persuasive reversal pattern can fail decisively under executable accounting. [OF](../docs/evidence.md#of)
 
-The resulting September 2026 closeout applies to the historical lineages actually tested, not every conceivable opening-range strategy or a separately registered successor experiment. What survived was the research machinery: representative selection, concentration checks, placebo controls, canonical-key parity, lifecycle fences, separate monetary accounting and enforceable stop decisions. The failed candidates remain useful evidence precisely because their conclusions were preserved. [O6](../docs/evidence.md#o6)
+The September 2026 closeout covers the tested lineages. Other opening-range strategies and the separately registered successor still need their own evidence. The program left reusable methods for representative selection, concentration checks, placebo controls, canonical-key parity and lifecycle fences, with monetary accounting and stop decisions recorded separately. [O6](../docs/evidence.md#o6)

@@ -4,16 +4,16 @@
 
 ![Historical de30-continuation evidence, with sample and inference limitations](../figures/de30.svg)
 
-This is **MOMCONT**, the momentum-continuation bot family, adapted to the **DE30X German equity-index CFD on H1 bars**. DE30 names the instrument sleeve, rather than a separate bot. The study produced three distinct findings: a development mechanism passed its initial test, a concentration stress rejected its robustness, and a later implementation audit found substantial under-risking. A subsequent positive sample could not rewrite the failed gate, and a successful engineering repair could not create new evidence of alpha. [D1](../docs/evidence.md#d1) [D7](../docs/evidence.md#d7)
+This is **MOMCONT**, the momentum-continuation bot family, adapted to the **DE30X German equity-index CFD on H1 bars**. DE30 names the instrument sleeve. Its development mechanism passed the initial test, then failed a concentration stress. A separate implementation audit later found substantial under-risking. A subsequent positive sample could not rewrite the failed gate, and a successful engineering repair could not create new evidence of alpha. [D1](../docs/evidence.md#d1) [D7](../docs/evidence.md#d7)
 
 | Research contract | Identity and decision |
 | --- | --- |
 | Hypothesis and comparison | The frozen MOMCONT signal must still satisfy its full conditions one bar later; compare that persistence treatment with the original signal control. |
-| Samples | Development: 2020-01-29–2025-01-01; separate, subsequently authorized terminal test: 2025-01-01–2026-09-01. Ends are exclusive; both are now historical and spent. |
+| Samples | Development: 2020-01-29 to 2025-01-01; separate, subsequently authorized terminal test: 2025-01-01 to 2026-09-01. Ends are exclusive; both are now historical and spent. |
 | Decision | Initial development support; concentration robustness **NOT SUPPORTED**; qualified terminal pass; sizing correction passed a separate historical engineering replay. |
 | Contribution | Research governance, robustness adjudication and correctness review. Automated research/tester runs supplied the artifacts; exact historical hand-coding ownership is not established. [Ownership](../docs/ownership.md) |
 
-The source contracts and chronology are retained in [D1–D9](../docs/evidence.md#d1).
+The source contracts and chronology are retained in [D1 to D9](../docs/evidence.md#d1).
 
 Results below use net R, normalized to initial trade risk, with profit factor and drawdown measured in R-space. They are historical research aggregates, not account-return forecasts or claims about current deployment readiness.
 
@@ -21,7 +21,7 @@ Results below use net R, normalized to initial trade risk, with profit factor an
 
 The development intervention required the frozen signal to persist for one additional bar. It was evaluated on **29 January 2020 to 1 January 2025, end exclusive**. The resulting path contained **837 trades, +41.4607R, profit factor 1.1412 and maximum R drawdown 20.0313R**. It passed the six initial development gates. [D1](../docs/evidence.md#d1)
 
-The weaker 2020–2022 segment improved from **−2.279R** under the reference to **+3.3215R** under persistence. Yet the improvement was small, and the later 2023–2024 segment contributed **+38.1392R**. The five best entry dates still supplied **59.41%** of total net R. Development support therefore came with visible regime and concentration questions. [D1](../docs/evidence.md#d1)
+The weaker 2020 to 2022 segment improved from **−2.279R** under the reference to **+3.3215R** under persistence. Yet the improvement was small, and the later 2023 to 2024 segment contributed **+38.1392R**. The five best entry dates still supplied **59.41%** of total net R. Development support therefore came with visible regime and concentration questions. [D1](../docs/evidence.md#d1)
 
 Costs mattered. Gross development output was **+74.9014R**, while swap contributed **−33.4407R**, leaving the reported **+41.4607R** net. A normalized gross result would have concealed a large part of the economic burden. [D1](../docs/evidence.md#d1)
 
@@ -61,4 +61,4 @@ The amendment is a limitation to disclose, not a reason to suppress the engineer
 
 A later, separately specified portfolio-inclusion experiment used the common **2025-01-01 to 2026-08-01** window. It rejected adding DE30 to the evaluation architecture. Funded-account simulations supported inclusion only within the limited tested low-risk region, including block-length sensitivities and an expectancy haircut. Those findings were conditional on the historical paths and account model; they were not current operational approval. [D9](../docs/evidence.md#d9)
 
-The resulting evidence remains layered: initial development support, a preserved robustness rejection, a qualified terminal pass, a spent evidence period, a separate sizing repair, and bounded portfolio simulations. Each answers a different question. None turns concentration, access-history uncertainty or implementation parity into a general claim of future profitability.
+The initial development result passed, its concentration test failed, and the later terminal test passed with qualifications. That terminal period is now spent. The sizing repair and portfolio simulations answer separate questions; concentration and access-history uncertainty still limit any claim about future profitability.

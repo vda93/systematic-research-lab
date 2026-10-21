@@ -51,4 +51,4 @@ Longer blocks produce wider intervals and higher observed coverage in this fixed
 
 Tests independently check the -6/+6/-22 arithmetic, complete membership, exact seeded small-sample resampling references, shared-index pairing, circular wrap and truncation, missing dates, duplicate identities, nonfinite values, aggregate overflow and narrow numeric tolerance. Artifact tests detect changed result bytes and chart labels that diverge from the computed cohort count or decision.
 
-The final record therefore has two preserved failures: the constructed candidate does not survive its concentration rule, and the chosen inference settings do not achieve nominal coverage in this finite known-null audit. The useful result is an inspectable boundary on the conclusion, with no market or deployment claim attached.
+The constructed candidate fails its concentration rule. The inference settings also miss nominal coverage in this finite known-null audit. Both failures remain in the result, with no claim about markets or deployment.
