@@ -15,6 +15,13 @@
     ],
     "README.md": [
       {
+        "kind": "public_replay",
+        "sha256": "3ad398416b202e52131757c4c5d0369911f8bb16db4c3d48b87c2584bef3ea03",
+        "source_ids": [
+          "BB3"
+        ]
+      },
+      {
         "kind": "historical_report",
         "sha256": "9be874852611bdda802dcabbb473d79858d3efe74f06b5f3fa27047aa4434863",
         "source_ids": [
@@ -838,6 +845,16 @@
         "kind": "methods",
         "sha256": "54e918bd55d24e3d5dffe4be2b7c13fdce4270e21ed43a7d29eb85d4e32a4216",
         "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "2ca3d6847da097ab34a57ae98a9340c174d7c193a85d82d277f3f02ac23ebeed",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "28673aa55436f7e8826b6c028eef6d2d7eded39f943f14d5c3ee094b59184fdf",
+        "source_ids": []
       }
     ],
     "docs/exact-block-means.md": [
@@ -899,20 +916,9 @@
     ],
     "docs/ownership.md": [
       {
-        "kind": "historical_report",
-        "sha256": "df51e4778e2d99ffd0e287d816ee588212340f1f5ad167bccc10a3a5e4d5d178",
-        "source_ids": [
-          "D7",
-          "E1",
-          "E5",
-          "M10",
-          "M11",
-          "M7",
-          "M9",
-          "N1",
-          "N2",
-          "O6"
-        ]
+        "kind": "methods",
+        "sha256": "0b85b35dcdb87fa4bb19fac4612d3722a617df1b2a96e3dc786ff1bc0ed6226f",
+        "source_ids": []
       },
       {
         "kind": "documentation",
@@ -3199,6 +3205,44 @@
         "source_ids": [
           "BB1"
         ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "e45045955664efd77bafd89bd5b7e4e0ff6594928d99928797b80f443c09580b",
+        "source_ids": [
+          "BB2"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "4925790ef473db79e610804c647d4e2340fd42d1c5c4880a0b8d7c48fe17176a",
+        "source_ids": [
+          "BB2"
+        ]
+      },
+      {
+        "kind": "methods",
+        "sha256": "7132f8f532fc9461e243fddfc3516e62b539ddd40d0778aead24c39dda6c8a75",
+        "source_ids": []
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "cc3aaa614d7558b73c7c3b3ca09629350ecf2034ec4ae1af61cca70d7acc630e",
+        "source_ids": [
+          "BB3"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "8516ae46c81e224cafc13d5b256d89e1a5b9c801906fef02f6ce0ab8aa1b1695",
+        "source_ids": [
+          "BB3"
+        ]
+      },
+      {
+        "kind": "methods",
+        "sha256": "e0edf3d31dfe313860afa82510016c3435e4ccae1de73e3df2f7c2a118d931fa",
+        "source_ids": []
       }
     ],
     "studies/data-forensics.md": [
@@ -6113,6 +6157,20 @@
       "disclosure": "approved",
       "evidence_kind": "real_market_data",
       "id": "BB1",
+      "kind": "public_replay",
+      "sample_role": "development"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "real_market_data",
+      "id": "BB2",
+      "kind": "public_replay",
+      "sample_role": "development"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "real_market_data",
+      "id": "BB3",
       "kind": "public_replay",
       "sample_role": "development"
     }

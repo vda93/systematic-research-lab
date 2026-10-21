@@ -439,3 +439,11 @@ The complete public pipeline qualifies a selected official ECB historical snapsh
 ## BB1
 
 **BBO delay: original development measurement support.** A [private-input replay](../scripts/bbo_qualify.py) derives [coarse qualification counts](../data/bbo-development-qualification.json) from the hashed native Tardis Binance BTCUSDT first development file. Provider terms permit non-reconstructible statistics, not raw redistribution. The first day fails full-history support; no economic effect or final-sample result is claimed. A [separate amendment](../experiments/bbo-delay-measurement-v2.md) is support-informed and AI-proposed.
+
+## BB2
+
+**BBO delay: amended development quote-cost replay.** The [first-day report](../data/bbo-development-first-day-v2.json) records the hashed source and exact implementation for a conditional development comparison under the separately frozen measurement amendment. Failed coverage, missing-target and depth gates remain visible. Public statistics describe derived quote costs; they omit raw quote levels, event prices and timed intent ledgers. The result is AI-assisted research, not candidate mastery, final validation or executable performance.
+
+## BB3
+
+**BBO delay: complete amended development sample.** The [twelve-day aggregate](../data/bbo-development-results.json) records fixed source identities, calculation and aggregation hashes, daily counts, equal-day inference, controls, all fixed sensitivities and failed support. Every planned day is retained, including low-count July. The [closeout](../data/bbo-development-closeout.json) binds the complete implementation and source/test/dependency identities before later-stage access. AI-reviewed numerical correctness and development usability do not establish human mastery or economic support.
