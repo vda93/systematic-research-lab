@@ -1,4 +1,4 @@
-# Waiting through a spread shock: qualification before economics
+# Waiting through a spread shock: quote costs and support failures
 
 [Portfolio](../README.md) · [Original protocol](../experiments/bbo-delay-protocol.md) · [Measurement amendment](../experiments/bbo-delay-measurement-v2.md)
 
@@ -23,7 +23,24 @@ This is **DEV_FAIL_SUPPORT** for that day, not a negative cost effect, a final-s
 
 The amended protocol keeps the economic question, delay, costs, order sides and final gates. It replaces point identification of the entire historical median with bounds over every numeric completion of unknown intervals. A shock is classifiable only when all admissible medians imply the same three-times threshold decision. This changes the eligible population and is disclosed as a new measurement design; it does not rescue the original test.
 
-The amendment must be publicly committed before computing its labels/costs on the already accessed January development file or downloading additional outcome files. The later validation and final periods have not been accessed at this stage. There is no amended economic result to report yet.
+The amendment was publicly committed before its labels or costs were computed on the already accessed January development file and before further outcome downloads. Development, validation and final periods retain separate roles; a development result is not final validation.
+
+## First development replay under the amendment
+
+On 2023-01-01 the revised measurement classified 58,521 of 86,099 scheduled intents. It found 116 eligible shocks, of which 115 had both primary target quotes. Their descriptive mean saving was **−0.4323 bps** after the fixed 5 bps notional fees and 0.5 bps additional delayed slippage. The mean price saving before these assumptions was 0.06768 bps. These are conditional historical quote comparisons, not realized fills or funded returns.
+
+The day is **FAIL_SUPPORT**: intent eligibility is below 95%, one shock lacks its delayed target, and only 76 of the 116 shocks have enough displayed size at both targets. Future size failures remain in the main price-paired calculation. The separately labelled depth subset, both order sides, normal-state controls and every fixed fee/slippage and latency sensitivity remain in the [coarse day report](../data/bbo-development-first-day-v2.json). One observed day has no bootstrap interval. A descriptive negative mean cannot override failed support or become a final-sample economic rejection.
+
+The [replay engine](../src/srl/bbo_replay.py), [median bounds](../src/srl/bbo_history.py), [side and fee accounting](../src/srl/bbo_accounting.py) and [statistics](../src/srl/bbo_statistics.py) expose the implementation. Tests use original synthetic paths, exact rational bounds and independent decimal accounting. The private worker retains every scheduled intent with diagnostic reasons; public outputs omit raw quotes, event prices and timed intent ledgers. The AI-assisted implementation is inspectable; it does not establish the candidate's unaided technical mastery.
+
+Reproduce this checked day from the independently downloaded, hash-matching source:
+
+```sh
+python scripts/bbo_run_day.py --day 2023-01-01 --raw /private/cache/BTCUSDT.csv.gz --output /private/new-day-run --protocol-commit 76c8952ac6a18b6ab167878974f9cf2b4bad89c9 --sha256 366e5d2ae6b8b6decd6628c300661c209e0fcc58e4079416075cfbe46be4ba49
+python scripts/bbo_check_day.py --run-directory /private/new-day-run --check data/bbo-development-first-day-v2.json
+```
+
+The comparison checks all coarse statistics, raw identity and exact method hashes. It fails on changed source bytes or methods. Private compressed audits include operational metadata and are not expected to reproduce byte for byte. A retained workflow receipt is not an independently authenticated history of data access. Ordinary CI uses synthetic fixtures and never downloads this source.
 
 ## Rights and reproduction boundary
 

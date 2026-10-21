@@ -838,6 +838,11 @@
         "kind": "methods",
         "sha256": "54e918bd55d24e3d5dffe4be2b7c13fdce4270e21ed43a7d29eb85d4e32a4216",
         "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "2ca3d6847da097ab34a57ae98a9340c174d7c193a85d82d277f3f02ac23ebeed",
+        "source_ids": []
       }
     ],
     "docs/exact-block-means.md": [
@@ -3198,6 +3203,20 @@
         "sha256": "4cce84e13fc9cf085dd4c47600e73b68635d20b9b1a60e360ff42d7b2b719ec6",
         "source_ids": [
           "BB1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "e45045955664efd77bafd89bd5b7e4e0ff6594928d99928797b80f443c09580b",
+        "source_ids": [
+          "BB2"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "4925790ef473db79e610804c647d4e2340fd42d1c5c4880a0b8d7c48fe17176a",
+        "source_ids": [
+          "BB2"
         ]
       }
     ],
@@ -6113,6 +6132,13 @@
       "disclosure": "approved",
       "evidence_kind": "real_market_data",
       "id": "BB1",
+      "kind": "public_replay",
+      "sample_role": "development"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "real_market_data",
+      "id": "BB2",
       "kind": "public_replay",
       "sample_role": "development"
     }
