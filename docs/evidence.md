@@ -447,3 +447,7 @@ The complete public pipeline qualifies a selected official ECB historical snapsh
 ## BB3
 
 **BBO delay: complete amended development sample.** The [twelve-day aggregate](../data/bbo-development-results.json) records fixed source identities, calculation and aggregation hashes, daily counts, equal-day inference, controls, all fixed sensitivities and failed support. Every planned day is retained, including low-count July. The [closeout](../data/bbo-development-closeout.json) binds the complete implementation and source/test/dependency identities before later-stage access. AI-reviewed numerical correctness and development usability do not establish human mastery or economic support.
+
+## BB4
+
+**BBO delay: complete amended validation sample.** The [twelve-day validation aggregate](../data/bbo-validation-results.json) retains every fixed selected day and the unchanged primary comparison, controls and sensitivities. [Source-access receipts](../data/bbo-validation-acquisition.json) place local GET requests after the publicly committed implementation/development closeout; they do not independently authenticate unseen provider access. The [validation closeout](../data/bbo-validation-closeout.json) binds result and frozen method identities before final access. Failed support remains distinct from numerical correctness and final-sample economic inference; candidate mastery is unverified.
