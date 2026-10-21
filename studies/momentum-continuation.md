@@ -1,4 +1,4 @@
-# Momentum continuation: why the attractive exit was not selected
+# MOMCONT on USDJPY2 and XAUUSD2 H1: why the attractive exit was not selected
 
 [Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
 
@@ -7,6 +7,16 @@
 A research program can produce a stronger recent backtest and still leave its reference architecture unchanged. This study examined that decision in a frozen H1 momentum-continuation lineage: first by testing directional symmetry on USDJPY, then by challenging the XAU exit, and finally by comparing complete portfolio paths. The useful result was a sequence of rejected, qualified and indeterminate interventions.
 
 The reported returns use R, a normalized unit of initial trade risk. Profit factor and maximum drawdown below are computed in R-space. They describe the historical research paths; they are not account-return percentages, live execution records or forecasts.
+
+| Research contract | Identity and decision |
+| --- | --- |
+| System | MOMCONT momentum-continuation EA family on USDJPY2 and XAUUSD2, H1. Public text abbreviates the symbols to USDJPY and XAU. |
+| Hypotheses | Directional symmetry, removal of trailing exits, then a frozen mechanical-ratchet alternative. Each has its own control and evidence gate. |
+| Samples | Recent comparison: 2025-01-01–2026-08-01; XAU cross-era diagnostics also use 2016–2019 and 2020–2024. The recent sample is reused historical evidence. |
+| Decision | Reject mechanical short symmetry; do not promote no-trail; retain canonical portfolio exits after the bounded ratchet comparison. |
+| Contribution | Research direction, comparison requirements and stop decisions; automated research and AI-assisted engineering are disclosed in [ownership](../docs/ownership.md). |
+
+The individual source contracts are [M1–M8](../docs/evidence.md#m1); the dates below retain their separate sample roles.
 
 ## A directional mirror failed its own test
 

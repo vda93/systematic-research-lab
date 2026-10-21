@@ -6,7 +6,7 @@ These entries distinguish completed negative research, uncertain historical asso
 
 ## MacroImpulse and NewsScope: controlled parity with bounded scope [B08](../docs/evidence.md#b08)
 
-I reconstructed an event-driven execution state machine and compared it with a NewsScopeEA reference under controlled events, broker ticks, and parameters. Recorded parity gates covered pending geometry, spread-aware stops, trigger/fill behavior, trailing ratchets, reverse-exit ordering, deletion, commission, and final balances on three FX instruments. This is a controlled engineering comparison. It does not establish full-year event-selection equivalence or standalone NewsScope profitability.
+The AI-assisted engineering program reconstructed an event-driven execution state machine and compared it with a NewsScopeEA reference under controlled events, broker ticks, and parameters. Recorded parity gates covered pending geometry, spread-aware stops, trigger/fill behavior, trailing ratchets, reverse-exit ordering, deletion, commission, and final balances on three FX instruments. This is a controlled engineering comparison. It does not establish full-year event-selection equivalence or standalone NewsScope profitability.
 
 A separate historical timestamp qualification found that the selected news source aligned directly with the qualified UTC clock, without a timestamp shift or DST adjustment. That frozen alignment is an input contract, not proof of publication latency. Preserving these distinctions prevents a successful state-machine comparison from becoming a claim about every broker, every configuration, or the reference vendor's broader performance. Unresolved comparator scope remains explicit rather than silently assumed.
 
@@ -58,6 +58,8 @@ The candidate still failed its every-year-positive stability requirement: 2021 w
 A later medium-impact extension initially appeared to fail in a later historical period. Calendar forensics found a source-content coverage collapse beginning around late 2024. Records still parsed successfully, so a parser success marker could not establish that the event universe remained complete. The canonical interpretation became **INVALID_DATA_UNIVERSE**, superseding the earlier provisional clean-OOS failure.
 
 Vendor-statement context also showed substantial overlap in selected trades alongside different fills and outcomes, reinforcing the need to distinguish event selection, feed coverage, and execution sensitivity. That context does not independently validate the strategy or repair the calendar. The program remains shelved pending a newly qualified data universe. The useful finding is the withdrawal of an invalid scientific conclusion: damaged input coverage cannot earn either a clean strategy rejection or a retrospective success claim.
+
+The corrected primary record is more specific: vendor trading minutes were overwhelmingly HIGH-impact, so that activity cannot validate MEDIUM-event completeness. The full [data-forensics case study](data-forensics.md) explains the coverage break, unresolved extraction scopes and why execution integrity passed while scientific interpretation failed. [B15](../docs/evidence.md#b15)
 
 
 ## Order-free shadow intent: observing requests without creating a trading sink [B16](../docs/evidence.md#b16)

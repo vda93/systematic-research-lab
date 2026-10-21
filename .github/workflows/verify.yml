@@ -3,26 +3,67 @@ name: Verify research portfolio
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
   reproduce:
+    timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
         python: ['3.12', '3.13']
     runs-on: ${{ matrix.os }}
+    env:
+      PYTHONPATH: src
     steps:
       - name: Check out exact revision
-        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
       - name: Set up public Python
-        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: ${{ matrix.python }}
-      - name: Install the original package from public dependencies
-        run: python -m pip --isolated install --index-url https://pypi.org/simple .
-      - name: Run all tests and reproduce checked artifacts
-        run: python scripts/reproduce.py --check
+          cache: pip
+          cache-dependency-path: requirements-lock.txt
+      - name: Install the complete pinned runtime and developer toolchain
+        run: >-
+          python -m pip --isolated install --index-url https://pypi.org/simple --only-binary=:all: --no-deps -r requirements-lock.txt
+      - name: Build and install the project without resolving new dependencies
+        run: python -m pip --isolated install --no-deps --no-build-isolation .
+      - name: Check dependency compatibility
+        run: python -m pip check
+      - name: Check Python syntax and correctness lint across all public code
+        run: python -m ruff check src scripts tests
+      - name: Type-check the evidence, claim and empirical modules
+        run: python -m mypy
+      - name: Run all tests and reproduce checked artifacts with branch coverage
+        run: python -m coverage run scripts/reproduce.py --check
+      - name: Enforce the measured library coverage regression gate
+        run: python -m coverage report
+      - name: Audit every pinned runtime and developer package
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
+        run: python -m pip_audit --strict --no-deps --disable-pip -r requirements-lock.txt
+
+  secret-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out complete public history without stored credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify and run the MIT-licensed Gitleaks CLI
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz --output "$RUNNER_TEMP/gitleaks.tar.gz"
+          printf '551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  %s\n' "$RUNNER_TEMP/gitleaks.tar.gz" | sha256sum --check
+          tar -xzf "$RUNNER_TEMP/gitleaks.tar.gz" -C "$RUNNER_TEMP" gitleaks
+          "$RUNNER_TEMP/gitleaks" git --redact --no-banner .

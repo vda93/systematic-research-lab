@@ -1,4 +1,4 @@
-# How an opening-range research program changed its conclusions
+# ORB on USTEC2 and XAUUSD2: selection risk, conflicting validation and financing
 
 [Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
 
@@ -10,13 +10,36 @@ One filtered momentum candidate illustrates the boundary: its Discovery record s
 
 This case study covers separate index and gold research lineages. Their results must remain separate: they used different histories, eligibility rules and validation splits. All figures come from completed historical private research reports, not a public replication or a live trading record. Where results use price-space R, R means price movement normalized by the trade's initial executable risk distance. It is not an account return or automatically a financing-adjusted profit measure.
 
+| Research contract | Identity and decision |
+| --- | --- |
+| System and instruments | ORB opening-range breakout research engine, with Python research and MQL5 parity lineages; USTEC2 Nasdaq equity-index CFD and XAUUSD2 gold CFD. |
+| Clock | Intraday opening-range windows, M5 signal confirmation and tick-level trade lifecycle accounting. These clocks serve different purposes. |
+| Comparison | A timing-region representative versus frozen gates and width-preserving geometry controls; the separate gold lineage additionally tests implementation and monetary accounting. |
+| Sample | Index Discovery: 2020–2024; sequential validation blocks in 2025 and 2026. Gold Discovery: 2019–2023, validation: 2024–2025, terminal: eligible January–June 2026 sessions. |
+| Decision | Index second-block failure; gold parity pass followed by economic/terminal failure. Unopened Discovery successors remain unadjudicated. |
+| Contribution | Experiment governance and preserved negative decisions; automated searches and replay, with AI-assisted public engineering. [Ownership](../docs/ownership.md) |
+
+Sources: [O1–O6](../docs/evidence.md#o1). Specific eligibility and lifecycle fences below take precedence over these short calendar summaries.
+
 ## Selecting a representative region
 
 The index study began with 1,728 timing configurations on available Discovery history from January 29, 2020 through December 2024. The first year was partial. Only 140 configurations had positive total R; 22 met the frozen robustness criteria. One eligible long-side plateau contained 18 configurations. [O1](../docs/evidence.md#o1)
 
+For that index mechanism study, new Discovery signals were eligible only through November 30, 2024. December supplied lifecycle completion, not another eligible signal month. The physical data span and the scientific entry window therefore differ. [O1](../docs/evidence.md#o1)
+
 The selection rule chose a representative medoid from that plateau, rather than the configuration with the highest historical return. The representative produced 545 trades, approximately +29.87 price-space R and a profit factor of 1.09. Its value was its place in the region, not an exceptional headline. [O1](../docs/evidence.md#o1)
 
 Concentration diagnostics made the distinction concrete. The surface's global maximum had approximately +120.37R overall, but one trade contributed +163.65R. Removing that single largest absolute-R observation left approximately −43.28R. This sensitivity did not delete or amend the authoritative backtest. It showed why a dramatic maximum can be a poor research candidate. [O1](../docs/evidence.md#o1)
+
+## What the search can and cannot establish
+
+The 1,728 configurations share history, neighboring windows and often trades. Their maximum is selected using observed outcomes; its ordinary single-configuration uncertainty would ignore that selection. The 22 survivors are 1.27% of the search and the positive cells are 8.10%, descriptive fractions rather than significance levels. A medoid reduces the temptation to select the sharpest local winner, but the region containing it was also selected on Discovery outcomes. It does not erase the search. [O1](../docs/evidence.md#o1)
+
+If every cell had supplied a valid marginal test, a Bonferroni family threshold would be 0.05/1,728, about 0.00002894. This is a hypothetical multiplicity illustration; the historical archive does **not** supply those tests, so it is not an adjusted result or a verdict on this candidate. Correlation can make that bound conservative, but does not justify dividing the search count by an invented effective-trial estimate. [O1](../docs/evidence.md#o1)
+
+The public aggregates cannot identify a probability of backtest overfitting, deflated Sharpe ratio or selection-adjusted p-value. Those would require the complete synchronized candidate return matrix, all searched variants and selection steps, valid cost accounting and an appropriate dependence model. Publishing a new number from only the chosen representative would manufacture missing information. Those diagnostics remain **NOT ESTIMABLE FROM PUBLIC AGGREGATES**.
+
+The actual defense was a frozen representative followed by separate validation, disclosed mechanism controls and a stop after a failed later block. Geometry controls were a post-hoc Discovery investigation, not a retroactive preregistration of the original timing search. Combining validation blocks after seeing one fail would answer a different, selected question. The next study should freeze the full candidate family, nested selection procedure, multiplicity policy and temporal fences before access; this historical case cannot recover that prospective design. [O1](../docs/evidence.md#o1) [O2](../docs/evidence.md#o2)
 
 ## Testing what the geometry actually explained
 

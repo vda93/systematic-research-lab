@@ -1,0 +1,842 @@
+{
+  "evidence_role": "REAL_MARKET_REFERENCE_OBSERVATIONS",
+  "executable_profitability": "NOT_EVALUATED",
+  "extra_delay": {
+    "development": {
+      "assets": {
+        "EURUSD": {
+          "mean_always_long_bps": 0.0881637328,
+          "mean_always_short_bps": -0.0881637328,
+          "mean_difference_bps": -0.5977948452,
+          "mean_flat_bps": 0.0,
+          "mean_signal_bps": -0.5096311125,
+          "median_difference_bps": 0.0,
+          "sample_size": 892,
+          "sign_counts": {
+            "-1": 495,
+            "0": 2,
+            "1": 395
+          }
+        },
+        "USDJPY": {
+          "mean_always_long_bps": 0.7159425851,
+          "mean_always_short_bps": -0.7159425851,
+          "mean_difference_bps": -2.1127990513,
+          "mean_flat_bps": 0.0,
+          "mean_signal_bps": -1.3968564662,
+          "median_difference_bps": 0.0,
+          "sample_size": 892,
+          "sign_counts": {
+            "-1": 400,
+            "0": 0,
+            "1": 492
+          }
+        }
+      },
+      "sample_size": 892,
+      "status": "DESCRIPTIVE_SENSITIVITY"
+    },
+    "final": {
+      "assets": {
+        "EURUSD": {
+          "mean_always_long_bps": 1.0180492817,
+          "mean_always_short_bps": -1.0180492817,
+          "mean_difference_bps": 2.3698100346,
+          "mean_flat_bps": 0.0,
+          "mean_signal_bps": 3.3878593163,
+          "median_difference_bps": 0.0,
+          "sample_size": 743,
+          "sign_counts": {
+            "-1": 342,
+            "0": 0,
+            "1": 401
+          }
+        },
+        "USDJPY": {
+          "mean_always_long_bps": 2.5357084785,
+          "mean_always_short_bps": -2.5357084785,
+          "mean_difference_bps": -2.7352783757,
+          "mean_flat_bps": 0.0,
+          "mean_signal_bps": -0.1995698972,
+          "median_difference_bps": 0.0,
+          "sample_size": 743,
+          "sign_counts": {
+            "-1": 271,
+            "0": 0,
+            "1": 472
+          }
+        }
+      },
+      "sample_size": 743,
+      "status": "DESCRIPTIVE_SENSITIVITY"
+    },
+    "validation": {
+      "assets": {
+        "EURUSD": {
+          "mean_always_long_bps": -0.4915384819,
+          "mean_always_short_bps": 0.4915384819,
+          "mean_difference_bps": -0.7695423097,
+          "mean_flat_bps": 0.0,
+          "mean_signal_bps": -1.2610807917,
+          "median_difference_bps": 0.0,
+          "sample_size": 749,
+          "sign_counts": {
+            "-1": 404,
+            "0": 2,
+            "1": 343
+          }
+        },
+        "USDJPY": {
+          "mean_always_long_bps": 2.6012968504,
+          "mean_always_short_bps": -2.6012968504,
+          "mean_difference_bps": -3.0668976953,
+          "mean_flat_bps": 0.0,
+          "mean_signal_bps": -0.465600845,
+          "median_difference_bps": 0.0,
+          "sample_size": 749,
+          "sign_counts": {
+            "-1": 323,
+            "0": 1,
+            "1": 425
+          }
+        }
+      },
+      "sample_size": 749,
+      "status": "DESCRIPTIVE_SENSITIVITY"
+    }
+  },
+  "family_verdict": "NOT_PASS",
+  "minimum_effect_bps": 0.5,
+  "minimum_effect_interpretation": "ARBITRARY_STATISTICAL_RELEVANCE_SCREEN_NOT_TRADING_ECONOMICS",
+  "numpy_version": "2.5.1",
+  "prospective_fresh_oos": false,
+  "roles": {
+    "development": {
+      "annual": [
+        {
+          "assets": {
+            "EURUSD": {
+              "mean_always_long_bps": -4.3039273355,
+              "mean_always_short_bps": 4.3039273355,
+              "mean_difference_bps": 8.9158245967,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": 4.6118972612,
+              "median_difference_bps": 0.0,
+              "sample_size": 128,
+              "sign_counts": {
+                "-1": 94,
+                "0": 0,
+                "1": 34
+              }
+            },
+            "USDJPY": {
+              "mean_always_long_bps": 10.2954924575,
+              "mean_always_short_bps": -10.2954924575,
+              "mean_difference_bps": -13.5520643691,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": -3.2565719116,
+              "median_difference_bps": 0.0,
+              "sample_size": 128,
+              "sign_counts": {
+                "-1": 36,
+                "0": 0,
+                "1": 92
+              }
+            }
+          },
+          "pooled_contribution_to_full_mean_bps": -0.3322725033,
+          "year": "2016"
+        },
+        {
+          "assets": {
+            "EURUSD": {
+              "mean_always_long_bps": 5.0608129795,
+              "mean_always_short_bps": -5.0608129795,
+              "mean_difference_bps": -6.7305984898,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": -1.6697855103,
+              "median_difference_bps": 0.0,
+              "sample_size": 255,
+              "sign_counts": {
+                "-1": 88,
+                "0": 0,
+                "1": 167
+              }
+            },
+            "USDJPY": {
+              "mean_always_long_bps": -1.5346271639,
+              "mean_always_short_bps": 1.5346271639,
+              "mean_difference_bps": -1.505622074,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": -3.0402492378,
+              "median_difference_bps": 0.0,
+              "sample_size": 255,
+              "sign_counts": {
+                "-1": 129,
+                "0": 0,
+                "1": 126
+              }
+            }
+          },
+          "pooled_contribution_to_full_mean_bps": -1.1759441454,
+          "year": "2017"
+        },
+        {
+          "assets": {
+            "EURUSD": {
+              "mean_always_long_bps": -1.8169967157,
+              "mean_always_short_bps": 1.8169967157,
+              "mean_difference_bps": -0.4480164283,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": -2.265013144,
+              "median_difference_bps": 0.0,
+              "sample_size": 255,
+              "sign_counts": {
+                "-1": 153,
+                "0": 0,
+                "1": 102
+              }
+            },
+            "USDJPY": {
+              "mean_always_long_bps": -0.9382239976,
+              "mean_always_short_bps": 0.9382239976,
+              "mean_difference_bps": 2.9489538752,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": 2.0107298776,
+              "median_difference_bps": 0.0,
+              "sample_size": 255,
+              "sign_counts": {
+                "-1": 114,
+                "0": 0,
+                "1": 141
+              }
+            }
+          },
+          "pooled_contribution_to_full_mean_bps": 0.3570767351,
+          "year": "2018"
+        },
+        {
+          "assets": {
+            "EURUSD": {
+              "mean_always_long_bps": -0.7468563094,
+              "mean_always_short_bps": 0.7468563094,
+              "mean_difference_bps": -0.4180946783,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": -1.1649509877,
+              "median_difference_bps": 0.0,
+              "sample_size": 255,
+              "sign_counts": {
+                "-1": 160,
+                "0": 2,
+                "1": 93
+              }
+            },
+            "USDJPY": {
+              "mean_always_long_bps": -0.4908535377,
+              "mean_always_short_bps": 0.4908535377,
+              "mean_difference_bps": -0.9565578877,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": -1.4474114254,
+              "median_difference_bps": 0.0,
+              "sample_size": 255,
+              "sign_counts": {
+                "-1": 121,
+                "0": 0,
+                "1": 134
+              }
+            }
+          },
+          "pooled_contribution_to_full_mean_bps": -0.1962689834,
+          "year": "2019"
+        }
+      ],
+      "assets": {
+        "EURUSD": {
+          "ci_high_bps": 2.9068236457,
+          "ci_low_bps": -4.4960487851,
+          "holm_adjusted_p_value": 1.0,
+          "mean_always_long_bps": 0.0961053633,
+          "mean_always_short_bps": -0.0961053633,
+          "mean_difference_bps": -0.8913050377,
+          "mean_flat_bps": 0.0,
+          "mean_signal_bps": -0.7951996744,
+          "median_difference_bps": 0.0,
+          "primary_p_value": 0.6809,
+          "sample_size": 893,
+          "sign_counts": {
+            "-1": 495,
+            "0": 2,
+            "1": 396
+          },
+          "verdict": "DESCRIPTIVE_TEMPORAL_ROLE"
+        },
+        "USDJPY": {
+          "ci_high_bps": 2.1952020624,
+          "ci_low_bps": -5.7804708102,
+          "holm_adjusted_p_value": 1.0,
+          "mean_always_long_bps": 0.6294270283,
+          "mean_always_short_bps": -0.6294270283,
+          "mean_difference_bps": -1.8035127562,
+          "mean_flat_bps": 0.0,
+          "mean_signal_bps": -1.1740857279,
+          "median_difference_bps": 0.0,
+          "primary_p_value": 0.8172,
+          "sample_size": 893,
+          "sign_counts": {
+            "-1": 400,
+            "0": 0,
+            "1": 493
+          },
+          "verdict": "DESCRIPTIVE_TEMPORAL_ROLE"
+        }
+      },
+      "bootstrap": [
+        {
+          "assets": [
+            {
+              "asset": "EURUSD",
+              "ci_high": 0.0003087617,
+              "ci_low": -0.0004813844,
+              "mean": -8.91305e-05,
+              "p_value": 0.6658
+            },
+            {
+              "asset": "USDJPY",
+              "ci_high": 0.0002456112,
+              "ci_low": -0.0006111844,
+              "mean": -0.0001803513,
+              "p_value": 0.8021
+            }
+          ],
+          "block_length": 10,
+          "repetitions": 9999,
+          "sample_size": 893,
+          "seed": 20261021,
+          "units": "logarithmic reference-rate change per observation"
+        },
+        {
+          "assets": [
+            {
+              "asset": "EURUSD",
+              "ci_high": 0.0002906824,
+              "ci_low": -0.0004496049,
+              "mean": -8.91305e-05,
+              "p_value": 0.6809
+            },
+            {
+              "asset": "USDJPY",
+              "ci_high": 0.0002195202,
+              "ci_low": -0.0005780471,
+              "mean": -0.0001803513,
+              "p_value": 0.8172
+            }
+          ],
+          "block_length": 20,
+          "repetitions": 9999,
+          "sample_size": 893,
+          "seed": 20261021,
+          "units": "logarithmic reference-rate change per observation"
+        },
+        {
+          "assets": [
+            {
+              "asset": "EURUSD",
+              "ci_high": 0.0003150034,
+              "ci_low": -0.0004361847,
+              "mean": -8.91305e-05,
+              "p_value": 0.667
+            },
+            {
+              "asset": "USDJPY",
+              "ci_high": 0.0001784877,
+              "ci_low": -0.000560762,
+              "mean": -0.0001803513,
+              "p_value": 0.8306
+            }
+          ],
+          "block_length": 60,
+          "repetitions": 9999,
+          "sample_size": 893,
+          "seed": 20261021,
+          "units": "logarithmic reference-rate change per observation"
+        }
+      ],
+      "concentration": {
+        "removed_contribution_to_full_mean_bps": 0.3570767351,
+        "removed_year": "2018",
+        "retained_pooled_mean_bps": -2.3857455634,
+        "retained_sample_size": 638,
+        "status": "DESCRIPTIVE_OUTCOME_DEPENDENT"
+      },
+      "family_verdict": "DESCRIPTIVE_TEMPORAL_ROLE",
+      "first_target": "2016-07-04",
+      "last_target": "2019-12-31",
+      "pooled_mean_difference_bps": -1.347408897,
+      "sample_size": 893,
+      "status": "QUALIFIED"
+    },
+    "final": {
+      "annual": [
+        {
+          "assets": {
+            "EURUSD": {
+              "mean_always_long_bps": 0.8512187554,
+              "mean_always_short_bps": -0.8512187554,
+              "mean_difference_bps": 0.388958975,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": 1.2401777303,
+              "median_difference_bps": 0.0,
+              "sample_size": 233,
+              "sign_counts": {
+                "-1": 110,
+                "0": 0,
+                "1": 123
+              }
+            },
+            "USDJPY": {
+              "mean_always_long_bps": 3.4962578397,
+              "mean_always_short_bps": -3.4962578397,
+              "mean_difference_bps": -1.0232746145,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": 2.4729832252,
+              "median_difference_bps": 0.0,
+              "sample_size": 233,
+              "sign_counts": {
+                "-1": 71,
+                "0": 0,
+                "1": 162
+              }
+            }
+          },
+          "pooled_contribution_to_full_mean_bps": -0.0993249624,
+          "year": "2023"
+        },
+        {
+          "assets": {
+            "EURUSD": {
+              "mean_always_long_bps": -2.4094872608,
+              "mean_always_short_bps": 2.4094872608,
+              "mean_difference_bps": 2.9010483353,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": 0.4915610745,
+              "median_difference_bps": 0.0,
+              "sample_size": 256,
+              "sign_counts": {
+                "-1": 144,
+                "0": 0,
+                "1": 112
+              }
+            },
+            "USDJPY": {
+              "mean_always_long_bps": 4.05593545,
+              "mean_always_short_bps": -4.05593545,
+              "mean_difference_bps": -2.2123013602,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": 1.8436340898,
+              "median_difference_bps": 0.0,
+              "sample_size": 256,
+              "sign_counts": {
+                "-1": 88,
+                "0": 0,
+                "1": 168
+              }
+            }
+          },
+          "pooled_contribution_to_full_mean_bps": 0.1184941032,
+          "year": "2024"
+        },
+        {
+          "assets": {
+            "EURUSD": {
+              "mean_always_long_bps": 4.8276739805,
+              "mean_always_short_bps": -4.8276739805,
+              "mean_difference_bps": -3.0076452192,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": 1.8200287613,
+              "median_difference_bps": 0.0,
+              "sample_size": 255,
+              "sign_counts": {
+                "-1": 88,
+                "0": 0,
+                "1": 167
+              }
+            },
+            "USDJPY": {
+              "mean_always_long_bps": -0.0705548736,
+              "mean_always_short_bps": 0.0705548736,
+              "mean_difference_bps": -4.2475615224,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": -4.3181163961,
+              "median_difference_bps": 0.0,
+              "sample_size": 255,
+              "sign_counts": {
+                "-1": 112,
+                "0": 0,
+                "1": 143
+              }
+            }
+          },
+          "pooled_contribution_to_full_mean_bps": -1.2433318005,
+          "year": "2025"
+        }
+      ],
+      "assets": {
+        "EURUSD": {
+          "ci_high_bps": 3.8361863811,
+          "ci_low_bps": -3.6931699714,
+          "holm_adjusted_p_value": 0.9598,
+          "mean_always_long_bps": 1.0921533552,
+          "mean_always_short_bps": -1.0921533552,
+          "mean_difference_bps": 0.0891751131,
+          "mean_flat_bps": 0.0,
+          "mean_signal_bps": 1.1813284682,
+          "median_difference_bps": 0.0,
+          "primary_p_value": 0.4799,
+          "sample_size": 744,
+          "sign_counts": {
+            "-1": 342,
+            "0": 0,
+            "1": 402
+          },
+          "verdict": "INCONCLUSIVE"
+        },
+        "USDJPY": {
+          "ci_high_bps": 3.9619094058,
+          "ci_low_bps": -8.6025017897,
+          "holm_adjusted_p_value": 0.9598,
+          "mean_always_long_bps": 2.4663387891,
+          "mean_always_short_bps": -2.4663387891,
+          "mean_difference_bps": -2.5375004323,
+          "mean_flat_bps": 0.0,
+          "mean_signal_bps": -0.0711616432,
+          "median_difference_bps": 0.0,
+          "primary_p_value": 0.784,
+          "sample_size": 744,
+          "sign_counts": {
+            "-1": 271,
+            "0": 0,
+            "1": 473
+          },
+          "verdict": "NEGATIVE_COMPARISON"
+        }
+      },
+      "bootstrap": [
+        {
+          "assets": [
+            {
+              "asset": "EURUSD",
+              "ci_high": 0.0003823893,
+              "ci_low": -0.000365534,
+              "mean": 8.9175e-06,
+              "p_value": 0.4849
+            },
+            {
+              "asset": "USDJPY",
+              "ci_high": 0.0003665868,
+              "ci_low": -0.0008358332,
+              "mean": -0.00025375,
+              "p_value": 0.7976
+            }
+          ],
+          "block_length": 10,
+          "repetitions": 9999,
+          "sample_size": 744,
+          "seed": 20261021,
+          "units": "logarithmic reference-rate change per observation"
+        },
+        {
+          "assets": [
+            {
+              "asset": "EURUSD",
+              "ci_high": 0.0003836186,
+              "ci_low": -0.000369317,
+              "mean": 8.9175e-06,
+              "p_value": 0.4799
+            },
+            {
+              "asset": "USDJPY",
+              "ci_high": 0.0003961909,
+              "ci_low": -0.0008602502,
+              "mean": -0.00025375,
+              "p_value": 0.784
+            }
+          ],
+          "block_length": 20,
+          "repetitions": 9999,
+          "sample_size": 744,
+          "seed": 20261021,
+          "units": "logarithmic reference-rate change per observation"
+        },
+        {
+          "assets": [
+            {
+              "asset": "EURUSD",
+              "ci_high": 0.0004215997,
+              "ci_low": -0.0003551358,
+              "mean": 8.9175e-06,
+              "p_value": 0.4634
+            },
+            {
+              "asset": "USDJPY",
+              "ci_high": 0.0003922313,
+              "ci_low": -0.0008172318,
+              "mean": -0.00025375,
+              "p_value": 0.7912
+            }
+          ],
+          "block_length": 60,
+          "repetitions": 9999,
+          "sample_size": 744,
+          "seed": 20261021,
+          "units": "logarithmic reference-rate change per observation"
+        }
+      ],
+      "concentration": {
+        "removed_contribution_to_full_mean_bps": 0.1184941032,
+        "removed_year": "2024",
+        "retained_pooled_mean_bps": -2.0470012942,
+        "retained_sample_size": 488,
+        "status": "DESCRIPTIVE_OUTCOME_DEPENDENT"
+      },
+      "family_verdict": "NOT_PASS",
+      "first_target": "2023-01-31",
+      "last_target": "2025-12-31",
+      "pooled_mean_difference_bps": -1.2241626596,
+      "sample_size": 744,
+      "status": "QUALIFIED"
+    },
+    "validation": {
+      "annual": [
+        {
+          "assets": {
+            "EURUSD": {
+              "mean_always_long_bps": 4.4522275716,
+              "mean_always_short_bps": -4.4522275716,
+              "mean_difference_bps": -2.4022111015,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": 2.0500164701,
+              "median_difference_bps": 0.0,
+              "sample_size": 235,
+              "sign_counts": {
+                "-1": 87,
+                "0": 1,
+                "1": 147
+              }
+            },
+            "USDJPY": {
+              "mean_always_long_bps": -2.3348195108,
+              "mean_always_short_bps": 2.3348195108,
+              "mean_difference_bps": -2.8699846521,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": -5.2048041629,
+              "median_difference_bps": 0.0,
+              "sample_size": 235,
+              "sign_counts": {
+                "-1": 156,
+                "0": 1,
+                "1": 78
+              }
+            }
+          },
+          "pooled_contribution_to_full_mean_bps": -0.8259773347,
+          "year": "2020"
+        },
+        {
+          "assets": {
+            "EURUSD": {
+              "mean_always_long_bps": -3.1061157869,
+              "mean_always_short_bps": 3.1061157869,
+              "mean_difference_bps": 1.1615794677,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": -1.9445363192,
+              "median_difference_bps": 0.0,
+              "sample_size": 258,
+              "sign_counts": {
+                "-1": 167,
+                "0": 1,
+                "1": 90
+              }
+            },
+            "USDJPY": {
+              "mean_always_long_bps": 4.280147176,
+              "mean_always_short_bps": -4.280147176,
+              "mean_difference_bps": -6.7845164192,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": -2.5043692433,
+              "median_difference_bps": 0.0,
+              "sample_size": 258,
+              "sign_counts": {
+                "-1": 90,
+                "0": 0,
+                "1": 168
+              }
+            }
+          },
+          "pooled_contribution_to_full_mean_bps": -0.9671451557,
+          "year": "2021"
+        },
+        {
+          "assets": {
+            "EURUSD": {
+              "mean_always_long_bps": -2.3361811484,
+              "mean_always_short_bps": 2.3361811484,
+              "mean_difference_bps": 3.7192948091,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": 1.3831136608,
+              "median_difference_bps": 0.0,
+              "sample_size": 257,
+              "sign_counts": {
+                "-1": 150,
+                "0": 0,
+                "1": 107
+              }
+            },
+            "USDJPY": {
+              "mean_always_long_bps": 5.2891915524,
+              "mean_always_short_bps": -5.2891915524,
+              "mean_difference_bps": 0.0467093641,
+              "mean_flat_bps": 0.0,
+              "mean_signal_bps": 5.3359009165,
+              "median_difference_bps": 0.0,
+              "sample_size": 257,
+              "sign_counts": {
+                "-1": 78,
+                "0": 0,
+                "1": 179
+              }
+            }
+          },
+          "pooled_contribution_to_full_mean_bps": 0.6452420483,
+          "year": "2022"
+        }
+      ],
+      "assets": {
+        "EURUSD": {
+          "ci_high_bps": 5.4640831996,
+          "ci_low_bps": -3.5064803806,
+          "holm_adjusted_p_value": 0.6868,
+          "mean_always_long_bps": -0.4740039318,
+          "mean_always_short_bps": 0.4740039318,
+          "mean_difference_bps": 0.9213688797,
+          "mean_flat_bps": 0.0,
+          "mean_signal_bps": 0.4473649479,
+          "median_difference_bps": 0.0,
+          "primary_p_value": 0.3434,
+          "sample_size": 750,
+          "sign_counts": {
+            "-1": 404,
+            "0": 2,
+            "1": 344
+          },
+          "verdict": "DESCRIPTIVE_TEMPORAL_ROLE"
+        },
+        "USDJPY": {
+          "ci_high_bps": 2.7711273011,
+          "ci_low_bps": -8.8201789413,
+          "holm_adjusted_p_value": 0.8701,
+          "mean_always_long_bps": 2.5532234871,
+          "mean_always_short_bps": -2.5532234871,
+          "mean_difference_bps": -3.2171297638,
+          "mean_flat_bps": 0.0,
+          "mean_signal_bps": -0.6639062767,
+          "median_difference_bps": 0.0,
+          "primary_p_value": 0.8701,
+          "sample_size": 750,
+          "sign_counts": {
+            "-1": 324,
+            "0": 1,
+            "1": 425
+          },
+          "verdict": "DESCRIPTIVE_TEMPORAL_ROLE"
+        }
+      },
+      "bootstrap": [
+        {
+          "assets": [
+            {
+              "asset": "EURUSD",
+              "ci_high": 0.000597558,
+              "ci_low": -0.0003888392,
+              "mean": 9.21369e-05,
+              "p_value": 0.3478
+            },
+            {
+              "asset": "USDJPY",
+              "ci_high": 0.0002755648,
+              "ci_low": -0.0009186778,
+              "mean": -0.000321713,
+              "p_value": 0.8635
+            }
+          ],
+          "block_length": 10,
+          "repetitions": 9999,
+          "sample_size": 750,
+          "seed": 20261021,
+          "units": "logarithmic reference-rate change per observation"
+        },
+        {
+          "assets": [
+            {
+              "asset": "EURUSD",
+              "ci_high": 0.0005464083,
+              "ci_low": -0.000350648,
+              "mean": 9.21369e-05,
+              "p_value": 0.3434
+            },
+            {
+              "asset": "USDJPY",
+              "ci_high": 0.0002771127,
+              "ci_low": -0.0008820179,
+              "mean": -0.000321713,
+              "p_value": 0.8701
+            }
+          ],
+          "block_length": 20,
+          "repetitions": 9999,
+          "sample_size": 750,
+          "seed": 20261021,
+          "units": "logarithmic reference-rate change per observation"
+        },
+        {
+          "assets": [
+            {
+              "asset": "EURUSD",
+              "ci_high": 0.0004602148,
+              "ci_low": -0.0002580574,
+              "mean": 9.21369e-05,
+              "p_value": 0.3004
+            },
+            {
+              "asset": "USDJPY",
+              "ci_high": 0.00035238,
+              "ci_low": -0.0008603323,
+              "mean": -0.000321713,
+              "p_value": 0.8524
+            }
+          ],
+          "block_length": 60,
+          "repetitions": 9999,
+          "sample_size": 750,
+          "seed": 20261021,
+          "units": "logarithmic reference-rate change per observation"
+        }
+      ],
+      "concentration": {
+        "removed_contribution_to_full_mean_bps": 0.6452420483,
+        "removed_year": "2022",
+        "retained_pooled_mean_bps": -2.7278739712,
+        "retained_sample_size": 493,
+        "status": "DESCRIPTIVE_OUTCOME_DEPENDENT"
+      },
+      "family_verdict": "DESCRIPTIVE_TEMPORAL_ROLE",
+      "first_target": "2020-01-31",
+      "last_target": "2022-12-30",
+      "pooled_mean_difference_bps": -1.1478804421,
+      "sample_size": 750,
+      "status": "QUALIFIED"
+    }
+  },
+  "source_csv_sha256": "b6aa4be6327be74aab465f95ad1db8e97636fb215b9208b35d1b1744f10815b7",
+  "study_id": "ECB-FX-MOM20-v001",
+  "units": "basis points of signed logarithmic reference-rate change per observation"
+}

@@ -9,6 +9,12 @@ from scripts.audit_public import audit_directory, text_findings, metadata_findin
 
 
 class PublicationAuditTests(unittest.TestCase):
+    def test_csv_exception_is_specific_to_the_reviewed_provider_snapshot(self):
+        from scripts.audit_public import text_findings
+
+        self.assertEqual(text_findings('data/ecb-fx-reference.csv', b'Date,USD,JPY\n'), [])
+        self.assertTrue(text_findings('data/vendor.csv', b'Date,USD,JPY\n'))
+
     def test_public_owner_and_github_merge_metadata_are_bounded(self):
         owner='12345+vda93@users.noreply.github.com'
         self.assertEqual(metadata_findings('vda93\n'+owner+'\nvda93\n'+owner+'\npublic commit'),[])

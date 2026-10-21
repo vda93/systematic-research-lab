@@ -4,7 +4,7 @@
 
 These are authentic TradingBotHQ historical research records, summarized in original prose. The source register identifies the underlying study and what was inspected during the October 20, 2026 publication review. A private provenance ledger retains exact paths or connected-record IDs, source hashes, sample roles and disclosure judgments. Private links are not published as if a recruiter could open them.
 
-**Publicly reproducible:** calculations on the published aggregates, figure/table reconstruction, methodological examples, tests and disclosure checks. **Privately evidenced:** the original backtests, larger event studies, account simulations and tester certificates. This repository cannot independently establish those historical results from market data. In particular, the original MOMCONT result directories were not available locally; current primary decision records and Drive handoffs supply those aggregates. A recorded result is not a new independent recomputation.
+**Publicly reproducible:** the new [ECB study](../studies/fx-reference-momentum.md) from its permitted source snapshot, plus calculations on published TradingBotHQ aggregates, figure/table reconstruction, methodological examples, tests and disclosure checks. **Privately evidenced:** the original TradingBotHQ backtests, larger event studies, account simulations and tester certificates. This repository cannot independently establish those private historical results from market data. In particular, the original MOMCONT result directories were not available locally; current primary decision records and Drive handoffs supply those aggregates. A recorded result is not a new independent recomputation.
 
 Raw vendor data, strategy execution code, exact production settings and operational/account identifiers remain excluded. Summary pages were treated as navigation and checked against later primary decisions; stale parity and portfolio statuses were corrected. No sealed dataset was opened and no MT5 run was launched for this publication.
 
@@ -68,6 +68,8 @@ Raw vendor data, strategy execution code, exact production settings and operatio
 
 **DE30 H005 — Sizing repair and semantic paths.** Primary decision plus local final gate and canonicalization amendment inspected and hashed; known-data replay.
 
+The full canonical decision was refreshed for this release. Its later October 2026 production risk-input hotfix does not inherit certification from the earlier historical replay.
+
 ## D8
 
 **DE30 H005 — Narrow numerical amendment.** Local amendment inspected; exact semantic fields, two redundant price fields with absolute tolerance, no economic rerun.
@@ -107,6 +109,8 @@ Raw vendor data, strategy execution code, exact production settings and operatio
 ## N1
 
 **NOWICK H004 — Matched incremental event study.** Local completed analysis, brief and decision inspected and hashed; day-cluster individual CI in percentage points.
+
+The refreshed original-family closeout explicitly labels rejection and shelving as a user decision; this supports the narrow personal-adjudication statement in the ownership disclosure.
 
 ## N2
 
@@ -326,7 +330,7 @@ Inspected the current parent and four-pair candidate research summaries and the 
 
 **Calendar coverage forensics.**
 
-Inspected the current later-period calendar-forensics record and its vendor-statement context. Original vendor statements and calendar data were not reopened. The recorded coverage failure invalidates the provisional clean-OOS interpretation; it does not repair that sample or settle strategy profitability.
+Refreshed the full canonical later-period decision on 21 October 2026, including the 2 September vendor-audit correction. Vendor trading was overwhelmingly HIGH-impact and cannot independently validate MEDIUM-event completeness. The earlier counts sum to 16,059, whereas the later forensic table reports 16,288; extraction scopes remain unreconciled. The case study identifies which table supplies its density comparison. Original vendor statements and calendar data were not reopened. The recorded coverage failure invalidates the provisional clean-OOS interpretation; it does not repair that sample or settle strategy profitability.
 
 ## B16
 
@@ -399,3 +403,15 @@ Inspected the preserved analysis and final-status records, including replay outc
 **Queue and coverage limits.**
 
 Inspected the complete retrieved research registry and registered local experiment-folder metadata. Five source-document hypotheses and three parked successor proposals have no completed result in their inspected records. Two VWAP hypothesis numbers remain coverage gaps in this finite census. None is assigned a fabricated performance result; AOF poker research is outside the trading atlas.
+
+## FX1
+
+**ECB-FX-MOM20-v001 — public end-to-end reference-rate study.**
+
+The complete public pipeline qualifies a selected official ECB historical snapshot and rebuilds delayed momentum features, purged temporal roles, paired block inference and frozen robustness checks. The protocol and implementation were published at commit `3dd50f4bfe5299e345acf3fe0e2b8c697967fe2e` before acquisition. [Acquisition receipt](../data/ecb-acquisition.json), [execution receipt](../data/ecb-execution.json), [data conditions](../DATA_LICENSE.md), [protocol](../experiments/ecb-fx-mom20-protocol.md), [results](../data/ecb-fx-results.json) and [study](../studies/fx-reference-momentum.md) establish the public verification path. The dataset is a revised reference-rate vintage, not executable quotes or pristine prospective OOS. Independent recomputation checks implementation against the same provider, not independent provider truth.
+
+## SYN1
+
+**Synthetic methods calibration — no historical market evidence.**
+
+[Protocol](../experiments/protocol.json), [implementation](../src/srl/study.py) and [results](../results/study.json) define an entirely synthetic teaching/calibration exercise. This source is reserved for illustration and cannot support a historical-market alpha claim.

@@ -1,0 +1,35 @@
+{
+  "claims": [
+    {
+      "disclosure_approved": true,
+      "evidence_ids": [
+        "ECB-FX-MOM20-SNAPSHOT-v001"
+      ],
+      "id": "FX1",
+      "kind": "historical_report",
+      "text": "Fixed delayed momentum reference-rate comparison NOT_PASS; no executable economics evaluated."
+    }
+  ],
+  "evidence": [
+    {
+      "bytes": 60866,
+      "consumed": true,
+      "disclosure": "Selected dates and columns, attributed ECB source; derived calculations identified.",
+      "disclosure_approved": true,
+      "id": "ECB-FX-MOM20-SNAPSHOT-v001",
+      "kind": "historical",
+      "license": "ECB published free-use conditions; DATA_LICENSE.md, not MIT",
+      "owner": "vda93, AI-assisted public research",
+      "path": "data/ecb-fx-reference.csv",
+      "period_end_exclusive": "2026-01-01",
+      "period_start": "2016-06-01",
+      "redistribution": "permitted",
+      "sample_role": "spent",
+      "sample_space": "ECB_REFERENCE_RATES",
+      "sha256": "b6aa4be6327be74aab465f95ad1db8e97636fb215b9208b35d1b1744f10815b7",
+      "source": "European Central Bank, euro foreign exchange reference rates; data/ecb-acquisition.json",
+      "study_id": "ECB-FX-MOM20-v001"
+    }
+  ],
+  "version": 1
+}

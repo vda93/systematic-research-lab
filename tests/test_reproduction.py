@@ -1,6 +1,5 @@
 """The figure and checked artifacts must follow calculations, not fixed captions."""
 
-from copy import deepcopy
 import json
 import tempfile
 import unittest

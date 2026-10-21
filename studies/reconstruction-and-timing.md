@@ -6,7 +6,7 @@ These entries distinguish completed negative research, uncertain historical asso
 
 ## NYDR replication: interpretation uncertainty without a winner search [B17](../docs/evidence.md#b17)
 
-I implemented a partial paper reconstruction using a qualified alternative FX source and explicit deterministic conventions. The frozen reference produced **754 trades**, **-70.602004R**, and profit factor **0.862078** in 2021–2022. Its decision was **INCONCLUSIVE** as a paper replication because original data, code, and several definitions were unavailable. Commission and latency were zero in this reference, so its accounting must remain labeled.
+The engineering program implemented a partial paper reconstruction using a qualified alternative FX source and explicit deterministic conventions. The frozen reference produced **754 trades**, **-70.602004R**, and profit factor **0.862078** in 2021–2022. Its decision was **INCONCLUSIVE** as a paper replication because original data, code, and several definitions were unavailable. Commission and latency were zero in this reference, so its accounting must remain labeled.
 
 A separately preregistered interpretation census examined **305 frozen cells**. Every combined equal-risk FX cell was nonpositive, and source-supported interpretations remained negative. The positive FX replication claim was rejected under this tested source and contract. This does not falsify every possible author implementation. The work retained source fidelity as the comparison criterion instead of promoting the highest historical cell, kept the Nasdaq result separate, and left the external holdout sealed.
 

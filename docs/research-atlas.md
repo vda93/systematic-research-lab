@@ -2,7 +2,7 @@
 
 [Portfolio](../README.md) · [Evidence register](evidence.md) · [Timeline](timeline.md)
 
-The October 2026 survey inspected the complete retrieved **114-record research registry**, then reconciled relevant primary decisions, local reports, engineering receipts and later closeouts. Related records overlap and some are protocols, source ideas or duplicate summaries; 114 is a coverage count, **not** a count of successful experiments. Local studies outside that registry were included where adequate records existed.
+The October 2026 survey inspected the complete retrieved **114-record research registry**, then reconciled relevant primary decisions, local reports, engineering receipts and later closeouts. Related records overlap and some are protocols, source ideas or duplicate summaries; 114 is a coverage count, **not** a count of successful experiments. Local studies outside that registry were included where adequate records existed. [Census limits](evidence.md#b27)
 
 Enough evidence to describe a result does not mean enough evidence to promote a strategy. This atlas includes completed economic tests, conditional associations, insufficient-support stops, invalid-data forensics and engineering checks. It explicitly separates unrun hypotheses. The [source register](evidence.md) explains what was inspected; private backtests are not publicly replayable.
 
@@ -11,10 +11,12 @@ Enough evidence to describe a result does not mean enough evidence to promote a 
 | Research program | What deserves attention | Read |
 | --- | --- | --- |
 | MOMCONT directional and exit research | Directional asymmetry, occupancy, cross-era challenges, paired portfolio inference and an enforced stop | [Flagship case study](../studies/momentum-continuation.md) |
-| DE30 continuation | Development concentration failure, qualified terminal pass, sizing correction and later conditional inclusion | [Flagship case study](../studies/de30-continuation.md) |
+| MOMCONT on DE30X H1 | Development concentration failure, qualified terminal pass, sizing correction and later conditional inclusion | [Flagship case study](../studies/de30-continuation.md) |
 | ORB historical program | Mechanism controls, conflicting standalone OOS, scientific parity versus monetary qualification | [Flagship case study](../studies/opening-range.md) |
 | NOWICK and independent reversal | Direct feature matching, uncertain continuation, cost-explicit independent reversal rejection | [Flagship case study](../studies/nowick.md) |
 | Research OS | Source identity, evidence roles, mutation detection, semantic metrics and deterministic closeout | [Engineering study](../studies/research-engineering.md) |
+| MacroImpulse calendar forensics | Invalid event universe withdrew a clean strategy-failure conclusion | [Data-forensics study](../studies/data-forensics.md) |
+| New public ECB study | Fixed delayed momentum comparison failed; complete empirical pipeline is replayable | [Reference-rate study](../studies/fx-reference-momentum.md) |
 
 ## Momentum, portability and execution
 

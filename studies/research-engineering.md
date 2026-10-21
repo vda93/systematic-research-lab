@@ -2,7 +2,9 @@
 
 [Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
 
-Research infrastructure is useful when it makes an unsupported claim harder to publish. I built an offline analytics and closeout layer for a private quantitative research workspace, with explicit evidence roles, source identities, verification checks, and a separate path for public disclosure. The engineering objective was to connect a claim to inspectable evidence while preserving the distinction between software correctness, economic findings, and permission to deploy. [E1](../docs/evidence.md#e1)
+Research infrastructure is useful when it makes an unsupported claim harder to publish. TradingBotHQ's AI-assisted engineering program built an offline analytics and closeout layer with explicit evidence roles, source identities, verification checks and a separate path for public disclosure. Precise manual authorship is not reconstructed from Git metadata; the [ownership statement](../docs/ownership.md) separates direction, automation and coding assistance. The engineering objective was to connect a claim to inspectable evidence while preserving the distinction between software correctness, economic findings and permission to deploy. [E1](../docs/evidence.md#e1)
+
+The independently authored public [Research OS implementation](../docs/research-os.md) is runnable code: validate real asset hashes and disclosure metadata, preserve consumed sample roles, reject invalid claims, and construct deterministic review packs. Its mutation tests demonstrate rejected states. This release does not copy the private operational engine or certify its behavior from the public demonstration.
 
 ## A compact evidence path
 
