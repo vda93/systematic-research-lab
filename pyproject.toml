@@ -30,7 +30,7 @@ select = ["F", "E9"]
 
 [tool.mypy]
 python_version = "3.12"
-files = ["src/srl/evidence.py", "src/srl/fx_study.py", "src/srl/claims.py", "src/srl/block_means.py"]
+files = ["src/srl/evidence.py", "src/srl/fx_study.py", "src/srl/claims.py", "src/srl/block_means.py", "src/srl/bbo.py", "src/srl/bbo_acquire.py"]
 check_untyped_defs = true
 disallow_untyped_defs = true
 warn_unused_ignores = true
