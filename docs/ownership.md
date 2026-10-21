@@ -6,6 +6,17 @@ TradingBotHQ is my research project. I direct this portfolio's questions, priori
 
 Personal ownership does not mean that I manually wrote every line of code or originated every historical hypothesis. The study pages distinguish a documented research decision from a calculation performed by a research engine, a repair implemented with assistance, and a result retained from a canonical record. Git author names establish attribution metadata; they cannot establish manual implementation.
 
+## Contribution evidence
+
+| Contribution | What the record establishes | What remains unverified |
+| --- | --- | --- |
+| Historical hypothesis development | [MOMCONT H006–H010](../studies/momentum-continuation.md#how-the-earlier-question-developed) records competing explanations, a factorial comparison and rejection of the original horizon explanation. | Who first proposed each question or design. The records do not establish personal idea origin. |
+| A personal research decision | The [NOWICK closeout](evidence.md#n1) explicitly labels rejection and shelving of the original family as a user decision. | That decision does not establish authorship of the matching engine or statistical analysis. |
+| Public engineering | The [evidence package](research-os.md) has public source, adversarial tests and an AI-assisted implementation receipt. I supplied project requirements; implementation used agents. [E5](evidence.md#e5) | A function-by-function account of my manual code and review contributions. |
+| Independent technical defense | The source and tests provide inspectable material for derivation, modification and debugging exercises. | My unaided performance has not been assessed. Preparation worksheets are not evidence of completed exercises or mastery. |
+
+Personal hypothesis-origin, manual-authorship and review claims remain **HUMAN_ATTESTATION_REQUIRED** where the records do not identify them. Any later attestation must describe the specific contribution and its supporting artifact; it cannot retroactively turn AI work into unaided work. New explanatory prose and engineering in this portfolio also use AI assistance.
+
 ## What the five main stories represent
 
 | Study or system | Identity | My documented role and the assistance boundary |

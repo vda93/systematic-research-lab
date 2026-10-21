@@ -16,56 +16,24 @@
     "README.md": [
       {
         "kind": "historical_report",
-        "sha256": "082bead241345286b9ce7ce4296fa23a9319814d735a20c45ee8c491a62e178f",
+        "sha256": "9be874852611bdda802dcabbb473d79858d3efe74f06b5f3fa27047aa4434863",
         "source_ids": [
-          "M3",
-          "M4",
-          "M7",
+          "B15",
           "D1",
           "D2",
           "D7",
-          "O1",
-          "O2",
-          "O4",
-          "N1",
-          "N2",
-          "B15"
-        ]
-      },
-      {
-        "kind": "historical_report",
-        "sha256": "cd605ff5a632d9a510815ef3ef61c07eb3a27d7c89984d57f4da6292278bf9b1",
-        "source_ids": [
+          "E6",
+          "M10",
+          "M11",
           "M3",
           "M4",
           "M7",
-          "D1",
-          "D2",
-          "D7",
-          "O1",
-          "O2",
-          "O4",
+          "M9",
           "N1",
           "N2",
-          "B15"
-        ]
-      },
-      {
-        "kind": "historical_report",
-        "sha256": "93d6a9e42da935944c5967565bf111d270b1d3f85ff6d0eed3c977745bad1512",
-        "source_ids": [
-          "M3",
-          "M4",
-          "M7",
-          "D1",
-          "D2",
-          "D7",
           "O1",
           "O2",
-          "O4",
-          "N1",
-          "N2",
-          "B15"
+          "O4"
         ]
       },
       {
@@ -776,6 +744,122 @@
         "kind": "documentation",
         "sha256": "ca4ffc6f86e07043f0fb53fcdfe368fdeca20346aa6e13daab5d833224efd5c3",
         "source_ids": []
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "9d87692225cf676a15188c7adefdc0aab6d9da0a2c0853707cf4ccca5f73efa1",
+        "source_ids": [
+          "E5",
+          "E6",
+          "M10",
+          "M11",
+          "M9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6a9bc0383a105635c446574a878faa680533697d7fbc4fa1dd430964b344c6f0",
+        "source_ids": [
+          "E5",
+          "E6",
+          "M10",
+          "M11",
+          "M9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "564975c855a30817964fd2504806c7abeac4f79ad6ea92b175d9d103a4724b96",
+        "source_ids": [
+          "E5",
+          "E6",
+          "M10",
+          "M11",
+          "M9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "4f9be765ef7ada8166b7ff635f06ef2681db2902ec9388d101a2eef947c54e47",
+        "source_ids": [
+          "E5",
+          "E6",
+          "M10",
+          "M11",
+          "M9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e5f4d6861ee937ad1f22ed0b3c897001cc02b5919443f511a1c42ad9a18f933c",
+        "source_ids": [
+          "E5",
+          "E6",
+          "M10",
+          "M11",
+          "M9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e3563a53c4ff24d1b09cc90cfb6a95c9002b2c253d1929c3c417d8f137ce6427",
+        "source_ids": [
+          "E5",
+          "E6",
+          "M10",
+          "M11",
+          "M9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "558ece874c39490d04a1d1c2574897fd79287134150653b79ae20833dbe2298c",
+        "source_ids": [
+          "E5",
+          "E6",
+          "M10",
+          "M11",
+          "M9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6bcab667d0a0a963b8713a8613bb63bb3cd4e99ce68256d6b72110fcbda38554",
+        "source_ids": [
+          "E5",
+          "E6",
+          "M10",
+          "M11",
+          "M9"
+        ]
+      }
+    ],
+    "docs/exact-block-means.md": [
+      {
+        "kind": "methods",
+        "sha256": "0be96d6bcf9eda065cac622853107c975fee9425cea5fd2d54d625daa676261f",
+        "source_ids": []
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "eaeddf1bad4d5680f7370e93345e797058fcdae14b55012beb7d5681d87aae89",
+        "source_ids": [
+          "E6"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "5c77d4dcd91064e273d063d3064645416e049b22c95702f62c09126928f041f2",
+        "source_ids": [
+          "E6"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "f49a8d19cc23ae50513e6f3e103177b5b0c849d31730ac8593c53b8932c14c8b",
+        "source_ids": [
+          "E6"
+        ]
       }
     ],
     "docs/limitations.md": [
@@ -808,6 +892,22 @@
       }
     ],
     "docs/ownership.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "df51e4778e2d99ffd0e287d816ee588212340f1f5ad167bccc10a3a5e4d5d178",
+        "source_ids": [
+          "D7",
+          "E1",
+          "E5",
+          "M10",
+          "M11",
+          "M7",
+          "M9",
+          "N1",
+          "N2",
+          "O6"
+        ]
+      },
       {
         "kind": "documentation",
         "sha256": "c8f35087bc8897bc66f6f98aec239fbeb344278cf3fc6061cf535e0b332cc6c8",
@@ -1007,6 +1107,143 @@
           "O4",
           "O6"
         ]
+      }
+    ],
+    "experiments/bbo-delay-protocol.md": [
+      {
+        "kind": "methods",
+        "sha256": "061f30b3a9998c10ee04e4f97cbeb8a98deae0303ec207eb4d0b1049ea6884a8",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "7ae9a8615578216bb60ccf6c433519eb82b6f990066e722ad6ea0e7f45825e7a",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "7dc65858c9fd084de566a047196af29ee27f53a457c4ea0fccbe5ae026592d73",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "923c9f2eaa466b2dc4bf449ead221472f2c40f456f9d8208b111102d9dc5dfaa",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "0c9c317d812e189d9fa975bb45a3369892280c8e5bcac07fb50a71ae0b1738c7",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "849a7de27e48350167cd05ae7502bf936e25a15b83b5210ebefdce01ab998584",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "5ff41f753553e036cf4bbc8d7674b4e42bd1325724814f95061035281ef4446a",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "937297476cfdde1c221deac29303a4ac0d9add96643cf84dc756a1f893dbb12d",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "ac297658bd1876da72470204d5d6188a4173aa6ec8b8bab5a6e95ba3b53857f3",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "2e67cee02ed2488670b8f2b2c330907163611d3506d8678eb1e6640f7dfd8ed8",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "bb961ace5fceaf3b713b7de42fff6f464c01df98606e7547c30cc5f3503a37b0",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "204197cc80f71d7ba2ceb88afd04b45c2af79a6ab53ae3925ce488e52208e984",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "f84f3ea9b39b36ea6b3e377ef46433f6d9bfd1e1d9f5c09332a59f7940a9cf6f",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "16f5a8fb71153bd78a4021a677754b11622c08225201f5d42e0d1da3be9e26d0",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "6fe104a5b64ce61db109c175378598a3d40a5eab6fbd74768f0a91b4f90c658d",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "8e78f3ffe02d9e1f414116a943f1e511f16ad246e17b03a1e84868922fe95a64",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "db1f0b68427d7d35e5c6a6cc6fd607d44bba38ff9c48ea124924749c7bddd77c",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "324bcd5d03abeea117b8bd4a9c9a95ba6e227ff2db1dc7559071d5768164d433",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "4b03f397ba116e0338342e44744886620d49e4a824e36c69ae0e6c22892c8057",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "1fa16df81e7047a52e5b14fc5e5f4d24bb1de0ec1ca9bf576a3b73766ea38fb4",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "cf4aad9f5560d2c9c6715f2d36f7dc5381a4d0c3bceebc00fef724ebde24eca1",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "de1346e6feb37571888970cfc50a4039d6dffe1eb197eab8f65f698f7096966f",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "9ca00e63fcb077ec329c0b8921c32895f6e0c891522fb664dbc3be8d98afae56",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "78a3557d885c5d6d635a989d57bc3dc7b0482eca5a5fcf794543ec7387a0905a",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "c33d8edd03e84eaeac8ac7c6a13b97985c46bb016dfa905ea792ae8db7d1be57",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "98e5452c2a65e72e8c5d3ee87736bf0bc7447baefb57a84e7c03b64fd67d255f",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "7ae2d9c80c0d8aec61469a22ecb25889a90cac58ed173999db3af21125e68af9",
+        "source_ids": []
       }
     ],
     "experiments/ecb-fx-mom20-protocol.md": [
@@ -3556,6 +3793,74 @@
       },
       {
         "kind": "historical_report",
+        "sha256": "0237550b6fc8708849d9f270675ce1b0d70d046113927f19c892961c2b98c26e",
+        "source_ids": [
+          "M1",
+          "M10",
+          "M11",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8",
+          "M9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "5c70e00f3fe325ecc0b417053d17c59f11abd9a099e6a50915c8bcdf704e569e",
+        "source_ids": [
+          "M1",
+          "M10",
+          "M11",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8",
+          "M9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a2ade39f6e6b90c96c0545b7fda60dd6baec6c146c69f2922d472c880894ecea",
+        "source_ids": [
+          "M1",
+          "M10",
+          "M11",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8",
+          "M9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "3db54ebf148438fc082a62b823048c44c1a9f2cf8659bb15e0540d8be16e4aac",
+        "source_ids": [
+          "M1",
+          "M10",
+          "M11",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8",
+          "M9"
+        ]
+      },
+      {
+        "kind": "historical_report",
         "sha256": "d7bff8d4dbba1e3f280b1d506f83ae1e50a2fa608aa928dc7850e2ffa3b85db7",
         "source_ids": [
           "M1",
@@ -5674,6 +5979,41 @@
       "id": "SYN1",
       "kind": "public_replay",
       "sample_role": "illustration"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "M9",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "M10",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "M11",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "E5",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "deterministic",
+      "id": "E6",
+      "kind": "public_replay",
+      "sample_role": "methods_validation"
     }
   ],
   "version": 1
