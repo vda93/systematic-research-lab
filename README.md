@@ -1,10 +1,10 @@
 # TradingBotHQ · Systematic Research Lab
 
-**Independent quantitative research: falsifiable questions, preserved failures and tested research software.**
+**Systematic-trading research, including the experiments that failed.**
 
-TradingBotHQ is my systematic-trading research program. I direct its questions, constraints and publication decisions using automated research systems and AI-assisted engineering. The historical closeout explicitly records my decision to shelve NOWICK. Exact manual authorship of every private component is not established; [ownership and AI assistance](docs/ownership.md) states that boundary plainly.
+I run TradingBotHQ, a systematic-trading research project. I set the questions, constraints and publication decisions, with automated research systems and AI-assisted engineering. The historical closeout records my decision to shelve NOWICK; it does not establish that I manually wrote every private component. The [ownership and AI assistance](docs/ownership.md) statement explains who did what.
 
-This portfolio combines authentic historical research summaries with a new, completely reproducible study of real ECB FX reference observations. The historical case studies rebuild published aggregates; the ECB study rebuilds the empirical analysis from a lawfully distributed snapshot. These are different verification scopes.
+The historical case studies report TradingBotHQ's actual experiments and rebuild their published aggregates. The new ECB FX study goes further: you can reproduce its empirical analysis from the included, lawfully distributed reference-rate snapshot.
 
 ## Sixty seconds
 

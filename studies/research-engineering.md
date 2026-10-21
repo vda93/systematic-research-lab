@@ -2,9 +2,9 @@
 
 [Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
 
-Research infrastructure is useful when it makes an unsupported claim harder to publish. TradingBotHQ's AI-assisted engineering program built an offline analytics and closeout layer with explicit evidence roles, source identities, verification checks and a separate path for public disclosure. Precise manual authorship is not reconstructed from Git metadata; the [ownership statement](../docs/ownership.md) separates direction, automation and coding assistance. The engineering objective was to connect a claim to inspectable evidence while preserving the distinction between software correctness, economic findings and permission to deploy. [E1](../docs/evidence.md#e1)
+TradingBotHQ's AI-assisted engineering program built an offline analytics and closeout layer to trace research claims back to their evidence. It records source identities, evidence roles and verification checks, with a separate decision for public disclosure. The [ownership statement](../docs/ownership.md) explains project direction, automation and coding assistance; Git metadata alone cannot establish manual authorship. Software correctness, economic findings and permission to deploy each need their own evidence. [E1](../docs/evidence.md#e1)
 
-The independently authored public [Research OS implementation](../docs/research-os.md) is runnable code: validate real asset hashes and disclosure metadata, preserve consumed sample roles, reject invalid claims, and construct deterministic review packs. Its mutation tests demonstrate rejected states. This release does not copy the private operational engine or certify its behavior from the public demonstration.
+The independently authored public [Research OS implementation](../docs/research-os.md) checks asset hashes and disclosure metadata, preserves consumed sample roles and rejects invalid claims. It also builds deterministic review packs. Mutation tests show which states the code refuses. The private operational engine remains separate and is not certified by this public implementation.
 
 ## A compact evidence path
 
@@ -26,6 +26,6 @@ The worktree freshness gate checks repository identity, guidance, required resea
 
 This is a capability of the maintained tooling checkout. Historical research branches can still lack current tooling, and the gate reports that limitation. It does not make every branch current automatically.
 
-Formal closeout creates a private candidate for review, while public disclosure remains a separate decision. The demonstrated pack export was synthetic; broader historical export requires its own clearance. These controls demonstrate offline engineering and deterministic validation. They do not certify historical broker execution, live risk behavior, or deployment readiness. [E1–E4](../docs/evidence.md#engineering-source-register)
+Formal closeout creates a private candidate for review, while public disclosure remains a separate decision. The demonstrated pack export was synthetic; broader historical export requires its own clearance. These controls demonstrate offline engineering and deterministic validation. They do not certify historical broker execution, live risk behavior, or deployment readiness. [E1 to E4](../docs/evidence.md#engineering-source-register)
 
 The public [methods code](../src/srl/validation.py) illustrates narrow semantic checks. It is separate from the private Research OS implementation. The [evidence register](../docs/evidence.md#engineering-source-register) identifies the inspected implementation and recorded QA.

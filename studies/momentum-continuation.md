@@ -4,7 +4,7 @@
 
 ![Historical momentum-continuation evidence, with sample and inference limitations](../figures/momentum.svg)
 
-A research program can produce a stronger recent backtest and still leave its reference architecture unchanged. This study examined that decision in a frozen H1 momentum-continuation lineage: first by testing directional symmetry on USDJPY, then by challenging the XAU exit, and finally by comparing complete portfolio paths. The useful result was a sequence of rejected, qualified and indeterminate interventions.
+The recent XAU no-trail backtest looked better, but the portfolio kept its canonical exit. The research reached that decision through a directional-symmetry test on USDJPY, an XAU exit comparison and a comparison of complete portfolio paths. The frozen H1 momentum-continuation lineage produced rejected, qualified and indeterminate interventions along the way.
 
 The reported returns use R, a normalized unit of initial trade risk. Profit factor and maximum drawdown below are computed in R-space. They describe the historical research paths; they are not account-return percentages, live execution records or forecasts.
 
@@ -12,11 +12,11 @@ The reported returns use R, a normalized unit of initial trade risk. Profit fact
 | --- | --- |
 | System | MOMCONT momentum-continuation EA family on USDJPY2 and XAUUSD2, H1. Public text abbreviates the symbols to USDJPY and XAU. |
 | Hypotheses | Directional symmetry, removal of trailing exits, then a frozen mechanical-ratchet alternative. Each has its own control and evidence gate. |
-| Samples | Recent comparison: 2025-01-01–2026-08-01; XAU cross-era diagnostics also use 2016–2019 and 2020–2024. The recent sample is reused historical evidence. |
+| Samples | Recent comparison: 2025-01-01 to 2026-08-01; XAU cross-era diagnostics also use 2016 to 2019 and 2020 to 2024. The recent sample is reused historical evidence. |
 | Decision | Reject mechanical short symmetry; do not promote no-trail; retain canonical portfolio exits after the bounded ratchet comparison. |
 | Contribution | Research direction, comparison requirements and stop decisions; automated research and AI-assisted engineering are disclosed in [ownership](../docs/ownership.md). |
 
-The individual source contracts are [M1–M8](../docs/evidence.md#m1); the dates below retain their separate sample roles.
+The individual source contracts are [M1 to M8](../docs/evidence.md#m1); the dates below retain their separate sample roles.
 
 ## A directional mirror failed its own test
 
@@ -55,7 +55,7 @@ Descriptive path analysis preceded a small, frozen exit comparison. The candidat
 
 A mechanical ratchet showed the most constructive new cross-era behavior. Its mean common-entry differences against canonical were **+0.0641R, +0.0956R and +0.2150R** in the early, middle and recent eras. Those conditional entry comparisons did not remove the cost of a changed strategy path. Recent ratchet total was **+47.8081R**, slightly below canonical **+48.7192R**, and its drawdown was **13.265R**, more than twice canonical **6.221R**. The early ratchet path also remained negative. [M6](../docs/evidence.md#m6)
 
-That combination justified a bounded portfolio comparison, not immediate promotion of the exit. It preserved the distinction between a constructive trade-level diagnostic and a preferable complete architecture.
+The trade-level results justified a bounded portfolio comparison. They were not sufficient to promote the exit: the complete architecture still had to account for changed entries and drawdown.
 
 ## The portfolio comparison reached a stopping point
 
@@ -65,4 +65,4 @@ Canonical met the precommitted evaluation decision at the primary block length; 
 
 These simulations used archived R and an H1 approximation to intraday equity stress. Their path frequencies depend on resampling and account-model assumptions; they are not forecasts or tick-exact broker certification. A synthetic demonstration can reproduce the generic comparison methods without reproducing these private historical observations.
 
-The lineage then stopped exit and alpha tuning. Reopening it requires a new falsifiable question grounded in forward evidence or a correctness failure. That stopping rule is part of the result: the program preserved a tempting alternative and its limitations without turning continued experimentation into an obligation to select it. [M8](../docs/evidence.md#m8)
+The lineage stopped exit and alpha tuning. Further work requires a new falsifiable question grounded in forward evidence or a correctness failure. The alternative exit remains documented with its limitations. [M8](../docs/evidence.md#m8)

@@ -4,14 +4,14 @@
 
 ![Historical nowick evidence, with sample and inference limitations](../figures/nowick.svg)
 
-The useful outcome of this research program was a decision to stop. The program tested whether a visually distinctive candle pattern added predictive information beyond comparable ordinary candles, then evaluated a separately defined reversal hypothesis. The matched event study did not establish a robust incremental continuation signal. The independent reversal study also failed its frozen decision rule. Neither result justified another trading implementation.
+The program stopped after testing two claims: whether the candle pattern added continuation information beyond comparable ordinary candles, and whether a separately defined reversal worked better. The matched event study did not establish a robust incremental continuation signal. The reversal study also failed its frozen decision rule, leaving neither result sufficient to justify another trading implementation.
 
 | Research contract | Identity and decision |
 | --- | --- |
 | Systems | Original NOWICK mechanical candle-pattern EA family; H004 uses an order-free event collector. ANTI-NOWICK R001 is a separately frozen offline reversal study. |
 | Markets and clocks | H004: USDJPY2, AUDUSD2, GBPUSD2 and AUDJPY2 on M15. R001: AUDJPY2 M5, XAUUSD2 M5 and XAUUSD2 M15; these are separate configurations, not one pooled trading strategy. |
 | Comparison | H004 pattern events versus matched ordinary candles; R001 reversed fixed-clock outcomes versus matched reversed controls. |
-| Sample | January 2020–July 2026 historical evidence; R001 explicitly uses previously inspected history. |
+| Sample | January 2020 to July 2026 historical evidence; R001 explicitly uses previously inspected history. |
 | Decision | No robust incremental continuation signal; **R001_REJECT**. The recorded user decision shelves the original trading family. |
 | Contribution | A directly recorded candidate stop decision; automated event collection, matching and analysis. Precise historical coding attribution remains bounded. [Ownership](../docs/ownership.md) |
 
@@ -51,6 +51,6 @@ No configuration met the frozen positive-effect gate. All three point estimates 
 
 The reversal history, January 2020 through July 2026, had already been inspected in related research. It is explicitly discovery-contaminated and cannot be presented as a fresh holdout. The original event study likewise supplies historical research evidence, not prospective validation. [N1](../docs/evidence.md#n1) [N2](../docs/evidence.md#n2)
 
-The practical contribution is an auditable stopping decision: complete matching receipts, disclosed exclusions, dependence-aware uncertainty, explicit cost assumptions, and a recorded boundary between a failed hypothesis and its proposed successor. The program did not produce a deployable strategy. It produced evidence sufficient to avoid building another one under the tested contract.
+The matching receipts, exclusions, dependence-aware uncertainty and cost assumptions document why the program stopped. The failed original hypothesis and its proposed successor retain separate decisions. Neither earned a deployable strategy under the tested contracts.
 
 The [evidence register](../docs/evidence.md) describes the underlying records and public verification boundary. Tick data, execution ledgers and strategy artifacts remain private.

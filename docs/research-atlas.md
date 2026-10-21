@@ -79,4 +79,4 @@ Separate primary records for some numbered gaps, including MOMCONT H002/H020 and
 
 Source qualification and risk infrastructure were also examined as engineering context. Data correctness can enable research; it does not supply evidence of alpha. Exact live risk policies, deployment parameters, proprietary source and raw evidence bundles are deliberately excluded.
 
-The flagship selection favors complete reasoning chains over a favorable leaderboard. The wider atlas preserves the rest of the sufficiently evidenced work so that unsuccessful or unfinished research does not disappear from the story.
+The flagships follow experiments through their decisions. The wider atlas retains the other sufficiently evidenced work, including unsuccessful and unfinished research.

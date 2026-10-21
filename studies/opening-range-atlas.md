@@ -14,19 +14,19 @@ None of the 1,152 configurations had positive expectancy or a profit factor abov
 
 The surface still had information: some regions were less adverse, and the opening-range duration changed the topology. Those observations became named follow-up questions with their own boundaries. Keeping them separate prevented a weak relative improvement from becoming an unsupported profitability claim.
 
-The useful deliverable was a mapped negative result with explicit coverage. It narrowed the search space while preserving the distinction between a rejected strategy, an interesting regional observation, and an independently testable new hypothesis.
+The mapped negative result narrowed the search space. The rejected strategy and its regional observations left separate hypotheses for future tests.
 
 ## Extending the range-duration boundary
 
 **Maturity: completed Discovery extension; rejected naked strategy.**
 
-A separate gold extension tested whether longer opening ranges changed the adverse baseline. It added 576 configurations on the same August 2015–December 2021 Discovery domain. The complete campaign passed its engineering gates before economic interpretation.
+A separate gold extension tested whether longer opening ranges changed the adverse baseline. It added 576 configurations on the same August 2015 to December 2021 Discovery domain. The complete campaign passed its engineering gates before economic interpretation.
 
 Longer ranges improved some comparisons, but improvement was insufficient. Mean configuration expectancy was approximately −0.176R for one duration group and −0.160R for the longer group. Only seven of 576 configurations were positive. The strongest reported configuration had 382 trades, approximately +19.14R, profit factor 1.114 and five positive years out of seven. No configuration achieved six or seven positive years. [A02](../docs/evidence.md#a02)
 
 The study also retained matched comparisons: the longer duration outperformed in roughly 61% of valid matched pairs. That descriptive improvement could reflect transaction-cost geometry and the shorter remaining signal-search window as well as market behavior.
 
-The decision closed the naked extension and prohibited another duration expansion under that branch. The result demonstrates how a repeatable relative improvement can be scientifically useful while remaining too weak for promotion.
+The decision closed the naked extension and prohibited another duration expansion under that branch. The relative improvement was repeatable, but too weak to support promotion.
 
 ## Bridging two platform builds
 
@@ -38,19 +38,19 @@ Forty-eight overlapping configurations supplied matched observations across the 
 
 The observed agreement covered trade timing, direction, execution prices, stops, targets, volume, economics and path diagnostics within the tested overlap. It justified combining the earlier and extended surfaces for research interpretation.
 
-That conclusion remained scoped to this engine, historical source and overlap set. A platform parity result does not create alpha or certify future releases. Its role was to resolve a concrete implementation uncertainty before the larger scientific comparison proceeded, preserving a useful engineering success inside an economically unsuccessful strategy program.
+The build comparison resolved an implementation uncertainty for this engine, historical source and overlap set. It allowed the larger scientific comparison to proceed. The result provides neither evidence of alpha nor certification of future platform releases.
 
 ## Filtered momentum: strong Discovery, unopened OOS
 
 **Maturity: completed Discovery; parked and unadjudicated out of sample.**
 
-A filtered gold continuation branch tested whether signal-bar momentum could distinguish better breakout opportunities. Its fixed Discovery experiment contained 48 filtered configurations and four aligned controls on August 2015–December 2021 history.
+A filtered gold continuation branch tested whether signal-bar momentum could distinguish better breakout opportunities. Its fixed Discovery experiment contained 48 filtered configurations and four aligned controls on August 2015 to December 2021 history.
 
 All 52 configurations completed the engineering checks, and 47 of the 48 filtered configurations had positive Discovery results. The frozen representative recorded 114 trades, approximately +44.67R, mean +0.392R, profit factor 2.79 and seven positive calendar years. Neighboring configurations formed a strength-versus-frequency plateau rather than a single isolated maximum. [A04](../docs/evidence.md#a04)
 
 Those results are notable Discovery evidence. The reserved OOS was never opened under this lineage, however. When the historical program was sunset in September 2026, the candidate was parked with its future evidence boundary intact.
 
-It therefore belongs in the portfolio as a promising but unadjudicated candidate. Calling it a failed OOS strategy would invent a test; calling it validated would skip one. The preserved decision shows a third legitimate research outcome: strong development evidence, an explicit stop in active work, and uncertainty retained without retroactive relabeling.
+The candidate has strong development evidence and no OOS verdict. Active work stopped with that uncertainty unresolved; neither failure nor validation can be assigned to an unopened test.
 
 ## The London relative-strength ridge
 
@@ -62,7 +62,7 @@ The strongest reported member had 382 trades, approximately +19.14R, mean +0.050
 
 The ledger retained this as hypothesis-generating topology. It was never an independently validated trading candidate, and the historical program's sunset parked the branch without authorizing a new filter search.
 
-This entry matters because surface analysis contains more information than a winner list. Relative strength can guide a future question about market structure, costs or directional continuation. Its evidential status remains exploratory until a separately defined hypothesis and independent validation support a stronger conclusion. The attractive local configurations remain part of the historical record without becoming deployment recommendations.
+The relative strength suggests questions about market structure, costs or directional continuation. It remains exploratory until a separately defined hypothesis passes independent validation. The local configurations are retained as historical observations, with no deployment recommendation.
 
 ## A midday ridge without positive expectancy
 
@@ -74,7 +74,7 @@ The duration extension contributed 42 configurations in this region. Their mean 
 
 The branch was parked at the historical program sunset, and its record explicitly prohibited further filter searching under the same hypothesis. No independent OOS success or failure is attributed to it.
 
-The methodological lesson is to keep the sign of the measured quantity visible when presenting topology. A clear heatmap ridge can be a stable region of smaller losses. That pattern may motivate a new market-structure question, but the visualization alone does not supply executable profitability. Preserving the negative values prevents a memorable visual pattern from acquiring a stronger economic interpretation through repetition.
+The ridge is a stable region of smaller losses. Its negative values remain visible because relative strength alone supplies no evidence of executable profitability. A new market-structure question would need a separate test.
 
 ## A rollover anomaly kept in quarantine
 
@@ -92,19 +92,19 @@ This is an example of useful restraint in an atlas. An observed price pattern ca
 
 **Maturity: completed Discovery; rejected economic hypothesis.**
 
-A separate gold Fade study turned a failed-breakout observation into a frozen executable experiment. The four-configuration surface used August 2015–December 2021 Discovery history and tested a specified opposite-direction response after a failed short breakout.
+A separate gold Fade study turned a failed-breakout observation into a frozen executable experiment. The four-configuration surface used August 2015 to December 2021 Discovery history and tested a specified opposite-direction response after a failed short breakout.
 
 All configurations were engineering-valid, integrity-clean and reproducible. Economics were consistently adverse. The four samples contained 303, 309, 219 and 163 trades, with total results of approximately −105.81R, −86.25R, −78.78R and −38.11R. Their R-based profit factors ranged from 0.372 to 0.616. Twenty-seven of the 28 configuration-year observations were negative. Duplicate runs reproduced trade economics apart from run identity. [A08](../docs/evidence.md#a08)
 
 The completed decision rejected the hypothesis and prohibited escalation into its reserved OOS and lockbox. Market-close handling, deferred exits and financing did not explain away the adverse result in the final adjudication.
 
-Earlier implementation defects and pre-canary records remained preserved, but they did not replace the later completed evidence. The final finding was an economically unsuccessful strategy tested with a working implementation. That separation makes the negative result useful rather than dismissible as a software failure.
+The record retains the earlier implementation defects and pre-canary checks alongside the later completed evidence. The working implementation produced an economically unsuccessful strategy result; the earlier defects do not explain away that negative result.
 
 ## The earlier completed-candle Fade baseline
 
 **Maturity: completed legacy Discovery; rejected baseline.**
 
-An earlier Fade experiment used a different historical universe and a completed-candle reentry rule. On its frozen 2003–2014 Discovery sample, it entered opposite the initial breakout only after the specified return into the range, with a structural stop and midpoint objective.
+An earlier Fade experiment used a different historical universe and a completed-candle reentry rule. On its frozen 2003 to 2014 Discovery sample, it entered opposite the initial breakout only after the specified return into the range, with a structural stop and midpoint objective.
 
 The accepted sample contained 781 trades, all closed once. The study lost approximately 320.30 net R, with mean −0.410R and profit factor 0.251. None of its twelve calendar years was positive, and each of the three predeclared eras was negative. Independent integrity checks passed before economic interpretation. [OF1](../docs/evidence.md#of1)
 
@@ -130,17 +130,17 @@ The result did not validate a replacement strategy. Its contribution was methodo
 
 The index lineage selected a representative configuration from a robust region rather than the highest-return point in its 1,728-configuration Discovery surface. Same-width placebo controls subsequently failed to support a special role for the exact opening-range boundaries. The broader candidate remained frozen while that narrower mechanism claim was downgraded. [A09](../docs/evidence.md#a09) [A10](../docs/evidence.md#a10)
 
-OOS-A, covering eligible 2025 sessions, was strong: 124 trades, approximately +26.41 price-space R and profit factor 1.382, with 14 of 18 regional configurations positive. OOS-B, covering February–June 2026, disagreed: 53 trades, approximately −0.576R and profit factor 0.982, with only eight regional configurations positive. Both standalone OOS-B gates failed. [A11](../docs/evidence.md#a11) [A12](../docs/evidence.md#a12)
+OOS-A, covering eligible 2025 sessions, was strong: 124 trades, approximately +26.41 price-space R and profit factor 1.382, with 14 of 18 regional configurations positive. OOS-B, covering February to June 2026, disagreed: 53 trades, approximately −0.576R and profit factor 0.982, with only eight regional configurations positive. Both standalone OOS-B gates failed. [A11](../docs/evidence.md#a11) [A12](../docs/evidence.md#a12)
 
 The pooled OOS total remained positive, but it could not override the preregistered second-block decision. The candidate was parked with no retuning, reselection or deployment authorized.
 
-This is a completed mixed-evidence study: the earlier confirmation remains real, the later failure remains decisive under its gate, and the mechanism question remains narrower than the strategy's cumulative return. The flagship case study develops the evidence chain in more detail.
+The earlier confirmation stands, and the later failure still determines the stop under its gate. The mechanism test answers a narrower question than cumulative strategy return. The flagship case study gives the full evidence chain.
 
 ## Gold qualification: parity passed, deployment did not
 
 **Maturity: completed engineering, monetary and terminal qualification; rejected deployment branch.**
 
-The later gold lineage used a different modern sample: Discovery in 2019–2023, validation in 2024–2025 and a terminal January–June 2026 holdout, with explicit lifecycle burnoff months. Its final Python–MT5 scientific parity certificate passed after earlier discrepancies were resolved and preserved.
+The later gold lineage used a different modern sample: Discovery in 2019 to 2023, validation in 2024 to 2025 and a terminal January to June 2026 holdout, with explicit lifecycle burnoff months. Its final Python to MT5 scientific parity certificate passed after earlier discrepancies were resolved and preserved.
 
 Two frozen candidates, A and C, survived the primary execution stress. Monetary reconciliation then matched 1,376 scientific trades with zero unexplained discrepancies, explicitly separating six synthetic scientific exits from physical-deal records. Despite those engineering successes, none of 22 frozen deployment configurations met the complete gate. Financing and overnight dependence materially constrained the economics. [A13](../docs/evidence.md#a13)
 
@@ -156,6 +156,6 @@ A separately registered successor asks whether a Fade opportunity decays while w
 
 The connected October 2026 record identifies this as a new post-closeout hypothesis, separate from the rejected historical Fade branch. Its available evidence consists of implementation checks and valid canaries: fifteen hypothesis-specific deterministic tests, thirty-three predecessor regressions, three parser checks, a clean compile and three integrity-valid canary runs. Runner recovery checks also passed. [A16](../docs/evidence.md#a16)
 
-Those results support readiness for the specified economic experiment. They do not establish edge. The planned domain remains the earlier 2003–2014 Discovery sample, and 2015 onward remains sealed under this successor's contract. The ledger permits one canonical Discovery adjudication before any timing surface or OOS escalation.
+Those results support readiness for the specified economic experiment. They do not establish edge. The planned domain remains the earlier 2003 to 2014 Discovery sample, and 2015 onward remains sealed under this successor's contract. The ledger permits one canonical Discovery adjudication before any timing surface or OOS escalation.
 
-This entry remains in the atlas because pending research can have substantial engineering evidence. Its status is active hypothesis, economics unknown. Neither the predecessor's rejection nor the successor's correctness checks supply the missing economic result.
+The successor is an active hypothesis with engineering evidence and unknown economics. Its correctness checks cannot supply the missing economic result, and the predecessor's rejection does not adjudicate the changed entry rule.

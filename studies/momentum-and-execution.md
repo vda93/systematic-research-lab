@@ -2,7 +2,7 @@
 
 [Portfolio](../README.md) · [Research atlas](../docs/research-atlas.md) · [Evidence register](../docs/evidence.md)
 
-These are original high-level drafts drawn from completed research decisions. R is normalized trade-risk output; reported PF and drawdown refer to the stated research metric. Historical selection, simulation, engineering and prospective evidence remain distinct.
+These studies summarize completed research decisions. R measures normalized trade-risk output; PF and drawdown use the metric specified in each study. Historical selection, simulation, engineering and prospective evidence have separate roles.
 
 ## Component ablation: an inconclusive result can preserve the model
 
@@ -10,7 +10,7 @@ A five-market continuation study completed 35 fixed cells to test the contributi
 
 The frozen panel rules rated all three gates **WEAK / UNCLEAR CONTRIBUTION**. One gate had a positive paired contribution on the USDJPY anchor, but the other markets did not provide the required breadth of interval-supported evidence. That outcome supported neither a universal value claim nor a deletion.
 
-Path dependence explained why a simple “filter removes bad trades” story would be inadequate. Removing a gate admitted additional trades while also occupying the symbol during opportunities taken by the reference path. A newly admitted profitable trade could displace an even stronger reference trade. The program therefore retained the gates, selected no production variant and recorded **INCONCLUSIVE**. The result illustrates the difference between a plausible component and evidence sufficient to assign it a general economic role. [A-MOM-ABLATION](../docs/evidence.md#a-mom-ablation)
+Path dependence explained why a simple “filter removes bad trades” story would be inadequate. Removing a gate admitted additional trades while also occupying the symbol during opportunities taken by the reference path. A newly admitted profitable trade could displace an even stronger reference trade. The program therefore retained the gates, selected no production variant and recorded **INCONCLUSIVE**. The tests left the component's general economic contribution unresolved. [A-MOM-ABLATION](../docs/evidence.md#a-mom-ablation)
 
 ## Scale decomposition: a plausible explanation was overturned
 
@@ -20,7 +20,7 @@ An initial explanation emphasized the shorter economic horizons created when fix
 
 A further development-only decomposition distinguished signal normalization from stop, trailing and risk geometry. It again located the main contribution in the geometry role. The earlier primary-horizon explanation was recorded as rejected rather than preserved alongside its contradictory successor.
 
-These were historical mechanism experiments, with interacting interventions and path-dependent trade sets. Their value lies in narrowing an explanation; they do not establish an independently validated fine-scale strategy. [A-MOM-SCALE](../docs/evidence.md#a-mom-scale)
+The historical experiments narrowed the mechanism explanation. Interacting interventions and path-dependent trade sets still limit interpretation, and the fine-scale strategy has not been independently validated. [A-MOM-SCALE](../docs/evidence.md#a-mom-scale)
 
 ## Development strength, recent decay and architecture comparison
 
@@ -40,17 +40,17 @@ The recent **1 January 2025 to 1 August 2026** comparison did not support the pr
 
 The factorial study then identified a constructive coarse-resolution effect in development. Its relevant arm had **310 trades, +54.09R, profit factor 1.526 and drawdown 11.22R**. Yet the same arm returned **−5.22R over 103 trades** in the recent stress, with profit factor **0.876**.
 
-The branch was parked for the current portfolio objective. No additional threshold search was used to rescue it, and a separately reserved prospective period remained unopened. The conclusion is narrower than “Bitcoin continuation cannot work”: this lineage had an interesting historical mechanism without enough robust recent support or portfolio fit to justify continuing its selection program. [A-MOM-BTC](../docs/evidence.md#a-mom-btc)
+The branch was parked for the current portfolio objective. No additional threshold search was used to rescue it, and a separately reserved prospective period remained unopened. The historical mechanism lacked enough robust recent support or portfolio fit to justify further selection in this lineage. The study does not rule out other Bitcoin continuation strategies. [A-MOM-BTC](../docs/evidence.md#a-mom-btc)
 
 ## DE30 half-hour research: stress simulations did not replace new evidence
 
-A seven-cell development timeframe screen found a coherent half-hour/hourly region. The half-hour candidate produced **1,520 trades, +78.3565R, profit factor 1.1485 and drawdown 26.2534R** on **2020–2024** development history. A follow-up decomposition and exact control parity supported freezing the candidate.
+A seven-cell development timeframe screen found a coherent half-hour/hourly region. The half-hour candidate produced **1,520 trades, +78.3565R, profit factor 1.1485 and drawdown 26.2534R** on **2020 to 2024** development history. A follow-up decomposition and exact control parity supported freezing the candidate.
 
 Resampling then examined risk rather than adding independent validation. Its observed drawdown lay around the 58th percentile of 10,000 order permutations. Block-bootstrap tails were materially worse than the observed drawdown, showing why the original path alone was an inadequate risk description.
 
-A later **2025–August 2026** diagnostic used an already-spent period. It returned **+11.0421R over 564 trades**, profit factor **1.0562** and drawdown **29.3759R**. The 2026 segment was negative, and removing the five best entry-date cohorts made the aggregate **−14.9111R**.
+A later **2025 to August 2026** diagnostic used an already-spent period. It returned **+11.0421R over 564 trades**, profit factor **1.0562** and drawdown **29.3759R**. The 2026 segment was negative, and removing the five best entry-date cohorts made the aggregate **−14.9111R**.
 
-The architecture stayed frozen, and the separate prospective protocol remained pending. These results support a case study about maintaining evidence roles: a favorable development surface, useful simulation stress and a weak retrospective diagnostic do not add up to completed prospective validation. [A-DE30-M30](../docs/evidence.md#a-de30-m30)
+The architecture stayed frozen, and the separate prospective protocol remained pending. The development surface and simulation stress remain informative, while the weak retrospective diagnostic leaves prospective validation unfinished. [A-DE30-M30](../docs/evidence.md#a-de30-m30)
 
 ## Gold execution fragility: feed disagreement narrowed the mechanism
 
@@ -60,7 +60,7 @@ Passive instrumentation then compared spread with planned trade risk. Across **1
 
 That broader explanation was tested too. Older low-friction trades still lost while recent low-friction trades were positive, so the claim that spread and absolute setup size fully explained the change was rejected. A volatility-state candidate was subsequently selected in development and replayed against its offline reconstruction.
 
-The candidate remained frozen with **188 development trades**. Its true later holdout had not been run in the reviewed decision record. The sequence supports a feed-sensitivity and mechanism narrative, while leaving independent validation explicitly pending. [A-VENOM-FEEDS](../docs/evidence.md#a-venom-feeds)
+The candidate remained frozen with **188 development trades**. Its true later holdout had not been run in the reviewed decision record. The feed-sensitivity and mechanism findings therefore remain pending independent validation. [A-VENOM-FEEDS](../docs/evidence.md#a-venom-feeds)
 
 ## Risk engineering: shared calculations can conceal a guard defect
 

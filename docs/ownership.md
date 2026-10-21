@@ -24,5 +24,5 @@ Public code, tests, declared inputs and reproduction commands show the behavior 
 
 The private historical backtests, account simulations, strategy code and raw market data remain outside this repository. Their aggregates are historical evidence summaries, with the [verification limits](evidence.md) stated beside them. Public test success does not independently authenticate unavailable private inputs, establish realized broker performance or authorize deployment.
 
-The useful candidate contribution is the judgment made visible by the record: retain a rejected stress test, stop when sensitivity prevents promotion, distinguish correctness from economics, and correct an attractive explanation when the underlying evidence does not support it.
+The record shows the decisions I take responsibility for preserving: keep failed stress tests visible, withhold promotion when sensitivities disagree, and correct explanations that the evidence no longer supports. Engineering correctness and economic support retain separate decisions.
 

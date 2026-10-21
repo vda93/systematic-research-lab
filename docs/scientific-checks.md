@@ -10,4 +10,4 @@ The [Research OS example](../experiments/evidence-example.json) validates the ac
 
 The [real-market pipeline](../src/srl/fx_study.py) separately qualifies the frozen provider snapshot, constructs information-ordered features, purges temporal boundaries, resets bootstrap seeds, reports the full fixed family and regenerates results. Its tests use small synthetic fixtures to test software behavior; empirical findings come from ECB observations. Exact output replay establishes repeatability under the pinned implementation. It does not establish market stationarity, bootstrap coverage, executable prices or future alpha.
 
-These controls complement source review. Software correctness, scientific interpretation, reproduction and publication safety remain separate requirements.
+Source review is still required. Passing software and reproduction checks does not settle scientific interpretation or permission to publish.
