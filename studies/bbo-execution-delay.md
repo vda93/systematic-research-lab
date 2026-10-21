@@ -89,6 +89,37 @@ After independently obtaining the declared source bytes under the provider's ter
 python scripts/bbo_summarize.py --runs /private/stage-runs --stage validation --external-gates-passed --check data/bbo-validation-results.json
 ```
 
+## Final sample: support fails
+
+The complete fixed 2025 final stage is **FAIL_SUPPORT**. It contains **572 primary price-paired shocks** across 12 contributing days, with an equal-day descriptive mean saving of **−0.22962 bps**. The primary 95% bootstrap interval is **[−0.36210, −0.08399] bps** and the two-day-block interval is **[−0.33459, −0.10961] bps**. These conditional descriptions do not override failed support and are not a confirmatory economic verdict. [BB5](../docs/evidence.md#bb5)
+
+The [complete final aggregate](../data/bbo-final-results.json) retains all twelve planned days, daily means, leave-one-day-out values, penalty tails, cost components, both sides, normal controls and every fixed latency/fee/slippage sensitivity. Only December reaches 100 eligible shocks; low-count observations still contribute to the equal-day estimate whenever their mean is defined. Insufficient future depth remains in the price-paired primary; its separately reported subset is descriptive post-outcome conditioning.
+
+| Selected day | Eligible shocks | Price pairs | Mean saving, bps | 95% eligibility | 99% depth | No missing targets |
+| --- | ---: | ---: | ---: | --- | --- | --- |
+| 2025-01-01 | 43 | 35 | −0.19551 | fail | fail | fail |
+| 2025-02-01 | 35 | 32 | −0.45709 | fail | fail | fail |
+| 2025-03-01 | 61 | 55 | −0.39391 | fail | fail | fail |
+| 2025-04-01 | 62 | 55 | −0.16599 | fail | fail | fail |
+| 2025-05-01 | 32 | 31 | −0.65427 | fail | fail | fail |
+| 2025-06-01 | 28 | 19 | 0.28916 | fail | fail | fail |
+| 2025-07-01 | 27 | 23 | −0.23305 | fail | fail | fail |
+| 2025-08-01 | 96 | 81 | −0.33841 | fail | fail | fail |
+| 2025-09-01 | 85 | 69 | 0.15883 | fail | fail | fail |
+| 2025-10-01 | 61 | 48 | −0.14066 | fail | fail | fail |
+| 2025-11-01 | 21 | 17 | −0.38116 | fail | fail | fail |
+| 2025-12-01 | 132 | 107 | −0.24340 | fail | fail | fail |
+
+The selected first-of-month data and frozen observation rules do not support promoting the waiting rule. The same protocol and complete calculation/test/dependency inventory were retained from validation through final; no fee, age, support threshold, sample day or shock definition was tuned after final access. A support failure limits the scientific conclusion even when a conditional estimate is numerically precise. There is no execution or deployment authorization.
+
+The [retained final acquisition chronology](../data/bbo-final-acquisition.json) links local request times to the public implementation and preceding validation closeout. It does not independently authenticate access history. To reproduce, independently obtain the declared hash-matching sources under provider terms and run each day into a new external `YYYY-MM-DD-v1` directory, using implementation `28c779bd94e75b319dcaf065436c96b0359288d8` and validation-closeout commit `5be974c99297083ab53485956a48fd20a8d49c4d` through the worker's `--implementation-commit` and `--stage-commit` options. Then compare every published final statistic offline:
+
+```sh
+python scripts/bbo_summarize.py --runs /private/stage-runs --stage final --external-gates-passed --check data/bbo-final-results.json
+```
+
+The flag asserts separately reviewed external rights/integrity/publication gates. Ordinary CI uses synthetic fixtures and does not acquire proprietary market data. An empirical replay requires independent licensed source retrieval; arithmetic/source inspection and public software checks do not authenticate provider truth or personal mastery.
+
 ## Rights and reproduction boundary
 
 [Tardis's use conditions](https://docs.tardis.dev/faq/general.md#what-can-i-use-the-data-for) permit research and publication of non-reconstructible statistics; raw redistribution remains prohibited. Binance BTCUSDT is used; Coinbase data are excluded. Free first-of-month access determines the sample and limits generalization. The [acquisition identity receipt](../data/bbo-acquisition.json) records the protocol, source, compressed-file hash and contemporaneous documentation hashes. Those retained receipts are evidence of the declared workflow, not independently authenticated network-access logs or candidate authorship.
