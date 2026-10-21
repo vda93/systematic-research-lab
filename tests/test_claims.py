@@ -57,6 +57,25 @@ class ClaimChecks(unittest.TestCase):
     def test_input_mutation_and_undeclared_figure(self):
         (self.root / 'data/input.json').write_text('{"changed":true}')
         self.assertEqual(self.check(), 'FAIL')
+
+    def test_figures_cannot_drop_inputs_or_use_external_paths(self):
+        for field, value in (('inputs', {}), ('renderer', str(self.root / 'renderer.py')),
+                             ('renderer', '../renderer.py'), ('path', '/external.svg')):
+            original = self.ledger['figures'][0][field]
+            self.ledger['figures'][0][field] = value
+            with self.subTest(field=field, value=value):
+                self.assertEqual(self.check(), 'FAIL')
+            self.ledger['figures'][0][field] = original
+
+    def test_figures_reject_external_input_bad_hash_and_duplicates(self):
+        original = self.ledger['figures'][0]['inputs']
+        for inputs in ({str(self.root / 'data/input.json'): digest(b'{}')},
+                       {'../outside.json': digest(b'{}')}, {'data/input.json': 'bad-hash'}):
+            self.ledger['figures'][0]['inputs'] = inputs
+            self.assertEqual(self.check(), 'FAIL')
+        self.ledger['figures'][0]['inputs'] = original
+        self.ledger['figures'].append(dict(self.ledger['figures'][0]))
+        self.assertEqual(self.check(), 'FAIL')
         (self.root / 'figures/extra.svg').write_text('<svg/>')
         self.assertEqual(self.check(), 'FAIL')
 
