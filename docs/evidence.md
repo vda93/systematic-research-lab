@@ -415,3 +415,23 @@ The complete public pipeline qualifies a selected official ECB historical snapsh
 **Synthetic methods calibration: no historical market evidence.**
 
 [Protocol](../experiments/protocol.json), [implementation](../src/srl/study.py) and [results](../results/study.json) define an entirely synthetic teaching/calibration exercise. This source is reserved for illustration and cannot support a historical-market alpha claim.
+
+## M9
+
+**MOMCONT H006/H007: Origin of the scale question.** Completed canonical decision records inspected in October 2026. Neighboring and dense bar-normalized timeframe comparisons motivated separating clock windows from resolution; aggregate results were not independently rerun.
+
+## M10
+
+**MOMCONT H008/H009: Horizon hypothesis challenged.** Completed canonical design and adjudication records. H008 changed both clock windows and ATR; H009's factorial comparison rejected the simple horizon explanation. Mutable pages do not independently prove pristine pre-outcome registration. Full strategy paths are non-nested.
+
+## M11
+
+**MOMCONT H010: Separate ATR roles.** Completed canonical design and adjudication record. Signal normalization and stop/trailing/risk ATR were separated after recorded equal-role parity. Historically seen later data remain a retrospective holdout. Personal hypothesis origin/manual authorship are unverified.
+
+## E5
+
+**Public evidence package: Agent implementation provenance.** Contemporaneous implementation receipt records agent creation of the evidence API, CLI, tests and example under the user's portfolio requirements. Public source/tests verify behavior; manual human coding, independent review and technical mastery are not established by the receipt.
+
+## E6
+
+**Exact circular-block means: public engineering and measurements.** The [walkthrough](exact-block-means.md), [source](../src/srl/block_means.py), [oracle tests](../tests/test_block_means.py) and [before/after receipt](../data/block-means-benchmark.json) expose the numerical contract, local performance and memory tradeoff. Mathematical fixtures are not market evidence; the work is AI-assisted and human mastery is unassessed.

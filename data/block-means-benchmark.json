@@ -1,0 +1,173 @@
+{
+  "after": {
+    "cases": [
+      {
+        "block_size": 1,
+        "max_abs_mean_difference": 0.0,
+        "median_seconds": {
+          "exact_blocks": 0.5651640000287443,
+          "reference": 1.49549450003542
+        },
+        "n": 1024,
+        "peak_traced_bytes": {
+          "exact_blocks": 254100,
+          "reference": 105328
+        },
+        "repetitions": 2048,
+        "result_sha256": {
+          "exact_blocks": "e86dc9b08ab8f6479173a695e55b2888845afd8c607c1f345b84e1d3a7fba1e6",
+          "reference": "e86dc9b08ab8f6479173a695e55b2888845afd8c607c1f345b84e1d3a7fba1e6"
+        },
+        "seconds": {
+          "exact_blocks": [
+            0.5776638999814168,
+            0.5651640000287443,
+            0.5602408999111503,
+            0.5589341999730095,
+            0.5760857999557629
+          ],
+          "reference": [
+            1.444245900027454,
+            1.49549450003542,
+            1.452251199982129,
+            1.5107254000613466,
+            1.6134051999542862
+          ]
+        },
+        "seed": 7401,
+        "speedup": 2.646124841566977
+      },
+      {
+        "block_size": 16,
+        "max_abs_mean_difference": 0.0,
+        "median_seconds": {
+          "exact_blocks": 0.03785149997565895,
+          "reference": 0.252674899995327
+        },
+        "n": 1024,
+        "peak_traced_bytes": {
+          "exact_blocks": 255484,
+          "reference": 106936
+        },
+        "repetitions": 2048,
+        "result_sha256": {
+          "exact_blocks": "b34932e3e7afdc026ed61954a14a035cee2d5e8697928781733519935954f1f7",
+          "reference": "b34932e3e7afdc026ed61954a14a035cee2d5e8697928781733519935954f1f7"
+        },
+        "seconds": {
+          "exact_blocks": [
+            0.03757829999085516,
+            0.03785149997565895,
+            0.039075099979527295,
+            0.03690800000913441,
+            0.039174199919216335
+          ],
+          "reference": [
+            0.25211210001725703,
+            0.252674899995327,
+            0.26193729997612536,
+            0.253789099981077,
+            0.2514204999897629
+          ]
+        },
+        "seed": 7401,
+        "speedup": 6.67542634130256
+      },
+      {
+        "block_size": 32,
+        "max_abs_mean_difference": 0.0,
+        "median_seconds": {
+          "exact_blocks": 0.0739356999984011,
+          "reference": 0.8431525999912992
+        },
+        "n": 4096,
+        "peak_traced_bytes": {
+          "exact_blocks": 881260,
+          "reference": 233616
+        },
+        "repetitions": 2048,
+        "result_sha256": {
+          "exact_blocks": "d86712c4948547804527774086eb7106d5258bcae1f3f5366d00207b556af8c6",
+          "reference": "d86712c4948547804527774086eb7106d5258bcae1f3f5366d00207b556af8c6"
+        },
+        "seconds": {
+          "exact_blocks": [
+            0.07531890005338937,
+            0.07344010006636381,
+            0.07375620002858341,
+            0.07468590000644326,
+            0.0739356999984011
+          ],
+          "reference": [
+            0.842309599975124,
+            0.8431525999912992,
+            0.8457591999322176,
+            0.8583165999734774,
+            0.8417372999247164
+          ]
+        },
+        "seed": 7401,
+        "speedup": 11.403863086567554
+      }
+    ],
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10",
+    "repetitions": 2048,
+    "scope": "deterministic mathematical fixture; no financial observations",
+    "sources_sha256": {
+      "scripts/benchmark_block_means.py": "f305ba8358a5e8ba0a288a0bd08707f07afc5f9da87ae2a10a02861a62801a93",
+      "src/srl/block_means.py": "7b18f1d924708321032a63a0eb0588227666908a3397fe9844159f8d436aabe1",
+      "src/srl/resampling.py": "d85361a3aa6cc2ee179d1c167224d44843940ee03b7ccfbbb46b1b2fdd00d033"
+    },
+    "timing_repeats": 5
+  },
+  "before": {
+    "baseline_source_sha256": "d85361a3aa6cc2ee179d1c167224d44843940ee03b7ccfbbb46b1b2fdd00d033",
+    "cases": [
+      {
+        "block_size": 1,
+        "median_seconds": 1.4278826999943703,
+        "n": 1024,
+        "repetitions": 2048,
+        "result_sha256": "e86dc9b08ab8f6479173a695e55b2888845afd8c607c1f345b84e1d3a7fba1e6",
+        "seconds": [
+          1.4377483999123797,
+          1.4278826999943703,
+          1.4191194000886753
+        ],
+        "seed": 7401
+      },
+      {
+        "block_size": 16,
+        "median_seconds": 0.25759770011063665,
+        "n": 1024,
+        "repetitions": 2048,
+        "result_sha256": "b34932e3e7afdc026ed61954a14a035cee2d5e8697928781733519935954f1f7",
+        "seconds": [
+          0.254604599904269,
+          0.25759770011063665,
+          0.2576789999147877
+        ],
+        "seed": 7401
+      },
+      {
+        "block_size": 32,
+        "median_seconds": 0.8550069000339136,
+        "n": 4096,
+        "repetitions": 2048,
+        "result_sha256": "d86712c4948547804527774086eb7106d5258bcae1f3f5366d00207b556af8c6",
+        "seconds": [
+          0.8550069000339136,
+          0.8518034999724478,
+          0.8550908000906929
+        ],
+        "seed": 7401
+      }
+    ],
+    "phase": "BEFORE_IMPLEMENTATION",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10",
+    "utc": "2026-10-21T10:15:35.413935+00:00"
+  },
+  "boundary": "Local kernel timings and Python allocation peaks; not an end-to-end claim or financial evidence."
+}

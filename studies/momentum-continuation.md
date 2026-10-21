@@ -18,6 +18,22 @@ The reported returns use R, a normalized unit of initial trade risk. Profit fact
 
 The individual source contracts are [M1 to M8](../docs/evidence.md#m1); the dates below retain their separate sample roles.
 
+## How the earlier question developed
+
+Before the later H1 exit studies, USDJPY research asked why the same bar-based rules weakened at finer resolutions. A fixed number of bars spans less clock time as bars get shorter; volatility normalization, stop distances and decision frequency can change together. A timeframe ranking alone could not distinguish those explanations. [M9](../docs/evidence.md#m9)
+
+| Historical step | Question and comparison | Recorded consequence |
+| --- | --- | --- |
+| H006–H007: scale boundary | Compare neighboring timeframes, then a dense ladder with bar counts fixed. | Finer-bar degradation motivated a mechanism question rather than selection of the largest historical return. |
+| H008–H009: challenge the horizon explanation | H008 changed clock windows and the ATR reference together. H009 crossed those two factors at a fixed resolution. | Clock normalization alone did not explain the recovery. The slower ATR reference dominated, with an interaction; the original “primarily shortened horizons” hypothesis was rejected. |
+| H010: separate ATR roles | Split ATR's signal-denominator role from its stop/trailing/risk role, after equal-role path-parity gates. | The recorded improvement came mainly from exit/risk geometry. Changing signal normalization added little once the slower risk reference was present. |
+
+The sequence shows how an attractive explanation was challenged and narrowed. It also preserves the initial experiment's confounding: H008's recovery could not identify a clock-window effect when the ATR reference changed simultaneously. [M10](../docs/evidence.md#m10) [M11](../docs/evidence.md#m11)
+
+These are descriptive comparisons of complete strategy paths. One-position occupancy makes entries non-nested; changing ATR also changes the R unit, costs relative to risk and later entry availability. The contrasts do not identify paired-trade causal effects or an isolated market law. H010's later sample had already been seen in earlier work: resealing it made it a retrospective holdout, not fresh OOS. [M10](../docs/evidence.md#m10) [M11](../docs/evidence.md#m11)
+
+The canonical records establish this historical progression, but their mutable pages do not independently prove that every design paragraph preceded outcome access. Personal origin of the questions and manual implementation remain unverified; this account does not attribute them to the candidate. See [ownership](../docs/ownership.md).
+
 ## A directional mirror failed its own test
 
 The first intervention changed direction while keeping the reference mechanism frozen. A mechanically mirrored short rule was compared with the long-only control on USDJPY H1 over **1 January 2025 to 1 August 2026, end exclusive**. The long control had to reproduce the archived reference before treatment results could be assessed. [M1](../docs/evidence.md#m1) [M2](../docs/evidence.md#m2)

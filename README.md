@@ -1,41 +1,30 @@
 # TradingBotHQ · Systematic Research Lab
 
-**Systematic-trading research, including the experiments that failed.**
+I direct TradingBotHQ, a systematic-trading research project. This portfolio contains historical experiments, a publicly reproducible market-data study and tested research software. Analysis, engineering and writing use AI assistance; the [contribution map](docs/ownership.md) separates documented decisions from implementation and unresolved personal-authorship claims.
 
-I run TradingBotHQ, a systematic-trading research project. I set the questions, constraints and publication decisions, with automated research systems and AI-assisted engineering. The historical closeout records my decision to shelve NOWICK; it does not establish that I manually wrote every private component. The [ownership and AI assistance](docs/ownership.md) statement explains who did what.
+## Thirty seconds
 
-The historical case studies report TradingBotHQ's actual experiments and rebuild their published aggregates. The new ECB FX study goes further: you can reproduce its empirical analysis from the included, lawfully distributed reference-rate snapshot.
+- **Research:** Why did momentum rules weaken on finer bars? The [MOMCONT sequence](studies/momentum-continuation.md#how-the-earlier-question-developed) tests competing clock-window and volatility-scaling explanations, including a rejected initial explanation.
+- **Engineering:** An [exact circular-block sampler](docs/exact-block-means.md) links mathematics, source, independent arithmetic oracles and measured speed/memory tradeoffs. You can inspect the implementation and reproduce the benchmark.
+- **A decision that survived disappointment:** [NOWICK](studies/nowick.md) was shelved; failed continuation did not justify a reversal strategy. The separate reversal study also failed its gate.
 
-## Sixty seconds
-
-| Research question | Finding and decision | What it demonstrates |
-| --- | --- | --- |
-| Does removing the MOMCONT exit trail help? | XAUUSD2 H1 recent total rose from **48.72R to 52.83R**, while drawdown rose from **6.22R to 12.66R**. Cross-era and portfolio evidence retained canonical exits. [MOMCONT](studies/momentum-continuation.md) | Occupancy, paired comparisons, economic tradeoffs |
-| Can a positive MOMCONT DE30X H1 backtest fail? | Removing ten best entry-date cohorts changed development **+41.46R to −5.43R**. A separate sizing repair preserved **837/837** meaningful trade paths. [DE30X](studies/de30-continuation.md) | Concentration stress versus engineering correctness |
-| What did the ORB timing search earn? | The **1,728-configuration** USTEC2 search led to a representative region; a later validation block failed. Gold parity passed but economics did not. [ORB](studies/opening-range.md) | Selection risk, independent gates, financing |
-| Does failed continuation imply profitable reversal? | NOWICK's incremental continuation interval crossed zero; all three cells of a separately frozen reversal study failed their gate. [NOWICK](studies/nowick.md) | Matched controls, dependence, multiplicity, stopping |
-| Can clean execution validate damaged research data? | MacroImpulse's later MEDIUM-event calendar lost coverage. **INVALID_DATA_UNIVERSE** superseded a clean strategy-failure interpretation. [Data forensics](studies/data-forensics.md) | Universe qualification before statistical inference |
-
-R is normalized initial planned trade risk, not an account-return percentage. All historical numbers retain their [source records and limitations](docs/evidence.md). Favorable engineering evidence does not authorize trading.
+Historical case studies reconstruct published aggregates from retained primary records. The [ECB FX study](studies/fx-reference-momentum.md) additionally replays real reference-rate observations from a permitted public snapshot. Its negative finding remains intact; reference marks do not establish executable fills or net trading returns. [Evidence and limitations](docs/evidence.md) distinguish these verification levels.
 
 ## Five minutes
 
-Read the [MOMCONT](studies/momentum-continuation.md), [DE30X H1](studies/de30-continuation.md), [ORB](studies/opening-range.md) and [NOWICK](studies/nowick.md) contract tables, then the [calendar failure](studies/data-forensics.md). Each identifies its system, markets, hypothesis, comparison, sample and decision. The [engineering case](studies/research-engineering.md) separates semantic parity, numerical tolerances and economic validation.
-
-| Capability | Inspect the evidence | Inspect the software |
+| Read | Inspect | What to challenge |
 | --- | --- | --- |
-| Statistical inference and temporal validation | [Real FX study](studies/fx-reference-momentum.md), [methods](docs/empirical-methods.md) | [Empirical pipeline](src/srl/fx_study.py), [resampling](src/srl/resampling.py) |
-| Experimental design and overfitting control | [ORB selection-risk analysis](studies/opening-range.md#what-the-search-can-and-cannot-establish) | [Study protocol](experiments/ecb-fx-mom20-protocol.md), [boundary tests](tests/test_fx_study.py) |
-| Market-data qualification | [MacroImpulse failure](studies/data-forensics.md) | [Schema and temporal checks](src/srl/fx_study.py) |
-| Research-to-execution correctness | [DE30 risk repair](studies/de30-continuation.md) | [Semantic comparator](src/srl/validation.py) and [tests](tests/test_validation.py) |
-| Provenance and sample governance | [Public Research OS](docs/research-os.md) | [Manifest/pack controls](src/srl/evidence.py), [mutation tests](tests/test_evidence.py) |
-| Reviewable communication and disclosure | [Evidence register](docs/evidence.md), [ownership](docs/ownership.md) | [Claim ledger](data/claim-registry.json), [publication audit](scripts/audit_public.py) |
+| [MOMCONT mechanism development](studies/momentum-continuation.md) | Competing explanations, factorial correction and later exit decisions | Confounding, non-nested paths and already-seen samples |
+| [Exact block means walkthrough](docs/exact-block-means.md) | [Implementation](src/srl/block_means.py), [independent oracles](tests/test_block_means.py), [measurements](data/block-means-benchmark.json) | Numerical precision, RNG equivalence, complexity and memory cost |
+| [NOWICK rejection](studies/nowick.md) | Matched controls and the separate reversal test | Why a failed hypothesis does not imply its opposite works |
+
+For other historical decisions: [DE30 concentration and sizing](studies/de30-continuation.md), [ORB selection and validation](studies/opening-range.md), [calendar-data failure](studies/data-forensics.md). The [research atlas](docs/research-atlas.md) includes parked and incomplete hypotheses. Historical R is normalized initial planned trade risk, not an account-return percentage.
 
 ## Thirty minutes
 
-Start with the [real-market study](studies/fx-reference-momentum.md): question → [frozen protocol](experiments/ecb-fx-mom20-protocol.md) → [source rights](DATA_LICENSE.md) → observations → code → inference → robustness → conclusion. Run the command below. Then contrast that full public replay with the private-history [provenance boundary](docs/provenance.md), follow a flagship claim through its source ID and [published aggregates](data/historical-results.json), and inspect [Research OS](docs/research-os.md) mutations that reject invalid evidence states.
+Follow one complete public empirical chain: [question](studies/fx-reference-momentum.md) → [frozen protocol](experiments/ecb-fx-mom20-protocol.md) → [data rights](DATA_LICENSE.md) → [method](docs/empirical-methods.md) → [implementation](src/srl/fx_study.py) → [robustness and decision](studies/fx-reference-momentum.md). Its inference is reproducible; its prices cannot support an executable trading claim.
 
-The [research atlas](docs/research-atlas.md) retains the wider census and parked or incomplete hypotheses. The [synthetic calibration](docs/study.md) checks generic methods under a known process; it supplies no market-edge evidence.
+Then follow the engineering chain: [sampling contract and derivation](docs/exact-block-means.md) → [integer-prefix implementation](src/srl/block_means.py) → [Fraction/Decimal and adversarial tests](tests/test_block_means.py) → [benchmark script](scripts/benchmark_block_means.py). The [Research OS](docs/research-os.md) adds evidence-state and disclosure controls; those controls cannot authenticate private scientific findings.
 
 ## Rebuild and verify
 
@@ -45,12 +34,9 @@ Python 3.12 or 3.13 in a fresh virtual environment:
 python -m pip install -r requirements-lock.txt
 python -m pip install --no-build-isolation --no-deps .
 python scripts/reproduce.py --check
+python scripts/benchmark_block_means.py --repeats 5 --repetitions 2048
 ```
 
-The command runs tests, disclosure/link/inventory and scientific claim checks, regenerates the historical presentations and replays the real FX study offline. CI verifies Linux and Windows. Historical TradingBotHQ backtests still require private licensed inputs and are not replayed. An optional new output directory records hashes:
+Reproduction runs tests, disclosure/link/inventory checks, claim checks and exact artifact comparisons. CI covers Linux and Windows. Benchmark timings vary by machine and are separate from deterministic scientific outputs. Private historical backtests require licensed inputs and are not rerun here; see the [provenance boundary](docs/provenance.md). The [synthetic calibration](docs/study.md) tests methods under a known process and supplies no market-edge evidence.
 
-```sh
-python scripts/reproduce.py --check --output build/my-run
-```
-
-Code and original prose use [MIT](LICENSE). ECB observations have [separate provider terms](DATA_LICENSE.md). Private strategies, proprietary datasets, account records and production configurations remain private. [Security controls](docs/security.md), [limitations](docs/limitations.md) and the [long-term roadmap](docs/roadmap.md) state the remaining boundaries.
+Code and original prose use [MIT](LICENSE); ECB observations have [separate terms](DATA_LICENSE.md). [Security](docs/security.md), [limitations](docs/limitations.md) and the [roadmap](docs/roadmap.md) record remaining boundaries.
