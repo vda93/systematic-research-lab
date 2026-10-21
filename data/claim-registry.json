@@ -56,6 +56,7 @@
       }
     ],
     "SECURITY.md": [],
+    "data/BBO_DATA_NOTICE.md": [],
     "data/README.md": [],
     "docs/empirical-methods.md": [
       {
@@ -832,6 +833,11 @@
           "M11",
           "M9"
         ]
+      },
+      {
+        "kind": "methods",
+        "sha256": "54e918bd55d24e3d5dffe4be2b7c13fdce4270e21ed43a7d29eb85d4e32a4216",
+        "source_ids": []
       }
     ],
     "docs/exact-block-means.md": [
@@ -1107,6 +1113,75 @@
           "O4",
           "O6"
         ]
+      }
+    ],
+    "experiments/bbo-delay-measurement-v2.md": [
+      {
+        "kind": "methods",
+        "sha256": "85a041fa3f3e2a404dc2494d8896213028258c6721c0c50fb9d22da2c8b8354c",
+        "source_ids": []
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "bb6a8913a87dadfa36c6cf8debd526dfd30fb1d03d28d7b6abca3f7e7bbba16f",
+        "source_ids": [
+          "BB1"
+        ]
+      },
+      {
+        "kind": "methods",
+        "sha256": "6b66a441107dbfbdbb868fada533077f6e14f28aebd63c47f8c6312376d25491",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "5de4f086437c26201f66e5fde02e53d56a74e42cf98ee2c04ad96707ea3537d5",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "67fb185e14ae6a93a02d7267b59fbcf0a1f09fdca20af01b8d54e781633d4381",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "31efc7f588d97a4f80f5734644adfca63c2b62b59343763dd46262012921bbce",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "c173035adf2e64f02dd73cde2556089fa6316b16b64a3dfd12cbb9c88183ddc8",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "0160da0579d8efa4406167286e7392403927eaa0739e397949d8f9b6388381d3",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "547e1551278bda7ec9fa4c9d0503f47027cb553958ddd0b111dc78a82369bcc8",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "a0af6fdb4a6726c5c4c1cd3e9b9b3763dd9c1ed8079d2296e19e101836113d91",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "2b1deeee8025c43195af3a63c905bf0e3bd02608271c1fb292c6d68ffba10411",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "be1300f8638e5770b2e4ac6c4107d562a3b3ae8c0b42d22d3811e31922f9df4d",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "653833cc0460d8ff658c7176fe1bc44ae73909f4b45917393755815c0fd00551",
+        "source_ids": []
       }
     ],
     "experiments/bbo-delay-protocol.md": [
@@ -3104,6 +3179,25 @@
           "O1",
           "O2",
           "O5"
+        ]
+      }
+    ],
+    "studies/bbo-execution-delay.md": [
+      {
+        "kind": "methods",
+        "sha256": "5d0fbe7934d10061d47a7beb8dd7d11707108d64e008da6268ee9bc0f71a6d84",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "ab633cb7cce1ec6d41c7848eceb88bbbbf48042208836ab4fc98c704e2529983",
+        "source_ids": []
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "4cce84e13fc9cf085dd4c47600e73b68635d20b9b1a60e360ff42d7b2b719ec6",
+        "source_ids": [
+          "BB1"
         ]
       }
     ],
@@ -6014,6 +6108,13 @@
       "id": "E6",
       "kind": "public_replay",
       "sample_role": "methods_validation"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "real_market_data",
+      "id": "BB1",
+      "kind": "public_replay",
+      "sample_role": "development"
     }
   ],
   "version": 1

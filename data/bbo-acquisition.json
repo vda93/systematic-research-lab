@@ -1,0 +1,53 @@
+{
+  "boundary": "Retained workflow receipt; not independently authenticated access history. No raw data license granted.",
+  "bytes": 48871494,
+  "finished_at_utc": "2026-10-21T10:28:17.926498+00:00",
+  "http_status": 200,
+  "metadata": [
+    {
+      "bytes": 28697,
+      "requested_at_utc": "2026-10-21T10:26:57.244679+00:00",
+      "sha256": "0696831d6572356c7a7f9e1d298f435563123eb3a1bae1bcf1fb5d6b2ff4509b",
+      "status": 200,
+      "url": "https://docs.tardis.dev/faq/general.md"
+    },
+    {
+      "bytes": 47532,
+      "requested_at_utc": "2026-10-21T10:26:57.717271+00:00",
+      "sha256": "4beffdd668795481a45bae7071b1ce4cf6abe953ac8da024282723eabd661c32",
+      "status": 200,
+      "url": "https://docs.tardis.dev/downloadable-csv-files/data-types.md"
+    },
+    {
+      "bytes": 13368,
+      "requested_at_utc": "2026-10-21T10:26:58.153266+00:00",
+      "sha256": "144118ce493ad742abda69c92e067eacff667c71b8f2fda3a1c31b760f429eb4",
+      "status": 200,
+      "url": "https://docs.tardis.dev/downloadable-csv-files/api.md"
+    },
+    {
+      "bytes": 9162,
+      "requested_at_utc": "2026-10-21T10:26:58.593391+00:00",
+      "sha256": "5c44aed330163165b5c80b531a30664511254b43f6cdb5c5cf25ef74bfb33bb0",
+      "status": 200,
+      "url": "https://docs.tardis.dev/historical-data-details/binance.md"
+    },
+    {
+      "bytes": 1112395,
+      "requested_at_utc": "2026-10-21T10:26:59.031306+00:00",
+      "sha256": "f94d7bc45175bb17292d148eeadd53681f41fc1ff4faf92c6057b08c33c224ea",
+      "status": 200,
+      "url": "https://api.tardis.dev/v1/exchanges/binance"
+    }
+  ],
+  "protocol_commit": "c5f205fdeff02ea3f667a804974a6ee4d9098790",
+  "protocol_commit_utc": "2026-10-21T10:25:34Z",
+  "protocol_sha256": "c98d3b172e749e3333a16a0558f023916c3f540000324a5b5428fde0b29a2856",
+  "requested_at_utc": "2026-10-21T10:28:11.325542+00:00",
+  "rights_review": "PASS_RESEARCH_AND_NONRECONSTRUCTIBLE_AGGREGATES_ONLY_NO_RAW_PUBLICATION",
+  "role": "development",
+  "sha256": "366e5d2ae6b8b6decd6628c300661c209e0fcc58e4079416075cfbe46be4ba49",
+  "status": "ACQUIRED_CRC_AND_HEADER_PASS",
+  "uncompressed_bytes": 365223367,
+  "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2023/01/01/BTCUSDT.csv.gz"
+}

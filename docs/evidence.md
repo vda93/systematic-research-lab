@@ -435,3 +435,7 @@ The complete public pipeline qualifies a selected official ECB historical snapsh
 ## E6
 
 **Exact circular-block means: public engineering and measurements.** The [walkthrough](exact-block-means.md), [source](../src/srl/block_means.py), [oracle tests](../tests/test_block_means.py) and [before/after receipt](../data/block-means-benchmark.json) expose the numerical contract, local performance and memory tradeoff. Mathematical fixtures are not market evidence; the work is AI-assisted and human mastery is unassessed.
+
+## BB1
+
+**BBO delay: original development measurement support.** A [private-input replay](../scripts/bbo_qualify.py) derives [coarse qualification counts](../data/bbo-development-qualification.json) from the hashed native Tardis Binance BTCUSDT first development file. Provider terms permit non-reconstructible statistics, not raw redistribution. The first day fails full-history support; no economic effect or final-sample result is claimed. A [separate amendment](../experiments/bbo-delay-measurement-v2.md) is support-informed and AI-proposed.

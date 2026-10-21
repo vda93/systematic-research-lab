@@ -1,0 +1,27 @@
+{
+  "compressed_bytes": 48871494,
+  "counts": {
+    "conflicting_timestamps": 23678,
+    "duplicate_rows": 4,
+    "invalid_rows": 0,
+    "rows": 4391515,
+    "unknown_states": 23678,
+    "valid_states": 4343778
+  },
+  "day": "2023-01-01",
+  "economic_outcomes_calculated": false,
+  "known_duration_us": 83928984894,
+  "known_runs": 48242,
+  "longest_known_run_us": 28405641,
+  "maximum_eligibility_fraction": 0.0,
+  "maximum_history_eligible_intents": 0,
+  "measurement": "original full-history BBO protocol",
+  "method_sha256": {
+    "scripts/bbo_qualify.py": "f4331a6f7d53f1ce162ab5e28a3fe0ac85e19ae1eacdc39daf7fb682cb4aa530",
+    "src/srl/bbo.py": "f36552b92e78a7cdea6df9c69915aaf59336fe3c76a0cd44d15ba2dc6646fc4f"
+  },
+  "raw_sha256": "366e5d2ae6b8b6decd6628c300661c209e0fcc58e4079416075cfbe46be4ba49",
+  "scheduled_intents": 86099,
+  "source_url": "https://datasets.tardis.dev/v1/binance/book_ticker/2023/01/01/BTCUSDT.csv.gz",
+  "status": "DEV_FAIL_SUPPORT"
+}
