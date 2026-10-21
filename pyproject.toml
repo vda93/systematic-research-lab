@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 license = "MIT"
 authors = [{name = "vda93"}]
-dependencies = ["matplotlib==3.10.7"]
+dependencies = ["matplotlib==3.10.7", "numpy==2.5.1"]
 
 [project.urls]
 Repository = "https://github.com/vda93/systematic-research-lab"
