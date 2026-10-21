@@ -21,3 +21,9 @@ Deterministic replay and hashes establish repeatability and byte identity. They 
 ## The new real-market study has a different boundary
 
 The [ECB FX study](../studies/fx-reference-momentum.md) distributes a qualified, attributed provider snapshot under separate terms and replays the complete public empirical pipeline. Its temporal roles are historical; prior general market knowledge and a revised retrieval vintage prevent a pristine prospective-OOS claim. Reference observations are not executable bid/ask prices. Spread, financing, slippage and live economics remain unevaluated. Passing software checks cannot turn the study's failed benchmark comparison into support.
+
+## BBO quote costs require independent source retrieval
+
+The [BBO study](../studies/bbo-execution-delay.md) adds native displayed bid/ask, causal local-receive clocks, fixed order quantity and fee/slippage sensitivity. Raw provider observations cannot be redistributed; a reviewer must independently obtain the declared source bytes. Selected first-of-month days, sparse monthly blocks, unknown quote history, finite quote expiry, ambiguous shocks, missing targets and displayed-size failures limit the population and inference. The support-informed amendment has different eligibility from the failed original measurement. Its final support failure remains decisive even if a conditional estimate has a narrow interval.
+
+Displayed price and size do not guarantee order acceptance, queue position, fills or executable portfolio returns. The comparison assumes an external order demand rather than constructing a funded strategy, so there is no inventory path, financing/carry, turnover-based return, capacity estimate or deployment qualification. Future-depth conditioning is separately descriptive. Bootstrap arithmetic cannot repair selection, missingness or support. AI-generated implementation, explanations and practice exercises do not establish the candidate's unaided technical ability.

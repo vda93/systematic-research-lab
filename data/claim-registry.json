@@ -16,10 +16,9 @@
     "README.md": [
       {
         "kind": "public_replay",
-        "sha256": "418e6da1e98f6a8349d505ea38caabc1fe102e765f9d2bddd7eaed03efdb3790",
+        "sha256": "89d89de938652fa1bb24f1a7f5e3edea3fcbe992e108c69887dba15172c45383",
         "source_ids": [
-          "BB3",
-          "BB4"
+          "BB5"
         ]
       },
       {
@@ -146,7 +145,7 @@
       },
       {
         "kind": "documentation",
-        "sha256": "44aa697aa1ff7b7652d3b2b501554c53eb5237b7403a6acb5481a7f08ba215f9",
+        "sha256": "b92a13c0c7e9a07fc03e12d9d9289679a19c22604dffc0d525667d59b5d98abb",
         "source_ids": []
       },
       {
@@ -860,6 +859,11 @@
       {
         "kind": "methods",
         "sha256": "9e68ec4a313322dd3e27d51ca5e881bede5c030abd70af3409f13d9d2a5f1751",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "f33fa006679d7de65d33b0a137a6ca7950c0a6daeb164b86c0c03b45ece2eb42",
         "source_ids": []
       }
     ],
@@ -3274,6 +3278,32 @@
       {
         "kind": "methods",
         "sha256": "7eab8c9de5eb87ba08511357bee59d02c2c7851365b2038c42272638420d1a94",
+        "source_ids": []
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "2cee65178eb31fa6b573195bbe121763e443c6ca1715389802dececac91f291f",
+        "source_ids": [
+          "BB5"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "01d092a0f4b3c40c92297e80131ca16bf5c9919172ff9db1b2530847cda65eab",
+        "source_ids": [
+          "BB5"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "3376e837a58bab883afd5cae93dcc5470a25787f00b7c227ddc0aef0b82c0cd1",
+        "source_ids": [
+          "BB5"
+        ]
+      },
+      {
+        "kind": "methods",
+        "sha256": "7f55e98ac8fcf047db882ed5a7998899c27dd940d9ebbc40d8caa4e090a8f533",
         "source_ids": []
       }
     ],
@@ -6212,6 +6242,13 @@
       "id": "BB4",
       "kind": "public_replay",
       "sample_role": "validation"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "real_market_data",
+      "id": "BB5",
+      "kind": "public_replay",
+      "sample_role": "final"
     }
   ],
   "version": 1

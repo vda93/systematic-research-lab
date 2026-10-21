@@ -1,0 +1,137 @@
+{
+  "boundary": "Retained local workflow receipts; not independently authenticated provider-access history. No raw-data redistribution rights granted.",
+  "protocol_commit": "76c8952ac6a18b6ab167878974f9cf2b4bad89c9",
+  "public_implementation": {
+    "date": "2026-10-21T16:22:32Z",
+    "sha": "28c779bd94e75b319dcaf065436c96b0359288d8"
+  },
+  "public_stage_closeout": {
+    "date": "2026-10-21T21:02:09Z",
+    "sha": "5be974c99297083ab53485956a48fd20a8d49c4d"
+  },
+  "public_verification_utc": "2026-10-21T21:05:26.345801+00:00",
+  "sources": [
+    {
+      "completed_utc": "2026-10-21T21:05:32.783574+00:00",
+      "compressed_bytes": 36920797,
+      "day": "2025-01-01",
+      "gzip_crc_verified": true,
+      "http_status": 200,
+      "raw_sha256": "3291d5f909b67c1834fe7e6e4b15cefbb188a19a423b938c307ff1f84d909023",
+      "request_utc": "2026-10-21T21:05:28.645880+00:00",
+      "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2025/01/01/BTCUSDT.csv.gz"
+    },
+    {
+      "completed_utc": "2026-10-21T21:06:48.926663+00:00",
+      "compressed_bytes": 50418067,
+      "day": "2025-02-01",
+      "gzip_crc_verified": true,
+      "http_status": 200,
+      "raw_sha256": "ec2661de2d717cb05ac5a5a870d84d787b612e04e10677e35410098273ce920e",
+      "request_utc": "2026-10-21T21:06:41.039522+00:00",
+      "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2025/02/01/BTCUSDT.csv.gz"
+    },
+    {
+      "completed_utc": "2026-10-21T21:08:30.126884+00:00",
+      "compressed_bytes": 93568885,
+      "day": "2025-03-01",
+      "gzip_crc_verified": true,
+      "http_status": 200,
+      "raw_sha256": "8045cc2d7e48ed027464a803dab5ece540ea84d743c4aa030ba5c6b701765693",
+      "request_utc": "2026-10-21T21:08:19.570141+00:00",
+      "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2025/03/01/BTCUSDT.csv.gz"
+    },
+    {
+      "completed_utc": "2026-10-21T21:11:20.995278+00:00",
+      "compressed_bytes": 111835975,
+      "day": "2025-04-01",
+      "gzip_crc_verified": true,
+      "http_status": 200,
+      "raw_sha256": "9ba86793e9bd2a77cf49e3e2ecd278b79642929f2fa9710ac1888eb43f618715",
+      "request_utc": "2026-10-21T21:11:08.467673+00:00",
+      "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2025/04/01/BTCUSDT.csv.gz"
+    },
+    {
+      "completed_utc": "2026-10-21T21:14:30.407569+00:00",
+      "compressed_bytes": 79139129,
+      "day": "2025-05-01",
+      "gzip_crc_verified": true,
+      "http_status": 200,
+      "raw_sha256": "9a1773c7f1a47cea599a031012fa14bd73ad2387c0a771eecfc8ef142be26bd9",
+      "request_utc": "2026-10-21T21:14:20.867954+00:00",
+      "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2025/05/01/BTCUSDT.csv.gz"
+    },
+    {
+      "completed_utc": "2026-10-21T21:16:53.833103+00:00",
+      "compressed_bytes": 59333213,
+      "day": "2025-06-01",
+      "gzip_crc_verified": true,
+      "http_status": 200,
+      "raw_sha256": "895ead90fb6acd4460f30871aabc0ab507c8ce3b4de7f1fdee3cf6fb65a41ac2",
+      "request_utc": "2026-10-21T21:16:45.561516+00:00",
+      "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2025/06/01/BTCUSDT.csv.gz"
+    },
+    {
+      "completed_utc": "2026-10-21T21:18:51.637274+00:00",
+      "compressed_bytes": 65784688,
+      "day": "2025-07-01",
+      "gzip_crc_verified": true,
+      "http_status": 200,
+      "raw_sha256": "1f17ca3aca6a62090632225dec4dedac8f2e2aad2c8d103d9a10a80c14c257aa",
+      "request_utc": "2026-10-21T21:18:43.404520+00:00",
+      "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2025/07/01/BTCUSDT.csv.gz"
+    },
+    {
+      "completed_utc": "2026-10-21T21:21:10.007790+00:00",
+      "compressed_bytes": 130465523,
+      "day": "2025-08-01",
+      "gzip_crc_verified": true,
+      "http_status": 200,
+      "raw_sha256": "d32f02cde3203b3a32b807cdc2c31591f590bcf7c25abad8839f4e4b96c3402e",
+      "request_utc": "2026-10-21T21:20:54.874185+00:00",
+      "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2025/08/01/BTCUSDT.csv.gz"
+    },
+    {
+      "completed_utc": "2026-10-21T21:25:07.996509+00:00",
+      "compressed_bytes": 91624338,
+      "day": "2025-09-01",
+      "gzip_crc_verified": true,
+      "http_status": 200,
+      "raw_sha256": "4e38be12ca86d20606403e5090651d547ac55da017c7ed3f20a1528adaffc8f4",
+      "request_utc": "2026-10-21T21:24:56.819065+00:00",
+      "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2025/09/01/BTCUSDT.csv.gz"
+    },
+    {
+      "completed_utc": "2026-10-21T21:27:55.110347+00:00",
+      "compressed_bytes": 83101982,
+      "day": "2025-10-01",
+      "gzip_crc_verified": true,
+      "http_status": 200,
+      "raw_sha256": "c4b2c594eac81c92b7963713af953462696f9cebe2ba56ab992cf1bcbfa1ed9c",
+      "request_utc": "2026-10-21T21:27:45.013019+00:00",
+      "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2025/10/01/BTCUSDT.csv.gz"
+    },
+    {
+      "completed_utc": "2026-10-21T21:30:33.554134+00:00",
+      "compressed_bytes": 94807084,
+      "day": "2025-11-01",
+      "gzip_crc_verified": true,
+      "http_status": 200,
+      "raw_sha256": "9a34c39c1bb9d9226db3bf24af8275745a05717f36d480407561385c71dcabd4",
+      "request_utc": "2026-10-21T21:30:22.345168+00:00",
+      "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2025/11/01/BTCUSDT.csv.gz"
+    },
+    {
+      "completed_utc": "2026-10-21T21:33:27.627747+00:00",
+      "compressed_bytes": 177626298,
+      "day": "2025-12-01",
+      "gzip_crc_verified": true,
+      "http_status": 200,
+      "raw_sha256": "3bbb25036554261d19cb1d82c11f2e42da0d151240f00c1bc8220992c8f4460b",
+      "request_utc": "2026-10-21T21:33:07.514933+00:00",
+      "url": "https://datasets.tardis.dev/v1/binance/book_ticker/2025/12/01/BTCUSDT.csv.gz"
+    }
+  ],
+  "stage": "final",
+  "terms_sha256": "0696831d6572356c7a7f9e1d298f435563123eb3a1bae1bcf1fb5d6b2ff4509b"
+}
