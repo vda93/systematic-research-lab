@@ -7,6 +7,7 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
+from types import SimpleNamespace
 
 FREEZE = '76c8952ac6a18b6ab167878974f9cf2b4bad89c9'
 
@@ -21,6 +22,53 @@ def api():
 
 
 class RunnerTests(unittest.TestCase):
+    def test_native_peak_memory_normalizes_platform_units_and_fails_closed(self):
+        import ctypes
+        import sys
+        module = api()
+        resource = SimpleNamespace(RUSAGE_SELF=0, getrusage=lambda who: SimpleNamespace(ru_maxrss=123))
+        with patch.dict(sys.modules, {'resource': resource}):
+            with patch.object(sys, 'platform', 'linux'):
+                self.assertEqual(module._rss(), 125952)
+            with patch.object(sys, 'platform', 'darwin'):
+                self.assertEqual(module._rss(), 123)
+        def measure(process, pointer, size):
+            self.assertEqual(process, 42)
+            self.assertEqual(size, pointer._obj.cb)
+            pointer._obj.PeakWorkingSetSize = 654321
+            pointer._obj.WorkingSetSize = 123
+            return 1
+        native = SimpleNamespace(kernel32=SimpleNamespace(GetCurrentProcess=lambda: 42),
+                                 psapi=SimpleNamespace(GetProcessMemoryInfo=measure))
+        with patch.object(sys, 'platform', 'win32'), patch.object(ctypes, 'windll', native, create=True):
+            self.assertEqual(module._rss(), 654321)
+            native.psapi.GetProcessMemoryInfo = lambda *args: 0
+            with self.assertRaises(OSError):
+                module._rss()
+
+    def test_validation_path_requires_stage_proof_and_records_it_before_replay(self):
+        module = api()
+        self.assertTrue(hasattr(module, 'verify_stage'), 'worker stage guard is not integrated')
+        payload = gzip.compress(b'exchange,symbol,timestamp,local_timestamp,ask_amount,ask_price,bid_price,bid_amount\n', mtime=0)
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            raw = root/'fixture.csv.gz'
+            raw.write_bytes(payload)
+            proof = dict(stage='VALIDATION', verification='ORIGINAL_SYNTHETIC_BOUNDARY_FIXTURE')
+            def local_blob(source_root, command, reference):
+                self.assertEqual(command, 'show')
+                return (source_root/reference.split(':',1)[1]).read_bytes()
+            # Freeze and guard semantics have real temporary-Git tests separately.
+            # Here isolate their boundary and exercise actual worker/replay/output.
+            with patch.object(module, 'verify_stage', return_value=proof) as guard, patch.object(module, '_git', side_effect=local_blob):
+                receipt = module.run_day(raw, day='2024-01-01', output=root/'run', protocol_commit=FREEZE,
+                                         expected_sha256=hashlib.sha256(payload).hexdigest(),
+                                         implementation_commit='1'*40, stage_commit='2'*40)
+            guard.assert_called_once_with(module.ROOT, day='2024-01-01', implementation_commit='1'*40,
+                                          stage_commit='2'*40)
+            self.assertEqual(receipt['status'], 'COMPLETE')
+            self.assertEqual(receipt['stage_proof'], proof)
+
     def test_post_report_io_cap_and_memory_failures_never_leave_a_completed_report(self):
         from srl.bbo_replay import DayReplay
         def synthetic_replay(updates, *, start_us, audit):

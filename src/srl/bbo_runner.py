@@ -1,7 +1,7 @@
 """Offline day replay with external private artifacts and fail-closed receipts.
 
 No network access. Local Git checks establish content identity, not publication.
-Validation/final access stays disabled until the development closeout is frozen.
+Validation/final replay requires frozen implementation and preceding closeouts.
 """
 from __future__ import annotations
 
@@ -22,10 +22,11 @@ from typing import Any, Callable, Iterator
 from srl.bbo import QuoteCounts, QuoteUpdate, iter_updates
 from srl.bbo_acquire import ROOT, _atomic, _cache, _freeze, _git
 from srl.bbo_replay import replay_updates
+from srl.bbo_stage import verify_stage
 
 METHOD_FILES = tuple(f'src/srl/{name}.py' for name in (
     'bbo', 'bbo_acquire', 'bbo_accounting', 'bbo_history', 'bbo_replay', 'bbo_statistics',
-    'bbo_runner', 'block_means', 'resampling')) + ('scripts/bbo_run_day.py',)
+    'bbo_runner', 'bbo_stage', 'block_means', 'resampling')) + ('scripts/bbo_run_day.py',)
 MEMORY_CAP = 2 * 1024**3
 OUTPUT_CAP = 2 * 1024**3
 TIME_CAP = 120 * 60
@@ -84,8 +85,12 @@ def run_day(raw: Path, *, day: str, output: Path, protocol_commit: str,
     parsed = date.fromisoformat(day)
     if parsed.isoformat() != day or parsed.day != 1 or parsed.year not in (2023, 2024, 2025):
         raise ValueError('only the frozen 36 monthly first days are permitted')
+    stage_proof: dict[str, Any] = {'stage': 'DEVELOPMENT', 'verification': 'DEVELOPMENT_ONLY'}
     if parsed.year != 2023:
-        raise ValueError('later stages locked pending immutable development closeout')
+        if implementation_commit is None or stage_commit is None:
+            raise ValueError('later stages require immutable implementation and preceding closeout')
+        stage_proof = verify_stage(ROOT, day=day, implementation_commit=implementation_commit,
+                                   stage_commit=stage_commit)
     if not re.fullmatch('[0-9a-f]{64}', expected_sha256):
         raise ValueError('exact lowercase SHA256 required')
     if output.exists():
@@ -105,7 +110,7 @@ def run_day(raw: Path, *, day: str, output: Path, protocol_commit: str,
         status='RUNNING', day=day, started_utc=_utc(), pid=os.getpid(),
         protocol_commit=protocol_commit, protocol_freeze=freeze,
         freeze_verification='LOCAL_CONTENT_ONLY_PUBLICATION_VERIFIED_BY_ORCHESTRATOR',
-        implementation_commit=implementation_commit, stage_commit=stage_commit,
+        implementation_commit=implementation_commit, stage_commit=stage_commit, stage_proof=stage_proof,
         method_sha256=methods, expected_sha256=expected_sha256,
         python=sys.version, platform=platform.platform(),
         source_url=f'https://datasets.tardis.dev/v1/binance/book_ticker/{parsed:%Y/%m/%d}/BTCUSDT.csv.gz',

@@ -20,11 +20,12 @@ def main() -> int:
     parser.add_argument('--protocol-commit', required=True)
     parser.add_argument('--sha256', required=True)
     parser.add_argument('--implementation-commit')
+    parser.add_argument('--stage-commit')
     args = parser.parse_args()
     try:
         receipt = run_day(args.raw, day=args.day, output=args.output,
                           protocol_commit=args.protocol_commit, expected_sha256=args.sha256,
-                          implementation_commit=args.implementation_commit)
+                          implementation_commit=args.implementation_commit, stage_commit=args.stage_commit)
     except (ValueError, OSError) as exc:
         print(json.dumps({'status': 'NOT_RUN', 'error_type': type(exc).__name__, 'reason': str(exc)}))
         return 2

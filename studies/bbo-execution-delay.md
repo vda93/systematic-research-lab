@@ -35,12 +35,30 @@ The [replay engine](../src/srl/bbo_replay.py), [median bounds](../src/srl/bbo_hi
 
 Reproduce this checked day from the independently downloaded, hash-matching source:
 
+The historical per-day receipt binds the original engine revision `2a17530f7c27ddf55e15bd5ba67e1414979921d7`. Use that revision for its exact operational method hashes. The complete-stage route below uses the current controls and separately checks the unchanged scientific calculation core.
+
 ```sh
 python scripts/bbo_run_day.py --day 2023-01-01 --raw /private/cache/BTCUSDT.csv.gz --output /private/new-day-run --protocol-commit 76c8952ac6a18b6ab167878974f9cf2b4bad89c9 --sha256 366e5d2ae6b8b6decd6628c300661c209e0fcc58e4079416075cfbe46be4ba49
 python scripts/bbo_check_day.py --run-directory /private/new-day-run --check data/bbo-development-first-day-v2.json
 ```
 
 The comparison checks all coarse statistics, raw identity and exact method hashes. It fails on changed source bytes or methods. Private compressed audits include operational metadata and are not expected to reproduce byte for byte. A retained workflow receipt is not an independently authenticated history of data access. Ordinary CI uses synthetic fixtures and never downloads this source.
+
+## Complete development closeout
+
+All twelve planned 2023 first-of-month days completed qualification and replay. They contain **2,421 price-paired primary shock observations** across twelve observed days. The equal-day descriptive mean saving is **−0.41005 bps**, with a primary 95% bootstrap interval of **[−0.50103, −0.31921] bps**; the two-day-block interval is **[−0.50717, −0.30684] bps**. Every daily mean is negative. The [full aggregate](../data/bbo-development-results.json) retains all daily means, leave-one-day-out values, tail penalties, controls, components and fixed sensitivities.
+
+Support fails: no contributing day reaches the 95% intent-eligibility or 99% future-depth threshold, and every day has missing primary targets. Eleven days have at least 100 shocks; July's 47 eligible shocks and 44 paired observations remain in the estimate. Thus this is a **descriptive development finding with failed support**, rather than a confirmatory economic rejection. Price-paired outcomes include insufficient future depth; the separately reported sufficient-depth subset is post-outcome conditioning. No subset or sensitivity rescues support.
+
+The [development closeout](../data/bbo-development-closeout.json) signs off implementation correctness and usable observations, not a positive effect. Validation and final access require a committed complete source/test/dependency manifest and preceding-stage results linked by exact hashes. The [stage guard](../src/srl/bbo_stage.py) verifies local immutable content; the acquisition orchestrator must separately verify public chronology before any new outcome download. Validation and final data remain unaccessed at this closeout.
+
+For each declared source, independently download the exact compressed bytes under the provider's terms and run the private worker into a fresh external directory named `YYYY-MM-DD-v1`. The result file lists source URLs and hashes. Then reproduce every public development statistic in one offline comparison:
+
+```sh
+python scripts/bbo_summarize.py --runs /private/stage-runs --stage development --external-gates-passed --check data/bbo-development-results.json
+```
+
+The flag is an explicit caller assertion of separately reviewed rights, integrity and stage chronology. It is not inferred from a hash or a test pass. The command verifies complete private artifact inventories, source identities, the seven scientific calculation files and the aggregation module; runner/acquisition/CLI controls have separate operational version histories. Missing planned days stay visible, while an incomplete or changed existing run fails the whole comparison. No network access occurs. Raw quotes, event prices and timed intent ledgers remain private; derived worst observations and quantiles are intentionally published statistics.
 
 ## Rights and reproduction boundary
 

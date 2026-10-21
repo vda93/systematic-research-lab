@@ -443,3 +443,7 @@ The complete public pipeline qualifies a selected official ECB historical snapsh
 ## BB2
 
 **BBO delay: amended development quote-cost replay.** The [first-day report](../data/bbo-development-first-day-v2.json) records the hashed source and exact implementation for a conditional development comparison under the separately frozen measurement amendment. Failed coverage, missing-target and depth gates remain visible. Public statistics describe derived quote costs; they omit raw quote levels, event prices and timed intent ledgers. The result is AI-assisted research, not candidate mastery, final validation or executable performance.
+
+## BB3
+
+**BBO delay: complete amended development sample.** The [twelve-day aggregate](../data/bbo-development-results.json) records fixed source identities, calculation and aggregation hashes, daily counts, equal-day inference, controls, all fixed sensitivities and failed support. Every planned day is retained, including low-count July. The [closeout](../data/bbo-development-closeout.json) binds the complete implementation and source/test/dependency identities before later-stage access. AI-reviewed numerical correctness and development usability do not establish human mastery or economic support.

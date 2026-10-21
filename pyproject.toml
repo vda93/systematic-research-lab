@@ -30,7 +30,8 @@ select = ["F", "E9"]
 
 [tool.mypy]
 python_version = "3.12"
-files = ["src/srl/evidence.py", "src/srl/fx_study.py", "src/srl/claims.py", "src/srl/block_means.py", "src/srl/bbo.py", "src/srl/bbo_acquire.py", "src/srl/bbo_accounting.py", "src/srl/bbo_history.py", "src/srl/bbo_replay.py", "src/srl/bbo_runner.py", "src/srl/bbo_statistics.py"]
+files = ["src/srl/evidence.py", "src/srl/fx_study.py", "src/srl/claims.py", "src/srl/block_means.py", "src/srl/bbo.py", "src/srl/bbo_acquire.py", "src/srl/bbo_accounting.py", "src/srl/bbo_history.py", "src/srl/bbo_replay.py", "src/srl/bbo_runner.py", "src/srl/bbo_statistics.py", "src/srl/bbo_report.py", "src/srl/bbo_stage.py", "scripts/bbo_run_day.py", "scripts/bbo_check_day.py", "scripts/bbo_summarize.py"]
+mypy_path = "src"
 check_untyped_defs = true
 disallow_untyped_defs = true
 warn_unused_ignores = true
