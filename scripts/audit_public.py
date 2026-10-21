@@ -40,7 +40,10 @@ def source_files(root: Path):
 
 
 def text_findings(name: str, payload: bytes) -> list[str]:
-    if len(payload) > 600_000 or (Path(name).suffix not in TEXT_TYPES and name not in SPECIAL):
+    # One specifically reviewed, provider-permitted market snapshot. This does
+    # not admit arbitrary raw vendor CSVs to the publication boundary.
+    approved_csv = name == 'data/ecb-fx-reference.csv'
+    if len(payload) > 600_000 or (Path(name).suffix not in TEXT_TYPES and name not in SPECIAL and not approved_csv):
         return [f'unsupported source type or size: {name}']
     try:
         text = payload.decode('utf-8')

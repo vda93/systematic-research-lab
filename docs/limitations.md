@@ -16,4 +16,8 @@ The [synthetic study](study.md) intentionally constructs a concentration counter
 
 Synthetic fixtures have explicit close-date amounts, not marked portfolio NAV, cash flows or executable prices. They do not identify CAGR, annualized Sharpe or account success probabilities. Same-date ordering is a deterministic convention rather than recovered intraday chronology.
 
-Deterministic replay and hashes establish repeatability and byte identity. They do not establish unbiased inference, independent preregistration, unseen-data access or historical truth. A future independently reproducible market study would need qualified redistributable data and its own evidence plan.
+Deterministic replay and hashes establish repeatability and byte identity. They do not establish unbiased inference, independent preregistration, unseen-data access or historical truth.
+
+## The new real-market study has a different boundary
+
+The [ECB FX study](../studies/fx-reference-momentum.md) distributes a qualified, attributed provider snapshot under separate terms and replays the complete public empirical pipeline. Its temporal roles are historical; prior general market knowledge and a revised retrieval vintage prevent a pristine prospective-OOS claim. Reference observations are not executable bid/ask prices. Spread, financing, slippage and live economics remain unevaluated. Passing software checks cannot turn the study's failed benchmark comparison into support.

@@ -4,9 +4,20 @@
 
 ![Historical nowick evidence, with sample and inference limitations](../figures/nowick.svg)
 
-The useful outcome of this research program was a decision to stop. I tested whether a visually distinctive candle pattern added predictive information beyond comparable ordinary candles, then evaluated a separately defined reversal hypothesis. The matched event study did not establish a robust incremental continuation signal. The independent reversal study also failed its frozen decision rule. Neither result justified another trading implementation.
+The useful outcome of this research program was a decision to stop. The program tested whether a visually distinctive candle pattern added predictive information beyond comparable ordinary candles, then evaluated a separately defined reversal hypothesis. The matched event study did not establish a robust incremental continuation signal. The independent reversal study also failed its frozen decision rule. Neither result justified another trading implementation.
 
-This case shows how I separate an appealing market description from a testable claim: define the comparison, preserve execution accounting, quantify uncertainty, and retain a negative decision when the evidence does not clear the gate.
+| Research contract | Identity and decision |
+| --- | --- |
+| Systems | Original NOWICK mechanical candle-pattern EA family; H004 uses an order-free event collector. ANTI-NOWICK R001 is a separately frozen offline reversal study. |
+| Markets and clocks | H004: USDJPY2, AUDUSD2, GBPUSD2 and AUDJPY2 on M15. R001: AUDJPY2 M5, XAUUSD2 M5 and XAUUSD2 M15; these are separate configurations, not one pooled trading strategy. |
+| Comparison | H004 pattern events versus matched ordinary candles; R001 reversed fixed-clock outcomes versus matched reversed controls. |
+| Sample | January 2020–July 2026 historical evidence; R001 explicitly uses previously inspected history. |
+| Decision | No robust incremental continuation signal; **R001_REJECT**. The recorded user decision shelves the original trading family. |
+| Contribution | A directly recorded candidate stop decision; automated event collection, matching and analysis. Precise historical coding attribution remains bounded. [Ownership](../docs/ownership.md) |
+
+Source contracts: [N1](../docs/evidence.md#n1), [N2](../docs/evidence.md#n2).
+
+The closeout explicitly records my decision to reject and shelve the original trading family. That is a documented adjudication contribution; it does not establish that I manually coded every collector, matcher or analysis. The method separates an appealing market description from a testable claim: define the comparison, preserve execution accounting, quantify uncertainty and retain a negative decision when the evidence does not clear the gate. [N1](../docs/evidence.md#n1)
 
 ## The question behind the chart
 
@@ -22,13 +33,13 @@ The primary estimate compared post-retest continuation probabilities. A UTC-day 
 
 The interval crossed zero. Three instrument estimates were positive but individually uncertain; the fourth was negative. The predefined cross-instrument decision rule did not pass. The recorded decision was **no robust incremental signal**. This does not prove that every conceivable use of the pattern has zero effect. It means the specific frozen claim was not supported by this comparison.
 
-Secondary endpoints reinforced the need to keep the primary question fixed. One descriptive return difference was positive, while both underlying matched population means remained negative. A favorable difference is not automatically a favorable absolute outcome. Those event-level directional returns were also different from the primary continuation-probability endpoint. I did not use the secondary result to select a new filter or override the decision. [N1](../docs/evidence.md#n1)
+Secondary endpoints reinforced the need to keep the primary question fixed. One descriptive return difference was positive, while both underlying matched population means remained negative. A favorable difference is not automatically a favorable absolute outcome. Those event-level directional returns were also different from the primary continuation-probability endpoint. The secondary result did not select a new filter or override the decision. [N1](../docs/evidence.md#n1)
 
 Matching reduces specified differences between observed groups; it does not randomize market events. Residual confounding remains possible. The estimates describe historical conditional associations, without establishing causation or executable trading profitability.
 
 ## Why rejection does not imply reversal
 
-A weak continuation result does not automatically validate taking the opposite side. Reversing a position changes which quote side is executable, incurs spread and other costs, and requires its own comparison population. I therefore treated reversal as an independent research contract, ANTI-NOWICK R001, without reopening or retuning the closed original program. [N2](../docs/evidence.md#n2)
+A weak continuation result does not automatically validate taking the opposite side. Reversing a position changes which quote side is executable, incurs spread and other costs, and requires its own comparison population. Reversal therefore received an independent research contract, ANTI-NOWICK R001, without reopening or retuning the closed original program. [N2](../docs/evidence.md#n2)
 
 R001 fixed three instrument/timeframe configurations. For each original filled opportunity, it compared a reversed fixed-clock markout with five deterministically matched reversed ordinary-candle controls. Controls were assigned before forward quotes were read. The primary endpoint was the 60-minute net difference, normalized by signal-time average true range (ATR), a volatility scale. Buy and sell accounting used the corresponding executable Bid/Ask sides, plus explicit commission and a fixed slippage allowance. These were research cost assumptions, not reconstructed historical broker fills. [N2](../docs/evidence.md#n2)
 

@@ -1,10 +1,19 @@
-# DE30 continuation: a failed robustness gate and a separate correctness repair
+# MOMCONT on DE30X H1: Signal Persistence, Concentration Failure and a Risk-Sizing Repair
 
 [Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
 
 ![Historical de30-continuation evidence, with sample and inference limitations](../figures/de30.svg)
 
-The DE30 continuation study produced three distinct findings: a development mechanism passed its initial test, a concentration stress rejected its robustness, and a later implementation audit found substantial under-risking. Keeping those findings separate was essential. A subsequent positive sample could not rewrite the failed gate, and a successful engineering repair could not create new evidence of alpha.
+This is **MOMCONT**, the momentum-continuation bot family, adapted to the **DE30X German equity-index CFD on H1 bars**. DE30 names the instrument sleeve, rather than a separate bot. The study produced three distinct findings: a development mechanism passed its initial test, a concentration stress rejected its robustness, and a later implementation audit found substantial under-risking. A subsequent positive sample could not rewrite the failed gate, and a successful engineering repair could not create new evidence of alpha. [D1](../docs/evidence.md#d1) [D7](../docs/evidence.md#d7)
+
+| Research contract | Identity and decision |
+| --- | --- |
+| Hypothesis and comparison | The frozen MOMCONT signal must still satisfy its full conditions one bar later; compare that persistence treatment with the original signal control. |
+| Samples | Development: 2020-01-29–2025-01-01; separate, subsequently authorized terminal test: 2025-01-01–2026-09-01. Ends are exclusive; both are now historical and spent. |
+| Decision | Initial development support; concentration robustness **NOT SUPPORTED**; qualified terminal pass; sizing correction passed a separate historical engineering replay. |
+| Contribution | Research governance, robustness adjudication and correctness review. Automated research/tester runs supplied the artifacts; exact historical hand-coding ownership is not established. [Ownership](../docs/ownership.md) |
+
+The source contracts and chronology are retained in [D1–D9](../docs/evidence.md#d1).
 
 Results below use net R, normalized to initial trade risk, with profit factor and drawdown measured in R-space. They are historical research aggregates, not account-return forecasts or claims about current deployment readiness.
 
@@ -39,6 +48,8 @@ A separate audit exposed an implementation defect. The original sizing calculati
 The correction used loss-per-lot accounting consistent with the platform’s profit-and-loss mechanics. Its validation replay was restricted to known development data. The engineering question was whether exposure could be corrected while preserving the established signal and trade path. [D7](../docs/evidence.md#d7)
 
 After repair, median actual initial risk was **0.49605%** for the **0.5%** request; the fifth percentile was **0.48763%** and the maximum **0.50004%**. All **837 meaningful trade paths** were preserved, alongside exact signal-semantic parity across **27,622 rows**. This was evidence of sizing correctness for the tested contract, not another out-of-sample economic test. [D7](../docs/evidence.md#d7)
+
+The certificate belongs to that historical build and contract. The primary record subsequently documents an October 2026 production risk-input hotfix. The earlier path-preservation result therefore cannot certify the current production build or authorize deployment. [D7](../docs/evidence.md#d7)
 
 ## Exact hashes needed a transparent amendment
 

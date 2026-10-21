@@ -1,0 +1,13 @@
+{
+  "executable_profitability": "NOT_EVALUATED",
+  "execution_correction": "Initial execution used NumPy 2.5.4; unchanged frozen code rerun in pinned 2.5.1 before publication. Only numpy_version metadata changed; all serialized statistics and verdicts identical. Initial artifact retained in private execution provenance.",
+  "independent_recomputation": "Separately authored source selection, signals and direct-index bootstrap; all roles and fixed block lengths matched at declared precision. Same source, not independent provider validation.",
+  "initial_numpy": "2.5.4",
+  "initial_result_sha256": "7de248708d0fffc0256f3611d51ecfdc42274ad629cb8862c1c53bba5d63a841",
+  "numpy": "2.5.1",
+  "protocol_commit": "3dd50f4bfe5299e345acf3fe0e2b8c697967fe2e",
+  "python": "3.12.10",
+  "result_sha256": "5054e2b18bd54948bff7f601cc2bcea3ce4f24276b7ab85e2dfafb27e9c938f5",
+  "scientific_verdict": "NOT_PASS",
+  "study_id": "ECB-FX-MOM20-v001"
+}

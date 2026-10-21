@@ -1,0 +1,25 @@
+{
+  "archive_notice_check": "PASS_SINGLE_CSV_NO_EXTRA_NOTICE",
+  "canonical_csv_sha256": "b6aa4be6327be74aab465f95ad1db8e97636fb215b9208b35d1b1744f10815b7",
+  "crc32": "42c3b5bf",
+  "data_license": "ECB_FREE_USE_CONDITIONS_NOT_SOFTWARE_LICENSE",
+  "frozen_file_sha256": {
+    "DATA_LICENSE.md": "7a2f0b80daedd09c0f943cbd57819bd32df5f8889a7f65399f2f45174879d71a",
+    "experiments/ecb-fx-mom20-protocol.md": "006560c42e4ab22b7cc004141dae709ce8cd0f4e2b4f8174cc31c2ce5b140bd0",
+    "scripts/fx_study.py": "d2bd12917028cd4dfb82938bf3df006d37e765e7455607de6e5cd2101ce25b6d",
+    "src/srl/fx_study.py": "0243a8f79d7ac6f4247548771d402e13be5a6f25dca75c22f9dbc06c812e9fd4",
+    "tests/test_fx_study.py": "996edefd9441abaaf3235a32504f447566c4916523f5b0279e8eba2e08d2ae30"
+  },
+  "member": "eurofxref-hist.csv",
+  "protocol_commit": "3dd50f4bfe5299e345acf3fe0e2b8c697967fe2e",
+  "provider_headers": {
+    "Content-Type": "application/zip",
+    "ETag": null,
+    "Last-Modified": "Tue, 20 Oct 2026 13:56:32 GMT"
+  },
+  "raw_archive_sha256": "4599576d28c5f1ab52a01646c505e591e9bc5ffa943092873293493d7398e96c",
+  "retrieved_at_utc": "2026-10-21T04:42:04.347614+00:00",
+  "rights_reviewed": true,
+  "selected_rows": 2455,
+  "source_url": "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.zip"
+}

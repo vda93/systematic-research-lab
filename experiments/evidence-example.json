@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "evidence": [
+    {
+      "id": "historical-reported-aggregates-v1",
+      "path": "data/historical-results.json",
+      "sha256": "df884e5a021c6aa21086d3c69147c9bd4269d134de38c0642fefddc5c908adfe",
+      "bytes": 14720,
+      "source": "Owner-curated reported aggregates transcribed from completed research reports and primary decisions; see docs/provenance.md and docs/evidence.md.",
+      "license": "MIT: original public aggregate transcription; no rights to excluded raw/vendor data or private code are conveyed.",
+      "redistribution": "permitted",
+      "disclosure": "Approved public reported aggregates only. This file supports presentation checks and qualified reporting, not public raw historical replay, unseen OOS, alpha or deployment claims.",
+      "disclosure_approved": true,
+      "owner": "vda93",
+      "kind": "reported_aggregate",
+      "study_id": "portfolio-historical-presentation",
+      "sample_space": "curated-multiple-studies-not-a-pooled-return-series",
+      "period_start": "2016-01-01",
+      "period_end_exclusive": "2026-09-01",
+      "sample_role": "spent",
+      "consumed": true
+    }
+  ],
+  "claims": [
+    {
+      "id": "aggregate-presentation-integrity",
+      "kind": "historical_report",
+      "text": "The public aggregate transcription has the recorded bytes and declared owner-approved disclosure. Individual historical findings retain their source limitations; file integrity does not independently validate the original research.",
+      "evidence_ids": ["historical-reported-aggregates-v1"],
+      "disclosure_approved": true
+    }
+  ]
+}

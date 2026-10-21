@@ -1,0 +1,5680 @@
+{
+  "boundary": "Reviewed text/source linkage and declared inputs, not authentication of private findings.",
+  "documents": {
+    "DATA_LICENSE.md": [
+      {
+        "kind": "documentation",
+        "sha256": "fe0b585e2c3defb0ed66709c97d77321fd4f6740fd0da7de896659e936974a74",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "b020392df72403827e4042984a46b3a69ebcc6ef4b832202e4f9e711e4f89b97",
+        "source_ids": []
+      }
+    ],
+    "README.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "082bead241345286b9ce7ce4296fa23a9319814d735a20c45ee8c491a62e178f",
+        "source_ids": [
+          "M3",
+          "M4",
+          "M7",
+          "D1",
+          "D2",
+          "D7",
+          "O1",
+          "O2",
+          "O4",
+          "N1",
+          "N2",
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "cd605ff5a632d9a510815ef3ef61c07eb3a27d7c89984d57f4da6292278bf9b1",
+        "source_ids": [
+          "M3",
+          "M4",
+          "M7",
+          "D1",
+          "D2",
+          "D7",
+          "O1",
+          "O2",
+          "O4",
+          "N1",
+          "N2",
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "93d6a9e42da935944c5967565bf111d270b1d3f85ff6d0eed3c977745bad1512",
+        "source_ids": [
+          "M3",
+          "M4",
+          "M7",
+          "D1",
+          "D2",
+          "D7",
+          "O1",
+          "O2",
+          "O4",
+          "N1",
+          "N2",
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "2b79c8f8a434b09f5248d4ec3cbb4cd26944ab1dbd1ad37f2702cce348e5bec6",
+        "source_ids": [
+          "M3",
+          "M4",
+          "M7",
+          "D1",
+          "D2",
+          "D7",
+          "O1",
+          "O2",
+          "O4",
+          "N1",
+          "N2",
+          "B15"
+        ]
+      }
+    ],
+    "SECURITY.md": [],
+    "data/README.md": [],
+    "docs/empirical-methods.md": [
+      {
+        "kind": "methods",
+        "sha256": "9f9185b8a93c9bd135e3660654a5fe137dda18d0162b8c4415eccd5e92663ae8",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "daf649759153998dcb30e1c7aa157451f016f8f51f4a5bbf30dcf2773fc4ab51",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "dd11388a7beb90cec0372edd94205a525ea1fa13377a81e7d7a6c8ca77cce186",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "da5e99f3ececceab5bf2b297dc2cfed4a3bfa37737cf37bbdba5cdd63e091f7d",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "d20da9b3a51e6bf7a37c5b172c4b6668034f34a96bc3b3f8245e3d9290165202",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "63995c2a30fabcbca4f9b7e99bfc9c70f94dcf6cad8c7a4370801c0529446645",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "4e6cbcb5838b066d023155db9cbce8df58af0dbdb57ed0d2dfbe94c8ca831c0b",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "333943f8c263eedf9ee3b738afae3ea9edc64a4338041bbc5898a1c11a9de8d4",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "bcd35ae2c997814b7c91963f77eb63b442174da96ec4f80b31b0b0a2d8b78cda",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "ed3cc6a17778e2dcddb6b2a6f7e5b6af346cd8a21a52fea59a5a5dacadbb5003",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "37274641f783c0b87a726bed15d7827ad21b635225f734771b6a431c29fa3811",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "acdf51a6c4a61d313c3f053988a9d299f3307ff58adf370df8b6a10fc020b42c",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "9513072304fcc77aa70bf269df58d60c3a690552198857c30b370560154cd93a",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "d96e60c0e67908c5917253be40195b649065dd3dc17c69f41c221145d3c209a7",
+        "source_ids": []
+      }
+    ],
+    "docs/evidence.md": [
+      {
+        "kind": "documentation",
+        "sha256": "2e713d9aa6195cae47474dd18bd9f5feaec78022120b7de719d97cefec6d28f3",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "44aa697aa1ff7b7652d3b2b501554c53eb5237b7403a6acb5481a7f08ba215f9",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "acb2ae3cf8100b91c5a6b9e2b720d7e42277649aef58fc79131424a0306b686f",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "f8cb686d96920227a8748a4f97e2a25acaeff6309cfdb7e1f2774394b81f8301",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "ce8c129dc8c28d516d58de7b0b4e247b56543185b2d684b291414b78a76d7a7c",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "7e78c309c32cf371770dab5cfbb215ce4a54b90da5cfc03ebf9b16b0e8652f1a",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "98c69908a9213bead43c637c0cad827c51c4948ea172ad77fef7aa7597667f7a",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "7a165f3b26ba52190dd54dadf93567f82bae5666ce25c6819037976c01fce2a8",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "1ea596d20320372b63daff768b1909458dde253b062fdce2d110deaeee54a542",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "e647fabf26909b7238b51a613289c5e728f0b71e95e5f23dc735b6cfcd9f5bf2",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "5b39823c5141144805884430346f44599fd25a831f5411cc46abfe2a59c2a1a9",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "b6bb9a9594ea56b42dbe3cb5c5b3703fe97241e3e23b13407efaba4cc2c1f6a9",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "e1e16d6d8601452bc3b137082e127af8325c62831a1d69fb605b8f0f8fa26994",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "fe35b353978a0d8dab3b8237010d1f0c9d3b7d581e1d5a9079e2571c63a96d70",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "73fb0eff87a745db7f063834b9e5d708c42f6865b7d0422962014e9364f52972",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "fb1255aae22418e539c1c40c9bd213a2ccae402e522fd997b2341f1cb8bef801",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "e687b43cee113723bbc6714878906690a9c261ee053b07f26f9d21f6ae4c882d",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "957ba4f2eb241cb5fc1f03f0f7a60a920e8a35fb9fc0cc445a206d8d45ebd71d",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "69913fc7922ac5040471307727c4fe876ce4d6fc292aaa47a0dc5a773c58afbe",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "f927f622632b14d43fab46ba25afd551405ac55e2334131f9003194164e7378e",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "05b48f6bff2662523e45b1cc82c58004f0dadd323a8104a3b8f274412066fca6",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "4453ab0756b5d3c13aa03d139b2e4442b862b5ab3b1a4aa3a2a0b2a96248b4b9",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "247882e564309df0ab719bd15033e0bc06c3fbeb6bcfcbc95ea808d1e9dd4a2d",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "6c9760e304032fed188136e011b35483ed295b409996408eee97d3cd5a8a854f",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "3dbc892350f5da66b9d8d31bd2e8b3e4e931f060fc583fbb70244c9ff5d4cab7",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "9635e1f5e6569a20a923018d6385416c0151434d78801810b458bb8f9a2f6f09",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "e1b1aac752eaf3767c0a912e767b616fe65d59256577ecf577506f7bf81f044b",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "e48e4ad60c550882700d189374363de99564e17fe81e78560d3f471e6d69f520",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "e22ac19d4193e6aaa4740d861274b42131a495d1f5515721fcb0a4f3d74fa683",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "e95f9d1d45e6b4576b89bed5d43b828a22a40fd6e9153d1bfe1823f48be121a7",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "9b0c3f11391580573cfb211fbebc9949dc20eebcaa5d736b9002ad58245140f4",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "8d367130a47f87a6401bc63f0db566f4c834459c61ee2ac7c5c6f033a5bb771b",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "56c8ca65c577ad4f28ab02e2b5e7586fd4ea49ef460c53471496378cf58fc103",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "ebcb35cab76b2747416273760bdbcbab507b060f3fb0d88090fecc2503aef55e",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "9b8b4aa275f8ad3ab02c3a0140c5059d7d00cf9a33f1d4c8c46781f0c1458229",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "2e557611db5bda24657f2d9c12dad0340bb9cae2f979269d256b05967d9e7edc",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "c2febcd877f06cd0d8f0f19eb1be8a2a506343310da005063d156ee24c34ee9e",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "f5729284e3f448919de97f18a1f7dcdd5456e56f78d559f40794548d314617f4",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "fc10b925844570dae8bc618783a3315fd80ef7af2781dd5cc4de4a06afd7f1d2",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "81d7b5e25af05f0eaa472cc5c7b7196e89f4b3c4b0fc78c18b0a8bc4a4570563",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "df79066013c2bac139c81231048a3bc2cedc1b63a90ac779d6a19a560b35aa37",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "ecc44b20b6ef0cd1bf9e462fbac8a7d8359714bdb09a86ee4b551cf14e97f9a0",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "e08146d2c7630607a63a1a1a119e56a38e866362fe75e1ee3c563426159f1ea3",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "75a37c11db0c79a5e9b5b205f6e3a7890d80510965e055fa1a87486582a1c23d",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "72e4a833326777017c6c820f1560aeb1b3f1a6116b6ad7533e654efef9dfc5c0",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "3927c7414063634c2e44e3413e8be3c9bf15d580f3052100951954d2a9004b0d",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "dd0749fa1911a335336dc57fcbab40c63875928cea848d1a42ae858a1791f285",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "da4cb51070aa19c9c1195bee91bee531418dc6b0a367dbd24b820d7c5fbe8ed9",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "95db37b47f3fc0d841eafb8dd57efc4825a98648c0b4ee5a72d0d921c519a1fc",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "5f89c93916911a94331c2609be3134b8d8de2e5d4c2cfe905090e06ff5f0c68c",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "0efc0246310dc970047358e8f44352471c0a819a8aa0309fb4f1d6330739dbd0",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "cc37b89a178ceb4d45ac849e3b94d8ecbcf6bff57366630940799aa3101df2a6",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "31288eefb4fd0f18a6c490a5239311898baa10312ea1abf02758745d520779dc",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "0c6426f9055c0155a7929720039ca7fd532e96238cd82d890da081ce6d45c57a",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "fd9bde5bbdb612cfac3091adf1ea21597dad59c94f602ebdc6e5f3fcf7e43663",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "7eb0cfdf72ce64a40847617f6b0ab9b4ac41c2fcf577d3ed7be1bd192a586b20",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "b0f911dcabb393db16d3300085b61c05b24b00dd780aaaa03697039fc2d7c795",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "c8959a400327b685832ec6c4ccace70b604aa3c2fbec6612f72a60e3df0bc108",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "c0294c46eef3125ee2b3eadc924ae0cec235aeeb3fd931bae7028337706dcb8c",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "4c16517f50b9cad59c2b98418b2408b4a3f3889767f288ec265059c7f1a30080",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "34c37244c5364d2d4c6c432647a4effbd554696135ddf60e4d5ab3fbc317b03b",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "d0cdfcb729e6896f0838aaac470caef906fcb64079d2fa9025aee0c57456d526",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "48e8b822e7a47a45a26516b3379682208c08bc4fb53ba88c9051af76ded139be",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "5e4cf371636dc25fb25133c9033622c7cc5eb75ce08e17420b337bc4eb62a658",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "fade39971bee923e6797677c6f3a22dd9a70d281c754a573af147152fa47dff4",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "6474e1a22b809558d30b51b57f4502d4502fecb03a0c48867bde7b5bafbddee4",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "2a7456d949e373f54f2a17efb403a455846873139c44a97303a08c3ad556e272",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "618eaba45633e864b443041f00c99f5da07b57ffa60337e80a017e00939c8cfe",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "c91fb875bca4ff1b86a61c66e3174d495a9d387dcb83a126983d0cfd4881871f",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "6083185c496e96c1dc1ced0d397abf7508a4f6e3bfaadc4c1c060d46eb1e5012",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "f227320fc68682c5e3e6d23e68af3664e45bcbc57f1fc14c5973dd6a77ea4cb1",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "58075c86d0064781a121d060ced260b49a1e37bd6747f22142523e41543ce660",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "f33910fe98d6cbd0b5fb4da0e94341ba3448c1f94ccf40367b292a6e0a4cfb78",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "68e5ec5da6a869be135cb28ec8e434186c72741826861c7c39fbf5db7ea64288",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "b7563cca840777ecebafdf1bb3a3a3909b1ed7c204d9f7c3ad3bcb9a8a05eec4",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "1d54ff528253546507b8d4b473baacb641f102cab0690db0a3ab038cca9618b0",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "dba3940421674ed2583041179baf1224786c086acf46ece582332027b3a43aee",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "715d11472915351a7b2b78504540a2afb7b5d51002bcee99628916956765671a",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "3d41022b5b41c99b8bcbee2cc65d388a165f7a704c9583069d036e2001a2df76",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "2200b7214218f797428d14dd877358d8ca877efe211178fe806abead309cffe3",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "127d6301eae3245950f6a510962db0fa588c6895cef84d22a0d01609196b2411",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "961c43a437da4e2cf06dd14c8b598ac8a1cc28d526b951cae69eaef9924dcf4d",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "5665eaeb39b3238ca38349fa04415078e3935e0c67e21acaa3082606b1745eab",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "5e473bb952ef1e9c444ceb7a67e349d98c099c82ec7ca4094f53af00cc51d976",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "d0d9c23b1eda96b053762fa068663d014e22c56db4b9ed16ed027cf3cb3fd0ba",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "2a23180d14421dc3f25d1bb63f50bbc65463db0dde531de78c7d5824a4b813e2",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "0032872c0fdfa77708901ac020f18c530be54b304b79c247265d70d181abaabb",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "1a8b6ed88fcdba4cde46e40548670ea72e0070821a0aeb7164dadbad469d4fcb",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "065caa26afc2abd1dce9d3c71cf25e9f0bd4f9cdd1c31e09071485c3b56e43c5",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "4827d0beb7ccecf8dd9a02fc1f1b6686dd674f21b83a57fad22c34e37b738efe",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "69e57528d84598563e65b75fc38b8fe0fcdc6a5ad7299045b97e4e2cb7cced95",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "0a1406f1a6dc6ca5225985b800dfd76e40141ae4b05e9c08df7a3fe6f2b32e43",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "a3257334ccfaa30a1f4fdfb21232c5a51132d51eed7aec987251f6884eebf0d4",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "4b250ef236da331f2441f05aec15486d67400036136837ca40a83d649e3a5e5a",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "d6c9f7fde34c32ae6df4e88cdedec636ce7894924011eef85c4f0311b741a593",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "f9202a5d533fd160e9b891c2b217203718a5d77e4c595210fe6d01255fce4c9c",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "84d655d60da423844f9fcdd1b56cf7d930c5acaa23a86ff944ff31a0d01a0f99",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "b970f1b7200efedd402867c45eab710dc5b22a3cb8ce78922e3fd81dba8902d5",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "92781e9346794193f75ebb65e73bfea44b9118707fb6b031747c38756897d48a",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "095f444729e13a1f1fbdb38b9edbf47e656ecddf56dc06fdc0fa279d76934456",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "9f4960340c4c3a5598cb8a75b7108e119208bd63ae53046b224c852d694f1886",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "743d04bc5cf634cb8cf99f4d6afe72059a9fe7739cb7e4369be1810f7aacb25c",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "bc80ed45c968bb6fd914cfc639e9895e2dbf0a6ade106e99062fcbe7b64c6134",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "9d527c33c73ccb64d131b13a44d000b73fcb5c0b9d1b7ba4b94bafd903365e08",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "cc65d985b23523d3b1040751fbb9d8a53b8eb37ac62aea97c85b1be405e9b57b",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "3e33707bebb65bad88e73ccc409b900928ad0cbc53a314476a1ca23b6d5fc54c",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "470b5d232147d220d5b90a6c2848fd5f2f85ca4f76b0ec9d1bed226805b40ba1",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "ccc35f14af08d3283455cef65cd60624dfb02ef5798cc4221037a1cc3ba7db4f",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "b6ba9d4861eff0a60c9bb053a65d2b6aaf79233955e080f66d817202e9c3d8a7",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "9b5ca2d2467f3b97ac10b95bd460d33ea3378fd023197023d6af853d52266221",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "b686966a168c66214902726031c0e67d263424ee858e10f7a3c11a180ec695be",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "3c399e74d392e4601d55294c0fbc8991b56298c3e14036d968c9e37006bc278b",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "a7a5bb68cc0a194b9560600df3f3b13c00052e6fde55029a3001051d52ae0075",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "388bbc19f2c84ac6d7c92ac6ab24ca6434e63c0575aefcc75e4f4090a37ec655",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "71fb99e21ffdc6c3c3eade959f58a10bb1c07cf11edfcb2cee1e23079b44375c",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "fc95cc6c2f50c6e1542e3b6f25cf8a0872930c78a497459e1d45c81184f467e1",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "52df98b0c864fac709c74020ae55ff2414b0e5e5c0b2215c5b04473ed78a80cf",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "08ba476f32ae39626353f9c10b85f43e66c16ba5e95801a32ce676ba601ef68a",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "4b963f76ffff5d95b746a5407dfeae1acd493f831ea55faf02fb71a76580aa17",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "4b28f570b8725c8c1d0e0c18443ee75b5167acfaa6c22d69ebab0f27ba62deae",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "bd9a6ea10ff6fc5fb43f824ca746d4ca4976310f776c17885cc481600a685eda",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "63edcc46f1df59f6549c347f634fda52f430c5b9fa9138374f65e5070cf9eeb7",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "ca4ffc6f86e07043f0fb53fcdfe368fdeca20346aa6e13daab5d833224efd5c3",
+        "source_ids": []
+      }
+    ],
+    "docs/limitations.md": [
+      {
+        "kind": "methods",
+        "sha256": "54d73050f27dae2f458c114083d6d7a96a63c070089e27f16b6a70bbdfc29800",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "4cdb4cb2edd4d20423c3fc99337d5082081eba09ccaa233eea3f6b516f2bd07c",
+        "source_ids": []
+      }
+    ],
+    "docs/methods.md": [
+      {
+        "kind": "methods",
+        "sha256": "9a7d8f245bdd145aeba755f2bce77755758bd49515f45f42eaebe360ce89e38c",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "28c06d2396e5e72da263ee5825ff7ffc0d6d0a507ac4d477244309373c289292",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "3b6bbba96c91e01a82bd3c3b47c9329133f0f2788f597d0c7b89bc24c5455b33",
+        "source_ids": []
+      }
+    ],
+    "docs/ownership.md": [
+      {
+        "kind": "documentation",
+        "sha256": "c8f35087bc8897bc66f6f98aec239fbeb344278cf3fc6061cf535e0b332cc6c8",
+        "source_ids": [
+          "D7",
+          "E1",
+          "M7",
+          "N1",
+          "N2",
+          "O6"
+        ]
+      }
+    ],
+    "docs/provenance.md": [],
+    "docs/research-atlas.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "0a16a4b987f9249bc0f94556d57d5b7045e0c39bf1afe47db5ce16282a9c66ae",
+        "source_ids": [
+          "B27"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "736f1623cd3e5b01c25bdbe1780b5a18ac907c55fedd8dcf154ee21af7456598",
+        "source_ids": [
+          "B27"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "9953ca3821e5c4a8d8bcad512b93c72d9c774c59338f00502d436d6e78835cf3",
+        "source_ids": [
+          "B27"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "02041968ff6eb4499be3b5c4e3ce1cf4c76d6eb1d7d581754ee1f9f2c84d144a",
+        "source_ids": [
+          "B27"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "86d5f469ca69438c0069d5787a00bcfeab832f220c7c149f1031e7f1719f88db",
+        "source_ids": [
+          "B27"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "432bcaeeacd54c4667a27da67ee2464d8a85f6d38271588267b9bd678b0b439e",
+        "source_ids": [
+          "B27"
+        ]
+      }
+    ],
+    "docs/research-os.md": [
+      {
+        "kind": "documentation",
+        "sha256": "2cdcbf1ae8ae5acbed0292cbb0d4448265ec309581f83667f1a93a336f07f528",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "25467f1c3df037276b1a4a33063c397847894b8c6fe912bf6524460564903bd7",
+        "source_ids": []
+      }
+    ],
+    "docs/roadmap.md": [],
+    "docs/scientific-checks.md": [
+      {
+        "kind": "documentation",
+        "sha256": "8238fe040c2d2c1473e88e7e8579f35791fcd3b8b1417a23f7a72968f338bc17",
+        "source_ids": []
+      }
+    ],
+    "docs/security.md": [
+      {
+        "kind": "documentation",
+        "sha256": "a229269ee996694c789fced75cc6a8cc8516bb8a4141bb11c14568e8118c195b",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "5b1e92627910d45da1712f2215dfc5226860c1db46ed0fc8b135bfb94f477c58",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "626625f495bcfb3ec21a9718e47d3ca9e07b84bf4857430fee99153e6c75bffb",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "a7ed8cf3f195ec9e11c151c6eeb23b35bd5435ebf4a3dc6c574192b496935195",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "8768e4f42010c1d42ff4446dc3d619dcf00cc8c870c956cac963281f2595828e",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "76eec4a91f87f05af5fd70ccb3ab913dcd873229e4228cef5b1929fb1114058f",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "af410905e531efebf9ebbbc6692c37881359c1d3a12bf3ee2c19539a267b32c8",
+        "source_ids": []
+      }
+    ],
+    "docs/study.md": [
+      {
+        "kind": "methods",
+        "sha256": "f801c20a0874864ecd8fb6c2a89aacfcd684001d9d3c83017243978f7b8617ba",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "a6a38a7b614bac503892acbffc0e1e295f8b5ecafd58eff452877442d0a61fa2",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "0856b5b894cfe07e44f0994b070b7a99f2f74f5c349fda18687fa8ecaf9975cc",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "f90770dabd1f2053caf86789d02a41f1247e38e9fd462830abda06dff684144f",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "c47e8a73449b43cdd4b14e4239ab56d273de0a153fde866c4f2ae413818e99b8",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "d52b938802fef187c941be910a8b3e34eacff32807d1037464f5c2cf1d1152d6",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "1b93eff5327721748f6771a83d79b27bf5bf2ca531f37403484051ed593f694c",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "b20c9dd2363c4a804973caaac1910df0ea77308f8668282153f088dbc274ca92",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "4d34f63c55dee99d5c3f8e56d7f715646156a4b18dc70571a59bc13e415bc3d7",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "c5b04357d4f0c760df59791ee56a72b2ec1cda7fa2f0a4cda55b6a3ab936195e",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "ce144359f31a5de8c3f1e041945dd437cede14516280b181a48de1378acc5f5f",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "62a075237f3f0419faa15c6f3a3a1c02b460945e88ee29e937d52c8b8d17720d",
+        "source_ids": []
+      },
+      {
+        "kind": "methods",
+        "sha256": "329d6cf71062d81e234e0832df13456d2beda124b9518c77e80396ca27def931",
+        "source_ids": []
+      }
+    ],
+    "docs/timeline.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "9e93c9580520fc1f42b24475c8c43dbea01823e8764da1f89afee26b7a7a7de9",
+        "source_ids": [
+          "B23",
+          "D2",
+          "D4",
+          "D7",
+          "E1",
+          "FX1",
+          "M7",
+          "N2",
+          "O2",
+          "O4",
+          "O6"
+        ]
+      }
+    ],
+    "experiments/ecb-fx-mom20-protocol.md": [
+      {
+        "kind": "documentation",
+        "sha256": "fe88425b0d7f5c2d4f32e06075164d7127e81a316e07d2bf4046a19349088a70",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "28d4fbd92a7da423f8b5ce0bc951e9c4ae1a037f38a37660047598b3e14b9976",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "ebfd54e53e73d1deb281c37d9d8c8f17767cd6dda5fb053d6a4a814d7f80a153",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "44d154f54b3f1394386f2bc5fd96b41e716906a4e4eb8796d8f259a592f84c6c",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "d2d171928d89a5398385ace5b1a2797f4841214d2a831a9a47c71dc4a9728642",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "26f5ace1535bb70409ce00a7cc775d2879d35c525fb1fac285340fb973212e66",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "a2ff0c75e068168d67be0a7ff509936f480032ed41864eca620e9ae32daf6f5c",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "a7d2e2748cf7799fc0fec8e97242c409bb967421f7dc70f900d52892a89ad614",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "59c432ed767bd5af8dbdbaf31799c0021e4dc27b5877179045ad4aed2cb2c1ee",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "056305dea1a9424df80dcd407d71a4767122fc2cc36cc1c70e63fd581a4bcd1e",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "6a3f7d94c229d3cf246016052417419f8ae03da56e56b9a12131a0c19ebbfe74",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "e3f1997f5fa0c8377f0705b254cf1d19f9c481015055cb14cc3204e3c85e0210",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "90373977f9e8df27d4149e4bf2f9967bf4432061cb1f303800e558ee7f8878d3",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "95cf09d453aff20dfbc9e211fec1fd367f4064a64b68d1f65a37e4a2124409ae",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "00b0a6ccc5f6e526d9ca1125530ac054e563131d8054d86fa222b31f17b92327",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "7b9a6a6610d746e0ed1ff7afe15702fe858ffa0ca22864816e2129f9e29777aa",
+        "source_ids": []
+      }
+    ],
+    "results/fx-tables.md": [
+      {
+        "kind": "public_replay",
+        "sha256": "a8a069d6e09a7d26c552df53c2c21b9f94ffaa175738772f1b59179498427d67",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "e9f629af7e87e7a63f46ae0b9c462ced696ae05feaac1e882534bb359ade8f62",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "450fb3794990fd289fe8b39c8e9872e24a638a49106b0c609ddc7145701a64c5",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "50bcff7984273e20c54f2ed1ca7b0c2bfde3c7a150cb9601e5a798754ee39256",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "90be2a24076e39b025a3f5d51cfcb0b61e74f515c4e653effc5cc642781cd937",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "1d0596f53a2fb9f9bb90bdbb9de683cf394cd9acc9e5f7fae5d3b44c03d7b5ed",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "915a05d15856e11b54d7e01d158766e0ce72ce3726274f195d9ac4111608409c",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "0c4669d8c1c62bc3284abe7aca1add46a420185dab6cea6d8914ebd4ee3897ec",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "55fcf7efc927ea367e3cdcc17f933568a68fc5627933ac1b64cde119f663ac33",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "9f23ff580b89b46144a74e698cdd89d4f472111682b252ab6f1f88df9246a855",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "0bf6351971c6854a81085d60612731d8471d5c6919a62c1f0acd423a357fc392",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "95b58caf5c16b267b70a4855b57001b1f84fbd565f72ef9f0d69a1a3439d1b52",
+        "source_ids": [
+          "FX1"
+        ]
+      }
+    ],
+    "results/historical-tables.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "ce8c129dc8c28d516d58de7b0b4e247b56543185b2d684b291414b78a76d7a7c",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a948bd791c49db39a5a76d4ece1b4f4948480b38c17ea43051838bd8324ea7dd",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a953a3e5808fb3e753dae6d04728afe8a838b5a744de5357c4557b6fc89fde92",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "442bce6129d7be8f8bc6f75341671007a7ce1ea4c3acaf94564bd474dc3bfe3d",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "98c69908a9213bead43c637c0cad827c51c4948ea172ad77fef7aa7597667f7a",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "1809888dca3777b234dd37779f8c03b3d3ae3cf2f9504ae35360816473e5a789",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a953a3e5808fb3e753dae6d04728afe8a838b5a744de5357c4557b6fc89fde92",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "c719efc7377315347be00b6001e1dae10896c5df270cd3be972dbf0371a89cb3",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f78d48b5e42bbab4c9e970a46927002f5c71e4ec85c09fbb74adba4cd3c91286",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "2a9a092a8fb9d55038d2de0fd9176f4ea6e2dbd924a2388b4122777771db9759",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "66454f7e54912f11fb08739771b56dfbe977344a99cf98c157640a0bd84aafbc",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "7a0f20944bdc19d40eca514669187bacf9fd119349af3dc42e2a7b27b178a26f",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "3fe68bb37a52aff56821dd2d05fe4fafec66835bc1c17d4ba26688fdf602b08f",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "7897356c1d03775e86615261e71b3dc74899151291d85c2137c04b142aa331a6",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "66454f7e54912f11fb08739771b56dfbe977344a99cf98c157640a0bd84aafbc",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "baa58be52d6c258fa330212ed4045a3154cc5ad2a5bc9dd2f8a5f47b3cf44aba",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "31aeee6659e0975e025e4a086d2bd455b8ea1f021a7291773d24257bcf51c2fb",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "57ffb7a43b3e04269e1d9f99e044a07b50412bf9747ca014eac09c8cad8f06fc",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "66454f7e54912f11fb08739771b56dfbe977344a99cf98c157640a0bd84aafbc",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a953a3e5808fb3e753dae6d04728afe8a838b5a744de5357c4557b6fc89fde92",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e63ead48e1105067ca02f2719a25baeece38290e86a1bf72298a521026abae44",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e1e16d6d8601452bc3b137082e127af8325c62831a1d69fb605b8f0f8fa26994",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "13977711b263ac0a2b0416c34433a5f3ea0e5b18dfccf26b3938298748786113",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a953a3e5808fb3e753dae6d04728afe8a838b5a744de5357c4557b6fc89fde92",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "99131b871ceb95ff738748f0ef80cf5f2271c2bb47faabf524027ec454e467dd",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "c720661bc92490d037b70202cb9a4be988bd41e827d66ed98c6bd4677692b04d",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "99047fe31165c15bb32fb76b0e1366db0ca793f4c5817b23e23df4722bfc389d",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e5b95250886de3727425f651d9ea35c96a4b60ef14af027c253d5d9d0854339a",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "faa69db3865cbde494da0cf90e2b172b185177a4ed218d59785304adc85c6e09",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "efa744c3670f974eb906388e1186f7253855ee84a8a91c143f7b7f7fa04e7628",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "62ab548955d4ad4954cc146b70bf3d16a10b53eea96c64a944162ccae8d31c7c",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "99047fe31165c15bb32fb76b0e1366db0ca793f4c5817b23e23df4722bfc389d",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e5b95250886de3727425f651d9ea35c96a4b60ef14af027c253d5d9d0854339a",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "c0a3040682a036787a4a3795136b3b187b890fcdd1aff037b7fe01438b9d94ab",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "efa744c3670f974eb906388e1186f7253855ee84a8a91c143f7b7f7fa04e7628",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e33ebdf24d442babcd72653c9a67a02380d73b375d6feb935ddd618083c3d784",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "99047fe31165c15bb32fb76b0e1366db0ca793f4c5817b23e23df4722bfc389d",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e5b95250886de3727425f651d9ea35c96a4b60ef14af027c253d5d9d0854339a",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "181f1084d594739b1c41b8498f041811e64f88f7d75ed878b29e40c0601e6884",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "efa744c3670f974eb906388e1186f7253855ee84a8a91c143f7b7f7fa04e7628",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "05b48f6bff2662523e45b1cc82c58004f0dadd323a8104a3b8f274412066fca6",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a2e07184a81c0bb99d3bc8f11f66fb5b05f630c1cc74bfe888b654ba3a87246d",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f82aee8e3c42b022655baf4dd7d0e16443a319ed82092de0e74dde4e8aadb3d8",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e97f3c8be5ac55212aa710d2328511a25f8305988ecc21f43b312119185ee91c",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6dedd33ced9939360a6326ffe8fc022d4e03a98606388344da8232b2a7431ded",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "3dbc892350f5da66b9d8d31bd2e8b3e4e931f060fc583fbb70244c9ff5d4cab7",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "5f831ed26653f6715fa9fa664ccc1f8ddb840c1f08361e8537f45638a0582f96",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "10a0fdc1f0b895b8a7082a7f148b92e85d3ef604954b79e6b8a5f3f7cefaf36d",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "86fafb6f99acfd5b8ee10fb6dad265529a4a891b93b085bb4c4a24ea18152ee0",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "254d52627744d18ca26dad6e8115367d918581c5d12c6b195f0460e46e916279",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "9b0c3f11391580573cfb211fbebc9949dc20eebcaa5d736b9002ad58245140f4",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "29abc12bc6842997eaabb44e32f6bdfacd0087356183576cc6399c748505e578",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "0bf003951f5daf7d29ffbfbd664d88bb15f835a453763b446820fa864bd07297",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "629fd2976cd07f5d1404b15abd4278789a4b658f464dda216265a48940251a92",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "da4cb51070aa19c9c1195bee91bee531418dc6b0a367dbd24b820d7c5fbe8ed9",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "504418731442a5b560a803d7052e7be38ff8cc278a8f02fa2e96150167872488",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "628535fd23245c96d11b2a84a0fcf46dac2621c3e2fa214067de2413eccb3770",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e629aa0b8f4ab85900a24d49f3421eb3c2f32140cb34227090accf5a84e669b8",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "8761b909f5f4fbc7090988b766a3f3fa470c7ba70771ae44659a564a23dfcd77",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "3eae1f3c5c0cb833b6e9dd341ba00d2af9e479fd09918676253c4a20f24330fd",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "097c51c39a958e892c158a8c4ab92c1aa7960ab4b7b8d82eee8faa50e6cd3e67",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "570973a5d828887852d95632ac5e3aff4b39aea9ea134709f739f6ee6247876d",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "8c32fa5272dc810de3b85eaaeeb7776d74d3ee2bfd8160bd82571a6fe3214753",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e6200381facc2f110b6ae85fcf93aa4c57bf92dd49a82ab6ac51dd7d114956cc",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f68349ef967e2113a3acacdddc0a04da2ef1bb41bf62196b19b4df21a0d0f6b3",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "097c51c39a958e892c158a8c4ab92c1aa7960ab4b7b8d82eee8faa50e6cd3e67",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "570973a5d828887852d95632ac5e3aff4b39aea9ea134709f739f6ee6247876d",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "1b7788ec84cba520c767200e6e64f97f3427c1f14ade08abc50aa3db5cfaf97b",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e6200381facc2f110b6ae85fcf93aa4c57bf92dd49a82ab6ac51dd7d114956cc",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6f8e564012489cbf76e85c1ec3a047fbcc637376acb1f2b9ce87c237ba8601f6",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "097c51c39a958e892c158a8c4ab92c1aa7960ab4b7b8d82eee8faa50e6cd3e67",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "570973a5d828887852d95632ac5e3aff4b39aea9ea134709f739f6ee6247876d",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "8d0b37cbdb3e1edede6ad1ea2c953f51f408cfb98156935ddd799144b6fb86a5",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e6200381facc2f110b6ae85fcf93aa4c57bf92dd49a82ab6ac51dd7d114956cc",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f5729284e3f448919de97f18a1f7dcdd5456e56f78d559f40794548d314617f4",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f82aee8e3c42b022655baf4dd7d0e16443a319ed82092de0e74dde4e8aadb3d8",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "32c814bf30365dd1f5c6833a8fe61d262f9be353ed2136fd133a385b386326fa",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e838e081e1e6d7c189cc62fbf08938a5d6cbee9b6816effaaae5d5bdc45b0a31",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "9f4f81de665934b7c8a8967cc1396d65e1d40d84908fd979853bef441232bb9d",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a682a498a8c2d1c07f6ae880acab2c9c93cf1003927b055fa08104d622d3e5ed",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6ce7f58027b2a7490ec4029abf88974e474fa7d04145a3aeba1060c0b55129f5",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "67efcffed6270b763152cba5c4c5a369ae03c91ecd7dd6d568c0a4b746f77518",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "ac3ab230211940145f004c6b70388a0cd60b36307f06587e21851d0ae9bded17",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "ffe149d3463978771fa67ec8d2a1378bd1b3445849cb3aa1d39d259f21279707",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a145d2bd9d620241faed8ab4a2571baed872abf8d29e5cf4f594bdff20a73bbf",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "4e9e80d672feb98e7c681f4be622498e32974cf387ee860940cfcce5faf13c1a",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "72e4a833326777017c6c820f1560aeb1b3f1a6116b6ad7533e654efef9dfc5c0",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "d1e6d84fdf8f4a6bc663cb0539124ae6f0b5b4d8569db326ee7fbda05eddfbd4",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "bad9b613ac60154c61cdcf89cc623481bd77a6161fd177c0194a0ae281d8c415",
+        "source_ids": [
+          "D2",
+          "D4",
+          "D7",
+          "M2",
+          "M3",
+          "M4",
+          "M6",
+          "M7",
+          "N1",
+          "N2",
+          "O1",
+          "O2",
+          "O5"
+        ]
+      }
+    ],
+    "studies/data-forensics.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "7ed3478b90fb856a1d9b5e8567d76a51b4a5811a3b4ac7d8e974b498eb7b6293",
+        "source_ids": [
+          "B14",
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "2ba84adb68d3288616b30713ed3b5bac4601e1c06bb2e3aafc71bdf024f7144a",
+        "source_ids": [
+          "B14",
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "8e00c58fd9863f8fc3bf9e34e236fad5b19e3b9216335d4b65e5c1f260f9ebb8",
+        "source_ids": [
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6b66b6121d9cfcfe19962bf6c66b71101810dae215c9f6dbf434d460691e0b9d",
+        "source_ids": [
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "587f3df965220460c756d22e1438e998b77da4fd6c6379d463a7063313d0997f",
+        "source_ids": [
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "00256a34c1e8189dc9e97aff91951fd40dcc3b3b4043780a8b80a3b6378b74ac",
+        "source_ids": [
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6da215a5aaf93e49f04791aa1fbcde9471d9ad6af9a621c0664682f24c77e329",
+        "source_ids": [
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a9cf3e024d0a60491ef21f280ab8f0109e39a72058a774c968915e803e695a84",
+        "source_ids": [
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "cfc86af9a28e3169d8e97e820c9eac88ab61768b31c5db89ed31cb7d3149071c",
+        "source_ids": [
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "ada531b410772d0056555eb6da53e3012c68ed24b83f78a91f2fe3b461e9927a",
+        "source_ids": [
+          "B14",
+          "B15"
+        ]
+      }
+    ],
+    "studies/de30-continuation.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "084dc22fafb13d70df0440d6d1027d776a561deaecb6c6359f88c1b409504f28",
+        "source_ids": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D7",
+          "D8",
+          "D9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "903e01b2561c16411dfc869cb07a384ff97b5177922f44cf384f156d518071ee",
+        "source_ids": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D7",
+          "D8",
+          "D9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a25440e8ed80ffd9c8f8d5ef0c8eb723b71831c613e0a824bce81c5aeef3cc56",
+        "source_ids": [
+          "D1",
+          "D7"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "34477f0c5e4e22b863876f50d4b23e7b7ce9642043e341281ad73c0488d5465f",
+        "source_ids": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D7",
+          "D8",
+          "D9"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "635dc651c7cc68e6dae901db2b85a41df221ddbea7d9f6e53a885cd74f98cd87",
+        "source_ids": [
+          "D1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "19639031f25fe641c80b006578f87a8bae52efa242a5f805a62eb7327e88a3e0",
+        "source_ids": [
+          "D1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a344a7a68249de0e9837e3e1f6e3ad9960e61d252247ddedf483e0cb8bf50c40",
+        "source_ids": [
+          "D1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "60af13d400437aa544d5d4af2bec9a80edfc0004c3eb6541b6c0cb3a7deda3ee",
+        "source_ids": [
+          "D1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "fb7229c0f0987d1030793edaca2dc100b35bbceea4cc2beca4943ccbd10763b8",
+        "source_ids": [
+          "D2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "d1058cf34b54f1037cd649bf67c943b91835789cbf99af727acddc3c56ee4e3f",
+        "source_ids": [
+          "D2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "45bdaa9895c1e49461dbc84279c62038bf2a4e076162d1e40827ad4e6bb3f31a",
+        "source_ids": [
+          "D3"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "1acd75425c6a742359887c0e4a0e63a747d3eac0758d532969283f72f45edd1d",
+        "source_ids": [
+          "D4"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "d69a1fbba1130e25ae6cbc065521c5792fa4ba3972ed83084a20dac3276ea889",
+        "source_ids": [
+          "D4"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f6fe1fa1beaaba9b4cd90649ad133700ad04032482b8e446fc6d46b6c905b996",
+        "source_ids": [
+          "D5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "1663f02a0d72f1c0cdfe42016d72a3bdfa4c1c1a013b5e9a8ccb30ac111c5d7e",
+        "source_ids": [
+          "D6"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "fd4b0a19880b1c77ca459aa61dd27920978bbf7a3dcb221a4437c3d766dc8b6c",
+        "source_ids": [
+          "D7"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "da3dab937586e2a8de3bb8cb57b4a9148f34203f78599b78340a2e00e3c14324",
+        "source_ids": [
+          "D7"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "87f2087a594faa11eba191cf41e6830843837c0e955ca50eaffc215040ff1474",
+        "source_ids": [
+          "D7"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "ab3af0d06f0d2c0b6f7fecf715daa2a49dd19d0dd7aa0817779440d95da32855",
+        "source_ids": [
+          "D8"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "338b7fa83f0f18bc89f68acc32d8c9bb7ea64532c0743b0596f12605157237b5",
+        "source_ids": [
+          "D9"
+        ]
+      }
+    ],
+    "studies/engulfing-and-support.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "14a548e646eb3fe2e42deefd4f577f9a76fb5e5c6cb494a99f6b60415ef02305",
+        "source_ids": [
+          "B20"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f6a6d89019f9723a72ba86903870cbe1a296a9deb7140d5fb6be14db08c4be1b",
+        "source_ids": [
+          "B20",
+          "B21",
+          "B22",
+          "B23",
+          "B24"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "0870b70805a50202ab6f8421ee83b5858a8ce1bcaa6b41359379a1b71e6b0668",
+        "source_ids": [
+          "B20",
+          "B21",
+          "B22",
+          "B23",
+          "B24"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "794202e8fb44937c968720017f506ec12d2409bdebc4bda392f8cd0df9803876",
+        "source_ids": [
+          "B21"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "2f6306b03ffcf718203f88d6bc2cf8262d1b2a2244fef4d60d76659da5d75e4b",
+        "source_ids": [
+          "B20",
+          "B21",
+          "B22",
+          "B23",
+          "B24"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "7bc52cfba6d10b2049dc843da723ca2b8942c4897b5d7eb8a7d867beecc76776",
+        "source_ids": [
+          "B20",
+          "B21",
+          "B22",
+          "B23",
+          "B24"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "641d1cea419a76e1e8ef30776b834dce543ae9131e070adccb098f3a71cd7b4f",
+        "source_ids": [
+          "B22"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "5dd4d8726f06d63d87d4525ed51d1b0e7807727a76eb4529e3ab1a05de14d33d",
+        "source_ids": [
+          "B20",
+          "B21",
+          "B22",
+          "B23",
+          "B24"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "05a690861edb7c59031926415b31f6165e5d6a196eb45c487abb1fd81a5430b3",
+        "source_ids": [
+          "B20",
+          "B21",
+          "B22",
+          "B23",
+          "B24"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "b22a1617084ac7c7223cbc9059ea58337f8f6a7098c91f7dc6d5895feacb62cf",
+        "source_ids": [
+          "B23"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "68fa64f6f774341eadb7e92a7d70acbe65b0d45c949adb7fd758f60fc599b434",
+        "source_ids": [
+          "B20",
+          "B21",
+          "B22",
+          "B23",
+          "B24"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "9a64416f76d7d5d7b59631bb2844fb8a8ee13efafdd7570f149bf7682ef9ce6e",
+        "source_ids": [
+          "B24"
+        ]
+      }
+    ],
+    "studies/fx-reference-momentum.md": [
+      {
+        "kind": "public_replay",
+        "sha256": "5d56a68f15fa2fac531d5b5cc56b3dfc7e8706b0a83f3dfe1b7e7d665fef5c51",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "28f6ddebb07f7f749bd3610b33b7fef5ec780b6f06a4fee901d550436fa466ba",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "a04a3000c52c8318d9d668783827525176ff046587b3c6997bfaf0836ff8cee2",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "e9b15203c0090251c92e43911293545981eb19b154f0905c1ccb407d5129fae7",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "4a771587c00f7c36eac78a91cc45a64b10a5ae842a9acb1fa295cd2e27992315",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "ea268633a1f78dfec922801f9a9d3e3233199e25d7975eac365fcffc7c2c9a64",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "1b249fa2e4695a89f2b84fb12c52e47228e29b051cb24ff6ac1d456461fdc649",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "35e941939343c8e1829b44d85b9ea3d5a694ee49d1a697d11ef0bae4c246e724",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "b8ea2069ce864d40577399628575ffd1585f66da64c6be47c86c83c42e7ba62d",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "cbbf16f0390a5ef61bdcaf64bda73f000545446da01056e0a2defafaadec11fe",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "b19c02b37e0659613a95cb34607f1796f04f2a2f91dc43a1969b1dc613d00e2c",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "1af4a101fb0debed69c0aecaa1e4316948c95c1afcccb20cd9cf83f69fafee59",
+        "source_ids": [
+          "FX1"
+        ]
+      },
+      {
+        "kind": "public_replay",
+        "sha256": "025575f58093361512f96782fe7b4e2042ccbd2837c1ba30f50a5e5ed63762d3",
+        "source_ids": [
+          "FX1"
+        ]
+      }
+    ],
+    "studies/momentum-and-execution.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "4aad63266d9a3ccaf80a0bbe08ae435b9baf2ad3353787249878c9d89591a2ac",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "ce4a8d6a335e5ba18396337732f66691af9f96ed63a94c74a80014b5bdabd6f4",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "12daec05007e20360161be58761eb24bfb0a81a6729ee1d0a693fbca6377fbf7",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "528bacd0a982a0df35c739c26e77aab950cda81f421594b61f7021476b609f85",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e89500c503a024352b4f6a10c9f5d41b547f4f0a98ee8c01961a67ee88343155",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e27aaf89844af61cd7cf2f1fe9cd6b182e7928fa13f04a7228e6d861dfc7ce4c",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "416754d12f4ba2cf9c17bfdd9e5faada4cb719d0e554e8827da7f88bdd7ce7c3",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a6b802416fa0b445daf777b87a473ccc41b3eaf8455bbcd007f5ecbe07afcbe2",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "9edfecdf8396a392e50fa304312c6cedea3b9b60357297d47e0e8632355088f6",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "24ce0fb1fdd57b98ae83f24fb1b4d7ca28868bf11a3b6fe10de192e9abe0aa59",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "1a05ce03af37707173ce1b8d3a04cab8151968c6c7130432b28e5406e4b42a13",
+        "source_ids": [
+          "A-DE30-M30"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e88f854a98292f2b5ff5ba9b707983bcc0ccb4f883a9f3040a3ba2098dbb4f61",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "9e86668a25a790496c22ced1a9fa4cd27714413598ddc432c9160992020b79df",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "611461bd6e15177ed1c525f1ce47a386341fb90c8002369cf75d44d0ccdb3ed3",
+        "source_ids": [
+          "A-VENOM-FEEDS"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "340ff74e4e84730ed8fa231f16812d342d23c9b81b0a2ca6139fda90bdef21b5",
+        "source_ids": [
+          "A-DE30-M30",
+          "A-MOM-ABLATION",
+          "A-MOM-BTC",
+          "A-MOM-DECAY",
+          "A-MOM-SCALE",
+          "A-VENOM-ENGINEERING",
+          "A-VENOM-FEEDS"
+        ]
+      }
+    ],
+    "studies/momentum-continuation.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "5895d97254fa6f235801d2123157d45390cb4781528f2526504030b7e3e59d94",
+        "source_ids": [
+          "M1",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "ba930b89c593b402ab50a00c4239a7f60af87e9a580488667be87bb9befac53d",
+        "source_ids": [
+          "M1",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "d766a135f56b8fbc86630e1418e04f6d13e449e31b2207c485d444e7badc4241",
+        "source_ids": [
+          "M1",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "2448448fa379c00a7a64423db2881cb893902681a53f89eb133a6c7864a4127d",
+        "source_ids": [
+          "M1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "d7bff8d4dbba1e3f280b1d506f83ae1e50a2fa608aa928dc7850e2ffa3b85db7",
+        "source_ids": [
+          "M1",
+          "M2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "255dcf3de8f27174a95e659ed3aefba3613d7f4991b2fbf24c8be86f25652a5d",
+        "source_ids": [
+          "M1",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "929f5d5c6e19d1782f4560931a3d453119cc794467446f2c2b4efba033a7c454",
+        "source_ids": [
+          "M2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e44c6bf9067f009eb6d5c0d33955d310995115851c9ddd6685db5e559f0e56d0",
+        "source_ids": [
+          "M1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "961d9b895e3410d8b9ca9936cd2127bc249818d62c726a9e2ef40b16869a7a68",
+        "source_ids": [
+          "M3"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "b12690db0d6ab96016bb42f04e98416cc0554428383a9ac7fe5d232e39a974ae",
+        "source_ids": [
+          "M3"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "36a1b76948dbbd12e206dc3e814214d07857b80b03229e1cef3b93c000ee2bd1",
+        "source_ids": [
+          "M4"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "b34558361597e0c062537f14aa700a187c2a1168de0f9fa2425fcfd6634c39b2",
+        "source_ids": [
+          "M1",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "7bcc5b6a1859e46ffacecb8337ed5446a4c3a66a4c0b1f12c55cd805e9067a30",
+        "source_ids": [
+          "M4"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "ca130f878160fb1b0554e7710b98848416f1b8ef67d90fcd737b50f258334dd6",
+        "source_ids": [
+          "M5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "b56ebba954ef9e30d684ad602110bda081e5f581887330b2ab57aab629cd6fd2",
+        "source_ids": [
+          "M6"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "13eaa32bc61f16339f5768214e548999fdada704cf06958b9fb82af665a3821c",
+        "source_ids": [
+          "M7"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "ebf1f49088b867d2752375755c4157c0c194a3834806a33b1e9ac5f4a4357be9",
+        "source_ids": [
+          "M7"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "d05e0a440f4c1c30d90a578336ab6bf302c2a22cf23b6745386708e5f42b6823",
+        "source_ids": [
+          "M1",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "0ea1c8b2050fcec2f4968f056b3628cefee7d66bfb1525be7b30e2cf66d8fe1c",
+        "source_ids": [
+          "M8"
+        ]
+      }
+    ],
+    "studies/news-research.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "29ae0a384b0d6b18c1d7b830463c22768fd9e3e0f2be804571526cdb53256c36",
+        "source_ids": [
+          "B08"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "731b8de707166efecdc9cfb7d9064d3097bcbf21b4327440ebeef7dd5710756c",
+        "source_ids": [
+          "B09"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "273afb4fc63ebe037e7321c1ddd103f32136c4de2e1bc3d856ff8fc0ebd75013",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B13",
+          "B14",
+          "B15",
+          "B16"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6d10dc8c071111b5dcb8aac22cc19643e51d185a5e77b55481bce7d7d372ccac",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B13",
+          "B14",
+          "B15",
+          "B16"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e906da66f9a46e85a722c0efaca1cd457c28441c491d9ea27cb838270d1322ba",
+        "source_ids": [
+          "B10"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "74e56635f382ae17aeba15f000b4276441e66b55e190f42eabef5e3321527cf9",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B13",
+          "B14",
+          "B15",
+          "B16"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6fdcbffa5332f1cd266e371304d21c3bd454f9fc55e93a575bf9c29f11777664",
+        "source_ids": [
+          "B11"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "86be4cfabd8131f6f4f6513aa1ae29a66b51b44cff5556b256abf7f84c707a54",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B13",
+          "B14",
+          "B15",
+          "B16"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "ce7864835b462bdd37ffc3e4bbba7329d026b372c736bf888a789de26d8150f6",
+        "source_ids": [
+          "B12"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "577191745ea8e5d25ba014d494c870093c97a56c523d4f9665469b54c84506fb",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B13",
+          "B14",
+          "B15",
+          "B16"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6dd5af18316005d4441cc93e01ef1da7671b8e1cfa2b61149ef9cc9270491a44",
+        "source_ids": [
+          "B13"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "c02557ed30e74cbfb291556ba6c555da808e753411d2cb9e84c19fb13cdf974e",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B13",
+          "B14",
+          "B15",
+          "B16"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6f8d40d41dcedc48e6d7f76a34098699da905fc9cb085b9756a5f34b44001a29",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B13",
+          "B14",
+          "B15",
+          "B16"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "22219522eb34fb05a502081e94aea9c098ce7c3b7d1a90875c161808afeea4e0",
+        "source_ids": [
+          "B14"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "9c60efbb95f43ee5b793eef65f82e2c95af2bc17cf331459169a840ff566c384",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B13",
+          "B14",
+          "B15",
+          "B16"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "307cc7e98cf6bca90671edbf35a1ff86144757f64560664ebdf4c6c54680a0ca",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B13",
+          "B14",
+          "B15",
+          "B16"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "065028045dc62b6355c10027233c80e1fb6dd1929aedf75c9d29f6b4b001463c",
+        "source_ids": [
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "fb74c45a02158f977e32b4f086600e508d7b0431a80ecf3ba3c14e010c560afd",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B13",
+          "B14",
+          "B15",
+          "B16"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "667efc5bf29961afe1aa289b289e12c0e9939b46a1bcec7c4799a42ca9809d2d",
+        "source_ids": [
+          "B15"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "7aea7266e558ba47805b38c4271d1b526d81c227e9d41230fb69f3507aada1fd",
+        "source_ids": [
+          "B16"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "d9fa05a0671a6a2b817166af801e98b97eb2059f5223b6a593097ffec926864d",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B11",
+          "B12",
+          "B13",
+          "B14",
+          "B15",
+          "B16"
+        ]
+      }
+    ],
+    "studies/nowick.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "233a2cc6cccf1299f5677255d2d64e8c860cde26f274638c509779f6e8d82ca3",
+        "source_ids": [
+          "N1",
+          "N2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6d79856e057847d22194ac401ff8cfb06865224eecaeeac1d08c210f0ae5ff3e",
+        "source_ids": [
+          "N1",
+          "N2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "cd1badd54c909978aa40a8abd9dec0a3e4eb0848be441edbee48c2acaa6f8840",
+        "source_ids": [
+          "N1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "abd634cb7721270804ab3af8399546489144212b95d8bdc667b66ce3af9971c7",
+        "source_ids": [
+          "N1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "bc89cbfd5621a9185f423acf9497b595568eacd4d81f0742f6d40e6ad341e49b",
+        "source_ids": [
+          "N1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "8680d7cec308634b31c70d34c1c80e155d3f74b750ec5a5a3ed03eec32b0de37",
+        "source_ids": [
+          "N1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "8f235607e4e1fec7084ba7283debadfcae47ed3c3fdab102288ddd0679858fad",
+        "source_ids": [
+          "N1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "2859f29ca09720c1d1aea9bf63bd13683b4e88600aa51098b4a196afe292e3f9",
+        "source_ids": [
+          "N2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "b85f036d0b7e88be007be9a9fbd3f373b220920ae5e2120d3d9f4d699b80d6d2",
+        "source_ids": [
+          "N2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "d3b24a5f22fa296bda0754131b2c48f7ee7f4c8c51dbb6fc0dff356f8dac5b5e",
+        "source_ids": [
+          "N2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f14b913c71462b9b18b2c6b44a0cba29934a19b2f04eb574f16fbe7a93830b3f",
+        "source_ids": [
+          "N1",
+          "N2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "ce10e94aee2aa66fd49218d152e9950ab5f5ad64d7395e588f25dd3d017cf915",
+        "source_ids": [
+          "N1",
+          "N2"
+        ]
+      }
+    ],
+    "studies/opening-range-atlas.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "7eefba6cf14e93530455e53bfcf1ddebbccfee5a212bf7feec712ff5d5fb34b5",
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A16",
+          "OF1",
+          "OP1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "62cd358c44187253b25560170b935c7ea5b97f199eeb8c334caf5585fed1e2cb",
+        "source_ids": [
+          "A01"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a3f5e324c243b84207035435338df5375efc6f68dd902e634c813847a88fb230",
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A16",
+          "OF1",
+          "OP1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "abef9bab0d7bc985f33f392fc63d2d12c35bd2190a205ce832727111db858a29",
+        "source_ids": [
+          "A02"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "fed8bacfb8b58108c5fb657ad154493c66cab7e3f5dd2cbe8963eafee4e2715d",
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A16",
+          "OF1",
+          "OP1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "c13e408628016dbb1a9a522654a67a40b70e343cd4c83c54add9530f47afad0f",
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A16",
+          "OF1",
+          "OP1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "689e9bca15ee33a92e04ac1e0991ac1d08d73247f2dc5016d5ac866bbfc8ad38",
+        "source_ids": [
+          "A03"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "397dd4bc2b4be558bff6614fad58398a1fc9738d5bf750d93960ca5a48c8974f",
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A16",
+          "OF1",
+          "OP1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "31d05d5fde0857215d8f7e8329f573a4cc27311c1779ec9a35c32fae1668943a",
+        "source_ids": [
+          "A04"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "cf8f31aa1cd72110d550b14e737f65868121b8903221c55dd91da41889e4f520",
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A16",
+          "OF1",
+          "OP1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "0881508649359d4a41c282200795ed2cda8691b5c28c40b164107b85c9af8494",
+        "source_ids": [
+          "A05"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6e76e926ce7bba763aedaad82b9b989d5e418a99e33a9c025b704d57f4813270",
+        "source_ids": [
+          "A06"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f9182407076b57bf83d8b83ddb48153a6e4fbb3ab0699545829d2087458ec179",
+        "source_ids": [
+          "A07"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "292c8113f3d10f65643437de1d3aec60116d8f5c420bc182a262826bcc62e8c9",
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A16",
+          "OF1",
+          "OP1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "64f8f40a64ca6a96adb8dd77d9bd176c55a0f09b25c428177b361296cf270283",
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A16",
+          "OF1",
+          "OP1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "429953a250872f2b9306930b3f4ef824eb5adb5897cadababe4d7f761428053e",
+        "source_ids": [
+          "A08"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "efdf6edbfcece11f79a87aae031be57d09d489b5cb898202f1d1353b2fa4698c",
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A16",
+          "OF1",
+          "OP1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "22f7df4676ef24ec01081c5aabd6986a460cd7697ff505798ccba6f27bdf9038",
+        "source_ids": [
+          "OF1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "0ec54d0b9c0afc610e9e819780ff45fc00441a136873208c2f829cdb2f50a681",
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A16",
+          "OF1",
+          "OP1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "2a1433723123b05f70417acb9b3fb06956c07a0bf254912c8e4616070ed32427",
+        "source_ids": [
+          "OP1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "1cb40fe12a65cd606a84e267ee8c1ec0ce617eb80b55908dc2221cdfdd8258fe",
+        "source_ids": [
+          "A09",
+          "A10"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "c3f98adb7430a2d2c0008c25ff58daa339d16998da4d405cbd04f80f6f9c16c5",
+        "source_ids": [
+          "A11",
+          "A12"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e557968ac5c377ad4a924353cbdd91f94b3564e46f086060e132fee70c310fe1",
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A16",
+          "OF1",
+          "OP1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "932f6927ed45e9ae76aee6cc2ed4bb67fc2945941e9265d834e6b1f868d095b2",
+        "source_ids": [
+          "A13"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6bd1c47fd44a653094b324d73be208a0924728cb7bf1e9995c3871b44a2ae5a6",
+        "source_ids": [
+          "A14"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6579bb9216a84736e2e3be0b2a400b3b722d4304dbc8cf4df645d4bd9ed8498b",
+        "source_ids": [
+          "A16"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "eccc1c0810068a5533095107840caa25c92fbbd11df0257b57c27a3237231edb",
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A16",
+          "OF1",
+          "OP1"
+        ]
+      }
+    ],
+    "studies/opening-range.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "203fda743a1516af2e316bd693abc37b76745bff13496375d81c75312e38dd26",
+        "source_ids": [
+          "A04",
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "O6",
+          "OF"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a9d09cc86cc521cc155683f1e2a0add2476a3ea1ea4094d5790ffb8de40b6805",
+        "source_ids": [
+          "O6"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "7de875b24a0e140bdef24b2301f1dc6772aef0e642017156a487d879e855a2a7",
+        "source_ids": [
+          "A04"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "c263f7a5800a46d84ccabee59ad832618bdedcfed707707c40fcaf4b2723b808",
+        "source_ids": [
+          "A04",
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "O6",
+          "OF"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "8f125577ec6e43dda0a8e5d5ce9a677d2706d54d6c7060d9010c08b471be4cca",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "5dc1d4fad2b9539bcc8661660d69885205362765ad789aa653258713876eb773",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "44971683fdcae31792eb867bfbcba6d5bd131c658231ca502037c0c14bc04f22",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "d8e4a88c32315f1742d03c762e48544a1517f880cab9e4f412ea7f191a193831",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "aeb64e20df888db4beb3a72d51cebdca806bcad361c47a96465cf58bb810a9f6",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "73e1db758e3ab6520e98ab3706c25721f3da9ec297458e4a68295bc8e296a9b7",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "c3cab9350f0dd1bbf859490f2531220fb85e3fd933c67567a64e179ef45de83e",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "8c4c564968a29cef7ea0dc4ce05b12261b6bb19720edfba8127d73db7ba1405b",
+        "source_ids": [
+          "O1",
+          "O2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "9d82b7b27dc85ba7c024d7c6662f34bf88d4d29cd2ead214ad5548ee436ab29f",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f158953f9f080c76c87f49b96fb8b8f35c4e8d4089afcfbeababd073ffd78bd0",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "4bb48593ef3fdba4acfcc258a98235d89f2ab4086666c1d6630af5cc105e5f95",
+        "source_ids": [
+          "O2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "da4dfbe215aad400f329f90ee71ce9909c1cf04a25b16ba6fa78ab4f613bd4f7",
+        "source_ids": [
+          "A04",
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "O6",
+          "OF"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "33babe3c73bae6efe1e7da47b39ab73864d831e1813086c9e0830e207b6a8b06",
+        "source_ids": [
+          "O2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "98c4d9a9f0ac842146f599211a218c8b95fbd6ca38ab73db1775be51f7c2846e",
+        "source_ids": [
+          "O2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "97920f15c13ab8a5162462683a1e8b398a24caae76d0b0d4ebbc862b9ae6d02d",
+        "source_ids": [
+          "A04",
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "O6",
+          "OF"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "b96e59388b6d0c5df2352a6736dc0230e056cffac01a644309a21dd63eab3d40",
+        "source_ids": [
+          "O3"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "2e1355f0844b2cc52b36e02252aa153b7ffcc0b4e42301a5c7a7d766f9555a76",
+        "source_ids": [
+          "O4"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "41893bf8eb37d8d018dcb0788780d524893cde64dca5c7d05e5e016587ea4865",
+        "source_ids": [
+          "O4"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "0d8a52698f1ef0d50e66ec209bed8514ec548e324dd512558ab96754775e09f7",
+        "source_ids": [
+          "O4",
+          "O6"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f5fcb83ca1c3820633001dba5643a9a0e41580bed7000f65628002ace5c1d112",
+        "source_ids": [
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "49ac2462f0c6098c1d8f021ebfe871e13518ef2bccc3a5960b677f7b1f50f738",
+        "source_ids": [
+          "OF"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "a8bca1018675082087d6cb713c06ba1a52fb0bb516c6f60bc3e40ee56c2dcc39",
+        "source_ids": [
+          "O6"
+        ]
+      }
+    ],
+    "studies/reconstruction-and-timing.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "b10b24a00ed1685f91a2d0cc1ee0c7c6500ef3061516c4863a8f8583c99d9d50",
+        "source_ids": [
+          "B17"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "0db8d4cf75dc6d4d50270ecc4ca60a299394c3b4878fccf4958c5035ea63639c",
+        "source_ids": [
+          "B17",
+          "B18",
+          "B19",
+          "B25",
+          "B26"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "cbd22cc8686b099aac564837c73f125ea0beed554cd1010b26cc0366d8c150fd",
+        "source_ids": [
+          "B17",
+          "B18",
+          "B19",
+          "B25",
+          "B26"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f24e9a2988a18599790d97e504bb8383a36a57cf53169bf5abe40d1aa4a746e7",
+        "source_ids": [
+          "B18"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "3c12cb04accdb00b8be524c3b939eb24a5f7c2585a267a0dc88edbf8edd447b5",
+        "source_ids": [
+          "B17",
+          "B18",
+          "B19",
+          "B25",
+          "B26"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "c020968eb38ceda09141db6c812c5357560c39d45c9b93b1079d6ecffd2a1e47",
+        "source_ids": [
+          "B19"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "9b1e16bc90318e5272febbb8da804f45fc26357a097782d311464b4084b57575",
+        "source_ids": [
+          "B17",
+          "B18",
+          "B19",
+          "B25",
+          "B26"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "b0d53e5661fe552a2fc82f32e3b44841a9dc87d11ce21ccc5082f9b695d4f807",
+        "source_ids": [
+          "B17",
+          "B18",
+          "B19",
+          "B25",
+          "B26"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "8c6121059cb415fe9656663a2315f87a5c8aa7c3f830385181b6bea8e67965e5",
+        "source_ids": [
+          "B25"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e15cc0d8526da41eb930551cd6b84701b07584bce5c3e932b5668714d05b5b93",
+        "source_ids": [
+          "B17",
+          "B18",
+          "B19",
+          "B25",
+          "B26"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "b1dae1d6b063f8985739cae867893eaf7165c57874601a3e4c6bb6e994b5c064",
+        "source_ids": [
+          "B17",
+          "B18",
+          "B19",
+          "B25",
+          "B26"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "f2443a3b95de259606a87fc0cdabfdf4930979b44a2325261f6f4799aad7b5aa",
+        "source_ids": [
+          "B26"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "12125250cad90595d6480068091a10f6f3f60ed38e98d7d5c9c555fed1214c76",
+        "source_ids": [
+          "B17",
+          "B18",
+          "B19",
+          "B25",
+          "B26"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "19dd388945e4d4f01e643f7043b6daef47a7f570d69b7d9538fae7248700f77f",
+        "source_ids": [
+          "B17",
+          "B18",
+          "B19",
+          "B25",
+          "B26"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "3c1eb83af997b0dd4353e8d0da923410204ea377134e9849b0593c95218448fb",
+        "source_ids": [
+          "B17",
+          "B18",
+          "B19",
+          "B25",
+          "B26"
+        ]
+      }
+    ],
+    "studies/research-engineering.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "8fcb0f3839517b878a11dcb05a26b02825795072a3b157a196b770b1686ce4e8",
+        "source_ids": [
+          "E1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "295b3709ee7ec359f1810d444ed3ec87a528a42016e15d9e2de2dd1225913811",
+        "source_ids": [
+          "E1"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "02ecca962b76b421f03e4cfd072f2ef1475a7d7264abc9aa0b182fd0279a874c",
+        "source_ids": [
+          "E2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "9d276c5524c0b955e076f6f2accd8772d94b48fa78db38bd0e970b2c627ad4dd",
+        "source_ids": [
+          "E2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "aec4d76db7d83daf9b72a4ce118d80f972af67d226e0821e41a2d5c6d4098788",
+        "source_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "ee57b122a60c93e21bed98555f7063580398f49d59c3869f1d7a749ebe7c985c",
+        "source_ids": [
+          "E3"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "bca0133f75ab032ba999fae4f905d056ac32b846fe31648b6f2c79d072e7cf00",
+        "source_ids": [
+          "E4"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "d3e8d4dde4c84bf84979be0b1124b5ea236b3910c53c9457d31a5191cfe2da32",
+        "source_ids": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ]
+      }
+    ],
+    "studies/vwap-research.md": [
+      {
+        "kind": "historical_report",
+        "sha256": "b47af2c755ca2251c40d657d07573f8e6b1e9e1469f7ccd7714ed0ede6c72e5d",
+        "source_ids": [
+          "B01"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "b7ff5d777c1ee6fcf1671010b0e9b8cf391777f6e6f967c529d09fb0a96f2db0",
+        "source_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e1145ffb17154126796cce8e6e6a0e9788dbaa1353f04e53d1562dfb83525ce2",
+        "source_ids": [
+          "B02"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "2d1ba59e560c0515acef0874a71eaa3c8f2ce9e799ac9bee20df603e3ae13f0c",
+        "source_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "5f718f23e6f77d241115cfe9e86fe2500b29fea39b1a71a92a233719e248be46",
+        "source_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "bd68bb1a1d3963001837a7f154c7327c154037f9a1775069ffaba7a52e2c3f4d",
+        "source_ids": [
+          "B03"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "9ed52aac542e476b5277ad77fa120d741f6b1c0b8d3202b6d4d2ffdb5e5cbb92",
+        "source_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "2a031a2cb6225395d78bf602b8c9967e839bb5b800bbc2bdd0c17b47cf629707",
+        "source_ids": [
+          "B04"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "43cb2e34c58677587be62e8d1d7f65d082791c319ab32a5d0cbbd022eb9189e8",
+        "source_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "e74d4c2442f2d6bcf8f86b0b59896e8b5f97e700710031a8c4c754bd7bc146c0",
+        "source_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "acdabee17cb0127149db224f225dd1850c6af38615be998d9791287cacf18c7f",
+        "source_ids": [
+          "B05"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "92a9f42eb473ff06da517709db26d400e7dd44d0a38bde1ea58b68f5e31901b5",
+        "source_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "6251c7dac067b266d17b68a725a721cb49294a57e431f97e0529aa28ddf004f1",
+        "source_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "372c53eb3663d7ed9ccd4a19c2c76f1d0808007a79996032c3ee5bb728c0740a",
+        "source_ids": [
+          "B06"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "cb22116c3eca309317fb9c29ea13f429f95c60c55097cf967bf6d21785255a81",
+        "source_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "63943d2585beb96075e12c9ee227291f5c51009bd0167044846adc1f1e120ad9",
+        "source_ids": [
+          "B07"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "1145711086df10ac3f58e84b995f263b4dcc79ce473268a2ac477519bbebe8ac",
+        "source_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "037160e8d41f775a6de33dcfcaebc268cc3eb6466bc181e6cfe63b72d4a5c8cf",
+        "source_ids": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "B05",
+          "B06",
+          "B07"
+        ]
+      }
+    ]
+  },
+  "figures": [
+    {
+      "inputs": {
+        "data/historical-results.json": "df884e5a021c6aa21086d3c69147c9bd4269d134de38c0642fefddc5c908adfe"
+      },
+      "path": "figures/momentum.svg",
+      "renderer": "scripts/render_historical.py",
+      "scope": "REPORTED_PRIVATE_AGGREGATES",
+      "source_ids": [
+        "M2",
+        "M3",
+        "M4",
+        "M6"
+      ]
+    },
+    {
+      "inputs": {
+        "data/historical-results.json": "df884e5a021c6aa21086d3c69147c9bd4269d134de38c0642fefddc5c908adfe"
+      },
+      "path": "figures/de30.svg",
+      "renderer": "scripts/render_historical.py",
+      "scope": "REPORTED_PRIVATE_AGGREGATES",
+      "source_ids": [
+        "D1",
+        "D2",
+        "D4",
+        "D6",
+        "D7"
+      ]
+    },
+    {
+      "inputs": {
+        "data/historical-results.json": "df884e5a021c6aa21086d3c69147c9bd4269d134de38c0642fefddc5c908adfe"
+      },
+      "path": "figures/orb.svg",
+      "renderer": "scripts/render_historical.py",
+      "scope": "REPORTED_PRIVATE_AGGREGATES",
+      "source_ids": [
+        "O1",
+        "O2",
+        "O4",
+        "O5"
+      ]
+    },
+    {
+      "inputs": {
+        "data/historical-results.json": "df884e5a021c6aa21086d3c69147c9bd4269d134de38c0642fefddc5c908adfe"
+      },
+      "path": "figures/nowick.svg",
+      "renderer": "scripts/render_historical.py",
+      "scope": "REPORTED_PRIVATE_AGGREGATES",
+      "source_ids": [
+        "N1",
+        "N2"
+      ]
+    },
+    {
+      "inputs": {
+        "experiments/protocol.json": "9e9d8ecfb58c7503671c4e6634e7b8eaf3c7a34de0b14e203182a96959eeeab3"
+      },
+      "path": "figures/research-summary.svg",
+      "renderer": "src/srl/visuals.py",
+      "scope": "SYNTHETIC_CALIBRATION",
+      "source_ids": [
+        "SYN1"
+      ]
+    },
+    {
+      "inputs": {
+        "data/ecb-fx-reference.csv": "b6aa4be6327be74aab465f95ad1db8e97636fb215b9208b35d1b1744f10815b7",
+        "data/ecb-fx-results.json": "5054e2b18bd54948bff7f601cc2bcea3ce4f24276b7ab85e2dfafb27e9c938f5"
+      },
+      "path": "figures/fx-reference.svg",
+      "renderer": "scripts/render_fx.py",
+      "scope": "REAL_REFERENCE_RATE_STUDY",
+      "source_ids": [
+        "FX1"
+      ]
+    }
+  ],
+  "reviewed_on": "2026-10-21",
+  "sources": [
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "M1",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "M2",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "M3",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "M4",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "M5",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "M6",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "M7",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "M8",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "D1",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "D2",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "D3",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "D4",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "D5",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "D6",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "D7",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "D8",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "D9",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "O1",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "O2",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "O3",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "O4",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "O5",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "O6",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "OF",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "N1",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "N2",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "E1",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "E2",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "E3",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "E4",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A-MOM-ABLATION",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A-MOM-SCALE",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A-MOM-DECAY",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A-MOM-BTC",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A-DE30-M30",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A-VENOM-FEEDS",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A-VENOM-ENGINEERING",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A01",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A02",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A03",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A04",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A05",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A06",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A07",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A08",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A09",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A10",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A11",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A12",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A13",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A14",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "A16",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "OF1",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "OP1",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B01",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B02",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B03",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B04",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B05",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B06",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B07",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B08",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B09",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B10",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B11",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B12",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B13",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B14",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B15",
+      "kind": "retained_private_report",
+      "sample_role": "invalid"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B16",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B17",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B18",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B19",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B20",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B21",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B22",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B23",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B24",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B25",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B26",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "B27",
+      "kind": "retained_private_report",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "id": "FX1",
+      "kind": "public_replay",
+      "sample_role": "spent"
+    },
+    {
+      "disclosure": "approved",
+      "evidence_kind": "synthetic",
+      "id": "SYN1",
+      "kind": "public_replay",
+      "sample_role": "illustration"
+    }
+  ],
+  "version": 1
+}

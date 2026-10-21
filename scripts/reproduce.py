@@ -1,11 +1,10 @@
-"""Verify historical aggregate presentations and replay the synthetic methods study."""
+"""Verify historical presentations, the real FX study and synthetic calibration."""
 
 from __future__ import annotations
 
 import argparse
 import hashlib
 import json
-import os
 from pathlib import Path
 import platform
 import sys
@@ -19,6 +18,10 @@ from srl.study import load_protocol, run_study
 from srl.visuals import render_summary
 from scripts.render_historical import historical_artifacts
 from srl.diagnostics import derive_diagnostics
+from srl.claims import audit_acquisition, audit_claims
+from srl.evidence import load_manifest, verify_manifest
+from srl.fx_study import result_bytes, run_study as run_fx
+from scripts.render_fx import fx_artifacts
 
 
 def artifact_bytes(root: Path) -> dict[str, bytes]:
@@ -37,7 +40,7 @@ def write_output(destination: Path, artifacts: dict[str, bytes], source: dict) -
         raise ValueError('choose a new output directory; existing work is preserved')
     if any(not safe_name(name) or not isinstance(payload, bytes) for name, payload in artifacts.items()):
         raise ValueError('artifact names must be safe relative paths with byte payloads')
-    receipt = {'scope': 'PUBLIC_PRESENTATION_AND_SYNTHETIC_METHODS', 'python': platform.python_version(), 'source_sha256': source,
+    receipt = {'scope': 'PUBLIC_PRESENTATION_REAL_FX_AND_SYNTHETIC_METHODS', 'python': platform.python_version(), 'source_sha256': source,
                'artifacts': {name: hashlib.sha256(payload).hexdigest() for name, payload in artifacts.items()}}
     destination.mkdir(parents=True)
     for name, payload in artifacts.items():
@@ -63,18 +66,30 @@ def main() -> int:
     if audit['status'] != 'PASS':
         print(json.dumps({'audit': audit}, indent=2, sort_keys=True))
         return 1
+    scientific = audit_claims(ROOT)
+    if scientific['status'] != 'PASS':
+        print(json.dumps({'scientific': scientific}, indent=2, sort_keys=True))
+        return 1
+    audit_acquisition(ROOT)
+    for name in ('experiments/evidence-example.json', 'experiments/fx-evidence.json'):
+        verify_manifest(ROOT, load_manifest(ROOT / name))
     artifacts = artifact_bytes(ROOT)
     historical = json.loads((ROOT / 'data/historical-results.json').read_text(encoding='utf-8'))
     artifacts.update(historical_artifacts(historical))
     artifacts['results/aggregate-diagnostics.json'] = (json.dumps(
         derive_diagnostics(historical),sort_keys=True,indent=2,allow_nan=False)+'\n').encode()
+    fx = run_fx((ROOT / 'data/ecb-fx-reference.csv').read_bytes())
+    artifacts['data/ecb-fx-results.json'] = result_bytes(fx)
+    artifacts.update(fx_artifacts(json.loads(artifacts['data/ecb-fx-results.json'])))
     differences = check_artifacts(ROOT, artifacts)
     if differences:
         print(json.dumps({'artifact_mismatch': differences}, indent=2))
         return 1
-    receipt = {'status': 'PASS', 'scope': 'PUBLIC_PRESENTATION_AND_SYNTHETIC_METHODS', 'python': platform.python_version(),
+    receipt = {'status': 'PASS', 'scope': 'PUBLIC_PRESENTATION_REAL_FX_AND_SYNTHETIC_METHODS', 'python': platform.python_version(),
                'tests': tested.testsRun, 'skipped': len(tested.skipped),
                'source_files': len(audit['files']),
+               'scientific': scientific,
+               'fx_study_verdict': fx['family_verdict'],
                'artifacts': {name: hashlib.sha256(payload).hexdigest() for name, payload in artifacts.items()}}
     if args.output:
         target = args.output.resolve()
