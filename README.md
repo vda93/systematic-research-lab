@@ -64,7 +64,7 @@ The results are historical experiments, not claims of live profitability or depl
 
 **Discussion.** Better standalone R does not imply a superior portfolio. Holding-time and signal-occupancy changes invalidate naive trade-by-trade comparisons.
 
-**Decision.** Retained the canonical architecture under the recorded stop criteria. Strategy origins and individual code contributions must be distinguished from research direction. [Full MOMCONT study](studies/momentum-continuation.md)
+**Historical decision.** The frozen exit studies retained the canonical architecture under their recorded criteria. **Subsequent disposition, 3 November 2026:** after a negative, broker-reconciled September–October forward sample, the MOMCONT program was shelved for new alpha work. Earlier results are not retroactively rejected; production/reference parity remains incomplete. Strategy origins and individual code contributions must be distinguished from research direction. [Full MOMCONT study](studies/momentum-continuation.md)
 
 ### 5. DE30 continuation and sizing
 
@@ -76,7 +76,7 @@ The results are historical experiments, not claims of live profitability or depl
 
 **Discussion.** Development robustness, later validation and execution correctness answer different questions. A corrected sizing engine is not evidence that the project owner personally wrote the correction.
 
-**Decision.** Preserve both the failed concentration gate and the later positive terminal/correctness findings without blending them. [Full DE30 study](studies/de30-continuation.md)
+**Historical decision.** Preserve both the failed concentration gate and the later positive terminal/correctness findings without blending them. **Subsequent disposition:** the November 2026 MOMCONT program closeout also covers the DE30 sleeve and supersedes continued rollout recommendations, not its historical H026 result. [Full DE30 study](studies/de30-continuation.md)
 
 ## Other TradingBotHQ research history
 

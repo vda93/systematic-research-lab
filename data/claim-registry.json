@@ -15,51 +15,60 @@
     ],
     "README.md": [
       {
-        "kind": "public_replay",
-        "sha256": "89d89de938652fa1bb24f1a7f5e3edea3fcbe992e108c69887dba15172c45383",
-        "source_ids": [
-          "BB5"
-        ]
+        "kind": "documentation",
+        "source_ids": [],
+        "sha256": "680a4adb1cf4129bcf9c1846de63a1f870b437bf1bffec3d574e365c311fc291"
+      },
+      {
+        "kind": "documentation",
+        "source_ids": [],
+        "sha256": "aa3d5c0e996b0832f7e0d0ab1dc351449e183256277f6a736b599db01586c736"
+      },
+      {
+        "kind": "documentation",
+        "source_ids": [],
+        "sha256": "0973957d84ec26d3efc7c1dee07de0f325d8bb39745e079f97655a034f419771"
+      },
+      {
+        "kind": "documentation",
+        "source_ids": [],
+        "sha256": "790dc5dc2289f20675f575ae4552717a10698d80a2107c03399fba1f9638be21"
+      },
+      {
+        "kind": "documentation",
+        "source_ids": [],
+        "sha256": "85dae19c5b1e7124394cc89c8fb03a6be11d6a96c3ea3889e842615d1a02b22c"
+      },
+      {
+        "kind": "documentation",
+        "source_ids": [],
+        "sha256": "4b56b665aa914bee0c267722a5d029b3ef062b2051863db2b91089d75522a904"
       },
       {
         "kind": "historical_report",
-        "sha256": "9be874852611bdda802dcabbb473d79858d3efe74f06b5f3fa27047aa4434863",
         "source_ids": [
-          "B15",
-          "D1",
-          "D2",
-          "D7",
-          "E6",
-          "M10",
-          "M11",
-          "M3",
-          "M4",
-          "M7",
-          "M9",
-          "N1",
-          "N2",
-          "O1",
-          "O2",
-          "O4"
-        ]
+          "M12"
+        ],
+        "sha256": "f55f07a22e9d915972ca73da3f3fa13903828d963285883a8e1703feb9fbfb80"
+      },
+      {
+        "kind": "documentation",
+        "source_ids": [],
+        "sha256": "86f2b43fe950cf0eb7bf2f343536096fca00e928da0d295fa780769cf6ecd52a"
       },
       {
         "kind": "historical_report",
-        "sha256": "2b79c8f8a434b09f5248d4ec3cbb4cd26944ab1dbd1ad37f2702cce348e5bec6",
         "source_ids": [
-          "M3",
-          "M4",
-          "M7",
-          "D1",
-          "D2",
-          "D7",
-          "O1",
-          "O2",
-          "O4",
-          "N1",
-          "N2",
-          "B15"
-        ]
+          "D7"
+        ],
+        "sha256": "1a1c718b31d291fb7378dc0ef26a2cac4851c0ee8329c1e5e1b0867f4455e9ad"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "d17b16e629b8ee1a94edcfe1a4e2783c6f29e85dd318bb36b10d3255feebc052"
       }
     ],
     "SECURITY.md": [],
@@ -865,6 +874,18 @@
         "kind": "methods",
         "sha256": "f33fa006679d7de65d33b0a137a6ca7950c0a6daeb164b86c0c03b45ece2eb42",
         "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "source_ids": [],
+        "sha256": "87bc5eb058b85c9f000f5dba443aebbe9b6ca600a0999a556f5135a039f2bf42"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "9f50824a79469bdfdb453e1730daf60faa2433c2707bb6b3ce73773294239c56"
       }
     ],
     "docs/exact-block-means.md": [
@@ -905,6 +926,13 @@
         "kind": "methods",
         "sha256": "4cdb4cb2edd4d20423c3fc99337d5082081eba09ccaa233eea3f6b516f2bd07c",
         "source_ids": []
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "8e04dd02078b1631915c871074a3a2a85d62f89baa6f5c48ffe050f551772176"
       }
     ],
     "docs/methods.md": [
@@ -941,9 +969,24 @@
           "N2",
           "O6"
         ]
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "cdc026316e867d2c865fc4395304ec0ce198a5bc1bf7d066febbf2021a052d3a"
       }
     ],
-    "docs/provenance.md": [],
+    "docs/provenance.md": [
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "f2b5c77c6fac60e384e23d983b298138d292fd6b87b77a36a0a9b67a8401a13f"
+      }
+    ],
     "docs/research-atlas.md": [
       {
         "kind": "historical_report",
@@ -986,6 +1029,18 @@
         "source_ids": [
           "B27"
         ]
+      },
+      {
+        "kind": "documentation",
+        "source_ids": [],
+        "sha256": "e5a47abe559ae88529726a95ee9884c040e8c71bef036a5a9e79a5d14bac99f1"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "9f91532578cd6372d3634be0cad7e1178bf7708246ae3c065371fa8426ca36bd"
       }
     ],
     "docs/research-os.md": [
@@ -1000,7 +1055,15 @@
         "source_ids": []
       }
     ],
-    "docs/roadmap.md": [],
+    "docs/roadmap.md": [
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "55d6d6b56f7b58bbfbd7c093de0fbd062edd08eeb819fe01fd0d24c4eb91449d"
+      }
+    ],
     "docs/scientific-checks.md": [
       {
         "kind": "documentation",
@@ -1129,6 +1192,13 @@
           "O4",
           "O6"
         ]
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "c4e6266628379e00c9fce4ea592780de2c0ea52985c1f6181a593816b3e2fc8f"
       }
     ],
     "experiments/bbo-delay-measurement-v2.md": [
@@ -3547,6 +3617,37 @@
         "source_ids": [
           "D9"
         ]
+      },
+      {
+        "kind": "documentation",
+        "source_ids": [],
+        "sha256": "01dede4e212cdb01231e0a3efb564e87eac51c18c8544391c22bcdb3ce0c84ce"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "13be5754c7eb89413e3eef61afc23714a8a2c1b4b5a1f304b7bf0ae9297238ff"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "537f3b5e6f2ac569f861ac1529f2da49459ba595222006e8edfa6f4992e52d97"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [],
+        "sha256": "cf0b6460ec734e6723d666604f872041c0e30f2ef1f292cc0b14b3cf0599eb4e"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "281b4ed06f5f9887dfc849febfb90823cc8233c74345b12577124e1f6d03db29"
       }
     ],
     "studies/engulfing-and-support.md": [
@@ -3939,6 +4040,13 @@
           "A-VENOM-ENGINEERING",
           "A-VENOM-FEEDS"
         ]
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "a95a4b90cb8adef1e87a436e78e3986d009d6f54d9b992c6a16f4b8948d75a3c"
       }
     ],
     "studies/momentum-continuation.md": [
@@ -4185,6 +4293,32 @@
         "source_ids": [
           "M8"
         ]
+      },
+      {
+        "kind": "documentation",
+        "source_ids": [],
+        "sha256": "e3f3b141b180c32e4e468423985d72f8bebe5cb13cb9a296ee1d5e6cd5027d10"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "91757d6fab2c24edaf2caa6c5089a9b6688c8a379485c93912736215a0841948"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "39ac631dca5e1421c76b9748219f35d7552b760a05ae54a8363f561a3596e5a6"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "M12"
+        ],
+        "sha256": "f49d45b987cbef4eda07ea698745d525bc62812002ad15634d0126e571ead4bd"
       }
     ],
     "studies/news-research.md": [
@@ -6249,6 +6383,13 @@
       "id": "BB5",
       "kind": "public_replay",
       "sample_role": "final"
+    },
+    {
+      "id": "M12",
+      "kind": "retained_private_report",
+      "evidence_kind": "historical",
+      "sample_role": "spent",
+      "disclosure": "approved"
     }
   ],
   "version": 1

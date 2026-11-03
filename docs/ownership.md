@@ -38,3 +38,8 @@ The private historical backtests, account simulations, strategy code and raw mar
 
 The record shows the decisions I take responsibility for preserving: keep failed stress tests visible, withhold promotion when sensitivities disagree, and correct explanations that the evidence no longer supports. Engineering correctness and economic support retain separate decisions.
 
+
+
+## Later forward closeout attribution
+
+The 3 November 2026 MOMCONT program shelving is a user research-program disposition based on a retained broker-reconciled analysis. The evidence does not establish that the user personally wrote the export/reconciliation code, independently audited every broker deal, diagnosed an implementation defect or mastered each statistical method. The user-directed decision and AI-assisted preparation must remain separate. The BTCUSDT BBO study is AI-originated and is not attributed to the user's historical BTCUSD2 bot research. See [forward closeout](../studies/momentum-continuation.md#subsequent-forward-program-closeout-3-november-2026).

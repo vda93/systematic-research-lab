@@ -62,3 +62,16 @@ The amendment is a limitation to disclose, not a reason to suppress the engineer
 A later, separately specified portfolio-inclusion experiment used the common **2025-01-01 to 2026-08-01** window. It rejected adding DE30 to the evaluation architecture. Funded-account simulations supported inclusion only within the limited tested low-risk region, including block-length sensitivities and an expectancy haircut. Those findings were conditional on the historical paths and account model; they were not current operational approval. [D9](../docs/evidence.md#d9)
 
 The initial development result passed, its concentration test failed, and the later terminal test passed with qualifications. That terminal period is now spent. The sizing repair and portfolio simulations answer separate questions; concentration and access-history uncertainty still limit any claim about future profitability.
+
+
+## Subsequent MOMCONT program disposition, 3 November 2026
+
+**Hypothesis.** Would the later DE30 deployment, alongside the other MOMCONT sleeves, support continued allocation after the historical H004, H005 and H026 outcomes?
+
+**Methodology.** The later MOMCONT program closeout reconciled readable September–October 2026 broker positions across the three program sleeves. DE30's historically positive terminal gate, corrected sizing parity and conditional portfolio-inclusion decision were not rerun or reclassified.
+
+**Results.** The available DE30 sleeve had 12 attributed completed positions and negative realized USD P&L. Across all readable program sleeves, the subsequent forward result was negative. No pristine source-level production parity or independent signal-count certification was available.
+
+**Discussion.** This is spent forward evidence with limited sample support, account coverage and operational controls. It does not undo the earlier DE30-specific H004/H005/H026 historical acceptance or identify a single cause of deployment losses. The distinct DE30 M30 prospective protocol remains unadjudicated and administratively parked, not failed.
+
+**Conclusion.** New MOMCONT alpha work and further rollouts are shelved as of the program closeout. Historic research results remain intact. See the [dated forward closeout](momentum-continuation.md#subsequent-forward-program-closeout-3-november-2026) and [evidence boundary](../docs/evidence.md#m12).
