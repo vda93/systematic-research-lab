@@ -455,3 +455,8 @@ The complete public pipeline qualifies a selected official ECB historical snapsh
 ## BB5
 
 **BBO delay: complete frozen final sample and support failure.** The [final aggregate](../data/bbo-final-results.json) retains all twelve fixed selected days, the primary quote-cost comparison, equal-day inference, missingness/depth diagnostics and all predeclared sensitivities. [Acquisition receipts](../data/bbo-final-acquisition.json) record local requests after the public validation closeout, without independently authenticating provider-access history. FAIL_SUPPORT has precedence over the conditional economic estimate. Public source and independent synthetic/coarse arithmetic reviews establish narrow implementation behavior, not guaranteed fills, trading returns or candidate mastery.
+
+
+## M12
+
+**MOMCONT later forward deployment closeout, 3 November 2026.** A retained private reconciliation of readable broker deal/order histories attributed 76 completed positions across USDJPY, gold and DE30 MOMCONT sleeves in September–October 2026 and reported negative realized net USD outcomes. The source audit preserved the 64 ledger-classified normal exits, overlapping cross-account entry signals and an inaccessible additional account. No public raw broker history is available here, and source-level live-versus-reference parity and original monetary-risk denominators were not fully reconstructed. The observed period is spent forward evidence; the program was shelved for new alpha work, without changing H025/H026 historical verdicts. This source is a retained private report, **not** public replay or a proof of universal negative alpha. No account identifiers, private logs or production settings are published.

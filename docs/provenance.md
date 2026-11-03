@@ -15,3 +15,6 @@ The new [ECB reference-rate study](../studies/fx-reference-momentum.md) has a di
 The [scientific checks](scientific-checks.md) bind reviewed quantitative prose and declared figure inputs to source identities. They are not an independent verification of hidden private observations. [Ownership](ownership.md) distinguishes project direction, recorded decisions, automation and AI assistance.
 
 Original public prose, code and figures are under [MIT](../LICENSE). ECB observations are excluded from that grant and use the provider's separate terms. This grants no rights to excluded vendor data, third-party strategy code or private artifacts. Legitimate existing public Git history is preserved; no private monorepo history was imported. Git metadata uses the owner's public noreply identity.
+
+
+The later [MOMCONT forward closeout](../studies/momentum-continuation.md#subsequent-forward-program-closeout-3-november-2026) transcribes a retained private broker-reconciled report with coverage and independence limitations. Public reproduction checks cannot authenticate or reconstruct broker account histories, monetary risk denominators or full production/reference parity. This evidence is subsequent spent forward observation, not a fresh historical backtest or a replacement for earlier H025/H026 evidence.

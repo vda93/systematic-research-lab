@@ -82,3 +82,26 @@ Canonical met the precommitted evaluation decision at the primary block length; 
 These simulations used archived R and an H1 approximation to intraday equity stress. Their path frequencies depend on resampling and account-model assumptions; they are not forecasts or tick-exact broker certification. A synthetic demonstration can reproduce the generic comparison methods without reproducing these private historical observations.
 
 The lineage stopped exit and alpha tuning. Further work requires a new falsifiable question grounded in forward evidence or a correctness failure. The alternative exit remains documented with its limitations. [M8](../docs/evidence.md#m8)
+
+
+## Subsequent forward program closeout, 3 November 2026
+
+### Hypothesis
+
+Would the historically supported, frozen MOMCONT architecture reproduce positive realizations when deployed in subsequent observable broker accounts?
+
+### Methodology
+
+A retrospective broker-deal and order reconciliation attributed 76 completed MOMCONT positions to the USDJPY, gold and DE30 H1 sleeves across September and October 2026. The available accounts were checked for position completeness, apparent cross-account duplicates, realized monetary outcomes and a separately labelled normal-exit subset. One additional account could not be accessed. No new signal rules or backtest parameters were tested, and the observed forward sample is now spent.
+
+### Results
+
+The 76 attributed positions returned a net negative $1,988.50 in realized USD after the recorded fees, with negative outcomes in each of the three sleeves. The 64 positions classified as normal exits remained net negative. These are reported results from retained private broker records, **not** a public broker-history reproduction or an independently sampled set of 76 signals. No certified original monetary-risk R is available.
+
+### Discussion
+
+The accounts contained same-side duplicate signals and clustered entry dates, so position count overstates independent evidence. The unavailable account, potential copier/manual interventions, broker execution and risk controls limit inference. The historical net-R metric, executed price-distance R and realized USD are different estimands; no numerical backtest-to-live R decay is inferred. Production/reference entry, stop, exit and admission parity has not been fully established. Regime change, implementation drift and execution effects remain competing explanations. The labelled normal-exit subset does not establish pristine automated operation.
+
+### Conclusion and decision
+
+**Program decision: SHELVED / CLOSED for new MOMCONT alpha work as of 3 November 2026.** The finite available-account forward sample did not reproduce positive realized outcomes, and further parameter tuning or selective rescue using this spent period is not authorized. The earlier H025 portfolio and H026 DE30 historical research findings retain their original outcomes and data classifications. Reopening requires a documented material production/reference defect or a genuinely distinct, preregistered hypothesis. This closeout did **not** deactivate live EAs; operational deactivation requires a separate action. Source: [forward closeout evidence register](../docs/evidence.md#m12).

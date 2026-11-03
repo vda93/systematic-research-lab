@@ -71,3 +71,8 @@ The latest bounded native tester comparison reproduced the frozen reference path
 The evidence has a precise limit: qualification used a tester-specific permissive risk-governor shim. It did not prove production risk-governor state, live ticket ownership, restart behavior, real fills or current target-terminal contract conditions. The package’s final record explicitly withheld live deployment authorization.
 
 The historical incident’s root cause also remained probable rather than proved because dated broker specifications and authoritative incident state were unavailable. Engineering confidence improved without rewriting that uncertainty or converting tester parity into economic or operational approval. [A-VENOM-ENGINEERING](../docs/evidence.md#a-venom-engineering)
+
+
+## Later MOMCONT disposition
+
+The 3 November 2026 program closeout shelved new MOMCONT alpha tuning and deployment expansion after negative realized outcomes in a finite, available-account forward sample. It supersedes older operational continuation recommendations, not the original experiment verdicts. The separately frozen DE30 M30 prospective protocol is administratively parked with **no adjudicated forward result**. This decision does **not** apply to Venom or establish that all later Venom observations are untouched. See [MOMCONT forward closeout](momentum-continuation.md#subsequent-forward-program-closeout-3-november-2026).

@@ -9,3 +9,6 @@ The next studies need new evidence contracts. Historical negatives remain closed
 - Qualify the current build, broker/runtime and deployment separately from historical semantic parity. No public portfolio gate authorizes private trading changes.
 
 A machine-learning extension needs a falsifiable question, a reason for the added complexity and credible temporal baselines to beat. It remains optional and does not justify reopening closed families.
+
+
+- **MOMCONT program shelved, 3 November 2026:** no new alpha retuning, selective symbol/timeframe rescue or expanded rollout against the spent September–October forward observations. A future investigation requires independently verified material production/reference implementation defect or a distinct, preregistered new hypothesis and appropriate clean evidence. Historic H025/H026 findings remain documented; the separate DE30 M30 prospective contract has no result and is administratively parked. This roadmap is not permission to change currently running terminals.

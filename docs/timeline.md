@@ -19,3 +19,6 @@ This chronology describes research decisions, not the dates of the market observ
 | October 21: public reproducible study | A fixed reference-rate question and implementation were published before acquisition; the complete public study retained its failed joint comparison. [FX1](evidence.md#fx1) |
 
 Discovery justified further tests in some branches. Controls rejected mechanisms in others, and completed experiments sometimes ended the work. Each decision kept the surviving claim within its evidence.
+
+
+**3 November 2026 program follow-up:** a separately reconciled finite September–October 2026 live deployment sample prompted shelving new MOMCONT alpha research, while preserving the earlier H025/H026 historical findings and their evidence roles. See [dated closeout](../studies/momentum-continuation.md#subsequent-forward-program-closeout-3-november-2026).

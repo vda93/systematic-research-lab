@@ -80,3 +80,8 @@ Separate primary records for some numbered gaps, including MOMCONT H002/H020 and
 Source qualification and risk infrastructure were also examined as engineering context. Data correctness can enable research; it does not supply evidence of alpha. Exact live risk policies, deployment parameters, proprietary source and raw evidence bundles are deliberately excluded.
 
 The flagships follow experiments through their decisions. The wider atlas retains the other sufficiently evidenced work, including unsuccessful and unfinished research.
+
+
+## Portfolio status update, 3 November 2026
+
+MOMCONT and its DE30 H1 sleeve now have a subsequent **program-level Park / Closed for new alpha work** disposition after a negative broker-reconciled September–October 2026 forward sample. The earlier H025/H026 historical findings remain recorded and were not retrospectively rejected. The distinct DE30 M30 prospective protocol is administratively parked without an observed prospective result. See [dated MOMCONT closeout](../studies/momentum-continuation.md#subsequent-forward-program-closeout-3-november-2026) and [source limitations](evidence.md#m12).
