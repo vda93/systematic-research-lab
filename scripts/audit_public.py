@@ -137,6 +137,22 @@ def audit_git(root: Path) -> dict:
         if len(roots) != 1:
             findings.append('history must have one independently created root')
         approved_names = set(json.loads((root / 'release-files.json').read_text()))
+        # Preserve the exact historical publication boundary after scoped de-publication.
+        # Removed files are still scanned in every old commit, but cannot reappear in HEAD.
+        archived_list = json.loads((root / 'archived-public-paths.json').read_text())
+        if (not isinstance(archived_list, list) or len(archived_list) != 39
+                or len(set(archived_list)) != len(archived_list)
+                or any(not safe_name(name) or not (
+                    name.startswith(('data/bbo-', 'data/BBO_', 'experiments/bbo-',
+                                     'scripts/bbo_', 'src/srl/bbo', 'tests/test_bbo'))
+                    or name == 'studies/bbo-execution-delay.md')
+                    for name in archived_list)
+                or set(archived_list) & approved_names):
+            findings.append('invalid curated-history path allowlist')
+            archived_names = set()
+        else:
+            archived_names = set(archived_list)
+        allowed_history_names = approved_names | archived_names
         if set(git('ls-files').decode().splitlines()) != approved_names:
             findings.append('tracked files differ from the exact public inventory')
         checked_blobs = set()
@@ -148,7 +164,7 @@ def audit_git(root: Path) -> dict:
                 header, raw_name = record.split(b'\t', 1)
                 mode, kind, oid = header.decode().split()
                 name = raw_name.decode('utf-8')
-                if mode != '100644' or kind != 'blob' or name not in approved_names:
+                if mode != '100644' or kind != 'blob' or name not in allowed_history_names:
                     findings.append('unapproved type or path in publication history')
                     continue
                 if oid not in checked_blobs:
