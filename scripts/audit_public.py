@@ -137,6 +137,14 @@ def audit_git(root: Path) -> dict:
         if len(roots) != 1:
             findings.append('history must have one independently created root')
         approved_names = set(json.loads((root / 'release-files.json').read_text()))
+        # Explicitly archived files remain in immutable ancestor commits after
+        # an intentional current-tree de-scope. Review old blobs, not only HEAD.
+        archived = json.loads((root / 'data/descope-bbo-20261103.json').read_text())
+        retired_names = set(archived['removed_paths'])
+        if (len(retired_names) != 39 or retired_names & approved_names
+                or any(not safe_name(name) for name in retired_names)):
+            findings.append('invalid or overlapping historical de-scope manifest')
+        historical_names = approved_names | retired_names
         if set(git('ls-files').decode().splitlines()) != approved_names:
             findings.append('tracked files differ from the exact public inventory')
         checked_blobs = set()
@@ -148,7 +156,7 @@ def audit_git(root: Path) -> dict:
                 header, raw_name = record.split(b'\t', 1)
                 mode, kind, oid = header.decode().split()
                 name = raw_name.decode('utf-8')
-                if mode != '100644' or kind != 'blob' or name not in approved_names:
+                if mode != '100644' or kind != 'blob' or name not in historical_names:
                     findings.append('unapproved type or path in publication history')
                     continue
                 if oid not in checked_blobs:
