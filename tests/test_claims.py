@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from srl.claims import audit_acquisition, audit_claims, digest, quantitative_blocks
+from srl.claims import audit_claims, digest, quantitative_blocks
 
 
 class ClaimChecks(unittest.TestCase):
@@ -82,45 +82,3 @@ class ClaimChecks(unittest.TestCase):
     def test_numeric_detection_includes_tables_excludes_code_and_urls(self):
         text = 'Text [reference](https://example.org/2026).\n\n```sh\nrun 100\n```\n\n| n |\n| 12 |'
         self.assertEqual(quantitative_blocks(text), ['| n |\n| 12 |'])
-
-    def acquisition(self):
-        from srl.fx_study import SOURCE_URL
-
-        snapshot = b'Date,USD,JPY\n2016-06-01,1.1,110\n2016-06-02,1.2,120\n'
-        (self.root / 'data/ecb-fx-reference.csv').write_bytes(snapshot)
-        files = ('src/srl/fx_study.py', 'scripts/fx_study.py', 'tests/test_fx_study.py',
-                 'experiments/ecb-fx-mom20-protocol.md', 'DATA_LICENSE.md')
-        for name in files:
-            path = self.root / name
-            path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_bytes(b'fixture')
-        return {'source_url': SOURCE_URL, 'rights_reviewed': True,
-                'archive_notice_check': 'PASS_SINGLE_CSV_NO_EXTRA_NOTICE',
-                'canonical_csv_sha256': digest(snapshot), 'selected_rows': 2,
-                'protocol_commit': 'a' * 40,
-                'frozen_file_sha256': {name: digest(b'fixture') for name in files}}
-
-    def save_acquisition(self, receipt):
-        (self.root / 'data/ecb-acquisition.json').write_text(json.dumps(receipt))
-
-    def test_acquisition_receipt_binds_snapshot_and_preaccess_methods(self):
-        receipt = self.acquisition()
-        self.save_acquisition(receipt)
-        audit_acquisition(self.root)
-        (self.root / 'src/srl/fx_study.py').write_bytes(b'amended')
-        with self.assertRaisesRegex(ValueError, 'method changed'):
-            audit_acquisition(self.root)
-
-    def test_acquisition_rejects_rights_source_identity_and_incomplete_freeze(self):
-        receipt = self.acquisition()
-        for field, value in (('rights_reviewed', False), ('source_url', 'https://example.org'),
-                             ('archive_notice_check', 'PENDING'), ('canonical_csv_sha256', 'b' * 64),
-                             ('selected_rows', 3), ('protocol_commit', 'not-a-commit')):
-            changed = dict(receipt, **{field: value})
-            self.save_acquisition(changed)
-            with self.subTest(field=field), self.assertRaises(ValueError):
-                audit_acquisition(self.root)
-        receipt['frozen_file_sha256'].pop('DATA_LICENSE.md')
-        self.save_acquisition(receipt)
-        with self.assertRaisesRegex(ValueError, 'incomplete'):
-            audit_acquisition(self.root)

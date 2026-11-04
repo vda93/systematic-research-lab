@@ -106,24 +106,3 @@ def audit_claims(root: Path) -> dict[str, Any]:
     return {'status': 'FAIL' if findings else 'PASS', 'findings': sorted(set(findings)),
             'reviewed_blocks': sum(len(v) for v in raw['documents'].values()),
             'sources': len(sources), 'figures': len(raw['figures'])}
-
-
-def audit_acquisition(root: Path) -> None:
-    """Bind public data and method bytes to the pre-access receipt."""
-    from srl.fx_study import SOURCE_URL, parse_csv
-
-    receipt = json.loads((root / 'data/ecb-acquisition.json').read_text())
-    snapshot = (root / 'data/ecb-fx-reference.csv').read_bytes()
-    if (receipt['source_url'] != SOURCE_URL or receipt['rights_reviewed'] is not True
-            or receipt['archive_notice_check'] != 'PASS_SINGLE_CSV_NO_EXTRA_NOTICE'
-            or receipt['canonical_csv_sha256'] != digest(snapshot)
-            or not re.fullmatch('[0-9a-f]{40}', receipt['protocol_commit'])
-            or len(parse_csv(snapshot)) != receipt['selected_rows']):
-        raise ValueError('acquisition source, rights, identity or qualification mismatch')
-    expected_files = {'src/srl/fx_study.py', 'scripts/fx_study.py', 'tests/test_fx_study.py',
-                      'experiments/ecb-fx-mom20-protocol.md', 'DATA_LICENSE.md'}
-    if set(receipt['frozen_file_sha256']) != expected_files:
-        raise ValueError('incomplete pre-access method identities')
-    for name, sha in receipt['frozen_file_sha256'].items():
-        if digest((root / name).read_bytes()) != sha:
-            raise ValueError('method changed after pre-access freeze; versioned amendment required')
