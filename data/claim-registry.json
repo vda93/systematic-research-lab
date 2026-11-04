@@ -908,27 +908,8 @@
     "docs/ownership.md": [
       {
         "kind": "documentation",
-        "sha256": "df51e4778e2d99ffd0e287d816ee588212340f1f5ad167bccc10a3a5e4d5d178",
+        "sha256": "77a78ef71079a3e027de9efaa032b20488c38fbf90214133ba5e631f484e693e",
         "source_ids": []
-      },
-      {
-        "kind": "documentation",
-        "sha256": "c8f35087bc8897bc66f6f98aec239fbeb344278cf3fc6061cf535e0b332cc6c8",
-        "source_ids": [
-          "D7",
-          "E1",
-          "M7",
-          "N1",
-          "N2",
-          "O6"
-        ]
-      },
-      {
-        "kind": "historical_report",
-        "sha256": "35cf6e213fbe6227630c37afd29ef1c9404daf86e4e3d1cacbc3337ec6f354f2",
-        "source_ids": [
-          "M12"
-        ]
       }
     ],
     "docs/provenance.md": [
