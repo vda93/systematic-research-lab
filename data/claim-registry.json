@@ -20,9 +20,13 @@
         "sha256": "aa3d5c0e996b0832f7e0d0ab1dc351449e183256277f6a736b599db01586c736"
       },
       {
-        "kind": "documentation",
+        "kind": "historical_report",
         "sha256": "4e04b6a394f3a9e62c1a058e3ee61072eb3fbe16b3cc11becd03d44ea816706d",
-        "source_ids": []
+        "source_ids": [
+          "O1",
+          "O3",
+          "O4"
+        ]
       },
       {
         "kind": "documentation",
@@ -907,9 +911,15 @@
     ],
     "docs/ownership.md": [
       {
-        "kind": "documentation",
+        "kind": "historical_report",
         "sha256": "77a78ef71079a3e027de9efaa032b20488c38fbf90214133ba5e631f484e693e",
-        "source_ids": []
+        "source_ids": [
+          "O1",
+          "O6",
+          "B21",
+          "N1",
+          "B15"
+        ]
       }
     ],
     "docs/provenance.md": [
@@ -4189,9 +4199,11 @@
         "source_ids": []
       },
       {
-        "kind": "documentation",
+        "kind": "historical_report",
         "sha256": "b65a99f556d11a050e2508fa30817d8e1514ff62299c0c92cb06d4f9fa919584",
-        "source_ids": []
+        "source_ids": [
+          "N1"
+        ]
       },
       {
         "kind": "historical_report",
