@@ -8,7 +8,9 @@ This portfolio focuses on research I recognize, directed or participated in. The
 
 ### 1. Opening-range breakout (ORB)
 
-**The idea.** Mark the high and low of a market's first defined trading window. When price breaks beyond that range, test whether directional continuation follows. Our documented version waited for a completed five-minute breakout candle, placed a stop around the range midpoint and used either a market entry or a retest of the broken boundary depending on planned risk/reward. This summarizes **our recorded tested implementation**, not an independently recovered original FX Replay PDF.
+**The original idea.** FX Replay's *Opening Range Break Strategy (ORB)* marks the first 15 minutes of the New York session, or a 30-minute opening range for London or Asia. It waits for a five-minute candle to close beyond the range high or low and looks for a continuation move. The guide places the stop at the range midpoint and uses its Fibonacci-tool **1 standard-deviation (STDV) target**. If entering at market would offer less than 1R to that target, it proposes a limit entry on a retest of the broken boundary, cancelled if the target is reached first.
+
+**What we tested.** We formalized opening-range geometry and timing into research contracts, including market/retest entries, but did **not** certify a complete mechanical implementation of every discretionary condition in the original guide. The empirical findings below apply only to the tested versions.
 
 **Hypothesis.** Does the opening range itself explain continuation, or would simpler time-of-day momentum do just as well?
 
@@ -60,6 +62,6 @@ Each case study distinguishes **hypothesis, method, results, discussion and deci
 
 Many historical results are documented from qualified private reports; they **cannot be independently replayed using this public repository alone**. Public code and tests illustrate selected methods, not a substitute for licensed tick data, vendor strategy code, complete trade ledgers or broker execution records. See the [evidence register](docs/evidence.md), [limitations](docs/limitations.md) and [provenance](docs/provenance.md).
 
-The original EBP and NOWICK ideas are credited to Omar Agag and Bard FX in FX Replay educational strategy materials. Their PDFs are not redistributed here; source-specific rules, tested mechanical approximations and empirical verdicts are different things.
+The ORB, EBP and NOWICK concepts are described in FX Replay educational strategy materials (ORB guide, Omar Agag's EBP swing variation, and Bard FX's NOWICK play). The original PDFs are not redistributed here. Educational source rules, tested mechanical contracts and empirical verdicts must not be treated as identical.
 
 **Research standard:** a useful result includes a clear reason to reject or shelve a hypothesis when its evidence is insufficient.
