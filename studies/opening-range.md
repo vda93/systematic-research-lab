@@ -2,6 +2,18 @@
 
 [Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
 
+## From the original trading guide to a testable strategy
+
+FX Replay's *Opening Range Break Strategy (ORB): Checklist and setup guide* starts with a simple price reference: the high and low of the first **15 minutes** after New York opens (9:30–9:45 a.m. Eastern Time), or the first **30 minutes** around the specified London (3:00–3:30 a.m. Eastern) or Asian (9:00–9:30 a.m. UTC+9) market opens. It then waits for a **five-minute candle to close beyond the opening range** before looking for a continuation trade. These clock examples are the source guide's suggested setups, not a description of every anchor used in our later research surface. *(FX Replay guide, p. 2.)*
+
+For the usual market entry, the guide places the stop-loss at the **opening-range midpoint** and the profit target at its Fibonacci-tool **1 standard-deviation (STDV) level**. It distinguishes a breakout that agrees with the direction of the first five-minute candle from one that disagrees. When the close is too far outside the range to provide at least **1R** to the prescribed target, the guide suggests a **limit order at a retest of the broken range boundary**, cancelled if the target is reached before entry. *(FX Replay guide, p. 3.)*
+
+The source also includes discretionary qualifiers: avoid breakouts near previous-session highs/lows when little liquidity lies beyond; stop for the day after **two losses** or **one win**; and consider extended runners when particular trend-line-liquidity or MMXM context is present. *(FX Replay guide, pp. 4–5.)* These are **source instructions, not proof** that every item was implemented or empirically validated in TradingBotHQ.
+
+Our research took the opening-range concept into specified and testable contracts, with frozen clock definitions, completed-candle signals, source-specific market/retest order handling, executable quote conventions and independently audited lifecycles. Its recorded original-geometry version used a midpoint stop and a structural target, but the exact mapping between its quantitative target calculation and the guide's **1 STDV Fibonacci level** is **not independently certified here**. The economic results below belong to those documented research implementations, not to the FX Replay guide's complete discretionary checklist. The guide itself is a privately supplied seven-page educational PDF and is not republished in this repository.
+
+The empirical question is whether the apparent edge comes from opening-range boundaries, or whether generic timing and momentum explain as much. Different index and gold versions and their validation periods remain separate.
+
 ![Historical opening-range evidence, with sample and inference limitations](../figures/orb.svg)
 
 The opening-range breakout program closed on September 30, 2026 without authorizing deployment. Some economic hypotheses had failed; some candidates stopped after conflicting validation; others were parked with promising Discovery results and unopened OOS. Budget or governance closure did not turn those unperformed tests into failures. [O6](../docs/evidence.md#o6)

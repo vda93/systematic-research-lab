@@ -1,24 +1,18 @@
-# How the research decisions evolved
+# Research decision timeline
 
 [Portfolio](../README.md) · [Research atlas](research-atlas.md)
 
-This chronology describes research decisions, not the dates of the market observations. Detailed historical windows remain attached to each study.
+Dates below describe research decisions, not the market observation timestamps.
 
-| Research stage | Evidence that changed the next step |
+| Period | What changed |
 | --- | --- |
-| Early infrastructure and news research | Deterministic event-time alignment and state-machine comparisons separated execution defects from hypotheses. Later calendar-coverage problems showed that a mechanically valid run could use an invalid event universe. |
-| Opening-range exploration | Large timing surfaces revealed local plateaus and extreme champion sensitivity. Representative selection and controls challenged exact range geometry. |
-| August to September 2026: ORB validation | USTEC's first OOS block supported the frozen candidate; the next failed independently. Gold parity and execution progress did not rescue financing qualification. [O2](evidence.md#o2), [O4](evidence.md#o4) |
-| September 25 to 26: MOMCONT exit research | Directional mirror, trailing ablation, earlier eras, frozen exit comparison and paired portfolio validation led back to canonical exits, with funded sensitivity indeterminate. [Study](../studies/momentum-continuation.md), [M7](evidence.md#m7) |
-| September 28 to 29: MOMCONT on DE30X H1 | Persistence development support was followed by concentration rejection, a separately authorized terminal read, sizing correction and bounded portfolio inclusion research. [Study](../studies/de30-continuation.md), [D2](evidence.md#d2), [D4](evidence.md#d4), [D7](evidence.md#d7) |
-| September 30: historical ORB closeout | The final gold holdout was negative or effectively flat. Tested branches closed; untested parked branches did not acquire invented failure results. [Study](../studies/opening-range.md), [O6](evidence.md#o6) |
-| Early October: direct feature falsification | NOWICK matched controls failed the incremental continuation claim. Later exploratory outliers did not reopen the original program. |
-| October 11 to 12: negative mechanism findings | EBP's frozen small-candle study found a retrospective negative association; an independent NOWICK reversal contract also failed. Association, causality and opposite-direction profitability stayed separate. [B23](evidence.md#b23), [N2](evidence.md#n2) |
-| October 2026: Research OS | Manifests, evidence roles, mutation detection, deterministic review packs and explicit source/checkout checks made the evidence chain inspectable. [Engineering](../studies/research-engineering.md), [E1](evidence.md#e1) |
-| October 20: public distillation | Completed records were surveyed across programs. Original public summaries and figures were built without reopening sealed data or modifying historical research ancestry. |
-| October 21: public reproducible study | A fixed reference-rate question and implementation were published before acquisition; the complete public study retained its failed joint comparison. [FX1](evidence.md#fx1) |
+| Early event-driven research | MacroImpulse event timing, broker execution parity and news filtering became separately testable questions. [B08](evidence.md#b08) |
+| August to September 2026 | Opening-range configuration sweeps yielded apparent local plateaus, but placebo ranges challenged whether precise boundary geometry supplied unique information. [O1](evidence.md#o1) |
+| September 2026 | A frozen Nasdaq ORB candidate passed one standalone validation block and failed the next; gold implementation parity did not rescue final financing economics. [ORB](../studies/opening-range.md) |
+| September 30, 2026 | The tested ORB program closed without deployment approval; distinct untested proposals remained unadjudicated. [O6](evidence.md#o6) |
+| Early October 2026 | NOWICK matched controls did not confirm a robust extra continuation effect; the separate reversal failed its own decision rule. [N1](evidence.md#n1) |
+| October 2026 | EBP source reconstruction exposed large exposure changes from pending-order rules and native-timeframe assumptions. [B21](evidence.md#b21) |
+| October 2026 | MacroImpulse calendar forensics replaced an apparent later-period clean failure with an **invalid data universe** verdict. [B15](evidence.md#b15) |
+| October 2026 | Research OS tools made source identities, evidence roles and disclosure checks explicit. [E1](evidence.md#e1) |
 
-Discovery justified further tests in some branches. Controls rejected mechanisms in others, and completed experiments sometimes ended the work. Each decision kept the surviving claim within its evidence.
-
-
-**3 November 2026 program follow-up:** a separately reconciled finite September–October 2026 live deployment sample prompted shelving new MOMCONT alpha research, while preserving the earlier H025/H026 historical findings and their evidence roles. See [dated closeout](../studies/momentum-continuation.md#subsequent-forward-program-closeout-3-november-2026).
+Scientific decisions remain bounded to the versions and evidence actually tested. A correct test can produce an economically unsuccessful result.

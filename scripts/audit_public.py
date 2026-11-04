@@ -13,6 +13,9 @@ from urllib.parse import unquote, urlsplit
 
 
 GENERATED = {'.git', '.venv', '__pycache__', 'build', 'dist', '.pytest_cache'}
+
+# Historical public removals retained for complete Git-history inspection.
+RETIRED_PORTFOLIO_PATHS = ["DATA_LICENSE.md","data/ecb-acquisition.json","data/ecb-execution.json","data/ecb-fx-reference.csv","data/ecb-fx-results.json","experiments/ecb-fx-mom20-protocol.md","experiments/fx-evidence.json","figures/de30.svg","figures/fx-reference.svg","figures/momentum.svg","results/fx-tables.md","scripts/fx_study.py","scripts/render_fx.py","src/srl/fx_study.py","studies/de30-continuation.md","studies/fx-reference-momentum.md","studies/momentum-and-execution.md","studies/momentum-continuation.md","studies/reconstruction-and-timing.md","studies/vwap-research.md","tests/test_fx_figure.py","tests/test_fx_study.py"]
 TEXT_TYPES = {'.py', '.json', '.md', '.toml', '.svg', '.yml', '.yaml', '.txt'}
 SPECIAL = {'LICENSE', '.gitignore', '.gitattributes'}
 LINK = re.compile(r'!?\[[^\]]*\]\(([^)]+)\)')
@@ -140,13 +143,15 @@ def audit_git(root: Path) -> dict:
         # Preserve the exact historical publication boundary after scoped de-publication.
         # Removed files are still scanned in every old commit, but cannot reappear in HEAD.
         archived_list = json.loads((root / 'archived-public-paths.json').read_text())
-        if (not isinstance(archived_list, list) or len(archived_list) != 39
+        former_bbo = {name for name in archived_list if isinstance(name, str) and (
+            name.startswith(('data/bbo-', 'data/BBO_', 'experiments/bbo-',
+                             'scripts/bbo_', 'src/srl/bbo', 'tests/test_bbo'))
+            or name == 'studies/bbo-execution-delay.md')}
+        if (not isinstance(archived_list, list) or len(archived_list) != 39 + len(RETIRED_PORTFOLIO_PATHS)
                 or len(set(archived_list)) != len(archived_list)
-                or any(not safe_name(name) or not (
-                    name.startswith(('data/bbo-', 'data/BBO_', 'experiments/bbo-',
-                                     'scripts/bbo_', 'src/srl/bbo', 'tests/test_bbo'))
-                    or name == 'studies/bbo-execution-delay.md')
-                    for name in archived_list)
+                or any(not safe_name(name) for name in archived_list)
+                or len(former_bbo) != 39
+                or set(archived_list) != former_bbo | set(RETIRED_PORTFOLIO_PATHS)
                 or set(archived_list) & approved_names):
             findings.append('invalid curated-history path allowlist')
             archived_names = set()

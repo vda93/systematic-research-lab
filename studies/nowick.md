@@ -2,6 +2,14 @@
 
 [Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
 
+## What the original NOWICK setup tries to capture
+
+Bard FX's FX Replay *Compensation Play (Nowick) Strategy* describes a candle with essentially no wick on one side. The premise is that its one-sided body reflects an imbalance price might later revisit before continuing in the trend direction.
+
+The educational rules focus on 15-minute charts: identify a trend-aligned Nowick candle, look for a limit-order retest within **nine candles**, place the stop beyond nearby structural high/low with a **three-pip buffer**, and seek **1:1 reward-to-risk**. The source also describes contextual avoidance rules, including nearby US news and entries at structural swing extremes.
+
+These are **the original source's trading heuristics**. The H004 analysis below instead asks a narrower empirical question: does wicklessness itself add predictive information beyond matched ordinary candles? Its event-level results are not a complete executable replay of every discretionary filter from the PDF.
+
 ![Historical nowick evidence, with sample and inference limitations](../figures/nowick.svg)
 
 The program stopped after testing two claims: whether the candle pattern added continuation information beyond comparable ordinary candles, and whether a separately defined reversal worked better. The matched event study did not establish a robust incremental continuation signal. The reversal study also failed its frozen decision rule, leaving neither result sufficient to justify another trading implementation.

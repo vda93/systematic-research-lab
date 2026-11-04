@@ -16,17 +16,16 @@ class HistoricalFigureTests(unittest.TestCase):
     def test_all_figures_rebuild_and_transcription_change_is_visible(self):
         data = json.loads((ROOT / 'data/historical-results.json').read_text())
         first = historical_artifacts(data)
-        self.assertEqual(len(first), 5)
+        self.assertEqual(len(first), 3)
         self.assertEqual(first, historical_artifacts(data))
         for name, payload in first.items():
             if name.endswith('.svg'):
                 ET.fromstring(payload)
                 self.assertIn(b'Historical', payload)
         changed = deepcopy(data)
-        changed['records'][0]['metrics']['long_total_r'] = -8.0
+        next(row for row in changed['records'] if row['id'] == 'O1')['metrics']['paired_actual_minus_close_median_r'] = -0.055
         other = historical_artifacts(changed)
-        self.assertNotEqual(first['figures/momentum.svg'], other['figures/momentum.svg'])
-        self.assertIn(b'-8.00', other['figures/momentum.svg'])
+        self.assertNotEqual(first['figures/orb.svg'], other['figures/orb.svg'])
 
     def test_oos_sample_labels_follow_published_records(self):
         data=json.loads((ROOT/'data/historical-results.json').read_text())

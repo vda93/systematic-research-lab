@@ -1,93 +1,67 @@
 # TradingBotHQ | Systematic Trading Research
 
-A research log of systematic trading hypotheses explored through TradingBotHQ. I use AI coding and analysis tools extensively. The aim is to document **the questions investigated, how they were tested, what the evidence showed, and what was decided**, not to claim that I personally wrote every engine or invented every rule.
+I investigate whether intuitive trading ideas survive systematic testing. The question is not whether a chart setup looks convincing, but whether its rules can be implemented consistently, compared with sensible controls and evaluated after trading costs.
 
-I am deliberately narrowing this portfolio to research families I actually recognize, directed or participated in. A standalone AI-generated experiment is not automatically my personal research merely because its files landed in this repository. [Authorship and assistance](docs/ownership.md) remain documented separately from scientific results.
+This portfolio focuses on research I recognize, directed or participated in. The underlying trading ideas often originated with other traders; I used AI-assisted implementation, analysis and review. Neither that assistance nor the presence of a study in Git implies that I invented a strategy or personally wrote every line of code. [Ownership and assistance](docs/ownership.md).
 
-## The research lifecycle
-
-Each case study follows the same format:
-
-1. **Hypothesis:** What market behavior or failure mechanism are we testing? Where did the idea originate?
-2. **Methodology:** Data and sampling windows, controls, baselines, execution assumptions, costs, validation gates and implementation checks.
-3. **Results:** Sample sizes, observed outcomes, uncertainty and whether the predeclared test passed.
-4. **Discussion:** Competing explanations, biases, limitations, regime dependence and what the evidence cannot establish.
-5. **Conclusion and decision:** Continue, reject, park or close, with a reason. Untested follow-ups remain untested.
-
-The results are historical experiments, not claims of live profitability or deployment approval. Code may be AI-assisted, vendor-derived or independently written; these distinctions are not the same as the scientific decision.
-
-## Research case studies
+## Four research stories
 
 ### 1. Opening-range breakout (ORB)
 
-**Hypothesis.** Does opening-range geometry and its timing predict exploitable continuation beyond simpler time-of-day or candle-based explanations?
+**The original idea.** FX Replay's *Opening Range Break Strategy (ORB)* marks the first 15 minutes of the New York session, or a 30-minute opening range for London or Asia. It waits for a five-minute candle to close beyond the range high or low and looks for a continuation move. The guide places the stop at the range midpoint and uses its Fibonacci-tool **1 standard-deviation (STDV) target**. If entering at market would offer less than 1R to that target, it proposes a limit entry on a retest of the broken boundary, cancelled if the target is reached first.
 
-**Methodology.** Tested timing regions on historical Nasdaq and gold CFDs, then compared real range boundaries with same-width alternative ranges and simpler controls. Tracked distinct Discovery and validation blocks, implementation parity and trading costs.
+**What we tested.** We formalized opening-range geometry and timing into research contracts, including market/retest entries, but did **not** certify a complete mechanical implementation of every discretionary condition in the original guide. The empirical findings below apply only to the tested versions.
 
-**Results.** Some Discovery regions appeared promising, but exact boundary geometry was not uniquely supported. A representative Nasdaq candidate passed one validation block and failed the next. The gold branch also failed later economic or terminal qualification despite technical progress.
+**Hypothesis.** Does the opening range itself explain continuation, or would simpler time-of-day momentum do just as well?
 
-**Discussion.** Searching many configurations creates selection risk. Scientific parity does not establish a profitable executable strategy, and untested parked alternatives are not negative OOS results.
+**Method.** Tested Nasdaq and gold CFD timing configurations, placebo range boundaries, independent validation periods, exact-tick/MQL5 correspondence and execution/financing costs.
 
-**Decision.** The tested original program closed without deployment authorization; preserve separate untested branches without relabeling them failures. [Full ORB study](studies/opening-range.md) | [Branch outcomes](studies/opening-range-atlas.md)
+**Finding.** Some development configurations and a first Nasdaq validation period looked promising; range-specific geometry did not establish a unique effect and the next independent validation failed. The gold implementation passed important parity checks but not the full economic/terminal qualification.
 
-### 2. Engulfing / EBP
+**Decision.** Close the tested original program for deployment. Preserve separate untested hypotheses as untested, not as failures. [ORB study](studies/opening-range.md) · [Branch decisions](studies/opening-range-atlas.md).
 
-**Hypothesis.** Do engulfing-pattern implementations retain a useful signal once the exact source rules, pending-order lifecycle and broker semantics are reconstructed correctly?
+### 2. Engulfing Bar Play (EBP)
 
-**Methodology.** Rebuilt competing interpretations of the original rule, checked order-occupancy consequences, repaired a native-timeframe matrix and separated observational candle-mechanism questions from executable strategy tests.
+**The idea.** In Omar Agag's *EBP Strategy (Swing Trading Variation)*, a candle sweeps the previous candle's high or low and closes through the body on the other side. A decisive close near its extreme suggests a continuation setup, with a proposed limit entry on a partial retracement; a less decisive close uses a deeper retracement. The source specifies a 2R target and additional management rules. We tested explicit mechanical interpretations rather than treating the visual idea as one unambiguous program.
 
-**Results.** Different pending-order interpretations produced dramatically different exposure. A corrected 88-cell native-timeframe Discovery matrix was mostly weak, and the separate small-candle study found a negative retrospective association that did not establish a viable reversed trade.
+**Hypothesis.** Does a candle-engulfing setup retain an advantage once ambiguous order lifetime, retracement and timeframe rules are made explicit?
 
-**Discussion.** An apparent advantage from a three-trade replay is not equivalent to a high-throughput result. Neither weak performance nor a negative association identifies a causal mechanism or profitable opposite-side strategy.
+**Method.** Reconstructed alternative pending-order semantics, corrected a native-timeframe test matrix and examined a separate observational small-candle mechanism.
 
-**Decision.** Preserve the competing interpretations and frozen candidate histories. No winner was selected merely by choosing the most attractive implementation. [Full EBP study](studies/engulfing-and-support.md)
+**Finding.** The order interpretation materially changed exposure. The corrected discovery matrix was generally weak; a small-candle association did not demonstrate a profitable opposite-side trade.
 
-### 3. NOWICK and ANTI-NOWICK
+**Decision.** Preserve the tested interpretations without selecting the most flattering replay as a winner. [EBP study](studies/engulfing-and-support.md).
 
-**Hypothesis.** Does a nearly wickless candle predict continuation beyond otherwise comparable candles? If not, does a separately specified reversal rule work?
+### 3. NOWICK
 
-**Methodology.** Compared eligible pattern events with deterministic matched ordinary-candle controls across four FX instruments, using dependence-aware uncertainty. A separate reversal study compared net reversed outcomes with matched controls.
+**The idea.** In Bard FX's *Compensation Play (Nowick) Strategy*, a candle with little or no wick on one side signals an apparent directional imbalance. The source proposes trading with the trend after a retest within nine candles, with a structure-based stop and a 1:1 target. That sounds plausible, but a visually distinctive candle may simply encode momentum or volatility already visible elsewhere.
 
-**Results.** The continuation study did not establish robust incremental signal. The independently tested reversal also failed its frozen rule.
+**Hypothesis.** Does wicklessness add predictive information beyond otherwise comparable candles? If continuation lacks support, does a separately specified reversal hypothesis work?
 
-**Discussion.** Failure to predict continuation does not imply that trading the opposite direction should work. Matching also cannot eliminate every source of confounding.
+**Method.** Matched pattern events with comparable ordinary candles across four FX instruments. Tested reversal separately, with its own frozen controls and costs. These research contracts are not a claim to have replayed every discretionary filter in the source PDF.
 
-**Decision.** Shelved the original wickless-candle family and rejected the distinct tested reversal. [NOWICK study](studies/nowick.md)
+**Finding.** No robust incremental continuation advantage was established. The separately specified reversal also failed.
 
-### 4. Momentum continuation (MOMCONT)
+**Decision.** Shelve the original family and reject the tested reversal without trying to manufacture a reverse-trading edge. [NOWICK study](studies/nowick.md).
 
-**Hypothesis.** Are direction symmetry and alternative exit mechanics improvements over a frozen vendor-derived momentum-continuation architecture?
+### 4. MacroImpulse: news-driven event trading
 
-**Methodology.** Tested mirrored short direction, trailing-stop ablation, historical-era sensitivity and a paired portfolio comparison, with reference-path parity before counterfactual analysis.
+**The idea.** Major scheduled economic announcements can move currency prices sharply. We studied an event-time strategy that attempts to capture the post-release price impulse using preplanned trigger levels. The difficulty is that the same moments can produce wider spreads, sequential opposite-side triggers and poor fills.
 
-**Results.** Mirrored shorts failed their specified comparison. Removing the trail improved some recent gold metrics but increased drawdown and changed which future trades could occur. The later portfolio decision kept the canonical exit instead of promoting the attractive variant.
+**Hypothesis.** Can a repeatable event-driven entry survive realistic trading frictions, data-quality checks and independent validation, and can filters improve the *whole* trade process rather than just retrospectively identify losing trades?
 
-**Discussion.** Better standalone R does not imply a superior portfolio. Holding-time and signal-occupancy changes invalidate naive trade-by-trade comparisons.
+**Method.** Evaluated historical event-triggered trades, execution mechanics, spread/commission assumptions, trigger-time filters, early-exit proposals and the completeness of economic-calendar records.
 
-**Historical decision.** The frozen exit studies retained the canonical architecture under their recorded criteria. **Subsequent disposition, 3 November 2026:** after a negative, broker-reconciled September–October forward sample, the MOMCONT program was shelved for new alpha work. Earlier results are not retroactively rejected; production/reference parity remains incomplete. Strategy origins and individual code contributions must be distinguished from research direction. [Full MOMCONT study](studies/momentum-continuation.md)
+**Finding.** Some historical spread-only results were positive, but several seemingly sensible filters failed. A later medium-impact calendar source lost coverage, invalidating a clean out-of-sample strategy verdict rather than proving either success or failure.
 
-### 5. DE30 continuation and sizing
+**Decision.** Preserve the engineering and data-forensics lessons; the historical program remains shelved until the event universe and execution economics can be independently qualified. [Event-driven study](studies/news-research.md) · [Calendar forensic case](studies/data-forensics.md).
 
-**Hypothesis.** Can a one-bar full-signal persistence variant survive robustness and independent terminal validation, and does configured percentage risk match actual contract loss?
+## How the research is conducted
 
-**Methodology.** Tested development performance, preregistered concentration stress, a later separately authorized sealed holdout, and risk-sizing correctness with semantic trade-path parity.
+Each case study distinguishes **hypothesis, method, results, discussion and decision**. I try to freeze comparisons before looking at outcomes, check selection effects and alternative explanations, distinguish event studies from executable trading backtests, and refuse to promote a strategy merely because one historical configuration is attractive.
 
-**Results.** The development concentration gate rejected the early claim of robust support, while the later terminal test passed its separate criteria. A risk-sizing correction preserved 837 reference trade paths in the historical engineering test.
+Many historical results are documented from qualified private reports; they **cannot be independently replayed using this public repository alone**. Public code and tests illustrate selected methods, not a substitute for licensed tick data, vendor strategy code, complete trade ledgers or broker execution records. See the [evidence register](docs/evidence.md), [limitations](docs/limitations.md) and [provenance](docs/provenance.md).
 
-**Discussion.** Development robustness, later validation and execution correctness answer different questions. A corrected sizing engine is not evidence that the project owner personally wrote the correction.
+The ORB, EBP and NOWICK concepts are described in FX Replay educational strategy materials (ORB guide, Omar Agag's EBP swing variation, and Bard FX's NOWICK play). The original PDFs are not redistributed here. Educational source rules, tested mechanical contracts and empirical verdicts must not be treated as identical.
 
-**Historical decision.** Preserve both the failed concentration gate and the later positive terminal/correctness findings without blending them. **Subsequent disposition:** the November 2026 MOMCONT program closeout also covers the DE30 sleeve and supersedes continued rollout recommendations, not its historical H026 result. [Full DE30 study](studies/de30-continuation.md)
-
-## Other TradingBotHQ research history
-
-The [research atlas](docs/research-atlas.md) records additional investigations: [VWAP](studies/vwap-research.md), [news/MacroImpulse](studies/news-research.md), [data forensics](studies/data-forensics.md), [Venom and momentum diagnostics](studies/momentum-and-execution.md), [NYDR/SSR/timing](studies/reconstruction-and-timing.md), and [research engineering](studies/research-engineering.md). These are historical records, not all independently validated strategies or personal authorship claims.
-
-## Evidence and reproducibility
-
-The [evidence register](docs/evidence.md), [provenance](docs/provenance.md), [methods](docs/methods.md) and [limitations](docs/limitations.md) explain which outcomes are public checks versus summaries of qualified private research. Raw licensed market data, proprietary EAs and live deployment settings remain private.
-
-An AI assistant can write implementation code, tests and reports while I direct a research question or decide whether to stop. Equally, agent-originated projects that I did not personally initiate or adopt should **not** be described as my individual research achievements. Public presence alone does not establish human authorship, independent technical mastery or real trading performance.
-
-The full historical repository may contain artifacts outside this curated research narrative. Their presence does not imply that I claim them as personal work.
-
-**Research standard:** a useful conclusion is one that follows from a test, including a negative one.
+**Research standard:** a useful result includes a clear reason to reject or shelve a hypothesis when its evidence is insufficient.

@@ -59,37 +59,6 @@ def historical_artifacts(data):
     style = {'font.family': 'DejaVu Sans', 'svg.fonttype': 'none',
              'svg.hashsalt': 'srl-historical-v1', 'axes.labelsize': 10, 'text.color': INK}
     with plt.rc_context(style):
-        fig, axes = _axes('Historical research | A better recent backtest did not earn promotion',
-                         ['USDJPY mirrored direction · recent sample', 'XAU exit ablation · three observed eras'])
-        r = rows['M2']
-        _bars(axes[0], [f"Long · n={r['long_trades']}", f"Short · n={r['short_trades']}"], [r['long_total_r'],r['short_total_r']])
-        for i, era in enumerate(('EARLY','MID','RECENT')):
-            r = rows['M4_'+era]
-            axes[1].bar(i-.16,r['canonical_total_r'],width=.3,color=BLUE,label='Canonical' if i==0 else None)
-            axes[1].bar(i+.16,r['no_trail_total_r'],width=.3,color=GOLD,label='No trail' if i==0 else None)
-        axes[1].set_xticks([0,1,2],['2016–19','2020–24','2025–Jul 26'])
-        axes[1].set_ylabel('Total R · complete strategy paths')
-        axes[1].axhline(0,color=INK,linewidth=.8)
-        axes[1].legend(frameon=False,fontsize=9)
-        result['figures/momentum.svg'] = _finish(fig,
-            'Historical R-space aggregates · H021/H023A · recent window [2025-01-01, 2026-08-01)\n'
-            'Canonical drawdown was lower in every XAU era. Different exits change occupancy and therefore the trade population.',
-            'MOMCONT historical direction and exit results')
-
-        fig, axes = _axes('Historical research | Robustness failure and sizing correctness are separate',
-                         ['DE30 development concentration stress', 'DE30 known-data engineering replay'])
-        r = rows['D2']
-        _bars(axes[0],['Full development','Remove top 10 dates'],[r['total_r'],r['remove_top10_date_total_r']])
-        r = rows['D7']
-        _bars(axes[1],['Original sizing','Corrected sizing'],
-              [r['before_median_actual_risk_pct'],r['after_median_actual_risk_pct']],ylabel='Median actual equity risk (%)',digits=5)
-        axes[1].axhline(r['requested_risk_pct'],color=INK,linestyle='--',linewidth=1)
-        axes[1].text(.98,.98,f"Requested {r['requested_risk_pct']:.2f}%",transform=axes[1].transAxes,ha='right',va='top',fontsize=10)
-        result['figures/de30.svg'] = _finish(fig,
-            'Development [2020-01-29, 2025-01-01) · H003 NOT SUPPORTED · H005 engineering replay\n'
-            '837/837 meaningful paths preserved. The separate spent lockbox did not erase the concentration failure.',
-            'DE30 historical concentration and sizing correctness')
-
         fig, axes = _axes('Historical research | Geometry controls and conflicting OOS blocks',
                          ['USTEC · paired mechanism contrasts across 18 cells', 'USTEC · standalone OOS price-space outcomes'])
         r = rows['O1']
