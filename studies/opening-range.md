@@ -2,6 +2,12 @@
 
 [Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
 
+## What opening-range breakout means
+
+An opening range is the high-to-low interval formed during a specified early trading window. A breakout strategy asks whether a later move beyond that interval is likely to continue. Our documented original-geometry implementation required a completed five-minute candle to close beyond a frozen range boundary, used the range midpoint for the stop, and chose between a market entry and a broken-boundary retest limit according to planned reward-to-risk. Those exact mechanics come from the **recorded TradingBotHQ implementation**, not from an independently located FX Replay source PDF.
+
+The research below tests whether the apparent edge belongs to the range boundaries at all, or whether timing and generic momentum explain as much. The versions and validation periods are distinct; this introduction does not collapse them into one strategy.
+
 ![Historical opening-range evidence, with sample and inference limitations](../figures/orb.svg)
 
 The opening-range breakout program closed on September 30, 2026 without authorizing deployment. Some economic hypotheses had failed; some candidates stopped after conflicting validation; others were parked with promising Discovery results and unopened OOS. Budget or governance closure did not turn those unperformed tests into failures. [O6](../docs/evidence.md#o6)
