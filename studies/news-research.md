@@ -12,7 +12,7 @@ The news research includes rejected filters, uncertain associations and a calend
 
 ## Reference execution comparison: controlled parity with bounded scope [B08](../docs/evidence.md#b08)
 
-The AI-assisted engineering program reconstructed an event-driven execution state machine and compared it with a NewsScopeEA reference under controlled events, broker ticks, and parameters. Recorded parity gates covered pending geometry, spread-aware stops, trigger/fill behavior, trailing ratchets, reverse-exit ordering, deletion, commission, and final balances on three FX instruments. This is a controlled engineering comparison. It does not establish full-year event-selection equivalence or standalone NewsScope profitability.
+The AI-assisted engineering program reconstructed an event-driven execution state machine and compared it with a vendor reference EA reference under controlled events, broker ticks, and parameters. Recorded parity gates covered pending geometry, spread-aware stops, trigger/fill behavior, trailing ratchets, reverse-exit ordering, deletion, commission, and final balances on three FX instruments. This is a controlled engineering comparison. It does not establish full-year event-selection equivalence or standalone vendor reference profitability.
 
 A separate historical timestamp qualification found that the selected news source aligned directly with the qualified UTC clock, without a timestamp shift or DST adjustment. That frozen alignment is an input contract, not proof of publication latency. The state-machine comparison covers the controlled events tested. Its scope remains unresolved beyond them, so it cannot establish behavior on every broker or configuration, or the reference vendor's broader performance.
 

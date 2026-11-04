@@ -1,4 +1,4 @@
-# Engulfing research and strict candidate support
+# Engulfing Bar Play: source rules and implementation sensitivity
 
 [Portfolio](../README.md) · [Research atlas](../docs/research-atlas.md) · [Evidence register](../docs/evidence.md)
 
@@ -11,13 +11,6 @@ A close within about 15% of the engulfing candle's extreme is treated as **stron
 That is the **source idea**, not a claim that every published test below implements every discretionary clause. Our research problem was that seemingly minor formalization choices, especially pending-order lifetime and replacement, can create radically different trade populations.
 
 The engulfing research includes completed negative tests, uncertain associations and designs that stopped before economic outcomes. The numbers are retained historical aggregates, not new market-study runs. Proprietary inputs and operational configurations remain private; research acceptance or parity alone does not authorize deployment.
-
-## CBR: zero support before economic outcomes [B20](../docs/evidence.md#b20)
-
-CBR Phase 0 enumerated a frozen causal pattern contract on approved 2020 to 2023 data. It produced **125,160 full-grid risk rows across 1,043 UTC weekdays**, but found **zero strict eligible extensions and zero matched support** under that contract. Repeated landmarks are correlated observations, not independent trades. Both registered comparisons failed their support gates.
-
-The recorded result is **support failure**, not evidence of economic losses. Forward returns, fills, P&L, and Phase 1 remained unopened. A bounded independent arithmetic check corroborated the zero-extension finding for its sampled month; it was not an independent full-history replication. The frozen contract stayed unchanged, with later evidence periods closed. The support audit is complete for this contract. Zero support here leaves the economic question unopened and does not reject every possible version of the strategy.
-
 
 ## EBP recovery and Python semantics: exposure depends on interpretation [B21](../docs/evidence.md#b21)
 

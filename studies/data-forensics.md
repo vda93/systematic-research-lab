@@ -24,7 +24,7 @@ The historical record also preserves a limitation in the audit itself. An earlie
 
 ## Challenge the convenient cross-check
 
-Vendor NewsScope trading statements initially looked like an independent check because their trading activity had not collapsed similarly. A follow-up audit corrected that interpretation. Of 1,061 later-period vendor trading minutes, 1,035 matched HIGH-impact events and only two matched MEDIUM. Those accounts could not establish completeness of the MediumImpact calendar. Another 23 apparent unmatched minutes were plausibly clock-calibration artifacts; they were not counted as proof of missing events. ([calendar-forensics record](../docs/evidence.md#b15))
+Vendor-reference trading statements initially looked like an independent check because their trading activity had not collapsed similarly. A follow-up audit corrected that interpretation. Of 1,061 later-period vendor trading minutes, 1,035 matched HIGH-impact events and only two matched MEDIUM. Those accounts could not establish completeness of the MediumImpact calendar. Another 23 apparent unmatched minutes were plausibly clock-calibration artifacts; they were not counted as proof of missing events. ([calendar-forensics record](../docs/evidence.md#b15))
 
 The related strategy's activity covered a different event population, so it could not serve as a reference dataset for MEDIUM completeness. Vendor fill differences still documented execution sensitivity, but did not identify latency as the cause or validate the missing universe.
 
