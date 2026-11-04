@@ -46,6 +46,9 @@ jobs:
         run: python -m coverage run scripts/reproduce.py --check
       - name: Enforce the measured library coverage regression gate
         run: python -m coverage report
+      - name: Verify depublication against historical Git paths
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
+        run: python -c "from pathlib import Path; from scripts.audit_public import audit_git; audit = audit_git(Path('.')); print(audit); assert audit['status'] == 'PASS'"
       - name: Audit every pinned runtime and developer package
         if: matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
         run: python -m pip_audit --strict --no-deps --disable-pip -r requirements-lock.txt
