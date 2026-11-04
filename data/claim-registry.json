@@ -3,48 +3,25 @@
   "documents": {
     "README.md": [
       {
-        "kind": "documentation",
-        "source_ids": [],
-        "sha256": "aa3d5c0e996b0832f7e0d0ab1dc351449e183256277f6a736b599db01586c736"
-      },
-      {
-        "kind": "documentation",
-        "sha256": "b9282c7f8fb8bf17506ecf9dbc5b7f8d87478564a7a3f3a7cfcc74e46d3bd7bf",
-        "source_ids": []
+        "kind": "historical_report",
+        "source_ids": [
+          "B21"
+        ],
+        "sha256": "daea388eb1bcbce8cddf7b874ae39e2c7e8e3b92033caad356d8673d4f271e28"
       },
       {
         "kind": "historical_report",
-        "sha256": "4e04b6a394f3a9e62c1a058e3ee61072eb3fbe16b3cc11becd03d44ea816706d",
         "source_ids": [
           "O1",
           "O3",
-          "O4"
-        ]
-      },
-      {
-        "kind": "documentation",
-        "sha256": "efde81d8832098d9da0febaf482e509e5ac7313a557f70859622c65c03464956",
-        "source_ids": []
-      },
-      {
-        "kind": "documentation",
-        "sha256": "becf5897a8fa8b240f709235e9979991d6d6948b9bc8a62aff461df245e0b9b1",
-        "source_ids": []
-      },
-      {
-        "kind": "documentation",
-        "sha256": "38430102f93e62d007bbcdfca3f86d958534b075ac994fa510d03d5ee73fae28",
-        "source_ids": []
-      },
-      {
-        "kind": "documentation",
-        "sha256": "f9c66fc9c2a72b263d2c87aa97d81f5406089c05509713ea513e3a33cfc4f083",
-        "source_ids": []
-      },
-      {
-        "kind": "documentation",
-        "sha256": "58545441cef05e998a85edc34b003030dd0a505503e2ccbbc80db1c05cbb8b76",
-        "source_ids": []
+          "O4",
+          "N1",
+          "N2",
+          "B08",
+          "B14",
+          "B21"
+        ],
+        "sha256": "16bf50d279dc3ac3e8132995d9f1999077a927b2a921f4b178eb0a6786013977"
       }
     ],
     "SECURITY.md": [],
@@ -437,13 +414,12 @@
     "docs/research-atlas.md": [
       {
         "kind": "historical_report",
-        "sha256": "35142f1fc29b47fe89467b72779c23d2b45d65d874d528c89130296a75702ad0",
+        "sha256": "f573a6827bf1846433ad239a1549f42a0bd526e937e94da2b88e998ae8d2ae8f",
         "source_ids": [
           "O1",
           "B21",
           "N1",
-          "B08",
-          "E1"
+          "B08"
         ]
       }
     ],
@@ -1053,14 +1029,14 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "794202e8fb44937c968720017f506ec12d2409bdebc4bda392f8cd0df9803876",
+        "sha256": "4522fd3267c16bfd92fa80edaa08d8cf233f2e3446424cffe4485f75a7ed4ea6",
         "source_ids": [
           "B21"
         ]
       },
       {
         "kind": "historical_report",
-        "sha256": "2f6306b03ffcf718203f88d6bc2cf8262d1b2a2244fef4d60d76659da5d75e4b",
+        "sha256": "56c7645a897823ebfceff8f5f61ea5d3f905bf40d0db3064a247cea088d5fdf2",
         "source_ids": [
           "B21",
           "B22",
@@ -1070,7 +1046,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "33ee491364a5aba04afa160ed91192c579f6aacde0abdd44ae6fda7e385b3190",
+        "sha256": "e21382372b4bab5db53a151f9a44bdfee9aac467d24945fefcac06e2e49c4ccc",
         "source_ids": [
           "B21",
           "B22",
@@ -1080,7 +1056,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "641d1cea419a76e1e8ef30776b834dce543ae9131e070adccb098f3a71cd7b4f",
+        "sha256": "a140775b97f3a0c527de8d9ee70f4b1512f70492275aba634e2051f67d0a386f",
         "source_ids": [
           "B22"
         ]
@@ -1107,7 +1083,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "b22a1617084ac7c7223cbc9059ea58337f8f6a7098c91f7dc6d5895feacb62cf",
+        "sha256": "0de35cb2d6f4be67baea61d3be26a223c30f823aa45a4fb37164a050e8101b18",
         "source_ids": [
           "B23"
         ]
@@ -1124,7 +1100,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "9a64416f76d7d5d7b59631bb2844fb8a8ee13efafdd7570f149bf7682ef9ce6e",
+        "sha256": "b9c69ad1c4c0a8e1ad4aff7935ba06e5e75ce3ea6e216e651b2c98accf871dcc",
         "source_ids": [
           "B24"
         ]
@@ -1133,12 +1109,12 @@
     "studies/news-research.md": [
       {
         "kind": "documentation",
-        "sha256": "ac155816411bd2e8205816c6e79ae33376f798819c95827ad7be5431ce3cabda",
+        "sha256": "29d3071c9d664b2ce54564b67c69a95234ec67d04ce58e6b2e27367c747f66fe",
         "source_ids": []
       },
       {
         "kind": "historical_report",
-        "sha256": "731b8de707166efecdc9cfb7d9064d3097bcbf21b4327440ebeef7dd5710756c",
+        "sha256": "a38b9464136c61018812c543951513a8abf8f67a31b9f8839df776b5010a90ed",
         "source_ids": [
           "B09"
         ]
@@ -1160,7 +1136,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "339e0421c9ebead3078d94509ec4564d85582af6f11425e370ff427ea1352da1",
+        "sha256": "fbf9e3fc96943695fd64bcc1f24e3122b41f88e3eb86d8048f8dd9ecc0c1c682",
         "source_ids": [
           "B08",
           "B09",
@@ -1175,7 +1151,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "e906da66f9a46e85a722c0efaca1cd457c28441c491d9ea27cb838270d1322ba",
+        "sha256": "4647e2915eef8937d673481727250bc57349a93e742575cb2c7928c4557b7345",
         "source_ids": [
           "B10"
         ]
@@ -1197,7 +1173,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "6fdcbffa5332f1cd266e371304d21c3bd454f9fc55e93a575bf9c29f11777664",
+        "sha256": "87a5b544ef442d0af1f2b40f2862801dde5f3fa82091454050b799075a7ab649",
         "source_ids": [
           "B11"
         ]
@@ -1219,14 +1195,14 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "ce7864835b462bdd37ffc3e4bbba7329d026b372c736bf888a789de26d8150f6",
+        "sha256": "a5fc4fbe0da62759023e48b6f25bf3d15c41d0ef5aeed557a1fc0a5f3645b8be",
         "source_ids": [
           "B12"
         ]
       },
       {
         "kind": "historical_report",
-        "sha256": "577191745ea8e5d25ba014d494c870093c97a56c523d4f9665469b54c84506fb",
+        "sha256": "7a59646a8fcfbd522b6672504a5835b780684ed426bc62514124305b2bb2b122",
         "source_ids": [
           "B08",
           "B09",
@@ -1263,7 +1239,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "6f8d40d41dcedc48e6d7f76a34098699da905fc9cb085b9756a5f34b44001a29",
+        "sha256": "7f898636c4a283b39fcf6cd387923b8351db197be649f92efc7a5e152930654f",
         "source_ids": [
           "B08",
           "B09",
@@ -1315,7 +1291,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "065028045dc62b6355c10027233c80e1fb6dd1929aedf75c9d29f6b4b001463c",
+        "sha256": "8ecf15e9a85ad7765d10ec0df11516dff85e0485ca2c863b9d9a98cc631ca49f",
         "source_ids": [
           "B15"
         ]
@@ -1344,7 +1320,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "7aea7266e558ba47805b38c4271d1b526d81c227e9d41230fb69f3507aada1fd",
+        "sha256": "a2d758c5b1df7b21f5757538fa4ffca36fd977586cb7b4c063ccdc6f5a925d9c",
         "source_ids": [
           "B16"
         ]
@@ -1375,7 +1351,7 @@
       },
       {
         "kind": "documentation",
-        "sha256": "9f1ae3ac8fb441694b064a2235c9e4b69babd094e6f93a7bcad16249376c02a3",
+        "sha256": "06b009523a1578078ac764408ede9063703f0138fcb9ab354adc7fbc2915329b",
         "source_ids": [
           "N1"
         ]
@@ -1398,7 +1374,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "cd1badd54c909978aa40a8abd9dec0a3e4eb0848be441edbee48c2acaa6f8840",
+        "sha256": "8f9dca2c46067f7b8c10652d0ba0d7028c905df2f38457b4b191b25aec10ec02",
         "source_ids": [
           "N1"
         ]
@@ -1467,6 +1443,14 @@
           "N1",
           "N2"
         ]
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "N1",
+          "N2"
+        ],
+        "sha256": "0ebafa7cdd30213802b07d5280dc21de5666d27d89d34c7c58f72425673c280e"
       }
     ],
     "studies/opening-range-atlas.md": [
@@ -1856,22 +1840,8 @@
     ],
     "studies/opening-range.md": [
       {
-        "kind": "historical_report",
-        "sha256": "203fda743a1516af2e316bd693abc37b76745bff13496375d81c75312e38dd26",
-        "source_ids": [
-          "A04",
-          "O1",
-          "O2",
-          "O3",
-          "O4",
-          "O5",
-          "O6",
-          "OF"
-        ]
-      },
-      {
         "kind": "documentation",
-        "sha256": "13feeea41b1d0b6b1e3ee45cdcc12af4116ed472e6a318026527576c0375bdf7",
+        "sha256": "1789a84e514ea5a14c874479465b5897a550f863ad480d12bfb0b8b1e73bdbf1",
         "source_ids": [
           "O1"
         ]
@@ -1885,7 +1855,7 @@
       },
       {
         "kind": "documentation",
-        "sha256": "164e2c258139bbeadee789adf3305313a0aca2904407d9d0e81258206e39a882",
+        "sha256": "b39b38317eedd27c6d93ec0bffde7342c24eeed321480f6187528890b0ca62de",
         "source_ids": [
           "O1"
         ]
@@ -2019,7 +1989,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "98c4d9a9f0ac842146f599211a218c8b95fbd6ca38ab73db1775be51f7c2846e",
+        "sha256": "2a1bf430b5b32ee999987e58c09dcc5b0f48bd4c4ea31e79c18a1eaaa013f054",
         "source_ids": [
           "O2"
         ]
