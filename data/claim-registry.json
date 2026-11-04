@@ -9,7 +9,7 @@
       },
       {
         "kind": "documentation",
-        "sha256": "7df70d8686b7d82eeb4ee5d2543a7a35886d9a8b5f7a11e8ee999188e11abb01",
+        "sha256": "b9282c7f8fb8bf17506ecf9dbc5b7f8d87478564a7a3f3a7cfcc74e46d3bd7bf",
         "source_ids": []
       },
       {
@@ -28,7 +28,7 @@
       },
       {
         "kind": "documentation",
-        "sha256": "2f104ebb0959cebe764e650799cdde3565fb9f6671477138c57f3439821970e8",
+        "sha256": "becf5897a8fa8b240f709235e9979991d6d6948b9bc8a62aff461df245e0b9b1",
         "source_ids": []
       },
       {
@@ -38,7 +38,7 @@
       },
       {
         "kind": "documentation",
-        "sha256": "fc4c0cbc6f049b8104a474c95a7dc248fe3a8fbdc095286d18c474a62f1bb23e",
+        "sha256": "f9c66fc9c2a72b263d2c87aa97d81f5406089c05509713ea513e3a33cfc4f083",
         "source_ids": []
       },
       {
@@ -423,7 +423,7 @@
     "docs/ownership.md": [
       {
         "kind": "historical_report",
-        "sha256": "77a78ef71079a3e027de9efaa032b20488c38fbf90214133ba5e631f484e693e",
+        "sha256": "e48153fa5d8ff7a7030b2b0c888e2b2098bb4a6ebfdd7b0bca75aac0a8486dd9",
         "source_ids": [
           "O1",
           "O6",
@@ -437,14 +437,14 @@
     "docs/research-atlas.md": [
       {
         "kind": "historical_report",
+        "sha256": "35142f1fc29b47fe89467b72779c23d2b45d65d874d528c89130296a75702ad0",
         "source_ids": [
           "O1",
           "B21",
           "N1",
           "B08",
           "E1"
-        ],
-        "sha256": "93ad15fa2b294f08d6517ce29df37cb9eb3958140799400ef3fbcf5048fa1dc1"
+        ]
       }
     ],
     "docs/research-os.md": [
@@ -1046,8 +1046,10 @@
     "studies/engulfing-and-support.md": [
       {
         "kind": "documentation",
-        "sha256": "25ae29c8bba8f6f32b478dfff99078197d2a43b74f28fd230c60d69a92a062ec",
-        "source_ids": []
+        "sha256": "de02ae2bae2fd211a7892dbe64b0dff491d3c5e99f0559191b2c049ec47598eb",
+        "source_ids": [
+          "B21"
+        ]
       },
       {
         "kind": "historical_report",
@@ -1366,12 +1368,14 @@
     "studies/nowick.md": [
       {
         "kind": "documentation",
-        "sha256": "7ce5b2ff0438bf7b4fc104559efeda85c6e1114d5d07a5df7411cb4009115ad4",
-        "source_ids": []
+        "sha256": "4eeca9626f222baccacf073c3bcf9216f92c8bd7d7bfa47c802b3a23b1b68faf",
+        "source_ids": [
+          "N1"
+        ]
       },
       {
-        "kind": "historical_report",
-        "sha256": "b65a99f556d11a050e2508fa30817d8e1514ff62299c0c92cb06d4f9fa919584",
+        "kind": "documentation",
+        "sha256": "9f1ae3ac8fb441694b064a2235c9e4b69babd094e6f93a7bcad16249376c02a3",
         "source_ids": [
           "N1"
         ]
@@ -1867,23 +1871,24 @@
       },
       {
         "kind": "documentation",
-        "sha256": "d8360d3a1da2188411f208d2af35f099c85c29747785440d60899d0cdcdfc761",
-        "source_ids": []
+        "sha256": "13feeea41b1d0b6b1e3ee45cdcc12af4116ed472e6a318026527576c0375bdf7",
+        "source_ids": [
+          "O1"
+        ]
       },
       {
         "kind": "documentation",
-        "sha256": "80639f77cdc090a5e524892eb12aacdb6aa0dbc2a9716e1c030eab06c1c161a8",
-        "source_ids": []
+        "sha256": "14e07cdf641dbd742c5690f8917e138332c246ce720b836fc9879227c8e3ef5c",
+        "source_ids": [
+          "O1"
+        ]
       },
       {
         "kind": "documentation",
-        "sha256": "018af5d03f46d4518049aa0df24a2fec5abaa859dc09a1d324c032f096befb8c",
-        "source_ids": []
-      },
-      {
-        "kind": "documentation",
-        "sha256": "32f0eb081483cd3121e59a5e9f725e4096c927bf689961767cb6d9516851020f",
-        "source_ids": []
+        "sha256": "164e2c258139bbeadee789adf3305313a0aca2904407d9d0e81258206e39a882",
+        "source_ids": [
+          "O1"
+        ]
       },
       {
         "kind": "historical_report",
