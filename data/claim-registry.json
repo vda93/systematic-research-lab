@@ -17,58 +17,37 @@
       {
         "kind": "documentation",
         "source_ids": [],
-        "sha256": "680a4adb1cf4129bcf9c1846de63a1f870b437bf1bffec3d574e365c311fc291"
-      },
-      {
-        "kind": "documentation",
-        "source_ids": [],
         "sha256": "aa3d5c0e996b0832f7e0d0ab1dc351449e183256277f6a736b599db01586c736"
       },
       {
         "kind": "documentation",
-        "source_ids": [],
-        "sha256": "0973957d84ec26d3efc7c1dee07de0f325d8bb39745e079f97655a034f419771"
+        "sha256": "4e04b6a394f3a9e62c1a058e3ee61072eb3fbe16b3cc11becd03d44ea816706d",
+        "source_ids": []
       },
       {
         "kind": "documentation",
-        "source_ids": [],
-        "sha256": "790dc5dc2289f20675f575ae4552717a10698d80a2107c03399fba1f9638be21"
+        "sha256": "efde81d8832098d9da0febaf482e509e5ac7313a557f70859622c65c03464956",
+        "source_ids": []
       },
       {
         "kind": "documentation",
-        "source_ids": [],
-        "sha256": "85dae19c5b1e7124394cc89c8fb03a6be11d6a96c3ea3889e842615d1a02b22c"
+        "sha256": "2f104ebb0959cebe764e650799cdde3565fb9f6671477138c57f3439821970e8",
+        "source_ids": []
       },
       {
         "kind": "documentation",
-        "source_ids": [],
-        "sha256": "4b56b665aa914bee0c267722a5d029b3ef062b2051863db2b91089d75522a904"
-      },
-      {
-        "kind": "historical_report",
-        "source_ids": [
-          "M12"
-        ],
-        "sha256": "f55f07a22e9d915972ca73da3f3fa13903828d963285883a8e1703feb9fbfb80"
+        "sha256": "38430102f93e62d007bbcdfca3f86d958534b075ac994fa510d03d5ee73fae28",
+        "source_ids": []
       },
       {
         "kind": "documentation",
-        "source_ids": [],
-        "sha256": "86f2b43fe950cf0eb7bf2f343536096fca00e928da0d295fa780769cf6ecd52a"
+        "sha256": "fc4c0cbc6f049b8104a474c95a7dc248fe3a8fbdc095286d18c474a62f1bb23e",
+        "source_ids": []
       },
       {
-        "kind": "historical_report",
-        "source_ids": [
-          "D7"
-        ],
-        "sha256": "1a1c718b31d291fb7378dc0ef26a2cac4851c0ee8329c1e5e1b0867f4455e9ad"
-      },
-      {
-        "kind": "historical_report",
-        "source_ids": [
-          "M12"
-        ],
-        "sha256": "d17b16e629b8ee1a94edcfe1a4e2783c6f29e85dd318bb36b10d3255feebc052"
+        "kind": "documentation",
+        "sha256": "58545441cef05e998a85edc34b003030dd0a505503e2ccbbc80db1c05cbb8b76",
+        "source_ids": []
       }
     ],
     "SECURITY.md": [],
@@ -3313,6 +3292,11 @@
     ],
     "studies/engulfing-and-support.md": [
       {
+        "kind": "documentation",
+        "sha256": "25ae29c8bba8f6f32b478dfff99078197d2a43b74f28fd230c60d69a92a062ec",
+        "source_ids": []
+      },
+      {
         "kind": "historical_report",
         "sha256": "14a548e646eb3fe2e42deefd4f577f9a76fb5e5c6cb494a99f6b60415ef02305",
         "source_ids": [
@@ -3984,11 +3968,9 @@
     ],
     "studies/news-research.md": [
       {
-        "kind": "historical_report",
-        "sha256": "29ae0a384b0d6b18c1d7b830463c22768fd9e3e0f2be804571526cdb53256c36",
-        "source_ids": [
-          "B08"
-        ]
+        "kind": "documentation",
+        "sha256": "ac155816411bd2e8205816c6e79ae33376f798819c95827ad7be5431ce3cabda",
+        "source_ids": []
       },
       {
         "kind": "historical_report",
@@ -4220,6 +4202,16 @@
       }
     ],
     "studies/nowick.md": [
+      {
+        "kind": "documentation",
+        "sha256": "7ce5b2ff0438bf7b4fc104559efeda85c6e1114d5d07a5df7411cb4009115ad4",
+        "source_ids": []
+      },
+      {
+        "kind": "documentation",
+        "sha256": "b65a99f556d11a050e2508fa30817d8e1514ff62299c0c92cb06d4f9fa919584",
+        "source_ids": []
+      },
       {
         "kind": "historical_report",
         "sha256": "6ca0df07fb6f2321137a85f58d220daa6ae809aa236578d070fc4136edc7b9c8",
