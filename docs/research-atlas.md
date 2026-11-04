@@ -2,7 +2,7 @@
 
 [Portfolio](../README.md) · [Evidence](evidence.md) · [Timeline](timeline.md)
 
-This curated atlas is a navigation map, not a catalogue of every historical bot or agent-generated file. It features research the project owner recognizes and can explain. Source ideas, human research decisions and AI-assisted implementation are attributed separately.
+The four research programs ask different questions about trading signals and execution. Their studies preserve the tested contract, sample role and decision. The [contribution record](ownership.md) identifies documented research decisions and assistance.
 
 | Program | Question | Main studies |
 | --- | --- | --- |
@@ -10,7 +10,8 @@ This curated atlas is a navigation map, not a catalogue of every historical bot 
 | Engulfing Bar Play | Does an engulfing/retracement setup survive explicit order-lifecycle definitions? | [EBP](../studies/engulfing-and-support.md), [B21](evidence.md#b21) |
 | NOWICK | Does a wickless-candle retest add predictive information beyond matched ordinary candles? | [NOWICK](../studies/nowick.md), [N1](evidence.md#n1) |
 | MacroImpulse | Are scheduled economic-release impulses tradeable after execution, costs, filtering and calendar-completeness checks? | [News research](../studies/news-research.md), [calendar forensics](../studies/data-forensics.md), [B08](evidence.md#b08) |
-| Research OS | Can study provenance, sample roles, figure inputs and implementation parity be checked rather than assumed? | [Engineering](../studies/research-engineering.md), [E1](evidence.md#e1) |
+
+Supporting [research engineering](../studies/research-engineering.md) covers evidence manifests, sample-role checks and implementation comparisons. It supplies methods for these programs.
 
 The [ORB branch atlas](../studies/opening-range-atlas.md) deliberately separates negative baselines, promising but unrun discovery successors, conflicting validation, scoped parity and financing failures. An unrun test cannot be reported as a negative test.
 

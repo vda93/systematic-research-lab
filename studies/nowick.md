@@ -1,4 +1,4 @@
-# Testing a candle pattern without manufacturing a reversal story
+# NOWICK: does wicklessness add information?
 
 [Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
 
@@ -8,9 +8,9 @@ A candle with essentially no wick on one side may suggest directional imbalance.
 
 One concrete trade plan uses **15-minute charts**: find a trend-aligned wickless candle, look for a limit-order retest within **nine candles**, place a stop beyond a nearby structural high/low with a **three-pip buffer**, and target **1:1 reward-to-risk**. Optional avoidance conditions concern nearby US economic releases and entries at structural swing extremes.
 
-These describe an illustrative trading setup. The H004 analysis below examines a **narrower empirical claim**: whether wicklessness adds predictive information beyond matched ordinary candles. It is not a full executable replay of every discretionary filter.
+H004 tests the incremental information in wicklessness by comparing pattern events with matched ordinary candles. Its event-study endpoint covers a narrower question than a full executable replay of the illustrative setup.
 
-![Historical nowick evidence, with sample and inference limitations](../figures/nowick.svg)
+![Matched continuation estimate with uncertainty and separately costed reversal results](../figures/nowick.svg)
 
 The program stopped after testing two claims: whether the candle pattern added continuation information beyond comparable ordinary candles, and whether a separately defined reversal worked better. The matched event study did not establish a robust incremental continuation signal. The reversal study also failed its frozen decision rule, leaving neither result sufficient to justify another trading implementation.
 
@@ -25,11 +25,11 @@ The program stopped after testing two claims: whether the candle pattern added c
 
 Source contracts: [N1](../docs/evidence.md#n1), [N2](../docs/evidence.md#n2).
 
-The closeout explicitly records my decision to reject and shelve the original trading family. That is a documented adjudication contribution; it does not establish that I manually coded every collector, matcher or analysis. The method separates an appealing market description from a testable claim: define the comparison, preserve execution accounting, quantify uncertainty and retain a negative decision when the evidence does not clear the gate. [N1](../docs/evidence.md#n1)
+The closeout explicitly records my decision to reject and shelve the original trading family. [N1](../docs/evidence.md#n1)
 
 ## The question behind the chart
 
-A candle with almost no wick on one side can look informative. Its shape may also reflect direction, trend, volatility, or time of day that ordinary candles already capture. A directional association alone therefore does not establish that the distinctive wick supplies useful additional information.
+If ordinary candles with similar trend, volatility and timing behave the same way, wicklessness may add little information. The control comparison asks what the distinctive shape contributes.
 
 The H004 study asked that narrower incremental question. It used directional 15-minute candles from four FX instruments over January 31, 2020 through July 31, 2026. The primary population was aligned with a frozen causal trend definition. The research implementation collected events without an order-transmission API. This was an event study, with an event-level continuation endpoint, rather than a portfolio backtest. [N1](../docs/evidence.md#n1)
 
@@ -39,7 +39,7 @@ Four tester runs produced 639,061 raw directional events. The common-window anal
 
 The primary estimate compared post-retest continuation probabilities. A UTC-day cluster bootstrap with 10,000 replicates retained a shared-day dependence structure in the uncertainty calculation. The pooled difference was **+0.078668 percentage points**, with a **95% confidence interval from -0.503610 to +0.667196 percentage points**. [N1](../docs/evidence.md#n1)
 
-The interval crossed zero. Three instrument estimates were positive but individually uncertain; the fourth was negative. The predefined cross-instrument decision rule did not pass. The recorded decision was **no robust incremental signal**. This does not prove that every conceivable use of the pattern has zero effect. It means the specific frozen claim was not supported by this comparison.
+The interval crossed zero. Three instrument estimates were positive but individually uncertain; the fourth was negative. The predefined cross-instrument decision rule did not pass. The recorded decision was **no robust incremental signal** under the frozen comparison. The interval permits small positive and negative effects; it does not establish an exact zero.
 
 Secondary endpoints reinforced the need to keep the primary question fixed. One descriptive return difference was positive, while both underlying matched population means remained negative. A favorable difference is not automatically a favorable absolute outcome. Those event-level directional returns were also different from the primary continuation-probability endpoint. The secondary result did not select a new filter or override the decision. [N1](../docs/evidence.md#n1)
 
@@ -55,10 +55,10 @@ Source and parity checks passed in all three configurations. Complete matched gr
 
 No configuration met the frozen positive-effect gate. All three point estimates were negative, and the fixed year-stability diagnostic also failed. The formal result was **R001_REJECT**. No reversed trading implementation followed.
 
-## What the evidence earns
+## Decision and sample limits
 
 The reversal history, January 2020 through July 2026, had already been inspected in related research. It is explicitly discovery-contaminated and cannot be presented as a fresh holdout. The original event study likewise supplies historical research evidence, not prospective validation. [N1](../docs/evidence.md#n1) [N2](../docs/evidence.md#n2)
 
-The matching receipts, exclusions, dependence-aware uncertainty and cost assumptions document why the program stopped. The failed original hypothesis and its proposed successor retain separate decisions. Neither earned a deployable strategy under the tested contracts.
+Shelving the original family and rejecting R001 remain separate decisions. Matching, exclusions and dependence-aware uncertainty explain the continuation verdict; executable quote sides and explicit costs govern the reversal test.
 
 The [evidence register](../docs/evidence.md) describes the underlying records and public verification boundary. Tick data, execution ledgers and strategy artifacts remain private.

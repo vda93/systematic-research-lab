@@ -1,20 +1,27 @@
-# ORB on USTEC2 and XAUUSD2: selection risk, conflicting validation and financing
+# Opening Range Breakout: testing the boundary and the economics
 
 [Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
 
-## Opening-range mechanics and the tested research contract
+Does crossing the opening range predict continuation, or would a simpler time-of-day momentum rule explain the result? The Nasdaq study challenged the range geometry with placebo boundaries, then encountered conflicting independent validation. A separate gold lineage passed implementation parity but failed economic qualification. The tested program closed for deployment.
 
-Define an opening range by recording the high and low of a designated early-session window. One practical configuration uses the first **15 minutes** after New York opens (9:30–9:45 a.m. Eastern Time), or the first **30 minutes** around London (3:00–3:30 a.m. Eastern) or Asia (9:00–9:30 a.m. UTC+9). Wait for a **five-minute candle to close beyond the range** before considering a continuation trade. These are illustrative anchor windows, **not** a claim that every later research run used the same clock definitions.
+The sections below separate these lineages and their decisions. [Other ORB branches](opening-range-atlas.md) include promising Discovery candidates whose OOS was never opened; those remain unadjudicated.
+
+## From opening range to trade rules
+
+Define an opening range by recording the high and low of a designated early-session window. One practical configuration uses the first **15 minutes** after New York opens (9:30 to 9:45 a.m. Eastern Time), or the first **30 minutes** around London (3:00 to 3:30 a.m. Eastern) or Asia (9:00 to 9:30 a.m. UTC+9). Wait for a **five-minute candle to close beyond the range** before considering a continuation trade. These illustrate the setup; each research contract fixes its own clock.
 
 One mechanical variant places the stop-loss at the **opening-range midpoint** and its target at a Fibonacci-tool **1 standard-deviation (STDV) level**. If the close leaves at least **1R** of potential reward to that target, it may enter at market. Otherwise, it can use a **limit order at a retest of the broken range boundary**, cancelling the pending order if the target is reached before entry. It can also distinguish breaks with versus against the first five-minute candle's direction.
 
-A discretionary version may avoid breakouts near previous-session highs/lows when little apparent liquidity lies beyond; stop for the day after **two losses** or **one win**; or consider runner management in specified trend/liquidity contexts. These choices are descriptions of an illustrative ruleset, **not** proof that every filter was coded or tested.
+<details>
+<summary>Optional setup rules and implementation scope</summary>
 
-Our work translated the price-range hypothesis into separately specified research contracts with frozen clocks, completed-candle signals, market/retest order handling, executable quote conventions and audited trade lifecycles. The recorded original-geometry implementation used a midpoint stop and structural target, but the equivalence between its exact target calculation and the illustrative **1 STDV Fibonacci target is not independently certified**. The economic results below apply only to the researched versions, not every possible discretionary rule combination.
+A discretionary version may avoid breakouts near previous-session highs/lows when little apparent liquidity lies beyond; stop for the day after **two losses** or **one win**; or consider runner management in specified trend/liquidity contexts. These optional choices were not all implemented in the tested contracts.
 
-The central empirical question is whether a profitable-looking breakout depends on the opening-range boundary itself or is better explained by timing and general momentum. Index and gold versions, and their validation periods, remain separate.
+The research contracts specify clocks, completed-candle signals, market/retest order handling, executable quote conventions and trade lifecycles. The recorded original-geometry implementation used a midpoint stop and structural target, but the equivalence between its exact target calculation and the illustrative **1 STDV Fibonacci target is not independently certified**. The economic results below apply only to the researched versions, not every possible discretionary rule combination.
 
-![Historical opening-range evidence, with sample and inference limitations](../figures/orb.svg)
+</details>
+
+![Nasdaq placebo-boundary comparisons and separate validation blocks from retained historical aggregates](../figures/orb.svg)
 
 The opening-range breakout program closed on September 30, 2026 without authorizing deployment. Some economic hypotheses had failed; some candidates stopped after conflicting validation; others were parked with promising Discovery results and unopened OOS. Budget or governance closure did not turn those unperformed tests into failures. [O6](../docs/evidence.md#o6)
 
@@ -43,7 +50,7 @@ The selection rule chose a medoid to represent the plateau. It produced 545 trad
 
 Concentration diagnostics made the distinction concrete. The surface's global maximum had approximately +120.37R overall, but one trade contributed +163.65R. Removing that single largest absolute-R observation left approximately −43.28R. This sensitivity did not delete or amend the authoritative backtest. It showed why a dramatic maximum can be a poor research candidate. [O1](../docs/evidence.md#o1)
 
-## What the search can and cannot establish
+## Selection risk after searching many configurations
 
 The 1,728 configurations share history, neighboring windows and often trades. Their maximum is selected using observed outcomes; its ordinary single-configuration uncertainty would ignore that selection. The 22 survivors are 1.27% of the search and the positive cells are 8.10%, descriptive fractions rather than significance levels. A medoid reduces the temptation to select the sharpest local winner, but the region containing it was also selected on Discovery outcomes. It does not erase the search. [O1](../docs/evidence.md#o1)
 
@@ -61,7 +68,7 @@ Across the 18 robust configurations, actual geometry's median paired advantage o
 
 That rejected the narrow claim of special geometry specificity. It did not establish that the broader timing region had no predictive content, nor prove a replacement causal explanation. The distinction allowed the frozen candidate to proceed to its authorized validation without upgrading an unsupported mechanism story.
 
-## When the next OOS block disagreed
+## Independent validation: first pass, second failure
 
 The first out-of-sample block was strong. Across eligible 2025 sessions, the representative recorded 124 trades, +26.41 price-space R, mean +0.213R and profit factor 1.382. Fourteen of the 18 frozen regional configurations had positive total R. Both candidate and region gates passed. [O2](../docs/evidence.md#o2)
 
@@ -69,7 +76,7 @@ The subsequent block tested eligible sessions from February through June 2026. J
 
 The second block produced 53 trades, −0.576R and profit factor 0.982. Only eight of 18 regional configurations were positive, and the median configuration mean was negative. Both standalone confirmation gates failed. [O2](../docs/evidence.md#o2)
 
-Combining the two blocks still produced positive cumulative OOS R. That did not reverse the decision. The second block's gate had been defined independently, and the correlated neighboring configurations were not 18 independent replications. The recorded action was to stop rather than return to Discovery and repair the strategy after seeing the result. [O2](../docs/evidence.md#o2)
+Combining the two blocks still produced positive cumulative OOS R. That did not reverse the decision. The second block's gate had been defined independently, and the correlated neighboring configurations were not 18 independent replications. The recorded action was to stop. Returning to Discovery to repair the candidate after this result would have changed the experiment. [O2](../docs/evidence.md#o2)
 
 ## A separate gold lineage: correct implementation first
 
