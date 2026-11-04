@@ -8,4 +8,4 @@ The [synthetic methods study](study.md) is separate from historical markets. Its
 
 The [source inventory](../release-files.json) and [publication checks](../scripts/audit_public.py) validate the current tree and inspect old public history. Deleting irrelevant files from current HEAD does **not** rewrite historical commits. Previously public files remain historical Git records and are excluded from the new portfolio narrative.
 
-Public code and original writing are under [MIT](../LICENSE). That license does not grant rights to excluded market data, external strategy PDFs or proprietary EAs. Original FX Replay educational documents are not redistributed here. Exact private provenance is retained separately.
+Public code and original writing are under [MIT](../LICENSE). That license does not grant rights to excluded market data, external strategy PDFs or proprietary EAs. External explanatory handouts, where consulted during rule formalization, are not redistributed here. Exact source provenance is retained separately in the private research records.

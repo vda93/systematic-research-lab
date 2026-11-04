@@ -8,9 +8,9 @@ This portfolio focuses on research I recognize, directed or participated in. The
 
 ### 1. Opening-range breakout (ORB)
 
-**The original idea.** FX Replay's *Opening Range Break Strategy (ORB)* marks the first 15 minutes of the New York session, or a 30-minute opening range for London or Asia. It waits for a five-minute candle to close beyond the range high or low and looks for a continuation move. The guide places the stop at the range midpoint and uses its Fibonacci-tool **1 standard-deviation (STDV) target**. If entering at market would offer less than 1R to that target, it proposes a limit entry on a retest of the broken boundary, cancelled if the target is reached first.
+**Setup mechanics.** Mark the first 15 minutes of the New York session as a price range (or a 30-minute opening range for London or Asia). Wait for a five-minute candle to close above its high or below its low, then consider a directional continuation. One ruleset places the stop at the range midpoint and aims for a Fibonacci-tool **1 standard-deviation (STDV) target**. If a market entry would offer less than 1R to that target, a limit entry at the broken boundary can be considered on a retest, cancelled if the target is reached first.
 
-**What we tested.** We formalized opening-range geometry and timing into research contracts, including market/retest entries, but did **not** certify a complete mechanical implementation of every discretionary condition in the original guide. The empirical findings below apply only to the tested versions.
+**What we tested.** We formalized opening-range geometry and timing into reproducible research contracts, including market/retest entries, but did **not** certify implementation of every optional discretionary condition. The empirical findings apply only to the tested versions.
 
 **Hypothesis.** Does the opening range itself explain continuation, or would simpler time-of-day momentum do just as well?
 
@@ -18,11 +18,11 @@ This portfolio focuses on research I recognize, directed or participated in. The
 
 **Finding.** Some development configurations and a first Nasdaq validation period looked promising; range-specific geometry did not establish a unique effect and the next independent validation failed. The gold implementation passed important parity checks but not the full economic/terminal qualification.
 
-**Decision.** Close the tested original program for deployment. Preserve separate untested hypotheses as untested, not as failures. [ORB study](studies/opening-range.md) · [Branch decisions](studies/opening-range-atlas.md).
+**Decision.** Close the tested program for deployment. Preserve separate untested hypotheses as untested, not as failures. [ORB study](studies/opening-range.md) · [Branch decisions](studies/opening-range-atlas.md).
 
 ### 2. Engulfing Bar Play (EBP)
 
-**The idea.** In Omar Agag's *EBP Strategy (Swing Trading Variation)*, a candle sweeps the previous candle's high or low and closes through the body on the other side. A decisive close near its extreme suggests a continuation setup, with a proposed limit entry on a partial retracement; a less decisive close uses a deeper retracement. The source specifies a 2R target and additional management rules. We tested explicit mechanical interpretations rather than treating the visual idea as one unambiguous program.
+**Setup mechanics.** An engulfing candle sweeps the previous candle's high or low and closes through the other side of its body. A decisive close near the engulfing bar's extreme suggests a continuation setup with an entry on a partial retracement; a less decisive close allows a deeper retracement. The illustrative trade plan seeks a **2R target** with explicit stop and management rules. We tested mechanical interpretations rather than treating one visual pattern as a single unambiguous program.
 
 **Hypothesis.** Does a candle-engulfing setup retain an advantage once ambiguous order lifetime, retracement and timeframe rules are made explicit?
 
@@ -34,7 +34,7 @@ This portfolio focuses on research I recognize, directed or participated in. The
 
 ### 3. NOWICK
 
-**The idea.** In Bard FX's *Compensation Play (Nowick) Strategy*, a candle with little or no wick on one side signals an apparent directional imbalance. The source proposes trading with the trend after a retest within nine candles, with a structure-based stop and a 1:1 target. That sounds plausible, but a visually distinctive candle may simply encode momentum or volatility already visible elsewhere.
+**Setup mechanics.** A candle with little or no wick on one side may indicate directional imbalance. One ruleset looks for trend-aligned continuation after a retest within **nine candles**, using a structure-based stop and a **1:1 target**. But a visually distinctive candle may simply reflect momentum or volatility already captured by ordinary candles.
 
 **Hypothesis.** Does wicklessness add predictive information beyond otherwise comparable candles? If continuation lacks support, does a separately specified reversal hypothesis work?
 
@@ -62,6 +62,6 @@ Each case study distinguishes **hypothesis, method, results, discussion and deci
 
 Many historical results are documented from qualified private reports; they **cannot be independently replayed using this public repository alone**. Public code and tests illustrate selected methods, not a substitute for licensed tick data, vendor strategy code, complete trade ledgers or broker execution records. See the [evidence register](docs/evidence.md), [limitations](docs/limitations.md) and [provenance](docs/provenance.md).
 
-The ORB, EBP and NOWICK concepts are described in FX Replay educational strategy materials (ORB guide, Omar Agag's EBP swing variation, and Bard FX's NOWICK play). The original PDFs are not redistributed here. Educational source rules, tested mechanical contracts and empirical verdicts must not be treated as identical.
+ORB, EBP and NOWICK are **trading-pattern families, not claims of inventing breakout, engulfing or wickless-candle mechanics**. This portfolio tests explicitly defined implementations and retains detailed source lineage privately. Illustrative setup rules, researched mechanical contracts and empirical verdicts must not be treated as identical.
 
 **Research standard:** a useful result includes a clear reason to reject or shelve a hypothesis when its evidence is insufficient.

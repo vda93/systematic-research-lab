@@ -2,13 +2,13 @@
 
 [Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
 
-## What the original NOWICK setup tries to capture
+## Wickless-candle retest mechanics
 
-Bard FX's FX Replay *Compensation Play (Nowick) Strategy* describes a candle with essentially no wick on one side. The premise is that its one-sided body reflects an imbalance price might later revisit before continuing in the trend direction.
+A candle with essentially no wick on one side may suggest directional imbalance. The hypothesis is that price could revisit that one-sided candle area before resuming the trend, but the pattern may also be a proxy for ordinary momentum or volatility.
 
-The educational rules focus on 15-minute charts: identify a trend-aligned Nowick candle, look for a limit-order retest within **nine candles**, place the stop beyond nearby structural high/low with a **three-pip buffer**, and seek **1:1 reward-to-risk**. The source also describes contextual avoidance rules, including nearby US news and entries at structural swing extremes.
+One concrete trade plan uses **15-minute charts**: find a trend-aligned wickless candle, look for a limit-order retest within **nine candles**, place a stop beyond a nearby structural high/low with a **three-pip buffer**, and target **1:1 reward-to-risk**. Optional avoidance conditions concern nearby US economic releases and entries at structural swing extremes.
 
-These are **the original source's trading heuristics**. The H004 analysis below instead asks a narrower empirical question: does wicklessness itself add predictive information beyond matched ordinary candles? Its event-level results are not a complete executable replay of every discretionary filter from the PDF.
+These describe an illustrative trading setup. The H004 analysis below examines a **narrower empirical claim**: whether wicklessness adds predictive information beyond matched ordinary candles. It is not a full executable replay of every discretionary filter.
 
 ![Historical nowick evidence, with sample and inference limitations](../figures/nowick.svg)
 

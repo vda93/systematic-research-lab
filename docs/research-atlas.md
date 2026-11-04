@@ -7,8 +7,8 @@ This curated atlas is a navigation map, not a catalogue of every historical bot 
 | Program | Question | Main studies |
 | --- | --- | --- |
 | Opening-range breakout | Does breaking a session range predict continuation beyond generic clock or momentum effects? | [ORB](../studies/opening-range.md), [historical branches](../studies/opening-range-atlas.md), [O1](evidence.md#o1) |
-| Engulfing Bar Play | Does the Omar Agag engulfing/retracement setup survive explicit order-lifecycle definitions? | [EBP](../studies/engulfing-and-support.md), [B21](evidence.md#b21) |
-| NOWICK | Does Bard FX's wickless-candle retest add predictive information beyond matched ordinary candles? | [NOWICK](../studies/nowick.md), [N1](evidence.md#n1) |
+| Engulfing Bar Play | Does an engulfing/retracement setup survive explicit order-lifecycle definitions? | [EBP](../studies/engulfing-and-support.md), [B21](evidence.md#b21) |
+| NOWICK | Does a wickless-candle retest add predictive information beyond matched ordinary candles? | [NOWICK](../studies/nowick.md), [N1](evidence.md#n1) |
 | MacroImpulse | Are scheduled economic-release impulses tradeable after execution, costs, filtering and calendar-completeness checks? | [News research](../studies/news-research.md), [calendar forensics](../studies/data-forensics.md), [B08](evidence.md#b08) |
 | Research OS | Can study provenance, sample roles, figure inputs and implementation parity be checked rather than assumed? | [Engineering](../studies/research-engineering.md), [E1](evidence.md#e1) |
 
