@@ -2,13 +2,13 @@
 
 [Portfolio](../README.md) · [Research atlas](../docs/research-atlas.md) · [Evidence register](../docs/evidence.md)
 
-## The original trading idea, before the statistics
+## Engulfing and retracement mechanics
 
-Omar Agag's FX Replay *EBP Strategy (Swing Trading Variation)* describes an engulfing bar that sweeps the previous candle's high or low and closes beyond the opposite side of the prior candle body. The candles need not have opposite colors. The source is a higher-timeframe swing concept, primarily four-hour charts and above.
+An engulfing bar can sweep the previous candle's high or low and close beyond the opposite side of the previous candle's body. The two candles need not have opposite colors. This is typically framed as a higher-timeframe swing setup, with a focus on four-hour charts and above.
 
-A close within about 15% of the engulfing candle's extreme is treated as **strong**: the source proposes a limit entry at 25% retracement, stop at 75% retracement and a 2R target. A less decisive close proposes entry at 50% retracement, stop at the retracement origin and the same 2R target. It additionally describes breakeven after a fresh high/low, one active trade per pair until breakeven, and discretionary considerations for very indecisive candles and context.
+In one explicit ruleset, a close within roughly **15%** of the engulfing candle's extreme is treated as a stronger setup, with a limit entry at **25% retracement**, stop at **75% retracement** and **2R target**. A less decisive close uses entry at **50% retracement**, a stop at the retracement origin and the same **2R target**. Optional management rules include breakeven after a fresh high or low, limiting simultaneous trades per instrument and evaluating indecisive candles in context.
 
-That is the **source idea**, not a claim that every published test below implements every discretionary clause. Our research problem was that seemingly minor formalization choices, especially pending-order lifetime and replacement, can create radically different trade populations.
+These are example mechanics, **not an assertion that every test below implements all discretionary conditions**. Our key research problem was that different definitions of pending-order lifetime, replacement and exposure can create fundamentally different trade populations.
 
 The engulfing research includes completed negative tests, uncertain associations and designs that stopped before economic outcomes. The numbers are retained historical aggregates, not new market-study runs. Proprietary inputs and operational configurations remain private; research acceptance or parity alone does not authorize deployment.
 
