@@ -37,6 +37,18 @@ def synchronize_native_summary(d):
         summary['pooled_mean_price_r'] = summary['total_price_r']/summary['closed_trades']
 
 
+def synchronize_small_summary(d):
+    """Synthetic geometry fixture only; never recompute the archived interval."""
+    s = d['small_candle']
+    for row in s['strata']:
+        row['delta_q1_minus_q4_price_r'] = row['q1_mean_price_r']-row['q4_mean_price_r']
+    for summary in s['symbol_effects']:
+        rows = [r for r in s['strata'] if r['symbol'] == summary['symbol']]
+        summary['equal_year_delta_price_r'] = math.fsum(r['delta_q1_minus_q4_price_r'] for r in rows)/4
+        summary['negative_years'] = sum(r['delta_q1_minus_q4_price_r'] < 0 for r in rows)
+    s['estimate_price_r'] = math.fsum(r['delta_q1_minus_q4_price_r'] for r in s['strata'])/12
+
+
 def test_native_matrix_is_actual_complete_native_clock_surface():
     d = data()['native_matrix']
     cells = d['cells']
@@ -303,6 +315,143 @@ def test_review_stat001_interval_is_explicitly_post_selection_exploratory():
                  m.render_all(d)['ebp-small-candle.svg'].decode('utf-8')):
         assert 'post-selection exploratory' in text.lower()
         assert 'not selection-adjusted' in text.lower()
+
+
+def test_final_review_small_candle_rejects_contradictory_components_and_summaries():
+    m = renderer()
+    for mutation in ('stratum_delta', 'symbol_mean', 'negative_years', 'aggregate_mean'):
+        changed = deepcopy(data())
+        s = changed['small_candle']
+        if mutation == 'stratum_delta':
+            s['strata'][0]['delta_q1_minus_q4_price_r'] += .02
+        elif mutation == 'symbol_mean':
+            s['symbol_effects'][0]['equal_year_delta_price_r'] += .02
+        elif mutation == 'negative_years':
+            s['symbol_effects'][0]['negative_years'] = 1
+        else:
+            s['estimate_price_r'] += .02
+        with unittest.TestCase().assertRaisesRegex(ValueError, 'STAT001|small-candle|strat|symbol|aggregate'):
+            m.render_all(changed)
+
+
+def test_final_review_small_candle_rejects_incomplete_invalid_and_duplicate_rows():
+    m = renderer()
+    for mutation in ('missing', 'duplicate', 'year', 'symbol', 'nonfinite', 'count', 'summary_missing', 'summary_duplicate'):
+        changed = deepcopy(data())
+        s = changed['small_candle']
+        if mutation == 'missing':
+            s['strata'].pop()
+        elif mutation == 'duplicate':
+            s['strata'][1] = deepcopy(s['strata'][0])
+        elif mutation == 'year':
+            s['strata'][0]['signal_year'] = 2024
+        elif mutation == 'symbol':
+            s['strata'][0]['symbol'] = 'XAUUSD2'
+        elif mutation == 'nonfinite':
+            s['strata'][0]['q1_mean_price_r'] = float('nan')
+        elif mutation == 'count':
+            s['strata'][0]['q1_filled'] = 0
+        elif mutation == 'summary_missing':
+            s['symbol_effects'].pop()
+        else:
+            s['symbol_effects'][1] = deepcopy(s['symbol_effects'][0])
+        with unittest.TestCase().assertRaisesRegex(ValueError, 'STAT001|small-candle|strat|symbol'):
+            m.render_all(changed)
+
+
+def test_final_review_small_candle_rejects_changed_identity_scope_or_archived_interval():
+    m = renderer()
+    for mutation in ('source_id', 'source_hash', 'run', 'missing_source', 'role', 'window', 'units',
+                     'method', 'replicates', 'replicate_type', 'bounds', 'missing_field'):
+        changed = deepcopy(data())
+        s = changed['small_candle']
+        if mutation == 'source_id':
+            s['source_id'] = 'B22_TF001R2'
+        elif mutation == 'source_hash':
+            changed['sources']['B23_STAT001']['archive']['sha256'] = '0'*64
+        elif mutation == 'run':
+            changed['sources']['B23_STAT001']['run_identity'] = 'UNQUALIFIED'
+        elif mutation == 'missing_source':
+            del changed['sources']['B23_STAT001']
+        elif mutation == 'role':
+            s['role'] = 'Independent OOS'
+        elif mutation == 'window':
+            s['window_end_exclusive'] = '2025-01-01T00:00:00Z'
+        elif mutation == 'units':
+            s['units'] = 'Net account currency'
+        elif mutation == 'method':
+            s['interval_method'] = 'Selection-adjusted OOS confidence interval'
+        elif mutation == 'replicates':
+            s['bootstrap_replicates'] = 19999
+        elif mutation == 'replicate_type':
+            s['bootstrap_replicates'] = 20000.0
+        elif mutation == 'bounds':
+            s['interval_95'][0] -= .02
+        else:
+            del s['strata'][0]['q4_mean_price_r']
+        with unittest.TestCase().assertRaisesRegex(ValueError, 'STAT001|small-candle|scope|source|interval'):
+            m.render_all(changed)
+
+
+def test_final_review_coherent_small_candle_fixture_moves_points_without_manufacturing_interval():
+    from unittest.mock import patch
+    m = renderer()
+    original = data()
+    changed = deepcopy(original)
+    for row in changed['small_candle']['strata']:
+        row['q1_mean_price_r'] -= .07
+    synchronize_small_summary(changed)
+    assert changed['small_candle']['interval_95'] == original['small_candle']['interval_95']
+    assert changed['small_candle']['estimate_price_r'] < changed['small_candle']['interval_95'][0]
+    captured = []
+    finish = m._finish
+    def capture(fig, title, *args, **kwargs):
+        result = finish(fig, title, *args, **kwargs)
+        if 'Smaller candles' in title:
+            captured.append(fig)
+        return result
+    with patch.object(m, '_finish', side_effect=capture):
+        m.render_all(original)
+        try:
+            changed_svg = m.render_all(changed)['ebp-small-candle.svg']
+        except ValueError as exc:
+            raise AssertionError('Coherent component/summary fixture must not require percentile bounds to bracket the point') from exc
+    before, after = captured
+    for gid, expected in [('small-aggregate', changed['small_candle']['estimate_price_r']),
+                          ('small-symbol-DE30X', next(r['equal_year_delta_price_r'] for r in changed['small_candle']['symbol_effects'] if r['symbol']=='DE30X'))]:
+        first = next(line for line in before.axes[1].lines if line.get_gid()==gid)
+        second = next(line for line in after.axes[1].lines if line.get_gid()==gid)
+        assert first.get_xdata()[0] != second.get_xdata()[0]
+        assert second.get_xdata()[0] == expected
+    first_interval = next(c for c in before.axes[1].collections if c.get_gid()=='small-interval95')
+    second_interval = next(c for c in after.axes[1].collections if c.get_gid()=='small-interval95')
+    assert first_interval.get_segments()[0].tolist() == second_interval.get_segments()[0].tolist()
+    assert f"{changed['small_candle']['estimate_price_r']:+.3f}R" in changed_svg.decode('utf-8')
+    assert '4/4 negative years' in changed_svg.decode('utf-8')
+
+
+def test_final_review_figure_order_and_lifecycle_mobile_reading():
+    from unittest.mock import patch
+    m = renderer()
+    captured = []
+    finish = m._finish
+    def capture(fig, title, *args, **kwargs):
+        result = finish(fig, title, *args, **kwargs)
+        captured.append((title, fig))
+        return result
+    with patch.object(m, '_finish', side_effect=capture):
+        figures = m.render_all(data())
+    lifecycles = [(title, fig) for title, fig in captured if 'Pending orders' in title]
+    assert lifecycles, 'Renumbered stacked lifecycle figure is not implemented'
+    lifecycle = lifecycles[0]
+    small = next(title for title, fig in captured if 'Smaller candles' in title)
+    assert lifecycle[0].startswith('03') and small.startswith('05')
+    assert lifecycle[1].get_figheight() > lifecycle[1].get_figwidth()
+    states = [t for t in lifecycle[1].axes[0].texts if t.get_gid() and t.get_gid().startswith('lifecycle-state-')]
+    assert len(states) == 6 and all(t.get_fontsize() >= 14 for t in states)
+    assert all('SKIPPED_PENDING_ORDER' not in t.get_text() for t in states)
+    assert all(p.get_path().vertices[:, 1].min() >= 0 for p in lifecycle[1].axes[0].patches), 'State boxes must remain inside the figure axes'
+    assert b'BE_APPLIED' in figures['ebp-pending-lifecycle.svg']
 
 
 def load_tests(loader, tests, pattern):

@@ -2,14 +2,14 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg role="img" aria-labelledby="figure-title figure-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="964.8pt" height="511.2pt" viewBox="0 0 964.8 511.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <title id="figure-title">03  |  Smaller candles were associated with worse original outcomes</title>
+ <title id="figure-title">05  |  Smaller candles were associated with worse original outcomes</title>
  <desc id="figure-desc">STAT001 · M15 · 2020–2023 spent Discovery · post-selection exploratory · 28,097 placed / 21,917 fills Quartiles rank engulf range / causal ATR among all placed orders within symbol-year; outcomes use fills. The primary estimate weights 12 strata equally. Post-selection exploratory interval, not selection-adjusted: 20,000 stratified signal-month block-bootstrap replicates. Symbol intervals unavailable. Observational, price-R evidence; XAU excluded for unresolved history identity. Anti-EBP PARKED; stop intervention and reversal economics unrun. Source B23.</desc>
- <title>03  |  Smaller candles were associated with worse original outcomes</title>
+ <title>05  |  Smaller candles were associated with worse original outcomes</title>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:title>03  |  Smaller candles were associated with worse original outcomes</dc:title>
+    <dc:title>05  |  Smaller candles were associated with worse original outcomes</dc:title>
     <dc:description>STAT001 · M15 · 2020–2023 spent Discovery · post-selection exploratory · 28,097 placed / 21,917 fills Quartiles rank engulf range / causal ATR among all placed orders within symbol-year; outcomes use fills. The primary estimate weights 12 strata equally. Post-selection exploratory interval, not selection-adjusted: 20,000 stratified signal-month block-bootstrap replicates. Symbol intervals unavailable. Observational, price-R evidence; XAU excluded for unresolved history identity. Anti-EBP PARKED; stop intervention and reversal economics unrun. Source B23.</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
@@ -243,7 +243,7 @@ L -3.5 0
 L 440.38348 125.528
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #2c6385; stroke-opacity: 0.5; stroke-width: 1.2"/>
    </g>
-   <g id="line2d_21">
+   <g id="small-stratum-JP225X-2020">
     <defs>
      <path id="mba4905133e" d="M 0 3
 C 0.795609 3 1.55874 2.683901 2.12132 2.12132
@@ -266,7 +266,7 @@ z
 L 440.38348 148.248
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #2c6385; stroke-opacity: 0.5; stroke-width: 1.2"/>
    </g>
-   <g id="line2d_22">
+   <g id="small-stratum-JP225X-2021">
     <g clip-path="url(#p286ed918b2)">
      <use xlink:href="#mba4905133e" x="233.544402" y="148.248" style="fill: #2c6385; stroke: #2c6385"/>
     </g>
@@ -276,7 +276,7 @@ L 440.38348 148.248
 L 440.38348 170.968
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #2c6385; stroke-opacity: 0.5; stroke-width: 1.2"/>
    </g>
-   <g id="line2d_23">
+   <g id="small-stratum-JP225X-2022">
     <g clip-path="url(#p286ed918b2)">
      <use xlink:href="#mba4905133e" x="263.696563" y="170.968" style="fill: #2c6385; stroke: #2c6385"/>
     </g>
@@ -286,7 +286,7 @@ L 440.38348 170.968
 L 440.38348 193.688
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #2c6385; stroke-opacity: 0.5; stroke-width: 1.2"/>
    </g>
-   <g id="line2d_24">
+   <g id="small-stratum-JP225X-2023">
     <g clip-path="url(#p286ed918b2)">
      <use xlink:href="#mba4905133e" x="209.556966" y="193.688" style="fill: #2c6385; stroke: #2c6385"/>
     </g>
@@ -296,7 +296,7 @@ L 440.38348 193.688
 L 440.38348 216.408
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #a96235; stroke-opacity: 0.5; stroke-width: 1.2"/>
    </g>
-   <g id="line2d_25">
+   <g id="small-stratum-USDCAD2-2020">
     <defs>
      <path id="m8065886dbc" d="M 0 3
 C 0.795609 3 1.55874 2.683901 2.12132 2.12132
@@ -319,7 +319,7 @@ z
 L 440.38348 239.128
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #a96235; stroke-opacity: 0.5; stroke-width: 1.2"/>
    </g>
-   <g id="line2d_26">
+   <g id="small-stratum-USDCAD2-2021">
     <g clip-path="url(#p286ed918b2)">
      <use xlink:href="#m8065886dbc" x="191.948823" y="239.128" style="fill: #a96235; stroke: #a96235"/>
     </g>
@@ -329,7 +329,7 @@ L 440.38348 239.128
 L 440.38348 261.848
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #a96235; stroke-opacity: 0.5; stroke-width: 1.2"/>
    </g>
-   <g id="line2d_27">
+   <g id="small-stratum-USDCAD2-2022">
     <g clip-path="url(#p286ed918b2)">
      <use xlink:href="#m8065886dbc" x="283.638094" y="261.848" style="fill: #a96235; stroke: #a96235"/>
     </g>
@@ -339,7 +339,7 @@ L 440.38348 261.848
 L 440.38348 284.568
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #a96235; stroke-opacity: 0.5; stroke-width: 1.2"/>
    </g>
-   <g id="line2d_28">
+   <g id="small-stratum-USDCAD2-2023">
     <g clip-path="url(#p286ed918b2)">
      <use xlink:href="#m8065886dbc" x="227.613036" y="284.568" style="fill: #a96235; stroke: #a96235"/>
     </g>
@@ -349,7 +349,7 @@ L 440.38348 284.568
 L 446.310146 307.288
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #71816b; stroke-opacity: 0.5; stroke-width: 1.2"/>
    </g>
-   <g id="line2d_29">
+   <g id="small-stratum-DE30X-2020">
     <defs>
      <path id="m07deee2559" d="M 0 3
 C 0.795609 3 1.55874 2.683901 2.12132 2.12132
@@ -372,7 +372,7 @@ z
 L 440.38348 330.008
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #71816b; stroke-opacity: 0.5; stroke-width: 1.2"/>
    </g>
-   <g id="line2d_30">
+   <g id="small-stratum-DE30X-2021">
     <g clip-path="url(#p286ed918b2)">
      <use xlink:href="#m07deee2559" x="402.397974" y="330.008" style="fill: #71816b; stroke: #71816b"/>
     </g>
@@ -382,7 +382,7 @@ L 440.38348 330.008
 L 452.477675 352.728
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #71816b; stroke-opacity: 0.5; stroke-width: 1.2"/>
    </g>
-   <g id="line2d_31">
+   <g id="small-stratum-DE30X-2022">
     <g clip-path="url(#p286ed918b2)">
      <use xlink:href="#m07deee2559" x="452.477675" y="352.728" style="fill: #71816b; stroke: #71816b"/>
     </g>
@@ -392,22 +392,22 @@ L 452.477675 352.728
 L 458.315461 375.448
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #71816b; stroke-opacity: 0.5; stroke-width: 1.2"/>
    </g>
-   <g id="line2d_32">
+   <g id="small-stratum-DE30X-2023">
     <g clip-path="url(#p286ed918b2)">
      <use xlink:href="#m07deee2559" x="458.315461" y="375.448" style="fill: #71816b; stroke: #71816b"/>
     </g>
    </g>
-   <g id="line2d_33">
+   <g id="line2d_21">
     <path d="M 144.72 205.048
 L 497.60867 205.048
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #e6ebef; stroke-linecap: square"/>
    </g>
-   <g id="line2d_34">
+   <g id="line2d_22">
     <path d="M 144.72 295.928
 L 497.60867 295.928
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke: #e6ebef; stroke-linecap: square"/>
    </g>
-   <g id="line2d_35">
+   <g id="line2d_23">
     <path d="M 440.38348 393.624
 L 440.38348 107.352
 " clip-path="url(#p286ed918b2)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #657684"/>
@@ -473,12 +473,12 @@ z
    </g>
    <g id="matplotlib.axis_3">
     <g id="xtick_5">
-     <g id="line2d_36">
+     <g id="line2d_24">
       <path d="M 614.070602 393.624
 L 614.070602 107.352
 " clip-path="url(#pdce6d17785)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_37">
+     <g id="line2d_25">
       <g>
        <use xlink:href="#mb54675a69a" x="614.070602" y="393.624" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
       </g>
@@ -488,12 +488,12 @@ L 614.070602 107.352
      </g>
     </g>
     <g id="xtick_6">
-     <g id="line2d_38">
+     <g id="line2d_26">
       <path d="M 700.775434 393.624
 L 700.775434 107.352
 " clip-path="url(#pdce6d17785)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_39">
+     <g id="line2d_27">
       <g>
        <use xlink:href="#mb54675a69a" x="700.775434" y="393.624" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
       </g>
@@ -503,12 +503,12 @@ L 700.775434 107.352
      </g>
     </g>
     <g id="xtick_7">
-     <g id="line2d_40">
+     <g id="line2d_28">
       <path d="M 787.480267 393.624
 L 787.480267 107.352
 " clip-path="url(#pdce6d17785)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_41">
+     <g id="line2d_29">
       <g>
        <use xlink:href="#mb54675a69a" x="787.480267" y="393.624" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
       </g>
@@ -518,12 +518,12 @@ L 787.480267 107.352
      </g>
     </g>
     <g id="xtick_8">
-     <g id="line2d_42">
+     <g id="line2d_30">
       <path d="M 874.1851 393.624
 L 874.1851 107.352
 " clip-path="url(#pdce6d17785)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
      </g>
-     <g id="line2d_43">
+     <g id="line2d_31">
       <g>
        <use xlink:href="#mb54675a69a" x="874.1851" y="393.624" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
       </g>
@@ -537,7 +537,7 @@ L 874.1851 107.352
     </g>
    </g>
    <g id="matplotlib.axis_4"/>
-   <g id="line2d_44">
+   <g id="small-symbol-JP225X">
     <defs>
      <path id="m389ba0e13c" d="M 0 3.5
 C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874
@@ -555,7 +555,7 @@ z
      <use xlink:href="#m389ba0e13c" x="696.798233" y="149.167011" style="fill: #2c6385; stroke: #2c6385"/>
     </g>
    </g>
-   <g id="line2d_45">
+   <g id="small-symbol-USDCAD2">
     <defs>
      <path id="m93eada21ce" d="M 0 3.5
 C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874
@@ -573,7 +573,7 @@ z
      <use xlink:href="#m93eada21ce" x="698.559265" y="213.497798" style="fill: #a96235; stroke: #a96235"/>
     </g>
    </g>
-   <g id="line2d_46">
+   <g id="small-symbol-DE30X">
     <defs>
      <path id="m0ee6d68ffe" d="M 0 3.5
 C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874
@@ -591,34 +591,20 @@ z
      <use xlink:href="#m0ee6d68ffe" x="873.723131" y="277.828584" style="fill: #71816b; stroke: #71816b"/>
     </g>
    </g>
-   <g id="LineCollection_13">
+   <g id="small-interval95">
     <path d="M 730.942208 345.37591
 L 781.934138 345.37591
 " clip-path="url(#pdce6d17785)" style="fill: none; stroke: #213442; stroke-width: 2"/>
    </g>
-   <g id="line2d_47">
-    <defs>
-     <path id="m192f169a34" d="M 0 5
-L 0 -5
-" style="stroke: #213442"/>
-    </defs>
-    <g clip-path="url(#pdce6d17785)">
-     <use xlink:href="#m192f169a34" x="730.942208" y="345.37591" style="fill: #213442; stroke: #213442"/>
-    </g>
+   <g id="LineCollection_13">
+    <path d="M 730.942208 348.914103
+L 730.942208 341.837717
+" clip-path="url(#pdce6d17785)" style="fill: none; stroke: #213442; stroke-width: 1.3"/>
+    <path d="M 781.934138 348.914103
+L 781.934138 341.837717
+" clip-path="url(#pdce6d17785)" style="fill: none; stroke: #213442; stroke-width: 1.3"/>
    </g>
-   <g id="line2d_48">
-    <g clip-path="url(#pdce6d17785)">
-     <use xlink:href="#m192f169a34" x="781.934138" y="345.37591" style="fill: #213442; stroke: #213442"/>
-    </g>
-   </g>
-   <g id="line2d_49">
-    <path d="M 874.1851 393.624
-L 874.1851 107.352
-" clip-path="url(#pdce6d17785)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #657684"/>
-   </g>
-   <g id="line2d_50">
-    <path d="M 756.36021 345.37591
-" clip-path="url(#pdce6d17785)" style="fill: none; stroke: #213442; stroke-width: 2; stroke-linecap: square"/>
+   <g id="small-aggregate">
     <defs>
      <path id="m6f0f567d5d" d="M 0 -4.949747
 L 4.949747 0
@@ -630,6 +616,11 @@ L 0 -4.949747
     <g clip-path="url(#pdce6d17785)">
      <use xlink:href="#m6f0f567d5d" x="756.36021" y="345.37591" style="fill: #213442; stroke: #213442"/>
     </g>
+   </g>
+   <g id="line2d_32">
+    <path d="M 874.1851 393.624
+L 874.1851 107.352
+" clip-path="url(#pdce6d17785)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #657684"/>
    </g>
    <g id="patch_6">
     <path d="M 605.400118 393.624
@@ -671,7 +662,7 @@ L 926.208 393.624
    </g>
   </g>
   <g id="text_45">
-   <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="62.712" y="33.181538" transform="rotate(-0 62.712 33.181538)">03  |  Smaller candles were associated with worse original outcomes</text>
+   <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="62.712" y="33.181538" transform="rotate(-0 62.712 33.181538)">05  |  Smaller candles were associated with worse original outcomes</text>
   </g>
   <g id="text_46">
    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657684" x="62.712" y="56.542359" transform="rotate(-0 62.712 56.542359)">STAT001 · M15 · 2020–2023 spent Discovery · post-selection exploratory · 28,097 placed / 21,917 fills</text>
