@@ -10,6 +10,10 @@ I direct the project's questions and priorities. Implementation, analysis and wr
 
 An opening-session range offers a natural boundary for a continuation trade. Does that boundary add information beyond time-of-day momentum? Timing searches, placebo ranges and separate validation blocks found conflicting support: a promising Nasdaq validation was followed by an independent failure. The gold lineage passed implementation checks but failed economic qualification. The tested program closed for deployment; unopened successors remain unadjudicated. [Study and results](studies/opening-range.md) · [Other ORB branches](studies/opening-range-atlas.md)
 
+![ORB empirical summary: the second USTEC validation block failed, and financing erased separate gold Discovery gains](figures/orb-summary.svg)
+
+The illustrated study now includes the complete USTEC and separate gold parameter surfaces, frozen robustness flags, paired placebo comparisons and financing evidence. [Figure sources and limits](docs/orb-visual-evidence.md).
+
 ### Engulfing Bar Play (EBP)
 
 A candle that engulfs its predecessor suggests a directional move, entered on a retracement. Can that idea survive explicit order rules? A persistent-order interpretation produced only three closed trades; replacement-policy arms produced 1,257 and 1,297. The repaired timeframe study was generally weak. No interpretation was selected as a winner; the separate small-candle association left reverse-trading economics untested. [Study and results](studies/engulfing-and-support.md)

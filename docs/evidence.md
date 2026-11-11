@@ -12,6 +12,8 @@ The source identifiers below point to retained original research and review reco
 
 **USTEC timing/mechanism: Representative selection and controls.** Completed primary selection and mechanism reports; discovery, 18 correlated cells, partial first year.
 
+The [figure evidence matrix](orb-visual-evidence.md) now binds the complete original parameter and frozen-selection projections, cell-level placebo comparisons and separately authenticated validation inputs. [USTEC data](../data/orb-ustec-public.json) retain actual artifact hashes and source identities; the private backtest is not publicly replayable.
+
 
 ## O2
 
@@ -26,6 +28,8 @@ The source identifiers below point to retained original research and review reco
 ## O4
 
 **XAU Phase 8C/8D: Execution and monetary qualification.** Completed reports inspected: monetary reconciliation is narrower than deployment economics. Program postmortem covers financing.
+
+The [gold projection](../data/orb-gold-public.json) also retains original Phase 8C scenario rows and aggregated Phase 8D monetary-parity rows. The plotted financing comparison is scoped to that ledger; the separate original 8D-R1 decomposition and portability tables remain unavailable for additional plotting.
 
 
 ## O5
@@ -176,6 +180,10 @@ These source keys refer to the extended evidence census. They follow the same pr
 ## A13
 
 **Gold qualification.** Completed final parity/execution/monetary reports, with scientific and physical exits distinguished.
+
+## OV2
+
+**Gold modern OriginalGeometry complete Discovery surface.** Inspected the original Phase 6 V004 analysis manifest and full surface metrics; their hashes match. All 1,728 represented cells remain spatially present: 1,726 valid, two scientific-invalid and 30 valid zero-trade cells with undefined means. Seventeen cells are positive. This is a separate UTC-clock 2019–2023 Discovery contract, distinct from the older gold baselines and USTEC. [Definitions and source identities](orb-visual-evidence.md).
 
 
 ## A14

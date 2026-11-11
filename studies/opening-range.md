@@ -1,19 +1,25 @@
 # Opening Range Breakout: testing the boundary and the economics
 
-[Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
+[Portfolio](../README.md) · [Figure evidence and blockers](../docs/orb-visual-evidence.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
 
 Does crossing the opening range predict continuation, or would a simpler time-of-day momentum rule explain the result? The Nasdaq study challenged the range geometry with placebo boundaries, then encountered conflicting independent validation. A separate gold lineage passed implementation parity but failed economic qualification. The tested program closed for deployment.
 
 The sections below separate these lineages and their decisions. [Other ORB branches](opening-range-atlas.md) include promising Discovery candidates whose OOS was never opened; those remain unadjudicated.
 
+![Compact empirical finding: USTEC passed its first validation block and failed its second; the separate gold monetary ledger shows recorded financing erased both candidates' Discovery gains](../figures/orb-summary.svg)
+
+The first index confirmation did not persist in the next frozen block. In the separate gold study, implementation parity could not overcome the economic gate. The following figures expose the full search and the tests behind those decisions. [Open full-resolution summary](../figures/orb-summary.svg)
+
 ## From opening range to trade rules
+
+The intuition is continuation: define an early range, wait for a completed candle beyond its boundary, then trade toward a fixed target with a predefined stop. The experiment has to specify the clock, executable entry and order lifetime before that picture becomes a test.
+
+<details>
+<summary>Illustrative setup, optional rules and tested implementation scope</summary>
 
 Define an opening range by recording the high and low of a designated early-session window. One practical configuration uses the first **15 minutes** after New York opens (9:30 to 9:45 a.m. Eastern Time), or the first **30 minutes** around London (3:00 to 3:30 a.m. Eastern) or Asia (9:00 to 9:30 a.m. UTC+9). Wait for a **five-minute candle to close beyond the range** before considering a continuation trade. These illustrate the setup; each research contract fixes its own clock.
 
 One mechanical variant places the stop-loss at the **opening-range midpoint** and its target at a Fibonacci-tool **1 standard-deviation (STDV) level**. If the close leaves at least **1R** of potential reward to that target, it may enter at market. Otherwise, it can use a **limit order at a retest of the broken range boundary**, cancelling the pending order if the target is reached before entry. It can also distinguish breaks with versus against the first five-minute candle's direction.
-
-<details>
-<summary>Optional setup rules and implementation scope</summary>
 
 A discretionary version may avoid breakouts near previous-session highs/lows when little apparent liquidity lies beyond; stop for the day after **two losses** or **one win**; or consider runner management in specified trend/liquidity contexts. These optional choices were not all implemented in the tested contracts.
 
@@ -21,7 +27,7 @@ The research contracts specify clocks, completed-candle signals, market/retest o
 
 </details>
 
-![Nasdaq placebo-boundary comparisons and separate validation blocks from retained historical aggregates](../figures/orb.svg)
+The figures below show completed historical experiments. Their [public aggregate projections](../data/orb-ustec-public.json) retain every index configuration and bind the original artifacts by hash. They reproduce the presentation, not the private backtest. All empirical figures are **EMPIRICAL_REPORTED**; none is a fresh test or a live trading record.
 
 The opening-range breakout program closed on September 30, 2026 without authorizing deployment. Some economic hypotheses had failed; some candidates stopped after conflicting validation; others were parked with promising Discovery results and unopened OOS. Budget or governance closure did not turn those unperformed tests into failures. [O6](../docs/evidence.md#o6)
 
@@ -44,11 +50,23 @@ Sources: [O1 to O6](../docs/evidence.md#o1). Specific eligibility and lifecycle 
 
 The index study began with 1,728 timing configurations on available Discovery history from January 29, 2020 through December 2024. The first year was partial. Only 140 configurations had positive total R; 22 met the frozen robustness criteria. One eligible long-side plateau contained 18 configurations. [O1](../docs/evidence.md#o1)
 
+![Complete USTEC Discovery timing surface: all 96 New York anchors by six range durations for both, long-only and short-only directions; most cell means are negative](../figures/orb-ustec-surface.svg)
+
+Each coloured cell is an actual configuration mean from the original matrix. The small positive morning region sits inside a much larger negative surface. The shared colour scale has a visible zero and explicitly clips extreme colour values; the underlying values remain intact. [Full-resolution surface](../figures/orb-ustec-surface.svg) · [Data and definitions](../data/orb-ustec-public.json)
+
+![Frozen qualification map distinguishes 118 positive nonrobust cells, four robust cells outside the selected plateau and the 18-cell long plateau; a star marks the medoid](../figures/orb-ustec-qualification.svg)
+
+Positive performance alone did not qualify a candidate. The map retains the original robustness and plateau flags, including the small robust BOTH region that failed plateau eligibility. The star marks the representative selected from the eligible LONG region. These are correlated configurations, not independent confirmations. [Full-resolution qualification map](../figures/orb-ustec-qualification.svg) · [Frozen criteria](../docs/orb-visual-evidence.md#selection-contract)
+
 For that index mechanism study, new Discovery signals were eligible only through November 30, 2024. December supplied lifecycle completion, not another eligible signal month. The physical data span and the scientific entry window therefore differ. [O1](../docs/evidence.md#o1)
 
 The selection rule chose a medoid to represent the plateau. It produced 545 trades, approximately +29.87 price-space R and a profit factor of 1.09. Selection used its position within the region instead of the highest historical return. [O1](../docs/evidence.md#o1)
 
 Concentration diagnostics made the distinction concrete. The surface's global maximum had approximately +120.37R overall, but one trade contributed +163.65R. Removing that single largest absolute-R observation left approximately −43.28R. This sensitivity did not delete or amend the authoritative backtest. It showed why a dramatic maximum can be a poor research candidate. [O1](../docs/evidence.md#o1)
+
+![Discovery concentration comparison: the maximum changes sign after its largest absolute-R trade is removed, whereas the medoid remains positive; the medoid's annual outcomes include a negative final year](../figures/orb-ustec-selection.svg)
+
+The highest total and the representative answer different questions. The medoid avoids the maximum's extreme concentration, while its annual breakdown still exposes instability. The removal bars are diagnostics copied from the frozen report; the original results remain unchanged. [Full-resolution selection comparison](../figures/orb-ustec-selection.svg)
 
 ## Selection risk after searching many configurations
 
@@ -66,9 +84,17 @@ A timing plateau does not establish the mechanism used to name it. The next stud
 
 Across the 18 robust configurations, actual geometry's median paired advantage over the close-centered placebo was approximately −0.0113R per trade. Actual geometry did better in only six configurations. Against the open-centered placebo, its median paired advantage was positive, approximately +0.0115R, but only nine configurations favored it. The frozen requirement demanded positive median advantages against both placebos and at least 12 favorable comparisons out of 18. It failed. [O1](../docs/evidence.md#o1)
 
+![Each frozen configuration's actual-minus-placebo difference in mean R per trade: six of eighteen favour actual geometry against the close-centred control and nine against the open-centred control](../figures/orb-ustec-controls.svg)
+
+The paired comparisons challenge the precise boundary, keeping the range width and frozen candidate fixed. A median of paired differences is not the difference between separate medians. No confidence interval is invented for these correlated cell comparisons. [Full-resolution placebo comparisons](../figures/orb-ustec-controls.svg) · [Original comparison projection](../data/orb-ustec-public.json)
+
 That rejected the narrow claim of special geometry specificity. It did not establish that the broader timing region had no predictive content, nor prove a replacement causal explanation. The distinction allowed the frozen candidate to proceed to its authorized validation without upgrading an unsupported mechanism story.
 
 ## Independent validation: first pass, second failure
+
+![Separate month-end cumulative closed-trade R curves for the frozen medoid: OOS-A ends positive and passes, while OOS-B ends slightly negative and fails; blocks are never pooled](../figures/orb-ustec-validation.svg)
+
+These are genuine closed-trade aggregates from authenticated exit timestamps, including lifecycle burnoff. They do not show an intramonth price path or mark-to-market equity. Each block starts from zero and retains its own gate. [Full-resolution validation curves](../figures/orb-ustec-validation.svg)
 
 The first out-of-sample block was strong. Across eligible 2025 sessions, the representative recorded 124 trades, +26.41 price-space R, mean +0.213R and profit factor 1.382. Fourteen of the 18 frozen regional configurations had positive total R. Both candidate and region gates passed. [O2](../docs/evidence.md#o2)
 
@@ -80,6 +106,10 @@ Combining the two blocks still produced positive cumulative OOS R. That did not 
 
 ## A separate gold lineage: correct implementation first
 
+![Separate gold Discovery matrix with every configuration retained; two scientific-invalid cells are crossed out and thirty valid zero-trade cells have undefined means](../figures/orb-gold-surface.svg)
+
+The separate modern original-geometry gold surface had 17 positive cells among 1,726 valid configurations. It used UTC anchors, different years and a different freeze from the index study. Grey does not mean zero return: crosses identify invalid evidence and dots identify valid configurations without trades. [Full-resolution gold surface](../figures/orb-gold-surface.svg) · [Gold aggregate definitions](../data/orb-gold-public.json)
+
 The gold research asked a different set of questions on Discovery history in 2019 to 2023 and validation history in 2024 to 2025. Eligibility fences excluded the final month of each segment from new signals while permitting existing lifecycle completion. Three candidates were frozen before the later checks.
 
 Reproducing the scientific behavior between Python and MT5 required forensic work. Comparisons joined canonical scientific keys and examined opening ranges, signals, decisions, orders, fills, trade outcomes and path diagnostics. The completed final parity record passed for all three candidates with zero semantic mismatches. Earlier failed attempts remained part of the record; they were superseded by the documented final certificate. [O3](../docs/evidence.md#o3)
@@ -88,9 +118,17 @@ This was a scoped scientific parity result. Scientific lifecycle handling includ
 
 Execution stress came next. Two candidates, A and C, passed the frozen core test independently in Discovery and validation. A third failed in Discovery. More severe stress pushed every candidate's Discovery result to breakeven or below. These were normalized cost and latency shocks, not measured promises about live slippage. [O4](../docs/evidence.md#o4)
 
+![Gold candidate means under baseline, mild, core and severe latency-plus-cost shocks; Discovery and validation remain separate panels](../figures/orb-gold-stress.svg)
+
+The lines connect discrete stress scenarios rather than dates. The full CORE gate also constrained profit factor and drawdown; a positive mean alone was insufficient. Passing implementation and stress checks still left monetary qualification unresolved. [Full-resolution execution comparison](../figures/orb-gold-stress.svg)
+
 ## Financing changed the economic conclusion
 
 The next layer reconciled monetary accounting across 1,376 trades with zero unexplained mismatches. That accounting pass was followed by a deployment failure: none of 22 frozen policy and risk configurations satisfied the complete gate. A favorable validation period could not compensate for failed Discovery economics. [O4](../docs/evidence.md#o4)
+
+![Gold monetary-parity aggregates before and after recorded swap: both Discovery candidate totals change from positive to negative; separate spent terminal profit factors are 0.68 and 1.00 after rounding](../figures/orb-gold-economics.svg)
+
+This ledger supplies a direct economic comparison: at its recorded position sizes, financing changed both candidates' Discovery totals from positive to negative. It contains six explicitly synthetic scientific exits, and is narrower than a physical broker-account or live-fill qualification. The separate terminal bars keep their reported rounding. Neither favourable validation nor accounting parity rescued the frozen deployment gate. [Full-resolution economics](../figures/orb-gold-economics.svg) · [Monetary definitions and limits](../docs/orb-visual-evidence.md#gold-accounting-boundary)
 
 The native historical inspection reports also showed how narrow the remaining economics were. Over the combined historical segments, candidate A had profit factor approximately 1.047 and C approximately 1.013. Both carried substantial overnight exposure and financing charges. These pooled figures were descriptive and did not supersede the failed qualification. The final program postmortem concluded that financing consumed much of the overnight-dependent gross advantage and that the tested broker-portability investigation did not rescue it. [O4](../docs/evidence.md#o4) [O6](../docs/evidence.md#o6)
 
