@@ -32,6 +32,10 @@ I searched **3,456** DE30/JP225/UK100 opening-range configurations across the 24
 
 Scheduled economic releases can generate sharp price impulses, wider spreads and difficult fills. Execution comparisons and filter studies asked whether the full trade process could benefit. Several plausible filters failed; later calendar forensics found missing medium-impact coverage, invalidating a clean strategy verdict. The program remains shelved pending a qualified event universe and execution economics. [Study and results](studies/news-research.md) · [Calendar forensic case](studies/data-forensics.md)
 
+![MacroImpulse original calendar-forensic coverage: medium-impact source density falls while the different earlier extraction scopes remain explicitly unreconciled](figures/macro-calendar.svg)
+
+The illustrated study connects event mechanics to the pair-year baseline, rejected spread filter, sequential reversals, commission sensitivity and calendar failure. [Figure evidence and blockers](docs/macro-visual-evidence.md).
+
 The [NOWICK research](studies/nowick.md) remains available as a historical, non-featured archive. Its negative findings and original authorship limitations have not been deleted.
 
 ## Research workflow

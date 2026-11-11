@@ -312,4 +312,3 @@ Inspected the preserved geometry/broker-replay package description, blocked tran
 ## E6
 
 **Exact circular-block means: public engineering and measurements.** The [walkthrough](exact-block-means.md), [source](../src/srl/block_means.py), [oracle tests](../tests/test_block_means.py) and [before/after receipt](../data/block-means-benchmark.json) expose the numerical contract, local performance and memory tradeoff. Mathematical fixtures are not market evidence; the work is AI-assisted and human mastery is unassessed.
-

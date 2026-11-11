@@ -2,13 +2,23 @@
 
 [Portfolio](../README.md) · [Research atlas](../docs/research-atlas.md) · [Evidence register](../docs/evidence.md)
 
-## The impulse and the execution problem
+Can a scheduled-news impulse survive the full order process and its trading costs? The study follows preplanned event-time triggers through execution comparisons, intervention tests and a later failure of the calendar evidence itself.
+
+## A positive baseline did not qualify the proposed interventions
+
+The frozen high-impact bridge recorded **+$4,250.48 spread-only across 1,396 trades**, with all ten 2023–2024 pair-year cells positive. The separately frozen spread filter reduced P&L by **$7.62**, removing three profitable trades. Later medium-impact research remained positive in aggregate after documented commission, but its four-pair candidate failed annual stability: **2021 fell from +$7.51 to −$16.29**. These are different experiments and samples; their accounting is kept separate below.
 
 Scheduled economic announcements can reprice currencies quickly. MacroImpulse studied entries at preplanned trigger levels around the release, seeking to capture the impulse. Wider spreads, slippage and fill uncertainty can consume the opportunity; price can also stop the first position and trigger the opposite side.
 
-The research asked whether execution-aware filters improved the complete trade process. Several plausible interventions failed. A later medium-impact evaluation encountered an [incomplete calendar](data-forensics.md), so its apparent failure could not settle the strategy question. The program remains shelved pending an independently qualified event universe and execution economics.
+![Conceptual fictional two-sided event-order schematic: symbolic upper buy-stop and lower sell-stop levels before a scheduled announcement, Ask and Bid spread context, then possible protective or trailing exit and a later opposite trigger. No historical price path or observed latency is shown.](../figures/macro-mechanics.svg)
 
-The historical aggregates below retain their original cost and sample definitions. [Evidence and reproducibility limits](../docs/provenance.md) apply throughout.
+*CONCEPTUAL_SCHEMATIC — Fictional state example of a generic two-sided event-order plan; exact contracts vary. The frozen behavioral specification supplies the quote-side and order-lifecycle mechanics. Arrows show possible state transitions, not market prices, measured timing, fill probabilities or a trade recommendation.*
+
+[Open full-resolution SVG](../figures/macro-mechanics.svg)
+
+The research asked whether execution-aware filters improved the complete trade process. Several plausible interventions failed. A later medium-impact evaluation encountered an [incomplete calendar](data-forensics.md), so its apparent failure could not settle the strategy question. The program remains **shelved** pending an independently qualified event universe and execution economics.
+
+The figures rebuild already-opened historical aggregates, with no backtest or new evaluation. The [public aggregate extract](../data/macro-public.json), [renderer](../scripts/render_macro.py) and [figure evidence review](../docs/macro-visual-evidence.md) identify original archive and member hashes, sample roles and missing evidence. [Evidence and reproducibility limits](../docs/provenance.md) apply throughout. Reported P&L is research-account USD; no account-equity curve or new uncertainty interval is reconstructed.
 
 ## Matching execution under controlled events [B08](../docs/evidence.md#b08)
 
@@ -21,12 +31,30 @@ A separate historical timestamp qualification found that the selected news sourc
 
 The frozen high-impact baseline was evaluated on ten FX pair-year cells in 2023 to 2024. The recorded aggregate contained **1,396 trades**, spread-only P&L of **+$4,250.48**, and spread-only profit factor **3.6889**. All ten cells were positive. This is historical bridge evidence under its specified accounting, with commission excluded; it is not a net investable-return claim.
 
+![Ten Exness baseline pair-year cells show positive spread-only USD; each cell includes its completed trade count. Commission remains excluded.](../figures/macro-baseline.svg)
+
+*2023–2024 high-impact bridge. The original cell summary reconciles to 1,396 trades and +$4,250.48; color starts at zero. This favorable control did not establish net live economics.*
+
+[Open full-resolution SVG](../figures/macro-baseline.svg)
+
 A separately frozen spread-filter validation then ran twenty pair-year-arm cells in 2021 to 2022. Integrity passed, but the treatment reduced spread-only P&L by **$7.62**. No pair or year improved. The filter removed only three completed trades, all profitable, and did not remove the targeted double-trigger losses. The filter was **REJECTED** without retuning. The proposed intervention needed its own evidence even when the baseline looked favorable.
+
+![SPREAD3 and SPREAD1 validation totals are nearly equal, while the pair deltas show zero improvements and a total reduction of $7.62.](../figures/macro-spread-filter.svg)
+
+*Separate 2021–2022 frozen validation. Absolute totals use a zero baseline; the second panel shows treatment minus control. The only three completed trades removed were winners. The decision remains REJECT without retuning.*
+
+[Open full-resolution SVG](../figures/macro-spread-filter.svg)
 
 
 ## Opposite-side triggers sometimes recovered first-leg losses [B10](../docs/evidence.md#b10)
 
 An early cross-broker interpretation treated two-sided triggering as a broadly toxic mechanism. Later Exness evidence required a narrower account. All **139** inspected double-trigger groups were sequential: the first position had already stopped before the opposite side triggered. First legs lost **$287.99** spread-only, while subsequent reversal legs recovered **$188.22**. Suppressing the second leg would therefore remove meaningful recovery.
+
+![Dependent leg totals from the same 139 sequential double-trigger groups: first legs minus $287.99, reversal legs plus $188.22, combined minus $99.77.](../figures/macro-sequential.svg)
+
+*2021–2024 EventPath development, canonical adjudication as reported. The first leg had stopped before the opposite leg triggered. These dependent components are not independent strategy equity paths; blanket suppression remains rejected.*
+
+[Open full-resolution SVG](../figures/macro-sequential.svg)
 
 Rapid sequences were still descriptively weak: the shortest observed latency groups had negative combined outcomes. That association did not identify a clean intervention, because the failed first leg was already closed and the second leg could recover part of its loss. The universal cross-broker formulation and blanket suppression proposal were rejected; the rapid-state observation remained parked. The evidence supported a narrower description of rapid sequences, without a justified management change.
 
@@ -58,12 +86,24 @@ Medium-impact MacroImpulse research used a separately defined event universe. Th
 
 The candidate still failed its every-year-positive stability requirement: 2021 was **-$16.29** after modeled commission. Commission sensitivity did not repair that failed year. The disposition remained **PARK**. The cost validation is explicitly **documentation-only**, since a same-account deal export was unavailable. The positive aggregate, retained instruments and favorable concentration did not satisfy the annual stability rule. Live economics remain unvalidated, and tuning away the weak year was not authorized.
 
+![Medium-only discovery compares spread-only and commission-adjusted aggregates, then the four-pair annual results. The 2021 candidate changes from plus $7.51 to minus $16.29.](../figures/macro-costs.svg)
+
+*2021–2024 clean medium-only discovery. The original five-pair sample has 638 trades; the four-pair candidate excluding USDCAD2 has 563. Commission is USD 3.50 per actual lot per side on entry and exit, qualified as DOCUMENTATION_ONLY. Positive aggregate P&L did not clear the every-year-positive rule; disposition remains PARK.*
+
+[Open full-resolution SVG](../figures/macro-costs.svg)
+
 
 ## Calendar incompleteness invalidated the later verdict [B15](../docs/evidence.md#b15)
 
 A later medium-impact extension initially appeared to fail in a later historical period. Calendar forensics found a source-content coverage collapse beginning around late 2024. Records still parsed successfully, so a parser success marker could not establish that the event universe remained complete. The canonical interpretation became **INVALID_DATA_UNIVERSE**, superseding the earlier provisional clean-OOS failure.
 
 Vendor-statement context also showed substantial overlap in selected trades alongside different fills and outcomes, reinforcing the need to distinguish event selection, feed coverage, and execution sensitivity. That context does not independently validate the strategy or repair the calendar. The program remains shelved pending a newly qualified data universe. The clean strategy-failure conclusion was withdrawn; profitability remained unresolved.
+
+![Monthly MEDIUM calendar rows collapse around September to October 2024, while HIGH rows remain broadly intact. The later MEDIUM monthly rate is 15.6 percent of the earlier forensic rate.](../figures/macro-calendar.svg)
+
+*Original calendar-forensics table, January 2020–June 2026. Its earlier total is 16,288 MEDIUM rows; earlier strategy-input summaries sum to 16,059, with extraction scopes unreconciled. The figure measures recorded source density, not the exact share of real events missing. The later classification remains INVALID_DATA_UNIVERSE.*
+
+[Open full-resolution SVG](../figures/macro-calendar.svg)
 
 The corrected primary record is more specific: vendor trading minutes were overwhelmingly HIGH-impact, so that activity cannot validate MEDIUM-event completeness. The full [data-forensics case study](data-forensics.md) explains the coverage break, unresolved extraction scopes and why execution integrity passed while scientific interpretation failed. [B15](../docs/evidence.md#b15)
 
