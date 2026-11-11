@@ -35,35 +35,279 @@ def _rows(data):
     return [dict(zip(data['columns'], r, strict=True)) for r in data['cells']]
 
 
-def validate(ustec, gold):
-    """Reject an incomplete or ambiguous surface instead of filling absent cells."""
-    for data in [ustec, gold]:
-        if data.get('scope') != SCOPE or len(data.get('cells', [])) != 1728:
-            raise ValueError('expected all 1728 reported historical cells and scope')
-        rows = _rows(data)
-        clock = 'local_anchor_ny' if 'local_anchor_ny' in data['columns'] else 'anchor_utc'
-        expected = {(f'{h:02d}:{m:02d}', t, d) for h in range(24)
-                    for m in [0, 15, 30, 45] for t in DURATIONS for d in DIRECTIONS}
-        observed = {(r[clock], r['or_duration_minutes'], r['direction_mode']) for r in rows}
-        if observed != expected or len({r['cell_id'] for r in rows}) != 1728:
-            raise ValueError('missing or duplicate parameter identity')
-        for r in rows:
-            for key in ['total_r', 'mean_r']:
-                value = r[key]
-                if value is not None and (isinstance(value, bool) or not math.isfinite(value)):
-                    raise ValueError('nonfinite result')
-            if r.get('scientific_classification') == 'SCIENTIFIC_INVALID' and r['mean_r'] is not None:
-                raise ValueError('invalid cells cannot have scored means')
-    if [r['block'] for r in ustec['oos']] != ['A','B']:
-        raise ValueError('OOS blocks must remain distinct and ordered')
+def _require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def _finite(value, label):
+    _require(type(value) in (int, float) and math.isfinite(value), f'{label}: finite number required')
+    return value
+
+
+def _count(value, label, minimum=0):
+    _require(type(value) is int and value >= minimum, f'{label}: integer count required')
+    return value
+
+
+def _same(actual, expected, label):
+    _require(math.isclose(_finite(actual, label), expected, rel_tol=1e-10, abs_tol=1e-9),
+             f'{label}: contradictory derived value')
+
+
+def _surface(data, *, gold=False):
+    clock = 'anchor_utc' if gold else 'local_anchor_ny'
+    columns = ['cell_id', clock, 'or_duration_minutes', 'direction_mode']
+    columns += (['scientific_classification', 'trade_count', 'total_r', 'mean_r'] if gold else
+                ['trade_count', 'total_r', 'mean_r', 'profit_factor', 'robust', 'selected_region', 'selected_cell'])
+    _require(data['columns'] == columns, 'surface schema: missing, duplicate or ambiguous columns')
+    _require(data['scope'] == SCOPE and len(data['cells']) == 1728, 'expected all 1728 reported historical cells and scope')
+    rows = _rows(data)
+    expected = {(f'{h:02d}:{m:02d}', t, d) for h in range(24)
+                for m in [0, 15, 30, 45] for t in DURATIONS for d in DIRECTIONS}
+    observed = {(r[clock], r['or_duration_minutes'], r['direction_mode']) for r in rows}
+    _require(observed == expected and len({r['cell_id'] for r in rows}) == 1728,
+             'missing or duplicate parameter identity')
+    prefix = 'UTC' if gold else 'NY'
+    suffix = {'BOTH': 'BOTH', 'LONG_ONLY': 'LONG', 'SHORT_ONLY': 'SHORT'}
+    for r in rows:
+        identity = f"{prefix}_{r[clock].replace(':', '')}_OR{r['or_duration_minutes']}_{suffix[r['direction_mode']]}"
+        _require(r['cell_id'] == identity, 'cell identity disagrees with its parameters')
+        n = _count(r['trade_count'], 'surface trade count')
+        if gold and r['scientific_classification'] == 'SCIENTIFIC_INVALID':
+            _require(n == 0 and r['total_r'] is None and r['mean_r'] is None,
+                     'invalid cells cannot have scored results')
+            continue
+        if gold:
+            _require(r['scientific_classification'] == 'VALID_COMPLETE', 'unknown scientific classification')
+        total = _finite(r['total_r'], 'surface total R')
+        if n:
+            _same(r['mean_r'], total/n, 'surface mean R')
+        else:
+            _require(total == 0 and r['mean_r'] is None, 'valid zero-trade cells need zero total and undefined mean')
+        if not gold:
+            _require(r['profit_factor'] is None if n == 0 else _finite(r['profit_factor'], 'surface PF') >= 0, 'surface PF domain')
+            _require(all(type(r[k]) is bool for k in ['robust', 'selected_region', 'selected_cell']),
+                     'selection flags must be booleans')
+            _require(not r['robust'] or (total > 0 and r['profit_factor'] > 1), 'robust hierarchy')
+            _require(not r['selected_region'] or r['robust'], 'selected region hierarchy')
+            _require(not r['selected_cell'] or r['selected_region'], 'selected medoid hierarchy')
+    return rows
+
+
+def _ustec(ustec, rows):
+    by_id = {r['cell_id']: r for r in rows}
+    census = ustec['census']
+    for key, value in census.items():
+        _require(_count(value, 'USTEC census '+key) <= 1728, 'USTEC census domain')
+    derived = {'total_cells': len(rows), 'positive_r_cells': sum(r['total_r'] > 0 for r in rows),
+               'pf_gt_1_cells': sum(r['profit_factor'] is not None and r['profit_factor'] > 1 for r in rows),
+               'robust_cells': sum(r['robust'] for r in rows)}
+    _require(all(census[k] == v for k, v in derived.items()) and ustec['missing'] == ustec['invalid'] == 0,
+             'USTEC census must match represented rows')
+    _require(ustec['grid'] == {'anchors':96, 'anchor_step_minutes':15, 'durations':DURATIONS, 'directions':DIRECTIONS},
+             'USTEC grid definition')
+    frozen_region = {'NY_'+name+'_LONG' for name in (
+        '0930_OR45','0930_OR60','0945_OR30','0945_OR45','0945_OR60','1000_OR30',
+        '1000_OR45','1000_OR60','1015_OR60','1030_OR60','1045_OR60','1100_OR45',
+        '1100_OR60','1115_OR45','1130_OR60','1145_OR45','1200_OR45','1215_OR60')}
+    _require({r['cell_id'] for r in rows if r['selected_region']} == frozen_region,
+             'selected region differs from frozen 18-cell identity')
+    _require([r['cell_id'] for r in rows if r['selected_cell']] == ['NY_1015_OR60_LONG'],
+             'unique frozen medoid required')
+    controls = ustec['placebo_comparisons']
+    variants = ['C1_CLOSE_CENTERED_PLACEBO','C2_OPEN_CENTERED_PLACEBO']
+    expected = {(cell, variant) for cell in frozen_region for variant in variants}
+    _require(len(controls) == 36 and {(r['cell_id'],r['variant']) for r in controls} == expected,
+             'complete unique frozen-region placebo controls required')
+    for r in controls:
+        _same(r['actual_mean_r'], by_id[r['cell_id']]['mean_r'], 'control actual reference')
+        _same(r['delta_mean_r'], r['actual_mean_r']-_finite(r['control_mean_r'], 'control mean'), 'control delta')
+    gate = ustec['placebo_gate']
+    _require(gate['minimum_better_cells'] == 12 and gate['region_size'] == 18
+             and gate['requires_both_median_deltas_positive'] is True, 'frozen placebo gate definition')
+    passed = all(sum(r['delta_mean_r'] > 0 for r in controls if r['variant'] == v) >= 12
+                 and np.median([r['delta_mean_r'] for r in controls if r['variant'] == v]) > 0 for v in variants)
+    _require(gate['result'] == ('YES' if passed else 'NO'), 'placebo gate result')
+    _concentration(ustec, by_id)
+    _oos(ustec)
+
+
+def _concentration(ustec, by_id):
+    concentration = ustec['concentration']
+    _require(set(concentration) == {'maximum','medoid'}, 'concentration identities')
+    for name, expected_id in [('maximum','NY_0730_OR45_SHORT'),('medoid','NY_1015_OR60_LONG')]:
+        r = concentration[name]
+        _require(r['cell_id'] == expected_id, 'concentration frozen cell identity')
+        cell = by_id[expected_id]
+        _require(_count(r['trade_count'], 'concentration count', 1) == cell['trade_count'], 'concentration count reference')
+        _same(r['total_r'], cell['total_r'], 'concentration total reference')
+        for key, value in r.items():
+            if key not in {'cell_id','full_year_mean_r','leave_one_full_year_out_total_r'}:
+                _finite(value, 'concentration '+key)
+        total = r['total_r']
+        _require(total > 0 and r['largest_positive_r'] > 0 and r['largest_negative_r'] < 0,
+                 'concentration signed extrema')
+        largest = max((r['largest_positive_r'],r['largest_negative_r']),key=abs)
+        _same(r['total_r_excluding_largest_absolute_r_trade'], total-largest, 'largest absolute removal')
+        _same(r['top_1_trade_contribution_r'], r['largest_positive_r'], 'largest positive contribution')
+        _same(r['bottom_1_percent_negative_magnitude_r'], -r['bottom_1_percent_negative_contribution_r'],
+              'negative contribution magnitude')
+        for stem in ['top_1_trade','top_5_trade','top_1_percent_positive','bottom_1_percent_negative']:
+            _same(r[stem+'_contribution_fraction'], r[stem+'_contribution_r']/total, 'contribution fraction')
+        for stem in ['top_1_percent_positive','bottom_1_percent_negative']:
+            _require(_count(r[stem+'_count'], 'tail count', 1) <= r['trade_count'], 'tail count domain')
+        _require(r['largest_positive_r'] <= r['top_5_trade_contribution_r'] <= 5*r['largest_positive_r'],
+                 'five positive contributions domain')
+        # Five positive trades are not the five largest absolute trades. Their
+        # sum cannot be recovered from these public aggregates; do not equate them.
+        _require(abs(total-r['total_r_excluding_5_largest_absolute_r_trades']) <= 5*abs(largest)+1e-9,
+                 'five absolute removals outside available extrema')
+        means = r['full_year_mean_r']; leave_out = r['leave_one_full_year_out_total_r']
+        _require(set(means) == set(leave_out) == {'2021','2022','2023','2024'}, 'full-year identities')
+        for year in means:
+            mean = _finite(means[year], 'full-year mean')
+            annual_total = total-_finite(leave_out[year], 'leave-one-year-out total')
+            _require(mean*annual_total >= 0, 'annual mean and implied total sign')
+        _same(r['best_full_year_mean_r'], max(means.values()), 'best full-year mean')
+        _same(r['worst_full_year_mean_r'], min(means.values()), 'worst full-year mean')
+    _same(concentration['maximum']['total_r'], max(r['total_r'] for r in by_id.values()), 'maximum total')
+    years = ustec['medoid_years']; medoid = concentration['medoid']
+    _require([r['year'] for r in years] == [2020,2021,2022,2023,2024], 'medoid annual identities')
+    _require(sum(_count(r['trade_count'], 'annual count', 1) for r in years) == medoid['trade_count'], 'annual count sum')
+    _same(sum(_finite(r['total_r'], 'annual total') for r in years), medoid['total_r'], 'annual total sum')
+    for r in years:
+        _same(r['mean_r'], r['total_r']/r['trade_count'], 'annual mean')
+        _require(r['year_coverage'] == ('PARTIAL_YEAR' if r['year'] == 2020 else 'FULL_YEAR'), 'annual scope')
+        _require(0 <= _finite(r['win_rate'], 'annual win rate') <= 1, 'annual win rate domain')
+        _require(_finite(r['profit_factor'], 'annual PF') >= 0, 'annual PF domain')
+        dd = _finite(r['max_sequential_drawdown_r'], 'annual drawdown')
+        _require(dd > 0, 'annual drawdown domain')
+        _same(r['r_dd'], r['total_r']/dd, 'annual R/drawdown')
+        _finite(r['median_r'], 'annual median')
+        if r['year'] != 2020:
+            year = str(r['year'])
+            _same(medoid['full_year_mean_r'][year], r['mean_r'], 'medoid full-year mean reference')
+            _same(medoid['leave_one_full_year_out_total_r'][year], medoid['total_r']-r['total_r'], 'medoid leave-one-year-out')
+
+
+def _oos(ustec):
+    _require([r['block'] for r in ustec['oos']] == ['A','B'], 'OOS blocks must remain distinct and ordered')
+    samples = {'A':('2025-01-01 through 2025-12-31','January 2026','2025-01','2026-01'),
+               'B':('2026-02-01 through 2026-06-30','July 2026','2026-02','2026-07')}
     for block in ustec['oos']:
-        curve=block['exit_month_cumulative_r']
-        if (not curve or not math.isfinite(block['total_r'])
-                or not all(math.isfinite(r[1]) and isinstance(r[2],int) and r[2]>0 for r in curve)
-                or not math.isclose(curve[-1][1],block['total_r'],abs_tol=1e-9)
-                or sum(r[2] for r in curve)!=block['trades']
-                or [r[0] for r in curve]!=sorted(set(r[0] for r in curve))):
-            raise ValueError('OOS month curve, total, counts and chronology must reconcile')
+        sessions,burnoff,first,last = samples[block['block']]
+        _require(block['signal_sessions'] == sessions and block['burnoff'] == burnoff, 'OOS frozen sample identity')
+        curve = block['exit_month_cumulative_r']
+        _require(block['role'] == 'HISTORICAL_OOS_SPENT' and block['region_size'] == 18
+                 and type(block['region_positive']) is int and 0 <= block['region_positive'] <= 18,
+                 'OOS sample and region scope')
+        _require(block['gate'] in {'PASS','FAIL'} and _finite(block['pf_r'], 'OOS PF') >= 0, 'OOS gate/PF domain')
+        _require(curve and all(len(r) == 3 for r in curve), 'OOS month curve required')
+        for month,total,count in curve:
+            _finite(total, 'OOS cumulative R');_count(count, 'OOS monthly trades', 1)
+            _require(isinstance(month,str) and first <= month <= last, 'OOS month outside sample')
+            _require(isinstance(month,str) and len(month) == 7 and month[4] == '-'
+                     and month[:4].isdigit() and month[5:].isdigit() and 1 <= int(month[5:]) <= 12,
+                     'OOS month identity')
+        _same(curve[-1][1], _finite(block['total_r'], 'OOS total'), 'OOS total and curve')
+        _require(sum(r[2] for r in curve) == _count(block['trades'], 'OOS trades', 1)
+                 and [r[0] for r in curve] == sorted(set(r[0] for r in curve)), 'OOS counts and chronology')
+
+
+def _gold(gold, rows):
+    census = gold['census']
+    invalid = [r['cell_id'] for r in rows if r['scientific_classification'] == 'SCIENTIFIC_INVALID']
+    expected_invalid = ['UTC_2015_OR5_BOTH','UTC_2015_OR5_LONG']
+    _require(invalid == expected_invalid and census['scientific_invalid_cell_ids'] == expected_invalid,
+             'Gold scientific-invalid identities')
+    valid = [r for r in rows if r['scientific_classification'] == 'VALID_COMPLETE']
+    derived = {'represented':len(rows), 'scientific_invalid':len(invalid), 'valid_complete':len(valid),
+               'valid_with_trades':sum(r['trade_count'] > 0 for r in valid),
+               'valid_zero_trades':sum(r['trade_count'] == 0 for r in valid),
+               'positive':sum(r['total_r'] > 0 for r in valid),
+               'negative':sum(r['total_r'] < 0 for r in valid), 'zero':sum(r['total_r'] == 0 for r in valid)}
+    _require(all(_count(census[k], 'Gold census '+k) == v for k,v in derived.items())
+             and derived['valid_zero_trades'] == 30, 'Gold census must match represented rows')
+    _stress_contract(gold, {r['cell_id']:r for r in rows})
+    _money_contract(gold)
+
+
+def _stress_contract(gold, by_id):
+    candidates = {'A':'UTC_1315_OR60_LONG','B':'UTC_1330_OR45_LONG','C':'UTC_1400_OR60_LONG'}
+    shocks = {'S0':(0,0), 'C1':(.01,0), 'C2':(.025,0), 'C3':(.05,0),
+              'L1':(0,100), 'L2':(0,250), 'L3':(0,500), 'MILD':(.01,100), 'CORE':(.025,250), 'SEVERE':(.05,500)}
+    stress = gold['stress']
+    expected = {(c,p,s) for c in candidates for p in ['DISCOVERY','OOS'] for s in shocks}
+    _require(len(stress) == 60 and {(r['candidate'],r['period'],r['scenario']) for r in stress} == expected,
+             'stress complete unique candidate/period/scenario identities required')
+    dates = {'DISCOVERY':{'eligible_start':'2019-01-01','eligible_end':'2023-11-30','burnoff_end_exclusive':'2024-01-01'},
+             'OOS':{'eligible_start':'2024-01-01','eligible_end':'2025-11-30','burnoff_end_exclusive':'2026-01-01'}}
+    _require(gold['stress_dates'] == dates, 'stress sample identity')
+    lookup = {(r['candidate'],r['period'],r['scenario']):r for r in stress}
+    for r in stress:
+        _require(r['cell_id'] == candidates[r['candidate']], 'stress candidate cell identity')
+        n = _count(r['trades'], 'stress trades', 1)
+        _same(r['mean_r'], _finite(r['total_r'], 'stress total')/n, 'stress mean')
+        _require(_finite(r['profit_factor'], 'stress PF') >= 0, 'stress PF domain')
+        cost,latency = shocks[r['scenario']]
+        _same(r['additional_cost_r'], cost, 'stress cost identity')
+        _require(type(r['latency_ms']) is int and r['latency_ms'] == latency, 'stress latency identity')
+        base = lookup[r['candidate'],r['period'],'S0']
+        _require(n == base['trades'], 'stress cohort count')
+        if r['period'] == 'DISCOVERY':
+            source = by_id[r['cell_id']]
+            _require(base['trades'] == source['trade_count'], 'stress S0 surface count')
+            _same(base['total_r'], source['total_r'], 'stress S0 surface total')
+        latency_base = {0:'S0',100:'L1',250:'L2',500:'L3'}[latency]
+        _same(r['total_r'], lookup[r['candidate'],r['period'],latency_base]['total_r']-cost*n,
+              'stress normalized cost decomposition')
+
+
+def _money_contract(gold):
+    money = gold['monetary']; rows = money['rows']
+    expected = [('A','DISCOVERY'),('A','OOS'),('C','DISCOVERY'),('C','OOS')]
+    _require([(r['candidate'],r['period']) for r in rows] == expected, 'monetary four ordered candidate/period groups')
+    for r in rows:
+        n = _count(r['trades'], 'monetary trades', 1)
+        _require(_count(r['synthetic_exits'], 'synthetic exits') <= n, 'synthetic exit count domain')
+        for key in ['gross_pnl','net_pnl','commission','swap','fee']:_finite(r[key], 'monetary '+key)
+        _same(r['net_pnl'], r['gross_pnl']+r['commission']+r['swap']+r['fee'], 'monetary net accounting')
+        _require(r['commission'] == r['fee'] == 0, 'monetary recorded swap-only scope')
+    _require(sum(r['trades'] for r in rows) == _count(money['reconciled_trades'], 'reconciled trades') == 1376
+             and sum(r['synthetic_exits'] for r in rows) == 6, 'monetary population and synthetic-exit scope')
+    _require(_count(money['mismatches'], 'monetary mismatches') == 0
+             and _count(money['feasible'], 'monetary feasible') == 0
+             and _count(money['tested'], 'monetary tested') == 22, 'monetary feasibility scope')
+    _require(gold['parity']['status'] == 'PHASE8B_FULL_PARITY_PASS' and gold['parity']['semantic_mismatches'] == 0,
+             'monetary parity scope')
+    terminal = gold['terminal']
+    _require(terminal['role'] == 'HISTORICAL_TERMINAL_SPENT'
+             and terminal['signal_sessions'] == '2026-01-01 through 2026-06-30' and terminal['burnoff'] == 'July 2026'
+             and [r['candidate'] for r in terminal['candidates']] == ['A','C'], 'terminal sample identities')
+    for r in terminal['candidates']:
+        _count(r['trades'], 'terminal trades', 1)
+        pf = _finite(r['pf_money'], 'terminal PF')
+        _require(0 <= pf < 1 if r['candidate'] == 'A' else round(pf,2) == 1,
+                 'terminal rounded economic classification')
+
+
+def validate(ustec, gold):
+    """Validate only identities and arithmetic supported by the disclosed aggregates.
+
+    Full-year selection gates, trade tails and monetary/stress populations are
+    separate source scopes; missing per-trade inputs are never reconstructed.
+    """
+    try:
+        urows = _surface(ustec); grows = _surface(gold, gold=True)
+        _require(ustec['sample'] == {'role':'DISCOVERY_SPENT','instrument':'USTEC2','start':'2020-01-29',
+                 'last_signal_session':'2024-11-30','burnoff_end_exclusive':'2025-01-01',
+                 'partial_year':2020,'timezone':'America/New_York'}, 'USTEC sample identity')
+        _require(gold['sample'] == {'role':'DISCOVERY_SPENT','instrument':'XAUUSD2','start':'2019-01-01',
+                 'last_signal_session':'2023-11-30','burnoff_end_exclusive':'2024-01-01','timezone':'UTC'}, 'Gold sample identity')
+        _ustec(ustec, urows); _gold(gold, grows)
+    except (KeyError, TypeError, IndexError, OverflowError) as error:
+        raise ValueError('missing or malformed ORB aggregate input') from error
 
 
 def grid_values(data, direction, field='mean_r'):
