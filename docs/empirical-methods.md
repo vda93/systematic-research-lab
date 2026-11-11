@@ -16,6 +16,8 @@ A search over many candidate parameter cells rewards configurations selected by 
 
 The exact original opening-range PDF defines one discretionary trading approach. Its human-readable rules and an objectively testable software specification need explicit comparison; scientific results apply to the tested rules only.
 
+The separate [ORBINDEX case study](../studies/orbindex.md) searched 3,456 correlated index/clock/duration/direction cells, demanded adjacent timing-duration support, then tested A/B/C as synchronized position-limited portfolios. Even after the source/MT5 parity checks, all later-period fixed-lot gross EUR sums were negative. Historical net costs and fully independent holdout status were not certified. A separate weekly bootstrap procedure failed an exact null-model calibration check and was not used to claim 95% confidence.
+
 ## Match comparable events without asserting causality
 
 The [NOWICK event study](../studies/nowick.md) compared trend-aligned wickless-candle events with five matched ordinary-candle controls per qualifying event. Day-cluster inference and an independent week-cluster reversal study test distinct claims. Matching reduces specified differences but does not randomize pattern occurrence or eliminate all confounding.

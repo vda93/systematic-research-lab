@@ -10,6 +10,16 @@
         "sha256": "daea388eb1bcbce8cddf7b874ae39e2c7e8e3b92033caad356d8673d4f271e28"
       },
       {
+        "sha256": "f7b1da2b9f8529c734c9ff946f3fe574bf8c67e2667d2f1f7b43d207837e896f",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
         "kind": "historical_report",
         "source_ids": [
           "O1",
@@ -33,6 +43,16 @@
           "O1"
         ],
         "sha256": "043415844ea47eff9d010ba224dd6621f4c50fabb61095db79a72a040add7907"
+      },
+      {
+        "sha256": "ca6398d8793ec4e33f349aeeedc36d1765c7d7ad268a7be8df4b6084d5aad10a",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
       }
     ],
     "docs/evidence.md": [
@@ -85,6 +105,106 @@
         "kind": "documentation",
         "sha256": "dd0749fa1911a335336dc57fcbab40c63875928cea848d1a42ae858a1791f285",
         "source_ids": []
+      },
+      {
+        "sha256": "ce0bf7ba35fee199781a84c7162e9982e500c995193724b8944e5e1e5a5aca51",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "ff82686fab678a1342b7e67f0b103f5efa9c4cfa1e80f31f2655c8db77f35c8d",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "5040a5c4c60b754d055a2d445f246408ebc842922103a6e822a69f2a8405a0b3",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "82269d554b44181339d838eff64bf292b60615c575a16f9095a0746041f02a13",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "4db07779b2341f4f972ce317f77702f97f33f2ad21c32ce434aa94a2ee7d67b9",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "6805bbdf99608a13a3c3d5ea77eee59c0669e4539701b8ecaa908626a6e9704e",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "3816bf09359642d042678cbf415463acf8f17bb6c229e6cf39a5f1b1737484ff",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "33e15edada56fb4d7c4b8a3e995f9c2f84dc21af2d8bedb760404b6de79d0242",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "5f78bf533cabe48b17271cab9f42fcf4a69c00bbe8a33b73f3b2b7c7bc137ef0",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "cab66b9fc7c9559f00187210df35682dd98325eca8fb20b6c983e6ecb5363520",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
       },
       {
         "kind": "documentation",
@@ -373,6 +493,16 @@
     ],
     "docs/limitations.md": [
       {
+        "sha256": "9d34519f573aad4468f5a617cf4074c563066a2b3cdedd711e311ae8f4821273",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
         "kind": "historical_report",
         "source_ids": [
           "SYN1"
@@ -400,22 +530,41 @@
     "docs/ownership.md": [
       {
         "kind": "historical_report",
-        "sha256": "e48153fa5d8ff7a7030b2b0c888e2b2098bb4a6ebfdd7b0bca75aac0a8486dd9",
+        "sha256": "0bcf6182b159c7c0a085f1d394fb2afe0e1833465d903412a02ecff40b97e58e",
         "source_ids": [
-          "O1",
-          "O6",
+          "B15",
           "B21",
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4",
           "N1",
-          "B15"
+          "O1",
+          "O6"
         ]
       }
     ],
-    "docs/provenance.md": [],
+    "docs/provenance.md": [
+      {
+        "sha256": "18d1dd63eee0ef1508d7cae33246b38737f82c9258cd7f683a8e93449e38b59b",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      }
+    ],
     "docs/research-atlas.md": [
       {
-        "kind": "historical_report",
-        "sha256": "f573a6827bf1846433ad239a1549f42a0bd526e937e94da2b88e998ae8d2ae8f",
+        "sha256": "a6321ae7def79732298d95e4ad485d2bed4941d812b347c2f6b63fc588a70218",
+        "kind": "documentation",
         "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4",
           "O1",
           "B21",
           "N1",
@@ -2120,6 +2269,289 @@
           "E4"
         ]
       }
+    ],
+    "studies/orbindex.md": [
+      {
+        "sha256": "67101975a576e7c79d7be0b36c61bf164618147263d5494c000aea63face9b0e",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "051d10c905c53a659f214a21c03765a384e7568bd59433c192eca338cd9dfba8",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "1b572d3d2ce0891380a1789e96910f627f4653caeaadeb1bec1b5dc4b8c32446",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "cbe21eed3b07c2efdb9fa5d3f06bba5bfec03bce9721cb29218c66d9e0193327",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "ee9b4510ebd1433f1274413d256e4a52e37c01473cdee571e90a064e00973949",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "502d01907c6efa88da091ad884e5f4eb4894040260ba6b2f0c4050d8a38ba5df",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "1215a637142fb452ce47ff7a2cb798887748e5f89e4c419e0099c70d0c019984",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "b073fe2551656a6709fa5b744396d57b867c43f8f16258fc3101a32edf262cfd",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1",
+          "IX2"
+        ]
+      },
+      {
+        "sha256": "6e41755b8a6a6ebf916586e6efeafbeb8ccc91171aa0b4297402089d59b2f5ba",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "266d25020b16277c059027392af061af0a67318ea0da3bc26d88c416d3f81c34",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "6303c0bd5a8c50dac606e4906298611a4bf0448ea39b1d9013a94b74798386d5",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "eb0819a088469c0145dcc866c1e64b48b7dd2460b9452ef6fc10b8b425f15cdd",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2"
+        ]
+      },
+      {
+        "sha256": "5c5418210d8fdb4d28a79b2783f3827639f56fbfe63bffce5309e5b0c338d1cb",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2"
+        ]
+      },
+      {
+        "sha256": "ab0a540d36485b0f70512d1775df2f973838cc191eb6c6ec7d7553c86fad08f5",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2"
+        ]
+      },
+      {
+        "sha256": "f79f3b1492013d513b85b5b5dd7cacd59617cc6e37171462c564d31b70fa6cb8",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2"
+        ]
+      },
+      {
+        "sha256": "cd45bbaf0a4f6c8e4dea42b94b8a12e33ab75e01f19c42168714aab505d848b9",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2"
+        ]
+      },
+      {
+        "sha256": "a724bee10b63dddb8a2b21722969e041b09039a37099931b91469517bc21ef3a",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2"
+        ]
+      },
+      {
+        "sha256": "0e468f8fdd66d38eddc9d0e0b17d904608d6439bda7657045fdd83c551bf76e2",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2"
+        ]
+      },
+      {
+        "sha256": "c4daab5bbebc28172d66f45ddf64c5638b393b41f4730eef659bac92f8bf51f6",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2"
+        ]
+      },
+      {
+        "sha256": "4161b2cb2eadb70645092f87f126b0880c547fba5a935b9409ee74915cb48db6",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2"
+        ]
+      },
+      {
+        "sha256": "f9b4ce58250c9287d1b5bd793d00598626d9b34ade0a5054cb9357d401a2cbdc",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX3"
+        ]
+      },
+      {
+        "sha256": "98fa5309d18091beb3ff6cf5f9cf6c8a876f8f6372bdcb8bbf1f133dcb2b2a61",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX3"
+        ]
+      },
+      {
+        "sha256": "1e173dc839f42c1222fc54ed284247470273ce4a01074789c8b558f81b4a707b",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX3"
+        ]
+      },
+      {
+        "sha256": "5a03966e1564f5694ffb7dfb5bfafc0a09ee5ba4688c4e8b4d0ab177c24933d7",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2",
+          "IX3"
+        ]
+      },
+      {
+        "sha256": "57208090bc962dd0332bca9140153d583a0d847694978a0e0849ac46d69e8625",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2",
+          "IX3"
+        ]
+      },
+      {
+        "sha256": "ac680ec0a7045ab5a6add3c3d2e910bb46e8b42485a43d31d410aed0fd577855",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2",
+          "IX3"
+        ]
+      },
+      {
+        "sha256": "7e75f8651f186ca0880b6dd1816181fe0e5d4db3a2f95a0d781de7cf2c3f5077",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX3"
+        ]
+      },
+      {
+        "sha256": "ca54fc20f99f16f02228184f15be0ed428d8526de94aff64f13cac2fa926cfec",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX2",
+          "IX3"
+        ]
+      },
+      {
+        "sha256": "fa86076bc83ed68d83bfc423883083e87821ebf3c68347c086733db4fe75c0a9",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX3"
+        ]
+      },
+      {
+        "sha256": "62553bd01542bdc295f2fba267c0101eb9c5c9dc2f0a528c66ebdb492f3e8fe3",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX3"
+        ]
+      },
+      {
+        "sha256": "ba073f64ad8433b8ff7a7346dffd4666982215dc37ed52c7cfa8d2fe631ee5af",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX3"
+        ]
+      },
+      {
+        "sha256": "0bf1a56d21582349419723e1cdad019d9183c955c5a9706ef8a01dff217b6183",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "a731f312bc6dca885276bf653ed78662322070e3dba2726a290ac4c85c35366b",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "5d603d78e2cbee31c1e5b793c406346037292bfde30b28c7b045377780eb990f",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "0423fa7d2a2792982f837ac8bc06adff3ac3fd572ab63d3277fd47b62148d48a",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "dbcf438b7e5c193964f875000ffc4d82d1df34f40ed8dce087a57f114bedf2d2",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "be1a89723dff13f030b7686abdeb8003002e9c3ba9b7199507c514965b5f88c5",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1",
+          "IX3",
+          "IX4"
+        ]
+      },
+      {
+        "sha256": "fe17553915602b2036c0b77e1b4bd4f53bb679f830e4c01a18c176dd88106e77",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1",
+          "IX3",
+          "IX4"
+        ]
+      }
     ]
   },
   "figures": [
@@ -2158,6 +2590,63 @@
       "scope": "SYNTHETIC_CALIBRATION",
       "source_ids": [
         "SYN1"
+      ]
+    },
+    {
+      "path": "figures/orbindex-search.svg",
+      "renderer": "scripts/render_orbindex.py",
+      "inputs": {
+        "data/orbindex-public.json": "970f609814f9ac9ca06cafc9d99222a9de35f5e691ef4329bfaf03a588cb23ca"
+      },
+      "scope": "REPORTED_PRIVATE_AGGREGATES",
+      "source_ids": [
+        "IX1"
+      ]
+    },
+    {
+      "path": "figures/orbindex-portfolios.svg",
+      "renderer": "scripts/render_orbindex.py",
+      "inputs": {
+        "data/orbindex-public.json": "970f609814f9ac9ca06cafc9d99222a9de35f5e691ef4329bfaf03a588cb23ca"
+      },
+      "scope": "REPORTED_PRIVATE_AGGREGATES",
+      "source_ids": [
+        "IX2"
+      ]
+    },
+    {
+      "path": "figures/orbindex-curves.svg",
+      "renderer": "scripts/render_orbindex.py",
+      "inputs": {
+        "data/orbindex-public.json": "970f609814f9ac9ca06cafc9d99222a9de35f5e691ef4329bfaf03a588cb23ca"
+      },
+      "scope": "REPORTED_PRIVATE_AGGREGATES",
+      "source_ids": [
+        "IX2",
+        "IX3"
+      ]
+    },
+    {
+      "path": "figures/orbindex-economics.svg",
+      "renderer": "scripts/render_orbindex.py",
+      "inputs": {
+        "data/orbindex-public.json": "970f609814f9ac9ca06cafc9d99222a9de35f5e691ef4329bfaf03a588cb23ca"
+      },
+      "scope": "REPORTED_PRIVATE_AGGREGATES",
+      "source_ids": [
+        "IX2",
+        "IX3"
+      ]
+    },
+    {
+      "path": "figures/orbindex-forensics.svg",
+      "renderer": "scripts/render_orbindex.py",
+      "inputs": {
+        "data/orbindex-public.json": "970f609814f9ac9ca06cafc9d99222a9de35f5e691ef4329bfaf03a588cb23ca"
+      },
+      "scope": "REPORTED_PRIVATE_AGGREGATES",
+      "source_ids": [
+        "IX4"
       ]
     }
   ],
@@ -2484,6 +2973,34 @@
       "id": "E6",
       "kind": "public_replay",
       "sample_role": "methods_validation"
+    },
+    {
+      "id": "IX1",
+      "kind": "retained_private_report",
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "sample_role": "spent"
+    },
+    {
+      "id": "IX2",
+      "kind": "retained_private_report",
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "sample_role": "spent"
+    },
+    {
+      "id": "IX3",
+      "kind": "retained_private_report",
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "sample_role": "spent"
+    },
+    {
+      "id": "IX4",
+      "kind": "retained_private_report",
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "sample_role": "spent"
     }
   ],
   "version": 1

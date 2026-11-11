@@ -2,7 +2,7 @@
 
 [Portfolio](../README.md) · [Retained aggregates](../data/historical-results.json) · [Generated historical tables](../results/historical-tables.md)
 
-This source register supports the **four curated public research programs**: ORB, EBP, NOWICK and MacroImpulse, plus limited research-engineering demonstrations. Historical trade outcomes and most event studies came from private reports and reviewed decisions; they are *reported evidence*, not independently runnable raw-market studies in this repository.
+This source register supports the **four curated public research programs**: ORB, EBP, ORBINDEX and MacroImpulse, plus limited research-engineering demonstrations. Historical trade outcomes and most event studies came from private reports and reviewed decisions; they are *reported evidence*, not independently runnable raw-market studies in this repository.
 
 Public tests reproduce selected tables, charts, arithmetic and synthetic methods from disclosed inputs. Removed public portfolio material remains in ordinary prior Git history without being presented as research personally directed or authored by the owner. The private TradingBotHQ archive remains the scientific authority for its original decisions and sample roles.
 
@@ -42,6 +42,28 @@ The source identifiers below point to retained original research and review reco
 
 **ORB-Fade baseline: Negative frozen baseline.** Completed baseline decision and aggregate analysis inspected. Separate successor economics not inferred.
 
+
+## IX1
+
+**ORBINDEX 24-hour discovery, 2020–2023.** The private EXP-ORBINDEX-002 protocol and immutable review package supply the 3,456-cell enumeration, valid/invalid classifications, DE30/JP/UK positive-cell counts, six regions and ten rectangle memberships and hypothetical cost-debit stress. Source ZIP SHA-256: `659fac1dee8fa04aa59cbcb1bf9ccf7f6755080bf87f96758e01fe956a3b4b95`. The public source extract is a curated slice, not a raw-trade replay. The 2020–2023 selection set was spent before portfolio nomination.
+
+## IX2
+
+**ORBINDEX synchronized portfolio discovery and physical parity.** The private DE30 portfolio review supplies 1,320 / 1,661 / 2,372 native A/B/C fills, R and EUR discovery summaries, one-position/pending-order ownership and bounded MT5 execution parity. Source ZIP SHA-256: `fd439165db1e36e16567cc5d7aebdd0be5c9c5d771d39f7e06df3ac5578a49a2`. Current custom-template physical parity is narrower than historical broker/session certification.
+
+## IX3
+
+**ORBINDEX frozen 2024–July 2026 later-period test.** The sealed A/B/C historical scenario report provides full trade counts, realized gross price R, fixed-volume EUR, cost scenarios and drawdowns. Source ZIP SHA-256: `52adad6c3eae42b125f7c43b3a4af6ac91d3b09d050b637956a0164033a0a23e`. All three had negative S0 fixed-volume EUR. Outcome history is spent and designated OOS_EXPLORATORY / POSSIBLE_PRIOR_EXPOSURE; broker net and calibrated significance are not qualified.
+
+## IX4
+
+**ORBINDEX full-tick OOS mechanism audit.** Retained 2024–2026 derived quote/path forensics reconcile recorded entries/exits and separate same-trade midquote outcomes from quoted spread. Source ZIP SHA-256: `473f6770bd882fee27d01e89c2e3e5f495e050e7275a718792ed1b9db7402828`. The 2025 negative follow-through interpretation is post-OOS descriptive, not a validated causal filter or new optimization permission.
+
+### ORBINDEX publication verification
+
+The supplied publication ZIP matched its expected SHA-256 and complete member manifest. The original `EXP_ORBINDEX_002_DISCOVERY_REVIEW.zip`, `DE30_PORTFOLIO_REVIEW.zip` and `ORBINDEX_OOS_ABC_REVIEW.zip` were read independently: each actual archive hash matches IX1, IX2 or IX3 above, and each passed CRC validation. The discovery cell classifications, displayed heatmap, native A/B/C totals and cumulative snapshots were reconciled against those retained outputs. This verifies transcription and archive identity, without rerunning the private strategies or authenticating historical broker economics.
+
+The original `ORBINDEX_OOS_FullTick_Forensic_Audit.zip` was not available in this publication pass. IX4's recorded hash and forensic summaries come from the hash-verified owner-supplied publication handoff; they are **package-based evidence**, without independent byte or full-quote replay verification here. The economic closeout rests on the independently checked IX3 outcomes and does not depend on the explanatory forensic interpretation.
 
 ## N1
 

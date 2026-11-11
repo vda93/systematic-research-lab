@@ -1,0 +1,1032 @@
+{
+  "scope": "PUBLIC_REPORTED_HISTORICAL_AGGREGATES_PRIVATE_BACKTEST_NOT_REPLAYABLE",
+  "description": "Reviewed summaries transcribed or aggregated from archived OOS and discovery review receipts; figures regenerate from this derived data. No proprietary raw ticks or broker account records.",
+  "source_archives": [
+    {
+      "id": "IDX-DISC",
+      "sha256": "659fac1dee8fa04aa59cbcb1bf9ccf7f6755080bf87f96758e01fe956a3b4b95",
+      "role": "2020-2023 full-day discovery; scientific source",
+      "filename": "EXP_ORBINDEX_002_DISCOVERY_REVIEW.zip",
+      "evidence_key": "IX1",
+      "publication_verification": "ORIGINAL_ARCHIVE_SHA256_AND_CRC_VERIFIED"
+    },
+    {
+      "id": "IDX-NATIVE",
+      "sha256": "fd439165db1e36e16567cc5d7aebdd0be5c9c5d771d39f7e06df3ac5578a49a2",
+      "role": "Synchronized A/B/C 2020-2023 native discovery controls",
+      "filename": "DE30_PORTFOLIO_REVIEW.zip",
+      "evidence_key": "IX2",
+      "publication_verification": "ORIGINAL_ARCHIVE_SHA256_AND_CRC_VERIFIED"
+    },
+    {
+      "id": "IDX-OOS",
+      "sha256": "52adad6c3eae42b125f7c43b3a4af6ac91d3b09d050b637956a0164033a0a23e",
+      "role": "OOS 2024-July 2026 with August burnoff",
+      "filename": "ORBINDEX_OOS_ABC_REVIEW.zip",
+      "evidence_key": "IX3",
+      "publication_verification": "ORIGINAL_ARCHIVE_SHA256_AND_CRC_VERIFIED"
+    },
+    {
+      "id": "IDX-PATH",
+      "sha256": "473f6770bd882fee27d01e89c2e3e5f495e050e7275a718792ed1b9db7402828",
+      "role": "Post-OOS 2024-2026 quote diagnostics; descriptive only",
+      "filename": "ORBINDEX_OOS_FullTick_Forensic_Audit.zip",
+      "evidence_key": "IX4",
+      "publication_verification": "OWNER_HANDOFF_ONLY_ORIGINAL_ARCHIVE_UNAVAILABLE"
+    }
+  ],
+  "search": {
+    "period": "2020-02-01..2023-11-30 signal origins, December burnoff",
+    "symbols": {
+      "DE30X": {
+        "valid": 1129,
+        "invalid": 23,
+        "positive_price_r": 524
+      },
+      "JP225X": {
+        "valid": 1089,
+        "invalid": 63,
+        "positive_price_r": 20
+      },
+      "UK100X": {
+        "valid": 1120,
+        "invalid": 32,
+        "positive_price_r": 1
+      }
+    },
+    "total_cells": 3456,
+    "valid_cells": 3338,
+    "invalid_cells": 118,
+    "supported_de30_rectangles_0_debit": 10,
+    "supported_de30_regions_0_debit": 6,
+    "supported_de30_rectangles_extra_005r": 0,
+    "grid": "96 symbol-local 15-minute anchors x 4 OR durations x 3 directions on each symbol",
+    "de30_long_mean_r_by_15min_anchor": {
+      "5": [
+        0.1433,
+        -0.9422,
+        -0.2471,
+        0.121,
+        0.0622,
+        -0.2023,
+        -0.0626,
+        null,
+        -0.2179,
+        -0.1222,
+        -0.0438,
+        -0.1548,
+        -0.1153,
+        -0.245,
+        -0.1438,
+        -0.1668,
+        -0.0473,
+        0.0135,
+        -0.0418,
+        null,
+        -0.1446,
+        null,
+        -0.0213,
+        -0.2682,
+        -0.0374,
+        null,
+        -0.0529,
+        null,
+        0.0461,
+        null,
+        0.1348,
+        -0.2604,
+        0.0336,
+        -0.0235,
+        -0.0432,
+        -0.1632,
+        -0.0822,
+        0.0449,
+        0.1183,
+        0.0404,
+        0.0329,
+        -0.0298,
+        -0.0445,
+        0.0636,
+        -0.0229,
+        0.0086,
+        0.152,
+        -0.107,
+        0.0001,
+        null,
+        -0.0436,
+        0.0828,
+        0.0796,
+        -0.0841,
+        0.0589,
+        0.1122,
+        0.0492,
+        -0.0032,
+        0.0991,
+        0.0091,
+        0.0519,
+        0.0947,
+        -0.0201,
+        0.0156,
+        -0.0499,
+        -0.0121,
+        null,
+        0.0632,
+        0.0045,
+        -0.0157,
+        -0.1096,
+        -0.0907,
+        -0.0552,
+        0.0427,
+        0.0907,
+        -0.0433,
+        -0.017,
+        -0.0034,
+        -0.0526,
+        0.0685,
+        0.1186,
+        -0.0684,
+        0.0106,
+        -0.0625,
+        0.1157,
+        0.2027,
+        0.1065,
+        0.4101,
+        -0.1508,
+        -0.8643,
+        -1.2896,
+        -0.8582,
+        -1.1765,
+        null,
+        1.0976,
+        -0.7537
+      ],
+      "15": [
+        -0.1434,
+        -0.2139,
+        -0.1816,
+        0.0418,
+        0.0279,
+        -0.0984,
+        -0.0068,
+        -0.0564,
+        -0.1363,
+        -0.0068,
+        -0.0818,
+        -0.2523,
+        -0.0712,
+        -0.0738,
+        0.0066,
+        0.0054,
+        -0.0407,
+        0.075,
+        -0.0165,
+        0.0219,
+        0.0908,
+        0.0463,
+        0.0766,
+        0.1162,
+        -0.0178,
+        0.0346,
+        0.0096,
+        0.0023,
+        0.0011,
+        0.0573,
+        -0.011,
+        -0.0246,
+        0.0196,
+        -0.0212,
+        -0.118,
+        0.0973,
+        -0.0061,
+        -0.0479,
+        0.1537,
+        0.0504,
+        0.0153,
+        0.0289,
+        -0.0707,
+        -0.0219,
+        -0.0349,
+        0.0849,
+        -0.0083,
+        -0.0281,
+        -0.05,
+        -0.0318,
+        -0.0201,
+        -0.0249,
+        -0.002,
+        0.1512,
+        0.0811,
+        0.1567,
+        -0.0126,
+        0.01,
+        -0.0084,
+        0.0058,
+        0.0036,
+        0.0898,
+        0.0616,
+        0.0723,
+        0.0547,
+        0.0094,
+        -0.0482,
+        0.1345,
+        -0.1092,
+        0.0012,
+        -0.0267,
+        -0.0969,
+        -0.0486,
+        -0.064,
+        -0.0208,
+        0.0027,
+        -0.0118,
+        0.0448,
+        0.0422,
+        -0.0263,
+        -0.0292,
+        -0.0069,
+        -0.0193,
+        -0.0053,
+        -0.0403,
+        0.1435,
+        -0.0136,
+        -0.2325,
+        -0.3435,
+        -0.8464,
+        -0.2544,
+        -0.3792,
+        null,
+        null,
+        0.473,
+        -0.3619
+      ],
+      "30": [
+        null,
+        -0.2115,
+        -0.041,
+        0.0258,
+        -0.0393,
+        0.0184,
+        0.0707,
+        -0.1584,
+        -0.0118,
+        -0.1101,
+        -0.0857,
+        -0.1227,
+        -0.007,
+        0.0121,
+        0.1007,
+        0.0208,
+        0.0477,
+        0.081,
+        0.0195,
+        0.1343,
+        0.0692,
+        0.0892,
+        0.1586,
+        0.1044,
+        0.0854,
+        0.0345,
+        -0.0524,
+        0.0246,
+        0.0305,
+        0.0608,
+        0.003,
+        0.0848,
+        0.0763,
+        0.1111,
+        0.0819,
+        0.0077,
+        0.0405,
+        0.0954,
+        0.0937,
+        0.0643,
+        0.0932,
+        0.0226,
+        -0.0188,
+        -0.1166,
+        0.012,
+        0.0494,
+        -0.0273,
+        0.0059,
+        0.0059,
+        0.0197,
+        -0.0096,
+        0.0489,
+        0.0452,
+        0.1032,
+        0.0876,
+        0.0286,
+        0.0291,
+        0.0105,
+        0.0536,
+        -0.04,
+        0.0669,
+        0.0017,
+        0.0769,
+        0.1001,
+        0.0414,
+        0.0215,
+        0.0075,
+        -0.0235,
+        -0.0025,
+        -0.0389,
+        0.043,
+        -0.1135,
+        0.0321,
+        -0.0358,
+        0.0539,
+        -0.0078,
+        -0.0233,
+        0.0522,
+        0.0264,
+        0.0001,
+        -0.0807,
+        -0.0165,
+        0.0309,
+        0.0367,
+        -0.0358,
+        -0.1248,
+        -0.594,
+        -0.0672,
+        -0.1177,
+        -0.5345,
+        0.0407,
+        -0.293,
+        null,
+        0.5821,
+        0.3959,
+        -0.324
+      ],
+      "60": [
+        -0.0063,
+        -0.0111,
+        -0.0367,
+        -0.0137,
+        0.0721,
+        -0.1042,
+        -0.0946,
+        -0.0985,
+        -0.0341,
+        0.012,
+        -0.0279,
+        0.0653,
+        0.0906,
+        0.0714,
+        0.1407,
+        0.0299,
+        0.079,
+        0.1072,
+        0.1019,
+        0.0575,
+        0.154,
+        0.1178,
+        0.0915,
+        0.0835,
+        -0.0067,
+        0.0833,
+        0.0264,
+        0.048,
+        0.0952,
+        0.066,
+        0.046,
+        0.0853,
+        0.0221,
+        0.0456,
+        0.0638,
+        0.0552,
+        0.0556,
+        0.1589,
+        0.1572,
+        0.0254,
+        -0.058,
+        -0.0237,
+        -0.0578,
+        -0.0232,
+        -0.0204,
+        0.0534,
+        -0.0101,
+        -0.0251,
+        -0.0022,
+        0.0087,
+        0.0211,
+        0.0388,
+        0.0702,
+        0.0743,
+        0.082,
+        0.0287,
+        0.0412,
+        0.0473,
+        0.0833,
+        0.0138,
+        0.1296,
+        0.1445,
+        0.0991,
+        0.051,
+        0.0559,
+        -0.0803,
+        0.0487,
+        0.1027,
+        0.1444,
+        0.0848,
+        0.024,
+        -0.0531,
+        0.0117,
+        -0.0697,
+        -0.0179,
+        0.012,
+        0.0688,
+        0.0447,
+        -0.0059,
+        0.016,
+        -0.0382,
+        -0.0471,
+        0.0352,
+        null,
+        -0.6811,
+        -0.4363,
+        -0.5184,
+        -0.0281,
+        -0.6374,
+        -0.4476,
+        0.2081,
+        0.1156,
+        0.4825,
+        -0.3245,
+        -0.0441,
+        -0.1428
+      ]
+    }
+  },
+  "portfolio": {
+    "A": {
+      "sleeves": [
+        {
+          "time": "07:45",
+          "or": 30,
+          "side": "LONG"
+        },
+        {
+          "time": "09:30",
+          "or": 60,
+          "side": "LONG"
+        },
+        {
+          "time": "13:15",
+          "or": 15,
+          "side": "LONG"
+        }
+      ],
+      "discovery": {
+        "trades": 1320,
+        "price_r": 187.937874,
+        "eur": 266.301,
+        "quarterly_cumulative_r": [
+          [
+            "2020Q1",
+            8.1727
+          ],
+          [
+            "2020Q2",
+            30.5584
+          ],
+          [
+            "2020Q3",
+            32.0035
+          ],
+          [
+            "2020Q4",
+            37.2104
+          ],
+          [
+            "2021Q1",
+            21.1476
+          ],
+          [
+            "2021Q2",
+            42.0562
+          ],
+          [
+            "2021Q3",
+            73.4511
+          ],
+          [
+            "2021Q4",
+            98.9897
+          ],
+          [
+            "2022Q1",
+            113.9716
+          ],
+          [
+            "2022Q2",
+            115.5321
+          ],
+          [
+            "2022Q3",
+            137.6293
+          ],
+          [
+            "2022Q4",
+            134.5815
+          ],
+          [
+            "2023Q1",
+            142.352
+          ],
+          [
+            "2023Q2",
+            144.7529
+          ],
+          [
+            "2023Q3",
+            167.6131
+          ],
+          [
+            "2023Q4",
+            187.9379
+          ]
+        ]
+      },
+      "oos": {
+        "trades": 962,
+        "price_r": 12.869337,
+        "eur": -18.725,
+        "s1_eur": -60.8125,
+        "s2_eur": -170.2379,
+        "max_closed_dd_r": 54.598,
+        "quarterly_cumulative_r": [
+          [
+            "2024Q1",
+            -3.7235
+          ],
+          [
+            "2024Q2",
+            -4.7803
+          ],
+          [
+            "2024Q3",
+            19.7058
+          ],
+          [
+            "2024Q4",
+            31.337
+          ],
+          [
+            "2025Q1",
+            11.9681
+          ],
+          [
+            "2025Q2",
+            23.4494
+          ],
+          [
+            "2025Q3",
+            13.4779
+          ],
+          [
+            "2025Q4",
+            -12.9807
+          ],
+          [
+            "2026Q1",
+            -10.1393
+          ],
+          [
+            "2026Q2",
+            3.9841
+          ],
+          [
+            "2026Q3",
+            12.8693
+          ]
+        ],
+        "annual": [
+          {
+            "year": 2024,
+            "trades": 375,
+            "gross_r": 31.33697,
+            "gross_eur": 34.72
+          },
+          {
+            "year": 2025,
+            "trades": 379,
+            "gross_r": -44.31762,
+            "gross_eur": -104.951
+          },
+          {
+            "year": 2026,
+            "trades": 208,
+            "gross_r": 25.84999,
+            "gross_eur": 51.506
+          }
+        ]
+      }
+    },
+    "B": {
+      "sleeves": [
+        {
+          "time": "07:45",
+          "or": 30,
+          "side": "LONG"
+        },
+        {
+          "time": "09:30",
+          "or": 60,
+          "side": "LONG"
+        },
+        {
+          "time": "13:15",
+          "or": 15,
+          "side": "LONG"
+        },
+        {
+          "time": "13:30",
+          "or": 5,
+          "side": "SHORT"
+        }
+      ],
+      "discovery": {
+        "trades": 1661,
+        "price_r": 261.105692,
+        "eur": 300.587,
+        "quarterly_cumulative_r": [
+          [
+            "2020Q1",
+            10.2457
+          ],
+          [
+            "2020Q2",
+            35.2169
+          ],
+          [
+            "2020Q3",
+            35.6714
+          ],
+          [
+            "2020Q4",
+            54.318
+          ],
+          [
+            "2021Q1",
+            31.5559
+          ],
+          [
+            "2021Q2",
+            61.1119
+          ],
+          [
+            "2021Q3",
+            90.232
+          ],
+          [
+            "2021Q4",
+            126.5454
+          ],
+          [
+            "2022Q1",
+            146.3636
+          ],
+          [
+            "2022Q2",
+            150.6095
+          ],
+          [
+            "2022Q3",
+            184.6679
+          ],
+          [
+            "2022Q4",
+            189.8359
+          ],
+          [
+            "2023Q1",
+            198.5147
+          ],
+          [
+            "2023Q2",
+            214.7181
+          ],
+          [
+            "2023Q3",
+            246.3356
+          ],
+          [
+            "2023Q4",
+            261.1057
+          ]
+        ]
+      },
+      "oos": {
+        "trades": 1213,
+        "price_r": 8.604115,
+        "eur": -15.344,
+        "s1_eur": -68.4127,
+        "s2_eur": -205.5109,
+        "max_closed_dd_r": 63.452,
+        "quarterly_cumulative_r": [
+          [
+            "2024Q1",
+            -9.3294
+          ],
+          [
+            "2024Q2",
+            -0.6858
+          ],
+          [
+            "2024Q3",
+            22.1823
+          ],
+          [
+            "2024Q4",
+            27.0618
+          ],
+          [
+            "2025Q1",
+            5.5333
+          ],
+          [
+            "2025Q2",
+            16.4777
+          ],
+          [
+            "2025Q3",
+            0.1073
+          ],
+          [
+            "2025Q4",
+            -26.6599
+          ],
+          [
+            "2026Q1",
+            -17.0783
+          ],
+          [
+            "2026Q2",
+            -3.378
+          ],
+          [
+            "2026Q3",
+            8.6041
+          ]
+        ],
+        "annual": [
+          {
+            "year": 2024,
+            "trades": 474,
+            "gross_r": 27.06177,
+            "gross_eur": 32.879
+          },
+          {
+            "year": 2025,
+            "trades": 475,
+            "gross_r": -53.72166,
+            "gross_eur": -109.263
+          },
+          {
+            "year": 2026,
+            "trades": 264,
+            "gross_r": 35.26401,
+            "gross_eur": 61.04
+          }
+        ]
+      }
+    },
+    "C": {
+      "sleeves": [
+        {
+          "time": "07:45",
+          "or": 30,
+          "side": "LONG"
+        },
+        {
+          "time": "09:30",
+          "or": 60,
+          "side": "LONG"
+        },
+        {
+          "time": "10:30",
+          "or": 30,
+          "side": "BOTH"
+        },
+        {
+          "time": "12:45",
+          "or": 30,
+          "side": "LONG"
+        },
+        {
+          "time": "13:15",
+          "or": 15,
+          "side": "BOTH"
+        },
+        {
+          "time": "13:45",
+          "or": 15,
+          "side": "LONG"
+        }
+      ],
+      "discovery": {
+        "trades": 2372,
+        "price_r": 238.734815,
+        "eur": 273.686,
+        "quarterly_cumulative_r": [
+          [
+            "2020Q1",
+            11.1216
+          ],
+          [
+            "2020Q2",
+            59.1931
+          ],
+          [
+            "2020Q3",
+            51.2164
+          ],
+          [
+            "2020Q4",
+            60.3512
+          ],
+          [
+            "2021Q1",
+            29.6905
+          ],
+          [
+            "2021Q2",
+            65.6454
+          ],
+          [
+            "2021Q3",
+            91.2258
+          ],
+          [
+            "2021Q4",
+            122.3257
+          ],
+          [
+            "2022Q1",
+            153.856
+          ],
+          [
+            "2022Q2",
+            154.4418
+          ],
+          [
+            "2022Q3",
+            198.4711
+          ],
+          [
+            "2022Q4",
+            201.8821
+          ],
+          [
+            "2023Q1",
+            211.7331
+          ],
+          [
+            "2023Q2",
+            194.797
+          ],
+          [
+            "2023Q3",
+            204.9427
+          ],
+          [
+            "2023Q4",
+            238.7348
+          ]
+        ]
+      },
+      "oos": {
+        "trades": 1655,
+        "price_r": -7.663709,
+        "eur": -159.733,
+        "s1_eur": -232.1393,
+        "s2_eur": -418.8856,
+        "max_closed_dd_r": 87.157,
+        "quarterly_cumulative_r": [
+          [
+            "2024Q1",
+            -10.0742
+          ],
+          [
+            "2024Q2",
+            -3.7845
+          ],
+          [
+            "2024Q3",
+            7.9809
+          ],
+          [
+            "2024Q4",
+            21.9313
+          ],
+          [
+            "2025Q1",
+            6.594
+          ],
+          [
+            "2025Q2",
+            -1.9021
+          ],
+          [
+            "2025Q3",
+            -8.7927
+          ],
+          [
+            "2025Q4",
+            -41.3025
+          ],
+          [
+            "2026Q1",
+            -37.8162
+          ],
+          [
+            "2026Q2",
+            -18.7191
+          ],
+          [
+            "2026Q3",
+            -7.6637
+          ]
+        ],
+        "annual": [
+          {
+            "year": 2024,
+            "trades": 662,
+            "gross_r": 21.93129,
+            "gross_eur": 8.435
+          },
+          {
+            "year": 2025,
+            "trades": 633,
+            "gross_r": -63.23379,
+            "gross_eur": -233.702
+          },
+          {
+            "year": 2026,
+            "trades": 360,
+            "gross_r": 33.63879,
+            "gross_eur": 65.534
+          }
+        ]
+      }
+    }
+  },
+  "forensic": {
+    "A_exit_year": [
+      {
+        "year": 2024,
+        "trades": 375,
+        "win_rate_pct": 41.0667,
+        "mfe05_pct": 66.6667,
+        "conversion_pct": 61.6,
+        "gross_r": 31.33697,
+        "signed_midquote_r": 32.8937,
+        "embedded_spread_r": 1.55673
+      },
+      {
+        "year": 2025,
+        "trades": 379,
+        "win_rate_pct": 34.5646,
+        "mfe05_pct": 66.4908,
+        "conversion_pct": 51.9841,
+        "gross_r": -44.31762,
+        "signed_midquote_r": -32.53005,
+        "embedded_spread_r": 11.78758
+      },
+      {
+        "year": 2026,
+        "trades": 208,
+        "win_rate_pct": 43.2692,
+        "mfe05_pct": 64.9038,
+        "conversion_pct": 66.6667,
+        "gross_r": 25.84999,
+        "signed_midquote_r": 27.22008,
+        "embedded_spread_r": 1.3701
+      }
+    ],
+    "oos_quote_count": 36707393,
+    "quote_partitions": 158,
+    "missing_eligible_dates": [
+      "2026-03-30",
+      "2026-03-31"
+    ],
+    "holdout_disclosure": "OOS_EXPLORATORY_POSSIBLE_PRIOR_EXPOSURE"
+  },
+  "date_scopes": {
+    "discovery_signal_start": "2020-02-01",
+    "discovery_signal_end_exclusive": "2023-12-01",
+    "oos_signal_start": "2024-01-01",
+    "oos_signal_end_exclusive": "2026-08-01",
+    "oos_burnoff_end_exclusive": "2026-09-01"
+  },
+  "cost_scenarios": {
+    "S0": "Recorded executable Bid/Ask fills, fixed 0.07 lots, gross EUR and normalized price R; no additional historical fee, financing or dividend reconciliation.",
+    "S1": "Current published DE30 Raw Spread commission proxy at USD 0.625 per lot round trip assuming USD1=EUR1 and zero financing, not historical charges.",
+    "S2": "Predeclared EUR2/lot round trip, long financing stress and additional 0.1 index-price units adverse per side; not historical broker fees."
+  },
+  "scientific_disposition": "CLOSED_REJECT_ECONOMIC_PROMOTION_OF_FROZEN_A_B_C; historical broker NET indeterminate; no calibrated alpha inference.",
+  "publication_verification": {
+    "date": "2026-11-11",
+    "handoff_sha256": "f6c31a31ad99def43eec1a67f6fdbaec44874a1dfd35ce9dee08b05a773ffed5",
+    "crosschecks": "Original discovery states and displayed heatmap; native discovery and OOS totals, drawdowns and quarterly curves; forensic summaries from owner handoff only. No private strategy replay."
+  }
+}
