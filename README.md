@@ -34,7 +34,7 @@ Scheduled economic releases can generate sharp price impulses, wider spreads and
 
 ![MacroImpulse original calendar-forensic coverage: medium-impact source density falls while the different earlier extraction scopes remain explicitly unreconciled](figures/macro-calendar.svg)
 
-The illustrated study connects event mechanics to the pair-year baseline, rejected spread filter, sequential reversals, commission sensitivity and calendar failure. [Figure evidence and blockers](docs/macro-visual-evidence.md).
+Inspect the event mechanics, pair-year baseline, rejected spread filter, sequential reversals, commission sensitivity and calendar failure. [Figure evidence and blockers](docs/macro-visual-evidence.md).
 
 The [NOWICK research](studies/nowick.md) remains available as a historical, non-featured archive. Its negative findings and original authorship limitations have not been deleted.
 
@@ -61,3 +61,5 @@ Historical findings rely on retained private reports; the public repository cann
 - [Historical aggregates](results/historical-tables.md) and [figure source](scripts/render_historical.py): inspect the retained ORB and archived NOWICK summaries.
 - [Source code](src/srl), [tests](tests) and [verification command](scripts/reproduce.py): inspect and reproduce the public methods.
 - [Research engineering](studies/research-engineering.md): evidence manifests and implementation checks.
+
+- [Remediation review](docs/reviews/visual-v002-remediation-2026-11-11.md): final checks and remaining publication limits.

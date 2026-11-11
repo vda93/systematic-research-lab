@@ -1350,7 +1350,7 @@
     ],
     "studies/news-research.md": [
       {
-        "sha256": "bd6d647a8b4202396f6f29b2fcb0023b5a75317d856f619275d293d4bcd1f049",
+        "sha256": "f196f36edd054488f1c5f92e8be0d23447bcfda9b123c73f29d424ef7d37220d",
         "kind": "historical_report",
         "source_ids": [
           "B09",
@@ -1393,7 +1393,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "fbf9e3fc96943695fd64bcc1f24e3122b41f88e3eb86d8048f8dd9ecc0c1c682",
+        "sha256": "8f62ec25485fb0f035b89088739eb469e65d00a1d989983baeb4d3922130971d",
         "source_ids": [
           "B08",
           "B09",
@@ -1487,7 +1487,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "7a59646a8fcfbd522b6672504a5835b780684ed426bc62514124305b2bb2b122",
+        "sha256": "c16009f487bc9a03ea3c80d65d1e133d95d874532ed2b18831171d8efdbb0ff1",
         "source_ids": [
           "B08",
           "B09",
@@ -1524,7 +1524,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "7f898636c4a283b39fcf6cd387923b8351db197be649f92efc7a5e152930654f",
+        "sha256": "9129f7b780c0dd33b4c87e6b9c8a13ac44fae027064316eef9416993d44ab59d",
         "source_ids": [
           "B08",
           "B09",
@@ -1561,7 +1561,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "9168aa76c94f355d4ca625754d80f28d64d35a277b8ae93e92fed0cc8d0c3bdb",
+        "sha256": "cd365f4893493d85ce11bed07d28a5794040166c83a1cff851bcb43de5c35c49",
         "source_ids": [
           "B08",
           "B09",
@@ -3830,6 +3830,129 @@
         "sha256": "cc601fae1b727b668a9a5890d71f8fea3daa9d26591e0fe492514ce432b7a87b",
         "kind": "documentation",
         "source_ids": []
+      }
+    ],
+    "docs/reviews/visual-v002-remediation-2026-11-11.md": [
+      {
+        "sha256": "d4e341686d873cbd8ad3ea2020dd70ef8b7dda4c368cb477d745d4fbee2e4b98",
+        "source_ids": [],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "98289149891344d24760fa50365c9da2ed47e990b35774dbe76bcfa3bbc9177e",
+        "source_ids": [],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "d51fe4b4717c7ee10f0201e92ac809b614a443f7e15bc1badce3737e7b1b60b7",
+        "source_ids": [
+          "B22"
+        ],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "b771b456cc1524c61db31e5575555438019e4e6e9811cf4ad347197587065e15",
+        "source_ids": [
+          "B22"
+        ],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "62b3b81d89e2d9e96b269e64d25ea3ae1b8f217ecf390ce23be31f1f840796b3",
+        "source_ids": [],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "306ed57ede2ff926f9a398f95bc7cc7d2cbf64c333d0020d082cccee43fa2a2a",
+        "source_ids": [],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "708fe0b06893fd22cb73d2093e436cc3e925691f5bb962a20118d0bb36db671e",
+        "source_ids": [],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "ec7796689f3518782e83a22558be46004c6ff875d39b19f012cbfc88d2e0a545",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23",
+          "O1",
+          "O2",
+          "O4",
+          "O5",
+          "OV2"
+        ],
+        "kind": "historical_report"
+      },
+      {
+        "sha256": "1fd422b3014f1c3e588b75f28224d2bc52e545f08cb97ed7d7e66d78d226c076",
+        "source_ids": [],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "809a937481aad62f339212501bf1e398e92b3d4cdfd2a496d64fc7b1ef5a515c",
+        "source_ids": [],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "5e691f1933198c04ade6dff737576971181da562f1bcb8d8dfa067f0245dda60",
+        "source_ids": [],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "a8592a35f1efe7296bdf46e4e2d340d255c0270dfe05c0a618e6d7270df3bd89",
+        "source_ids": [],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "5d7cb952f6a2d000854ce4bb38b2929ece0f36e89d34164cf17a195201032e37",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23",
+          "O1",
+          "O2",
+          "O4",
+          "O5",
+          "OV2"
+        ],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "62b2e0c49c8fd94b905eb568542b3f06a59717ba24fe8a7e2e1c3481bee96697",
+        "source_ids": [
+          "B10",
+          "B14",
+          "B15"
+        ],
+        "kind": "historical_report"
+      },
+      {
+        "sha256": "628c4bd4c066967874bc4aac91bd1d314242215bde2b2a1af1e84a1ab6173597",
+        "source_ids": [],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "30892fc3f304d376729347c88cca5e7072d05013b64d19637dae0197c893e5b3",
+        "source_ids": [],
+        "kind": "documentation"
+      },
+      {
+        "sha256": "d605b41210b8d1f5b3560aa9dd0981d9f0d6986399c788770ab38f974683b559",
+        "source_ids": [],
+        "kind": "documentation"
       }
     ]
   },
