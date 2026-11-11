@@ -22,9 +22,13 @@ Review regressions were observed failing before implementation, then passed. The
 
 ## Final local gates
 
-The integrated code passed 126 tests on Windows / Python 3.12.10, with one skipped symlink test because the OS denied symlink creation. Library statement/branch coverage was 92.00%, above the existing 90% gate. Ruff, mypy, dependency compatibility, deterministic regeneration, claim/source bindings and exact release inventory passed. The final documentation-only packaging was checked again for claims, inventory, relative links and sensitive content. CI supplies the separate supported-platform checks for the exact pushed heads.
+The integrated code passed 127 tests on Windows / Python 3.12.10, with one skipped symlink test because the OS denied symlink creation. Library statement/branch coverage was 92.00%, above the existing 90% gate. Ruff, mypy, dependency compatibility, deterministic regeneration, claim/source bindings and exact release inventory passed. The final documentation-only packaging was checked again for claims, inventory, relative links and sensitive content. CI supplies the separate supported-platform checks for the exact pushed heads.
 
 Gitleaks 8.30.1 found no leaks in the inspected complete public history or working tree, and the pinned dependency advisory audit found no known vulnerabilities. Those results do not establish raw-data redistribution rights or undisclosed-vulnerability absence. Hosted CodeQL and security job outcomes are checked separately on the PRs.
+
+Hosted Linux reproduced an EBP diamond-marker signed-zero difference that changed SVG identifiers. Explicit axis vertices replaced trigonometric rotation; a regression emulates the observed last-bit variation. Source estimates, interval bounds and mark positions remain unchanged. The affected files were regenerated and the complete suite rerun.
+
+The identity audit caught local integration merges created with the checkout's default email. Their superseded branch and PR were preserved outside the active publication ancestry. A new Macro branch starts from the corrected EBP branch and reuses the original publication commit with the approved public author/committer identity. No history was rewritten and no force-push occurred. The active ancestry passed the original identity audit without relaxing its rules.
 
 There are 20 new figures: 18 EMPIRICAL_REPORTED displays and two CONCEPTUAL_SCHEMATIC diagrams. Every empirical display is APPROVED AS REPORTED under the requested aggregate publication scope. Public commands reproduce the disclosed presentation, not the unavailable private backtests. The separate [ORB](../orb-visual-evidence.md), [EBP](../ebp-visual-evidence.md) and [MacroImpulse](../macro-visual-evidence.md) matrices retain BLOCKED extensions and exact handoff requirements.
 

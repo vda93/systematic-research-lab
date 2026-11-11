@@ -13,7 +13,7 @@
   "local_checks": {
     "python": "3.12.10",
     "platform": "Windows",
-    "tests": 126,
+    "tests": 127,
     "failures": 0,
     "skipped": 1,
     "skip_reason": "Windows denied test symlink creation; junction tests executed",
@@ -26,22 +26,23 @@
     "dependency_advisories": "python -m pip_audit --strict --no-deps --disable-pip -r requirements-lock.txt: no known vulnerabilities",
     "secret_scanner": "Gitleaks 8.30.1 history and directory scans: no leaks",
     "final_documentation_audit": "PASS: exact inventory, links, content restrictions",
-    "text_transport": "Task text normalized to repository LF policy before source-hash binding; semantic JSON/prose unchanged"
+    "text_transport": "Task text normalized to repository LF policy before source-hash binding; semantic JSON/prose unchanged",
+    "platform_portability": "Explicit EBP diamond vertices remove hosted Linux signed-zero path/ID variance; observed failing regression followed by passing suite"
   },
   "ci": "Exact pushed-head four-target reproduction, secret scan and CodeQL statuses are authoritative on each PR; not claimed by local execution",
   "reviews": {
     "docs/reviews/visual-v002-engineering.md": "6921f6ffde25f60c31430e16b27b9b0add0c8324849490095be892ae5bb6a7e3",
     "docs/reviews/visual-v002-quantitative.md": "2e5a3033ed122e3910baeae9749cbfaddcea279205bb82cda771fcda163b4c5e",
     "docs/reviews/visual-v002-visual.md": "936177906335c62228c69d5283cf86ddfa49af1f52223500eaca7dc9803e88d5",
-    "docs/reviews/visual-v002-resolution.md": "0c979377bf513b9b4046eafa93ca9be605ff7dde43cfe9d1d383b684fd2bf1d4"
+    "docs/reviews/visual-v002-resolution.md": "f2212b422316a5b79ca277bd14c3e29857fd391fd0efe1d8357f745cf3c70252"
   },
   "review_limits": "Fresh reviewers inspected initial 19 figures; coordinator verified fixes and the added source-bound symbolic mechanics figure. AI reviews are not human peer review. Dense details require full-resolution links; screen-reader, formal color-vision simulation and an actual phone were not tested.",
   "artifacts": {
-    "figures/ebp-cell-distribution.svg": "b72ea2a494dbfe1b24923a36175dfb1429ff0686f22a84d11cdd00c34915b24c",
+    "figures/ebp-cell-distribution.svg": "2521dca927660d560e38ad5ca9263aedada22679d88d3dba44a25cf4408959ba",
     "figures/ebp-native-timeframe.svg": "a034c25a6ebd1bff0bf799825e5f4483dedcb652ad761e8e0c53be04d1a6ed22",
     "figures/ebp-order-policy.svg": "58dc8dbc6a83e38f92c0d5c25c65626a5be28d3ea79af95855381f84ee298a9e",
     "figures/ebp-pending-lifecycle.svg": "fcbfb2a493e2b48c4bf7d006fcf41cddbd7ae7338dd4d8f25d58f119c13abb36",
-    "figures/ebp-small-candle.svg": "734468a17fdf0fcfaf934dbcfa57881d3d656b67fd74c8c3c45d93c0b4f03272",
+    "figures/ebp-small-candle.svg": "7df75482be5a6e98bae3fe29944cdb5366cd0c4e4ca5827f8514f9783ea1a09c",
     "figures/macro-baseline.svg": "9254bbb53deab6f418f8095915e7de01fbd2e58337b879f5882b0739b1448317",
     "figures/macro-calendar.svg": "04406e860c3aa491275dfed625871b5e8bc8f3665a416ca236657e4703818c17",
     "figures/macro-costs.svg": "afa34f4fd395defc9eec788c2808f086fa1669b84acbbb5450b23b12d5f1fcb8",
@@ -64,10 +65,11 @@
     "data/ebp-public.json": "adc951bd57462ca3841be87765b4547151e2cb49350c37b4e99f6485c37f84c7",
     "data/macro-public.json": "545cc95ab405b4bb4393afc4e0daee5956f058b5575b6b78c57d14a3ccae7832",
     "scripts/render_orb.py": "5162eb4cc053f6e1b70480990d649c1dc1de627403247b24debbe4e096a968b7",
-    "scripts/render_ebp.py": "ef070b917bb6a02ee1a4ba71821525a65728d897f5e3e6f786fdbe63e386c5b7",
+    "scripts/render_ebp.py": "5f7e18b678882a47ffd908e8a2ba1f812462acd8f9d2280f1ec82203090467d4",
     "scripts/render_macro.py": "806d674dcd15b71aa82bb37aad5f2e3d487629568a53043e0ff1f78bd8932f60"
   },
   "protected_outputs": "ORBINDEX and NOWICK study/data/renderer/test/figure diffs against baseline are empty",
   "research_safety": "No new strategy/optimization/bootstrap, sealed access, MT5, EA entry, RiskGuardian, live setfile or deployment action; no raw market or account rows published",
-  "blocked": "Original ORB 8D-R1/portability tables and target equivalence unavailable; Macro original sequential group decomposition missing, calendar scope unreconciled and cost qualification documentation-only; EBP broker state/reversal economics unqualified"
+  "blocked": "Original ORB 8D-R1/portability tables and target equivalence unavailable; Macro original sequential group decomposition missing, calendar scope unreconciled and cost qualification documentation-only; EBP broker state/reversal economics unqualified",
+  "identity_repair": "Superseded integration ancestry retained; clean Macro branch based on corrected EBP, approved author/committer identities; no force-push or history rewrite"
 }
