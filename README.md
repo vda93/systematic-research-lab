@@ -20,7 +20,7 @@ Can an engulfing candle support a continuation trade entered on a retracement? A
 
 ![Original EBP native-timeframe matrix: most configuration means are negative, with trade support retained and all timeframes qualified on their own signal clock](figures/ebp-native-timeframe.svg)
 
-The illustrated study separates the full configuration distribution, order-policy exposure and the small-candle observation. A labelled fictional lifecycle explains why pending-order occupancy changes the experiment. [Figure evidence and limits](docs/ebp-visual-evidence.md).
+Compare the configuration distribution, order-policy exposure and small-candle observation. A fictional lifecycle shows how an unfilled order can block later signals. [Figure evidence and limits](docs/ebp-visual-evidence.md).
 
 ### ORBINDEX: when a promising discovery failed its later test
 
