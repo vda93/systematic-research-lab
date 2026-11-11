@@ -1350,6 +1350,14 @@
     ],
     "studies/news-research.md": [
       {
+        "sha256": "bd6d647a8b4202396f6f29b2fcb0023b5a75317d856f619275d293d4bcd1f049",
+        "kind": "historical_report",
+        "source_ids": [
+          "B09",
+          "B14"
+        ]
+      },
+      {
         "kind": "documentation",
         "sha256": "29d3071c9d664b2ce54564b67c69a95234ec67d04ce58e6b2e27367c747f66fe",
         "source_ids": []
@@ -1377,6 +1385,13 @@
         ]
       },
       {
+        "sha256": "19bf3c400a5898ed65f49d5b42993e6e4b014e85f3a4246de8a481a4971c8711",
+        "kind": "historical_report",
+        "source_ids": [
+          "B09"
+        ]
+      },
+      {
         "kind": "historical_report",
         "sha256": "fbf9e3fc96943695fd64bcc1f24e3122b41f88e3eb86d8048f8dd9ecc0c1c682",
         "source_ids": [
@@ -1389,6 +1404,20 @@
           "B14",
           "B15",
           "B16"
+        ]
+      },
+      {
+        "sha256": "759c9db88fe8a68ee0c39558414be6690460e24b8ca4e53c989921d47536abf6",
+        "kind": "historical_report",
+        "source_ids": [
+          "B09"
+        ]
+      },
+      {
+        "sha256": "4e49e9c41b752fde14685b7576e0cadae251b53212086d8e00443cf628b9e002",
+        "kind": "historical_report",
+        "source_ids": [
+          "B09"
         ]
       },
       {
@@ -1411,6 +1440,20 @@
           "B14",
           "B15",
           "B16"
+        ]
+      },
+      {
+        "sha256": "8e8a7d8610abdb7e1ce22c403d371823fa243caf303d233e841e6598f994e201",
+        "kind": "historical_report",
+        "source_ids": [
+          "B10"
+        ]
+      },
+      {
+        "sha256": "1a43133cd6b7dff3d5d24bca79c95584bb3976de5f81dbbea910562d5927b3c7",
+        "kind": "historical_report",
+        "source_ids": [
+          "B10"
         ]
       },
       {
@@ -1532,6 +1575,20 @@
         ]
       },
       {
+        "sha256": "a83474890643ec03e830ebb81c1733fa0d2249b74a7136f55fc31d179acb342e",
+        "kind": "historical_report",
+        "source_ids": [
+          "B14"
+        ]
+      },
+      {
+        "sha256": "b728f0fff80c47aed6076e5c7964d7b73f3b5368ce765158a8fc8882979ac8c0",
+        "kind": "historical_report",
+        "source_ids": [
+          "B14"
+        ]
+      },
+      {
         "kind": "historical_report",
         "sha256": "8ecf15e9a85ad7765d10ec0df11516dff85e0485ca2c863b9d9a98cc631ca49f",
         "source_ids": [
@@ -1551,6 +1608,20 @@
           "B14",
           "B15",
           "B16"
+        ]
+      },
+      {
+        "sha256": "89037bb5503c36eddb60f44f6daeca0e45e2ac82c84115fd389c4960e3ff9f29",
+        "kind": "historical_report",
+        "source_ids": [
+          "B15"
+        ]
+      },
+      {
+        "sha256": "23f25dc677f49283a56b678247977d379012c996cce0aa43c877aeb1784840b6",
+        "kind": "historical_report",
+        "source_ids": [
+          "B15"
         ]
       },
       {
@@ -2906,6 +2977,860 @@
         "kind": "documentation",
         "source_ids": []
       }
+    ],
+    "docs/macro-visual-evidence.md": [
+      {
+        "sha256": "e94e8f0b2e86b56ec74b8e487bf4a94c33eab72b47f6392162400c604cd87f94",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "064363df6fe86c5091c50f69318d1965b70df7416e3edaf29cd8581b52bff1f5",
+        "kind": "historical_report",
+        "source_ids": [
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15"
+        ]
+      },
+      {
+        "sha256": "e86f77bb11ea4e6b983540154b845dac277165f1e8df28b3fe1a34378844eff5",
+        "kind": "historical_report",
+        "source_ids": [
+          "B10",
+          "B14",
+          "B15"
+        ]
+      },
+      {
+        "sha256": "f6b0eeb38dbbc8bae3e4102942f53de33db2705f35c4a5cba92b3dd6f38ed755",
+        "kind": "methods",
+        "source_ids": [
+          "B09",
+          "B14",
+          "B15"
+        ]
+      }
+    ],
+    "docs/reviews/visual-v002-engineering.md": [
+      {
+        "sha256": "606bda7a52ae8bcdbedcfec8104963084c74cabe1c7d0005a1484fedeb100eec",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "89ddc81c4a7b613931040f3d3fb2e909e11de77a52be2d6daea0050fd61af652",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "9f0c79f00c9e4a3b38a66ddcc17cffc2d39c706ff1e22f0fcc2f64ce3fd187fd",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "36f0a539ef41a723c483e2b0c6d26c778b24cf6fd7709f5723069f09c4ac8905",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "d7f02c0183f4bbf6f732601c9badbca1a86b6022789c3f7427e470ab3665569d",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "ad43e609a67ae7358dc3bb3305443af875100861f9c8ce4d119cfe71469e5bc4",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "37e41c0d5e9c3c0bdea254d53092d547e650ccce58f6c94735e0c0cbed67d530",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "a2090b2fc1b711f8884dfd082c9cb34732c5d56a08aa1a74062f21b3887b51b6",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "45f8a779190c88a47b91fde97a843d62d11cf2fb9931dd977307737ca6654cd5",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "f605816847fa50f3c2ebfb8d9d456e5e15f9b8b6810920779efbfcb4cf6ae7f3",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "515199d1591f0c8bfb4dc94cce748085d39cf7fcb597a4a3651ba9fd99908ad9",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "3422f2c9adf56ae07dda91f7cf5aa1e30466b9695fdeff6bc3e104699a865d89",
+        "kind": "documentation",
+        "source_ids": []
+      }
+    ],
+    "docs/reviews/visual-v002-quantitative.md": [
+      {
+        "sha256": "497a3db2e6db4c0a3a75358fd39ab4cfdcc68f8c060bf2e0ed719c7aafe4ccf0",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "156ac592a252682cdacddde0beb87b60c021010abc765ec0cdbda34f8c90dc96",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "fa2b5922fb73bd65fb7c79dd3c6123c5f8e5dd5bd2c3093262bae467f03f23c1",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "62ecb95c40b81bc179abfe93e11114f1ec00256003b4bae46f680d736e591976",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "9de338d9ce6684207961703b38ac49cf06c1dbb3710ae6f66692423a1235ccaf",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "346de4bf6325b0b5f029eeb77936decf79b661f5ce0917e4e37a32cb77fea7f0",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "18582193053c98111174916a0291c7c2e18e6c4395702e1c4b24366d2e86a05f",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "e5056161461c239a28d76a23152c305c89a88c61f2d3d844cc17bf28c3a91372",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "1f5ed166f2c529d1319f379dd065ce940e70a5da84d21e8283ffb3066ecdd14c",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "22ae06417a99963b6d0c23b884ad256ab10c4b5c9d92c745649396838d2c694a",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "835f122472e1d48b9484c143bee2df4cd40ee4929e1db14b986f4ce92c78e9a7",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "9ba3044f31a839b8b3a224b90a13eecf3c01ef2dfd8439a9f43d4aec7c43f09c",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      }
+    ],
+    "docs/reviews/visual-v002-visual.md": [
+      {
+        "sha256": "cd7ea0387890716584da69d75f53e4f74391a09cbc74d55d3f4c086cf71ec798",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "0743369d5ba5bc0b83c019bcf84b5840e2326d94675db489c25f494ca8ec8bc5",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "4cf3911dbd141db30a25133e6b09f1923437466651bc4dcb125faa7d42349f26",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "49040c9ce7ac5618118b33d67fe194178813503c566a664b24c54cfe3a1dbf79",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "839e5ba6f01fbe1f064f039186e41c5c3fc41232095e6babb378fc5590360ed8",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "761a6cc2d8215ab8a8158b0ee97f399e74330f67af0864fd738f0a6a829e1dde",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "595e2825c1c90725f7707126721b9df8776e8cadf6d20ced717c65249c994fd9",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "ab7e2c7f2d89cfbe780bdc5cf9b322ead43e3534cd8d770c2f6b904021f1e17d",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "5764a6843abc28da5e1631021756afa5296051f86a2f52d86b332c7a4ea8f6af",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "9c42513ca4f96cbe3499d84d4e321e20a872c6b8444e112bc810d316dee4552f",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "f11bcab69ebf2bbec9817e573e63a6da3df4f9d2f5f39e6ad3a36ce32874c28a",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "f926617cf538228fa0dddc99512f393fa6ebf32df580da09b1f0f3ff0282b3a0",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "09eea3d06ab0c94b773d818bc40c610fe9ca7de21c0656a6f7ef8a0cb7507b8a",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "87af9ce066283074a6492553b1b8ce44703d92616eaddb7efddc07dc07efcad2",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "7965968d4c1e90aa2f2dc3698d5a40e82ac8ae3af9fc47cf93a11742416271e3",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "cffe96db3455206198ed1d3101afd4d0e4d9e77bac38ecdb631e620ca1aff4e0",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "e01836e9e68efc04c228bca3cc5d624490c2477946ee5a89cdf708bceba385ad",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "1e12d793b0e1a8016b5160b836d13502f2c7a90087265d2ba753ae65f88e971c",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "0452eb768e6be69d7c3fe913ce9192564c6844e695f2839bbfc258b47a4912d9",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "0731218297b2e1558613bb212af6aa1311c9a09447768e9551bd9a356b63acbd",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "70273e824dc2e25510aff843b653ba32497cdeb45b302e6a8eb7f3ff85631c9f",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "21ea617f2db4cb433310ec9f8441b04588b4a418431d193c5d09600251b1f8d6",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "6a99f870c966180ab91de26c34e5d235c5341767d23903b3f3da0eb8495c7fe4",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "ee1ced7dc6a22de2bd1202626daf81245515fbf4b2cb12ccd4c36d5282704a70",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2",
+          "B08",
+          "B09",
+          "B10",
+          "B14",
+          "B15",
+          "B21",
+          "B22",
+          "B23"
+        ]
+      }
+    ],
+    "docs/reviews/visual-v002-resolution.md": [
+      {
+        "sha256": "5f0d29b3f0bd5447a19306a78383f1ced24c423e0dcf894fce30ae795e216a0e",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "50922591e601b14c20ecc384d75bc4d646944c08e2ab5e0eb7ec430fd446109e",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "bfda9cce5d545ca1940569260dcadf57c0b38ab7b9f36e050b6c8c59a2cbff3f",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "aa7d4a33d53a0a11dc867782aa9058a96a22841b6a731c7d0702dfc0c101fb59",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "57ba8cc871032dc262a68504e2a6f5ceaf4523d4c4257ce47ef5c07c8e6a2120",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "cc601fae1b727b668a9a5890d71f8fea3daa9d26591e0fe492514ce432b7a87b",
+        "kind": "documentation",
+        "source_ids": []
+      }
     ]
   },
   "figures": [
@@ -3170,6 +4095,73 @@
         "B21"
       ],
       "scope": "CONCEPTUAL_SCHEMATIC"
+    },
+    {
+      "path": "figures/macro-mechanics.svg",
+      "renderer": "scripts/render_macro.py",
+      "inputs": {
+        "data/macro-public.json": "545cc95ab405b4bb4393afc4e0daee5956f058b5575b6b78c57d14a3ccae7832"
+      },
+      "source_ids": [
+        "B08",
+        "B10"
+      ],
+      "scope": "CONCEPTUAL_SCHEMATIC"
+    },
+    {
+      "path": "figures/macro-baseline.svg",
+      "renderer": "scripts/render_macro.py",
+      "inputs": {
+        "data/macro-public.json": "545cc95ab405b4bb4393afc4e0daee5956f058b5575b6b78c57d14a3ccae7832"
+      },
+      "source_ids": [
+        "B09"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/macro-spread-filter.svg",
+      "renderer": "scripts/render_macro.py",
+      "inputs": {
+        "data/macro-public.json": "545cc95ab405b4bb4393afc4e0daee5956f058b5575b6b78c57d14a3ccae7832"
+      },
+      "source_ids": [
+        "B09"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/macro-sequential.svg",
+      "renderer": "scripts/render_macro.py",
+      "inputs": {
+        "data/macro-public.json": "545cc95ab405b4bb4393afc4e0daee5956f058b5575b6b78c57d14a3ccae7832"
+      },
+      "source_ids": [
+        "B10"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/macro-costs.svg",
+      "renderer": "scripts/render_macro.py",
+      "inputs": {
+        "data/macro-public.json": "545cc95ab405b4bb4393afc4e0daee5956f058b5575b6b78c57d14a3ccae7832"
+      },
+      "source_ids": [
+        "B14"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/macro-calendar.svg",
+      "renderer": "scripts/render_macro.py",
+      "inputs": {
+        "data/macro-public.json": "545cc95ab405b4bb4393afc4e0daee5956f058b5575b6b78c57d14a3ccae7832"
+      },
+      "source_ids": [
+        "B15"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
     }
   ],
   "reviewed_on": "2026-11-04",

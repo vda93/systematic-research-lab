@@ -1,0 +1,1173 @@
+{
+  "schema": "macro-public.v002",
+  "purpose": "Public historical aggregate transcription; deterministic visual reconstruction, not backtest reproduction.",
+  "publication_scope": "Public aggregate extraction authorized; private trade rows, calendars, ticks and source locations excluded.",
+  "units": {
+    "money": "USD in the source research accounting, not account return or risk-normalized R",
+    "profit_factor": "Source gross profit / gross loss under each explicitly named accounting model"
+  },
+  "sources": [
+    {
+      "id": "MACRO-BASELINE",
+      "basename": "MacroImpulse_ExnessBaseline_2023_2024_20260824T081744Z.zip",
+      "sha256": "692ef29c5f162e9f89b0252abe380e3be31ba0827e3d9f2eced8129258660172",
+      "identity_kind": "ORIGINAL_ARCHIVE_BYTES",
+      "publication_permission": "PUBLIC_AGGREGATE_ONLY",
+      "members": [
+        {
+          "basename": "BASELINE_CELL_SUMMARY.csv",
+          "sha256": "a8f1df0b22ee7d76c0d3d92c58f0faa2cb92b262ff39ba04f9ae1d200fbdb348"
+        },
+        {
+          "basename": "RUN_COMPLETION_MANIFEST.json",
+          "sha256": "3cebd537460fb6fe5eb7d62c43fddb9ed1b3f07605af4c03f6814892f84316bb"
+        },
+        {
+          "basename": "RUN_START_MANIFEST.json",
+          "sha256": "40efe05f632465ec671ad828a4671dbbe5145aea0495a248a6dcb46532597d62"
+        }
+      ]
+    },
+    {
+      "id": "MACRO-SPREAD",
+      "basename": "MacroImpulse_SPREAD1_Exness_Validation_2021_2022_V4_20260825_125320.zip",
+      "sha256": "60dfed0d24a43a862e4d482494b09d8e6b114fd7c6724dee2d8fc9e4c0bd42cf",
+      "identity_kind": "ORIGINAL_ARCHIVE_BYTES",
+      "publication_permission": "PUBLIC_AGGREGATE_ONLY",
+      "members": [
+        {
+          "basename": "PAIR_AGGREGATE_2021_2022.csv",
+          "sha256": "8d6b281bde9ad319a8c6bc3e3a0427bb8999319f8c342fd57a9090e2a9a6d1a2"
+        },
+        {
+          "basename": "VALIDATION_DECISION_READOUT.json",
+          "sha256": "0f0687447361e5e7cfc2c6b047178faf4e867ca594ad56eead05053090609ecd"
+        },
+        {
+          "basename": "YEAR_SCORECARD.csv",
+          "sha256": "8ac342527e587797eb96cd9cf548bfd47e88c31325975b0f4383313ec18ebc99"
+        },
+        {
+          "basename": "YEAR_PAIR_COMPARISON.csv",
+          "sha256": "883af2c3d17404c27e70b98a4cf5b9efca862f611e24522a253432bd1a70f62d"
+        }
+      ]
+    },
+    {
+      "id": "MACRO-COST",
+      "basename": "MacroImpulse_MediumImpact_Commission_Reaccounting_20260829T054907Z_CHATGPT_REVIEW.zip",
+      "sha256": "c8d940dd3daf18d1d13cfa93a5b6c0480ff77d7a0d8fc7d9c210739468b6e4ea",
+      "identity_kind": "ORIGINAL_ARCHIVE_BYTES",
+      "publication_permission": "PUBLIC_AGGREGATE_ONLY",
+      "members": [
+        {
+          "basename": "SUMMARY_BY_YEAR.csv",
+          "sha256": "51e74cb34ca6b4803aef20c17908e075edb104ad6aad62fcba942d367f7b48c5"
+        },
+        {
+          "basename": "SUMMARY_BY_PAIR.csv",
+          "sha256": "42bf36f65b6e9ff51a0c4190583b322ed2739096aec4c909084f010a1fb96387"
+        },
+        {
+          "basename": "COST_SENSITIVITY.csv",
+          "sha256": "ecfe27363980361d1e9212613f06d98037bbe9e88847ffc69788ab73f1a26a56"
+        },
+        {
+          "basename": "CANDIDATE_ADJUDICATION.md",
+          "sha256": "f3449ca41cb76f84134c4e79d32417e8674ca34d536d38a43764503cc6b428f5"
+        },
+        {
+          "basename": "COMMISSION_MODEL.json",
+          "sha256": "c26dc899e352c537255de22cdd9f246f2dfc39e834339afd11e1b9409d72c6fc"
+        }
+      ]
+    },
+    {
+      "id": "MACRO-CALENDAR",
+      "basename": "MacroImpulse_NEWS_CALENDAR_COVERAGE_AUDIT_20260902T083439Z_CHATGPT_REVIEW.zip",
+      "sha256": "ecb70d77999e28a5cdf8d5d6c1809abed69359f081c3e95f9707c1d687d9327a",
+      "identity_kind": "ORIGINAL_ARCHIVE_BYTES",
+      "publication_permission": "PUBLIC_AGGREGATE_ONLY",
+      "members": [
+        {
+          "basename": "COUNTS_BY_MONTH_IMPACT.csv",
+          "sha256": "73c6e39d4d9774b992f74527ddac5e56aaff3e6f3f49b6af864c705e2bb04590"
+        },
+        {
+          "basename": "COUNTS_BY_YEAR_IMPACT.csv",
+          "sha256": "c720e166159b878738f7167f5f8bd643e3f0d099dcbd73b1716539b08fa6dbda"
+        },
+        {
+          "basename": "PERIOD_RATE_COMPARISON.csv",
+          "sha256": "4fb56f0d3c47308f57d51de6a6d3cf6139a36daec47173b0be1e528eb4338786"
+        },
+        {
+          "basename": "CALENDAR_AUDIT_SUMMARY.md",
+          "sha256": "b4643395e583c74092f9c01251224083ac93877c43181d2ca486ca6e3db77514"
+        }
+      ]
+    },
+    {
+      "id": "MACRO-SEQUENTIAL",
+      "basename": "macro-sequential-canonical-snapshot.txt",
+      "sha256": "765ce4577fcfebfcbe6a4e2172e6e4978ebf609888015d3203e4a6c9df200f5e",
+      "identity_kind": "CANONICAL_DECISION_TEXT_SNAPSHOT",
+      "snapshot_date": "2026-11-11",
+      "decision_last_edited": "2026-08-27",
+      "publication_permission": "PUBLIC_AGGREGATE_ONLY",
+      "members": [],
+      "limitation": "Reported canonical aggregates, not independent reaggregation of original position rows."
+    },
+    {
+      "id": "MACRO-MECHANICS",
+      "basename": "MacroImpulse_Parity_v001_FREEZE_20260821_122543.zip",
+      "sha256": "0de5b1566d178d0710b8671128f67e4c27ff5ad819b5534f38af41e19197eb44",
+      "identity_kind": "ORIGINAL_ARCHIVE_BYTES",
+      "publication_permission": "PUBLIC_AGGREGATE_ONLY",
+      "members": [
+        {
+          "basename": "BEHAVIORAL_SPEC.md",
+          "sha256": "7e427e42d8f154d5580eaf2ff8edcab89cbdedb8eb26ecf4d3888bb9e14a39ec"
+        }
+      ]
+    }
+  ],
+  "baseline": {
+    "source_id": "MACRO-BASELINE",
+    "experiment_id": "EXP-MACROIMPULSE-EXNESS-BASELINE-001",
+    "run_id": "MacroImpulse_ExnessBaseline_2023_2024_20260824T081744Z",
+    "period": "2023-01-01 through 2024-12-31",
+    "sample_classification": "HISTORICAL_BASELINE_BRIDGE_ALREADY_OPENED",
+    "cost_model": "SPREAD_ONLY_COMMISSION_NOT_YET_APPLIED",
+    "broker_universe": "Qualified Exness Raw Spread custom symbols; UTC+0, zero shift, Model 4",
+    "trades": 1396,
+    "spread_only_usd": 4250.48,
+    "aggregate_pf_as_reported": 3.6889,
+    "cells": [
+      {
+        "cell_id": "MIEB_2023_EURUSD2",
+        "year": 2023,
+        "symbol": "EURUSD2",
+        "trades": 137,
+        "spread_only_usd": 408.7,
+        "gross_profit_usd": 599.5,
+        "gross_loss_usd": 190.8,
+        "pf_as_reported": 3.142034
+      },
+      {
+        "cell_id": "MIEB_2023_GBPUSD2",
+        "year": 2023,
+        "symbol": "GBPUSD2",
+        "trades": 167,
+        "spread_only_usd": 710.4,
+        "gross_profit_usd": 924.7,
+        "gross_loss_usd": 214.3,
+        "pf_as_reported": 4.314979
+      },
+      {
+        "cell_id": "MIEB_2023_AUDUSD2",
+        "year": 2023,
+        "symbol": "AUDUSD2",
+        "trades": 126,
+        "spread_only_usd": 536.0,
+        "gross_profit_usd": 653.6,
+        "gross_loss_usd": 117.6,
+        "pf_as_reported": 5.557823
+      },
+      {
+        "cell_id": "MIEB_2023_USDCAD2",
+        "year": 2023,
+        "symbol": "USDCAD2",
+        "trades": 111,
+        "spread_only_usd": 280.71,
+        "gross_profit_usd": 386.89,
+        "gross_loss_usd": 106.18,
+        "pf_as_reported": 3.643718
+      },
+      {
+        "cell_id": "MIEB_2023_USDJPY2",
+        "year": 2023,
+        "symbol": "USDJPY2",
+        "trades": 169,
+        "spread_only_usd": 513.95,
+        "gross_profit_usd": 707.56,
+        "gross_loss_usd": 193.61,
+        "pf_as_reported": 3.654563
+      },
+      {
+        "cell_id": "MIEB_2024_EURUSD2",
+        "year": 2024,
+        "symbol": "EURUSD2",
+        "trades": 130,
+        "spread_only_usd": 333.3,
+        "gross_profit_usd": 453.6,
+        "gross_loss_usd": 120.3,
+        "pf_as_reported": 3.770574
+      },
+      {
+        "cell_id": "MIEB_2024_GBPUSD2",
+        "year": 2024,
+        "symbol": "GBPUSD2",
+        "trades": 157,
+        "spread_only_usd": 495.3,
+        "gross_profit_usd": 689.7,
+        "gross_loss_usd": 194.4,
+        "pf_as_reported": 3.54784
+      },
+      {
+        "cell_id": "MIEB_2024_AUDUSD2",
+        "year": 2024,
+        "symbol": "AUDUSD2",
+        "trades": 110,
+        "spread_only_usd": 290.6,
+        "gross_profit_usd": 415.0,
+        "gross_loss_usd": 124.4,
+        "pf_as_reported": 3.336013
+      },
+      {
+        "cell_id": "MIEB_2024_USDCAD2",
+        "year": 2024,
+        "symbol": "USDCAD2",
+        "trades": 122,
+        "spread_only_usd": 248.86,
+        "gross_profit_usd": 395.16,
+        "gross_loss_usd": 146.3,
+        "pf_as_reported": 2.701025
+      },
+      {
+        "cell_id": "MIEB_2024_USDJPY2",
+        "year": 2024,
+        "symbol": "USDJPY2",
+        "trades": 167,
+        "spread_only_usd": 432.66,
+        "gross_profit_usd": 605.52,
+        "gross_loss_usd": 172.86,
+        "pf_as_reported": 3.50295
+      }
+    ],
+    "unknowns": [
+      "No historical commission applied",
+      "Publication latency and realizable broker fills not established",
+      "No account-equity path or uncertainty interval reconstructed"
+    ]
+  },
+  "spread_filter": {
+    "source_id": "MACRO-SPREAD",
+    "experiment_id": "SPREAD1 frozen Exness validation",
+    "run_id": "MacroImpulse_SPREAD1_Exness_Validation_2021_2022_V4_20260825_125320",
+    "period": "2021-01-01 through 2022-12-31",
+    "sample_classification": "FROZEN_VALIDATION_ALREADY_OPENED",
+    "cost_model": "SPREAD_ONLY_COMMISSION_NOT_YET_APPLIED",
+    "control_label": "SPREAD3",
+    "treatment_label": "SPREAD1",
+    "control_usd": 2741.19,
+    "treatment_usd": 2733.57,
+    "delta_usd": -7.62,
+    "control_trades": 700,
+    "treatment_trades": 697,
+    "removed_completed_trades": 3,
+    "removed_completed_trades_profitable": 3,
+    "double_trigger_usd_both_arms": 44.93,
+    "decision": "REJECT_NO_RETUNING",
+    "pairs": [
+      {
+        "symbol": "EURUSD2",
+        "control_usd": 495.5,
+        "treatment_usd": 495.5,
+        "delta_usd": 0.0
+      },
+      {
+        "symbol": "GBPUSD2",
+        "control_usd": 752.1,
+        "treatment_usd": 748.4,
+        "delta_usd": -3.7
+      },
+      {
+        "symbol": "AUDUSD2",
+        "control_usd": 432.7,
+        "treatment_usd": 432.7,
+        "delta_usd": 0.0
+      },
+      {
+        "symbol": "USDCAD2",
+        "control_usd": 523.91,
+        "treatment_usd": 523.27,
+        "delta_usd": -0.64
+      },
+      {
+        "symbol": "USDJPY2",
+        "control_usd": 536.98,
+        "treatment_usd": 533.7,
+        "delta_usd": -3.28
+      }
+    ],
+    "unknowns": [
+      "Commission excluded; do not merge with later medium-only accounting",
+      "Not an independent effect estimate with a confidence interval"
+    ]
+  },
+  "sequential": {
+    "source_id": "MACRO-SEQUENTIAL",
+    "experiment_id": "MacroImpulse opposite-order suppression adjudication",
+    "period": "2021 through 2024",
+    "sample_classification": "EVENTPATH_DEVELOPMENT_ALREADY_OPENED",
+    "groups": 139,
+    "positions": 278,
+    "sequential_groups": 139,
+    "first_leg_usd": -287.99,
+    "reversal_leg_usd": 188.22,
+    "combined_usd": -99.77,
+    "cost_model": "SPREAD_ONLY_COMMISSION_NOT_APPLIED",
+    "independent_equity_paths": false,
+    "decision": "REJECT_BLANKET_OPPOSITE_ORDER_SUPPRESSION",
+    "unknowns": [
+      "Original group-level decomposition not recovered in this publication pass",
+      "Leg totals are dependent components of the same groups, not independent strategy equity curves"
+    ]
+  },
+  "medium": {
+    "source_id": "MACRO-COST",
+    "experiment_id": "MacroImpulse_MediumImpact_Commission_Reaccounting",
+    "run_id": "MacroImpulse_MediumImpact_Commission_Reaccounting_20260829T054907Z",
+    "period": "2021 through 2024",
+    "sample_classification": "CLEAN_MEDIUM_ONLY_DISCOVERY_ALREADY_OPENED",
+    "event_universe": "Release clusters containing HIGH impact excluded; four-pair candidate excludes USDCAD2",
+    "cost_model": "USD 3.50 per actual lot per side on entry and exit; USD research account; spread already in recorded outcomes",
+    "cost_validation": "DOCUMENTATION_ONLY",
+    "same_account_deal_export_available": false,
+    "decision": "PARK_FAILED_EVERY_YEAR_POSITIVE_GATE",
+    "totals": [
+      {
+        "universe": "FIVE_PAIR_ORIGINAL",
+        "trades": 638,
+        "spread_only_usd": 1036.06,
+        "commission_usd": 446.6,
+        "adjusted_usd": 589.46,
+        "pf_as_reported": 1.5827006722024515
+      },
+      {
+        "universe": "FOUR_PAIR_EXCLUDE_USDCAD2",
+        "trades": 563,
+        "spread_only_usd": 1033.78,
+        "commission_usd": 394.1,
+        "adjusted_usd": 639.68,
+        "pf_as_reported": 1.7327712609970674
+      }
+    ],
+    "years": [
+      {
+        "universe": "FIVE_PAIR_ORIGINAL",
+        "year": 2021,
+        "trades": 42,
+        "spread_only_usd": -21.23,
+        "commission_usd": 29.4,
+        "adjusted_usd": -50.63
+      },
+      {
+        "universe": "FIVE_PAIR_ORIGINAL",
+        "year": 2022,
+        "trades": 157,
+        "spread_only_usd": 300.93,
+        "commission_usd": 109.9,
+        "adjusted_usd": 191.03
+      },
+      {
+        "universe": "FIVE_PAIR_ORIGINAL",
+        "year": 2023,
+        "trades": 276,
+        "spread_only_usd": 535.09,
+        "commission_usd": 193.2,
+        "adjusted_usd": 341.89
+      },
+      {
+        "universe": "FIVE_PAIR_ORIGINAL",
+        "year": 2024,
+        "trades": 163,
+        "spread_only_usd": 221.27,
+        "commission_usd": 114.1,
+        "adjusted_usd": 107.17
+      },
+      {
+        "universe": "FOUR_PAIR_EXCLUDE_USDCAD2",
+        "year": 2021,
+        "trades": 34,
+        "spread_only_usd": 7.51,
+        "commission_usd": 23.8,
+        "adjusted_usd": -16.29
+      },
+      {
+        "universe": "FOUR_PAIR_EXCLUDE_USDCAD2",
+        "year": 2022,
+        "trades": 136,
+        "spread_only_usd": 281.36,
+        "commission_usd": 95.2,
+        "adjusted_usd": 186.16
+      },
+      {
+        "universe": "FOUR_PAIR_EXCLUDE_USDCAD2",
+        "year": 2023,
+        "trades": 245,
+        "spread_only_usd": 557.01,
+        "commission_usd": 171.5,
+        "adjusted_usd": 385.51
+      },
+      {
+        "universe": "FOUR_PAIR_EXCLUDE_USDCAD2",
+        "year": 2024,
+        "trades": 148,
+        "spread_only_usd": 187.9,
+        "commission_usd": 103.6,
+        "adjusted_usd": 84.3
+      }
+    ],
+    "pairs": [
+      {
+        "universe": "FIVE_PAIR_ORIGINAL",
+        "symbol": "AUDUSD2",
+        "trades": 76,
+        "spread_only_usd": 116.7,
+        "commission_usd": 53.2,
+        "adjusted_usd": 63.5
+      },
+      {
+        "universe": "FIVE_PAIR_ORIGINAL",
+        "symbol": "EURUSD2",
+        "trades": 132,
+        "spread_only_usd": 192.9,
+        "commission_usd": 92.4,
+        "adjusted_usd": 100.5
+      },
+      {
+        "universe": "FIVE_PAIR_ORIGINAL",
+        "symbol": "GBPUSD2",
+        "trades": 171,
+        "spread_only_usd": 251.3,
+        "commission_usd": 119.7,
+        "adjusted_usd": 131.6
+      },
+      {
+        "universe": "FIVE_PAIR_ORIGINAL",
+        "symbol": "USDCAD2",
+        "trades": 75,
+        "spread_only_usd": 2.28,
+        "commission_usd": 52.5,
+        "adjusted_usd": -50.22
+      },
+      {
+        "universe": "FIVE_PAIR_ORIGINAL",
+        "symbol": "USDJPY2",
+        "trades": 184,
+        "spread_only_usd": 472.88,
+        "commission_usd": 128.8,
+        "adjusted_usd": 344.08
+      },
+      {
+        "universe": "FOUR_PAIR_EXCLUDE_USDCAD2",
+        "symbol": "AUDUSD2",
+        "trades": 76,
+        "spread_only_usd": 116.7,
+        "commission_usd": 53.2,
+        "adjusted_usd": 63.5
+      },
+      {
+        "universe": "FOUR_PAIR_EXCLUDE_USDCAD2",
+        "symbol": "EURUSD2",
+        "trades": 132,
+        "spread_only_usd": 192.9,
+        "commission_usd": 92.4,
+        "adjusted_usd": 100.5
+      },
+      {
+        "universe": "FOUR_PAIR_EXCLUDE_USDCAD2",
+        "symbol": "GBPUSD2",
+        "trades": 171,
+        "spread_only_usd": 251.3,
+        "commission_usd": 119.7,
+        "adjusted_usd": 131.6
+      },
+      {
+        "universe": "FOUR_PAIR_EXCLUDE_USDCAD2",
+        "symbol": "USDJPY2",
+        "trades": 184,
+        "spread_only_usd": 472.88,
+        "commission_usd": 128.8,
+        "adjusted_usd": 344.08
+      }
+    ],
+    "unknowns": [
+      "No empirical same-account commission validation",
+      "No claim of realized live net economics",
+      "No new strategy run or sealed-year access"
+    ]
+  },
+  "calendar": {
+    "source_id": "MACRO-CALENDAR",
+    "experiment_id": "MacroImpulse frozen news calendar coverage audit",
+    "period": "2020-01-01 through 2026-06-30",
+    "sample_classification": "ALREADY_OPENED_CALENDAR_FORENSICS_NOT_STRATEGY_HOLDOUT",
+    "cost_model": "NOT_APPLICABLE_CALENDAR_COUNTS",
+    "later_result_classification": "INVALID_DATA_UNIVERSE",
+    "scope_reconciled": false,
+    "forensic_scope": {
+      "earlier_rows": 16288,
+      "earlier_months": 60,
+      "later_rows": 760,
+      "later_months": 18,
+      "earlier_rate_as_reported": 271.47,
+      "later_rate_as_reported": 42.22
+    },
+    "earlier_scope": {
+      "2020_reported": 3246,
+      "2021_2024_reported": 12813,
+      "reported_total": 16059,
+      "qualification": "Earlier strategy-input counts; extraction scopes are unreconciled. Do not replace the forensic table."
+    },
+    "monthly": [
+      {
+        "month": "2020-01",
+        "high": 77,
+        "medium": 284,
+        "low": 411,
+        "unclassified": 0,
+        "all": 772
+      },
+      {
+        "month": "2020-02",
+        "high": 64,
+        "medium": 253,
+        "low": 431,
+        "unclassified": 0,
+        "all": 748
+      },
+      {
+        "month": "2020-03",
+        "high": 64,
+        "medium": 272,
+        "low": 415,
+        "unclassified": 0,
+        "all": 751
+      },
+      {
+        "month": "2020-04",
+        "high": 66,
+        "medium": 262,
+        "low": 358,
+        "unclassified": 0,
+        "all": 686
+      },
+      {
+        "month": "2020-05",
+        "high": 60,
+        "medium": 281,
+        "low": 513,
+        "unclassified": 0,
+        "all": 854
+      },
+      {
+        "month": "2020-06",
+        "high": 59,
+        "medium": 302,
+        "low": 553,
+        "unclassified": 0,
+        "all": 914
+      },
+      {
+        "month": "2020-07",
+        "high": 64,
+        "medium": 285,
+        "low": 514,
+        "unclassified": 0,
+        "all": 863
+      },
+      {
+        "month": "2020-08",
+        "high": 58,
+        "medium": 258,
+        "low": 524,
+        "unclassified": 0,
+        "all": 840
+      },
+      {
+        "month": "2020-09",
+        "high": 55,
+        "medium": 314,
+        "low": 537,
+        "unclassified": 0,
+        "all": 906
+      },
+      {
+        "month": "2020-10",
+        "high": 61,
+        "medium": 334,
+        "low": 524,
+        "unclassified": 0,
+        "all": 919
+      },
+      {
+        "month": "2020-11",
+        "high": 56,
+        "medium": 330,
+        "low": 541,
+        "unclassified": 0,
+        "all": 927
+      },
+      {
+        "month": "2020-12",
+        "high": 58,
+        "medium": 300,
+        "low": 541,
+        "unclassified": 0,
+        "all": 899
+      },
+      {
+        "month": "2021-01",
+        "high": 56,
+        "medium": 300,
+        "low": 543,
+        "unclassified": 0,
+        "all": 899
+      },
+      {
+        "month": "2021-02",
+        "high": 54,
+        "medium": 301,
+        "low": 510,
+        "unclassified": 0,
+        "all": 865
+      },
+      {
+        "month": "2021-03",
+        "high": 63,
+        "medium": 314,
+        "low": 614,
+        "unclassified": 0,
+        "all": 991
+      },
+      {
+        "month": "2021-04",
+        "high": 57,
+        "medium": 264,
+        "low": 552,
+        "unclassified": 0,
+        "all": 873
+      },
+      {
+        "month": "2021-05",
+        "high": 50,
+        "medium": 270,
+        "low": 554,
+        "unclassified": 0,
+        "all": 874
+      },
+      {
+        "month": "2021-06",
+        "high": 61,
+        "medium": 296,
+        "low": 586,
+        "unclassified": 0,
+        "all": 943
+      },
+      {
+        "month": "2021-07",
+        "high": 56,
+        "medium": 249,
+        "low": 521,
+        "unclassified": 0,
+        "all": 826
+      },
+      {
+        "month": "2021-08",
+        "high": 56,
+        "medium": 247,
+        "low": 565,
+        "unclassified": 0,
+        "all": 868
+      },
+      {
+        "month": "2021-09",
+        "high": 52,
+        "medium": 283,
+        "low": 590,
+        "unclassified": 0,
+        "all": 925
+      },
+      {
+        "month": "2021-10",
+        "high": 59,
+        "medium": 284,
+        "low": 594,
+        "unclassified": 0,
+        "all": 937
+      },
+      {
+        "month": "2021-11",
+        "high": 65,
+        "medium": 314,
+        "low": 666,
+        "unclassified": 0,
+        "all": 1045
+      },
+      {
+        "month": "2021-12",
+        "high": 53,
+        "medium": 260,
+        "low": 611,
+        "unclassified": 0,
+        "all": 924
+      },
+      {
+        "month": "2022-01",
+        "high": 63,
+        "medium": 260,
+        "low": 650,
+        "unclassified": 0,
+        "all": 973
+      },
+      {
+        "month": "2022-02",
+        "high": 59,
+        "medium": 261,
+        "low": 602,
+        "unclassified": 0,
+        "all": 922
+      },
+      {
+        "month": "2022-03",
+        "high": 73,
+        "medium": 322,
+        "low": 672,
+        "unclassified": 0,
+        "all": 1067
+      },
+      {
+        "month": "2022-04",
+        "high": 61,
+        "medium": 255,
+        "low": 622,
+        "unclassified": 0,
+        "all": 938
+      },
+      {
+        "month": "2022-05",
+        "high": 72,
+        "medium": 296,
+        "low": 638,
+        "unclassified": 0,
+        "all": 1006
+      },
+      {
+        "month": "2022-06",
+        "high": 67,
+        "medium": 295,
+        "low": 673,
+        "unclassified": 0,
+        "all": 1035
+      },
+      {
+        "month": "2022-07",
+        "high": 65,
+        "medium": 252,
+        "low": 582,
+        "unclassified": 0,
+        "all": 899
+      },
+      {
+        "month": "2022-08",
+        "high": 62,
+        "medium": 252,
+        "low": 606,
+        "unclassified": 0,
+        "all": 920
+      },
+      {
+        "month": "2022-09",
+        "high": 62,
+        "medium": 309,
+        "low": 640,
+        "unclassified": 0,
+        "all": 1011
+      },
+      {
+        "month": "2022-10",
+        "high": 59,
+        "medium": 283,
+        "low": 626,
+        "unclassified": 0,
+        "all": 968
+      },
+      {
+        "month": "2022-11",
+        "high": 68,
+        "medium": 301,
+        "low": 673,
+        "unclassified": 0,
+        "all": 1042
+      },
+      {
+        "month": "2022-12",
+        "high": 57,
+        "medium": 270,
+        "low": 623,
+        "unclassified": 0,
+        "all": 950
+      },
+      {
+        "month": "2023-01",
+        "high": 62,
+        "medium": 292,
+        "low": 689,
+        "unclassified": 0,
+        "all": 1043
+      },
+      {
+        "month": "2023-02",
+        "high": 59,
+        "medium": 274,
+        "low": 625,
+        "unclassified": 0,
+        "all": 958
+      },
+      {
+        "month": "2023-03",
+        "high": 70,
+        "medium": 329,
+        "low": 723,
+        "unclassified": 0,
+        "all": 1122
+      },
+      {
+        "month": "2023-04",
+        "high": 54,
+        "medium": 254,
+        "low": 649,
+        "unclassified": 0,
+        "all": 957
+      },
+      {
+        "month": "2023-05",
+        "high": 67,
+        "medium": 312,
+        "low": 706,
+        "unclassified": 0,
+        "all": 1085
+      },
+      {
+        "month": "2023-06",
+        "high": 69,
+        "medium": 302,
+        "low": 699,
+        "unclassified": 0,
+        "all": 1070
+      },
+      {
+        "month": "2023-07",
+        "high": 58,
+        "medium": 262,
+        "low": 633,
+        "unclassified": 0,
+        "all": 953
+      },
+      {
+        "month": "2023-08",
+        "high": 63,
+        "medium": 265,
+        "low": 667,
+        "unclassified": 0,
+        "all": 995
+      },
+      {
+        "month": "2023-09",
+        "high": 62,
+        "medium": 283,
+        "low": 685,
+        "unclassified": 0,
+        "all": 1030
+      },
+      {
+        "month": "2023-10",
+        "high": 62,
+        "medium": 327,
+        "low": 692,
+        "unclassified": 0,
+        "all": 1081
+      },
+      {
+        "month": "2023-11",
+        "high": 65,
+        "medium": 328,
+        "low": 734,
+        "unclassified": 0,
+        "all": 1127
+      },
+      {
+        "month": "2023-12",
+        "high": 55,
+        "medium": 250,
+        "low": 641,
+        "unclassified": 0,
+        "all": 946
+      },
+      {
+        "month": "2024-01",
+        "high": 62,
+        "medium": 280,
+        "low": 740,
+        "unclassified": 0,
+        "all": 1082
+      },
+      {
+        "month": "2024-02",
+        "high": 59,
+        "medium": 296,
+        "low": 696,
+        "unclassified": 0,
+        "all": 1051
+      },
+      {
+        "month": "2024-03",
+        "high": 67,
+        "medium": 290,
+        "low": 679,
+        "unclassified": 0,
+        "all": 1036
+      },
+      {
+        "month": "2024-04",
+        "high": 63,
+        "medium": 286,
+        "low": 710,
+        "unclassified": 0,
+        "all": 1059
+      },
+      {
+        "month": "2024-05",
+        "high": 61,
+        "medium": 332,
+        "low": 771,
+        "unclassified": 0,
+        "all": 1164
+      },
+      {
+        "month": "2024-06",
+        "high": 60,
+        "medium": 273,
+        "low": 666,
+        "unclassified": 0,
+        "all": 999
+      },
+      {
+        "month": "2024-07",
+        "high": 67,
+        "medium": 291,
+        "low": 719,
+        "unclassified": 0,
+        "all": 1077
+      },
+      {
+        "month": "2024-08",
+        "high": 62,
+        "medium": 263,
+        "low": 682,
+        "unclassified": 0,
+        "all": 1007
+      },
+      {
+        "month": "2024-09",
+        "high": 73,
+        "medium": 149,
+        "low": 478,
+        "unclassified": 2,
+        "all": 702
+      },
+      {
+        "month": "2024-10",
+        "high": 77,
+        "medium": 49,
+        "low": 272,
+        "unclassified": 7,
+        "all": 405
+      },
+      {
+        "month": "2024-11",
+        "high": 76,
+        "medium": 48,
+        "low": 250,
+        "unclassified": 7,
+        "all": 381
+      },
+      {
+        "month": "2024-12",
+        "high": 68,
+        "medium": 40,
+        "low": 210,
+        "unclassified": 21,
+        "all": 339
+      },
+      {
+        "month": "2025-01",
+        "high": 71,
+        "medium": 40,
+        "low": 242,
+        "unclassified": 15,
+        "all": 368
+      },
+      {
+        "month": "2025-02",
+        "high": 70,
+        "medium": 43,
+        "low": 262,
+        "unclassified": 5,
+        "all": 380
+      },
+      {
+        "month": "2025-03",
+        "high": 75,
+        "medium": 39,
+        "low": 245,
+        "unclassified": 4,
+        "all": 363
+      },
+      {
+        "month": "2025-04",
+        "high": 73,
+        "medium": 35,
+        "low": 254,
+        "unclassified": 17,
+        "all": 379
+      },
+      {
+        "month": "2025-05",
+        "high": 77,
+        "medium": 44,
+        "low": 300,
+        "unclassified": 14,
+        "all": 435
+      },
+      {
+        "month": "2025-06",
+        "high": 73,
+        "medium": 39,
+        "low": 276,
+        "unclassified": 8,
+        "all": 396
+      },
+      {
+        "month": "2025-07",
+        "high": 76,
+        "medium": 42,
+        "low": 246,
+        "unclassified": 4,
+        "all": 368
+      },
+      {
+        "month": "2025-08",
+        "high": 62,
+        "medium": 44,
+        "low": 241,
+        "unclassified": 7,
+        "all": 354
+      },
+      {
+        "month": "2025-09",
+        "high": 71,
+        "medium": 44,
+        "low": 283,
+        "unclassified": 6,
+        "all": 404
+      },
+      {
+        "month": "2025-10",
+        "high": 61,
+        "medium": 40,
+        "low": 310,
+        "unclassified": 7,
+        "all": 418
+      },
+      {
+        "month": "2025-11",
+        "high": 54,
+        "medium": 40,
+        "low": 299,
+        "unclassified": 8,
+        "all": 401
+      },
+      {
+        "month": "2025-12",
+        "high": 70,
+        "medium": 41,
+        "low": 244,
+        "unclassified": 22,
+        "all": 377
+      },
+      {
+        "month": "2026-01",
+        "high": 64,
+        "medium": 38,
+        "low": 278,
+        "unclassified": 15,
+        "all": 395
+      },
+      {
+        "month": "2026-02",
+        "high": 69,
+        "medium": 37,
+        "low": 282,
+        "unclassified": 5,
+        "all": 393
+      },
+      {
+        "month": "2026-03",
+        "high": 70,
+        "medium": 44,
+        "low": 302,
+        "unclassified": 6,
+        "all": 422
+      },
+      {
+        "month": "2026-04",
+        "high": 67,
+        "medium": 49,
+        "low": 273,
+        "unclassified": 18,
+        "all": 407
+      },
+      {
+        "month": "2026-05",
+        "high": 41,
+        "medium": 55,
+        "low": 309,
+        "unclassified": 19,
+        "all": 424
+      },
+      {
+        "month": "2026-06",
+        "high": 56,
+        "medium": 46,
+        "low": 292,
+        "unclassified": 4,
+        "all": 398
+      }
+    ],
+    "unknowns": [
+      "Count decline is recorded source density, not the measured percentage of real announcements missing",
+      "The forensic table does not repair the strategy input",
+      "Vendor HIGH-impact activity does not qualify MEDIUM completeness"
+    ]
+  },
+  "mechanics": {
+    "source_id": "MACRO-MECHANICS",
+    "experiment_id": "EXP-MACROIMPULSE-001",
+    "classification": "CONCEPTUAL_SCHEMATIC",
+    "sample_classification": "NO_EMPIRICAL_SAMPLE",
+    "period": "NOT_APPLICABLE",
+    "cost_model": "NOT_APPLICABLE_NO_PNL",
+    "historical_price_path": false,
+    "observed_latency": false,
+    "description": "Fictional state example of a generic two-sided event-order plan; exact contracts vary. Symbolic levels, scheduled announcement, quote sides and optional exit/reversal branches only.",
+    "unknowns": [
+      "No measured prices, latencies, fill probabilities or successful outcomes depicted",
+      "Controlled parity does not establish every broker configuration",
+      "Opposite-trigger possibility is not a management recommendation"
+    ]
+  }
+}
