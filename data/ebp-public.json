@@ -1,0 +1,2025 @@
+{
+  "schema_version": "ebp-public-v002",
+  "evidence_type": "Reviewed historical aggregate derivation; no strategy or tick replay.",
+  "publication_scope": {
+    "permission": "User-authorized derived aggregate publication for Visual Research Portfolio v002.",
+    "excluded": [
+      "raw market data",
+      "trade-level records",
+      "private code",
+      "account identifiers",
+      "private source locations"
+    ],
+    "rights_boundary": "Aggregate permission does not grant redistribution rights to the underlying proprietary inputs."
+  },
+  "sources": {
+    "B22_TF001R2": {
+      "archive": {
+        "basename": "EBP_TF001R2_M15PLUS_20261007_100046_REVIEW.zip",
+        "sha256": "45849b254cb4b7e07fffe719dfa3e718371c4bbc44472b4209365f2c56d9fc9d",
+        "bytes": 54888966
+      },
+      "experiment_id": "EBP-MT5-TF001R2-M15PLUS",
+      "run_identity": "EBP_TF001R2_M15PLUS_20261007_100046",
+      "original_code_identity": "OmarAgag_EBP_v02_01_MarketClosedRetry",
+      "git_commit": null,
+      "git_commit_note": "Not established by the original run freeze; source and binary hashes identify this run.",
+      "members": [
+        {
+          "member": "cells/TF001R2_001_XAUUSD2_M15/trades.csv",
+          "sha256": "0fb9d872ca5b737a6cf4013e6c6b38fd217f7b37fc4fefabcd74e488c81f6a68",
+          "bytes": 2633191
+        },
+        {
+          "member": "cells/TF001R2_002_XAUUSD2_H1/trades.csv",
+          "sha256": "71b9c167dc3cda85ab440a7259f82e20f1e059200027c2d2ec92509b01844498",
+          "bytes": 681884
+        },
+        {
+          "member": "cells/TF001R2_003_XAUUSD2_H2/trades.csv",
+          "sha256": "39762bc4b8d3a1afb3be31d322e3720291d46a88eaf158f3e8cceb1420e70551",
+          "bytes": 376534
+        },
+        {
+          "member": "cells/TF001R2_004_XAUUSD2_H3/trades.csv",
+          "sha256": "aef973c3a1ba4318b3d802f161bc501518584609f49aabf5b8bef2aaa3f17129",
+          "bytes": 261024
+        },
+        {
+          "member": "cells/TF001R2_005_XAUUSD2_H4/trades.csv",
+          "sha256": "85896bf0571eacdf186f45f09cffca772902d97420fec276efd72b32733eabba",
+          "bytes": 215379
+        },
+        {
+          "member": "cells/TF001R2_006_XAUUSD2_H6/trades.csv",
+          "sha256": "48cc098c7c1931e5fe5c29d63e905253bb8b6bcb9a925a0036a79b1827d727f0",
+          "bytes": 148065
+        },
+        {
+          "member": "cells/TF001R2_007_XAUUSD2_H8/trades.csv",
+          "sha256": "67fb1420a76897891b52a7163ba59b7f8430c76b27391d9e37afac549651cd41",
+          "bytes": 107638
+        },
+        {
+          "member": "cells/TF001R2_008_XAUUSD2_H12/trades.csv",
+          "sha256": "0ae4e4d1fce2d64a68b4baaa600adc57f65aa2e1aa446ac0e7ceef57272de40d",
+          "bytes": 76811
+        },
+        {
+          "member": "cells/TF001R2_009_EURUSD2_M15/trades.csv",
+          "sha256": "812f603555527db05cafe7add9339ba8371cf5bb390d1de99c3044b2aa77dce7",
+          "bytes": 2623429
+        },
+        {
+          "member": "cells/TF001R2_010_EURUSD2_H1/trades.csv",
+          "sha256": "375c5b9cc43235ad07e98e9bbf3f09b0088d488a4b908f2cd25f0ab619857ec9",
+          "bytes": 706865
+        },
+        {
+          "member": "cells/TF001R2_011_EURUSD2_H2/trades.csv",
+          "sha256": "e19c27e3f4bdd46200cb60a336b906cd2663eebc1e48210aa3c7dea59b287982",
+          "bytes": 393930
+        },
+        {
+          "member": "cells/TF001R2_012_EURUSD2_H3/trades.csv",
+          "sha256": "77b2c91e84128e2e61aa7b6aed44f898bb71f32c8b0e6b370e790e5743bd5cef",
+          "bytes": 271949
+        },
+        {
+          "member": "cells/TF001R2_013_EURUSD2_H4/trades.csv",
+          "sha256": "4ece032095ec9603c529f3eddff0edf24b0bace1b3998d6f6f139b9bf7b9d38c",
+          "bytes": 222716
+        },
+        {
+          "member": "cells/TF001R2_014_EURUSD2_H6/trades.csv",
+          "sha256": "8d3c1cbc665a404c32a253834ae917630a6ed3e8196bb438befb7db81ed3b48c",
+          "bytes": 146319
+        },
+        {
+          "member": "cells/TF001R2_015_EURUSD2_H8/trades.csv",
+          "sha256": "8f941449724f672f3dde39576948ae970bdc4492163e1dfb0440dc5bffbc8e39",
+          "bytes": 110781
+        },
+        {
+          "member": "cells/TF001R2_016_EURUSD2_H12/trades.csv",
+          "sha256": "1d4f2474cfb047d2d6bcb33a35c7844ed57e0055ce9c0fe1f0cd5696915bd858",
+          "bytes": 69959
+        },
+        {
+          "member": "cells/TF001R2_017_GBPUSD2_M15/trades.csv",
+          "sha256": "6436e345fbd1c239ad6a6dea30de3ac65cf4fefcbdb5e54e2bc66b11822f8d61",
+          "bytes": 2604809
+        },
+        {
+          "member": "cells/TF001R2_018_GBPUSD2_H1/trades.csv",
+          "sha256": "cb40e0f22eb1606d8575d53b6cbab6f9963409d4d1aa0588c7123190481ed549",
+          "bytes": 688790
+        },
+        {
+          "member": "cells/TF001R2_019_GBPUSD2_H2/trades.csv",
+          "sha256": "8e036095616b2add40fffb87bea0204f86d8e0d9395ee724a49d12fef8c5216b",
+          "bytes": 376121
+        },
+        {
+          "member": "cells/TF001R2_020_GBPUSD2_H3/trades.csv",
+          "sha256": "d26ec2322f059828f35df5a8f128dd384a236c58819a57e8a9bb245ef5e5d194",
+          "bytes": 268753
+        },
+        {
+          "member": "cells/TF001R2_021_GBPUSD2_H4/trades.csv",
+          "sha256": "682857725f84b9dbc3d643a212dfbd8782c0ac65bedeca8b1da78237a4f2699c",
+          "bytes": 221414
+        },
+        {
+          "member": "cells/TF001R2_022_GBPUSD2_H6/trades.csv",
+          "sha256": "4c7cfe0ab04367d10113705f12d6266e989b9255237f7eba605e6a550d916ade",
+          "bytes": 158778
+        },
+        {
+          "member": "cells/TF001R2_023_GBPUSD2_H8/trades.csv",
+          "sha256": "cd73451ebcfb76d7ab9a57651d3ee9c7d52fd1a2ef70d6db18fe2fc4ee19992c",
+          "bytes": 108703
+        },
+        {
+          "member": "cells/TF001R2_024_GBPUSD2_H12/trades.csv",
+          "sha256": "4d2a6a6905d27f1530975a5b6b61cfb4363694e663c89e75c8ccbf568bc9b784",
+          "bytes": 69801
+        },
+        {
+          "member": "cells/TF001R2_025_USDJPY2_M15/trades.csv",
+          "sha256": "c4e9d237aa5a4df167292d4f96d604e11590b20e32d21e69ee9a01cc8b57a33d",
+          "bytes": 2356402
+        },
+        {
+          "member": "cells/TF001R2_026_USDJPY2_H1/trades.csv",
+          "sha256": "3de87b222e70ac5cce00581b69d5bb2fbc956baf377fa1a722fcc769ba6926cf",
+          "bytes": 611834
+        },
+        {
+          "member": "cells/TF001R2_027_USDJPY2_H2/trades.csv",
+          "sha256": "6eedbaeef4ab69a29244221f152cfcb4849da662c8f9d67a1bf4612ecfbf2460",
+          "bytes": 338141
+        },
+        {
+          "member": "cells/TF001R2_028_USDJPY2_H3/trades.csv",
+          "sha256": "d36537a4425049d3d1270b0633df43c1e0c9cc382ba3423724a0c0576b6c6a86",
+          "bytes": 233183
+        },
+        {
+          "member": "cells/TF001R2_029_USDJPY2_H4/trades.csv",
+          "sha256": "eec6ee71ab40f611d7cf95d10fa0b985146a24a165608517accf6b417e739001",
+          "bytes": 187439
+        },
+        {
+          "member": "cells/TF001R2_030_USDJPY2_H6/trades.csv",
+          "sha256": "9550a98fdc36e2b5e1d15bee0964a01cbb82bfe8d86098f8ea6b7ebd10a0b8c5",
+          "bytes": 132392
+        },
+        {
+          "member": "cells/TF001R2_031_USDJPY2_H8/trades.csv",
+          "sha256": "da4b6326de7019fb96002aa8ed36a37b1ba8397f4fdc3dab6ffd95cc704f6602",
+          "bytes": 103935
+        },
+        {
+          "member": "cells/TF001R2_032_USDJPY2_H12/trades.csv",
+          "sha256": "eb2da9c0acac3aa5721b6cdc0768d6c561e8dc59e57ca8d1037223e7d64c07a4",
+          "bytes": 66248
+        },
+        {
+          "member": "cells/TF001R2_033_AUDUSD2_M15/trades.csv",
+          "sha256": "40ccde29853e5c72a1488d055aa00dd1ddfb8e8eb125745acaefa0b0bace089f",
+          "bytes": 2621318
+        },
+        {
+          "member": "cells/TF001R2_034_AUDUSD2_H1/trades.csv",
+          "sha256": "6267fb8595fa4e80e91c530894c6f28ed499a2b5884cf724e38addf05a0d7868",
+          "bytes": 680835
+        },
+        {
+          "member": "cells/TF001R2_035_AUDUSD2_H2/trades.csv",
+          "sha256": "4a4a76bd10ac7dc10c3d07b2f2fe8d8f31dc909299aaf9d0f709c3de8d168001",
+          "bytes": 363728
+        },
+        {
+          "member": "cells/TF001R2_036_AUDUSD2_H3/trades.csv",
+          "sha256": "12afb5f051e85ad77c676f537200ef336286cd165a22c8119f5b962e6cdb1227",
+          "bytes": 251098
+        },
+        {
+          "member": "cells/TF001R2_037_AUDUSD2_H4/trades.csv",
+          "sha256": "976c2a8dff35f10c1155bb3885eb43af1f140358636b67e022e171cc085d2293",
+          "bytes": 209903
+        },
+        {
+          "member": "cells/TF001R2_038_AUDUSD2_H6/trades.csv",
+          "sha256": "5a7668e36eba4186c38c5f8c1be89b21b20c441f7fe588d793e0d8302c703a21",
+          "bytes": 146721
+        },
+        {
+          "member": "cells/TF001R2_039_AUDUSD2_H8/trades.csv",
+          "sha256": "99577c71b75ff3f3103539b0d021dea3c9127ddc1d928dfe94e99b73b6c8395a",
+          "bytes": 116914
+        },
+        {
+          "member": "cells/TF001R2_040_AUDUSD2_H12/trades.csv",
+          "sha256": "93b8a73ca3aae0142d71cdb659e0eafb76832a89de4a9fa3efd07919baf0ac8a",
+          "bytes": 75879
+        },
+        {
+          "member": "cells/TF001R2_041_USDCAD2_M15/trades.csv",
+          "sha256": "cda512dd3ef51fbfe49d9f9995326ece55e46e755250127257661d905b6c46e7",
+          "bytes": 2720090
+        },
+        {
+          "member": "cells/TF001R2_042_USDCAD2_H1/trades.csv",
+          "sha256": "d9bacd5ae4fafa0b6550ea5e3fa1a9eb8be1aab2ad4e19713e5c1e7dfd57ef1e",
+          "bytes": 743889
+        },
+        {
+          "member": "cells/TF001R2_043_USDCAD2_H2/trades.csv",
+          "sha256": "cafb0aacb445845378f1cdb8049c743ff5dab36988ee6b1856e917de359812fe",
+          "bytes": 387710
+        },
+        {
+          "member": "cells/TF001R2_044_USDCAD2_H3/trades.csv",
+          "sha256": "a4b7b01b92f7c441b76c4a732043c01a8e47fde17aee8a8f59dfc2f9b185bd0c",
+          "bytes": 272633
+        },
+        {
+          "member": "cells/TF001R2_045_USDCAD2_H4/trades.csv",
+          "sha256": "641d583e956596af9da5871190e676cf10e502250927d95505432f1366471e25",
+          "bytes": 205985
+        },
+        {
+          "member": "cells/TF001R2_046_USDCAD2_H6/trades.csv",
+          "sha256": "f228998c5e9d461a06b43a12eb564d568a628858ff40b42c392231e66011f2e5",
+          "bytes": 145761
+        },
+        {
+          "member": "cells/TF001R2_047_USDCAD2_H8/trades.csv",
+          "sha256": "08c0f3c140eec0da7078b5911b8393dff0deb44e820e472a869b0809bb8b07b7",
+          "bytes": 113145
+        },
+        {
+          "member": "cells/TF001R2_048_USDCAD2_H12/trades.csv",
+          "sha256": "a2aa7c7df0a34188e1d490da95dab04e50bbd07a644d50737eb606d78ba10447",
+          "bytes": 79408
+        },
+        {
+          "member": "cells/TF001R2_049_USTEC2_M15/trades.csv",
+          "sha256": "7c63761890adf647ce37a40d460ee806b23059dcaf723499a55c61cd476e7aa9",
+          "bytes": 2501137
+        },
+        {
+          "member": "cells/TF001R2_050_USTEC2_H1/trades.csv",
+          "sha256": "6fc5e159541f5f5a0179dcc1dc66ed0277f8053953b3c81d56ef137593a842e1",
+          "bytes": 667787
+        },
+        {
+          "member": "cells/TF001R2_051_USTEC2_H2/trades.csv",
+          "sha256": "59c65a0d7fad20cab9e2cb429cdc62ccdf0858780b7999a186cac24278a12629",
+          "bytes": 360007
+        },
+        {
+          "member": "cells/TF001R2_052_USTEC2_H3/trades.csv",
+          "sha256": "a58a12029f0b838ee9c0bb85002c3cbc1295d9a6a92f215d79d385d1b91fb66a",
+          "bytes": 283309
+        },
+        {
+          "member": "cells/TF001R2_053_USTEC2_H4/trades.csv",
+          "sha256": "f7860db345538b7c2d42d06cf9fc7617dd865d1ee8250f3856531c6f26243c45",
+          "bytes": 217145
+        },
+        {
+          "member": "cells/TF001R2_054_USTEC2_H6/trades.csv",
+          "sha256": "96298569af985eff5904bd15d59a690b1f89c7a278561a6d2ec20a03e0daf919",
+          "bytes": 139978
+        },
+        {
+          "member": "cells/TF001R2_055_USTEC2_H8/trades.csv",
+          "sha256": "9bf9ae83207212f44ba65978e25cf34491616fea1af00579d586cbc51e8ebff1",
+          "bytes": 124881
+        },
+        {
+          "member": "cells/TF001R2_056_USTEC2_H12/trades.csv",
+          "sha256": "321b3d82535e1aff8656f44d8b0976414aa430f25b1caedb8f76e99351fb89b7",
+          "bytes": 81871
+        },
+        {
+          "member": "cells/TF001R2_057_AUDJPY2_M15/trades.csv",
+          "sha256": "14263cc62676c35686fbd0e54bac1babaab813d5e982749b5227f3ccf05beb75",
+          "bytes": 2605594
+        },
+        {
+          "member": "cells/TF001R2_058_AUDJPY2_H1/trades.csv",
+          "sha256": "3e7deae0ebaa4b341b01abc196e98b4b6c6cce40a24f4d48495663d16755cc70",
+          "bytes": 648801
+        },
+        {
+          "member": "cells/TF001R2_059_AUDJPY2_H2/trades.csv",
+          "sha256": "b531b9a38b9c95c3358e35e7fd144e92a781b4eacf3b4a41d539d9763d7a9c5c",
+          "bytes": 331879
+        },
+        {
+          "member": "cells/TF001R2_060_AUDJPY2_H3/trades.csv",
+          "sha256": "8298de260bcb928c9163a8e47c8acb8973815535d2f4468a8581fe431fbc7dc1",
+          "bytes": 235590
+        },
+        {
+          "member": "cells/TF001R2_061_AUDJPY2_H4/trades.csv",
+          "sha256": "de0adad46291698aded75faa3595a1d3540545fdc7461a08fa0a44e9e9541dc2",
+          "bytes": 183251
+        },
+        {
+          "member": "cells/TF001R2_062_AUDJPY2_H6/trades.csv",
+          "sha256": "3ddb4e97e43f38d11c32bdb7427365f4f31b8bbbb9de94f01085bc6ef111b362",
+          "bytes": 128228
+        },
+        {
+          "member": "cells/TF001R2_063_AUDJPY2_H8/trades.csv",
+          "sha256": "a5be0fbae1e136a9dee51ea84b17169d141570812d825a7b8dd552c12a0f57b4",
+          "bytes": 97037
+        },
+        {
+          "member": "cells/TF001R2_064_AUDJPY2_H12/trades.csv",
+          "sha256": "2331ffbfd302ee368b8902711aac41c46167ac55a3b052ded56309e6eb56e504",
+          "bytes": 62808
+        },
+        {
+          "member": "cells/TF001R2_065_DE30X_M15/trades.csv",
+          "sha256": "a61882812001abae653a317ee7a49eb57774f2cf59e05c7314fb1f5f8c6d7978",
+          "bytes": 2235215
+        },
+        {
+          "member": "cells/TF001R2_066_DE30X_H1/trades.csv",
+          "sha256": "9d253c3f053910e4cfa6f3409678ee4dd0944a1a7ba7f0ae8c8dc58dc419e437",
+          "bytes": 591677
+        },
+        {
+          "member": "cells/TF001R2_067_DE30X_H2/trades.csv",
+          "sha256": "0b9845e45fc3d000dc6b4b3e66ab7dc3abadaa6487b5f7d4888ceb2902301f80",
+          "bytes": 320936
+        },
+        {
+          "member": "cells/TF001R2_068_DE30X_H3/trades.csv",
+          "sha256": "6ec5ce3ce3d5bfc331b644def4cb62c11bf2da78f4933ca5212043c02576dfda",
+          "bytes": 246087
+        },
+        {
+          "member": "cells/TF001R2_069_DE30X_H4/trades.csv",
+          "sha256": "9fecf6fe4860167ae3deb914a0862c59222f4ec9e550ec72a9feb0cfa0d8fbc7",
+          "bytes": 204791
+        },
+        {
+          "member": "cells/TF001R2_070_DE30X_H6/trades.csv",
+          "sha256": "228cb161ca7944b466817cde25c37371e24b53ae31a3ef1dace19d4583c16d4d",
+          "bytes": 139060
+        },
+        {
+          "member": "cells/TF001R2_071_DE30X_H8/trades.csv",
+          "sha256": "a2b403ed4f52fbc921e418e2fe23e0fd13f39a6badf24cd57bb09e24e7465458",
+          "bytes": 104753
+        },
+        {
+          "member": "cells/TF001R2_072_DE30X_H12/trades.csv",
+          "sha256": "db3cea32e27b7dd27f871ab57300f6287ff64a0c5c547f582d82ee5d4e758385",
+          "bytes": 70296
+        },
+        {
+          "member": "cells/TF001R2_073_JP225X_M15/trades.csv",
+          "sha256": "b1643222df521f7e90268f6c1aef1828c2adb30e4a316bd7accf310c0cca9717",
+          "bytes": 2009557
+        },
+        {
+          "member": "cells/TF001R2_074_JP225X_H1/trades.csv",
+          "sha256": "a2de59ff943952f19402efa3ecc911c32e4bdf3df82441367b83c48965300dc3",
+          "bytes": 519853
+        },
+        {
+          "member": "cells/TF001R2_075_JP225X_H2/trades.csv",
+          "sha256": "212b1cf92203e1345046aa7467bf4d4e1340e514b1c36bca39376eeb9769d62b",
+          "bytes": 283080
+        },
+        {
+          "member": "cells/TF001R2_076_JP225X_H3/trades.csv",
+          "sha256": "f3ce4d90606858b9cc7722b5e014afdbc4b6c9995c6096fe76b51ee1d9cb9bd8",
+          "bytes": 197228
+        },
+        {
+          "member": "cells/TF001R2_077_JP225X_H4/trades.csv",
+          "sha256": "d11dd1fa41cd33b115a49a73ef8ff0d84c829cf174388fd5cf57667a9f9d54b3",
+          "bytes": 161405
+        },
+        {
+          "member": "cells/TF001R2_078_JP225X_H6/trades.csv",
+          "sha256": "d0a2b77ac56da4370b177109fd92e2c7e0475a9b2ca8715d854c4b0e8cf1761e",
+          "bytes": 110132
+        },
+        {
+          "member": "cells/TF001R2_079_JP225X_H8/trades.csv",
+          "sha256": "3f7a35d74a1ec17b19c554a4100de809b348e0e872390de3031f344f66bf7b4f",
+          "bytes": 95358
+        },
+        {
+          "member": "cells/TF001R2_080_JP225X_H12/trades.csv",
+          "sha256": "6d1c219ebe9649270b4b535b5218e291539d53c5eff6384553ad88b4e58a33d1",
+          "bytes": 61155
+        },
+        {
+          "member": "cells/TF001R2_081_BTCUSD2_M15/trades.csv",
+          "sha256": "1bf1f28d2a5502dbd216c7f6219ed29cfa5b3ac22051b04339adabd78f6639e2",
+          "bytes": 3988469
+        },
+        {
+          "member": "cells/TF001R2_082_BTCUSD2_H1/trades.csv",
+          "sha256": "6ee41444a18bba51bc373280c397291cc2be74928aa0420253328357c96df56a",
+          "bytes": 975809
+        },
+        {
+          "member": "cells/TF001R2_083_BTCUSD2_H2/trades.csv",
+          "sha256": "49e455a298e8db9702610141e74229311b1c1b7ede6b3baf45f45035d17977a4",
+          "bytes": 463240
+        },
+        {
+          "member": "cells/TF001R2_084_BTCUSD2_H3/trades.csv",
+          "sha256": "a9ddaeda0fd0918ffd557fbdeb45d358aed2bdbde9fadc2d81562f98a12e1d49",
+          "bytes": 314017
+        },
+        {
+          "member": "cells/TF001R2_085_BTCUSD2_H4/trades.csv",
+          "sha256": "a25107b644992c27136b627a54017387bfac890fb659759ad5983fc1a6b0baea",
+          "bytes": 248817
+        },
+        {
+          "member": "cells/TF001R2_086_BTCUSD2_H6/trades.csv",
+          "sha256": "9b28e9c05ed5acddb6acd17a9cfaf3a135ed224ee18a33de23e1714861dfb969",
+          "bytes": 156204
+        },
+        {
+          "member": "cells/TF001R2_087_BTCUSD2_H8/trades.csv",
+          "sha256": "dd5808c6ec5b70ab66fb785b8d3e8171546b6cbe8b60369e9caba85f7d3da1ac",
+          "bytes": 120085
+        },
+        {
+          "member": "cells/TF001R2_088_BTCUSD2_H12/trades.csv",
+          "sha256": "ab907b982d9353516c60b858c872e95df7732bccfd5423f5ffef7403afab631f",
+          "bytes": 81498
+        },
+        {
+          "member": "COMBINED_VALIDITY_SUMMARY.csv",
+          "sha256": "fce353b356566326809e47b23aac83900701c4606fded2f7202a59a75f9b9541",
+          "bytes": 17666
+        },
+        {
+          "member": "R2_FREEZE.txt",
+          "sha256": "bdb35362df2ca8773b2f28a648677321f821ea28fdef1d22267079a26c34b07b",
+          "bytes": 709
+        },
+        {
+          "member": "artifacts/OmarAgag_EBP_v02_01_MarketClosedRetry.mq5",
+          "sha256": "be64dbdf457f6e2a35996dd2b01709c330829fdc3ea979fb82a4cd7d252ef81a",
+          "bytes": 102650
+        },
+        {
+          "member": "artifacts/OmarAgag_EBP_v02_01_MarketClosedRetry.ex5",
+          "sha256": "8f8a0cc29f711be1a542efcdf8c91337c17b463e5f673b51ad5cda36ce1b412b",
+          "bytes": 127132
+        },
+        {
+          "member": "artifacts/EBP_v02_XAUUSD_H4_BASELINE_REPRO.set",
+          "sha256": "79e841c69891c5658468930d5c36485c56b3e50c6ca6cf7a068948e85234cc20",
+          "bytes": 603
+        }
+      ]
+    },
+    "B21_H002": {
+      "archive": {
+        "basename": "EBP_PY_H002_AMBIGUITY_MATRIX_20261004T193844Z_REVIEW.zip",
+        "sha256": "99558ddcc5f308c319dacb1472c2ec5cef1501a79eaa7deac38b47fe7da2388b",
+        "bytes": 1121601
+      },
+      "experiment_id": "EBP-PY-H002",
+      "run_identity": "EBP_PY_H002_AMBIGUITY_MATRIX_20261004T193844Z",
+      "members": [
+        {
+          "member": "experiments/EBP-PY-H002/results/H002_MATRIX_SUMMARY.csv",
+          "sha256": "5f8deced26724e5c412ee3d6d9e8ba462d917b4ab0a5dcc2a57be0737f1b4653",
+          "bytes": 931
+        },
+        {
+          "member": "experiments/EBP-PY-H002/results/H002_MATRIX_SUMMARY.md",
+          "sha256": "684dd3adcb7f32387dc46a794ea59d6871f0e139fb3cb72a505d688c99c0c2d4",
+          "bytes": 1701
+        },
+        {
+          "member": "experiments/EBP-PY-H002/results/H002_FREEZE_MANIFEST.json",
+          "sha256": "cf431e305a7ee5207bcf17ab2b0e3ccfcfc47a4eea84be20f10a724743580e93",
+          "bytes": 5023
+        },
+        {
+          "member": "spec/EBP_H002_PREREGISTRATION.md",
+          "sha256": "28c495eb4a2e4a6e728431f9b6418bc28aa8b99132383aff45c7d6111aa49bac",
+          "bytes": 5648
+        },
+        {
+          "member": "spec/EBP_H002_EXECUTION_CORRECTIONS.md",
+          "sha256": "cded3fc3df260f2a2a7a9c17103658636c265adac81658a778a86682a2382b24",
+          "bytes": 1962
+        },
+        {
+          "member": "experiments/EBP-PY-H002/results/CELL_A/summary.json",
+          "sha256": "5eb97dbb313835e4261c8bd07ef145f2e8953ca198023d5fe8cd5d063f2bd1b3",
+          "bytes": 1511
+        },
+        {
+          "member": "experiments/EBP-PY-H002/results/CELL_B/summary.json",
+          "sha256": "482de14960e183ec9a301225d478fead033bb5db8cb00a1d81d07c853510227b",
+          "bytes": 2300
+        },
+        {
+          "member": "experiments/EBP-PY-H002/results/CELL_C/summary.json",
+          "sha256": "271b1b8fe339192d9f18a67fd2a9b470bce6b31b4ff96fb8afad4e7191333c73",
+          "bytes": 1518
+        },
+        {
+          "member": "experiments/EBP-PY-H002/results/CELL_D/summary.json",
+          "sha256": "a939127a6941225ae530bc76c277bb9453eaf25d6b548456348d0c432a7ce8e2",
+          "bytes": 2327
+        }
+      ],
+      "original_git_commit": "d2501b8765ad6711381ab692cc4be12e6cdb9d82",
+      "original_git_branch": "research/ebp-python-source-faithful-v001-20261004",
+      "original_git_state": "Untracked research implementation at freeze; archive bytes, not commit alone, govern.",
+      "source_tree_sha256_as_reported": "cffd0c26032b1da45b85f037c0afc85d28a22cb36e777691e98f1c8d05c77a51"
+    },
+    "B23_STAT001": {
+      "archive": {
+        "basename": "EBP_M15_REV_H001_Q3_STAT001_20261011_213401_REVIEW.zip",
+        "sha256": "1e52bf69309b678ca49f8df88ea8d78394cb2a0f947f28dd7df550669c8534c3",
+        "bytes": 513066
+      },
+      "experiment_id": "EBP-M15-REV-H001-Q3-STAT001",
+      "run_identity": "EBP_M15_REV_H001_Q3_STAT001_20261011_213401",
+      "git_commit": null,
+      "git_commit_note": "Frozen analysis contract and archived outputs identify the completed observation.",
+      "members": [
+        {
+          "member": "STAT001_ANALYSIS_PLAN.json",
+          "sha256": "b32b511634501cf07692d32597dfdea7775f6e6429e04da1a740e68eed650313",
+          "bytes": 2613
+        },
+        {
+          "member": "STAT001_RESULTS_MANIFEST.json",
+          "sha256": "c6c1dbaafaa91fa1aa2007f44ad327ceb1f1d68e594368ca6cfa7fd93cae7f1a",
+          "bytes": 4510
+        },
+        {
+          "member": "BOOTSTRAP_SUMMARY.json",
+          "sha256": "5d331e047899e685991fc38145b06d0c69f67a9ccab1f7e78c4e9a2b4f542d37",
+          "bytes": 608
+        },
+        {
+          "member": "PRIMARY_12_STRATA.csv",
+          "sha256": "86e513424402db479928e28d5ff9edce357fb726a84390bfa4260d22546a173f",
+          "bytes": 5535
+        },
+        {
+          "member": "SYMBOL_LEVEL_EFFECTS.csv",
+          "sha256": "eb2d52bf7f8626e0e29d746ffd1550b498249778068ac19b94bd3139acb86b30",
+          "bytes": 199
+        },
+        {
+          "member": "STAT001_VERDICT_REPORT.md",
+          "sha256": "d98f0bd68f97ada8392eaf0705b22b5b1089baf3fa8aa27d13da8a32edaf078d",
+          "bytes": 3898
+        },
+        {
+          "member": "EBP_H001_Q3_Phase2_Frozen_Analysis_Contract_20261011.md",
+          "sha256": "bfbc8bfcb73f959242aa9aa35eea8cf067b2b310d70f4d9d6ac6fca5c2154178",
+          "bytes": 9079
+        }
+      ]
+    }
+  },
+  "native_matrix": {
+    "source_id": "B22_TF001R2",
+    "status": "APPROVED AS REPORTED",
+    "role": "Post-hoc Discovery / previously examined, mutually overlapping backtests",
+    "window_start_inclusive": "2020-01-30",
+    "window_end_exclusive": "2024-01-01",
+    "symbols": [
+      "XAUUSD2",
+      "EURUSD2",
+      "GBPUSD2",
+      "USDJPY2",
+      "AUDUSD2",
+      "USDCAD2",
+      "USTEC2",
+      "AUDJPY2",
+      "DE30X",
+      "JP225X",
+      "BTCUSD2"
+    ],
+    "timeframes": [
+      "M15",
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H6",
+      "H8",
+      "H12"
+    ],
+    "cells": [
+      {
+        "cell_id": "TF001R2_001_XAUUSD2_M15",
+        "symbol": "XAUUSD2",
+        "timeframe": "M15",
+        "closed_trades": 7985,
+        "total_price_r": -1719.4865,
+        "mean_price_r": -0.21533957420162805,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_001_XAUUSD2_M15/trades.csv",
+        "source_sha256": "0fb9d872ca5b737a6cf4013e6c6b38fd217f7b37fc4fefabcd74e488c81f6a68"
+      },
+      {
+        "cell_id": "TF001R2_002_XAUUSD2_H1",
+        "symbol": "XAUUSD2",
+        "timeframe": "H1",
+        "closed_trades": 2077,
+        "total_price_r": -274.5818,
+        "mean_price_r": -0.1322011555127588,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_002_XAUUSD2_H1/trades.csv",
+        "source_sha256": "71b9c167dc3cda85ab440a7259f82e20f1e059200027c2d2ec92509b01844498"
+      },
+      {
+        "cell_id": "TF001R2_003_XAUUSD2_H2",
+        "symbol": "XAUUSD2",
+        "timeframe": "H2",
+        "closed_trades": 1147,
+        "total_price_r": -142.8813,
+        "mean_price_r": -0.12456957279860506,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_003_XAUUSD2_H2/trades.csv",
+        "source_sha256": "39762bc4b8d3a1afb3be31d322e3720291d46a88eaf158f3e8cceb1420e70551"
+      },
+      {
+        "cell_id": "TF001R2_004_XAUUSD2_H3",
+        "symbol": "XAUUSD2",
+        "timeframe": "H3",
+        "closed_trades": 795,
+        "total_price_r": -73.3718,
+        "mean_price_r": -0.09229157232704402,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_004_XAUUSD2_H3/trades.csv",
+        "source_sha256": "aef973c3a1ba4318b3d802f161bc501518584609f49aabf5b8bef2aaa3f17129"
+      },
+      {
+        "cell_id": "TF001R2_005_XAUUSD2_H4",
+        "symbol": "XAUUSD2",
+        "timeframe": "H4",
+        "closed_trades": 656,
+        "total_price_r": -102.7973,
+        "mean_price_r": -0.1567032012195122,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_005_XAUUSD2_H4/trades.csv",
+        "source_sha256": "85896bf0571eacdf186f45f09cffca772902d97420fec276efd72b32733eabba"
+      },
+      {
+        "cell_id": "TF001R2_006_XAUUSD2_H6",
+        "symbol": "XAUUSD2",
+        "timeframe": "H6",
+        "closed_trades": 451,
+        "total_price_r": -3.9993,
+        "mean_price_r": -0.008867627494456763,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_006_XAUUSD2_H6/trades.csv",
+        "source_sha256": "48cc098c7c1931e5fe5c29d63e905253bb8b6bcb9a925a0036a79b1827d727f0"
+      },
+      {
+        "cell_id": "TF001R2_007_XAUUSD2_H8",
+        "symbol": "XAUUSD2",
+        "timeframe": "H8",
+        "closed_trades": 327,
+        "total_price_r": -29.4553,
+        "mean_price_r": -0.09007737003058104,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_007_XAUUSD2_H8/trades.csv",
+        "source_sha256": "67fb1420a76897891b52a7163ba59b7f8430c76b27391d9e37afac549651cd41"
+      },
+      {
+        "cell_id": "TF001R2_008_XAUUSD2_H12",
+        "symbol": "XAUUSD2",
+        "timeframe": "H12",
+        "closed_trades": 232,
+        "total_price_r": -15.2158,
+        "mean_price_r": -0.06558534482758621,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_008_XAUUSD2_H12/trades.csv",
+        "source_sha256": "0ae4e4d1fce2d64a68b4baaa600adc57f65aa2e1aa446ac0e7ceef57272de40d"
+      },
+      {
+        "cell_id": "TF001R2_009_EURUSD2_M15",
+        "symbol": "EURUSD2",
+        "timeframe": "M15",
+        "closed_trades": 8122,
+        "total_price_r": -939.8227,
+        "mean_price_r": -0.11571321103176557,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_009_EURUSD2_M15/trades.csv",
+        "source_sha256": "812f603555527db05cafe7add9339ba8371cf5bb390d1de99c3044b2aa77dce7"
+      },
+      {
+        "cell_id": "TF001R2_010_EURUSD2_H1",
+        "symbol": "EURUSD2",
+        "timeframe": "H1",
+        "closed_trades": 2200,
+        "total_price_r": -24.627,
+        "mean_price_r": -0.011194090909090909,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_010_EURUSD2_H1/trades.csv",
+        "source_sha256": "375c5b9cc43235ad07e98e9bbf3f09b0088d488a4b908f2cd25f0ab619857ec9"
+      },
+      {
+        "cell_id": "TF001R2_011_EURUSD2_H2",
+        "symbol": "EURUSD2",
+        "timeframe": "H2",
+        "closed_trades": 1226,
+        "total_price_r": -64.1448,
+        "mean_price_r": -0.052320391517128875,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_011_EURUSD2_H2/trades.csv",
+        "source_sha256": "e19c27e3f4bdd46200cb60a336b906cd2663eebc1e48210aa3c7dea59b287982"
+      },
+      {
+        "cell_id": "TF001R2_012_EURUSD2_H3",
+        "symbol": "EURUSD2",
+        "timeframe": "H3",
+        "closed_trades": 846,
+        "total_price_r": 44.2725,
+        "mean_price_r": 0.05233156028368794,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_012_EURUSD2_H3/trades.csv",
+        "source_sha256": "77b2c91e84128e2e61aa7b6aed44f898bb71f32c8b0e6b370e790e5743bd5cef"
+      },
+      {
+        "cell_id": "TF001R2_013_EURUSD2_H4",
+        "symbol": "EURUSD2",
+        "timeframe": "H4",
+        "closed_trades": 693,
+        "total_price_r": 24.8828,
+        "mean_price_r": 0.03590591630591631,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_013_EURUSD2_H4/trades.csv",
+        "source_sha256": "4ece032095ec9603c529f3eddff0edf24b0bace1b3998d6f6f139b9bf7b9d38c"
+      },
+      {
+        "cell_id": "TF001R2_014_EURUSD2_H6",
+        "symbol": "EURUSD2",
+        "timeframe": "H6",
+        "closed_trades": 455,
+        "total_price_r": -2.4371,
+        "mean_price_r": -0.005356263736263737,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_014_EURUSD2_H6/trades.csv",
+        "source_sha256": "8d3c1cbc665a404c32a253834ae917630a6ed3e8196bb438befb7db81ed3b48c"
+      },
+      {
+        "cell_id": "TF001R2_015_EURUSD2_H8",
+        "symbol": "EURUSD2",
+        "timeframe": "H8",
+        "closed_trades": 344,
+        "total_price_r": -26.73,
+        "mean_price_r": -0.07770348837209302,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_015_EURUSD2_H8/trades.csv",
+        "source_sha256": "8f941449724f672f3dde39576948ae970bdc4492163e1dfb0440dc5bffbc8e39"
+      },
+      {
+        "cell_id": "TF001R2_016_EURUSD2_H12",
+        "symbol": "EURUSD2",
+        "timeframe": "H12",
+        "closed_trades": 216,
+        "total_price_r": 3.0362,
+        "mean_price_r": 0.014056481481481482,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_016_EURUSD2_H12/trades.csv",
+        "source_sha256": "1d4f2474cfb047d2d6bcb33a35c7844ed57e0055ce9c0fe1f0cd5696915bd858"
+      },
+      {
+        "cell_id": "TF001R2_017_GBPUSD2_M15",
+        "symbol": "GBPUSD2",
+        "timeframe": "M15",
+        "closed_trades": 8057,
+        "total_price_r": -1528.2308,
+        "mean_price_r": -0.18967739853543503,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_017_GBPUSD2_M15/trades.csv",
+        "source_sha256": "6436e345fbd1c239ad6a6dea30de3ac65cf4fefcbdb5e54e2bc66b11822f8d61"
+      },
+      {
+        "cell_id": "TF001R2_018_GBPUSD2_H1",
+        "symbol": "GBPUSD2",
+        "timeframe": "H1",
+        "closed_trades": 2141,
+        "total_price_r": -172.8402,
+        "mean_price_r": -0.08072872489490893,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_018_GBPUSD2_H1/trades.csv",
+        "source_sha256": "cb40e0f22eb1606d8575d53b6cbab6f9963409d4d1aa0588c7123190481ed549"
+      },
+      {
+        "cell_id": "TF001R2_019_GBPUSD2_H2",
+        "symbol": "GBPUSD2",
+        "timeframe": "H2",
+        "closed_trades": 1169,
+        "total_price_r": -17.0769,
+        "mean_price_r": -0.014608126603934988,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_019_GBPUSD2_H2/trades.csv",
+        "source_sha256": "8e036095616b2add40fffb87bea0204f86d8e0d9395ee724a49d12fef8c5216b"
+      },
+      {
+        "cell_id": "TF001R2_020_GBPUSD2_H3",
+        "symbol": "GBPUSD2",
+        "timeframe": "H3",
+        "closed_trades": 835,
+        "total_price_r": -18.6406,
+        "mean_price_r": -0.022324071856287424,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_020_GBPUSD2_H3/trades.csv",
+        "source_sha256": "d26ec2322f059828f35df5a8f128dd384a236c58819a57e8a9bb245ef5e5d194"
+      },
+      {
+        "cell_id": "TF001R2_021_GBPUSD2_H4",
+        "symbol": "GBPUSD2",
+        "timeframe": "H4",
+        "closed_trades": 688,
+        "total_price_r": 5.4172,
+        "mean_price_r": 0.007873837209302325,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_021_GBPUSD2_H4/trades.csv",
+        "source_sha256": "682857725f84b9dbc3d643a212dfbd8782c0ac65bedeca8b1da78237a4f2699c"
+      },
+      {
+        "cell_id": "TF001R2_022_GBPUSD2_H6",
+        "symbol": "GBPUSD2",
+        "timeframe": "H6",
+        "closed_trades": 493,
+        "total_price_r": -0.803,
+        "mean_price_r": -0.0016288032454361055,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_022_GBPUSD2_H6/trades.csv",
+        "source_sha256": "4c7cfe0ab04367d10113705f12d6266e989b9255237f7eba605e6a550d916ade"
+      },
+      {
+        "cell_id": "TF001R2_023_GBPUSD2_H8",
+        "symbol": "GBPUSD2",
+        "timeframe": "H8",
+        "closed_trades": 337,
+        "total_price_r": -46.9789,
+        "mean_price_r": -0.1394032640949555,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_023_GBPUSD2_H8/trades.csv",
+        "source_sha256": "cd73451ebcfb76d7ab9a57651d3ee9c7d52fd1a2ef70d6db18fe2fc4ee19992c"
+      },
+      {
+        "cell_id": "TF001R2_024_GBPUSD2_H12",
+        "symbol": "GBPUSD2",
+        "timeframe": "H12",
+        "closed_trades": 215,
+        "total_price_r": 1.7969,
+        "mean_price_r": 0.008357674418604652,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_024_GBPUSD2_H12/trades.csv",
+        "source_sha256": "4d2a6a6905d27f1530975a5b6b61cfb4363694e663c89e75c8ccbf568bc9b784"
+      },
+      {
+        "cell_id": "TF001R2_025_USDJPY2_M15",
+        "symbol": "USDJPY2",
+        "timeframe": "M15",
+        "closed_trades": 7392,
+        "total_price_r": -737.6984,
+        "mean_price_r": -0.09979686147186147,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_025_USDJPY2_M15/trades.csv",
+        "source_sha256": "c4e9d237aa5a4df167292d4f96d604e11590b20e32d21e69ee9a01cc8b57a33d"
+      },
+      {
+        "cell_id": "TF001R2_026_USDJPY2_H1",
+        "symbol": "USDJPY2",
+        "timeframe": "H1",
+        "closed_trades": 1929,
+        "total_price_r": -139.974,
+        "mean_price_r": -0.07256298600311042,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_026_USDJPY2_H1/trades.csv",
+        "source_sha256": "3de87b222e70ac5cce00581b69d5bb2fbc956baf377fa1a722fcc769ba6926cf"
+      },
+      {
+        "cell_id": "TF001R2_027_USDJPY2_H2",
+        "symbol": "USDJPY2",
+        "timeframe": "H2",
+        "closed_trades": 1066,
+        "total_price_r": 5.4409,
+        "mean_price_r": 0.005104033771106942,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_027_USDJPY2_H2/trades.csv",
+        "source_sha256": "6eedbaeef4ab69a29244221f152cfcb4849da662c8f9d67a1bf4612ecfbf2460"
+      },
+      {
+        "cell_id": "TF001R2_028_USDJPY2_H3",
+        "symbol": "USDJPY2",
+        "timeframe": "H3",
+        "closed_trades": 735,
+        "total_price_r": 47.7904,
+        "mean_price_r": 0.06502095238095239,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_028_USDJPY2_H3/trades.csv",
+        "source_sha256": "d36537a4425049d3d1270b0633df43c1e0c9cc382ba3423724a0c0576b6c6a86"
+      },
+      {
+        "cell_id": "TF001R2_029_USDJPY2_H4",
+        "symbol": "USDJPY2",
+        "timeframe": "H4",
+        "closed_trades": 591,
+        "total_price_r": 82.6512,
+        "mean_price_r": 0.1398497461928934,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_029_USDJPY2_H4/trades.csv",
+        "source_sha256": "eec6ee71ab40f611d7cf95d10fa0b985146a24a165608517accf6b417e739001"
+      },
+      {
+        "cell_id": "TF001R2_030_USDJPY2_H6",
+        "symbol": "USDJPY2",
+        "timeframe": "H6",
+        "closed_trades": 417,
+        "total_price_r": 0.8059,
+        "mean_price_r": 0.0019326139088729018,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_030_USDJPY2_H6/trades.csv",
+        "source_sha256": "9550a98fdc36e2b5e1d15bee0964a01cbb82bfe8d86098f8ea6b7ebd10a0b8c5"
+      },
+      {
+        "cell_id": "TF001R2_031_USDJPY2_H8",
+        "symbol": "USDJPY2",
+        "timeframe": "H8",
+        "closed_trades": 327,
+        "total_price_r": 6.7162,
+        "mean_price_r": 0.020538837920489297,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_031_USDJPY2_H8/trades.csv",
+        "source_sha256": "da4b6326de7019fb96002aa8ed36a37b1ba8397f4fdc3dab6ffd95cc704f6602"
+      },
+      {
+        "cell_id": "TF001R2_032_USDJPY2_H12",
+        "symbol": "USDJPY2",
+        "timeframe": "H12",
+        "closed_trades": 207,
+        "total_price_r": -4.9243,
+        "mean_price_r": -0.023788888888888887,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_032_USDJPY2_H12/trades.csv",
+        "source_sha256": "eb2da9c0acac3aa5721b6cdc0768d6c561e8dc59e57ca8d1037223e7d64c07a4"
+      },
+      {
+        "cell_id": "TF001R2_033_AUDUSD2_M15",
+        "symbol": "AUDUSD2",
+        "timeframe": "M15",
+        "closed_trades": 8114,
+        "total_price_r": -1571.5871,
+        "mean_price_r": -0.19368832881439488,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_033_AUDUSD2_M15/trades.csv",
+        "source_sha256": "40ccde29853e5c72a1488d055aa00dd1ddfb8e8eb125745acaefa0b0bace089f"
+      },
+      {
+        "cell_id": "TF001R2_034_AUDUSD2_H1",
+        "symbol": "AUDUSD2",
+        "timeframe": "H1",
+        "closed_trades": 2119,
+        "total_price_r": -204.1803,
+        "mean_price_r": -0.09635691363850873,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_034_AUDUSD2_H1/trades.csv",
+        "source_sha256": "6267fb8595fa4e80e91c530894c6f28ed499a2b5884cf724e38addf05a0d7868"
+      },
+      {
+        "cell_id": "TF001R2_035_AUDUSD2_H2",
+        "symbol": "AUDUSD2",
+        "timeframe": "H2",
+        "closed_trades": 1132,
+        "total_price_r": 21.6413,
+        "mean_price_r": 0.019117756183745584,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_035_AUDUSD2_H2/trades.csv",
+        "source_sha256": "4a4a76bd10ac7dc10c3d07b2f2fe8d8f31dc909299aaf9d0f709c3de8d168001"
+      },
+      {
+        "cell_id": "TF001R2_036_AUDUSD2_H3",
+        "symbol": "AUDUSD2",
+        "timeframe": "H3",
+        "closed_trades": 781,
+        "total_price_r": -18.5599,
+        "mean_price_r": -0.02376427656850192,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_036_AUDUSD2_H3/trades.csv",
+        "source_sha256": "12afb5f051e85ad77c676f537200ef336286cd165a22c8119f5b962e6cdb1227"
+      },
+      {
+        "cell_id": "TF001R2_037_AUDUSD2_H4",
+        "symbol": "AUDUSD2",
+        "timeframe": "H4",
+        "closed_trades": 653,
+        "total_price_r": 46.7414,
+        "mean_price_r": 0.07157947932618683,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_037_AUDUSD2_H4/trades.csv",
+        "source_sha256": "976c2a8dff35f10c1155bb3885eb43af1f140358636b67e022e171cc085d2293"
+      },
+      {
+        "cell_id": "TF001R2_038_AUDUSD2_H6",
+        "symbol": "AUDUSD2",
+        "timeframe": "H6",
+        "closed_trades": 456,
+        "total_price_r": -7.3213,
+        "mean_price_r": -0.01605548245614035,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_038_AUDUSD2_H6/trades.csv",
+        "source_sha256": "5a7668e36eba4186c38c5f8c1be89b21b20c441f7fe588d793e0d8302c703a21"
+      },
+      {
+        "cell_id": "TF001R2_039_AUDUSD2_H8",
+        "symbol": "AUDUSD2",
+        "timeframe": "H8",
+        "closed_trades": 363,
+        "total_price_r": -23.5454,
+        "mean_price_r": -0.0648633608815427,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_039_AUDUSD2_H8/trades.csv",
+        "source_sha256": "99577c71b75ff3f3103539b0d021dea3c9127ddc1d928dfe94e99b73b6c8395a"
+      },
+      {
+        "cell_id": "TF001R2_040_AUDUSD2_H12",
+        "symbol": "AUDUSD2",
+        "timeframe": "H12",
+        "closed_trades": 234,
+        "total_price_r": -35.3492,
+        "mean_price_r": -0.15106495726495728,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_040_AUDUSD2_H12/trades.csv",
+        "source_sha256": "93b8a73ca3aae0142d71cdb659e0eafb76832a89de4a9fa3efd07919baf0ac8a"
+      },
+      {
+        "cell_id": "TF001R2_041_USDCAD2_M15",
+        "symbol": "USDCAD2",
+        "timeframe": "M15",
+        "closed_trades": 8413,
+        "total_price_r": -1665.9538,
+        "mean_price_r": -0.19802137168667538,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_041_USDCAD2_M15/trades.csv",
+        "source_sha256": "cda512dd3ef51fbfe49d9f9995326ece55e46e755250127257661d905b6c46e7"
+      },
+      {
+        "cell_id": "TF001R2_042_USDCAD2_H1",
+        "symbol": "USDCAD2",
+        "timeframe": "H1",
+        "closed_trades": 2313,
+        "total_price_r": -272.6214,
+        "mean_price_r": -0.11786485084306096,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_042_USDCAD2_H1/trades.csv",
+        "source_sha256": "d9bacd5ae4fafa0b6550ea5e3fa1a9eb8be1aab2ad4e19713e5c1e7dfd57ef1e"
+      },
+      {
+        "cell_id": "TF001R2_043_USDCAD2_H2",
+        "symbol": "USDCAD2",
+        "timeframe": "H2",
+        "closed_trades": 1205,
+        "total_price_r": 5.9051,
+        "mean_price_r": 0.004900497925311204,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_043_USDCAD2_H2/trades.csv",
+        "source_sha256": "cafb0aacb445845378f1cdb8049c743ff5dab36988ee6b1856e917de359812fe"
+      },
+      {
+        "cell_id": "TF001R2_044_USDCAD2_H3",
+        "symbol": "USDCAD2",
+        "timeframe": "H3",
+        "closed_trades": 847,
+        "total_price_r": -36.9007,
+        "mean_price_r": -0.04356635182998819,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_044_USDCAD2_H3/trades.csv",
+        "source_sha256": "a4b7b01b92f7c441b76c4a732043c01a8e47fde17aee8a8f59dfc2f9b185bd0c"
+      },
+      {
+        "cell_id": "TF001R2_045_USDCAD2_H4",
+        "symbol": "USDCAD2",
+        "timeframe": "H4",
+        "closed_trades": 640,
+        "total_price_r": -18.3362,
+        "mean_price_r": -0.0286503125,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_045_USDCAD2_H4/trades.csv",
+        "source_sha256": "641d583e956596af9da5871190e676cf10e502250927d95505432f1366471e25"
+      },
+      {
+        "cell_id": "TF001R2_046_USDCAD2_H6",
+        "symbol": "USDCAD2",
+        "timeframe": "H6",
+        "closed_trades": 453,
+        "total_price_r": 15.3316,
+        "mean_price_r": 0.03384459161147903,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_046_USDCAD2_H6/trades.csv",
+        "source_sha256": "f228998c5e9d461a06b43a12eb564d568a628858ff40b42c392231e66011f2e5"
+      },
+      {
+        "cell_id": "TF001R2_047_USDCAD2_H8",
+        "symbol": "USDCAD2",
+        "timeframe": "H8",
+        "closed_trades": 351,
+        "total_price_r": -56.399,
+        "mean_price_r": -0.16068091168091167,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_047_USDCAD2_H8/trades.csv",
+        "source_sha256": "08c0f3c140eec0da7078b5911b8393dff0deb44e820e472a869b0809bb8b07b7"
+      },
+      {
+        "cell_id": "TF001R2_048_USDCAD2_H12",
+        "symbol": "USDCAD2",
+        "timeframe": "H12",
+        "closed_trades": 245,
+        "total_price_r": -20.8598,
+        "mean_price_r": -0.08514204081632654,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_048_USDCAD2_H12/trades.csv",
+        "source_sha256": "a2aa7c7df0a34188e1d490da95dab04e50bbd07a644d50737eb606d78ba10447"
+      },
+      {
+        "cell_id": "TF001R2_049_USTEC2_M15",
+        "symbol": "USTEC2",
+        "timeframe": "M15",
+        "closed_trades": 7676,
+        "total_price_r": -856.3594,
+        "mean_price_r": -0.11156323606044816,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_049_USTEC2_M15/trades.csv",
+        "source_sha256": "7c63761890adf647ce37a40d460ee806b23059dcaf723499a55c61cd476e7aa9"
+      },
+      {
+        "cell_id": "TF001R2_050_USTEC2_H1",
+        "symbol": "USTEC2",
+        "timeframe": "H1",
+        "closed_trades": 2059,
+        "total_price_r": -53.7001,
+        "mean_price_r": -0.02608067022826615,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_050_USTEC2_H1/trades.csv",
+        "source_sha256": "6fc5e159541f5f5a0179dcc1dc66ed0277f8053953b3c81d56ef137593a842e1"
+      },
+      {
+        "cell_id": "TF001R2_051_USTEC2_H2",
+        "symbol": "USTEC2",
+        "timeframe": "H2",
+        "closed_trades": 1109,
+        "total_price_r": -62.0332,
+        "mean_price_r": -0.055936158701532915,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_051_USTEC2_H2/trades.csv",
+        "source_sha256": "59c65a0d7fad20cab9e2cb429cdc62ccdf0858780b7999a186cac24278a12629"
+      },
+      {
+        "cell_id": "TF001R2_052_USTEC2_H3",
+        "symbol": "USTEC2",
+        "timeframe": "H3",
+        "closed_trades": 873,
+        "total_price_r": 38.0623,
+        "mean_price_r": 0.04359942726231386,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_052_USTEC2_H3/trades.csv",
+        "source_sha256": "a58a12029f0b838ee9c0bb85002c3cbc1295d9a6a92f215d79d385d1b91fb66a"
+      },
+      {
+        "cell_id": "TF001R2_053_USTEC2_H4",
+        "symbol": "USTEC2",
+        "timeframe": "H4",
+        "closed_trades": 669,
+        "total_price_r": 51.4857,
+        "mean_price_r": 0.07695919282511211,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_053_USTEC2_H4/trades.csv",
+        "source_sha256": "f7860db345538b7c2d42d06cf9fc7617dd865d1ee8250f3856531c6f26243c45"
+      },
+      {
+        "cell_id": "TF001R2_054_USTEC2_H6",
+        "symbol": "USTEC2",
+        "timeframe": "H6",
+        "closed_trades": 431,
+        "total_price_r": -26.563,
+        "mean_price_r": -0.06163109048723898,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_054_USTEC2_H6/trades.csv",
+        "source_sha256": "96298569af985eff5904bd15d59a690b1f89c7a278561a6d2ec20a03e0daf919"
+      },
+      {
+        "cell_id": "TF001R2_055_USTEC2_H8",
+        "symbol": "USTEC2",
+        "timeframe": "H8",
+        "closed_trades": 384,
+        "total_price_r": -12.0531,
+        "mean_price_r": -0.03138828125,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_055_USTEC2_H8/trades.csv",
+        "source_sha256": "9bf9ae83207212f44ba65978e25cf34491616fea1af00579d586cbc51e8ebff1"
+      },
+      {
+        "cell_id": "TF001R2_056_USTEC2_H12",
+        "symbol": "USTEC2",
+        "timeframe": "H12",
+        "closed_trades": 250,
+        "total_price_r": -0.8396,
+        "mean_price_r": -0.0033584,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_056_USTEC2_H12/trades.csv",
+        "source_sha256": "321b3d82535e1aff8656f44d8b0976414aa430f25b1caedb8f76e99351fb89b7"
+      },
+      {
+        "cell_id": "TF001R2_057_AUDJPY2_M15",
+        "symbol": "AUDJPY2",
+        "timeframe": "M15",
+        "closed_trades": 8376,
+        "total_price_r": -1732.2944,
+        "mean_price_r": -0.20681642788920726,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_057_AUDJPY2_M15/trades.csv",
+        "source_sha256": "14263cc62676c35686fbd0e54bac1babaab813d5e982749b5227f3ccf05beb75"
+      },
+      {
+        "cell_id": "TF001R2_058_AUDJPY2_H1",
+        "symbol": "AUDJPY2",
+        "timeframe": "H1",
+        "closed_trades": 2097,
+        "total_price_r": -270.3097,
+        "mean_price_r": -0.12890305197901764,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_058_AUDJPY2_H1/trades.csv",
+        "source_sha256": "3e7deae0ebaa4b341b01abc196e98b4b6c6cce40a24f4d48495663d16755cc70"
+      },
+      {
+        "cell_id": "TF001R2_059_AUDJPY2_H2",
+        "symbol": "AUDJPY2",
+        "timeframe": "H2",
+        "closed_trades": 1073,
+        "total_price_r": 53.3249,
+        "mean_price_r": 0.04969701770736253,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_059_AUDJPY2_H2/trades.csv",
+        "source_sha256": "b531b9a38b9c95c3358e35e7fd144e92a781b4eacf3b4a41d539d9763d7a9c5c"
+      },
+      {
+        "cell_id": "TF001R2_060_AUDJPY2_H3",
+        "symbol": "AUDJPY2",
+        "timeframe": "H3",
+        "closed_trades": 761,
+        "total_price_r": -30.03,
+        "mean_price_r": -0.039461235216819976,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_060_AUDJPY2_H3/trades.csv",
+        "source_sha256": "8298de260bcb928c9163a8e47c8acb8973815535d2f4468a8581fe431fbc7dc1"
+      },
+      {
+        "cell_id": "TF001R2_061_AUDJPY2_H4",
+        "symbol": "AUDJPY2",
+        "timeframe": "H4",
+        "closed_trades": 592,
+        "total_price_r": 33.0719,
+        "mean_price_r": 0.055864695945945946,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_061_AUDJPY2_H4/trades.csv",
+        "source_sha256": "de0adad46291698aded75faa3595a1d3540545fdc7461a08fa0a44e9e9541dc2"
+      },
+      {
+        "cell_id": "TF001R2_062_AUDJPY2_H6",
+        "symbol": "AUDJPY2",
+        "timeframe": "H6",
+        "closed_trades": 414,
+        "total_price_r": 16.257,
+        "mean_price_r": 0.03926811594202899,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_062_AUDJPY2_H6/trades.csv",
+        "source_sha256": "3ddb4e97e43f38d11c32bdb7427365f4f31b8bbbb9de94f01085bc6ef111b362"
+      },
+      {
+        "cell_id": "TF001R2_063_AUDJPY2_H8",
+        "symbol": "AUDJPY2",
+        "timeframe": "H8",
+        "closed_trades": 313,
+        "total_price_r": 9.5478,
+        "mean_price_r": 0.030504153354632586,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_063_AUDJPY2_H8/trades.csv",
+        "source_sha256": "a5be0fbae1e136a9dee51ea84b17169d141570812d825a7b8dd552c12a0f57b4"
+      },
+      {
+        "cell_id": "TF001R2_064_AUDJPY2_H12",
+        "symbol": "AUDJPY2",
+        "timeframe": "H12",
+        "closed_trades": 201,
+        "total_price_r": 22.1299,
+        "mean_price_r": 0.11009900497512438,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_064_AUDJPY2_H12/trades.csv",
+        "source_sha256": "2331ffbfd302ee368b8902711aac41c46167ac55a3b052ded56309e6eb56e504"
+      },
+      {
+        "cell_id": "TF001R2_065_DE30X_M15",
+        "symbol": "DE30X",
+        "timeframe": "M15",
+        "closed_trades": 7128,
+        "total_price_r": -40.9397,
+        "mean_price_r": -0.005743504489337823,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_065_DE30X_M15/trades.csv",
+        "source_sha256": "a61882812001abae653a317ee7a49eb57774f2cf59e05c7314fb1f5f8c6d7978"
+      },
+      {
+        "cell_id": "TF001R2_066_DE30X_H1",
+        "symbol": "DE30X",
+        "timeframe": "H1",
+        "closed_trades": 1896,
+        "total_price_r": 5.5356,
+        "mean_price_r": 0.002919620253164557,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_066_DE30X_H1/trades.csv",
+        "source_sha256": "9d253c3f053910e4cfa6f3409678ee4dd0944a1a7ba7f0ae8c8dc58dc419e437"
+      },
+      {
+        "cell_id": "TF001R2_067_DE30X_H2",
+        "symbol": "DE30X",
+        "timeframe": "H2",
+        "closed_trades": 1028,
+        "total_price_r": 54.7675,
+        "mean_price_r": 0.05327577821011673,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_067_DE30X_H2/trades.csv",
+        "source_sha256": "0b9845e45fc3d000dc6b4b3e66ab7dc3abadaa6487b5f7d4888ceb2902301f80"
+      },
+      {
+        "cell_id": "TF001R2_068_DE30X_H3",
+        "symbol": "DE30X",
+        "timeframe": "H3",
+        "closed_trades": 788,
+        "total_price_r": 17.4648,
+        "mean_price_r": 0.022163451776649745,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_068_DE30X_H3/trades.csv",
+        "source_sha256": "6ec5ce3ce3d5bfc331b644def4cb62c11bf2da78f4933ca5212043c02576dfda"
+      },
+      {
+        "cell_id": "TF001R2_069_DE30X_H4",
+        "symbol": "DE30X",
+        "timeframe": "H4",
+        "closed_trades": 656,
+        "total_price_r": -46.1513,
+        "mean_price_r": -0.07035259146341463,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_069_DE30X_H4/trades.csv",
+        "source_sha256": "9fecf6fe4860167ae3deb914a0862c59222f4ec9e550ec72a9feb0cfa0d8fbc7"
+      },
+      {
+        "cell_id": "TF001R2_070_DE30X_H6",
+        "symbol": "DE30X",
+        "timeframe": "H6",
+        "closed_trades": 445,
+        "total_price_r": -57.254,
+        "mean_price_r": -0.12866067415730337,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_070_DE30X_H6/trades.csv",
+        "source_sha256": "228cb161ca7944b466817cde25c37371e24b53ae31a3ef1dace19d4583c16d4d"
+      },
+      {
+        "cell_id": "TF001R2_071_DE30X_H8",
+        "symbol": "DE30X",
+        "timeframe": "H8",
+        "closed_trades": 335,
+        "total_price_r": -31.8722,
+        "mean_price_r": -0.09514089552238807,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_071_DE30X_H8/trades.csv",
+        "source_sha256": "a2b403ed4f52fbc921e418e2fe23e0fd13f39a6badf24cd57bb09e24e7465458"
+      },
+      {
+        "cell_id": "TF001R2_072_DE30X_H12",
+        "symbol": "DE30X",
+        "timeframe": "H12",
+        "closed_trades": 223,
+        "total_price_r": -1.7099,
+        "mean_price_r": -0.007667713004484305,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_072_DE30X_H12/trades.csv",
+        "source_sha256": "db3cea32e27b7dd27f871ab57300f6287ff64a0c5c547f582d82ee5d4e758385"
+      },
+      {
+        "cell_id": "TF001R2_073_JP225X_M15",
+        "symbol": "JP225X",
+        "timeframe": "M15",
+        "closed_trades": 6376,
+        "total_price_r": -2859.1216,
+        "mean_price_r": -0.44841932245922206,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_073_JP225X_M15/trades.csv",
+        "source_sha256": "b1643222df521f7e90268f6c1aef1828c2adb30e4a316bd7accf310c0cca9717"
+      },
+      {
+        "cell_id": "TF001R2_074_JP225X_H1",
+        "symbol": "JP225X",
+        "timeframe": "H1",
+        "closed_trades": 1657,
+        "total_price_r": -315.4105,
+        "mean_price_r": -0.19035033192516596,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_074_JP225X_H1/trades.csv",
+        "source_sha256": "a2de59ff943952f19402efa3ecc911c32e4bdf3df82441367b83c48965300dc3"
+      },
+      {
+        "cell_id": "TF001R2_075_JP225X_H2",
+        "symbol": "JP225X",
+        "timeframe": "H2",
+        "closed_trades": 902,
+        "total_price_r": -79.4241,
+        "mean_price_r": -0.08805332594235034,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_075_JP225X_H2/trades.csv",
+        "source_sha256": "212b1cf92203e1345046aa7467bf4d4e1340e514b1c36bca39376eeb9769d62b"
+      },
+      {
+        "cell_id": "TF001R2_076_JP225X_H3",
+        "symbol": "JP225X",
+        "timeframe": "H3",
+        "closed_trades": 628,
+        "total_price_r": -4.729,
+        "mean_price_r": -0.007530254777070064,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_076_JP225X_H3/trades.csv",
+        "source_sha256": "f3ce4d90606858b9cc7722b5e014afdbc4b6c9995c6096fe76b51ee1d9cb9bd8"
+      },
+      {
+        "cell_id": "TF001R2_077_JP225X_H4",
+        "symbol": "JP225X",
+        "timeframe": "H4",
+        "closed_trades": 514,
+        "total_price_r": 1.9786,
+        "mean_price_r": 0.0038494163424124513,
+        "positive_price_r": true,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_077_JP225X_H4/trades.csv",
+        "source_sha256": "d11dd1fa41cd33b115a49a73ef8ff0d84c829cf174388fd5cf57667a9f9d54b3"
+      },
+      {
+        "cell_id": "TF001R2_078_JP225X_H6",
+        "symbol": "JP225X",
+        "timeframe": "H6",
+        "closed_trades": 350,
+        "total_price_r": -46.168,
+        "mean_price_r": -0.13190857142857143,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_078_JP225X_H6/trades.csv",
+        "source_sha256": "d0a2b77ac56da4370b177109fd92e2c7e0475a9b2ca8715d854c4b0e8cf1761e"
+      },
+      {
+        "cell_id": "TF001R2_079_JP225X_H8",
+        "symbol": "JP225X",
+        "timeframe": "H8",
+        "closed_trades": 303,
+        "total_price_r": -20.4723,
+        "mean_price_r": -0.06756534653465346,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_079_JP225X_H8/trades.csv",
+        "source_sha256": "3f7a35d74a1ec17b19c554a4100de809b348e0e872390de3031f344f66bf7b4f"
+      },
+      {
+        "cell_id": "TF001R2_080_JP225X_H12",
+        "symbol": "JP225X",
+        "timeframe": "H12",
+        "closed_trades": 193,
+        "total_price_r": -10.6216,
+        "mean_price_r": -0.05503419689119171,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_080_JP225X_H12/trades.csv",
+        "source_sha256": "6d1c219ebe9649270b4b535b5218e291539d53c5eff6384553ad88b4e58a33d1"
+      },
+      {
+        "cell_id": "TF001R2_081_BTCUSD2_M15",
+        "symbol": "BTCUSD2",
+        "timeframe": "M15",
+        "closed_trades": 12143,
+        "total_price_r": -2429.888,
+        "mean_price_r": -0.2001060693403607,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_081_BTCUSD2_M15/trades.csv",
+        "source_sha256": "1bf1f28d2a5502dbd216c7f6219ed29cfa5b3ac22051b04339adabd78f6639e2"
+      },
+      {
+        "cell_id": "TF001R2_082_BTCUSD2_H1",
+        "symbol": "BTCUSD2",
+        "timeframe": "H1",
+        "closed_trades": 2988,
+        "total_price_r": -245.9333,
+        "mean_price_r": -0.08230699464524766,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_082_BTCUSD2_H1/trades.csv",
+        "source_sha256": "6ee41444a18bba51bc373280c397291cc2be74928aa0420253328357c96df56a"
+      },
+      {
+        "cell_id": "TF001R2_083_BTCUSD2_H2",
+        "symbol": "BTCUSD2",
+        "timeframe": "H2",
+        "closed_trades": 1418,
+        "total_price_r": -36.1412,
+        "mean_price_r": -0.025487447108603668,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_083_BTCUSD2_H2/trades.csv",
+        "source_sha256": "49e455a298e8db9702610141e74229311b1c1b7ede6b3baf45f45035d17977a4"
+      },
+      {
+        "cell_id": "TF001R2_084_BTCUSD2_H3",
+        "symbol": "BTCUSD2",
+        "timeframe": "H3",
+        "closed_trades": 961,
+        "total_price_r": -18.8362,
+        "mean_price_r": -0.019600624349635797,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_084_BTCUSD2_H3/trades.csv",
+        "source_sha256": "a9ddaeda0fd0918ffd557fbdeb45d358aed2bdbde9fadc2d81562f98a12e1d49"
+      },
+      {
+        "cell_id": "TF001R2_085_BTCUSD2_H4",
+        "symbol": "BTCUSD2",
+        "timeframe": "H4",
+        "closed_trades": 761,
+        "total_price_r": -33.9125,
+        "mean_price_r": -0.04456307490144547,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_085_BTCUSD2_H4/trades.csv",
+        "source_sha256": "a25107b644992c27136b627a54017387bfac890fb659759ad5983fc1a6b0baea"
+      },
+      {
+        "cell_id": "TF001R2_086_BTCUSD2_H6",
+        "symbol": "BTCUSD2",
+        "timeframe": "H6",
+        "closed_trades": 478,
+        "total_price_r": -41.2813,
+        "mean_price_r": -0.08636255230125522,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_086_BTCUSD2_H6/trades.csv",
+        "source_sha256": "9b28e9c05ed5acddb6acd17a9cfaf3a135ed224ee18a33de23e1714861dfb969"
+      },
+      {
+        "cell_id": "TF001R2_087_BTCUSD2_H8",
+        "symbol": "BTCUSD2",
+        "timeframe": "H8",
+        "closed_trades": 367,
+        "total_price_r": -32.6927,
+        "mean_price_r": -0.08908092643051771,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_087_BTCUSD2_H8/trades.csv",
+        "source_sha256": "dd5808c6ec5b70ab66fb785b8d3e8171546b6cbe8b60369e9caba85f7d3da1ac"
+      },
+      {
+        "cell_id": "TF001R2_088_BTCUSD2_H12",
+        "symbol": "BTCUSD2",
+        "timeframe": "H12",
+        "closed_trades": 247,
+        "total_price_r": -38.4465,
+        "mean_price_r": -0.15565384615384614,
+        "positive_price_r": false,
+        "native_clock_status": "PASS_NATIVE_TF",
+        "source_member": "cells/TF001R2_088_BTCUSD2_H12/trades.csv",
+        "source_sha256": "ab907b982d9353516c60b858c872e95df7732bccfd5423f5ffef7403afab631f"
+      }
+    ],
+    "timeframe_summary": [
+      {
+        "timeframe": "M15",
+        "closed_trades": 89782,
+        "positive_cells": 0,
+        "cells": 11,
+        "total_price_r": -16081.3824,
+        "pooled_mean_price_r": -0.1791158851440155
+      },
+      {
+        "timeframe": "H1",
+        "closed_trades": 23476,
+        "positive_cells": 1,
+        "cells": 11,
+        "total_price_r": -1968.6427,
+        "pooled_mean_price_r": -0.08385767166467882
+      },
+      {
+        "timeframe": "H2",
+        "closed_trades": 12475,
+        "positive_cells": 5,
+        "cells": 11,
+        "total_price_r": -260.6218,
+        "pooled_mean_price_r": -0.020891527054108218
+      },
+      {
+        "timeframe": "H3",
+        "closed_trades": 8850,
+        "positive_cells": 4,
+        "cells": 11,
+        "total_price_r": -53.4782,
+        "pooled_mean_price_r": -0.006042734463276836
+      },
+      {
+        "timeframe": "H4",
+        "closed_trades": 7113,
+        "positive_cells": 7,
+        "cells": 11,
+        "total_price_r": 45.0315,
+        "pooled_mean_price_r": 0.006330873049346267
+      },
+      {
+        "timeframe": "H6",
+        "closed_trades": 4843,
+        "positive_cells": 3,
+        "cells": 11,
+        "total_price_r": -153.4325,
+        "pooled_mean_price_r": -0.03168129258723931
+      },
+      {
+        "timeframe": "H8",
+        "closed_trades": 3751,
+        "positive_cells": 2,
+        "cells": 11,
+        "total_price_r": -263.9349,
+        "pooled_mean_price_r": -0.07036387629965342
+      },
+      {
+        "timeframe": "H12",
+        "closed_trades": 2463,
+        "positive_cells": 3,
+        "cells": 11,
+        "total_price_r": -101.0037,
+        "pooled_mean_price_r": -0.04100840438489647
+      }
+    ],
+    "units": "Arithmetic mean of original four-decimal r_result telemetry per closed trade (price R).",
+    "derivation": "Each cell is counted and Decimal-summed directly from its original archived trades.csv. Means divide that sum by its row count; no grid reconstructed from narrative totals.",
+    "costs": "Fill-price-derived telemetry; commission, financing, account-risk and historical broker/session parity are not established by price R.",
+    "implementation": "Legacy MT5 baseline A; fixed 0.01 lot; real-tick Model 4; SignalTF equals tester Period in every qualified cell.",
+    "limitations": [
+      "Not a portfolio: jobs overlap and share no synchronized capital or occupancy model.",
+      "No fresh OOS, selection-corrected alpha or deployability claim.",
+      "M1, M5 and D1 are absent from this R2 matrix.",
+      "Reported audit: 74 nonpositive initial-risk denominators assigned zero R; 7,790 exact-zero R records; moved_to_be telemetry defective.",
+      "Price-R observations can have extreme tails; displayed arithmetic means retain all source outcomes."
+    ],
+    "decision": "Discovery matrix complete; no broad transportable edge. Frozen prior candidates unchanged."
+  },
+  "policy_matrix": {
+    "source_id": "B21_H002",
+    "status": "APPROVED AS REPORTED",
+    "role": "HISTORICAL_REVALIDATION / already examined",
+    "window_start_inclusive": "2020-01-01T00:00:00Z",
+    "window_end_exclusive": "2026-08-01T00:00:00Z",
+    "symbol": "XAUUSD2",
+    "timeframe": "H4",
+    "candle_clock": "Completed Bid candles, UTC+0",
+    "arms": [
+      {
+        "cell_id": "CELL_A",
+        "pending_policy": "PENDING_GTC_BLOCK",
+        "be_mode": "BE_COMPLETED_H4_POST_ENTRY",
+        "signals": 1718,
+        "accepted_signals": 4,
+        "closed_trades": 3,
+        "total_price_r": 0.9765822398206974,
+        "mean_price_r": 0.32552741327356577,
+        "pf_price_r": 1.954236166127897,
+        "skipped_pending": 1714,
+        "pending_at_dataset_end": 1,
+        "orders_superseded": 0,
+        "decision": "PARK",
+        "adequate_exposure": false
+      },
+      {
+        "cell_id": "CELL_B",
+        "pending_policy": "PENDING_REPLACE_ON_NEW_SIGNAL",
+        "be_mode": "BE_COMPLETED_H4_POST_ENTRY",
+        "signals": 1718,
+        "accepted_signals": 1492,
+        "closed_trades": 1257,
+        "total_price_r": -119.41040465275606,
+        "mean_price_r": -0.09499634419471445,
+        "pf_price_r": 0.8467939304634303,
+        "skipped_pending": 0,
+        "pending_at_dataset_end": 0,
+        "orders_superseded": 235,
+        "decision": "PARK",
+        "adequate_exposure": true
+      },
+      {
+        "cell_id": "CELL_C",
+        "pending_policy": "PENDING_GTC_BLOCK",
+        "be_mode": "BE_INTRABAR_H4_EXTREME_POST_ENTRY",
+        "signals": 1718,
+        "accepted_signals": 4,
+        "closed_trades": 3,
+        "total_price_r": 0.9765822398206974,
+        "mean_price_r": 0.32552741327356577,
+        "pf_price_r": 1.954236166127897,
+        "skipped_pending": 1714,
+        "pending_at_dataset_end": 1,
+        "orders_superseded": 0,
+        "decision": "PARK",
+        "adequate_exposure": false
+      },
+      {
+        "cell_id": "CELL_D",
+        "pending_policy": "PENDING_REPLACE_ON_NEW_SIGNAL",
+        "be_mode": "BE_INTRABAR_H4_EXTREME_POST_ENTRY",
+        "signals": 1718,
+        "accepted_signals": 1541,
+        "closed_trades": 1297,
+        "total_price_r": -94.90285507376487,
+        "mean_price_r": -0.07317105248555503,
+        "pf_price_r": 0.8505238174385926,
+        "skipped_pending": 0,
+        "pending_at_dataset_end": 0,
+        "orders_superseded": 244,
+        "decision": "PARK",
+        "adequate_exposure": true
+      }
+    ],
+    "decision": "AMBIGUITY_SENSITIVE / PARK all four cells; no winner selected.",
+    "units": "Closed-trade counts and original price-space R; PF from price R.",
+    "costs": "Executable Bid/Ask side represented, including adverse stop gaps. Full commission, financing and account-risk economics are not established.",
+    "pending_contract": {
+      "PENDING_GTC_BLOCK": "One good-till-cancelled pending order blocks later signals; no time expiry.",
+      "PENDING_REPLACE_ON_NEW_SIGNAL": "Check active-position eligibility first. A non-BE_APPLIED position blocks replacement. Otherwise supersede old pending and create the new signal order; no time expiry."
+    },
+    "be_contract": {
+      "BE_COMPLETED_H4_POST_ENTRY": "A fully post-entry completed H4 candle must exceed the signal high/low in the trade direction.",
+      "BE_INTRABAR_H4_EXTREME_POST_ENTRY": "A later post-entry Bid tick must exceed the signal high/low in the trade direction.",
+      "common": "BE arms until executable; only applied BE permits stacking; executable-side stop fills; deterministic target-level exits; no pre-fill confirmation."
+    },
+    "limitations": [
+      "Separate Python contracts, not pooled confirmations of the native MT5 strategy.",
+      "Three-trade GTC arms fail exposure/stability gates despite positive price R.",
+      "No new backtest, holdout, optimization or source-author interpretation selection."
+    ]
+  },
+  "small_candle": {
+    "source_id": "B23_STAT001",
+    "status": "APPROVED AS REPORTED",
+    "role": "Retrospective observational diagnosis on spent Discovery, 2020–2023",
+    "window_start_inclusive": "2020-01-30T00:00:00Z",
+    "window_end_exclusive": "2024-01-01T00:00:00Z",
+    "timeframe": "M15",
+    "placed_opportunities": 28097,
+    "fills": 21917,
+    "strata": [
+      {
+        "symbol": "DE30X",
+        "signal_year": 2020,
+        "q1_filled": 446,
+        "q4_filled": 386,
+        "q1_mean_price_r": -0.0561307174888,
+        "q4_mean_price_r": -0.0685588082902,
+        "delta_q1_minus_q4_price_r": 0.0124280908014
+      },
+      {
+        "symbol": "DE30X",
+        "signal_year": 2021,
+        "q1_filled": 460,
+        "q4_filled": 428,
+        "q1_mean_price_r": -0.103910869565,
+        "q4_mean_price_r": -0.0242560747664,
+        "delta_q1_minus_q4_price_r": -0.0796547947989
+      },
+      {
+        "symbol": "DE30X",
+        "signal_year": 2022,
+        "q1_filled": 475,
+        "q4_filled": 454,
+        "q1_mean_price_r": 0.0458802105263,
+        "q4_mean_price_r": 0.0205189427313,
+        "delta_q1_minus_q4_price_r": 0.025361267795
+      },
+      {
+        "symbol": "DE30X",
+        "signal_year": 2023,
+        "q1_filled": 470,
+        "q4_filled": 425,
+        "q1_mean_price_r": 0.0409185106383,
+        "q4_mean_price_r": 0.00331552941176,
+        "delta_q1_minus_q4_price_r": 0.0376029812265
+      },
+      {
+        "symbol": "JP225X",
+        "signal_year": 2020,
+        "q1_filled": 388,
+        "q4_filled": 350,
+        "q1_mean_price_r": -0.639380670103,
+        "q4_mean_price_r": -0.290968285714,
+        "delta_q1_minus_q4_price_r": -0.348412384389
+      },
+      {
+        "symbol": "JP225X",
+        "signal_year": 2021,
+        "q1_filled": 420,
+        "q4_filled": 363,
+        "q1_mean_price_r": -0.74294952381,
+        "q4_mean_price_r": -0.309212396694,
+        "delta_q1_minus_q4_price_r": -0.433737127115
+      },
+      {
+        "symbol": "JP225X",
+        "signal_year": 2022,
+        "q1_filled": 430,
+        "q4_filled": 397,
+        "q1_mean_price_r": -0.665346976744,
+        "q4_mean_price_r": -0.294838287154,
+        "delta_q1_minus_q4_price_r": -0.370508689591
+      },
+      {
+        "symbol": "JP225X",
+        "signal_year": 2023,
+        "q1_filled": 413,
+        "q4_filled": 407,
+        "q1_mean_price_r": -0.842954237288,
+        "q4_mean_price_r": -0.358915970516,
+        "delta_q1_minus_q4_price_r": -0.484038266772
+      },
+      {
+        "symbol": "USDCAD2",
+        "signal_year": 2020,
+        "q1_filled": 494,
+        "q4_filled": 456,
+        "q1_mean_price_r": -0.482332793522,
+        "q4_mean_price_r": -0.157713815789,
+        "delta_q1_minus_q4_price_r": -0.324618977733
+      },
+      {
+        "symbol": "USDCAD2",
+        "signal_year": 2021,
+        "q1_filled": 545,
+        "q4_filled": 515,
+        "q1_mean_price_r": -0.503419449541,
+        "q4_mean_price_r": 0.0175427184466,
+        "delta_q1_minus_q4_price_r": -0.520962167988
+      },
+      {
+        "symbol": "USDCAD2",
+        "signal_year": 2022,
+        "q1_filled": 577,
+        "q4_filled": 518,
+        "q1_mean_price_r": -0.436089601386,
+        "q4_mean_price_r": -0.107397876448,
+        "delta_q1_minus_q4_price_r": -0.328691724939
+      },
+      {
+        "symbol": "USDCAD2",
+        "signal_year": 2023,
+        "q1_filled": 541,
+        "q4_filled": 540,
+        "q1_mean_price_r": -0.489960073937,
+        "q4_mean_price_r": -0.043785,
+        "delta_q1_minus_q4_price_r": -0.446175073937
+      }
+    ],
+    "symbol_effects": [
+      {
+        "symbol": "JP225X",
+        "equal_year_delta_price_r": -0.40917411696675,
+        "negative_years": 4,
+        "years": 4,
+        "interval": null
+      },
+      {
+        "symbol": "USDCAD2",
+        "equal_year_delta_price_r": -0.40511198614925004,
+        "negative_years": 4,
+        "years": 4,
+        "interval": null
+      },
+      {
+        "symbol": "DE30X",
+        "equal_year_delta_price_r": -0.001065613744000001,
+        "negative_years": 1,
+        "years": 4,
+        "interval": null
+      }
+    ],
+    "estimate_price_r": -0.27178390561993154,
+    "interval_95": [
+      -0.330415012574377,
+      -0.21279312685784468
+    ],
+    "interval_method": "Post-selection exploratory; not selection-adjusted. 20,000 stratified signal-calendar-month block-bootstrap valid replicates; percentile 2.5/97.5; seed 20261011; frozen quartiles retained.",
+    "bootstrap_replicates": 20000,
+    "contrast": "Rank all placed opportunities within each symbol-year by engulf range / causal ATR. Contrast filled Q1 mean original r_result minus filled Q4 mean; average the 12 strata equally.",
+    "units": "Difference in original price R per filled trade; smaller minus larger relative-range quartile.",
+    "costs": "Original price-R outcomes, not commission/financing/account-risk net economics. No second spread subtraction.",
+    "decision": "CONSISTENT_NEGATIVE_ASSOCIATION; parent Anti-EBP program PARKED for priority; reversal and stop interventions unrun.",
+    "limitations": [
+      "Observational and conditioned on fills; no causal stop-width or profitable reversal conclusion.",
+      "XAUUSD2 excluded for unresolved at-test history identity.",
+      "Symbol/year intervals unavailable; only the registered aggregate has the reported 95% interval.",
+      "All 868 zero-R outcomes and 22 invalid actual-fill-risk rows retained; 184 ambiguous quote matches.",
+      "Dependence-aware interval on previously seen Discovery is not an OOS p-value.",
+      "Post-selection exploratory interval, not selection-adjusted: the estimator and bootstrap were frozen after domain/strategy selection on previously examined Discovery; freezing the bootstrap does not correct for that selection."
+    ]
+  }
+}

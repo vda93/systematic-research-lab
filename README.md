@@ -18,6 +18,10 @@ The illustrated study now includes the complete USTEC and separate gold paramete
 
 A candle that engulfs its predecessor suggests a directional move, entered on a retracement. Can that idea survive explicit order rules? A persistent-order interpretation produced only three closed trades; replacement-policy arms produced 1,257 and 1,297. The repaired timeframe study was generally weak. No interpretation was selected as a winner; the separate small-candle association left reverse-trading economics untested. [Study and results](studies/engulfing-and-support.md)
 
+![Original EBP native-timeframe matrix: most configuration means are negative, with trade support retained and all timeframes qualified on their own signal clock](figures/ebp-native-timeframe.svg)
+
+The illustrated study separates the full configuration distribution, order-policy exposure and the small-candle observation. A labelled fictional lifecycle explains why pending-order occupancy changes the experiment. [Figure evidence and limits](docs/ebp-visual-evidence.md).
+
 ### ORBINDEX: when a promising discovery failed its later test
 
 I searched **3,456** DE30/JP225/UK100 opening-range configurations across the 24-hour clock, then compared three frozen DE30 portfolios in a shared-order simulation. Discovery looked promising, but **all three lost fixed-lot EUR in the 2024–July 2026 historical OOS scenario before extra commission**. Quote-path forensics helped examine why the result weakened; no portfolio was promoted. [Read the ORBINDEX study](studies/orbindex.md).

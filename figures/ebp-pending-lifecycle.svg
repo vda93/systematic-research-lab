@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg role="img" aria-labelledby="figure-title figure-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="964.8pt" height="468pt" viewBox="0 0 964.8 468" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title id="figure-title">05  |  A pending order can occupy the entry slot</title>
+ <desc id="figure-desc">CONCEPTUAL_SCHEMATIC · Fictional order-state example · source-defined EBP-PY-H002 policies The invented A/B/C signal sequence assumes orders remain unfilled and replacement is eligible. It contains no prices, returns or historical timestamps. A live position without BE_APPLIED blocks replacement; both pending policies have no time expiry. Source B21 defines these contracts. No historical price path or contemporaneous counterfactual sequence is shown. H002 arms were separate engine contracts; all four were PARKED. Source contract: One good-till-cancelled pending order blocks later signals; no time expiry. Check active-position eligibility first. A non-BE_APPLIED position blocks replacement. Otherwise supersede old pending and create the new signal order; no time expiry.</desc>
+ <title>05  |  A pending order can occupy the entry slot</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>05  |  A pending order can occupy the entry slot</dc:title>
+    <dc:description>CONCEPTUAL_SCHEMATIC · Fictional order-state example · source-defined EBP-PY-H002 policies The invented A/B/C signal sequence assumes orders remain unfilled and replacement is eligible. It contains no prices, returns or historical timestamps. A live position without BE_APPLIED blocks replacement; both pending policies have no time expiry. Source B21 defines these contracts. No historical price path or contemporaneous counterfactual sequence is shown. H002 arms were separate engine contracts; all four were PARKED.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Systematic Research Lab</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 468
+L 964.8 468
+L 964.8 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 87.02496 197.34624
+L 316.26144 197.34624
+Q 329.28624 197.34624 329.28624 193.55544
+L 329.28624 136.94616
+Q 329.28624 133.15536 316.26144 133.15536
+L 87.02496 133.15536
+Q 74.00016 133.15536 74.00016 136.94616
+L 74.00016 193.55544
+Q 74.00016 197.34624 87.02496 197.34624
+z
+" clip-path="url(#pc27f516db9)" style="fill: #2c6385; opacity: 0.12; stroke: #2c6385; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 382.25376 197.34624
+L 611.49024 197.34624
+Q 624.51504 197.34624 624.51504 193.55544
+L 624.51504 136.94616
+Q 624.51504 133.15536 611.49024 133.15536
+L 382.25376 133.15536
+Q 369.22896 133.15536 369.22896 136.94616
+L 369.22896 193.55544
+Q 369.22896 197.34624 382.25376 197.34624
+z
+" clip-path="url(#pc27f516db9)" style="fill: #2c6385; opacity: 0.12; stroke: #2c6385; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 677.48256 197.34624
+L 906.71904 197.34624
+Q 919.74384 197.34624 919.74384 193.55544
+L 919.74384 136.94616
+Q 919.74384 133.15536 906.71904 133.15536
+L 677.48256 133.15536
+Q 664.45776 133.15536 664.45776 136.94616
+L 664.45776 193.55544
+Q 664.45776 197.34624 677.48256 197.34624
+z
+" clip-path="url(#pc27f516db9)" style="fill: #2c6385; opacity: 0.12; stroke: #2c6385; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 87.02496 321.17904
+L 316.26144 321.17904
+Q 329.28624 321.17904 329.28624 317.38824
+L 329.28624 260.77896
+Q 329.28624 256.98816 316.26144 256.98816
+L 87.02496 256.98816
+Q 74.00016 256.98816 74.00016 260.77896
+L 74.00016 317.38824
+Q 74.00016 321.17904 87.02496 321.17904
+z
+" clip-path="url(#pc27f516db9)" style="fill: #d09a46; opacity: 0.12; stroke: #d09a46; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 382.25376 321.17904
+L 611.49024 321.17904
+Q 624.51504 321.17904 624.51504 317.38824
+L 624.51504 260.77896
+Q 624.51504 256.98816 611.49024 256.98816
+L 382.25376 256.98816
+Q 369.22896 256.98816 369.22896 260.77896
+L 369.22896 317.38824
+Q 369.22896 321.17904 382.25376 321.17904
+z
+" clip-path="url(#pc27f516db9)" style="fill: #d09a46; opacity: 0.12; stroke: #d09a46; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 677.48256 321.17904
+L 906.71904 321.17904
+Q 919.74384 321.17904 919.74384 317.38824
+L 919.74384 260.77896
+Q 919.74384 256.98816 906.71904 256.98816
+L 677.48256 256.98816
+Q 664.45776 256.98816 664.45776 260.77896
+L 664.45776 317.38824
+Q 664.45776 321.17904 677.48256 321.17904
+z
+" clip-path="url(#pc27f516db9)" style="fill: #d09a46; opacity: 0.12; stroke: #d09a46; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="84.42" y="117.171825" transform="rotate(-0 84.42 117.171825)">GTC · a persistent pending order occupies the slot</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(158.6607 152.207292)">Signal A arrives</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(157.403434 168.286112)">Place pending A</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(183.738981 184.364933)">Slot: A</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 336.496306 165.2508
+Q 349.25816 165.2508 360.007552 165.2508
+" style="fill: none; stroke: #2c6385; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 356.007552 163.2508
+L 360.007552 165.2508
+L 356.007552 167.2508
+" style="fill: none; stroke: #2c6385; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(455.832586 152.654163)">Signal B arrives</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(426.820594 168.002128)">SKIPPED_PENDING_ORDER</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(468.944461 183.642124)">Slot: still A</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 631.725106 165.2508
+Q 644.48696 165.2508 655.236352 165.2508
+" style="fill: none; stroke: #2c6385; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 651.236352 163.2508
+L 655.236352 165.2508
+L 651.236352 167.2508
+" style="fill: none; stroke: #2c6385; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(750.997402 152.654163)">Signal C arrives</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(722.049394 168.002128)">SKIPPED_PENDING_ORDER</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(764.173261 183.642124)">Slot: still A</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="84.42" y="241.004625" transform="rotate(-0 84.42 241.004625)">Cancel / replace · later eligible signals change the opportunity</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(158.6607 276.040092)">Signal A arrives</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(157.403434 292.118912)">Place pending A</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(183.738981 308.197733)">Slot: A</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 336.496306 289.0836
+Q 349.25816 289.0836 360.007552 289.0836
+" style="fill: none; stroke: #d09a46; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 356.007552 287.0836
+L 360.007552 289.0836
+L 356.007552 291.0836
+" style="fill: none; stroke: #d09a46; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(453.878328 276.040092)">Signal B arrives</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(444.304031 292.118912)">Cancel A → place B</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(478.956609 308.197733)">Slot: B</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 631.725106 289.0836
+Q 644.48696 289.0836 655.236352 289.0836
+" style="fill: none; stroke: #d09a46; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 651.236352 287.0836
+L 655.236352 289.0836
+L 651.236352 291.0836
+" style="fill: none; stroke: #d09a46; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(749.040097 276.040092)">Signal C arrives</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(739.454628 292.118912)">Cancel B → place C</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(774.118378 308.197733)">Slot: C</text>
+   </g>
+  </g>
+  <g id="text_9">
+   <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="62.712" y="31.539938" transform="rotate(-0 62.712 31.539938)">05  |  A pending order can occupy the entry slot</text>
+  </g>
+  <g id="text_10">
+   <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657684" x="62.712" y="52.438359" transform="rotate(-0 62.712 52.438359)">CONCEPTUAL_SCHEMATIC · Fictional order-state example · source-defined EBP-PY-H002 policies</text>
+  </g>
+  <g id="text_11">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(62.712 420.55875)">The invented A/B/C signal sequence assumes orders remain unfilled and replacement is eligible. It contains no prices, returns or historical timestamps.</text>
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(62.712 432.688359)">A live position without BE_APPLIED blocks replacement; both pending policies have no time expiry. Source B21 defines these contracts.</text>
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(62.712 445.068281)">No historical price path or contemporaneous counterfactual sequence is shown. H002 arms were separate engine contracts; all four were PARKED.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc27f516db9">
+   <rect x="62.712" y="98.28" width="868.32" height="252.72"/>
+  </clipPath>
+ </defs>
+</svg>
