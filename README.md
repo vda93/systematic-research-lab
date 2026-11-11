@@ -16,7 +16,7 @@ A candle that engulfs its predecessor suggests a directional move, entered on a 
 
 ### ORBINDEX: when a promising discovery failed its later test
 
-Could a precise index opening-range breakout survive a 24-hour timing search and a shared-order backtest? I evaluated **3,456** DE30/JP225/UK100 configurations, froze three synchronized DE30 portfolios, and compared their discovery and later-period results. **All three lost fixed-lot EUR on the 2024–July 2026 historical OOS scenario even before extra commission.** The negative result, code/parity checks, and post-OOS quote forensics are the study, not a trading system to deploy. [Read the ORBINDEX study](studies/orbindex.md).
+I searched **3,456** DE30/JP225/UK100 opening-range configurations across the 24-hour clock, then compared three frozen DE30 portfolios in a shared-order simulation. Discovery looked promising, but **all three lost fixed-lot EUR in the 2024–July 2026 historical OOS scenario before extra commission**. Quote-path forensics helped examine why the result weakened; no portfolio was promoted. [Read the ORBINDEX study](studies/orbindex.md).
 
 ![ORBINDEX discovery versus later-period cumulative gross price R](figures/orbindex-curves.svg)
 
