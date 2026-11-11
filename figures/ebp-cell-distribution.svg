@@ -564,15 +564,15 @@ z
    </g>
    <g id="support-TF001R2_005_XAUUSD2_H4">
     <defs>
-     <path id="m719011199f" d="M 0 4.898979
+     <path id="m71fc7695c6" d="M 0 -4.898979
 L 4.898979 0
-L 0 -4.898979
+L 0 4.898979
 L -4.898979 0
-z
+L 0 -4.898979
 " style="stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
     </defs>
     <g clip-path="url(#pc86bfa4836)">
-     <use xlink:href="#m719011199f" x="574.815302" y="231.791653" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
+     <use xlink:href="#m71fc7695c6" x="574.815302" y="231.791653" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
     </g>
    </g>
    <g id="support-TF001R2_006_XAUUSD2_H6">
@@ -612,7 +612,7 @@ z
    </g>
    <g id="support-TF001R2_013_EURUSD2_H4">
     <g clip-path="url(#pc86bfa4836)">
-     <use xlink:href="#m719011199f" x="575.879642" y="160.771418" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
+     <use xlink:href="#m71fc7695c6" x="575.879642" y="160.771418" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
     </g>
    </g>
    <g id="support-TF001R2_014_EURUSD2_H6">
@@ -652,7 +652,7 @@ z
    </g>
    <g id="support-TF001R2_021_GBPUSD2_H4">
     <g clip-path="url(#pc86bfa4836)">
-     <use xlink:href="#m719011199f" x="575.735812" y="171.107611" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
+     <use xlink:href="#m71fc7695c6" x="575.735812" y="171.107611" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
     </g>
    </g>
    <g id="support-TF001R2_022_GBPUSD2_H6">
@@ -692,7 +692,7 @@ z
    </g>
    <g id="support-TF001R2_029_USDJPY2_H4">
     <g clip-path="url(#pc86bfa4836)">
-     <use xlink:href="#m719011199f" x="572.945515" y="122.444494" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
+     <use xlink:href="#m71fc7695c6" x="572.945515" y="122.444494" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
     </g>
    </g>
    <g id="support-TF001R2_030_USDJPY2_H6">
@@ -732,7 +732,7 @@ z
    </g>
    <g id="support-TF001R2_037_AUDUSD2_H4">
     <g clip-path="url(#pc86bfa4836)">
-     <use xlink:href="#m719011199f" x="574.729004" y="147.617603" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
+     <use xlink:href="#m71fc7695c6" x="574.729004" y="147.617603" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
     </g>
    </g>
    <g id="support-TF001R2_038_AUDUSD2_H6">
@@ -772,7 +772,7 @@ z
    </g>
    <g id="support-TF001R2_045_USDCAD2_H4">
     <g clip-path="url(#pc86bfa4836)">
-     <use xlink:href="#m719011199f" x="574.355047" y="184.575061" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
+     <use xlink:href="#m71fc7695c6" x="574.355047" y="184.575061" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
     </g>
    </g>
    <g id="support-TF001R2_046_USDCAD2_H6">
@@ -812,7 +812,7 @@ z
    </g>
    <g id="support-TF001R2_053_USTEC2_H4">
     <g clip-path="url(#pc86bfa4836)">
-     <use xlink:href="#m719011199f" x="575.189259" y="145.633956" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
+     <use xlink:href="#m71fc7695c6" x="575.189259" y="145.633956" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
     </g>
    </g>
    <g id="support-TF001R2_054_USTEC2_H6">
@@ -852,7 +852,7 @@ z
    </g>
    <g id="support-TF001R2_061_AUDJPY2_H4">
     <g clip-path="url(#pc86bfa4836)">
-     <use xlink:href="#m719011199f" x="572.974281" y="153.412072" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
+     <use xlink:href="#m71fc7695c6" x="572.974281" y="153.412072" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
     </g>
    </g>
    <g id="support-TF001R2_062_AUDJPY2_H6">
@@ -892,7 +892,7 @@ z
    </g>
    <g id="support-TF001R2_069_DE30X_H4">
     <g clip-path="url(#pc86bfa4836)">
-     <use xlink:href="#m719011199f" x="574.815302" y="199.951828" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
+     <use xlink:href="#m71fc7695c6" x="574.815302" y="199.951828" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
     </g>
    </g>
    <g id="support-TF001R2_070_DE30X_H6">
@@ -932,7 +932,7 @@ z
    </g>
    <g id="support-TF001R2_077_JP225X_H4">
     <g clip-path="url(#pc86bfa4836)">
-     <use xlink:href="#m719011199f" x="570.730538" y="172.591524" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
+     <use xlink:href="#m71fc7695c6" x="570.730538" y="172.591524" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
     </g>
    </g>
    <g id="support-TF001R2_078_JP225X_H6">
@@ -972,7 +972,7 @@ z
    </g>
    <g id="support-TF001R2_085_BTCUSD2_H4">
     <g clip-path="url(#pc86bfa4836)">
-     <use xlink:href="#m719011199f" x="577.835726" y="190.44253" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
+     <use xlink:href="#m71fc7695c6" x="577.835726" y="190.44253" style="fill: #2c6385; fill-opacity: 0.88; stroke: #ffffff; stroke-opacity: 0.88; stroke-width: 0.55"/>
     </g>
    </g>
    <g id="support-TF001R2_086_BTCUSD2_H6">
@@ -1011,15 +1011,15 @@ z
     </g>
     <g id="line2d_38">
      <defs>
-      <path id="m95726e4587" d="M 0 4.242641
+      <path id="m4fa0b22c43" d="M 0 -4.242641
 L 4.242641 0
-L 0 -4.242641
+L 0 4.242641
 L -4.242641 0
-z
-" style="stroke: #2c6385; stroke-linejoin: miter"/>
+L 0 -4.242641
+" style="stroke: #2c6385"/>
      </defs>
      <g>
-      <use xlink:href="#m95726e4587" x="833.284406" y="324.667969" style="fill: #2c6385; stroke: #2c6385; stroke-linejoin: miter"/>
+      <use xlink:href="#m4fa0b22c43" x="833.284406" y="324.667969" style="fill: #2c6385; stroke: #2c6385"/>
      </g>
     </g>
     <g id="text_40">

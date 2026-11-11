@@ -122,6 +122,34 @@ def test_renderer_is_deterministic_accessible_and_matches_retained_svgs():
             raise AssertionError(f'Exact EBP SVG mismatch: {name}\n{excerpt}')
 
 
+def test_diamond_markers_have_exact_axis_vertices():
+    from unittest.mock import patch
+    from matplotlib.markers import MarkerStyle
+    import numpy as np
+    m=renderer();d=data();figures=[];original=m._finish
+    def capture(fig,*args,**kwargs):
+        result=original(fig,*args,**kwargs);figures.append(fig);return result
+    original_cos=math.cos
+    def platform_cos(angle):
+        value=original_cos(angle)
+        return math.nextafter(value,math.inf) if abs(angle-math.pi/4)<1e-14 else value
+    # Emulate the libm last-bit difference observed in hosted Linux SVG paths.
+    with patch('matplotlib.transforms.math.cos',side_effect=platform_cos), patch.object(m,'_finish',side_effect=capture):
+        m._small(d);m._distribution(d)
+        summary=figures[0].axes[1]
+        line=next(line for line in summary.lines if len(line.get_xdata())==1
+                  and line.get_xdata()[0]==d['small_candle']['estimate_price_r']
+                  and line.get_ydata()[0]==-.05)
+        marker=MarkerStyle(line.get_marker())
+        paths=[marker.get_path().transformed(marker.get_transform())]
+    h4=next(c for c in d['native_matrix']['cells'] if c['timeframe']=='H4')
+    collection=next(c for c in figures[1].axes[1].collections if c.get_gid()=='support-'+h4['cell_id'])
+    paths.extend(collection.get_paths())
+    for path in paths:
+        values=np.abs(path.vertices)
+        assert not np.any((values>0)&(values<1e-12)), 'Rotated near-zero vertices vary by platform'
+
+
 def test_renderer_rejects_an_incomplete_surface_and_invalid_interval():
     m = renderer()
     incomplete = deepcopy(data())

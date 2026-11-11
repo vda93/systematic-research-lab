@@ -24,6 +24,8 @@ ROOT = Path(__file__).resolve().parents[1]
 INK, MUTED, GRID = '#213442', '#657684', '#e6ebef'
 BLUE, GOLD, RUST = '#2c6385', '#d09a46', '#a96235'
 SYMBOL_COLORS = {'JP225X': BLUE, 'USDCAD2': RUST, 'DE30X': '#71816b'}
+# Explicit axis vertices avoid libm rotation roundoff and signed-zero SVG IDs.
+DIAMOND = [(0, 1), (1, 0), (0, -1), (-1, 0), (0, 1)]
 POLICY_ARMS = {
     'CELL_A': ('PENDING_GTC_BLOCK', 'BE_COMPLETED_H4_POST_ENTRY'),
     'CELL_B': ('PENDING_REPLACE_ON_NEW_SIGNAL', 'BE_COMPLETED_H4_POST_ENTRY'),
@@ -241,8 +243,8 @@ def _small(data):
         summary.text(-.59, y-.20, f"{row['negative_years']}/4 negative years · point estimate", color=MUTED, fontsize=8.7)
     estimate = s['estimate_price_r']
     lo, hi = s['interval_95']
-    summary.errorbar(estimate, -.05, xerr=[[estimate-lo], [hi-estimate]], fmt='D',
-                     color=INK, capsize=5, markersize=7, lw=2)
+    summary.errorbar(estimate, -.05, xerr=[[estimate-lo], [hi-estimate]], fmt='', marker=DIAMOND,
+                     color=INK, capsize=5, markersize=7*math.sqrt(2), lw=2)
     summary.text(estimate, .25, f'Equal-stratum mean  {estimate:+.3f}R', ha='center', color=INK, fontsize=11, fontweight='bold')
     summary.text(estimate, -.45, f'Post-selection exploratory 95% interval\n[{lo:+.3f}, {hi:+.3f}] · not selection-adjusted',
                  ha='center', va='center', color=INK, fontsize=9.2, linespacing=1.5)
@@ -286,12 +288,12 @@ def _distribution(data):
     hist.set_ylabel('Native-timeframe cells', fontsize=10.5, color=INK)
     hist.set_title(f'All {len(cells)} cell means · equal weight per cell', loc='left', fontsize=11, color=INK, pad=17)
     hist.axvline(0, color=MUTED, lw=1, ls='--')
-    categories = {'M15': (RUST, 'v'), 'H4': (BLUE, 'D'), 'other': ('#8796a1', 'o')}
+    categories = {'M15': (RUST, 'v'), 'H4': (BLUE, DIAMOND), 'other': ('#8796a1', 'o')}
     for row in cells:
         group = row['timeframe'] if row['timeframe'] in ('M15', 'H4') else 'other'
         color, marker = categories[group]
         mark = support.scatter(row['closed_trades'], row['mean_price_r'],
-                               s=33 if group == 'other' else 48, c=color, marker=marker,
+                               s=33 if group == 'other' else 96 if group == 'H4' else 48, c=color, marker=marker,
                                edgecolors='white', linewidth=.55, alpha=.88, zorder=3)
         mark.set_gid('support-'+row['cell_id'])
     support.set_xlim(0, max(r['closed_trades'] for r in cells)*1.06)
@@ -303,7 +305,7 @@ def _distribution(data):
     support.axhline(0, color=MUTED, lw=1, ls='--')
     group_counts = [sum(r['timeframe'] == 'M15' for r in cells), sum(r['timeframe'] == 'H4' for r in cells),
                     sum(r['timeframe'] not in ('M15', 'H4') for r in cells)]
-    handles = [Line2D([], [], color=c, marker=m, ls='', markersize=6, label=f'{label} · {n} cells')
+    handles = [Line2D([], [], color=c, marker=m, ls='', markersize=6*math.sqrt(2) if label=='H4' else 6, label=f'{label} · {n} cells')
                for (c, m), label, n in zip(categories.values(), ['M15', 'H4', 'Other'], group_counts)]
     support.legend(handles=handles, loc='lower right', frameon=False, fontsize=9)
     for ax in (hist, support):

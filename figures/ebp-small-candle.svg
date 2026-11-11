@@ -617,16 +617,18 @@ L 874.1851 107.352
 " clip-path="url(#pdce6d17785)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #657684"/>
    </g>
    <g id="line2d_50">
+    <path d="M 756.36021 345.37591
+" clip-path="url(#pdce6d17785)" style="fill: none; stroke: #213442; stroke-width: 2; stroke-linecap: square"/>
     <defs>
-     <path id="m9e1c96df38" d="M 0 4.949747
+     <path id="m6f0f567d5d" d="M 0 -4.949747
 L 4.949747 0
-L 0 -4.949747
+L 0 4.949747
 L -4.949747 0
-z
-" style="stroke: #213442; stroke-linejoin: miter"/>
+L 0 -4.949747
+" style="stroke: #213442"/>
     </defs>
     <g clip-path="url(#pdce6d17785)">
-     <use xlink:href="#m9e1c96df38" x="756.36021" y="345.37591" style="fill: #213442; stroke: #213442; stroke-linejoin: miter"/>
+     <use xlink:href="#m6f0f567d5d" x="756.36021" y="345.37591" style="fill: #213442; stroke: #213442"/>
     </g>
    </g>
    <g id="patch_6">
