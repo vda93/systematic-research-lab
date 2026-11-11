@@ -8,6 +8,8 @@ Matched event studies can reduce specified observational differences but do not 
 
 R-space outcomes, price-space outcomes, monetary profit factor, commission, financing and realized brokerage execution are different objects. Numerical precision or a reproducible chart cannot recover absent fills or independently authenticate a private report.
 
+The featured [ORBINDEX study](../studies/orbindex.md) was chosen after a large correlated development search. Its later 2024–2026 comparison carries possible prior historical exposure; the underlying custom-symbol physical template is not the full historical Exness broker contract. All fixed-lot EUR scenarios were negative in the later period, but broker-net accounting and a calibrated alpha significance claim remain unqualified. Subsequent quote-path forensics cannot retrospectively restore independent OOS status.
+
 ## Synthetic methods appendix
 
 The [synthetic study](study.md) deliberately generates artificial concentration and inference examples. Its 80 Monte Carlo trials reflect one finite calibration experiment, not historical trading performance or a general coverage guarantee. Deterministic hashes show repeatability, not future alpha.

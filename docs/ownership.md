@@ -24,9 +24,11 @@ Personal hypothesis-origin, manual-authorship and review claims remain **HUMAN_A
 | --- | --- | --- |
 | [ORB](../studies/opening-range.md) | Opening-range breakout on gold and US technology-index CFDs | I preserve its conflicting validation, placebo-range findings and closed deployment verdict. Automated campaigns and AI-assisted Python/MT5 checks supported the research, not independent proof of a profitable system. |
 | [EBP](../studies/engulfing-and-support.md) | Higher-timeframe engulfing/retracement rule family | The research studies rule-interpretation and pending-order ambiguity. I do not claim to have invented engulfing-bar trading or written every EA/test. |
-| [NOWICK](../studies/nowick.md) | Trend-aligned, retested wickless-candle rule family | I preserve the user-directed shelving decision after matched continuation analysis and a separately rejected reversal. Automated event collection and statistical inference are distinguished from that decision. |
+| [ORBINDEX](../studies/orbindex.md) | DE30X/JP225X/UK100X opening-range search and three frozen DE30 portfolios | I directed the research questions, selected the A/B/C portfolios for later testing, and rejected them after the economic OOS failure. AI-assisted implementation, MT5/Python parity, data audits, statistical review and drafting are not claimed as my unaided code. |
 | [MacroImpulse](../studies/news-research.md) | Scheduled news-driven event trading and event-calendar qualification | I preserve failed filter decisions and the corrected invalid-data-universe outcome. The research does not prove vendor-independent source parity, complete calendar coverage or net live alpha. |
 | [Research OS](../studies/research-engineering.md) | Evidence governance and research infrastructure rather than a trade signal | I set evidence and reproducibility requirements and use AI-assisted code and checks; public tools are not an export of the private operations system. |
+
+The former featured [NOWICK study](../studies/nowick.md) is retained as historical research. Its original user-directed rejection and agent-assisted analyses remain documented in the evidence register.
 
 ## What a reviewer can verify
 

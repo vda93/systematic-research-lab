@@ -17,6 +17,7 @@ from scripts.audit_public import audit_directory, safe_name
 from srl.study import load_protocol, run_study
 from srl.visuals import render_summary
 from scripts.render_historical import historical_artifacts
+from scripts.render_orbindex import orbindex_artifacts
 from srl.diagnostics import derive_diagnostics
 from srl.claims import audit_claims
 from srl.evidence import load_manifest, verify_manifest
@@ -73,6 +74,8 @@ def main() -> int:
     artifacts = artifact_bytes(ROOT)
     historical = json.loads((ROOT / 'data/historical-results.json').read_text(encoding='utf-8'))
     artifacts.update(historical_artifacts(historical))
+    orbindex = json.loads((ROOT / "data/orbindex-public.json").read_text(encoding="utf-8"))
+    artifacts.update(orbindex_artifacts(orbindex))
     artifacts['results/aggregate-diagnostics.json'] = (json.dumps(
         derive_diagnostics(historical),sort_keys=True,indent=2,allow_nan=False)+'\n').encode()
     differences = check_artifacts(ROOT, artifacts)
