@@ -19,6 +19,7 @@ from srl.visuals import render_summary
 from scripts.render_historical import historical_artifacts
 from scripts.render_orbindex import orbindex_artifacts
 from scripts.render_orb import orb_artifacts
+from scripts.render_ebp import render_all as ebp_artifacts
 from srl.diagnostics import derive_diagnostics
 from srl.claims import audit_claims
 from srl.evidence import load_manifest, verify_manifest
@@ -80,6 +81,8 @@ def main() -> int:
     artifacts.update(orb_artifacts(
         json.loads((ROOT / 'data/orb-ustec-public.json').read_text(encoding='utf-8')),
         json.loads((ROOT / 'data/orb-gold-public.json').read_text(encoding='utf-8'))))
+    ebp = json.loads((ROOT / 'data/ebp-public.json').read_text(encoding='utf-8'))
+    artifacts.update({f'figures/{name}': blob for name, blob in ebp_artifacts(ebp).items()})
     artifacts['results/aggregate-diagnostics.json'] = (json.dumps(
         derive_diagnostics(historical),sort_keys=True,indent=2,allow_nan=False)+'\n').encode()
     differences = check_artifacts(ROOT, artifacts)

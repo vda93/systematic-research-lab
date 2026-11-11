@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg role="img" aria-labelledby="figure-title figure-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="964.8pt" height="511.2pt" viewBox="0 0 964.8 511.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title id="figure-title">05  |  Smaller candles were associated with worse original outcomes</title>
+ <desc id="figure-desc">STAT001 · M15 · 2020–2023 spent Discovery · post-selection exploratory · 28,097 placed / 21,917 fills Quartiles rank engulf range / causal ATR among all placed orders within symbol-year; outcomes use fills. The primary estimate weights 12 strata equally. Post-selection exploratory interval, not selection-adjusted: 20,000 stratified signal-month block-bootstrap replicates. Symbol intervals unavailable. Observational, price-R evidence; XAU excluded for unresolved history identity. Anti-EBP PARKED; stop intervention and reversal economics unrun. Source B23.</desc>
+ <title>05  |  Smaller candles were associated with worse original outcomes</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>05  |  Smaller candles were associated with worse original outcomes</dc:title>
+    <dc:description>STAT001 · M15 · 2020–2023 spent Discovery · post-selection exploratory · 28,097 placed / 21,917 fills Quartiles rank engulf range / causal ATR among all placed orders within symbol-year; outcomes use fills. The primary estimate weights 12 strata equally. Post-selection exploratory interval, not selection-adjusted: 20,000 stratified signal-month block-bootstrap replicates. Symbol intervals unavailable. Observational, price-R evidence; XAU excluded for unresolved history identity. Anti-EBP PARKED; stop intervention and reversal economics unrun. Source B23.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Systematic Research Lab</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 511.2
+L 964.8 511.2
+L 964.8 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 144.72 393.624
+L 497.60867 393.624
+L 497.60867 107.352
+L 144.72 107.352
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 154.257532 393.624
+L 154.257532 107.352
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mb54675a69a" d="M 0 0
+L 0 3.5
+" style="stroke: #657684; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mb54675a69a" x="154.257532" y="393.624" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657684" x="154.257532" y="408.222438" transform="rotate(-0 154.257532 408.222438)">-0.6</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 249.632848 393.624
+L 249.632848 107.352
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mb54675a69a" x="249.632848" y="393.624" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657684" x="249.632848" y="408.222438" transform="rotate(-0 249.632848 408.222438)">-0.4</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 345.008164 393.624
+L 345.008164 107.352
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mb54675a69a" x="345.008164" y="393.624" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657684" x="345.008164" y="408.222438" transform="rotate(-0 345.008164 408.222438)">-0.2</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 440.38348 393.624
+L 440.38348 107.352
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mb54675a69a" x="440.38348" y="393.624" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657684" x="440.38348" y="408.222438" transform="rotate(-0 440.38348 408.222438)">0.0</text>
+     </g>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="321.164335" y="421.900562" transform="rotate(-0 321.164335 421.900562)">Smaller − larger relative-range quartile · price R</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_9">
+      <defs>
+       <path id="m1739f43756" d="M 0 0
+L -3.5 0
+" style="stroke: #657684; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m1739f43756" x="144.72" y="125.528" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="137.72" y="129.327219" transform="rotate(-0 137.72 129.327219)">JP225X  2020</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m1739f43756" x="144.72" y="148.248" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="137.72" y="152.047219" transform="rotate(-0 137.72 152.047219)">JP225X  2021</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m1739f43756" x="144.72" y="170.968" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="137.72" y="174.767219" transform="rotate(-0 137.72 174.767219)">JP225X  2022</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m1739f43756" x="144.72" y="193.688" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="137.72" y="197.487219" transform="rotate(-0 137.72 197.487219)">JP225X  2023</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m1739f43756" x="144.72" y="216.408" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="137.72" y="220.207219" transform="rotate(-0 137.72 220.207219)">USDCAD2  2020</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m1739f43756" x="144.72" y="239.128" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="137.72" y="242.927219" transform="rotate(-0 137.72 242.927219)">USDCAD2  2021</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m1739f43756" x="144.72" y="261.848" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="137.72" y="265.647219" transform="rotate(-0 137.72 265.647219)">USDCAD2  2022</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m1739f43756" x="144.72" y="284.568" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="137.72" y="288.367219" transform="rotate(-0 137.72 288.367219)">USDCAD2  2023</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m1739f43756" x="144.72" y="307.288" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="137.72" y="311.087219" transform="rotate(-0 137.72 311.087219)">DE30X  2020</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m1739f43756" x="144.72" y="330.008" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="137.72" y="333.807219" transform="rotate(-0 137.72 333.807219)">DE30X  2021</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m1739f43756" x="144.72" y="352.728" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="137.72" y="356.527219" transform="rotate(-0 137.72 356.527219)">DE30X  2022</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m1739f43756" x="144.72" y="375.448" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="137.72" y="379.247219" transform="rotate(-0 137.72 379.247219)">DE30X  2023</text>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_1">
+    <path d="M 274.233774 125.528
+L 440.38348 125.528
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #2c6385; stroke-opacity: 0.5; stroke-width: 1.2"/>
+   </g>
+   <g id="small-stratum-JP225X-2020">
+    <defs>
+     <path id="mba4905133e" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #2c6385"/>
+    </defs>
+    <g clip-path="url(#p286ed918b2)">
+     <use xlink:href="#mba4905133e" x="274.233774" y="125.528" style="fill: #2c6385; stroke: #2c6385"/>
+    </g>
+   </g>
+   <g id="LineCollection_2">
+    <path d="M 233.544402 148.248
+L 440.38348 148.248
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #2c6385; stroke-opacity: 0.5; stroke-width: 1.2"/>
+   </g>
+   <g id="small-stratum-JP225X-2021">
+    <g clip-path="url(#p286ed918b2)">
+     <use xlink:href="#mba4905133e" x="233.544402" y="148.248" style="fill: #2c6385; stroke: #2c6385"/>
+    </g>
+   </g>
+   <g id="LineCollection_3">
+    <path d="M 263.696563 170.968
+L 440.38348 170.968
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #2c6385; stroke-opacity: 0.5; stroke-width: 1.2"/>
+   </g>
+   <g id="small-stratum-JP225X-2022">
+    <g clip-path="url(#p286ed918b2)">
+     <use xlink:href="#mba4905133e" x="263.696563" y="170.968" style="fill: #2c6385; stroke: #2c6385"/>
+    </g>
+   </g>
+   <g id="LineCollection_4">
+    <path d="M 209.556966 193.688
+L 440.38348 193.688
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #2c6385; stroke-opacity: 0.5; stroke-width: 1.2"/>
+   </g>
+   <g id="small-stratum-JP225X-2023">
+    <g clip-path="url(#p286ed918b2)">
+     <use xlink:href="#mba4905133e" x="209.556966" y="193.688" style="fill: #2c6385; stroke: #2c6385"/>
+    </g>
+   </g>
+   <g id="LineCollection_5">
+    <path d="M 285.580292 216.408
+L 440.38348 216.408
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #a96235; stroke-opacity: 0.5; stroke-width: 1.2"/>
+   </g>
+   <g id="small-stratum-USDCAD2-2020">
+    <defs>
+     <path id="m8065886dbc" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #a96235"/>
+    </defs>
+    <g clip-path="url(#p286ed918b2)">
+     <use xlink:href="#m8065886dbc" x="285.580292" y="216.408" style="fill: #a96235; stroke: #a96235"/>
+    </g>
+   </g>
+   <g id="LineCollection_6">
+    <path d="M 191.948823 239.128
+L 440.38348 239.128
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #a96235; stroke-opacity: 0.5; stroke-width: 1.2"/>
+   </g>
+   <g id="small-stratum-USDCAD2-2021">
+    <g clip-path="url(#p286ed918b2)">
+     <use xlink:href="#m8065886dbc" x="191.948823" y="239.128" style="fill: #a96235; stroke: #a96235"/>
+    </g>
+   </g>
+   <g id="LineCollection_7">
+    <path d="M 283.638094 261.848
+L 440.38348 261.848
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #a96235; stroke-opacity: 0.5; stroke-width: 1.2"/>
+   </g>
+   <g id="small-stratum-USDCAD2-2022">
+    <g clip-path="url(#p286ed918b2)">
+     <use xlink:href="#m8065886dbc" x="283.638094" y="261.848" style="fill: #a96235; stroke: #a96235"/>
+    </g>
+   </g>
+   <g id="LineCollection_8">
+    <path d="M 227.613036 284.568
+L 440.38348 284.568
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #a96235; stroke-opacity: 0.5; stroke-width: 1.2"/>
+   </g>
+   <g id="small-stratum-USDCAD2-2023">
+    <g clip-path="url(#p286ed918b2)">
+     <use xlink:href="#m8065886dbc" x="227.613036" y="284.568" style="fill: #a96235; stroke: #a96235"/>
+    </g>
+   </g>
+   <g id="LineCollection_9">
+    <path d="M 440.38348 307.288
+L 446.310146 307.288
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #71816b; stroke-opacity: 0.5; stroke-width: 1.2"/>
+   </g>
+   <g id="small-stratum-DE30X-2020">
+    <defs>
+     <path id="m07deee2559" d="M 0 3
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132
+C 2.683901 1.55874 3 0.795609 3 0
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132
+C 1.55874 -2.683901 0.795609 -3 0 -3
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132
+C -2.683901 -1.55874 -3 -0.795609 -3 0
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132
+C -1.55874 2.683901 -0.795609 3 0 3
+z
+" style="stroke: #71816b"/>
+    </defs>
+    <g clip-path="url(#p286ed918b2)">
+     <use xlink:href="#m07deee2559" x="446.310146" y="307.288" style="fill: #71816b; stroke: #71816b"/>
+    </g>
+   </g>
+   <g id="LineCollection_10">
+    <path d="M 402.397974 330.008
+L 440.38348 330.008
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #71816b; stroke-opacity: 0.5; stroke-width: 1.2"/>
+   </g>
+   <g id="small-stratum-DE30X-2021">
+    <g clip-path="url(#p286ed918b2)">
+     <use xlink:href="#m07deee2559" x="402.397974" y="330.008" style="fill: #71816b; stroke: #71816b"/>
+    </g>
+   </g>
+   <g id="LineCollection_11">
+    <path d="M 440.38348 352.728
+L 452.477675 352.728
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #71816b; stroke-opacity: 0.5; stroke-width: 1.2"/>
+   </g>
+   <g id="small-stratum-DE30X-2022">
+    <g clip-path="url(#p286ed918b2)">
+     <use xlink:href="#m07deee2559" x="452.477675" y="352.728" style="fill: #71816b; stroke: #71816b"/>
+    </g>
+   </g>
+   <g id="LineCollection_12">
+    <path d="M 440.38348 375.448
+L 458.315461 375.448
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #71816b; stroke-opacity: 0.5; stroke-width: 1.2"/>
+   </g>
+   <g id="small-stratum-DE30X-2023">
+    <g clip-path="url(#p286ed918b2)">
+     <use xlink:href="#m07deee2559" x="458.315461" y="375.448" style="fill: #71816b; stroke: #71816b"/>
+    </g>
+   </g>
+   <g id="line2d_21">
+    <path d="M 144.72 205.048
+L 497.60867 205.048
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #e6ebef; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_22">
+    <path d="M 144.72 295.928
+L 497.60867 295.928
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke: #e6ebef; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_23">
+    <path d="M 440.38348 393.624
+L 440.38348 107.352
+" clip-path="url(#p286ed918b2)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #657684"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 144.72 393.624
+L 144.72 107.352
+" style="fill: none; stroke: #b5c2c9; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 144.72 393.624
+L 497.60867 393.624
+" style="fill: none; stroke: #b5c2c9; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #213442" x="267.557501" y="128.011437" transform="rotate(-0 267.557501 128.011437)">-0.348</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #213442" x="226.86813" y="150.731437" transform="rotate(-0 226.86813 150.731437)">-0.434</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #213442" x="257.020291" y="173.451437" transform="rotate(-0 257.020291 173.451437)">-0.371</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #213442" x="202.880694" y="196.171437" transform="rotate(-0 202.880694 196.171437)">-0.484</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #213442" x="278.90402" y="218.891437" transform="rotate(-0 278.90402 218.891437)">-0.325</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #213442" x="185.272551" y="241.611437" transform="rotate(-0 185.272551 241.611437)">-0.521</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #213442" x="276.961822" y="264.331437" transform="rotate(-0 276.961822 264.331437)">-0.329</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #213442" x="220.936764" y="287.051438" transform="rotate(-0 220.936764 287.051438)">-0.446</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="452.986418" y="309.771437" transform="rotate(-0 452.986418 309.771437)">+0.012</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #213442" x="395.721702" y="332.491437" transform="rotate(-0 395.721702 332.491437)">-0.080</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="459.153947" y="355.211437" transform="rotate(-0 459.153947 355.211437)">+0.025</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="464.991733" y="377.931438" transform="rotate(-0 464.991733 377.931438)">+0.038</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="144.72" y="92.352" transform="rotate(-0 144.72 92.352)">Twelve observed symbol-year contrasts</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 605.400118 393.624
+L 926.208 393.624
+L 926.208 107.352
+L 605.400118 107.352
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_5">
+     <g id="line2d_24">
+      <path d="M 614.070602 393.624
+L 614.070602 107.352
+" clip-path="url(#pdce6d17785)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_25">
+      <g>
+       <use xlink:href="#mb54675a69a" x="614.070602" y="393.624" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_31">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657684" x="614.070602" y="408.222438" transform="rotate(-0 614.070602 408.222438)">-0.6</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_26">
+      <path d="M 700.775434 393.624
+L 700.775434 107.352
+" clip-path="url(#pdce6d17785)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_27">
+      <g>
+       <use xlink:href="#mb54675a69a" x="700.775434" y="393.624" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_32">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657684" x="700.775434" y="408.222438" transform="rotate(-0 700.775434 408.222438)">-0.4</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_28">
+      <path d="M 787.480267 393.624
+L 787.480267 107.352
+" clip-path="url(#pdce6d17785)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_29">
+      <g>
+       <use xlink:href="#mb54675a69a" x="787.480267" y="393.624" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_33">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657684" x="787.480267" y="408.222438" transform="rotate(-0 787.480267 408.222438)">-0.2</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_30">
+      <path d="M 874.1851 393.624
+L 874.1851 107.352
+" clip-path="url(#pdce6d17785)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_31">
+      <g>
+       <use xlink:href="#mb54675a69a" x="874.1851" y="393.624" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_34">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #657684" x="874.1851" y="408.222438" transform="rotate(-0 874.1851 408.222438)">0.0</text>
+     </g>
+    </g>
+    <g id="text_35">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="765.804059" y="421.900562" transform="rotate(-0 765.804059 421.900562)">Smaller − larger relative-range quartile · price R</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4"/>
+   <g id="small-symbol-JP225X">
+    <defs>
+     <path id="m389ba0e13c" d="M 0 3.5
+C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874
+C 3.131218 1.81853 3.5 0.928211 3.5 0
+C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874
+C 1.81853 -3.131218 0.928211 -3.5 0 -3.5
+C -0.928211 -3.5 -1.81853 -3.131218 -2.474874 -2.474874
+C -3.131218 -1.81853 -3.5 -0.928211 -3.5 0
+C -3.5 0.928211 -3.131218 1.81853 -2.474874 2.474874
+C -1.81853 3.131218 -0.928211 3.5 0 3.5
+z
+" style="stroke: #2c6385"/>
+    </defs>
+    <g clip-path="url(#pdce6d17785)">
+     <use xlink:href="#m389ba0e13c" x="696.798233" y="149.167011" style="fill: #2c6385; stroke: #2c6385"/>
+    </g>
+   </g>
+   <g id="small-symbol-USDCAD2">
+    <defs>
+     <path id="m93eada21ce" d="M 0 3.5
+C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874
+C 3.131218 1.81853 3.5 0.928211 3.5 0
+C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874
+C 1.81853 -3.131218 0.928211 -3.5 0 -3.5
+C -0.928211 -3.5 -1.81853 -3.131218 -2.474874 -2.474874
+C -3.131218 -1.81853 -3.5 -0.928211 -3.5 0
+C -3.5 0.928211 -3.131218 1.81853 -2.474874 2.474874
+C -1.81853 3.131218 -0.928211 3.5 0 3.5
+z
+" style="stroke: #a96235"/>
+    </defs>
+    <g clip-path="url(#pdce6d17785)">
+     <use xlink:href="#m93eada21ce" x="698.559265" y="213.497798" style="fill: #a96235; stroke: #a96235"/>
+    </g>
+   </g>
+   <g id="small-symbol-DE30X">
+    <defs>
+     <path id="m0ee6d68ffe" d="M 0 3.5
+C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874
+C 3.131218 1.81853 3.5 0.928211 3.5 0
+C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874
+C 1.81853 -3.131218 0.928211 -3.5 0 -3.5
+C -0.928211 -3.5 -1.81853 -3.131218 -2.474874 -2.474874
+C -3.131218 -1.81853 -3.5 -0.928211 -3.5 0
+C -3.5 0.928211 -3.131218 1.81853 -2.474874 2.474874
+C -1.81853 3.131218 -0.928211 3.5 0 3.5
+z
+" style="stroke: #71816b"/>
+    </defs>
+    <g clip-path="url(#pdce6d17785)">
+     <use xlink:href="#m0ee6d68ffe" x="873.723131" y="277.828584" style="fill: #71816b; stroke: #71816b"/>
+    </g>
+   </g>
+   <g id="small-interval95">
+    <path d="M 730.942208 345.37591
+L 781.934138 345.37591
+" clip-path="url(#pdce6d17785)" style="fill: none; stroke: #213442; stroke-width: 2"/>
+   </g>
+   <g id="LineCollection_13">
+    <path d="M 730.942208 348.914103
+L 730.942208 341.837717
+" clip-path="url(#pdce6d17785)" style="fill: none; stroke: #213442; stroke-width: 1.3"/>
+    <path d="M 781.934138 348.914103
+L 781.934138 341.837717
+" clip-path="url(#pdce6d17785)" style="fill: none; stroke: #213442; stroke-width: 1.3"/>
+   </g>
+   <g id="small-aggregate">
+    <defs>
+     <path id="m6f0f567d5d" d="M 0 -4.949747
+L 4.949747 0
+L 0 4.949747
+L -4.949747 0
+L 0 -4.949747
+" style="stroke: #213442"/>
+    </defs>
+    <g clip-path="url(#pdce6d17785)">
+     <use xlink:href="#m6f0f567d5d" x="756.36021" y="345.37591" style="fill: #213442; stroke: #213442"/>
+    </g>
+   </g>
+   <g id="line2d_32">
+    <path d="M 874.1851 393.624
+L 874.1851 107.352
+" clip-path="url(#pdce6d17785)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #657684"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 605.400118 393.624
+L 605.400118 107.352
+" style="fill: none; stroke: #b5c2c9; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 605.400118 393.624
+L 926.208 393.624
+" style="fill: none; stroke: #b5c2c9; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="696.798233" y="138.874085" transform="rotate(-0 696.798233 138.874085)">JP225X  -0.409R</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657684" x="618.405843" y="162.033169" transform="rotate(-0 618.405843 162.033169)">4/4 negative years · point estimate</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="698.559265" y="203.204872" transform="rotate(-0 698.559265 203.204872)">USDCAD2  -0.405R</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657684" x="618.405843" y="226.363955" transform="rotate(-0 618.405843 226.363955)">4/4 negative years · point estimate</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="873.723131" y="267.535658" transform="rotate(-0 873.723131 267.535658)">DE30X  -0.001R</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657684" x="618.405843" y="290.694742" transform="rotate(-0 618.405843 290.694742)">1/4 negative years · point estimate</text>
+   </g>
+   <g id="text_42">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="756.36021" y="326.076674" transform="rotate(-0 756.36021 326.076674)">Equal-stratum mean  -0.272R</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 9.2px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(665.829335 367.447272)">Post-selection exploratory 95% interval</text>
+    <text style="font-size: 9.2px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(664.590928 379.846428)">[-0.330, -0.213] · not selection-adjusted</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="605.400118" y="92.352" transform="rotate(-0 605.400118 92.352)">The aggregate has an interval; symbol means do not</text>
+   </g>
+  </g>
+  <g id="text_45">
+   <text style="font-weight: 700; font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="62.712" y="33.181538" transform="rotate(-0 62.712 33.181538)">05  |  Smaller candles were associated with worse original outcomes</text>
+  </g>
+  <g id="text_46">
+   <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657684" x="62.712" y="56.542359" transform="rotate(-0 62.712 56.542359)">STAT001 · M15 · 2020–2023 spent Discovery · post-selection exploratory · 28,097 placed / 21,917 fills</text>
+  </g>
+  <g id="text_47">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(62.712 462.065063)">Quartiles rank engulf range / causal ATR among all placed orders within symbol-year; outcomes use fills. The primary estimate weights 12 strata equally.</text>
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(62.712 474.194672)">Post-selection exploratory interval, not selection-adjusted: 20,000 stratified signal-month block-bootstrap replicates. Symbol intervals unavailable.</text>
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(62.712 486.324281)">Observational, price-R evidence; XAU excluded for unresolved history identity. Anti-EBP PARKED; stop intervention and reversal economics unrun. Source B23.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p286ed918b2">
+   <rect x="144.72" y="107.352" width="352.88867" height="286.272"/>
+  </clipPath>
+  <clipPath id="pdce6d17785">
+   <rect x="605.400118" y="107.352" width="320.807882" height="286.272"/>
+  </clipPath>
+ </defs>
+</svg>

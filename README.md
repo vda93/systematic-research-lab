@@ -18,6 +18,10 @@ Inspect the complete USTEC and gold searches, frozen robustness flags, paired pl
 
 Can an engulfing candle support a continuation trade entered on a retracement? A persistent-order interpretation produced only three closed trades; replacement-policy arms produced 1,257 and 1,297. The repaired timeframe study was generally weak. No interpretation was selected as a winner; the separate small-candle association left reverse-trading economics untested. [Study and results](studies/engulfing-and-support.md)
 
+![Original EBP native-timeframe matrix: most configuration means are negative, with trade support retained and all timeframes qualified on their own signal clock](figures/ebp-native-timeframe.svg)
+
+Compare the configuration distribution, order-policy exposure and small-candle observation. A fictional lifecycle shows how an unfilled order can block later signals. [Figure evidence and limits](docs/ebp-visual-evidence.md).
+
 ### ORBINDEX: when a promising discovery failed its later test
 
 I searched **3,456** DE30/JP225/UK100 opening-range configurations across the 24-hour clock, then compared three frozen DE30 portfolios in a shared-order simulation. Discovery looked promising, but **all three lost fixed-lot EUR in the 2024–July 2026 historical OOS scenario before extra commission**. Quote-path forensics helped examine why the result weakened; no portfolio was promoted. [Read the ORBINDEX study](studies/orbindex.md).

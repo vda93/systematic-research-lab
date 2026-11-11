@@ -1196,6 +1196,27 @@
     ],
     "studies/engulfing-and-support.md": [
       {
+        "sha256": "fb8bb545db539d0c3c821e2174663b7ea6215dd5b9c9d986d292ec07bafb8608",
+        "kind": "historical_report",
+        "source_ids": [
+          "B22"
+        ]
+      },
+      {
+        "sha256": "f1b30cf438c535b29cd1cb57640763c6c2b29ab4df7d3903e2757519c260d8dd",
+        "kind": "historical_report",
+        "source_ids": [
+          "B22"
+        ]
+      },
+      {
+        "sha256": "c0b15a9d9a4f7d3bebc5bec355ccde05d7a2baa265e806cf0005b427d74e1a71",
+        "kind": "historical_report",
+        "source_ids": [
+          "B22"
+        ]
+      },
+      {
         "kind": "documentation",
         "sha256": "de02ae2bae2fd211a7892dbe64b0dff491d3c5e99f0559191b2c049ec47598eb",
         "source_ids": [
@@ -1205,6 +1226,20 @@
       {
         "kind": "historical_report",
         "sha256": "4522fd3267c16bfd92fa80edaa08d8cf233f2e3446424cffe4485f75a7ed4ea6",
+        "source_ids": [
+          "B21"
+        ]
+      },
+      {
+        "sha256": "755ead7138f23c641a87f0712889c1c911b12c069098b8377f7886f04347287e",
+        "kind": "historical_report",
+        "source_ids": [
+          "B21"
+        ]
+      },
+      {
+        "sha256": "e9d622d6ff39e436ac328a078016c6f654a53f26770d7974baeff299b4952b84",
+        "kind": "historical_report",
         "source_ids": [
           "B21"
         ]
@@ -1220,8 +1255,15 @@
         ]
       },
       {
+        "sha256": "8a5f8c2f4bb46ced3a80c7976262cc1f3d9a8130dbbc8aa059582d67c4d638dd",
+        "kind": "methods",
+        "source_ids": [
+          "B21"
+        ]
+      },
+      {
         "kind": "historical_report",
-        "sha256": "e21382372b4bab5db53a151f9a44bdfee9aac467d24945fefcac06e2e49c4ccc",
+        "sha256": "4d29561c16893fc47dd005b4302c3e83a0655819252137a4c519f1bc601e3b5b",
         "source_ids": [
           "B21",
           "B22",
@@ -1247,8 +1289,22 @@
         ]
       },
       {
+        "sha256": "96083e0b3c3b76ebcc94c6250666e7ce6fab0e98983f1eb72c96eb0989261f53",
         "kind": "historical_report",
-        "sha256": "05a690861edb7c59031926415b31f6165e5d6a196eb45c487abb1fd81a5430b3",
+        "source_ids": [
+          "B22"
+        ]
+      },
+      {
+        "sha256": "af187a89df0238f80385aca0bfedd78cab7d6a14f2ace0aa0a35228c424f6384",
+        "kind": "historical_report",
+        "source_ids": [
+          "B22"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "5f4d0f237ba3261867b42ad15e0fd1c74a686e8ffe03cca16b3ab898b6fd7488",
         "source_ids": [
           "B21",
           "B22",
@@ -1264,13 +1320,24 @@
         ]
       },
       {
+        "sha256": "9cb5417ca9de2394741c91c59088ee7058eec2ab49976ecae45c44c5fe1bd812",
         "kind": "historical_report",
-        "sha256": "c8ed28c28bcbc0264b703b05f35f38c3534947bce953f5bba52bab0a0cdba1c4",
         "source_ids": [
-          "B21",
-          "B22",
-          "B23",
-          "B24"
+          "B23"
+        ]
+      },
+      {
+        "sha256": "dac57d17a8803b3010c2c98f6ef487f5bd759dbd5132329af7679685fe363df8",
+        "kind": "historical_report",
+        "source_ids": [
+          "B23"
+        ]
+      },
+      {
+        "sha256": "76a0035825ca7623f3e10555b31b62abeae6c6cd8b471b0f046cf76c3b10dc1a",
+        "kind": "historical_report",
+        "source_ids": [
+          "B23"
         ]
       },
       {
@@ -2750,6 +2817,95 @@
         "kind": "documentation",
         "source_ids": []
       }
+    ],
+    "docs/ebp-visual-evidence.md": [
+      {
+        "sha256": "37d032076a8a4932eedc602a0ebb60e5560036fa9eeb0e323ab851f5df5dc275",
+        "kind": "historical_report",
+        "source_ids": [
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "39b24658387138e7a8a9822996e2a3ef8840fee2c0b854d53a0c4564fcd9e3b1",
+        "kind": "methods",
+        "source_ids": [
+          "B21"
+        ]
+      },
+      {
+        "sha256": "0f1d92be64f2164331a23167d988d6b5a73894ca1fb1387853717960c8dfd0c1",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "232086204b54fb6b3fbc1cdcbef4bc7afc13e836d5fe46987e78b2b5fea48bce",
+        "kind": "historical_report",
+        "source_ids": [
+          "B21",
+          "B22",
+          "B23"
+        ]
+      },
+      {
+        "sha256": "6f1487fe387b8dacc4fc528c3d089d4d276e822a1c6d8b7eb9cc06a083b57c1e",
+        "kind": "historical_report",
+        "source_ids": [
+          "B22"
+        ]
+      },
+      {
+        "sha256": "325cd4c29efa872e7f37c8d46fcd05dd1c2fd2fcb5c83ff759b501ca50276f2f",
+        "kind": "historical_report",
+        "source_ids": [
+          "B22"
+        ]
+      },
+      {
+        "sha256": "480ecd066a9eb8d54c24ae698b13d8899620b24f50f9190413bcdee22ba6b0a9",
+        "kind": "historical_report",
+        "source_ids": [
+          "B21"
+        ]
+      },
+      {
+        "sha256": "b0236e260abb27f6a921d3a930f64335b90beb7b0e09eeaaaeb98380a5c26923",
+        "kind": "methods",
+        "source_ids": [
+          "B21"
+        ]
+      },
+      {
+        "sha256": "0574f6325b769bb463538db386b069abe75ec14c61d8e530fa1080f98cb17b64",
+        "kind": "historical_report",
+        "source_ids": [
+          "B23"
+        ]
+      },
+      {
+        "sha256": "64f2640ad1a49884713b0fae98fd3a4bdaf92e379d43bb9eada7e8d1c36063a7",
+        "kind": "historical_report",
+        "source_ids": [
+          "B23"
+        ]
+      },
+      {
+        "sha256": "704ef7bced067e4ba76e8780d9d2dab68abd70e04e5428691effcb7b62f29bb2",
+        "kind": "documentation",
+        "source_ids": [
+          "B21",
+          "B22",
+          "B23",
+          "B24"
+        ]
+      },
+      {
+        "sha256": "f4f416cb1f1f3fc430326e0dc1bbcabaddda953df410481234c62a49317ecc79",
+        "kind": "documentation",
+        "source_ids": []
+      }
     ]
   },
   "figures": [
@@ -2959,6 +3115,61 @@
       "source_ids": [
         "O2"
       ]
+    },
+    {
+      "path": "figures/ebp-native-timeframe.svg",
+      "renderer": "scripts/render_ebp.py",
+      "inputs": {
+        "data/ebp-public.json": "adc951bd57462ca3841be87765b4547151e2cb49350c37b4e99f6485c37f84c7"
+      },
+      "source_ids": [
+        "B22"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/ebp-cell-distribution.svg",
+      "renderer": "scripts/render_ebp.py",
+      "inputs": {
+        "data/ebp-public.json": "adc951bd57462ca3841be87765b4547151e2cb49350c37b4e99f6485c37f84c7"
+      },
+      "source_ids": [
+        "B22"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/ebp-order-policy.svg",
+      "renderer": "scripts/render_ebp.py",
+      "inputs": {
+        "data/ebp-public.json": "adc951bd57462ca3841be87765b4547151e2cb49350c37b4e99f6485c37f84c7"
+      },
+      "source_ids": [
+        "B21"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/ebp-small-candle.svg",
+      "renderer": "scripts/render_ebp.py",
+      "inputs": {
+        "data/ebp-public.json": "adc951bd57462ca3841be87765b4547151e2cb49350c37b4e99f6485c37f84c7"
+      },
+      "source_ids": [
+        "B23"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/ebp-pending-lifecycle.svg",
+      "renderer": "scripts/render_ebp.py",
+      "inputs": {
+        "data/ebp-public.json": "adc951bd57462ca3841be87765b4547151e2cb49350c37b4e99f6485c37f84c7"
+      },
+      "source_ids": [
+        "B21"
+      ],
+      "scope": "CONCEPTUAL_SCHEMATIC"
     }
   ],
   "reviewed_on": "2026-11-04",
