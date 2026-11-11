@@ -3,6 +3,7 @@ import copy
 import json
 from pathlib import Path
 import unittest
+import xml.etree.ElementTree as ET
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,6 +36,22 @@ class ORBFigureTests(unittest.TestCase):
                        lambda d:d.update(scope='PUBLIC_REPLAY')]:
             d=copy.deepcopy(self.u); mutate(d)
             with self.assertRaises(ValueError): orb_artifacts(d,self.g)
+
+    def test_oos_curve_and_reported_total_must_reconcile(self):
+        from scripts.render_orb import orb_artifacts
+        d=copy.deepcopy(self.u);d['oos'][0]['total_r']=25
+        with self.assertRaisesRegex(ValueError,'OOS'): orb_artifacts(d,self.g)
+
+    def test_annotations_follow_changed_source_counts_and_diagnostics(self):
+        from scripts.render_orb import orb_artifacts
+        d=copy.deepcopy(self.u)
+        row=next(r for r in d['cells'] if r[8] and not r[9])
+        row[8]=False
+        d['census']['robust_cells']-=1
+        d['concentration']['maximum']['total_r']=99
+        rendered=orb_artifacts(d,self.g)
+        self.assertTrue(b'Robust outside plateau (3)' in rendered['figures/orb-ustec-qualification.svg'])
+        self.assertTrue(b'+99.00R' in rendered['figures/orb-ustec-selection.svg'])
 
     def test_source_projections_keep_cost_roles_and_oos_separate(self):
         self.assertAlmostEqual(self.u['oos'][0]['total_r'],26.412958684602135)
@@ -79,7 +96,7 @@ class ORBFigureTests(unittest.TestCase):
             'ustec-surface':('u',lambda d:d['cells'][0].__setitem__(6,.234)),
             'ustec-selection':('u',lambda d:d['concentration']['maximum'].update(total_r=99)),
             'ustec-controls':('u',lambda d:d['placebo_comparisons'][0].update(delta_mean_r=.2)),
-            'ustec-validation':('u',lambda d:d['oos'][0].update(total_r=25)),
+            'ustec-validation':('u',lambda d:(d['oos'][0].update(total_r=25),d['oos'][0]['exit_month_cumulative_r'][-1].__setitem__(1,25))),
             'gold-surface':('g',lambda d:d['cells'][0].__setitem__(7,.234)),
             'gold-stress':('g',lambda d:d['stress'][0].update(mean_r=.3)),
             'gold-economics':('g',lambda d:d['monetary']['rows'][0].update(gross_pnl=999)),
@@ -99,6 +116,10 @@ class ORBFigureTests(unittest.TestCase):
             with self.subTest(name=name):
                 self.assertLess(len(blob),600000)
                 self.assertNotIn(b'<image',blob)
+                svg=ET.fromstring(blob)
+                self.assertEqual(svg.attrib.get('role'),'img')
+                self.assertIsNotNone(svg.find('{http://www.w3.org/2000/svg}title'))
+                self.assertIsNotNone(svg.find('{http://www.w3.org/2000/svg}desc'))
                 self.assertEqual((ROOT/name).read_bytes(),blob)
 
     def test_all_visible_labels_fit_canvas(self):

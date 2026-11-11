@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="964.8pt" height="612pt" viewBox="0 0 964.8 612" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <title>ORB USTEC  |  The complete timing search</title>
+<svg role="img" aria-labelledby="figure-title figure-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="964.8pt" height="612pt" viewBox="0 0 964.8 612" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title id="figure-title">ORB USTEC  |  The complete timing search</title>
+ <desc id="figure-desc">USTEC2 Discovery: 29 Jan 2020–30 Nov 2024 signals; December 2024 burnoff; 2020 partial. All 1,728 cells shown; none missing/invalid.
+Executable Bid/Ask price R, not commission/financing-adjusted money. Correlated configurations; 140 positive cells are not independent confirmations.</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>

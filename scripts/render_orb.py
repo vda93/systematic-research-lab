@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+from html import escape
 import json
 import math
 from pathlib import Path
@@ -13,12 +14,21 @@ from matplotlib.colors import ListedColormap, TwoSlopeNorm
 from matplotlib.patches import Patch
 import numpy as np
 
-from scripts.render_orbindex import _figure, _finish, _ax_style, BLUE, GOLD, TEAL, RED, INK, MUTED
+from scripts.render_orbindex import _figure, _finish as _precedent_finish, _ax_style, BLUE, GOLD, TEAL, RED, INK, MUTED
 
 ROOT = Path(__file__).resolve().parents[1]
 SCOPE = 'EMPIRICAL_REPORTED_PRIVATE_BACKTEST_NOT_PUBLICLY_REPLAYABLE'
 DIRECTIONS = ['BOTH', 'LONG_ONLY', 'SHORT_ONLY']
 DURATIONS = [5, 10, 15, 30, 45, 60]
+
+
+def _finish(fig,title,note,**kwargs):
+    """Add standalone accessibility without changing any ORBINDEX output."""
+    svg=_precedent_finish(fig,title,note,**kwargs).decode('utf-8')
+    svg=svg.replace('<svg ','<svg role="img" aria-labelledby="figure-title figure-desc" ',1)
+    svg=svg.replace('<title>','<title id="figure-title">',1)
+    svg=svg.replace('</title>','</title>\n <desc id="figure-desc">'+escape(note)+'</desc>',1)
+    return svg.encode('utf-8')
 
 
 def _rows(data):
@@ -44,6 +54,16 @@ def validate(ustec, gold):
                     raise ValueError('nonfinite result')
             if r.get('scientific_classification') == 'SCIENTIFIC_INVALID' and r['mean_r'] is not None:
                 raise ValueError('invalid cells cannot have scored means')
+    if [r['block'] for r in ustec['oos']] != ['A','B']:
+        raise ValueError('OOS blocks must remain distinct and ordered')
+    for block in ustec['oos']:
+        curve=block['exit_month_cumulative_r']
+        if (not curve or not math.isfinite(block['total_r'])
+                or not all(math.isfinite(r[1]) and isinstance(r[2],int) and r[2]>0 for r in curve)
+                or not math.isclose(curve[-1][1],block['total_r'],abs_tol=1e-9)
+                or sum(r[2] for r in curve)!=block['trades']
+                or [r[0] for r in curve]!=sorted(set(r[0] for r in curve))):
+            raise ValueError('OOS month curve, total, counts and chronology must reconcile')
 
 
 def grid_values(data, direction, field='mean_r'):
@@ -97,8 +117,14 @@ def _heat(data, title, gold=False, qualification=False):
                             markerfacecolor='white',markeredgecolor=INK,ms=11,ls='')
     axes[-1].set_xlabel('Opening-range start · '+('UTC' if gold else 'America/New_York local clock'),color=INK)
     if qualification:
+        counts=[sum(r['total_r']<=0 for r in rows),
+                sum(r['total_r']>0 and not r['robust'] for r in rows),
+                sum(r['robust'] and not r['selected_region'] for r in rows),
+                sum(r['selected_region'] for r in rows)]
+        labels=[f'Nonpositive ({counts[0]:,})',f'Positive, not robust ({counts[1]})',
+                f'Robust outside plateau ({counts[2]})',f'Selected plateau ({counts[3]})']
         handles=[Patch(facecolor=c,label=l) for c,l in zip(cmap.colors,
-                 ['Nonpositive (1,588)','Positive, not robust (118)','Robust outside plateau (4)','Selected plateau (18)'])]
+                 labels)]
         fig.legend(handles=handles,loc='center',bbox_to_anchor=(.52,.145),ncol=2,frameon=False,fontsize=9)
         note=('USTEC2 Discovery: 29 Jan 2020–30 Nov 2024 signals; December 2024 burnoff. Star = frozen 10:15 / OR60 LONG medoid.\n'
               'Frozen flags copied from selection records. Neighbouring cells share history and trades; qualification is not independent validation.')
@@ -109,11 +135,15 @@ def _heat(data, title, gold=False, qualification=False):
         bar.set_label('Mean price-space R per trade · colour clipped to [−0.60, +0.25]',fontsize=9,color=INK)
         bar.ax.tick_params(labelsize=8)
         if gold:
-            note=('XAUUSD2 Discovery: 2019–30 Nov 2023 signal sessions; December burnoff. All 1,728 cells shown: 1,726 valid, 2 invalid.\n'
-                  'Grey × = scientific invalid; grey dot = 30 valid zero-trade cells with undefined means. 17 positive cells. No interpolation or monetary alpha claim.')
+            invalid=sum(r['scientific_classification']=='SCIENTIFIC_INVALID' for r in rows)
+            empty=sum(r['scientific_classification']=='VALID_COMPLETE' and r['trade_count']==0 for r in rows)
+            positive=sum(r['total_r'] is not None and r['total_r']>0 for r in rows)
+            note=(f'XAUUSD2 Discovery: 2019–30 Nov 2023 signal sessions; December burnoff. All {len(rows):,} cells shown: {len(rows)-invalid:,} valid, {invalid} invalid.\n'
+                  f'Grey × = scientific invalid; grey dot = {empty} valid zero-trade cells with undefined means. {positive} positive cells. No interpolation or monetary alpha claim.')
         else:
-            note=('USTEC2 Discovery: 29 Jan 2020–30 Nov 2024 signals; December 2024 burnoff; 2020 partial. All 1,728 cells shown; none missing/invalid.\n'
-                  'Executable Bid/Ask price R, not commission/financing-adjusted money. Correlated configurations; 140 positive cells are not independent confirmations.')
+            positive=sum(r['total_r']>0 for r in rows)
+            note=(f'USTEC2 Discovery: 29 Jan 2020–30 Nov 2024 signals; December 2024 burnoff; 2020 partial. All {len(rows):,} cells shown; none missing/invalid.\n'
+                  f'Executable Bid/Ask price R, not commission/financing-adjusted money. Correlated configurations; {positive} positive cells are not independent confirmations.')
     return _finish(fig,title,note,layout=dict(left=.075,right=.97,bottom=.25,top=.86,hspace=.62))
 
 
@@ -131,8 +161,9 @@ def _selection(u):
     years=u['medoid_years'];b.bar([str(r['year'])+('*' if r['year']==2020 else '') for r in years],
                                 [r['total_r'] for r in years],color=[BLUE if r['total_r']>0 else RED for r in years])
     b.axhline(0,color=INK,lw=1);_ax_style(b,ylabel='Medoid total price-space R by source year')
+    mx=u['concentration']['maximum']
     note=('USTEC2 spent Discovery, 2020* partial–2024; last eligible signal session 30 Nov 2024. No trades removed from authoritative evidence.\n'
-          'The maximum contains one +163.65R trade; removing its largest |R| observation changes +120.37R to −43.28R. Medoid selection used regional distance.')
+          f"The maximum contains one {mx['largest_positive_r']:+.2f}R trade; removing its largest |R| observation changes {mx['total_r']:+.2f}R to {mx['total_r_excluding_largest_absolute_r_trade']:+.2f}R. Medoid selection used regional distance.")
     return _finish(fig,'ORB  |  A sharp maximum and a representative answer different questions',note)
 
 
@@ -200,9 +231,10 @@ def _economics(g):
     b.axhline(1,color=INK,lw=1,ls='--');b.set_ylim(0,1.2)
     for i,r in enumerate(terminal): b.text(i,r['pf_money']+.035,f"PF {r['pf_money']:.2f}\n{r['trades']} trades",ha='center',color=INK,fontsize=10)
     b.set_title('Spent 2026 terminal holdout',loc='left',fontsize=11,color=INK);_ax_style(b,ylabel='Monetary profit factor (rounded to 2 decimals)',xlabel='Separate frozen gold candidates')
-    note=('Left: A/C monetary-parity rows, 2019–Nov 2023 Discovery and 2024–Nov 2025 validation; December burnoff. Source position sizes, 1,376 rows;\n'
-          'six synthetic scientific exits, zero unexplained mismatches. Commission/fees are zero here; deductions are recorded swap. Not a combined portfolio.\n'
-          '0/22 frozen deployment policies feasible. Right: Jan–Jun 2026 eligible signals, July burnoff; A negative, C approximately flat. Parity is not profitability.')
+    money=g['monetary'];synthetic=sum(r['synthetic_exits'] for r in money['rows'])
+    note=(f"Left: A/C monetary-parity rows, 2019–Nov 2023 Discovery and 2024–Nov 2025 validation; December burnoff. Source position sizes, {money['reconciled_trades']:,} rows;\n"
+          f"{synthetic} synthetic scientific exits, {money['mismatches']} unexplained mismatches. Commission/fees are zero here; deductions are recorded swap. Not a combined portfolio.\n"
+          f"{money['feasible']}/{money['tested']} frozen deployment policies feasible. Right: Jan–Jun 2026 eligible signals, July burnoff; A negative, C approximately flat. Parity is not profitability.")
     return _finish(fig,'ORB Gold  |  Accounting passed; economic qualification did not',note)
 
 

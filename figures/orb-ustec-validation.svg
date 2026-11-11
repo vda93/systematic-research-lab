@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="921.6pt" height="446.4pt" viewBox="0 0 921.6 446.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <title>ORB  |  First confirmation did not survive a separate second block</title>
+<svg role="img" aria-labelledby="figure-title figure-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="921.6pt" height="446.4pt" viewBox="0 0 921.6 446.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title id="figure-title">ORB  |  First confirmation did not survive a separate second block</title>
+ <desc id="figure-desc">Frozen USTEC2 medoid; independently spent blocks. OOS-A: 2025 signals, Jan 2026 burnoff. OOS-B: Feb–Jun 2026 signals, Jul burnoff.
+Month-end aggregates from verified original exit timestamps and returns; no mark-to-market equity or within-month path is implied.
+Separate horizontal scales reflect different horizons. The second block failed its standalone primary and region gates; no pooled rescue.</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>

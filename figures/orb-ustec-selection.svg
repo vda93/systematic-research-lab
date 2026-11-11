@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="921.6pt" height="417.6pt" viewBox="0 0 921.6 417.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <title>ORB  |  A sharp maximum and a representative answer different questions</title>
+<svg role="img" aria-labelledby="figure-title figure-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="921.6pt" height="417.6pt" viewBox="0 0 921.6 417.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title id="figure-title">ORB  |  A sharp maximum and a representative answer different questions</title>
+ <desc id="figure-desc">USTEC2 spent Discovery, 2020* partial–2024; last eligible signal session 30 Nov 2024. No trades removed from authoritative evidence.
+The maximum contains one +163.65R trade; removing its largest |R| observation changes +120.37R to -43.28R. Medoid selection used regional distance.</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
     <dc:title>ORB  |  A sharp maximum and a representative answer different questions</dc:title>
     <dc:description>USTEC2 spent Discovery, 2020* partial–2024; last eligible signal session 30 Nov 2024. No trades removed from authoritative evidence.
-The maximum contains one +163.65R trade; removing its largest |R| observation changes +120.37R to −43.28R. Medoid selection used regional distance.</dc:description>
+The maximum contains one +163.65R trade; removing its largest |R| observation changes +120.37R to -43.28R. Medoid selection used regional distance.</dc:description>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -509,7 +511,7 @@ L 884.736 331.992
   </g>
   <g id="text_30">
    <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(59.904 389.138299)">USTEC2 spent Discovery, 2020* partial–2024; last eligible signal session 30 Nov 2024. No trades removed from authoritative evidence.</text>
-   <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(59.904 400.456638)">The maximum contains one +163.65R trade; removing its largest |R| observation changes +120.37R to −43.28R. Medoid selection used regional distance.</text>
+   <text style="font-size: 8.6px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(59.904 400.456638)">The maximum contains one +163.65R trade; removing its largest |R| observation changes +120.37R to -43.28R. Medoid selection used regional distance.</text>
   </g>
  </g>
  <defs>

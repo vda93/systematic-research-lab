@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="921.6pt" height="489.6pt" viewBox="0 0 921.6 489.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <title>ORB  |  Exact opening-range geometry did not pass its control test</title>
+<svg role="img" aria-labelledby="figure-title figure-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="921.6pt" height="489.6pt" viewBox="0 0 921.6 489.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title id="figure-title">ORB  |  Exact opening-range geometry did not pass its control test</title>
+ <desc id="figure-desc">USTEC2 posthoc Discovery mechanism study: frozen 18-cell LONG region, Jan 2020–Nov 2024 signals; December burnoff; 2020 partial.
+Same-width alternative range boundaries. Both comparisons required positive median differences and ≥12/18 favourable cells. Specificity failed.
+Each dot is a correlated configuration-level paired difference, not a trade pair or independent replication. Dashed gold = median; no invented intervals.</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>

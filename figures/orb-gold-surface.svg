@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="964.8pt" height="612pt" viewBox="0 0 964.8 612" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <title>ORB Gold  |  A separate discovery surface</title>
+<svg role="img" aria-labelledby="figure-title figure-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="964.8pt" height="612pt" viewBox="0 0 964.8 612" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title id="figure-title">ORB Gold  |  A separate discovery surface</title>
+ <desc id="figure-desc">XAUUSD2 Discovery: 2019–30 Nov 2023 signal sessions; December burnoff. All 1,728 cells shown: 1,726 valid, 2 invalid.
+Grey × = scientific invalid; grey dot = 30 valid zero-trade cells with undefined means. 17 positive cells. No interpolation or monetary alpha claim.</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>

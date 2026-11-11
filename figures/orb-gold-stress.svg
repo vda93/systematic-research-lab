@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="921.6pt" height="432pt" viewBox="0 0 921.6 432" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <title>ORB Gold  |  Execution robustness remained conditional on stress</title>
+<svg role="img" aria-labelledby="figure-title figure-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="921.6pt" height="432pt" viewBox="0 0 921.6 432" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title id="figure-title">ORB Gold  |  Execution robustness remained conditional on stress</title>
+ <desc id="figure-desc">Separate XAUUSD2 Phase 8C lineage; December of each segment is burnoff. Mild: 100 ms +0.01R; CORE: 250 ms +0.025R; Severe: 500 ms +0.05R.
+Normalized shocks, not measured live slippage. A/C passed full CORE gates in each segment; B failed Discovery. All severe Discovery means ≤0.
+Scenario categories are connected to aid comparison; they are neither a time series nor one continuous cost model. No money-parity inference.</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>

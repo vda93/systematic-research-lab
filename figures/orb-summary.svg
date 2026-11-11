@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="417.6pt" height="561.6pt" viewBox="0 0 417.6 561.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
- <title>ORB  |  Why the programs stopped</title>
+<svg role="img" aria-labelledby="figure-title figure-desc" xmlns:xlink="http://www.w3.org/1999/xlink" width="417.6pt" height="561.6pt" viewBox="0 0 417.6 561.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title id="figure-title">ORB  |  Why the programs stopped</title>
+ <desc id="figure-desc">Reported historical evidence; private backtests.
+USTEC blocks are separate; burnoff included in outcomes.
+Gold: 2019–Nov 2023 signals, December burnoff.
+Source sizing; synthetic exits included. No deployment.</desc>
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
