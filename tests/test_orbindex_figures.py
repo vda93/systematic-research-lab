@@ -30,6 +30,19 @@ class ORBIndexFigureTests(unittest.TestCase):
         self.assertEqual(d['search']['supported_de30_rectangles_extra_005r'],0)
         self.assertTrue(all(d['portfolio'][k]['oos']['eur'] < 0 for k in 'ABC'))
 
+    def test_checked_in_figures_match_exact_rendered_bytes(self):
+        from difflib import unified_diff
+
+        for name, rendered in orbindex_artifacts(self.data).items():
+            with self.subTest(figure=name):
+                expected = (ROOT / name).read_bytes()
+                if expected != rendered:
+                    diff = unified_diff(expected.decode().splitlines(),
+                                        rendered.decode().splitlines(),
+                                        fromfile='checked-in', tofile='rendered', n=2)
+                    excerpt = '\n'.join(line[:240] for line in list(diff)[:35])
+                    self.fail(f'Exact SVG reproduction mismatch: {name}\n{excerpt}')
+
     def test_all_five_svg_assets_are_source_linked_and_valid(self):
         assets=orbindex_artifacts(self.data)
         self.assertEqual(len(assets),5)
