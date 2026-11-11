@@ -1,6 +1,6 @@
 # TradingBotHQ: systematic trading research
 
-I investigate whether familiar trading setups contain information that survives explicit rules, sensible controls and trading costs. This portfolio follows four research programs from chart intuition to empirical decisions, including failed validation and a backtest whose event calendar could no longer support its conclusion.
+I investigate whether familiar trading setups survive explicit rules, controls and trading costs. These four research programs include failed validation, unresolved mechanisms and a backtest whose event calendar could no longer support its conclusion.
 
 I direct the project's questions and priorities. Implementation, analysis and writing use AI assistance; the [contribution record](docs/ownership.md) separates documented decisions from unverified personal code authorship. The trading patterns have prior sources, retained in the private provenance records.
 
@@ -8,11 +8,15 @@ I direct the project's questions and priorities. Implementation, analysis and wr
 
 ### Opening Range Breakout (ORB)
 
-An opening-session range offers a natural boundary for a continuation trade. Does that boundary add information beyond time-of-day momentum? Timing searches, placebo ranges and separate validation blocks found conflicting support: a promising Nasdaq validation was followed by an independent failure. The gold lineage passed implementation checks but failed economic qualification. The tested program closed for deployment; unopened successors remain unadjudicated. [Study and results](studies/opening-range.md) · [Other ORB branches](studies/opening-range-atlas.md)
+Does an opening-range boundary add information beyond time-of-day momentum? Timing searches, placebo ranges and separate validation blocks found conflicting support: a promising Nasdaq validation was followed by an independent failure. The separate gold lineage passed implementation checks but failed economic qualification. The tested program closed for deployment; unopened successors remain unadjudicated. [Study and results](studies/opening-range.md) · [Other ORB branches](studies/opening-range-atlas.md)
+
+![ORB empirical summary: the second USTEC validation block failed, and financing erased separate gold Discovery gains](figures/orb-summary.svg)
+
+Inspect the complete USTEC and gold searches, frozen robustness flags, paired placebo comparisons and financing ledger. [Figure sources and limits](docs/orb-visual-evidence.md).
 
 ### Engulfing Bar Play (EBP)
 
-A candle that engulfs its predecessor suggests a directional move, entered on a retracement. Can that idea survive explicit order rules? A persistent-order interpretation produced only three closed trades; replacement-policy arms produced 1,257 and 1,297. The repaired timeframe study was generally weak. No interpretation was selected as a winner; the separate small-candle association left reverse-trading economics untested. [Study and results](studies/engulfing-and-support.md)
+Can an engulfing candle support a continuation trade entered on a retracement? A persistent-order interpretation produced only three closed trades; replacement-policy arms produced 1,257 and 1,297. The repaired timeframe study was generally weak. No interpretation was selected as a winner; the separate small-candle association left reverse-trading economics untested. [Study and results](studies/engulfing-and-support.md)
 
 ### ORBINDEX: when a promising discovery failed its later test
 
@@ -22,7 +26,7 @@ I searched **3,456** DE30/JP225/UK100 opening-range configurations across the 24
 
 ### MacroImpulse: news-driven event trading
 
-Scheduled economic releases can generate sharp price impulses, wider spreads and difficult fills. Execution comparisons and filter studies asked whether the full trade process could benefit. Several plausible filters failed; later calendar forensics found missing medium-impact coverage, invalidating a clean strategy verdict. The program remains shelved pending a qualified event universe and execution economics. [Study and results](studies/news-research.md) · [Calendar forensic case](studies/data-forensics.md)
+Scheduled economic releases can generate sharp price impulses, wider spreads and difficult fills. Several proposed execution filters failed their tests. Later calendar forensics found missing medium-impact coverage, invalidating a clean strategy verdict. The program remains shelved pending a qualified event universe and execution economics. [Study and results](studies/news-research.md) · [Calendar forensic case](studies/data-forensics.md)
 
 The [NOWICK research](studies/nowick.md) remains available as a historical, non-featured archive. Its negative findings and original authorship limitations have not been deleted.
 
@@ -30,7 +34,7 @@ The [NOWICK research](studies/nowick.md) remains available as a historical, non-
 
 Hypothesis → Rules → Implementation → Controls → Validation → Decision
 
-A chart idea needs an observable signal, order lifetime, stop, target and cost model before it can be tested. Comparisons then challenge the proposed mechanism: ORB uses placebo boundaries; ORBINDEX adds clock-surface robustness, synchronized order ownership and a spent later-period test. The archived NOWICK work uses matched ordinary candles. Discovery and validation retain separate roles, and a failed frozen gate remains a reason to stop. [Empirical methods](docs/empirical-methods.md)
+Before testing a chart idea, specify its signal, order lifetime, stop, target and costs. Then challenge the proposed mechanism: ORB uses placebo boundaries; ORBINDEX adds clock-surface robustness, synchronized order ownership and a spent later-period test. The archived NOWICK work uses matched ordinary candles. Discovery and validation retain separate roles, and a failed frozen gate remains a reason to stop. [Empirical methods](docs/empirical-methods.md)
 
 ## Technical implementation
 

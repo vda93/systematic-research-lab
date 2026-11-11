@@ -7,7 +7,7 @@
         "source_ids": [
           "B21"
         ],
-        "sha256": "daea388eb1bcbce8cddf7b874ae39e2c7e8e3b92033caad356d8673d4f271e28"
+        "sha256": "44dd1c5c99f518c12b32d3c852abb6e76b82fc2b588452d6dee3f463999a02a4"
       },
       {
         "sha256": "2e65f7393718a743189baa98321e8a03d244f3ce57810f754656afc3ff36a8ff",
@@ -90,6 +90,13 @@
         "kind": "documentation",
         "sha256": "066ace81aeb01e9ed07c38a7c617043704f1ac7cac19a1f97af1abb1b59fcf36",
         "source_ids": []
+      },
+      {
+        "sha256": "5714d9cbc46dd4cb7ff8464632508f06be23afbdaf10ca9615500817b2d4e763",
+        "kind": "historical_report",
+        "source_ids": [
+          "O4"
+        ]
       },
       {
         "kind": "documentation",
@@ -347,6 +354,18 @@
         "kind": "documentation",
         "sha256": "961c43a437da4e2cf06dd14c8b598ac8a1cc28d526b951cae69eaef9924dcf4d",
         "source_ids": []
+      },
+      {
+        "sha256": "42022d11b01525b8e162dc113629b5de801452e92f53acd92f95fed8bf16a2dd",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "075ddbbf4ebeb7a04cc8d463229d01d2fbaad3278739371a53ed229ef8d1f8ba",
+        "kind": "historical_report",
+        "source_ids": [
+          "OV2"
+        ]
       },
       {
         "kind": "documentation",
@@ -2018,14 +2037,14 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "a2d8f234be619a97678f091a1d3032a83a93c8b7dbc2d5f439ea36d36bdb50ec",
+        "sha256": "a02ce41e4244d48f3565523af6d057b3f119dd0a409d07e8cd35e362091bb32a",
         "source_ids": [
           "O6"
         ]
       },
       {
         "kind": "historical_report",
-        "sha256": "7de875b24a0e140bdef24b2301f1dc6772aef0e642017156a487d879e855a2a7",
+        "sha256": "5ebb94191ac402e1796d361ee634ad56a30c8bea42409e8d056dcd8241a184d7",
         "source_ids": [
           "A04"
         ]
@@ -2059,6 +2078,20 @@
         ]
       },
       {
+        "sha256": "68957c2785c56ee2befdf06bd8b77792b2adc4e77e136f64c1517c41676dbfbd",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
+        "sha256": "5785ce72312878a4fe1c288b159fcc301a98b0e800b8d05f4c69739022df2604",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
         "kind": "historical_report",
         "sha256": "44971683fdcae31792eb867bfbcba6d5bd131c658231ca502037c0c14bc04f22",
         "source_ids": [
@@ -2074,7 +2107,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "aeb64e20df888db4beb3a72d51cebdca806bcad361c47a96465cf58bb810a9f6",
+        "sha256": "bbe0f970bb36d256a33f0db610df1e9ae319d32607b09d3e23f9d1d4b853d2e2",
         "source_ids": [
           "O1"
         ]
@@ -2095,7 +2128,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "8c4c564968a29cef7ea0dc4ce05b12261b6bb19720edfba8127d73db7ba1405b",
+        "sha256": "d28e4ef7708cf1d0776da9027cbfffa4530f121ac685ad76b323336e38a7080b",
         "source_ids": [
           "O1",
           "O2"
@@ -2124,7 +2157,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "da4dfbe215aad400f329f90ee71ce9909c1cf04a25b16ba6fa78ab4f613bd4f7",
+        "sha256": "d66e37f1ae2c6bcd52cb4097f44510ca7ced5815828e82f773a80643601a61b4",
         "source_ids": [
           "A04",
           "O1",
@@ -2148,6 +2181,13 @@
         "sha256": "2a1bf430b5b32ee999987e58c09dcc5b0f48bd4c4ea31e79c18a1eaaa013f054",
         "source_ids": [
           "O2"
+        ]
+      },
+      {
+        "sha256": "28da559a3d70915ac27342b5a20007f1c5e9c81598fb114a05389ed49596a2b3",
+        "kind": "historical_report",
+        "source_ids": [
+          "OV2"
         ]
       },
       {
@@ -2180,14 +2220,22 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "41893bf8eb37d8d018dcb0788780d524893cde64dca5c7d05e5e016587ea4865",
+        "sha256": "695831c57a5421989021aa9f81dc92a5823126af28563788bf7d0788c809e975",
         "source_ids": [
           "O4"
         ]
       },
       {
+        "sha256": "f34d83f7dbe502fe4ae0aeb2cee63fcbfb1b61eaa935341c73afed932dc1b797",
         "kind": "historical_report",
-        "sha256": "0d8a52698f1ef0d50e66ec209bed8514ec548e324dd512558ab96754775e09f7",
+        "source_ids": [
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "kind": "historical_report",
+        "sha256": "08d9e0d23fb3e712d01ceb692dbe60d91df260a0849933f4559955f3ad9aab6a",
         "source_ids": [
           "O4",
           "O6"
@@ -2202,7 +2250,7 @@
       },
       {
         "kind": "historical_report",
-        "sha256": "34ec4010601a1b424348fc73124706b314c2abfd79705239892a282df2345b15",
+        "sha256": "d6a2b834a471d31c3561459bc9b7522177317f0158f6445c779e5f6ce7bb8a7b",
         "source_ids": [
           "OF"
         ]
@@ -2615,6 +2663,93 @@
           "IX4"
         ]
       }
+    ],
+    "docs/orb-visual-evidence.md": [
+      {
+        "sha256": "48c9350a30cf704aaab5d9b0655d6a26661df34231a4eaf025e84ee85b2b9e1d",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2"
+        ]
+      },
+      {
+        "sha256": "1caa092f6901a4d8d502a371b0965b01987f5803a1e31bcc0f1dad5f8aaa395f",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "b40c08d7975c4d5eae36ec342a9732a866e5c948786d757ff5208bb1aa251615",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "OV2"
+        ]
+      },
+      {
+        "sha256": "52654bfe26ba77a69f6a8211da0b0bec13725b8a403285d18a41c43445a220ff",
+        "kind": "historical_report",
+        "source_ids": [
+          "O2"
+        ]
+      },
+      {
+        "sha256": "23259c8e560ee618a563e8b687f4fc7fe2d061af06d4b71e62ab061b2f5d5fb7",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
+        "sha256": "b7b06a780ece6406c85a98d1cfa3417993526cf4c4e2b80e8920e9249f454e9b",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1"
+        ]
+      },
+      {
+        "sha256": "70ecacde073c54b3677ce826251eaffcec5cb521cac8937c5ceca9a188ea6850",
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "OV2"
+        ]
+      },
+      {
+        "sha256": "bc957aa0c72798ea0f49df3b362f88bc25ef0f43a62f4832521e08653db94d05",
+        "kind": "historical_report",
+        "source_ids": [
+          "O4"
+        ]
+      },
+      {
+        "sha256": "4d79730b3262d177d5c8f0e3c3272f37d6b046ae2d5344b3e3c5dae82a16b1fe",
+        "kind": "historical_report",
+        "source_ids": [
+          "O4"
+        ]
+      },
+      {
+        "sha256": "2daebc7ebb5975192c775d752af473ad9537b448c7c36f150ff0af7b3786bfc6",
+        "kind": "historical_report",
+        "source_ids": [
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "sha256": "404962e1b6a7a2c69e22f8c06c4b4e9dbe9bbe1a421623074f8e1ea6c610b10d",
+        "kind": "documentation",
+        "source_ids": []
+      }
     ]
   },
   "figures": [
@@ -2721,6 +2856,108 @@
       "scope": "REPORTED_PRIVATE_AGGREGATES",
       "source_ids": [
         "IX1"
+      ]
+    },
+    {
+      "path": "figures/orb-gold-economics.svg",
+      "renderer": "scripts/render_orb.py",
+      "inputs": {
+        "data/orb-gold-public.json": "0b42748f2952d8fc9d1d09987382669094b2df54ae60630c1ab95f34ab8b360b"
+      },
+      "scope": "EMPIRICAL_REPORTED",
+      "source_ids": [
+        "O4",
+        "O5"
+      ]
+    },
+    {
+      "path": "figures/orb-gold-stress.svg",
+      "renderer": "scripts/render_orb.py",
+      "inputs": {
+        "data/orb-gold-public.json": "0b42748f2952d8fc9d1d09987382669094b2df54ae60630c1ab95f34ab8b360b"
+      },
+      "scope": "EMPIRICAL_REPORTED",
+      "source_ids": [
+        "O4"
+      ]
+    },
+    {
+      "path": "figures/orb-gold-surface.svg",
+      "renderer": "scripts/render_orb.py",
+      "inputs": {
+        "data/orb-gold-public.json": "0b42748f2952d8fc9d1d09987382669094b2df54ae60630c1ab95f34ab8b360b"
+      },
+      "scope": "EMPIRICAL_REPORTED",
+      "source_ids": [
+        "OV2"
+      ]
+    },
+    {
+      "path": "figures/orb-summary.svg",
+      "renderer": "scripts/render_orb.py",
+      "inputs": {
+        "data/orb-ustec-public.json": "0f7a1ba29dd7e704ebdf8bc662e1677a0eeaaa30a5932643110b4c6ef9ab4f23",
+        "data/orb-gold-public.json": "0b42748f2952d8fc9d1d09987382669094b2df54ae60630c1ab95f34ab8b360b"
+      },
+      "scope": "EMPIRICAL_REPORTED",
+      "source_ids": [
+        "O2",
+        "O4"
+      ]
+    },
+    {
+      "path": "figures/orb-ustec-controls.svg",
+      "renderer": "scripts/render_orb.py",
+      "inputs": {
+        "data/orb-ustec-public.json": "0f7a1ba29dd7e704ebdf8bc662e1677a0eeaaa30a5932643110b4c6ef9ab4f23"
+      },
+      "scope": "EMPIRICAL_REPORTED",
+      "source_ids": [
+        "O1"
+      ]
+    },
+    {
+      "path": "figures/orb-ustec-qualification.svg",
+      "renderer": "scripts/render_orb.py",
+      "inputs": {
+        "data/orb-ustec-public.json": "0f7a1ba29dd7e704ebdf8bc662e1677a0eeaaa30a5932643110b4c6ef9ab4f23"
+      },
+      "scope": "EMPIRICAL_REPORTED",
+      "source_ids": [
+        "O1"
+      ]
+    },
+    {
+      "path": "figures/orb-ustec-selection.svg",
+      "renderer": "scripts/render_orb.py",
+      "inputs": {
+        "data/orb-ustec-public.json": "0f7a1ba29dd7e704ebdf8bc662e1677a0eeaaa30a5932643110b4c6ef9ab4f23"
+      },
+      "scope": "EMPIRICAL_REPORTED",
+      "source_ids": [
+        "O1"
+      ]
+    },
+    {
+      "path": "figures/orb-ustec-surface.svg",
+      "renderer": "scripts/render_orb.py",
+      "inputs": {
+        "data/orb-ustec-public.json": "0f7a1ba29dd7e704ebdf8bc662e1677a0eeaaa30a5932643110b4c6ef9ab4f23"
+      },
+      "scope": "EMPIRICAL_REPORTED",
+      "source_ids": [
+        "O1"
+      ]
+    },
+    {
+      "path": "figures/orb-ustec-validation.svg",
+      "renderer": "scripts/render_orb.py",
+      "inputs": {
+        "data/orb-ustec-public.json": "0f7a1ba29dd7e704ebdf8bc662e1677a0eeaaa30a5932643110b4c6ef9ab4f23"
+      },
+      "scope": "EMPIRICAL_REPORTED",
+      "source_ids": [
+        "O2"
       ]
     }
   ],
@@ -3071,6 +3308,13 @@
     },
     {
       "id": "IX4",
+      "kind": "retained_private_report",
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "sample_role": "spent"
+    },
+    {
+      "id": "OV2",
       "kind": "retained_private_report",
       "disclosure": "approved",
       "evidence_kind": "historical",
