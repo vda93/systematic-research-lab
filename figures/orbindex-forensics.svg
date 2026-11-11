@@ -257,17 +257,17 @@ z
    </g>
    <g id="line2d_20">
     <defs>
-     <path id="m8b0e385938" d="M 0 4.242641
-L 4.242641 0
-L 0 -4.242641
-L -4.242641 0
-z
-" style="stroke: #213442; stroke-linejoin: miter"/>
+     <path id="m990de10181" d="M 0 -4.25
+L 4.25 0
+L 0 4.25
+L -4.25 0
+L 0 -4.25
+" style="stroke: #213442"/>
     </defs>
     <g clip-path="url(#pd21885edc8)">
-     <use xlink:href="#m8b0e385938" x="127.704965" y="105.333842" style="fill: #213442; stroke: #213442; stroke-linejoin: miter"/>
-     <use xlink:href="#m8b0e385938" x="257.67" y="353.664" style="fill: #213442; stroke: #213442; stroke-linejoin: miter"/>
-     <use xlink:href="#m8b0e385938" x="387.635035" y="123.344416" style="fill: #213442; stroke: #213442; stroke-linejoin: miter"/>
+     <use xlink:href="#m990de10181" x="127.704965" y="105.333842" style="fill: #213442; stroke: #213442"/>
+     <use xlink:href="#m990de10181" x="257.67" y="353.664" style="fill: #213442; stroke: #213442"/>
+     <use xlink:href="#m990de10181" x="387.635035" y="123.344416" style="fill: #213442; stroke: #213442"/>
     </g>
    </g>
    <g id="line2d_21">
@@ -291,7 +291,7 @@ L 443.52 366.336
    <g id="legend_1">
     <g id="line2d_22">
      <g>
-      <use xlink:href="#m8b0e385938" x="88.54" y="327.672375" style="fill: #213442; stroke: #213442; stroke-linejoin: miter"/>
+      <use xlink:href="#m990de10181" x="88.54" y="327.672375" style="fill: #213442; stroke: #213442"/>
      </g>
     </g>
     <g id="text_14">

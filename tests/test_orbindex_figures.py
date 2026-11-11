@@ -30,6 +30,12 @@ class ORBIndexFigureTests(unittest.TestCase):
         self.assertEqual(d['search']['supported_de30_rectangles_extra_005r'],0)
         self.assertTrue(all(d['portfolio'][k]['oos']['eur'] < 0 for k in 'ABC'))
 
+    def test_figures_use_vector_marks_instead_of_platform_encoded_pngs(self):
+        for name, blob in orbindex_artifacts(self.data).items():
+            with self.subTest(figure=name):
+                if b'<image' in blob:
+                    self.fail(f'Unexpected platform-encoded raster image in {name}')
+
     def test_checked_in_figures_match_exact_rendered_bytes(self):
         from difflib import unified_diff
 

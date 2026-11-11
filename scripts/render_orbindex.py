@@ -72,7 +72,11 @@ def _search(data):
     ] for m in [5, 15, 30, 60]], dtype=float)
     cmap = plt.get_cmap('RdBu').copy()
     cmap.set_bad('#d5dce2')
-    im = hax.imshow(heat, origin='lower', cmap=cmap, vmin=-.25, vmax=.25, interpolation='nearest', aspect='auto')
+    # Vector cells avoid OS-dependent PNG encoding inside the canonical SVG.
+    im = hax.pcolormesh(np.arange(97)-.5, np.arange(5)-.5, heat,
+                        cmap=cmap, vmin=-.25, vmax=.25, shading='flat', rasterized=False)
+    hax.set_xlim(-.5, 95.5)
+    hax.set_ylim(-.5, 3.5)
     hax.set_yticks(range(4), ['OR5', 'OR15', 'OR30', 'OR60'])
     hax.set_xticks([i*4 for i in range(24)][::3], [f'{i:02d}:00' for i in range(0,24,3)])
     hax.set_xlabel('DE30X local start, Europe/Berlin · each column = 15 min', fontsize=10, color=INK)
@@ -81,6 +85,7 @@ def _search(data):
     for i in range(0, 97, 4):
         hax.axvline(i-.5, color='white', alpha=.25, lw=.45)
     cbar=fig.colorbar(im, ax=hax, fraction=.045, pad=.015)
+    cbar.solids.set_rasterized(False)
     cbar.set_label('R/trade, clipped to ±0.25R', color=INK, fontsize=9)
     cbar.ax.tick_params(labelsize=8)
     note=('3 × 96 quarter-hour anchors × 4 durations × 3 directions = 3,456 searched cells · 3,338 valid · 118 invalid.\n'
@@ -182,7 +187,9 @@ def _forensic(data):
     mid=np.array([v['signed_midquote_r'] for v in years]);wedge=np.array([v['embedded_spread_r'] for v in years]);gross=np.array([v['gross_r'] for v in years])
     a.bar(xx-.15,mid,width=.30,color=BLUE,label='Signed midquote R')
     a.bar(xx+.15,-wedge,width=.30,color=RED,label='Embedded Bid/Ask wedge')
-    a.plot(xx,gross,ls='',marker='D',color=INK,ms=6,label='Realized gross R')
+    # Explicit vertices avoid platform rounding of a rotated square near zero.
+    diamond = [(0, 1), (1, 0), (0, -1), (-1, 0), (0, 1)]
+    a.plot(xx,gross,ls='',marker=diamond,color=INK,ms=8.5,label='Realized gross R')
     a.set_xticks(xx,ys);a.axhline(0,color=INK,lw=1)
     a.set_title('A: 2025 midquote movement was negative too',loc='left',fontsize=11,color=INK,pad=11)
     _ax_style(a,ylabel='Trade-level aggregate R by exit year')
