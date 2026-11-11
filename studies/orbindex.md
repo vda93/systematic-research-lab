@@ -28,6 +28,27 @@ Positive cells were not promoted individually. The prespecified *descriptive* sc
 
 **Figure 1.** The right-hand heatmap is deliberately just the **DE30X LONG slice** of the larger searched surface, showing mean price R per filled trade, not a net-profit map. Colour is clipped for legibility and invalid cells are not interpreted as zero-return strategies.
 
+### Cross-market falsification: Japan and UK
+
+The same frozen discovery search produced no qualifying neighbourhood on JP225X or UK100X. Their isolated positive cells explain why a search needs a regional screen before portfolio nomination. These are February 2020 through November 2023 discovery results, with December burnoff. [Discovery source](../docs/evidence.md#ix1)
+
+![JP225X and UK100X mean gross price R across BOTH, LONG and SHORT: four OR lengths and all 96 local anchors in each panel](../figures/orbindex-jp-uk-heatmaps.svg)
+
+[Open Figure 6 at full resolution](../figures/orbindex-jp-uk-heatmaps.svg).
+
+Figure 6 uses one zero-centred colour scale across all six panels, clipped below −0.70R and above +0.25R per trade. Grey means the mean is undefined: 95 scientific-invalid cells plus two scientifically valid JP cells with no completed trades. Those two cells are 06:15 Tokyo OR5 LONG and OR15 SHORT. Missing means remain distinct from zero returns. The public JSON retains the unclipped values and missing-state classifications.
+
+| Market and local clock | Scientifically valid | Scientific invalid | Positive total-price-R cells among valid cells | Passing six-cell rectangles / connected regions |
+| --- | ---: | ---: | ---: | ---: |
+| JP225X — Asia/Tokyo | 1,089 | 63 | 20 | 0 / 0 |
+| UK100X — Europe/London | 1,120 | 32 | 1 | 0 / 0 |
+
+Japan's 08:30 OR60 BOTH cell produced **+41.254R over 676 trades**. Its neighbours did not support the peak: 08:15 OR60 BOTH returned **−28.340R**, while 08:30 OR30 BOTH returned **−115.258R**. The 08:45 OR60 BOTH cell had positive R in only **two of four signal-year buckets**, below the required three. Selecting the strongest cell would discard the frozen requirement that all six members of a three-anchor by two-duration rectangle pass together.
+
+The UK's only positive cell, **22:15 OR15 SHORT**, returned **+0.1705R over eight trades**, below the minimum of 100 filled trades. Its opening range had quotes on only **16 of 967 eligible exchange-session dates**. This sparse observed sample cannot qualify a region; the absent opening quotes do not establish a historical broker closure schedule.
+
+The tested ORB mechanism was therefore **not advanced on either market**. This decision applies to its frozen geometry, clock grid, directions and screening rule. It establishes neither a general inability to trade these indices nor a JP/UK OOS or historically qualified broker-net result. DE30X alone supplied supported discovery regions for the subsequent portfolio comparisons; its selected portfolios later failed economic promotion.
+
 ## 2. Combine signals under one account-level execution constraint
 
 ![The three frozen DE30X portfolio clock schedules and their native discovery price R](../figures/orbindex-portfolios.svg)
@@ -106,7 +127,7 @@ The useful outcome is methodological: a wide time search, strict invalid-state a
 
 ## What is actually reproducible here?
 
-The checked-in [historical aggregate JSON](../data/orbindex-public.json) holds the reviewed cell-level visualization slice, portfolio definitions, quarter-end gross R sequences, economic totals and post-OOS forensic summaries. The [figure renderer](../scripts/render_orbindex.py) regenerates all five SVGs from that file. The public figure tests verify schema, source linkage, XML parsing and data-to-figure response. The public release checks aggregate consistency and presentation. Replaying the private historical backtests requires their protected original sources and execution code. Each figure can be opened at full resolution; the adjacent text and tables retain its main findings for narrow-screen and nonvisual reading.
+The checked-in [historical aggregate JSON](../data/orbindex-public.json) holds the reviewed cell-level visualization slices, portfolio definitions, quarter-end gross R sequences, economic totals and post-OOS forensic summaries. The [figure renderer](../scripts/render_orbindex.py) regenerates all six SVGs from that file. The public figure tests verify schema, source linkage, XML parsing and data-to-figure response. The public release checks aggregate consistency and presentation. Replaying the private historical backtests requires their protected original sources and execution code. Each figure can be opened at full resolution; the adjacent text and tables retain its main findings for narrow-screen and nonvisual reading.
 
 **Publication verification.** The discovery, synchronized-discovery and frozen-OOS review archives were independently rehashed and CRC-checked for this publication. All search classifications and the displayed heatmap values, native totals and quarterly sequences were cross-checked against their original retained outputs. The original post-OOS forensic archive was unavailable to this publication pass; its summaries and recorded archive hash are reproduced from the hash-verified owner-supplied handoff, without claiming independent source-byte authentication. See [verification scope](../docs/evidence.md#orbindex-publication-verification).
 

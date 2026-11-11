@@ -127,6 +127,13 @@
         ]
       },
       {
+        "sha256": "e95c6d268317da6255a1d0e1c3afab82609d99ed5beea92dbf4eaf01779cf690",
+        "kind": "documentation",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
         "sha256": "5040a5c4c60b754d055a2d445f246408ebc842922103a6e822a69f2a8405a0b3",
         "kind": "documentation",
         "source_ids": [
@@ -546,7 +553,7 @@
     ],
     "docs/provenance.md": [
       {
-        "sha256": "18d1dd63eee0ef1508d7cae33246b38737f82c9258cd7f683a8e93449e38b59b",
+        "sha256": "825f6fc79405c44d7ce3eb349b2b70f13ae1cb709005790530c77a358442fe81",
         "kind": "documentation",
         "source_ids": [
           "IX1",
@@ -2356,6 +2363,62 @@
         ]
       },
       {
+        "sha256": "90928310784a1f11cae6828b126f0ca309dd0d0d0211cc97030e381cf4ac8998",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "76c1b951cf44a58ddd1ae03213ba6990a169bbbed4f180faa34b3fa6f7e34625",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "4a1ff6aa1635b929c5cb98148417f4c0cc94768878bda69fd013fd2f3a1f4a58",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "985bbaa61e3c16879553925a8b9fd28a8325aba2dec2ca70769dc38a42fa5e14",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "213f4a2dac88f84d8ca447d9f535893c6b3b356fe379af4d65cabcbde3ab4f5a",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "5dd4320ac377f51dc5a5e182c0f47632bba067379f6fa4841f034fe2615aec72",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "73e11b04e45bff176c4e7f60cb3d3884a53f10377545baf8d78742afb180ea1e",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
+        "sha256": "5d0be06ca3f11aeefeca47fc12254ae3a8c7c40bd97bcd50f92bcc8cf46929c6",
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1"
+        ]
+      },
+      {
         "sha256": "eb0819a088469c0145dcc866c1e64b48b7dd2460b9452ef6fc10b8b425f15cdd",
         "kind": "historical_report",
         "source_ids": [
@@ -2596,7 +2659,7 @@
       "path": "figures/orbindex-search.svg",
       "renderer": "scripts/render_orbindex.py",
       "inputs": {
-        "data/orbindex-public.json": "970f609814f9ac9ca06cafc9d99222a9de35f5e691ef4329bfaf03a588cb23ca"
+        "data/orbindex-public.json": "7942c6e8356fecbe362c16584eff6eb18c98088172618c6d7ae234d83f837a35"
       },
       "scope": "REPORTED_PRIVATE_AGGREGATES",
       "source_ids": [
@@ -2607,7 +2670,7 @@
       "path": "figures/orbindex-portfolios.svg",
       "renderer": "scripts/render_orbindex.py",
       "inputs": {
-        "data/orbindex-public.json": "970f609814f9ac9ca06cafc9d99222a9de35f5e691ef4329bfaf03a588cb23ca"
+        "data/orbindex-public.json": "7942c6e8356fecbe362c16584eff6eb18c98088172618c6d7ae234d83f837a35"
       },
       "scope": "REPORTED_PRIVATE_AGGREGATES",
       "source_ids": [
@@ -2618,7 +2681,7 @@
       "path": "figures/orbindex-curves.svg",
       "renderer": "scripts/render_orbindex.py",
       "inputs": {
-        "data/orbindex-public.json": "970f609814f9ac9ca06cafc9d99222a9de35f5e691ef4329bfaf03a588cb23ca"
+        "data/orbindex-public.json": "7942c6e8356fecbe362c16584eff6eb18c98088172618c6d7ae234d83f837a35"
       },
       "scope": "REPORTED_PRIVATE_AGGREGATES",
       "source_ids": [
@@ -2630,7 +2693,7 @@
       "path": "figures/orbindex-economics.svg",
       "renderer": "scripts/render_orbindex.py",
       "inputs": {
-        "data/orbindex-public.json": "970f609814f9ac9ca06cafc9d99222a9de35f5e691ef4329bfaf03a588cb23ca"
+        "data/orbindex-public.json": "7942c6e8356fecbe362c16584eff6eb18c98088172618c6d7ae234d83f837a35"
       },
       "scope": "REPORTED_PRIVATE_AGGREGATES",
       "source_ids": [
@@ -2642,11 +2705,22 @@
       "path": "figures/orbindex-forensics.svg",
       "renderer": "scripts/render_orbindex.py",
       "inputs": {
-        "data/orbindex-public.json": "970f609814f9ac9ca06cafc9d99222a9de35f5e691ef4329bfaf03a588cb23ca"
+        "data/orbindex-public.json": "7942c6e8356fecbe362c16584eff6eb18c98088172618c6d7ae234d83f837a35"
       },
       "scope": "REPORTED_PRIVATE_AGGREGATES",
       "source_ids": [
         "IX4"
+      ]
+    },
+    {
+      "path": "figures/orbindex-jp-uk-heatmaps.svg",
+      "renderer": "scripts/render_orbindex.py",
+      "inputs": {
+        "data/orbindex-public.json": "7942c6e8356fecbe362c16584eff6eb18c98088172618c6d7ae234d83f837a35"
+      },
+      "scope": "REPORTED_PRIVATE_AGGREGATES",
+      "source_ids": [
+        "IX1"
       ]
     }
   ],

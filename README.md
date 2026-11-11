@@ -45,7 +45,7 @@ Historical findings rely on retained private reports; the public repository cann
 ## Explore the repository
 
 - [Research atlas](docs/research-atlas.md): experiments, sample roles and decisions.
-- [ORBINDEX public aggregates](data/orbindex-public.json) and [five reproducible study figures](scripts/render_orbindex.py): inspect the search, portfolio and OOS evidence.
+- [ORBINDEX public aggregates](data/orbindex-public.json) and [six reproducible study figures](scripts/render_orbindex.py): inspect the search, portfolio and OOS evidence.
 - [Historical aggregates](results/historical-tables.md) and [figure source](scripts/render_historical.py): inspect the retained ORB and archived NOWICK summaries.
 - [Source code](src/srl), [tests](tests) and [verification command](scripts/reproduce.py): inspect and reproduce the public methods.
 - [Research engineering](studies/research-engineering.md): evidence manifests and implementation checks.

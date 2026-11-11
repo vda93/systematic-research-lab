@@ -14,6 +14,7 @@ from pathlib import Path
 import matplotlib
 matplotlib.use('Agg')
 from matplotlib import pyplot as plt
+from matplotlib.colors import TwoSlopeNorm
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,10 +40,10 @@ def _ax_style(ax, *, xlabel=None, ylabel=None):
         ax.set_ylabel(ylabel, color=INK, fontsize=10)
 
 
-def _finish(fig, title, note):
+def _finish(fig, title, note, *, layout=None):
     fig.text(.065, .955, title, fontsize=17, fontweight='bold', color=INK, ha='left', va='top')
     fig.text(.065, .06, note, fontsize=8.6, color=MUTED, ha='left', va='center', linespacing=1.45)
-    fig.subplots_adjust(left=.075, right=.96, bottom=.205, top=.81, wspace=.28, hspace=.3)
+    fig.subplots_adjust(**(layout or dict(left=.075, right=.96, bottom=.205, top=.81, wspace=.28, hspace=.3)))
     buf = BytesIO()
     fig.savefig(buf, format='svg', metadata={'Date': None, 'Title': title,
                                             'Description': note, 'Creator': 'Systematic Research Lab'})
@@ -206,6 +207,55 @@ def _forensic(data):
     return _finish(fig,'05  |  Post-OOS observations: spread and price follow-through',note)
 
 
+def _cross_market(data):
+    cross = data['cross_market_discovery']
+    fig = _figure((14.2, 8.4))
+    axes = fig.subplots(2, 3)
+    cmap = plt.get_cmap('RdBu').copy()
+    cmap.set_bad('#d5dce2')
+    norm = TwoSlopeNorm(vmin=-.70, vcenter=0, vmax=.25)
+    markets = ['JP225X', 'UK100X']
+    directions = ['BOTH', 'LONG', 'SHORT']
+    for row, symbol in enumerate(markets):
+        market = cross['markets'][symbol]
+        for col, direction in enumerate(directions):
+            ax = axes[row, col]
+            grid = market['grid'][direction]
+            if set(grid) != {'5', '15', '30', '60'} or any(len(v) != 96 for v in grid.values()):
+                raise ValueError('cross-market grid must contain all four durations and 96 anchors')
+            values = np.array([[np.nan if v is None else v for v in grid[str(m)]]
+                               for m in [5, 15, 30, 60]])
+            mesh = ax.pcolormesh(np.arange(97)-.5, np.arange(5)-.5, values,
+                                 cmap=cmap, norm=norm, shading='flat', rasterized=False)
+            ax.set_xlim(-.5, 95.5)
+            ax.set_ylim(-.5, 3.5)
+            ax.set_yticks(range(4), ['OR5', 'OR15', 'OR30', 'OR60'])
+            ax.set_xticks([0, 24, 48, 72, 95], ['00:00', '06:00', '12:00', '18:00', '23:45'])
+            ax.tick_params(colors=MUTED, labelsize=9, length=0, pad=5)
+            ax.set_title(f'{symbol} | {direction}', loc='left', fontsize=11, color=INK, pad=11)
+            ax.set_xlabel(market['timezone'] + ' local start', color=INK, fontsize=9)
+            for spine in ax.spines.values():
+                spine.set_visible(False)
+    summary = '  |  '.join(
+        f"{s}: {cross['markets'][s]['positive_price_R_cells']}/{cross['markets'][s]['valid']:,} price-positive valid cells; "
+        f"{cross['markets'][s]['qualifying_regions']} supported regions" for s in markets)
+    fig.text(.065, .89, summary, color=MUTED, fontsize=10, ha='left')
+    color_ax = fig.add_axes([.28, .17, .46, .023])
+    bar = fig.colorbar(mesh, cax=color_ax, orientation='horizontal', extend='both',
+                      ticks=[-.7, -.4, -.2, 0, .1, .25])
+    bar.solids.set_rasterized(False)
+    bar.ax.tick_params(labelsize=9, colors=MUTED)
+    bar.set_label('Mean gross price R/trade; display clipped to [-0.70, +0.25]', fontsize=10, color=INK)
+    from matplotlib.patches import Patch
+    fig.legend(handles=[Patch(facecolor='#d5dce2', label='Grey = undefined mean; zero is white')],
+               loc='center', bbox_to_anchor=(.51, .225), frameon=False, fontsize=9)
+    note = ('Spent discovery: Feb 2020-Nov 2023 signal origins; Dec 2023 burnoff. Each panel: 96 local anchors x four OR lengths.\n'
+            'Grey includes 95 scientific-invalid cells and two valid JP zero-trade cells. Values are price R, not broker-net money.\n'
+            'No passing six-cell neighbourhood on either market; this rejects advancement of the tested ORB mechanism only.')
+    return _finish(fig, '06  |  Cross-market falsification: Japan and UK', note,
+                   layout=dict(left=.065, right=.97, bottom=.31, top=.81, wspace=.22, hspace=.55))
+
+
 def orbindex_artifacts(data: dict) -> dict[str, bytes]:
     if data.get('scope') != 'PUBLIC_REPORTED_HISTORICAL_AGGREGATES_PRIVATE_BACKTEST_NOT_REPLAYABLE':
         raise ValueError('missing public data/scope declaration')
@@ -220,6 +270,7 @@ def orbindex_artifacts(data: dict) -> dict[str, bytes]:
           'figures/orbindex-curves.svg':_cumulative(data),
           'figures/orbindex-economics.svg':_economics(data),
           'figures/orbindex-forensics.svg':_forensic(data),
+          'figures/orbindex-jp-uk-heatmaps.svg':_cross_market(data),
         }
 
 
