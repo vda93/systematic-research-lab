@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="950.4pt" height="446.4pt" viewBox="0 0 950.4 446.4" xmlns="http://www.w3.org/2000/svg" version="1.1" role="img" aria-labelledby="macro-title macro-desc">
+ <title id="macro-title">00  |  How a two-sided news-event order plan can unfold</title>
+ <desc id="macro-desc">Generic two-sided event-order schematic; exact contracts vary. Spread affects entry/stop geometry.
+Arrows are possible state transitions, not historical trades or independent paths. Source: frozen behavioral specification plus sequential adjudication.</desc>
+ <title>00  |  How a two-sided news-event order plan can unfold</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>00  |  How a two-sided news-event order plan can unfold</dc:title>
+    <dc:description>Generic two-sided event-order schematic; exact contracts vary. Spread affects entry/stop geometry.
+Arrows are possible state transitions, not historical trades or independent paths. Source: frozen behavioral specification plus sequential adjudication.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Systematic Research Lab</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 446.4
+L 950.4 446.4
+L 950.4 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 449.7768 195.384816
+L 609.58656 195.384816
+Q 620.520912 195.384816 620.520912 192.30912
+L 620.520912 144.99072
+Q 620.520912 141.915024 609.58656 141.915024
+L 449.7768 141.915024
+Q 438.842448 141.915024 438.842448 144.99072
+L 438.842448 192.30912
+Q 438.842448 195.384816 449.7768 195.384816
+z
+" clip-path="url(#p8a87d1fc0c)" style="fill: #f4f7f9; stroke: #2c6385; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 702.108 195.384816
+L 887.15088 195.384816
+Q 898.085232 195.384816 898.085232 192.30912
+L 898.085232 144.99072
+Q 898.085232 141.915024 887.15088 141.915024
+L 702.108 141.915024
+Q 691.173648 141.915024 691.173648 144.99072
+L 691.173648 192.30912
+Q 691.173648 195.384816 702.108 195.384816
+z
+" clip-path="url(#p8a87d1fc0c)" style="fill: #f4f7f9; stroke: #318c88; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 702.108 297.119376
+L 887.15088 297.119376
+Q 898.085232 297.119376 898.085232 294.04368
+L 898.085232 246.72528
+Q 898.085232 243.649584 887.15088 243.649584
+L 702.108 243.649584
+Q 691.173648 243.649584 691.173648 246.72528
+L 691.173648 294.04368
+Q 691.173648 297.119376 702.108 297.119376
+z
+" clip-path="url(#p8a87d1fc0c)" style="fill: #f4f7f9; stroke: #d09a46; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 449.7768 297.119376
+L 634.81968 297.119376
+Q 645.754032 297.119376 645.754032 294.04368
+L 645.754032 246.72528
+Q 645.754032 243.649584 634.81968 243.649584
+L 449.7768 243.649584
+Q 438.842448 243.649584 438.842448 246.72528
+L 438.842448 294.04368
+Q 438.842448 297.119376 449.7768 297.119376
+z
+" clip-path="url(#p8a87d1fc0c)" style="fill: #f4f7f9; stroke: #d09a46; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 88.10208 163.91808
+L 315.20016 163.91808
+" clip-path="url(#p8a87d1fc0c)" style="fill: none; stroke: #2c6385; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 88.10208 286.94592
+L 315.20016 286.94592
+" clip-path="url(#p8a87d1fc0c)" style="fill: none; stroke: #d09a46; stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 121.74624 220.70016
+L 281.556 220.70016
+" clip-path="url(#p8a87d1fc0c)" style="fill: none; stroke: #2c6385; stroke-width: 1.3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 121.74624 234.89568
+L 281.556 234.89568
+" clip-path="url(#p8a87d1fc0c)" style="fill: none; stroke: #d09a46; stroke-width: 1.3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 378.28296 296.4096
+L 378.28296 147.35664
+" clip-path="url(#p8a87d1fc0c)" style="fill: none; stroke-dasharray: 4.44,1.92; stroke-dashoffset: 0; stroke: #657684; stroke-width: 1.2"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="201.65112" y="153.453688" transform="rotate(-0 201.65112 153.453688)">Upper BUY STOP level</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="201.65112" y="276.481528" transform="rotate(-0 201.65112 276.481528)">Lower SELL STOP level</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="201.65112" y="204.13872" transform="rotate(-0 201.65112 204.13872)">Ask / Bid · spread</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(150.13237 318.707289)">Ask-based buy entry</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(151.901901 332.184633)">Bid-based sell entry</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="201.65112" y="116.59968" transform="rotate(-0 201.65112 116.59968)">Before the announcement</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(346.010851 124.957961)">Scheduled</text>
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(355.508663 138.111383)">release</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(506.566094 164.471658)">One side</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(509.217344 178.622869)">triggers</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(751.829635 164.471658)">Protective stop /</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(738.063151 178.622869)">trailing-managed exit</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(769.021745 266.206218)">If the first</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(758.092721 280.357429)">position stops</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(495.794724 266.206218)">Opposite pending</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #213442" transform="translate(497.670779 280.357429)">may trigger later</text>
+   </g>
+   <g id="patch_6">
+    <path d="M 327.611629 164.068116
+Q 386.194466 166.265265 443.213156 168.403751
+" style="fill: none; stroke: #657684; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 439.290923 166.255241
+L 443.213156 168.403751
+L 439.141009 170.252431
+" style="fill: none; stroke: #657684; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 621.999312 168.64992
+Q 659.552704 168.64992 695.540849 168.64992
+" style="fill: none; stroke: #657684; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 691.540849 166.64992
+L 695.540849 168.64992
+L 691.540849 170.64992
+" style="fill: none; stroke: #657684; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 794.62944 198.674895
+Q 794.62944 219.017364 794.62944 237.794586
+" style="fill: none; stroke: #657684; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 796.62944 233.794586
+L 794.62944 237.794586
+L 792.62944 233.794586
+" style="fill: none; stroke: #657684; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 689.695761 270.38448
+Q 668.963175 270.38448 649.795837 270.38448
+" style="fill: none; stroke: #657684; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 653.795837 272.38448
+L 649.795837 270.38448
+L 653.795837 268.38448
+" style="fill: none; stroke: #657684; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(571.566184 323.439129)">Only if still eligible; scheduled deletion</text>
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(587.946652 336.916473)">can cancel unfilled news orders.</text>
+   </g>
+  </g>
+  <g id="text_12">
+   <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="61.776" y="35.311719" transform="rotate(-0 61.776 35.311719)">00  |  How a two-sided news-event order plan can unfold</text>
+  </g>
+  <g id="text_13">
+   <text style="font-size: 10.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657684" x="61.776" y="59.238375" transform="rotate(-0 61.776 59.238375)">CONCEPTUAL_SCHEMATIC · Fictional state example · Symbolic levels and possible states; no price path or measured timing</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(61.776 409.338633)">Generic two-sided event-order schematic; exact contracts vary. Spread affects entry/stop geometry.</text>
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(61.776 421.468242)">Arrows are possible state transitions, not historical trades or independent paths. Source: frozen behavioral specification plus sequential adjudication.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8a87d1fc0c">
+   <rect x="71.28" y="107.136" width="841.104" height="236.592"/>
+  </clipPath>
+ </defs>
+</svg>
