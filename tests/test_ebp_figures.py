@@ -114,7 +114,12 @@ def test_renderer_is_deterministic_accessible_and_matches_retained_svgs():
         assert root.findall('.//{http://www.w3.org/2000/svg}text')
         assert not root.findall('.//{http://www.w3.org/2000/svg}image')
         assert not re.search(rb'(?<![A-Za-z])[A-Za-z]:[\\/]|drive\.google|docs\.google', content)
-        assert (ROOT/'figures'/name).read_bytes() == content
+        retained=(ROOT/'figures'/name).read_bytes()
+        if retained != content:
+            from difflib import unified_diff
+            diff=unified_diff(retained.decode('utf-8').splitlines(),content.decode('utf-8').splitlines(),n=2)
+            excerpt='\n'.join(line[:200] for line in list(diff)[:35])
+            raise AssertionError(f'Exact EBP SVG mismatch: {name}\n{excerpt}')
 
 
 def test_renderer_rejects_an_incomplete_surface_and_invalid_interval():
