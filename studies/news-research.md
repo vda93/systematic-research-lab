@@ -1,8 +1,10 @@
-# MacroImpulse: testing news-driven event trades
+# MacroImpulse: why live execution stopped the strategy
 
 [Portfolio](../README.md) · [Research atlas](../docs/research-atlas.md) · [Evidence register](../docs/evidence.md)
 
-Can a scheduled-news impulse survive the full order process and its trading costs? The research tested execution and proposed filters around preplanned event-time triggers. A later study could not support a strategy verdict because its calendar coverage had collapsed.
+MacroImpulse was shelved because live execution across brokers produced wide fills, large spreads and slippage. The available execution conditions were insufficient for the strategy. This was the owner's practical reason for stopping the program. [Owner's closeout clarification](../docs/provenance.md#macroimpulse-closeout-clarification)
+
+The historical studies below tested execution logic and proposed filters around preplanned news-event triggers. A separate medium-impact evaluation had a calendar-coverage defect; that limits what its backtest can establish.
 
 ## A positive baseline did not qualify the proposed interventions
 
@@ -16,7 +18,7 @@ Scheduled economic announcements can reprice currencies quickly. MacroImpulse st
 
 [Open full-resolution SVG](../figures/macro-mechanics.svg)
 
-Several proposed filters failed their tests. A later medium-impact evaluation used an [incomplete calendar](data-forensics.md), leaving the strategy question unresolved. The program remains **shelved** pending an independently qualified event universe and execution economics.
+Several proposed filters failed their tests. These historical comparisons do not establish that live fills across brokers were acceptable. The separate [incomplete calendar](data-forensics.md) prevents a clean verdict on one medium-impact evaluation.
 
 The figures reproduce already-opened historical aggregates; no backtest or new evaluation was run. The [public aggregate extract](../data/macro-public.json), [renderer](../scripts/render_macro.py) and [figure evidence review](../docs/macro-visual-evidence.md) identify original archive and member hashes, sample roles and missing evidence. [Evidence and reproducibility limits](../docs/provenance.md) apply throughout. Reported P&L is research-account USD; no account-equity curve or new uncertainty interval is reconstructed.
 
@@ -97,7 +99,7 @@ The candidate still failed its every-year-positive stability requirement: 2021 w
 
 A later medium-impact extension initially appeared to fail in a later historical period. Calendar forensics found a source-content coverage collapse beginning around late 2024. Records still parsed successfully, so a parser success marker could not establish that the event universe remained complete. The canonical interpretation became **INVALID_DATA_UNIVERSE**, superseding the earlier provisional clean-OOS failure.
 
-Vendor-statement context also showed substantial overlap in selected trades alongside different fills and outcomes, reinforcing the need to distinguish event selection, feed coverage, and execution sensitivity. That context does not independently validate the strategy or repair the calendar. The program remains shelved pending a newly qualified data universe. The earlier clean strategy-failure conclusion was withdrawn; profitability remained unresolved.
+Vendor-statement context also showed substantial overlap in selected trades alongside different fills and outcomes, reinforcing the need to distinguish event selection, feed coverage, and execution sensitivity. That context does not independently validate the strategy or repair the calendar. The earlier clean strategy-failure conclusion for this medium-impact sample was withdrawn; its profitability remained unresolved. The broader program was shelved because live execution across brokers was inadequate.
 
 ![Monthly MEDIUM calendar rows collapse around September to October 2024, while HIGH rows remain broadly intact. The later MEDIUM monthly rate is 15.6 percent of the earlier forensic rate.](../figures/macro-calendar.svg)
 

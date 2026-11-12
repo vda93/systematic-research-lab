@@ -13,3 +13,9 @@ The [synthetic methods study](study.md) is separate from historical markets. Its
 The [source inventory](../release-files.json) and [publication checks](../scripts/audit_public.py) validate the current tree and inspect old public history. Deleting irrelevant files from current HEAD does **not** rewrite historical commits. Previously public files remain historical Git records and are excluded from the new portfolio narrative.
 
 Public code and original writing are under [MIT](../LICENSE). That license does not grant rights to excluded market data, external strategy PDFs or proprietary EAs. External explanatory handouts, where consulted during rule formalization, are not redistributed here. Exact source provenance is retained separately in the private research records.
+
+## MacroImpulse closeout clarification
+
+On 12 November 2026, the project owner clarified that MacroImpulse was shelved because live execution across brokers was inadequate: fills were wide, and spreads and slippage were large. The available execution conditions were insufficient for the strategy. This is the owner's account of the practical stopping decision, rather than a new measured broker-by-broker cost study.
+
+The calendar-coverage defect belongs to a separate medium-impact historical evaluation and limits that sample's validity. It was not the reason given for shelving the broader program. Repairing that calendar would not by itself resolve the live execution problem. Previously reported numerical results and the sample's INVALID_DATA_UNIVERSE classification are unchanged.
