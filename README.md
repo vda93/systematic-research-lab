@@ -1,16 +1,16 @@
 # TradingBotHQ research
 
-I study what happens between a trading idea and the price you can actually trade. These two projects stopped for different reasons.
+A promising backtest is only part of the story. ORBINDEX failed its later economic test, while MacroImpulse ran into execution conditions that made live trading impractical.
 
 **[Browse the illustrated research library](https://vda93.github.io/systematic-research-lab/)**
 
 ## ORBINDEX
 
-Could an opening range work across nearby start times and markets? I tested the German, Japanese and UK indices, then froze three German-index portfolios for a later comparison. All three lost euros at fixed volume before additional commission or financing. The article follows the search through both heatmaps, portfolio selection, later results and the investigation into why the breakouts weakened. [Read the full ORBINDEX study](studies/orbindex.md)
+An opening-range timing search across German, Japanese and UK indices led to three frozen German-index portfolios. None survived the later fixed-volume EUR comparison, even before additional commission or financing. The full study keeps the original heatmaps, portfolio construction and follow-up investigation together. Part of the later period may have been examined in earlier research. [Read the full ORBINDEX study](studies/orbindex.md)
 
 ## MacroImpulse
 
-I wanted to trade the sharp moves around scheduled economic releases. Spreads widened across brokers, fills missed the prices I needed and slippage ate into the move. I shelved MacroImpulse. The historical studies explain why the idea interested me and what happened when I tried filtering its trades. [Why I shelved this](studies/news-research.md#why-i-shelved-this)
+MacroImpulse targeted abrupt moves around scheduled economic releases. The historical tests were worth investigating, but live execution across brokers was the dealbreaker: spreads widened, fills landed away from intended prices and slippage made the strategy impractical to trade. [Why I shelved this](studies/news-research.md#why-i-shelved-this)
 
 [Research library](studies/README.md) · [Evidence register](docs/evidence.md) · [Reproduction instructions](docs/security.md#reproduce-the-checks)
 

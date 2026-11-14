@@ -200,18 +200,19 @@ class ReadingEdition:
             path = study['article']
             cover_image = next(c for t in articles[slug] for c in (t.children or [])
                                if c.type == 'image' and target_path(path, c.attrGet('src')) == cover)
+            link_label = 'Why I shelved this' if slug == 'macroimpulse' else f"Read the {study['name']} study"
             cards.append(f"""<article class="card">
 <div class="plot">{self.image(cover, cover_image.content)}</div>
 <div class="card-body"><h3><a href="{slug}.html">{heading}</a></h3>
-<p>{summary}</p><a class="read" href="{slug}.html">Read the {study['name']} study <span aria-hidden="true">→</span></a></div>
+<p>{summary}</p><a class="read" href="{slug}.html">{escape(link_label)} <span aria-hidden="true">→</span></a></div>
 </article>""")
         return shell('Research library', f"""<section class="hero">
 <div><p class="kicker">Systematic trading research</p><h1>Research library</h1>
-<p class="lead">I tested when to trade an index breakout and whether I could trade the first move after a news release. These are the results and the decisions I made.</p></div>
+<p class="lead">Two research projects, two different stopping points: index breakout portfolios that failed their later economic test, and a news strategy whose live execution conditions made trading impractical.</p></div>
 </section>
 <section id="research"><h2>Case studies</h2><div class="cards">{''.join(cards)}</div></section>
-<section class="method" id="method"><h2>How I read the evidence</h2>
-<p>I keep the discovery period separate from later tests and ask what the quoted prices would have meant for a trade. The public code rebuilds the figures from research aggregates. Replaying the original trades requires private data.</p>
+<section class="method" id="method"><h2>How the evidence is evaluated</h2>
+<p>Discovery is kept separate from later validation, and quoted-price outcomes are not treated as guaranteed live fills. Public code rebuilds the figures from disclosed aggregates; replaying the original trades requires private data.</p>
 <nav aria-label="Methods and sources">{source('docs/empirical-methods.md', 'Empirical methods')}
 {source('docs/evidence.md', 'Evidence register')} {source('docs/security.md#reproduce-the-checks', 'Reproduce the figures')}</nav></section>""")
 

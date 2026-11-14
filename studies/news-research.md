@@ -1,10 +1,10 @@
-# MacroImpulse
+# MacroImpulse: the execution problem
 
 ## Why I shelved this
 
-I wanted to see whether I could trade the sharp moves around scheduled economic releases. The backtests gave me a reason to keep looking. In live trading across brokers, spreads widened around the release, my orders filled away from the prices I needed, and slippage ate into the move I was trying to catch. I shelved MacroImpulse because I couldn’t get execution conditions that justified trading it. [My closeout note](../docs/provenance.md#macroimpulse-closeout-clarification)
+MacroImpulse tried to capture the abrupt price moves around scheduled economic releases. Historical results were encouraging under their stated cost assumptions, but live execution was the dealbreaker. Spreads widened around announcements, fills landed away from intended prices, and slippage ate into the move the strategy needed. **That’s why I shelved it: the execution conditions weren’t workable across the brokers I tried.** [My closeout note](../docs/provenance.md#macroimpulse-closeout-clarification)
 
-That decision came from my experience trying to execute the strategy. I don’t have a verified broker-by-broker series of live costs to attach to the backtest. The figures below show what I learned from the historical tests.
+This was a practical trading decision, not a new broker-by-broker measurement of live execution costs. The figures below show what the historical tests established and why those results were not enough.
 
 ## How the orders worked
 
@@ -20,7 +20,7 @@ The 2023–2024 high-impact baseline recorded **1,396 trades and +$4,250.48** ac
 
 ![Historical baseline by currency pair and year, with completed trade counts and spread-only profit in US dollars.](../figures/macro-baseline.svg)
 
-That result made the idea worth investigating. It could tell me how the rules behaved on the historical quotes. It couldn’t tell me what price a broker would give me at the release.
+Those results described how the strategy behaved on historical quotes, not the prices a broker would actually fill during a release.
 
 ## Would a spread filter help?
 
@@ -38,6 +38,6 @@ Those totals describe two legs of the same events during 2021–2024 development
 
 ## What I could verify
 
-The implementation was compared with a reference strategy on controlled events using the same ticks and parameters. Those checks covered order triggers, stops and exits. They helped establish whether the implementation followed the intended rules under those conditions. My practical question was whether I could get a usable fill when news broke. The comparison couldn’t answer it. [Implementation checks](../docs/evidence.md#b08)
+Controlled comparisons with a reference strategy checked order triggers, stops and exits using the same ticks and parameters. They helped establish whether the implementation followed its intended rules. They could not establish whether a live trade during a news release would receive an economically viable fill. [Implementation checks](../docs/evidence.md#b08)
 
 The public [aggregate data](../data/macro-public.json) and [figure renderer](../scripts/render_macro.py) reproduce these historical exhibits. Replaying the trades requires the original quotes and execution code. The [contribution record](../docs/ownership.md) explains my role and the AI assistance used in the research.
