@@ -2,9 +2,9 @@
 
 ## Why I shelved this
 
-MacroImpulse tried to capture the abrupt price moves around scheduled economic releases. Historical results were encouraging under their stated cost assumptions, but live execution was the dealbreaker. Spreads widened around announcements, fills landed away from intended prices, and slippage ate into the move the strategy needed. **That’s why I shelved it: the execution conditions weren’t workable across the brokers I tried.** [My closeout note](../docs/provenance.md#macroimpulse-closeout-clarification)
+**The reason I shelved MacroImpulse was live execution: large spreads, poor fills and slippage around news releases.** Across brokers, orders filled away from their intended prices, and too much of the move disappeared into execution. The historical results looked encouraging under their stated cost assumptions, but those assumptions did not reflect the conditions I actually faced.
 
-This was a practical trading decision, not a new broker-by-broker measurement of live execution costs. The figures below show what the historical tests established and why those results were not enough.
+This is a practical trading decision, not a measured broker-by-broker slippage study. The figures below show what the historical tests established, and why those results were not enough.
 
 ## How the orders worked
 
@@ -40,4 +40,4 @@ Those totals describe two legs of the same events during 2021–2024 development
 
 Controlled comparisons with a reference strategy checked order triggers, stops and exits using the same ticks and parameters. They helped establish whether the implementation followed its intended rules. They could not establish whether a live trade during a news release would receive an economically viable fill. [Implementation checks](../docs/evidence.md#b08)
 
-The public [aggregate data](../data/macro-public.json) and [figure renderer](../scripts/render_macro.py) reproduce these historical exhibits. Replaying the trades requires the original quotes and execution code. The [contribution record](../docs/ownership.md) explains my role and the AI assistance used in the research.
+The public [aggregate data](../data/macro-public.json) and [figure renderer](../scripts/render_macro.py) reproduce these historical exhibits. Replaying the trades requires the original quotes and execution code.

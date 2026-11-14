@@ -55,7 +55,6 @@ def shell(title, content):
 <body>
 <a class="skip" href="#content">Skip to content</a>
 <header><div class="shell nav">
-  <a class="logo" href="index.html"><span class="mark" aria-hidden="true">TB</span>TradingBotHQ</a>
   <nav aria-label="Main navigation"><a href="index.html#research">Studies</a>
     <a href="index.html#method">Methods</a>
     {source('docs/evidence.md', 'Evidence')} <a href="{REPO}">GitHub</a></nav>
@@ -64,8 +63,7 @@ def shell(title, content):
 {content}
 </main>
 <footer><div class="shell foot"><span>TradingBotHQ · Public research</span>
-<nav aria-label="Publication information">{source('docs/ownership.md', 'Contributions')}
-{source('docs/provenance.md', 'Provenance')} {source('docs/limitations.md', 'Limitations')}</nav></div></footer>
+<nav aria-label="Publication information">{source('docs/provenance.md', 'Provenance')} {source('docs/limitations.md', 'Limitations')}</nav></div></footer>
 </body>
 </html>
 """.encode()

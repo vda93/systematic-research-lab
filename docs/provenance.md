@@ -1,6 +1,6 @@
 # Public evidence and reproducibility
 
-I directed the research on [ORBINDEX](../studies/orbindex.md) and [MacroImpulse](../studies/news-research.md). Some of the trading ideas and rules have earlier sources. The [contribution record](ownership.md) describes my decisions and the engineering, analysis and writing done with AI assistance.
+These studies build on trading ideas selected for testing; some reference rules have earlier sources. This page explains what the published evidence can establish, what readers can reproduce and what remains private.
 
 The [ORBINDEX extract](../data/orbindex-public.json) supplies the six published figures. The [source register](evidence.md#orbindex-publication-verification) distinguishes figures transcribed from verified original research packages from the follow-up evidence recovered through a handoff. Public scripts rebuild those exhibits. Independent replay of the market experiments would require the private quote history, trade records and implementations.
 

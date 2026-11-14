@@ -4,8 +4,6 @@
 
 Dependence-aware bootstrap inference repeatedly samples neighboring observations. The released [reference sampler](../src/srl/resampling.py) expands every selected block into observation indices and sums those values for every draw. This is straightforward to inspect but repeats work when blocks are long. The new optional kernel computes each possible block total once, then samples totals. It leaves the existing studies and their frozen outputs unchanged.
 
-This contribution was designed and implemented with AI assistance under the candidate's project requirements. Source, tests and measurements establish released behavior; they do not establish the candidate's unaided authorship or technical mastery. See [ownership](ownership.md).
-
 ## Mathematical contract
 
 Supply an ordered vector of already qualified observations, such as aligned treatment-minus-control daily differences. Alignment, missing-day handling, risk units and construction of those differences remain the caller's responsibility. Each observation counts once in the original mean; no weighting or calendar is inferred.

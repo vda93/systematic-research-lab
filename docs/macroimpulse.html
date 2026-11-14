@@ -9,7 +9,6 @@
 <body>
 <a class="skip" href="#content">Skip to content</a>
 <header><div class="shell nav">
-  <a class="logo" href="index.html"><span class="mark" aria-hidden="true">TB</span>TradingBotHQ</a>
   <nav aria-label="Main navigation"><a href="index.html#research">Studies</a>
     <a href="index.html#method">Methods</a>
     <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence</a> <a href="https://github.com/vda93/systematic-research-lab">GitHub</a></nav>
@@ -19,8 +18,8 @@
 <span aria-hidden="true"> / </span><span aria-current="page">MacroImpulse</span></nav>
 <article><div class="article-head"><h1>MacroImpulse: the execution problem</h1>
 <section id="section-1"><h2>Why I shelved this</h2>
-<p>MacroImpulse tried to capture the abrupt price moves around scheduled economic releases. Historical results were encouraging under their stated cost assumptions, but live execution was the dealbreaker. Spreads widened around announcements, fills landed away from intended prices, and slippage ate into the move the strategy needed. <strong>That’s why I shelved it: the execution conditions weren’t workable across the brokers I tried.</strong> <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/provenance.md#macroimpulse-closeout-clarification">My closeout note</a></p>
-<p>This was a practical trading decision, not a new broker-by-broker measurement of live execution costs. The figures below show what the historical tests established and why those results were not enough.</p>
+<p><strong>The reason I shelved MacroImpulse was live execution: large spreads, poor fills and slippage around news releases.</strong> Across brokers, orders filled away from their intended prices, and too much of the move disappeared into execution. The historical results looked encouraging under their stated cost assumptions, but those assumptions did not reflect the conditions I actually faced.</p>
+<p>This is a practical trading decision, not a measured broker-by-broker slippage study. The figures below show what the historical tests established, and why those results were not enough.</p>
 </section></div><div class="article-layout">
 <nav class="contents" aria-label="Article contents"><strong>In this study</strong><ul><li><a href="#section-1">Why I shelved this</a></li><li><a href="#section-2">How the orders worked</a></li><li><a href="#section-3">What the baseline earned</a></li><li><a href="#section-4">Would a spread filter help?</a></li><li><a href="#section-5">What happened when both sides triggered?</a></li><li><a href="#section-6">What the tests could verify</a></li></ul></nav>
 <div class="reading"><section id="section-2"><h2>How the orders worked</h2>
@@ -44,12 +43,11 @@
 </section>
 <section id="section-6"><h2>What the tests could verify</h2>
 <p>Controlled comparisons with a reference strategy checked order triggers, stops and exits using the same ticks and parameters. They helped establish whether the implementation followed its intended rules. They could not establish whether a live trade during a news release would receive an economically viable fill. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b08">Implementation checks</a></p>
-<p>The public <a href="https://github.com/vda93/systematic-research-lab/blob/main/data/macro-public.json">aggregate data</a> and <a href="https://github.com/vda93/systematic-research-lab/blob/main/scripts/render_macro.py">figure renderer</a> reproduce these historical exhibits. Replaying the trades requires the original quotes and execution code. The <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/ownership.md">contribution record</a> explains my role and the AI assistance used in the research.</p>
+<p>The public <a href="https://github.com/vda93/systematic-research-lab/blob/main/data/macro-public.json">aggregate data</a> and <a href="https://github.com/vda93/systematic-research-lab/blob/main/scripts/render_macro.py">figure renderer</a> reproduce these historical exhibits. Replaying the trades requires the original quotes and execution code.</p>
 </section></div></div></article>
 <nav class="related" aria-label="Study navigation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/news-research.md">Original Markdown article</a> · <a href="orbindex.html">ORBINDEX</a></nav>
 </main>
 <footer><div class="shell foot"><span>TradingBotHQ · Public research</span>
-<nav aria-label="Publication information"><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/ownership.md">Contributions</a>
-<a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/provenance.md">Provenance</a> <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/limitations.md">Limitations</a></nav></div></footer>
+<nav aria-label="Publication information"><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/provenance.md">Provenance</a> <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/limitations.md">Limitations</a></nav></div></footer>
 </body>
 </html>

@@ -14,4 +14,4 @@ MacroImpulse targeted abrupt moves around scheduled economic releases. The histo
 
 [Research library](studies/README.md) · [Evidence register](docs/evidence.md) · [Reproduction instructions](docs/security.md#reproduce-the-checks)
 
-The public code rebuilds figures from disclosed aggregates and runs synthetic methods examples. The historical backtests depend on private inputs. I directed the research questions and decisions, with AI assistance in engineering, analysis and writing. [Contribution record](docs/ownership.md) · [Provenance](docs/provenance.md)
+The public code rebuilds figures from disclosed aggregates and runs synthetic examples. The historical backtests depend on private inputs. I bring the research ideas, direct the investigations and make the final decisions. Code implementation uses AI assistance. [Sources and limitations](docs/provenance.md)

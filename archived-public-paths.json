@@ -110,5 +110,6 @@
   "tests/test_ebp_figures.py",
   "tests/test_historical.py",
   "tests/test_history_figures.py",
-  "tests/test_orb_figures.py"
+  "tests/test_orb_figures.py",
+  "docs/ownership.md"
 ]

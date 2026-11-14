@@ -182,6 +182,14 @@ class PublicationAuditTests(unittest.TestCase):
         self.assertFalse(archived('docs/orb.html', blob, merge))
         self.assertFalse(archived(page, '0' * 40, merge))
 
+    def test_ownership_page_is_retired_without_erasing_git_history(self):
+        root = Path(__file__).resolve().parents[1]
+        archived = json.loads((root / 'archived-public-paths.json').read_text())
+        current = json.loads((root / 'release-files.json').read_text())
+        self.assertIn('docs/ownership.md', archived)
+        self.assertNotIn('docs/ownership.md', current)
+        self.assertFalse((root / 'docs/ownership.md').exists())
+
     def test_retired_inventory_rejects_path_substitution_and_overlap(self):
         from scripts.audit_public import valid_archive
 

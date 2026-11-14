@@ -10,4 +10,4 @@ I searched for opening times that worked across nearby settings, then tested the
 
 I wanted to capture the sharp move around a scheduled currency release. The study traces the order from its trigger to its fill and explains why spreads and slippage led me to shelve it. [Read MacroImpulse](../studies/news-research.md) · [Execution checks](evidence.md#b08) · [Filter results](evidence.md#b09) · [My closeout](provenance.md#macroimpulse-closeout-clarification)
 
-The [engineering notes](../studies/research-engineering.md) explain how the project tracks sources and tests implementations. The [contribution record](ownership.md) identifies my decisions and the work done with AI assistance.
+The [engineering notes](../studies/research-engineering.md) explain how the project tracks sources and tests implementations.

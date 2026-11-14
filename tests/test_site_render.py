@@ -86,8 +86,8 @@ class SiteRenderingTests(unittest.TestCase):
         macro = (ROOT / 'docs/macroimpulse.html').read_text(encoding='utf-8')
         self.assertIn('<h1>MacroImpulse: the execution problem</h1>', macro)
         self.assertIn('<h2>Why I shelved this</h2>', macro)
-        self.assertIn('spreads widened', macro.lower())
-        self.assertIn('fills landed away', macro.lower())
+        self.assertIn('large spreads, poor fills and slippage around news releases', macro.lower())
+        self.assertIn('orders filled away from their intended prices', macro.lower())
         self.assertIn('slippage', macro.lower())
         self.assertIn('Why I shelved this', landing)
         self.assertNotIn('Read the MacroImpulse study', landing)
@@ -102,6 +102,16 @@ class SiteRenderingTests(unittest.TestCase):
         self.assertIn('<h2>What the tests could verify</h2>', macro)
         self.assertIn('Why I shelved this', macro)
         self.assertIn('slippage', macro.lower())
+
+    def test_website_has_no_header_branding_and_shows_execution_reason(self):
+        for filename in ('index.html', 'orbindex.html', 'macroimpulse.html'):
+            html = (ROOT / 'docs' / filename).read_text(encoding='utf-8')
+            self.assertNotIn('class="logo"', html)
+            self.assertNotIn('class="mark"', html)
+            self.assertNotIn('docs/ownership.md', html)
+        macro = (ROOT / 'docs/macroimpulse.html').read_text(encoding='utf-8')
+        self.assertIn('large spreads, poor fills and slippage around news releases', macro)
+        self.assertIn('<strong>The reason I shelved MacroImpulse was live execution:', macro)
 
     def test_numeric_source_mutation_cannot_be_rendered_using_old_review(self):
         ledger = json.loads((ROOT / 'data/claim-registry.json').read_bytes())

@@ -2,7 +2,7 @@
 
 [Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Public inputs](../data/README.md)
 
-TradingBotHQ's AI-assisted engineering program built an offline analytics and closeout layer to trace research claims back to their evidence. It records source identities, evidence roles and verification checks, with a separate decision for public disclosure. The [ownership statement](../docs/ownership.md) explains project direction, automation and coding assistance; Git metadata alone cannot establish manual authorship. Software correctness, economic findings and permission to deploy each need their own evidence. [E1](../docs/evidence.md#e1)
+The research engineering tools track how claims connect to their evidence. They record source identities, sample roles and verification checks, with separate decisions for public disclosure. Software correctness, economic findings and permission to deploy each need their own evidence. [E1](../docs/evidence.md#e1)
 
 The independently authored public [Research OS implementation](../docs/research-os.md) checks asset hashes and disclosure metadata, preserves consumed sample roles and rejects invalid claims. It also builds deterministic review packs. Mutation tests show which states the code refuses. The private operational engine remains separate and is not certified by this public implementation.
 
