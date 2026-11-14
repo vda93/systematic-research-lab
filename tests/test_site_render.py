@@ -65,7 +65,7 @@ class SiteRenderingTests(unittest.TestCase):
                     (ROOT / "docs/plots" / path).read_bytes(),
                 )
         self.assertEqual(sum(line.startswith("| Portfolio") or line.startswith("| Market")
-                             for line in article.splitlines()), 3)
+                             for line in article.splitlines()), 4)
         self.assertIn("OOS_EXPLORATORY / POSSIBLE_PRIOR_EXPOSURE", article)
 
     def test_site_outputs_and_offline_figures_are_exact(self):
