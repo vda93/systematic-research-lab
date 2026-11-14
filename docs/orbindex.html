@@ -21,7 +21,6 @@
 <p class="lead">A timing search across three index markets led to three German-index portfolios. The later historical results changed the decision.</p>
 <p><strong>Decision.</strong> None of the frozen portfolios was promoted. Each lost fixed-volume EUR in the later historical comparison before additional commission or financing.</p>
 <p><strong>Main limitation.</strong> The later period may already have been inspected in other German-index research, so it cannot be treated as a completely fresh independent test. Broker-net returns also remain unverified.</p>
-<p class="citation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Complete research record</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence register</a></p>
 </div><div class="article-layout">
 <nav class="contents" aria-label="Article contents"><strong>In this study</strong>
 <ul><li><a href="#section-1">Where the candidates came from</a></li><li><a href="#section-2">Did the pattern hold across markets?</a></li><li><a href="#section-3">From individual trades to portfolios</a></li><li><a href="#section-4">What happened later</a></li><li><a href="#section-5">What the result means</a></li><li><a href="#verification">Data and verification</a></li></ul></nav>
@@ -30,16 +29,16 @@
 <p>On the German index, some favourable timings had nearby settings that also looked promising. That mattered more than a single isolated peak, but the evidence was sensitive to even modest additional costs.</p>
 <a class="chart" href="plots/orbindex-search.svg"><img src="plots/orbindex-search.svg" width="965" height="436" alt="German-index timing heatmap showing results across the local trading day" loading="lazy"></a>
 <p class="citation">The verified German-index heatmap shows one slice of the discovery search, not net broker profit. · <a href="plots/orbindex-search.svg">Open figure</a></p>
-<p class="citation">Evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">IX1</a></p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">Timing search</a></p>
 </section><section id="section-2"><h2>Did the pattern hold across markets?</h2>
 <p>Japan and the UK produced occasional positive configurations, but neither supplied a neighbourhood that passed the same robustness screen. The result applies to this particular rule and search, not to those markets generally.</p>
 <a class="chart" href="plots/orbindex-jp-uk-heatmaps.svg"><img src="plots/orbindex-jp-uk-heatmaps.svg" width="1022" height="605" alt="Japanese and UK index opening-range timing heatmaps across directions and range lengths" loading="lazy"></a>
 <p class="citation">The original cross-market heatmaps help distinguish isolated peaks from a supported region. · <a href="plots/orbindex-jp-uk-heatmaps.svg">Open figure</a></p>
-<p class="citation">Evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">IX1</a></p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">Timing search</a></p>
 </section><section id="section-3"><h2>From individual trades to portfolios</h2>
 <p>The German candidates were combined into three frozen portfolios. A shared pending-order or position slot mattered: an earlier order could block a later opportunity, so simply adding standalone backtest returns would have been misleading.</p>
 <p>Each portfolio was evaluated under those same order-ownership rules before being carried into the later historical comparison.</p>
-<p class="citation">Evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix2">IX2</a></p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix2">Portfolio simulation</a></p>
 </section><section id="section-4"><h2>What happened later</h2>
 <p>Across the 2024–July 2026 historical scenario, all three portfolios lost money in fixed-volume euros with Bid/Ask spread already included. The comparison below is gross of additional commission and financing; it is not verified historical broker-net profit.</p>
 <section class="table-scroll" tabindex="0" aria-label="Historical portfolio comparison"><table>
@@ -50,12 +49,12 @@
 </tbody></table></section>
 <a class="chart" href="plots/orbindex-economics.svg"><img src="plots/orbindex-economics.svg" width="965" height="461" alt="Discovery and later-period fixed-volume EUR results for three frozen German-index portfolios" loading="lazy"></a>
 <p class="citation">All three later monetary outcomes were negative before additional commission or financing. · <a href="plots/orbindex-economics.svg">Open figure</a></p>
-<p class="citation">Evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">IX3</a></p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">Later-period results</a></p>
 </section><section id="section-5"><h2>What the result means</h2>
 <p>The subsequent review found that spread costs contributed to weaker results, but unfavourable midquote movement mattered too. Breakouts could briefly move in the expected direction and still fail to finish as winners.</p>
 <p>The frozen portfolios were closed, not retuned using already-seen history. The finding is about these specific portfolios, not proof that opening-range strategies cannot work elsewhere.</p>
 <p>The later test is informative but not a pristine independent holdout, because some of its history may have been inspected in earlier research.</p>
-<p class="citation">Evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">IX3</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix4">IX4</a></p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">Later-period results</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix4">Follow-up analysis</a></p>
 </section><section id="verification"><h2>Data and verification</h2><p>The public figures can be rebuilt from released aggregates. The original market backtests require private quotes and implementations, so they cannot be independently rerun from this website.</p><p><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Complete research record</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/data/orbindex-public.json">Published aggregate data</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/security.md#reproduce-the-checks">Reproduce the figures</a></p></section></div>
 </div></article>
 <nav class="related" aria-label="Study navigation"><a href="macroimpulse.html">News-Release Trading</a></nav>

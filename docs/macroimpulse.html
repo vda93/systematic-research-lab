@@ -21,25 +21,24 @@
 <p class="lead">A historically promising strategy became impractical when traded around real news releases.</p>
 <p><strong>Decision.</strong> Shelved because live spreads, fills and slippage across brokers made the trading conditions unworkable.</p>
 <p><strong>Main limitation.</strong> This is a practical execution decision, not a verified broker-by-broker measurement of live trading costs. The historical tests used narrower cost assumptions.</p>
-<p class="citation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/news-research.md">Complete research record</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence register</a></p>
 </div><div class="article-layout">
 <nav class="contents" aria-label="Article contents"><strong>In this study</strong>
 <ul><li><a href="#section-1">Why I shelved this</a></li><li><a href="#section-2">What the strategy attempted</a></li><li><a href="#section-3">What the backtest could, and couldn&#x27;t, show</a></li><li><a href="#verification">Data and verification</a></li></ul></nav>
 <div class="reading"><section id="section-1"><h2>Why I shelved this</h2>
 <p>The problem was execution, not a lack of interesting historical signals. Around scheduled releases, spreads widened, orders filled away from intended prices and slippage consumed too much of the move. Those were the conditions faced across the brokers tried.</p>
 <p>That was enough to stop pursuing the strategy. It does not establish that every news-trading approach is unworkable, and there is no new verified broker-level slippage study behind this decision.</p>
-<p class="citation">Evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b08">B08</a></p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b08">Execution rules</a></p>
 </section><section id="section-2"><h2>What the strategy attempted</h2>
 <p>Before a scheduled release, the strategy placed triggers on both sides of the market. A sharp move could activate one side; a stop-out could leave the opposite trigger available. Bid and Ask prices, order timing and broker fills are central to whether such a setup can be traded.</p>
 <a class="chart" href="plots/macro-mechanics.svg"><img src="plots/macro-mechanics.svg" width="950" height="446" alt="Fictional two-sided order triggers with protective and possible opposite-side exits" loading="lazy"></a>
 <p class="citation">Conceptual order mechanics, not a measured historical fill or price path. · <a href="plots/macro-mechanics.svg">Open figure</a></p>
-<p class="citation">Evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b08">B08</a></p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b08">Execution rules</a></p>
 </section><section id="section-3"><h2>What the backtest could, and couldn&#x27;t, show</h2>
 <p>The 2023–2024 high-impact baseline recorded 1,396 trades and +$4,250.48 under historical spread-only accounting, before commission. That justified further investigation; it did not prove that trades could be filled at those prices during live releases.</p>
 <p>A separate spread-filter comparison removed profitable trades rather than improving the historical result. The tested interventions did not solve the execution conditions that ultimately mattered.</p>
 <a class="chart" href="plots/macro-baseline.svg"><img src="plots/macro-baseline.svg" width="922" height="425" alt="Historical FX news baseline trades and spread-only results by currency pair and year" loading="lazy"></a>
 <p class="citation">Historical spread-only outcomes must not be read as independently verified live profitability. · <a href="plots/macro-baseline.svg">Open figure</a></p>
-<p class="citation">Evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b09">B09</a></p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b09">Historical baseline</a></p>
 </section><section id="verification"><h2>Data and verification</h2><p>The public figures can be rebuilt from released aggregates. The original market backtests require private quotes and implementations, so they cannot be independently rerun from this website.</p><p><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/news-research.md">Complete research record</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/data/macro-public.json">Published aggregate data</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/security.md#reproduce-the-checks">Reproduce the figures</a></p></section></div>
 </div></article>
 <nav class="related" aria-label="Study navigation"><a href="orbindex.html">ORBINDEX</a></nav>
