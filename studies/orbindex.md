@@ -2,11 +2,11 @@
 
 [Research portfolio](../README.md) · [Evidence and limitations](../docs/evidence.md#ix1) · [Public figure data](../data/orbindex-public.json)
 
-An opening-range breakout trades a move beyond a range established at a particular time of day. I wanted to know whether that idea had a repeatable pattern across markets and start times, and whether any candidates would survive a later period after accounting for how orders interact and what trades cost.
+An opening-range breakout trades a move beyond a range established at a particular time of day. The question was whether neighbouring start times and different markets showed a repeatable pattern, and whether any candidates could survive a later test once order interactions and trading costs were considered.
 
 **Decision: CLOSE / REJECT these three portfolios for economic promotion.** In the later 2024–July 2026 historical period, **all three lost fixed-volume EUR before adding separate commission or financing assumptions**. Some still had slightly positive aggregate risk-normalized R, which is not the same as a profitable fixed-lot strategy. Historical broker-net performance remains unqualified. This is a negative result for the frozen strategies, not a claim that all ORBs are unprofitable. [OOS evidence](../docs/evidence.md#ix3)
 
-The search led from individual configurations to three portfolios, then to an execution check and a frozen later-period comparison. The portfolios looked promising in discovery, but their later fixed-volume results changed the decision. I closed the program without promoting a portfolio.
+The search led from individual configurations to three portfolios, then to an execution check and a frozen later-period comparison. The portfolios looked promising in discovery, but their later fixed-volume results ruled out economic promotion.
 
 ## Data universe and experiment identity
 
@@ -137,7 +137,7 @@ The DE30X source also showed abrupt historical spread regimes. All original Bid/
 
 The later period is labelled **`OOS_EXPLORATORY / POSSIBLE_PRIOR_EXPOSURE`**, because separate DE30 studies may already have inspected parts of the same historical record. It must not be marketed as a pristine independent holdout. The original weekly bootstrap was also shown uncalibrated under a path-dependent permanent risk halt; **no 95% significance or formal alpha confirmation is claimed here**. That prospective risk halt was not retroactively inserted into these historical OOS replications. The earlier discovery and later 2024–2026 outcome periods are now spent for this lineage. [Limitations](../docs/limitations.md)
 
-I closed the program without promoting a portfolio. The later comparison and the investigation of its failures show where the discovery evidence stopped supporting the original idea.
+None of the portfolios was promoted. The later comparison and investigation of its failures show where the discovery evidence stopped supporting the original idea.
 
 ## What is actually reproducible here?
 

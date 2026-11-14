@@ -36,7 +36,7 @@ An event that triggered both orders looked like a natural candidate to skip. Loo
 
 Those totals describe two legs of the same events during 2021–2024 development. Blocking every reversal would also have removed the recovery. The research did not support that change. [Study scope](../docs/evidence.md#b10)
 
-## What I could verify
+## What the tests could verify
 
 Controlled comparisons with a reference strategy checked order triggers, stops and exits using the same ticks and parameters. They helped establish whether the implementation followed its intended rules. They could not establish whether a live trade during a news release would receive an economically viable fill. [Implementation checks](../docs/evidence.md#b08)
 

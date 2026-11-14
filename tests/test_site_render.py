@@ -93,6 +93,16 @@ class SiteRenderingTests(unittest.TestCase):
         self.assertNotIn('Read the MacroImpulse study', landing)
         self.assertNotIn('the owner', macro.lower())
 
+    def test_research_voice_without_changing_decisions(self):
+        orb = (ROOT / 'docs/orbindex.html').read_text(encoding='utf-8')
+        macro = (ROOT / 'docs/macroimpulse.html').read_text(encoding='utf-8')
+        self.assertNotIn('I wanted to know whether that idea', orb)
+        self.assertNotIn('I closed the program without promoting', orb)
+        self.assertIn('None of the portfolios was promoted.', orb)
+        self.assertIn('<h2>What the tests could verify</h2>', macro)
+        self.assertIn('Why I shelved this', macro)
+        self.assertIn('slippage', macro.lower())
+
     def test_numeric_source_mutation_cannot_be_rendered_using_old_review(self):
         ledger = json.loads((ROOT / 'data/claim-registry.json').read_bytes())
         path = 'studies/orbindex.md'
