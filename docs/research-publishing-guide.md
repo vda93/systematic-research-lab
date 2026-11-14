@@ -14,4 +14,4 @@ Use this reading order for the article.
 - **Limitations.** Identify the uncertainty most likely to change the interpretation, such as sparse fills, an incomplete event calendar or unverified costs.
 - **Evidence and reproducibility.** Cite the exact source IDs for each principal finding and link the relevant register entries. Identify what readers can rebuild from disclosed aggregates, what a synthetic example illustrates and which findings rely on private reports.
 
-Before publication, review the quantitative paragraphs against their sources, update the [claim registry](../data/claim-registry.json) and [release inventory](../release-files.json), and run the [verification checks](security.md#reproduce-the-checks). Preserve the original sample labels, [source limitations](provenance.md) and [contribution disclosures](ownership.md).
+Before publication, review the quantitative paragraphs against their sources, update the [claim registry](../data/claim-registry.json) and [release inventory](../release-files.json), and run the [verification checks](security.md#reproduce-the-checks). Preserve the original sample labels and [source limitations](provenance.md).
