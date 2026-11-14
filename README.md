@@ -1,6 +1,6 @@
 # TradingBotHQ: systematic trading research
 
-I investigate whether familiar trading setups survive explicit rules, controls and trading costs. These four research programs include failed validation, unresolved mechanisms and a backtest whose event calendar could no longer support its conclusion.
+I investigate whether familiar trading setups survive explicit rules, controls and trading costs. These four research programs include failed validation, unresolved mechanisms and a strategy shelved because live execution was too costly.
 
 I direct the project's questions and priorities. Implementation, analysis and writing use AI assistance; the [contribution record](docs/ownership.md) separates documented decisions from unverified personal code authorship. The trading patterns have prior sources, retained in the private provenance records.
 
@@ -30,11 +30,11 @@ I searched **3,456** DE30/JP225/UK100 opening-range configurations across the 24
 
 ### MacroImpulse: news-driven event trading
 
-Scheduled economic releases can generate sharp price impulses, wider spreads and difficult fills. Several proposed execution filters failed their tests. Later calendar forensics found missing medium-impact coverage, invalidating a clean strategy verdict. The program remains shelved pending a qualified event universe and execution economics. [Study and results](studies/news-research.md) · [Calendar forensic case](studies/data-forensics.md)
+MacroImpulse was shelved because live execution across brokers produced wide fills, large spreads and slippage. The available execution conditions were insufficient for the strategy. Historical filter studies and a separate medium-impact calendar defect retain their own findings. [Study and results](studies/news-research.md) · [Calendar forensic case](studies/data-forensics.md)
 
-![MacroImpulse original calendar-forensic coverage: medium-impact source density falls while the different earlier extraction scopes remain explicitly unreconciled](figures/macro-calendar.svg)
+![Fictional MacroImpulse order-state schematic showing upper and lower triggers, Ask and Bid quote sides, and possible exits; no historical fills or measured slippage are depicted](figures/macro-mechanics.svg)
 
-Inspect the event mechanics, pair-year baseline, rejected spread filter, sequential reversals, commission sensitivity and calendar failure. [Figure evidence and blockers](docs/macro-visual-evidence.md).
+The schematic illustrates order mechanics. The article keeps the live execution decision separate from historical filter tests and calendar qualification. [Figure evidence and blockers](docs/macro-visual-evidence.md).
 
 The [NOWICK research](studies/nowick.md) remains available as a historical, non-featured archive. Its negative findings and original authorship limitations have not been deleted.
 
