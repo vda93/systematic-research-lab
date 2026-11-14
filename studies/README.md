@@ -28,7 +28,7 @@ Some portfolios still showed a positive result when price moves were scaled by i
 
 ## Could scheduled currency news be traded at the available fills?
 
-**MacroImpulse · Shelved over live execution.** The project owner reported wide fills, large spreads and slippage across brokers around scheduled releases. Those conditions made the strategy impractical to trade. [Owner’s closeout clarification](https://github.com/vda93/systematic-research-lab/blob/53c632004f4585e9381d6f21ffda89823f1f8c56/docs/provenance.md#macroimpulse-closeout-clarification)
+**MacroImpulse · Shelved over live execution.** The project owner reported wide fills, large spreads and slippage across brokers around scheduled releases. Those conditions made the strategy impractical to trade. [Owner’s closeout clarification](../docs/provenance.md#macroimpulse-closeout-clarification)
 
 A separate historical test relied on a calendar that missed medium-impact events. The missing releases left profitability on that event universe unresolved. The owner’s account describes a practical stopping decision. The historical reports quantify only their stated cost scenarios.
 

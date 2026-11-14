@@ -4,6 +4,8 @@
 
 A backtest can complete without execution errors and still answer the wrong scientific question. TradingBotHQ's MacroImpulse MediumImpact study encountered that problem when an apparently failed later-period evaluation was traced to a structural break in the event calendar. The adopted classification became **INVALID_DATA_UNIVERSE**. The failed mechanical output remains part of the record; its interpretation changed after data qualification. ([calendar-forensics record](../docs/evidence.md#b15))
 
+This page covers one medium-impact backtest. The broader MacroImpulse program was shelved because live execution across brokers produced wide fills, large spreads and slippage. The available execution conditions were insufficient for the strategy. [Owner's closeout clarification](../docs/provenance.md#macroimpulse-closeout-clarification)
+
 MacroImpulse is an event-driven news-straddle research system. This branch asked whether medium-impact releases supported a distinct opportunity set and whether a frozen measure of activity before a release improved stability. It was researched on retail FX broker data, with AUDUSD, EURUSD, GBPUSD and USDJPY in the primary candidate. This is an event-time experiment: its activity feature uses completed one-minute bars before the release, while execution depends on the quote stream. Calling it a generic “M1 strategy” would obscure that distinction. ([calendar record](../docs/evidence.md#b15), [medium-impact lineage](../docs/evidence.md#b14))
 
 ## Define the population before measuring the edge
