@@ -7,7 +7,7 @@ import json
 STUDIES = json.loads(r"""{
   "orbindex": {
     "name": "ORBINDEX",
-    "title": "ORBINDEX: promising opening times, negative later results",
+    "title": "ORBINDEX: promising timings, later losses",
     "technical": "studies/orbindex.md",
     "cover": "orbindex-economics.svg",
     "cover_alt": "Fixed-volume EUR outcomes in discovery and the later historical comparison",
@@ -120,7 +120,7 @@ STUDIES = json.loads(r"""{
   },
   "macroimpulse": {
     "name": "News-Release Trading",
-    "title": "News-Release Trading: why execution ended the experiment",
+    "title": "News-Release Trading: poor live execution",
     "technical": "studies/news-research.md",
     "cover": "macro-mechanics.svg",
     "cover_alt": "Conceptual buy-stop and sell-stop triggers around an economic release",

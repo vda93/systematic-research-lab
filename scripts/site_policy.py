@@ -29,7 +29,7 @@ PLOT_HASHES = {
 }
 # Review the complete local CSS before authorizing its bytes. This also covers
 # resource-bearing CSS syntax without maintaining a partial CSS parser.
-CSS_SHA256 = 'e1201d1d36947ad02503bf79d73ba141669190ebe5012842cd6c7c061f9467dd'
+CSS_SHA256 = 'd71e01824d1cc6d3c304a77b1d38bb07a94741f8cfc3d51b55c2691c1bcd043b'
 
 TAGS = set('html head body title meta link header div span nav main section article h1 h2 h3 '
            'p strong em code aside figure img figcaption footer ul li a table thead tbody tr th td'.split())

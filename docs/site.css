@@ -99,8 +99,7 @@ code { overflow-wrap: anywhere; }
   .article-layout, .cards { grid-template-columns: minmax(0,1fr); }
   .hero { padding: 2rem 0 1.6rem; }
   .article-layout { gap: .5rem; }
-  .contents { position: static; }
-  .contents ul { display: flex; flex-wrap: wrap; gap: .15rem 1rem; }
+  .contents { display: none; }
   .plot { height: clamp(10rem, 40vw, 14rem); grid-template-rows: minmax(0,1fr); }
   .card-body { padding: 1.2rem; }
   .related strong { display: block; }
