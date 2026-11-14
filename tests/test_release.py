@@ -90,5 +90,83 @@ class PublicationAuditTests(unittest.TestCase):
         self.assertTrue(text_findings('docs/index.html', page.replace(b'#research', b'https://example.com')))
         self.assertTrue(text_findings('docs/index.html', page + b'<script src="https://example.com"></script>'))
 
+    def test_site_accepts_only_static_markup_and_local_resources(self):
+        page = '<html><main><h1>Library</h1>{}</main></html>'
+        approved = [
+            '<a href="orb.html#results">Study</a>',
+            '<img src="plots/orb-summary.svg" alt="Validation results">',
+            '<link rel="stylesheet" href="site.css">',
+        ]
+        for item in approved:
+            with self.subTest(item=item):
+                self.assertEqual(text_findings('docs/ebp.html', page.format(item).encode()), [])
+        rejected = [
+            '<h2 onload="">Finding</h2>', "<p onerror=''>Finding</p>",
+            '<script></script>', '<p style="color: blue">Finding</p>',
+            '<a href="javascript:">Study</a>', '<a href="//example.com/">Study</a>',
+            '<link rel="stylesheet" href="https://example.com/theme.css">',
+            '<img src="https://github.com/vda93/systematic-research-lab" alt="Remote">',
+            '<a href="/orb.html">Study</a>', '<meta http-equiv="refresh" content="0">',
+        ]
+        for item in rejected:
+            with self.subTest(item=item):
+                self.assertTrue(text_findings('docs/index.html', page.format(item).encode()))
+        self.assertTrue(text_findings('docs/test.js', b''))
+        self.assertTrue(text_findings('docs/plots/unreviewed.svg', b'<svg/>'))
+        self.assertTrue(text_findings('docs/site.css', b'@import "https://example.com/theme.css";'))
+        self.assertEqual(text_findings('docs/.nojekyll', b''), [])
+        self.assertTrue(text_findings('docs/.nojekyll', b'unexpected'))
+
+    def test_site_links_require_a_real_page_and_fragment_in_the_release(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            docs = root / 'docs'
+            docs.mkdir()
+            paths = ['docs/index.html', 'docs/orb.html', 'docs/evidence.md', 'release-files.json']
+            (root / 'release-files.json').write_text(json.dumps(paths))
+            (docs / 'evidence.md').write_text('## O1\n')
+            base = '<html><main><h1>Question</h1>{}</main></html>'
+            (docs / 'orb.html').write_text(base.format('<h2 id="results">Results</h2>'))
+            evidence = 'https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md'
+            for target, status in [('orb.html#results', 'PASS'), (evidence+'#o1', 'PASS'),
+                                   ('orb.html#absent', 'FAIL'), ('ebp.html', 'FAIL'),
+                                   (evidence+'#missing', 'FAIL'), (evidence+'x', 'FAIL')]:
+                with self.subTest(target=target):
+                    (docs / 'index.html').write_text(base.format(f'<a href="{target}">Read</a>'))
+                    self.assertEqual(audit_directory(root)['status'], status)
+
+    def test_figure_copy_requires_the_registered_original_bytes(self):
+        source = Path(__file__).resolve().parents[1] / 'figures/orb-summary.svg'
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for directory in ['figures', 'docs/plots', 'data']:
+                (root / directory).mkdir(parents=True)
+            names = ['figures/orb-summary.svg', 'docs/plots/orb-summary.svg',
+                     'data/claim-registry.json', 'release-files.json']
+            original, copy, registry, inventory = [root / name for name in names]
+            inventory.write_text(json.dumps(names))
+            original.write_bytes(source.read_bytes())
+            copy.write_bytes(original.read_bytes())
+            registry.write_text(json.dumps({'figures': [{'path': names[0]}]}))
+            self.assertEqual(audit_directory(root)['status'], 'PASS')
+            copy.write_bytes(b'<svg/>')
+            self.assertEqual(audit_directory(root)['status'], 'FAIL')
+            copy.write_bytes(original.read_bytes())
+            registry.write_text(json.dumps({'figures': []}))
+            self.assertEqual(audit_directory(root)['status'], 'FAIL')
+
+    def test_legacy_landing_page_allowance_ends_at_its_original_merge(self):
+        from scripts.audit_public import is_archived_landing_page as archived
+
+        page = 'docs/index.html'
+        blob = '35b280c49072484b6f6379707bf87ef0f374b874'
+        introduction = '24d794f5efcc0ba8b3911c5452f47e6d23223de8'
+        merge = '4e787e90db81cc29336c163088c806b23bc6225c'
+        self.assertTrue(archived(page, blob, introduction))
+        self.assertTrue(archived(page, blob, merge))
+        self.assertFalse(archived(page, blob, 'f' * 40))
+        self.assertFalse(archived('docs/orb.html', blob, introduction))
+        self.assertFalse(archived(page, '0' * 40, introduction))
+
 if __name__ == '__main__':
     unittest.main()

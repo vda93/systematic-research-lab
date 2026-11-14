@@ -1,102 +1,67 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
-<title>Research library | TradingBotHQ</title>
-<meta name="description" content="Systematic trading research: explicit rules, rigorous controls, negative results, and clear limits on what the evidence supports.">
-<style>
-  :root { --ink:#182737; --secondary:#546475; --muted:#7a8793; --hair:#e1e7ec; --paper:#fbfcfd; --white:#fff; --blue:#246987; --soft:#eff5f8; }
-  * { box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { margin:0; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:var(--paper); line-height:1.55; -webkit-font-smoothing:antialiased; }
-  a { color:inherit; }
-  a:hover { color:var(--blue); }
-  .shell { width:min(1120px, calc(100% - 48px)); margin:auto; }
-  .skip-link { position:absolute; left:8px; top:-50px; z-index:10; color:#fff; background:#213e52; padding:9px 14px; } .skip-link:focus { top:8px; }
-  header { background:rgba(255,255,255,.94); border-bottom:1px solid var(--hair); }
-  .nav { min-height:72px; display:flex; justify-content:space-between; align-items:center; gap:22px; }
-  .logo { display:flex; gap:12px; align-items:center; text-decoration:none; font-size:.94rem; font-weight:750; letter-spacing:-.02em; }
-  .mark { display:grid; place-items:center; background:#213e52; color:white; font-weight:800; width:35px; height:35px; border-radius:7px; font-size:.8rem; }
-  .logo small { color:var(--muted); font-weight:500; padding-left:8px; border-left:1px solid var(--hair); }
-  .nav-links { display:flex; gap:24px; color:var(--secondary); font-size:.85rem; }
-  .nav-links a { text-decoration:none; }
-  .hero { padding:82px 0 68px; border-bottom:1px solid var(--hair); display:grid; grid-template-columns:minmax(0,1.7fr) minmax(235px,.8fr); align-items:end; gap:56px; }
-  .eyebrow { color:var(--blue); font-size:.75rem; text-transform:uppercase; font-weight:750; letter-spacing:.11em; margin:0 0 20px; }
-  h1 { font-family:Georgia, "Times New Roman", serif; font-weight:500; letter-spacing:-.047em; font-size:clamp(2.75rem, 5.35vw, 4.9rem); line-height:1.085; margin:0 0 26px; max-width:810px; }
-  .lead { max-width:670px; font-size:1.03rem; color:var(--secondary); margin:0; line-height:1.85; }
-  .hero-note { border-left:2px solid #9ebac8; padding:10px 0 10px 24px; font-size:.86rem; color:var(--secondary); }
-  .hero-note strong { display:block; color:var(--ink); font-weight:700; margin-bottom:9px; }
-  .hero-note p { margin:0; }
-  .summary-strip { padding:22px 0; display:flex; flex-wrap:wrap; gap:16px 40px; align-items:center; color:var(--secondary); font-size:.83rem; border-bottom:1px solid var(--hair); }
-  .summary-strip strong { color:var(--ink); }
-  main { padding-bottom:82px; }
-  .section-head { display:flex; align-items:end; justify-content:space-between; margin:71px 0 26px; gap:24px; }
-  .section-head h2 { font-family:Georgia, "Times New Roman", serif; font-size:2.05rem; line-height:1.2; letter-spacing:-.035em; font-weight:500; margin:0; }
-  .section-head p { color:var(--secondary); font-size:.88rem; margin:0; max-width:430px; }
-  .studies { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
-  .study { background:var(--white); border:1px solid var(--hair); border-radius:11px; overflow:hidden; display:flex; flex-direction:column; min-width:0; transition:box-shadow .2s ease, transform .2s ease; }
-  .study:hover { box-shadow:0 12px 40px rgba(27,57,77,.075); transform:translateY(-2px); }
-  .plot { position:relative; height:220px; width:100%; background:linear-gradient(140deg,#f3f7f8,#eef2f5); display:flex; align-items:center; justify-content:center; overflow:hidden; border-bottom:1px solid var(--hair); }
-  .plot-fallback { color:#6d8795; text-align:center; font-size:.85rem; font-weight:700; line-height:1.9; }
-  .plot-fallback span { display:block; font-size:.7rem; font-weight:500; color:#92a5af; }
-  .plot img { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:contain; padding:12px 16px; background:#f2f6f8; }
-  .study-content { padding:27px 29px 28px; display:flex; flex-direction:column; flex:1; }
-  .meta { display:flex; gap:14px; justify-content:space-between; align-items:center; color:var(--muted); font-size:.75rem; margin-bottom:16px; }
-  .subject { font-weight:650; letter-spacing:.035em; text-transform:uppercase; }
-  .state { display:inline-flex; align-items:center; gap:6px; color:#475a67; background:#f4f6f7; border:1px solid #e7eaec; border-radius:20px; padding:3px 10px; white-space:nowrap; }
-  .state:before { content:""; width:6px; height:6px; border-radius:50%; background:#899aa4; }
-  h3 { font-family:Georgia, "Times New Roman", serif; font-size:1.57rem; line-height:1.24; font-weight:500; letter-spacing:-.025em; margin:0 0 14px; }
-  .study .question { font-weight:650; font-size:.89rem; margin:0 0 10px; }
-  .study .find { color:var(--secondary); font-size:.88rem; line-height:1.72; margin:0 0 22px; flex:1; }
-  .study a.detail { display:inline-flex; align-items:center; gap:8px; color:var(--blue); font-weight:700; text-decoration:none; font-size:.85rem; width:fit-content; }
-  .detail span { transition:transform .2s; }
-  .detail:hover span { transform:translateX(3px); }
-  .method-wrap { margin-top:80px; padding:41px 45px 44px; background:#eef3f6; border-radius:11px; }
-  .method-wrap h2 { font-family:Georgia, "Times New Roman", serif; font-size:1.95rem; font-weight:500; letter-spacing:-.025em; margin:0 0 16px; }
-  .method-wrap p { font-size:.89rem; color:var(--secondary); margin:0; max-width:800px; line-height:1.8; }
-  .steps { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:18px; margin:30px 0 27px; }
-  .step { border-top:1px solid #bacbd4; padding-top:12px; color:#40596b; font-size:.8rem; font-weight:600; }
-  .step b { color:var(--blue); font-size:.68rem; display:block; margin-bottom:5px; letter-spacing:.06em; }
-  .method-links { margin-top:20px; display:flex; flex-wrap:wrap; gap:12px 28px; font-size:.86rem; font-weight:650; }
-  .method-links a { color:var(--blue); text-decoration:none; }
-  footer { background:#fff; border-top:1px solid var(--hair); padding:34px 0 46px; font-size:.76rem; color:var(--muted); }
-  footer .shell { display:flex; justify-content:space-between; gap:22px; flex-wrap:wrap; }
-  footer p { max-width:740px; margin:0; }
-  @media(max-width:820px) { .hero { grid-template-columns:1fr; gap:34px; padding:56px 0 42px; } .studies { grid-template-columns:1fr; } .steps { grid-template-columns:repeat(3,minmax(0,1fr)); } .section-head { align-items:start; flex-direction:column; } }
-  @media(max-width:520px) { .shell { width:calc(100% - 34px); } .nav { min-height:66px; } .nav-links { gap:12px; font-size:.75rem; } .logo small { display:none; } .plot { height:190px; } .study-content { padding:21px 21px 25px; } .steps { grid-template-columns:repeat(2,minmax(0,1fr)); } .method-wrap { padding:29px 25px; } .summary-strip { gap:10px 20px; } }
-  :focus-visible { outline:3px solid #246987; outline-offset:3px; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } .study, .detail span { transition:none; } .study:hover { transform:none; } }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research library | TradingBotHQ</title>
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
-<a class="skip-link" href="#research">Skip to research</a>
+<a class="skip" href="#content">Skip to content</a>
 <header><div class="shell nav">
-  <a class="logo" href="https://github.com/vda93/systematic-research-lab"><span class="mark">TB</span>TradingBotHQ <small>Research</small></a>
-  <nav class="nav-links" aria-label="Navigation"><a href="#research">Studies</a><a href="#method">Methods</a><a href="https://github.com/vda93/systematic-research-lab">GitHub ↗</a></nav>
+  <a class="logo" href="index.html"><span class="mark" aria-hidden="true">TB</span>TradingBotHQ</a>
+  <nav aria-label="Main navigation"><a href="index.html#research">Library</a>
+    <a href="index.html#method">Methods</a>
+    <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence</a> <a href="https://github.com/vda93/systematic-research-lab">GitHub</a></nav>
 </div></header>
-<div class="shell">
-  <section class="hero" aria-labelledby="headline">
-    <div>
-      <p class="eyebrow">Independent systematic trading research</p>
-      <h1 id="headline">Good research knows when to stop.</h1>
-      <p class="lead">I turn trading ideas into explicit experiments, challenge their assumptions, and publish what happened. That includes failures, inconclusive results, and data problems that are easy to hide.</p>
-    </div>
-    <div class="hero-note"><strong>Read the conclusion first.</strong><p>Every case begins with a question and a decision. The rules, evidence, and limitations remain available for a deeper audit.</p></div>
-  </section>
-  <div class="summary-strip"><span><strong>Four</strong> featured programs</span><span><strong>Honest decisions</strong> including closed and unresolved work</span><span><strong>Public methods</strong> with documented replay limits</span></div>
-  <main>
-    <div class="section-head" id="research"><h2>Research library</h2><p>Separate experiments. Separate conclusions. No leaderboard built from incomparable backtests.</p></div>
-    <section class="studies" aria-label="Featured research studies">
-      <article class="study"><div class="plot"><div class="plot-fallback">Source-bound research figure<span>Loads from public GitHub when online</span></div><img style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'" loading="lazy" src="https://raw.githubusercontent.com/vda93/systematic-research-lab/main/figures/orb-summary.svg" alt="ORB published figure comparing index validation and gold economic qualification"></div><div class="study-content"><div class="meta"><span class="subject">Opening range</span><span class="state">Closed for deployment</span></div><h3>Does an opening range add predictive information?</h3><p class="question">Can a breakout survive controls and independent validation?</p><p class="find">An encouraging Nasdaq validation did not persist in the next frozen block. A separate gold implementation passed parity checks but did not clear economic qualification. Unrun successors remain unadjudicated.</p><a class="detail" href="https://github.com/vda93/systematic-research-lab/blob/main/studies/opening-range.md">Read the research <span aria-hidden="true">→</span></a></div></article>
-      <article class="study"><div class="plot"><div class="plot-fallback">Source-bound research figure<span>Loads from public GitHub when online</span></div><img style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'" loading="lazy" src="https://raw.githubusercontent.com/vda93/systematic-research-lab/main/figures/ebp-order-policy.svg" alt="EBP historical order-policy comparison showing how pending-order lifetime changes which signals reach closed trades"></div><div class="study-content"><div class="meta"><span class="subject">Candlestick patterns</span><span class="state">No winner established</span></div><h3>Do engulfing candles support retracement entries?</h3><p class="question">What happens when pending orders occupy the next entry slot?</p><p class="find">Changing order lifetime dramatically changed eligible trades. The repaired timeframe study was generally weak; no order interpretation was selected as a winner.</p><a class="detail" href="https://github.com/vda93/systematic-research-lab/blob/main/studies/engulfing-and-support.md">Read the research <span aria-hidden="true">→</span></a></div></article>
-      <article class="study"><div class="plot"><div class="plot-fallback">Source-bound research figure<span>Loads from public GitHub when online</span></div><img style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'" loading="lazy" src="https://raw.githubusercontent.com/vda93/systematic-research-lab/main/figures/orbindex-economics.svg" alt="ORBINDEX historical fixed-lot EUR scenario comparison for three frozen German index portfolios"></div><div class="study-content"><div class="meta"><span class="subject">Index timing</span><span class="state">Portfolios rejected</span></div><h3>Can opening-range timing survive a later test?</h3><p class="question">Do apparent timing regions remain useful after order ownership and costs?</p><p class="find">A broad search of overlapping opening times produced three frozen DE30 portfolios. All three lost fixed-lot EUR in the later historical scenario before additional commission or financing. Broker-net economics and holdout independence remain unqualified.</p><a class="detail" href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Read the research <span aria-hidden="true">→</span></a></div></article>
-      <article class="study"><div class="plot"><div class="plot-fallback">Source-bound research figure<span>Loads from public GitHub when online</span></div><img style="display:none" onload="this.style.display='block'" onerror="this.style.display='none'" loading="lazy" src="https://raw.githubusercontent.com/vda93/systematic-research-lab/main/figures/macro-mechanics.svg" alt="Conceptual, fictional schematic of news-event order mechanics"></div><div class="study-content"><div class="meta"><span class="subject">Event trading</span><span class="state">Shelved</span></div><h3>Can scheduled news moves survive real execution?</h3><p class="question">Do event triggers remain economically usable after fills and calendar checks?</p><p class="find">The program was shelved because live fills, spreads and slippage were impractical across brokers. Separately, missing medium-impact calendar events made one historical evaluation inconclusive. The illustration is conceptual.</p><a class="detail" href="https://github.com/vda93/systematic-research-lab/blob/main/studies/news-research.md">Read the research <span aria-hidden="true">→</span></a></div></article>
-    </section>
-    <section class="method-wrap" id="method" aria-labelledby="method-title"><h2 id="method-title">The method behind the verdict</h2><p>A polished chart is a communication tool, not a qualification gate. Each finding keeps its experiment identity, evaluation period, accounting scope, controls, and unresolved limitations.</p><div class="steps"><div class="step"><b>DISCOVER</b>Research question</div><div class="step"><b>DEFINE</b>Executable rules</div><div class="step"><b>CHALLENGE</b>Controls and costs</div><div class="step"><b>VALIDATE</b>Frozen evaluation</div><div class="step"><b>DECIDE</b>Preserve the outcome</div></div><div class="method-links"><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/empirical-methods.md">Empirical methods ↗</a><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence register ↗</a><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/ownership.md">Contributions ↗</a><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/limitations.md">Limitations ↗</a></div></section>
-  </main>
-</div>
-<footer><div class="shell"><p>These summaries present reported historical findings, not live results or trading advice. Public code reproduces selected aggregates and synthetic examples; it cannot independently replay the private market-strategy backtests.</p><span>TradingBotHQ · Research library</span></div></footer>
+<main id="content" tabindex="-1" class="shell">
+<section class="hero">
+  <div><p class="kicker">Systematic trading research</p><h1>Research library</h1>
+  <p class="lead">What happens to a trading idea when its rules, costs and validation period are fixed?</p></div>
+  <aside class="note"><strong>About the evidence</strong><p>Public code reproduces selected figures and synthetic examples.
+  Replaying the original market experiments requires private records.</p><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/provenance.md">Reproduction boundaries</a></aside>
+</section>
+<section id="research"><h2>Featured studies</h2><div class="cards"><article class="card">
+  <div class="plot"><img src="plots/orb-summary.svg" width="418" height="562" alt="Compact empirical finding: USTEC passed its first validation block and failed its second; the separate gold monetary ledger shows recorded financing erased both candidates&#x27; Discovery gains" loading="lazy"></div>
+  <div class="card-body"><p class="kicker">Opening Range Breakout (ORB)</p>
+  <h3><a href="orb.html">Does the opening range tell us more than the time of day?</a></h3>
+  <p>The Nasdaq candidate passed its first validation block and failed its second. In a separate gold study, the implementations agreed, but financing erased the discovery gains of both candidates in the monetary comparison.</p>
+  <p class="qualification"><strong>Limitation</strong> Some successor candidates never reached an out-of-sample test and still have no verdict.</p>
+  <p class="verdict">Tested branches closed for deployment.</p>
+  <a class="read" href="orb.html">Read the ORB study <span aria-hidden="true">→</span></a></div>
+</article><article class="card">
+  <div class="plot"><img src="plots/ebp-order-policy.svg" width="965" height="439" alt="Four H002 contracts compare GTC and replacement pending policies under completed-H4 and intrabar break-even. Closed-trade counts are 3, 1257, 3 and 1297; replacement totals are negative and the positive GTC totals have only three trades." loading="lazy"></div>
+  <div class="card-body"><p class="kicker">Engulfing Bar Play (EBP)</p>
+  <h3><a href="ebp.html">Which engulfing-candle signals actually reach a trade?</a></h3>
+  <p>On four-hour gold signals, leaving a retracement order open could block later setups, while replacing it admitted a different set of trades.</p>
+  <p class="qualification"><strong>Limitation</strong> The positive good-till-cancelled variants each closed only 3 trades. That left too little evidence to choose an order policy.</p>
+  <p class="verdict">All order-policy variants parked.</p>
+  <a class="read" href="ebp.html">Read the EBP study <span aria-hidden="true">→</span></a></div>
+</article><article class="card">
+  <div class="plot"><img src="plots/orbindex-economics.svg" width="965" height="461" alt="Discovery versus OOS fixed-lot EUR and the three unchanged OOS economic scenarios" loading="lazy"></div>
+  <div class="card-body"><p class="kicker">ORBINDEX</p>
+  <h3><a href="orbindex.html">Did promising opening times hold up in a later period?</a></h3>
+  <p>The DE30, JP225 and UK100 discovery search compared overlapping opening times. All three DE30 portfolios subsequently lost euros at fixed lot size before additional commission or financing.</p>
+  <p class="qualification"><strong>Limitation</strong> Historical broker-net profit remains unverified, and earlier research may already have examined part of the later period.</p>
+  <p class="verdict">Three frozen German index portfolios rejected for economic promotion.</p>
+  <a class="read" href="orbindex.html">Read the ORBINDEX study <span aria-hidden="true">→</span></a></div>
+</article><article class="card">
+  <div class="plot"><img src="plots/macro-mechanics.svg" width="950" height="446" alt="Conceptual fictional two-sided event-order schematic: symbolic upper buy-stop and lower sell-stop levels before a scheduled announcement, Ask and Bid spread context, then possible protective or trailing exit and a later opposite trigger. No historical price path or observed latency is shown." loading="lazy"></div>
+  <div class="card-body"><p class="kicker">MacroImpulse</p>
+  <h3><a href="macroimpulse.html">Could scheduled currency news be traded at the available fills?</a></h3>
+  <p>The project owner reported wide fills, large spreads and slippage across brokers around scheduled releases. Those conditions made the strategy impractical to trade.</p>
+  <p class="qualification"><strong>Limitation</strong> A separate historical test relied on a calendar that missed medium-impact events. The missing releases left profitability on that event universe unresolved.</p>
+  <p class="verdict">Shelved over live execution.</p>
+  <a class="read" href="macroimpulse.html">Read the MacroImpulse study <span aria-hidden="true">→</span></a></div>
+</article></div></section>
+<section class="method" id="method"><h2>Research methods</h2>
+<p>Each study identifies the signal, order rules and costs, then explains which control or later sample determined the decision.</p>
+<nav aria-label="Methods and sources"><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/empirical-methods.md">Empirical methods</a>
+<a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence register</a> <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/security.md#reproduce-the-checks">Reproduce the exhibits</a></nav></section>
+<section class="archive"><h2>Historical archive</h2><p><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/nowick.md">NOWICK and ANTI-NOWICK</a> · Matched-candle study and original closeout.</p></section>
+</main>
+<footer><div class="shell foot"><span>TradingBotHQ · Public research</span>
+<nav aria-label="Publication information"><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/ownership.md">Contributions</a>
+<a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/provenance.md">Provenance</a> <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/limitations.md">Limitations</a></nav></div></footer>
 </body>
 </html>
