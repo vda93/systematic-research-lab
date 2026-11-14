@@ -93,13 +93,14 @@ class PublicationAuditTests(unittest.TestCase):
     def test_site_accepts_only_static_markup_and_local_resources(self):
         page = '<html><main><h1>Library</h1>{}</main></html>'
         approved = [
-            '<a href="orb.html#results">Study</a>',
-            '<img src="plots/orb-summary.svg" alt="Validation results">',
+            '<a href="orbindex.html#results">Study</a>',
+            '<img src="plots/orbindex-economics.svg" alt="Validation results">',
             '<link rel="stylesheet" href="site.css">',
+            '<table><thead><tr><th scope="col">Sample</th></tr></thead></table>',
         ]
         for item in approved:
             with self.subTest(item=item):
-                self.assertEqual(text_findings('docs/ebp.html', page.format(item).encode()), [])
+                self.assertEqual(text_findings('docs/macroimpulse.html', page.format(item).encode()), [])
         rejected = [
             '<h2 onload="">Finding</h2>', "<p onerror=''>Finding</p>",
             '<script></script>', '<p style="color: blue">Finding</p>',
@@ -111,6 +112,8 @@ class PublicationAuditTests(unittest.TestCase):
         for item in rejected:
             with self.subTest(item=item):
                 self.assertTrue(text_findings('docs/index.html', page.format(item).encode()))
+        self.assertTrue(text_findings('docs/orb.html', page.format('').encode()))
+        self.assertTrue(text_findings('docs/ebp.html', page.format('').encode()))
         self.assertTrue(text_findings('docs/test.js', b''))
         self.assertTrue(text_findings('docs/plots/unreviewed.svg', b'<svg/>'))
         self.assertTrue(text_findings('docs/site.css', b'@import "https://example.com/theme.css";'))
@@ -122,26 +125,26 @@ class PublicationAuditTests(unittest.TestCase):
             root = Path(tmp)
             docs = root / 'docs'
             docs.mkdir()
-            paths = ['docs/index.html', 'docs/orb.html', 'docs/evidence.md', 'release-files.json']
+            paths = ['docs/index.html', 'docs/orbindex.html', 'docs/evidence.md', 'release-files.json']
             (root / 'release-files.json').write_text(json.dumps(paths))
             (docs / 'evidence.md').write_text('## O1\n')
             base = '<html><main><h1>Question</h1>{}</main></html>'
-            (docs / 'orb.html').write_text(base.format('<h2 id="results">Results</h2>'))
+            (docs / 'orbindex.html').write_text(base.format('<h2 id="results">Results</h2>'))
             evidence = 'https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md'
-            for target, status in [('orb.html#results', 'PASS'), (evidence+'#o1', 'PASS'),
-                                   ('orb.html#absent', 'FAIL'), ('ebp.html', 'FAIL'),
+            for target, status in [('orbindex.html#results', 'PASS'), (evidence+'#o1', 'PASS'),
+                                   ('orbindex.html#absent', 'FAIL'), ('macroimpulse.html', 'FAIL'), ('ebp.html', 'FAIL'),
                                    (evidence+'#missing', 'FAIL'), (evidence+'x', 'FAIL')]:
                 with self.subTest(target=target):
                     (docs / 'index.html').write_text(base.format(f'<a href="{target}">Read</a>'))
                     self.assertEqual(audit_directory(root)['status'], status)
 
     def test_figure_copy_requires_the_registered_original_bytes(self):
-        source = Path(__file__).resolve().parents[1] / 'figures/orb-summary.svg'
+        source = Path(__file__).resolve().parents[1] / 'figures/orbindex-economics.svg'
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             for directory in ['figures', 'docs/plots', 'data']:
                 (root / directory).mkdir(parents=True)
-            names = ['figures/orb-summary.svg', 'docs/plots/orb-summary.svg',
+            names = ['figures/orbindex-economics.svg', 'docs/plots/orbindex-economics.svg',
                      'data/claim-registry.json', 'release-files.json']
             original, copy, registry, inventory = [root / name for name in names]
             inventory.write_text(json.dumps(names))
@@ -156,7 +159,7 @@ class PublicationAuditTests(unittest.TestCase):
             self.assertEqual(audit_directory(root)['status'], 'FAIL')
 
     def test_legacy_landing_page_allowance_ends_at_its_original_merge(self):
-        from scripts.audit_public import is_archived_landing_page as archived
+        from scripts.audit_public import is_archived_site_blob as archived
 
         page = 'docs/index.html'
         blob = '35b280c49072484b6f6379707bf87ef0f374b874'
@@ -167,6 +170,27 @@ class PublicationAuditTests(unittest.TestCase):
         self.assertFalse(archived(page, blob, 'f' * 40))
         self.assertFalse(archived('docs/orb.html', blob, introduction))
         self.assertFalse(archived(page, '0' * 40, introduction))
+
+    def test_previous_site_bytes_are_bound_to_revision_and_path(self):
+        from scripts.audit_public import is_archived_site_blob as archived
+
+        page = 'docs/ebp.html'
+        blob = '775f1c99184447447f04423a5be35e7b55999702'
+        merge = 'b1a8b0874625dac0d11074c718ec25e8e154d63a'
+        self.assertTrue(archived(page, blob, merge))
+        self.assertFalse(archived(page, blob, 'f' * 40))
+        self.assertFalse(archived('docs/orb.html', blob, merge))
+        self.assertFalse(archived(page, '0' * 40, merge))
+
+    def test_retired_inventory_rejects_path_substitution_and_overlap(self):
+        from scripts.audit_public import valid_archive
+
+        root = Path(__file__).resolve().parents[1]
+        paths = json.loads((root / 'archived-public-paths.json').read_bytes())
+        self.assertTrue(valid_archive(paths, {'README.md'}))
+        self.assertFalse(valid_archive(paths, {'studies/nowick.md'}))
+        self.assertFalse(valid_archive(paths + [paths[0]], set()))
+        self.assertFalse(valid_archive(['another.md', *paths[1:]], set()))
 
 if __name__ == '__main__':
     unittest.main()

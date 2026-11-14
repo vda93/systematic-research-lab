@@ -10,26 +10,180 @@
 <a class="skip" href="#content">Skip to content</a>
 <header><div class="shell nav">
   <a class="logo" href="index.html"><span class="mark" aria-hidden="true">TB</span>TradingBotHQ</a>
-  <nav aria-label="Main navigation"><a href="index.html#research">Library</a>
+  <nav aria-label="Main navigation"><a href="index.html#research">Studies</a>
     <a href="index.html#method">Methods</a>
     <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence</a> <a href="https://github.com/vda93/systematic-research-lab">GitHub</a></nav>
 </div></header>
 <main id="content" tabindex="-1" class="shell">
-<nav class="crumb" aria-label="Breadcrumb"><a href="index.html#research">Research library</a>
+<nav class="crumb" aria-label="Breadcrumb"><a href="index.html#research">Studies</a>
 <span aria-hidden="true"> / </span><span aria-current="page">ORBINDEX</span></nav>
-<article><div class="article-head"><p class="kicker">ORBINDEX</p>
-<h1>Did promising opening times hold up in a later period?</h1><p class="lead">The DE30, JP225 and UK100 discovery search compared overlapping opening times. All three DE30 portfolios subsequently lost euros at fixed lot size before additional commission or financing.</p>
-<div class="summary"><p class="verdict"><strong>Decision</strong> Three frozen German index portfolios rejected for economic promotion.</p>
-<p><strong>Limitation</strong> Historical broker-net profit remains unverified, and earlier research may already have examined part of the later period.</p></div>
-<p class="citation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Original Markdown article</a> · <a href="#sources">Evidence and reproducibility</a></p></div>
-<div class="article-layout"><nav class="contents" aria-label="Article contents"><strong>In this study</strong>
-<ul><li><a href="#mechanism">Trading mechanism</a></li><li><a href="#design">Test design</a></li><li><a href="#results">Results and figures</a></li><li><a href="#controls">Controls and robustness</a></li><li><a href="#validation">Later validation</a></li><li><a href="#limits">Limitations</a></li><li><a href="#decision">Final decision</a></li><li><a href="#sources">Sources and reproducibility</a></li></ul></nav>
-<div class="reading"><section id="mechanism"><h2>The opening-time hypothesis</h2><p>An opening-range breakout trades a move beyond a range established at a particular time of day. I wanted to know whether that idea had a repeatable pattern across markets and start times, and whether any candidates would survive a later period after accounting for how orders interact and what trades cost.</p><p class="citation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Source text</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">IX1</a></p></section><section id="design"><h2>Index quotes and local clocks</h2><p>The source was <strong>Exness historical Bid/Ask quotes</strong>, imported into a separate <strong>MT5 custom-symbol research environment</strong>. DE30X, JP225X and UK100X represent German, Japanese and UK index CFD research symbols. Local clocks were Europe/Berlin, Asia/Tokyo and Europe/London, respectively, with historical timezone rules. Exchange-session anchor eligibility and observed CFD quotes were kept distinct: a no-quote window does not prove a scheduled broker closure. The discovery used February 2020 through November 2023 signal origins and December 2023 burnoff. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">Source and frozen protocol</a></p><p class="citation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Source text</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">IX1</a></p></section><section id="results"><h2>Fixed-volume euros and price risk</h2><p>Why can A have <strong>+12.87R but −€18.73</strong>? Each trade&#x27;s R divides its realised price result by <em>its own</em> initial risk distance. Fixed-lot EUR instead weights price movement by contract size and lot volume. Summing unequal-risk R observations is not the same as summing fixed-volume money outcomes. That difference follows from the different weighting of each trade; it does not require a commission to explain it.</p><p class="citation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Source text</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">IX3</a></p><figure><a href="plots/orbindex-economics.svg"><img src="plots/orbindex-economics.svg" width="965" height="461" alt="Discovery versus OOS fixed-lot EUR and the three unchanged OOS economic scenarios" loading="lazy"></a><figcaption><strong>Reported historical figure</strong> · All three portfolios failed later-period fixed-lot economics. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix2">IX2</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">IX3</a> · <a href="plots/orbindex-economics.svg">Full size</a></figcaption></figure></section><section id="controls"><h2>Could neighbouring start times confirm the peak?</h2><p>The same discovery search found no qualifying neighbourhood on JP225X or UK100X. A few cells were positive, but their neighbours tell a less encouraging story. These results cover February 2020 through November 2023 signal origins, with December burnoff. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">Discovery source</a></p><p class="citation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Source text</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">IX1</a></p><p>B&#x27;s extra OR5 short made its gross discovery curve look stronger, but that sleeve came from an isolated timing peak without the original neighbouring-duration support. We retained all three configurations unchanged when deciding to inspect later data. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix2">Portfolio evidence</a></p><p class="citation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Source text</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix2">IX2</a></p></section><section id="validation"><h2>Testing the frozen portfolios on later history</h2><p>The discovery results justified testing the frozen alternatives on a later period. The historical evaluation admitted signal origins on <strong>January 1, 2024 through July 31, 2026</strong> (inclusive), with <strong>August 2026 as burnoff only</strong>. All three portfolios ended flat; no exit was fabricated at the cutoff. Two eligible March 2026 dates had no source quotes. The result package reported <strong>36,707,393 source quote observations</strong> over the execution period. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">Frozen OOS evidence</a></p><p class="citation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Source text</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">IX3</a></p><p>In 2025 alone, A lost <strong>44.32R</strong>, B <strong>53.72R</strong> and C <strong>63.23R</strong>. B&#x27;s incremental OR5 trades delivered <strong>−4.27R</strong> on the later period. None met the economic promotion criteria under the original scenarios. The portfolios stayed as frozen; we did not replace A with B, select a year cutoff or tune a filter after seeing the returns.</p><p class="citation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Source text</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">IX3</a></p></section><section id="limits"><h2>Broker economics and possible prior exposure</h2><p>The featured <a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">ORBINDEX study</a> was chosen after a large correlated development search. Its later 2024–2026 comparison carries possible prior historical exposure; the underlying custom-symbol physical template is not the full historical Exness broker contract. All fixed-lot EUR scenarios were negative in the later period, but broker-net accounting and a calibrated alpha significance claim remain unqualified. Subsequent quote-path forensics cannot retrospectively restore independent OOS status.</p><p class="citation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/limitations.md">Source text</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">IX1</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix2">IX2</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">IX3</a></p></section><section id="decision"><h2>Portfolio closeout</h2><p>I closed the program without promoting a portfolio. The later comparison and the investigation of its failures show where the discovery evidence stopped supporting the original idea.</p><p class="citation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Source text</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">IX3</a></p></section>
-<section id="sources"><h2>Source evidence and reproducibility</h2><p><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Original Markdown article</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">IX1</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix2">IX2</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">IX3</a></p>
-<p>The public scripts rebuild selected exhibits from disclosed aggregates. The historical backtests require private inputs and implementations.</p>
-<p><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/security.md#reproduce-the-checks">Reproduction instructions</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/provenance.md">Source boundaries</a></p></section>
-</div></div></article>
-<nav class="related" aria-label="Related studies"><strong>Other studies</strong> <a href="orb.html">Opening Range Breakout (ORB)</a> · <a href="ebp.html">Engulfing Bar Play (EBP)</a> · <a href="macroimpulse.html">MacroImpulse</a></nav>
+<article><div class="article-head"><h1>ORBINDEX: from a 3,456-cell search to an out-of-sample rejection</h1>
+<p><a href="index.html">Research portfolio</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">Evidence and limitations</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/data/orbindex-public.json">Public figure data</a></p>
+<p>An opening-range breakout trades a move beyond a range established at a particular time of day. I wanted to know whether that idea had a repeatable pattern across markets and start times, and whether any candidates would survive a later period after accounting for how orders interact and what trades cost.</p>
+<p><strong>Decision: CLOSE / REJECT these three portfolios for economic promotion.</strong> In the later 2024–July 2026 historical period, <strong>all three lost fixed-volume EUR before adding separate commission or financing assumptions</strong>. Some still had slightly positive aggregate risk-normalized R, which is not the same as a profitable fixed-lot strategy. Historical broker-net performance remains unqualified. This is a negative result for the frozen strategies, not a claim that all ORBs are unprofitable. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">OOS evidence</a></p>
+<p>The search led from individual configurations to three portfolios, then to an execution check and a frozen later-period comparison. The portfolios looked promising in discovery, but their later fixed-volume results changed the decision. I closed the program without promoting a portfolio.</p>
+</div><div class="article-layout">
+<nav class="contents" aria-label="Article contents"><strong>In this study</strong><ul><li><a href="#section-1">Data universe and experiment identity</a></li><li><a href="#section-2">1. Search the clock, not just the market open</a></li><li><a href="#section-3">2. Combine signals under one account-level execution constraint</a></li><li><a href="#section-4">3. Open the later period once, and show every result</a></li><li><a href="#section-5">4. Investigate the failure without rescuing the strategy</a></li><li><a href="#section-6">5. Scientific disposition and why it matters</a></li><li><a href="#section-7">What is actually reproducible here?</a></li></ul></nav>
+<div class="reading"><section id="section-1"><h2>Data universe and experiment identity</h2>
+<p>The source was <strong>Exness historical Bid/Ask quotes</strong>, imported into a separate <strong>MT5 custom-symbol research environment</strong>. DE30X, JP225X and UK100X represent German, Japanese and UK index CFD research symbols. Local clocks were Europe/Berlin, Asia/Tokyo and Europe/London, respectively, with historical timezone rules. Exchange-session anchor eligibility and observed CFD quotes were kept distinct: a no-quote window does not prove a scheduled broker closure. The discovery used February 2020 through November 2023 signal origins and December 2023 burnoff. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">Source and frozen protocol</a></p>
+<p><strong>EXP-ORBINDEX-001</strong> was the earlier cash-open-centred discovery screen; <strong>EXP-ORBINDEX-002</strong> expanded the local clock under a new frozen design. Both belong to this index investigation. The older gold/US-technology ORB program is a separate experiment lineage; its outcomes are not pooled with ORBINDEX. Original market data, account records and strategy execution code remain private.</p>
+</section>
+<section id="section-2"><h2>1. Search the clock, not just the market open</h2>
+<p>How did the timing search behave across the day, and did nearby configurations agree?</p>
+<p><a class="chart" href="plots/orbindex-search.svg"><img src="plots/orbindex-search.svg" width="965" height="436" alt="Price-positive fractions by market and the DE30X LONG discovery heatmap across the local 24-hour clock" loading="lazy"></a></p>
+<p>To see whether the opening time mattered, the frozen discovery searched <strong>DE30X, JP225X and UK100X</strong> using 96 quarter-hour local anchors, four opening-range (OR) durations (<strong>5, 15, 30, 60 minutes</strong>) and three independently simulated directions (<strong>LONG, SHORT, BOTH</strong>): <strong>3,456 configurations</strong>. There were <strong>3,338 scientifically valid</strong> cells and <strong>118 invalid</strong> cells. Scientific validity here refers to defined price-path outcomes, not historical broker certification. The invalid cells each contained at least one zero-initial-risk trade, making normalized R undefined; they were retained as terminal invalid states, without capping the denominator or assigning zero returns. All these configurations were evaluated in the already-inspected <strong>February 2020 through November 2023 discovery period</strong>, with December reserved for position burnoff. Many configurations overlap in trades and market conditions, so the search contains correlated alternatives, not 3,456 independent experiments. Selecting the strongest cell alone would risk mistaking selection noise for a repeatable effect. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">Discovery protocol</a></p>
+<p>Each eligible day built its range from quoted Bid prices within the fixed opening-range window. The unchanged engine then used a completed five-minute-bar breakout, an entry window limited to two hours after the range, market-versus-retest rules, the <strong>opening-range midpoint stop</strong>, and a target <strong>one range width beyond the broken boundary</strong>. Long entries and short exits used Ask; short entries and long exits used Bid. Trades could remain open overnight, and qualifying signals consumed their sessions. The scientific price-path model and the later physical-session model were kept separate; the latter was checked on bounded MT5 real-tick fixtures, <strong>not</strong> certified as the complete historical broker. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix2">Mechanics and execution qualifications</a></p>
+<p>To look for support beyond a single peak, the prespecified <em>descriptive</em> screen required every cell in a rectangle of <strong>three adjacent quarter-hour anchors × two adjacent OR durations</strong> to be valid and uncensored, contain at least <strong>100 filled trades</strong>, have positive aggregate price R and price profit factor above one, and be positive in at least <strong>three of four originating-signal-year buckets</strong>. Adjacent durations follow the frozen ordered set; anchor triplets do not wrap across midnight. Overlapping passing rectangles form connected display regions under the frozen adjacency rule. DE30X had <strong>10 passing rectangles forming six connected regions at zero extra debit</strong>; <strong>none</strong> survived a hypothetical additional <strong>0.05R per trade</strong> across every member. Japan and the UK yielded no qualifying regions. Their absence is a result for this frozen mechanism, not for the indices in general. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">Discovery evidence</a></p>
+<p><a href="plots/orbindex-search.svg">Open Figure 1 at full resolution</a>.</p>
+<p><strong>Figure 1.</strong> The right-hand heatmap is deliberately just the <strong>DE30X LONG slice</strong> of the larger searched surface, showing mean price R per filled trade, not a net-profit map. Colour is clipped for legibility and invalid cells are not interpreted as zero-return strategies.</p>
+<h3>Cross-market falsification: Japan and UK</h3>
+<p>The same discovery search found no qualifying neighbourhood on JP225X or UK100X. A few cells were positive, but their neighbours tell a less encouraging story. These results cover February 2020 through November 2023 signal origins, with December burnoff. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">Discovery source</a></p>
+<p><a class="chart" href="plots/orbindex-jp-uk-heatmaps.svg"><img src="plots/orbindex-jp-uk-heatmaps.svg" width="1022" height="605" alt="JP225X and UK100X mean gross price R across BOTH, LONG and SHORT: four OR lengths and all 96 local anchors in each panel" loading="lazy"></a></p>
+<p><a href="plots/orbindex-jp-uk-heatmaps.svg">Open the cross-market figure (Figure 6) at full resolution</a>.</p>
+<p>This figure was added after the original five and retains its later number.</p>
+<p>Figure 6 uses one zero-centred colour scale across all six panels, clipped below −0.70R and above +0.25R per trade. Grey means the mean is undefined: 95 scientific-invalid cells plus two scientifically valid JP cells with no completed trades. Those two cells are 06:15 Tokyo OR5 LONG and OR15 SHORT. Missing means remain distinct from zero returns. The public JSON retains the unclipped values and missing-state classifications.</p>
+<section class="table-scroll" tabindex="0" aria-label="Table 1: 1. Search the clock, not just the market open"><table><thead><tr><th scope="col">Market and local clock</th>
+<th scope="col">Scientifically valid</th>
+<th scope="col">Scientific invalid</th>
+<th scope="col">Positive total-price-R cells among valid cells</th>
+<th scope="col">Passing six-cell rectangles / connected regions</th>
+</tr>
+</thead>
+<tbody><tr><td>JP225X — Asia/Tokyo</td>
+<td>1,089</td>
+<td>63</td>
+<td>20</td>
+<td>0 / 0</td>
+</tr>
+<tr><td>UK100X — Europe/London</td>
+<td>1,120</td>
+<td>32</td>
+<td>1</td>
+<td>0 / 0</td>
+</tr>
+</tbody>
+</table></section><p>Japan&#x27;s 08:30 OR60 BOTH cell produced <strong>+41.254R over 676 trades</strong>. Its neighbours did not support the peak: 08:15 OR60 BOTH returned <strong>−28.340R</strong>, while 08:30 OR30 BOTH returned <strong>−115.258R</strong>. The 08:45 OR60 BOTH cell had positive R in only <strong>two of four signal-year buckets</strong>, below the required three. Selecting the strongest cell would discard the frozen requirement that all six members of a three-anchor by two-duration rectangle pass together.</p>
+<p>The UK&#x27;s only positive cell, <strong>22:15 OR15 SHORT</strong>, returned <strong>+0.1705R over eight trades</strong>, below the minimum of 100 filled trades. Its opening range had quotes on only <strong>16 of 967 eligible exchange-session dates</strong>. This sparse observed sample cannot qualify a region; the absent opening quotes do not establish a historical broker closure schedule.</p>
+<p>The tested ORB mechanism was therefore <strong>not advanced on either market</strong>. This decision applies to its frozen geometry, clock grid, directions and screening rule. It establishes neither a general inability to trade these indices nor a JP/UK OOS or historically qualified broker-net result. DE30X alone supplied supported discovery regions for the subsequent portfolio comparisons; its selected portfolios later failed economic promotion.</p>
+</section>
+<section id="section-3"><h2>2. Combine signals under one account-level execution constraint</h2>
+<p>What happens to the candidates when they compete for one order or position slot?</p>
+<p><a class="chart" href="plots/orbindex-portfolios.svg"><img src="plots/orbindex-portfolios.svg" width="965" height="475" alt="The three frozen DE30X portfolio clock schedules and their native discovery price R" loading="lazy"></a></p>
+<p>The German regions gave us candidates to combine, but adding their individual results would ignore interactions between trades. A pending order can block another entry, and an overnight position changes the next day&#x27;s opportunity set. The research therefore used a synchronized, ordered-tick portfolio simulator with <strong>one shared pending-order-or-position slot</strong> per portfolio, deterministic collisions, source Bid/Ask, physical trading-session availability and no forced closure at midnight. Model=4 bounded fixtures checked specified execution paths. These are simulated positions, not broker-deal statements. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix2">Portfolio and parity evidence</a></p>
+<p>An early parity check exposed a tester-boundary problem: when the final quote coincided with tester teardown, the native tape omitted it. A buffered fixture separated teardown from the original scientific cutoff, while preserving the observation window and the failed evidence. The corrected bounded fixtures matched; they still do not certify the historical broker environment. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix2">Execution evidence</a></p>
+<p>Start times below use <strong>Europe/Berlin</strong>, with historical DST handling. <code>BOTH</code> is one bidirectional strategy sleeve, not an arithmetic sum of two separate results.</p>
+<section class="table-scroll" tabindex="0" aria-label="Table 2: 2. Combine signals under one account-level execution constraint"><table><thead><tr><th scope="col">Portfolio</th>
+<th scope="col">Frozen local-time sleeves</th>
+<th scope="col">Role at the later OOS gate</th>
+</tr>
+</thead>
+<tbody><tr><td><strong>A</strong></td>
+<td>07:45 OR30 LONG; 09:30 OR60 LONG; 13:15 OR15 LONG</td>
+<td>Previously nominated primary reference</td>
+</tr>
+<tr><td><strong>B</strong></td>
+<td>A plus 13:30 OR5 SHORT</td>
+<td>Explicitly <strong>post-selected</strong> OR5 increment</td>
+</tr>
+<tr><td><strong>C</strong></td>
+<td>07:45 OR30 LONG; 09:30 OR60 LONG; 10:30 OR30 BOTH; 12:45 OR30 LONG; 13:15 OR15 BOTH; 13:45 OR15 LONG</td>
+<td>Broader timing-region comparison</td>
+</tr>
+</tbody>
+</table></section><p><a href="plots/orbindex-portfolios.svg">Open Figure 2 at full resolution</a>.</p>
+<p><strong>Figure 2.</strong> Blocks show opening-range observation windows, not position holding times. The alternatives are simulated separately; the shared order slot applies within each portfolio.</p>
+<p>The synchronized 2020–2023 discovery runs produced the following fixed-volume gross results. They reflect the shared order slot within each portfolio.</p>
+<section class="table-scroll" tabindex="0" aria-label="Table 3: 2. Combine signals under one account-level execution constraint"><table><thead><tr><th scope="col">Portfolio</th>
+<th scope="col">Trades</th>
+<th scope="col">Gross price R</th>
+<th scope="col">Gross EUR at 0.07 lots</th>
+</tr>
+</thead>
+<tbody><tr><td>A</td>
+<td>1,320</td>
+<td>+187.94R</td>
+<td>+€266.30</td>
+</tr>
+<tr><td>B</td>
+<td>1,661</td>
+<td>+261.11R</td>
+<td>+€300.59</td>
+</tr>
+<tr><td>C</td>
+<td>2,372</td>
+<td>+238.73R</td>
+<td>+€273.69</td>
+</tr>
+</tbody>
+</table></section><p>B&#x27;s extra OR5 short made its gross discovery curve look stronger, but that sleeve came from an isolated timing peak without the original neighbouring-duration support. We retained all three configurations unchanged when deciding to inspect later data. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix2">Portfolio evidence</a></p>
+</section>
+<section id="section-4"><h2>3. Open the later period once, and show every result</h2>
+<p>The next question was whether the discovery trajectories would persist in the later sample.</p>
+<p><a class="chart" href="plots/orbindex-curves.svg"><img src="plots/orbindex-curves.svg" width="979" height="468" alt="Separate cumulative gross price R curves during discovery and the 2024 through July 2026 OOS scenario" loading="lazy"></a></p>
+<p>The discovery results justified testing the frozen alternatives on a later period. The historical evaluation admitted signal origins on <strong>January 1, 2024 through July 31, 2026</strong> (inclusive), with <strong>August 2026 as burnoff only</strong>. All three portfolios ended flat; no exit was fabricated at the cutoff. Two eligible March 2026 dates had no source quotes. The result package reported <strong>36,707,393 source quote observations</strong> over the execution period. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">Frozen OOS evidence</a></p>
+<p><a href="plots/orbindex-curves.svg">Open Figure 3 at full resolution</a>.</p>
+<p><strong>Figure 3.</strong> Both samples begin at zero and show <strong>quarter-end snapshots plus the final burnoff total</strong> from the native cumulative ledgers. Straight segments between snapshots omit intraperiod fluctuations and cannot measure full closed-trade drawdown. The right-hand chart resets cumulative R at OOS start, making the <strong>2025 drawdown</strong> visible without joining the samples into an account equity curve. The discovery and OOS samples have different lengths, so the height of a cumulative line is <strong>not an annualized comparison</strong>.</p>
+<section class="table-scroll" tabindex="0" aria-label="Table 4: 3. Open the later period once, and show every result"><table><thead><tr><th scope="col">Portfolio</th>
+<th scope="col">Discovery: trades / gross price R</th>
+<th scope="col">Later period: trades / gross price R</th>
+<th scope="col">Later gross EUR at 0.07 lots</th>
+<th scope="col">S1 EUR</th>
+<th scope="col">S2 EUR</th>
+<th scope="col">Later max closed DD</th>
+</tr>
+</thead>
+<tbody><tr><td><strong>A</strong></td>
+<td>1,320 / +187.94R</td>
+<td>962 / +12.87R</td>
+<td><strong>−€18.73</strong></td>
+<td>−€60.81</td>
+<td>−€170.24</td>
+<td>54.60R</td>
+</tr>
+<tr><td><strong>B</strong></td>
+<td>1,661 / +261.11R</td>
+<td>1,213 / +8.60R</td>
+<td><strong>−€15.34</strong></td>
+<td>−€68.41</td>
+<td>−€205.51</td>
+<td>63.45R</td>
+</tr>
+<tr><td><strong>C</strong></td>
+<td>2,372 / +238.73R</td>
+<td>1,655 / −7.66R</td>
+<td><strong>−€159.73</strong></td>
+<td>−€232.14</td>
+<td>−€418.89</td>
+<td>87.16R</td>
+</tr>
+</tbody>
+</table></section><p><strong>S0:</strong> gross executable Bid/Ask prices, with spread already included, reference volume 0.07 lots. <strong>S1:</strong> additionally applies a <em>current</em> DE30 Raw Spread commission proxy (USD 0.625 per lot round trip, assuming USD 1 = EUR 1) and zero financing. <strong>S2:</strong> a separate conservative hypothetical EUR 2/lot round-trip commission, negative-long financing and extra adverse execution of 0.1 index points per side. These are prespecified <strong>scenarios</strong>, not actual historical account charges, dividend postings or historically certified execution. Historical broker <strong>NET = INDETERMINATE</strong>. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">Economic evidence</a></p>
+<p>The monetary comparison asks a different question from the R curves: what did the same fixed volume earn under each cost scenario?</p>
+<p><a class="chart" href="plots/orbindex-economics.svg"><img src="plots/orbindex-economics.svg" width="965" height="461" alt="Discovery versus OOS fixed-lot EUR and the three unchanged OOS economic scenarios" loading="lazy"></a></p>
+<p><a href="plots/orbindex-economics.svg">Open Figure 4 at full resolution</a>.</p>
+<p><strong>Figure 4.</strong> Both panels use fixed volume and EUR, with zero visible. Discovery and later periods differ in length; their monetary totals are not annualized.</p>
+<p>Why can A have <strong>+12.87R but −€18.73</strong>? Each trade&#x27;s R divides its realised price result by <em>its own</em> initial risk distance. Fixed-lot EUR instead weights price movement by contract size and lot volume. Summing unequal-risk R observations is not the same as summing fixed-volume money outcomes. That difference follows from the different weighting of each trade; it does not require a commission to explain it.</p>
+<p>In 2025 alone, A lost <strong>44.32R</strong>, B <strong>53.72R</strong> and C <strong>63.23R</strong>. B&#x27;s incremental OR5 trades delivered <strong>−4.27R</strong> on the later period. None met the economic promotion criteria under the original scenarios. The portfolios stayed as frozen; we did not replace A with B, select a year cutoff or tune a filter after seeing the returns.</p>
+</section>
+<section id="section-5"><h2>4. Investigate the failure without rescuing the strategy</h2>
+<p>To understand the poor later results, the forensic review examined the observed quote paths and trade follow-through.</p>
+<p><a class="chart" href="plots/orbindex-forensics.svg"><img src="plots/orbindex-forensics.svg" width="958" height="461" alt="Portfolio A&#x27;s OOS annual midquote and spread return components plus favourable-excursion conversion" loading="lazy"></a></p>
+<p><a href="plots/orbindex-forensics.svg">Open Figure 5 at full resolution</a>.</p>
+<p><strong>Figure 5.</strong> A subsequent read-only forensic pass reconstructed <strong>3,830 portfolio-trade records across A/B/C</strong> (including trades shared between alternatives) from their recorded quote paths. For A in 2025, <strong>−44.32R</strong> of realised price outcome decomposed into <strong>−32.53R signed midquote movement</strong> and <strong>11.79R of embedded Bid/Ask spread deduction</strong>. The spread deduction grew, but <strong>the same trades also lost on midquote movement alone</strong>. A continued losing during late 2025 months when source quotes were predominantly zero-spread. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix4">Post-OOS forensic evidence</a></p>
+<p>The proportion of A trades that <em>ever</em> reached +0.5R while open barely changed: <strong>66.7% in 2024 versus 66.5% in 2025</strong>. But among those trades, the share that finished as winners fell from <strong>61.6% to 52.0%</strong>. More breakouts briefly moved favourably before reversing or failing to reach their full target. This is a descriptive observation conditional on accepted trades. It does not establish causality or authorize a new profit-taking rule using spent data.</p>
+<p>The DE30X source also showed abrupt historical spread regimes. All original Bid/Ask ticks in the earlier source-integrity audit matched the imported copies; the shifts were upstream of the importer. Neither that integrity check nor the bounded MT5 fixture parity proves the prices were executable under every historically effective broker condition.</p>
+</section>
+<section id="section-6"><h2>5. Scientific disposition and why it matters</h2>
+<p><strong>Closed, not promoted.</strong> The exact A/B/C portfolios failed to generalize economically under the frozen later-period scenarios. Both source economics and breakout follow-through deteriorated. The correlated search and subsequent selection limit what the discovery result can establish on its own. The evidence cannot uniquely attribute the later failure to overfitting, market regime change or broker pricing policy.</p>
+<p>The later period is labelled <strong><code>OOS_EXPLORATORY / POSSIBLE_PRIOR_EXPOSURE</code></strong>, because separate DE30 studies may already have inspected parts of the same historical record. It must not be marketed as a pristine independent holdout. The original weekly bootstrap was also shown uncalibrated under a path-dependent permanent risk halt; <strong>no 95% significance or formal alpha confirmation is claimed here</strong>. That prospective risk halt was not retroactively inserted into these historical OOS replications. The earlier discovery and later 2024–2026 outcome periods are now spent for this lineage. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/limitations.md">Limitations</a></p>
+<p>I closed the program without promoting a portfolio. The later comparison and the investigation of its failures show where the discovery evidence stopped supporting the original idea.</p>
+</section>
+<section id="section-7"><h2>What is actually reproducible here?</h2>
+<p>The checked-in <a href="https://github.com/vda93/systematic-research-lab/blob/main/data/orbindex-public.json">historical aggregate JSON</a> holds the reviewed cell-level visualization slices, portfolio definitions, quarter-end gross R sequences, economic totals and post-OOS forensic summaries. The <a href="https://github.com/vda93/systematic-research-lab/blob/main/scripts/render_orbindex.py">figure renderer</a> regenerates all six SVGs from that file. The public figure tests verify schema, source linkage, XML parsing and data-to-figure response. The public release checks aggregate consistency and presentation. Replaying the private historical backtests requires their protected original sources and execution code. Each figure can be opened at full resolution; the adjacent text and tables retain its main findings for narrow-screen and nonvisual reading.</p>
+<p><strong>Publication verification.</strong> The discovery, synchronized-discovery and frozen-OOS review archives were independently rehashed and CRC-checked for this publication. All search classifications and the displayed heatmap values, native totals and quarterly sequences were cross-checked against their original retained outputs. The original post-OOS forensic archive was unavailable to this publication pass; its summaries and recorded archive hash are reproduced from the hash-verified owner-supplied handoff, without claiming independent source-byte authentication. See <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#orbindex-publication-verification">verification scope</a>.</p>
+<p><strong>Research and authorship.</strong> I directed the questions, selected which configurations and portfolios to investigate, approved the fixed OOS A/B/C comparison, and made the closeout decision. Much of the engine implementation, analysis, reporting, testing and drafting used AI assistance. Original ORB trading concepts are not claimed as my invention; exact line-by-line manual authorship is not inferred from Git metadata. See <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/ownership.md">ownership and attribution</a> and the <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix1">source register</a>.</p>
+</section></div></div></article>
+<nav class="related" aria-label="Study navigation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orbindex.md">Original Markdown article</a> · <a href="macroimpulse.html">MacroImpulse</a></nav>
 </main>
 <footer><div class="shell foot"><span>TradingBotHQ · Public research</span>
 <nav aria-label="Publication information"><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/ownership.md">Contributions</a>

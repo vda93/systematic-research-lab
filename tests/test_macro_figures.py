@@ -76,16 +76,20 @@ class MacroFigureTests(unittest.TestCase):
         paths=lambda b: re.findall(rb'<path d="([^"]+)"',b)
         assert paths(original) != paths(changed)
 
-    def test_svg_accessibility_and_full_resolution_article_links(self):
+    def test_svg_accessibility_and_featured_article_figures(self):
         article = (ROOT/'studies/news-research.md').read_text(encoding='utf-8')
-        assert 'â' not in article
+        assert 'Ã¢' not in article
+        featured = {'macro-mechanics.svg', 'macro-baseline.svg', 'macro-spread-filter.svg', 'macro-sequential.svg'}
+        embedded = re.findall(r'!\[[^\]]*\]\(\.\./figures/([^/)]+)\)', article)
+        self.assertCountEqual(embedded, featured)
         for name,content in renderer().build_figures(dataset()).items():
             root=ET.fromstring(content); ns={'s':'http://www.w3.org/2000/svg'}
             assert root.get('role') == 'img'
             assert root.get('aria-labelledby') == 'macro-title macro-desc'
             assert root.find('s:title',ns).get('id') == 'macro-title'
             assert root.find('s:desc',ns).get('id') == 'macro-desc'
-            assert f'[Open full-resolution SVG](../figures/{name})' in article
+            if name not in featured:
+                self.assertNotIn('../figures/' + name, article)
 
     def test_original_baseline_matrix_reconciles(self):
         d = dataset()["baseline"]

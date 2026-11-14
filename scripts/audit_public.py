@@ -19,17 +19,31 @@ else:  # Direct CLI invocation: python scripts/audit_public.py
 
 GENERATED = {'.git', '.venv', '__pycache__', 'build', 'dist', '.pytest_cache'}
 
-# Historical public removals retained for complete Git-history inspection.
-RETIRED_PORTFOLIO_PATHS = ["DATA_LICENSE.md","data/ecb-acquisition.json","data/ecb-execution.json","data/ecb-fx-reference.csv","data/ecb-fx-results.json","experiments/ecb-fx-mom20-protocol.md","experiments/fx-evidence.json","figures/de30.svg","figures/fx-reference.svg","figures/momentum.svg","results/fx-tables.md","scripts/fx_study.py","scripts/render_fx.py","src/srl/fx_study.py","studies/de30-continuation.md","studies/fx-reference-momentum.md","studies/momentum-and-execution.md","studies/momentum-continuation.md","studies/reconstruction-and-timing.md","studies/vwap-research.md","tests/test_fx_figure.py","tests/test_fx_study.py"]
+# Digest of sorted newline-separated paths in the reviewed depublication ledger.
+# A file count or name prefix cannot establish which exact paths were removed.
+ARCHIVE_SHA256 = 'cdd44f8c480ac68a1bef453e3f9b9544c7d15c4769da6dd35f4d1dfc10f7112c'
+LAST_FOUR_STUDY_MAIN = 'b1a8b0874625dac0d11074c718ec25e8e154d63a'
 TEXT_TYPES = {'.py', '.json', '.md', '.toml', '.svg', '.yml', '.yaml', '.txt'}
 SPECIAL = {'LICENSE', '.gitignore', '.gitattributes'}
-# V001 was published with inline handlers. Only these exact historical trees
-# may retain that archived blob; current content has no legacy allowance.
-LEGACY_INDEX_COMMITS = {
+# Previous publication policies applied to these exact Git trees and blobs.
+# Generic type, size, encoding, privacy and identity checks still run.
+V001_COMMITS = {
     '24d794f5efcc0ba8b3911c5452f47e6d23223de8',
     '4e787e90db81cc29336c163088c806b23bc6225c',
 }
-LEGACY_INDEX_BLOB = '35b280c49072484b6f6379707bf87ef0f374b874'
+V002_COMMITS = {'a3451382bea0064c950c5aff44c80a9680a66ef1', LAST_FOUR_STUDY_MAIN}
+V002_SITE_BLOBS = {
+    'docs/index.html': '5bec6b184978ca5f7eb376d95031deda4bede472',
+    'docs/orbindex.html': 'e34fd0c79b2bb414f151117f3ba5a1320d147e89',
+    'docs/macroimpulse.html': '9a2b2466fef03f8516008ec62dd40c70eaa3ade5',
+    'docs/orb.html': 'e57e3149d57a557a09a076ae8324905e9860803f',
+    'docs/ebp.html': '775f1c99184447447f04423a5be35e7b55999702',
+    'docs/site.css': '20b3f817991cf07bd6f6ae1e66fe9449506044e4',
+    'docs/plots/orb-summary.svg': 'd18114588dc68744b975ccf50c1a0c0653924a69',
+    'docs/plots/orb-gold-economics.svg': 'a07b2827959bb27f8c443aefe6e996251698d9e6',
+    'docs/plots/ebp-order-policy.svg': '300008cc68c6ebe15c78925a95046b1566db13e8',
+    'docs/plots/ebp-native-timeframe.svg': 'fefa9d4700befb08e1018951b3b99fdb88a782fa',
+}
 LINK = re.compile(r'!?\[[^\]]*\]\(([^)]+)\)')
 PRIVATE = [re.compile(pattern, re.I) for pattern in (
     r'https?://(?:app\.notion\.com|(?:docs|drive)\.google\.com)/',
@@ -54,35 +68,43 @@ def source_files(root: Path):
             not any(part in GENERATED or part.endswith('.egg-info') for part in path.relative_to(root).parts)]
 
 
-def is_archived_landing_page(name: str, oid: str, revision: str) -> bool:
-    return (name == 'docs/index.html' and oid == LEGACY_INDEX_BLOB
-            and revision in LEGACY_INDEX_COMMITS)
+def is_archived_site_blob(name: str, oid: str, revision: str) -> bool:
+    if revision in V001_COMMITS:
+        return name == 'docs/index.html' and oid == '35b280c49072484b6f6379707bf87ef0f374b874'
+    return revision in V002_COMMITS and V002_SITE_BLOBS.get(name) == oid
 
 
-def text_findings(name: str, payload: bytes, *, legacy_index: bool = False,
+def valid_archive(names: object, current: set[str]) -> bool:
+    if not isinstance(names, list) or not all(safe_name(name) for name in names):
+        return False
+    canonical = '\n'.join(sorted(names)).encode()
+    return hashlib.sha256(canonical).hexdigest() == ARCHIVE_SHA256 and not current.intersection(names)
+
+
+def text_findings(name: str, payload: bytes, *, archived_site: bool = False,
                   pages: dict[str, site.SitePage] | None = None) -> list[str]:
     # One specifically reviewed, provider-permitted market snapshot. This does
     # not admit arbitrary raw vendor CSVs to the publication boundary.
     approved_csv = name == 'data/ecb-fx-reference.csv'
     approved_site_path = name in site.PAGES or name in {site.CSS, site.MARKER}
     if (len(payload) > 600_000 or (Path(name).suffix not in TEXT_TYPES and
-            name not in SPECIAL and not approved_csv and not approved_site_path)):
+            name not in SPECIAL and not approved_csv and not approved_site_path and not archived_site)):
         return [f'unsupported source type or size: {name}']
     try:
         text = payload.decode('utf-8')
     except UnicodeDecodeError:
         return [f'non-text source: {name}']
     findings = [f'private-content pattern in {name}' for pattern in PRIVATE if pattern.search(text)]
-    if name in site.PAGES and not legacy_index:
+    if name in site.PAGES and not archived_site:
         page = site.SitePage(name, text)
         findings.extend(f'{name}: {error}' for error in page.errors)
         if pages is not None:
             pages[name] = page
-    if name == site.CSS and hashlib.sha256(payload).hexdigest() != site.CSS_SHA256:
+    if name == site.CSS and not archived_site and hashlib.sha256(payload).hexdigest() != site.CSS_SHA256:
         findings.append('unreviewed site stylesheet')
     if name == site.MARKER and payload:
         findings.append('Pages marker must be empty')
-    if name.startswith('docs/') and name.endswith('.svg'):
+    if name.startswith('docs/') and name.endswith('.svg') and not archived_site:
         if site.PLOT_HASHES.get(name) != hashlib.sha256(payload).hexdigest():
             findings.append(f'unreviewed site figure: {name}')
     return findings
@@ -211,25 +233,18 @@ def audit_git(root: Path) -> dict:
         # Preserve the exact historical publication boundary after scoped de-publication.
         # Removed files are still scanned in every old commit, but cannot reappear in HEAD.
         archived_list = json.loads((root / 'archived-public-paths.json').read_text())
-        former_bbo = {name for name in archived_list if isinstance(name, str) and (
-            name.startswith(('data/bbo-', 'data/BBO_', 'experiments/bbo-',
-                             'scripts/bbo_', 'src/srl/bbo', 'tests/test_bbo'))
-            or name == 'studies/bbo-execution-delay.md')}
-        if (not isinstance(archived_list, list) or len(archived_list) != 39 + len(RETIRED_PORTFOLIO_PATHS)
-                or len(set(archived_list)) != len(archived_list)
-                or any(not safe_name(name) for name in archived_list)
-                or len(former_bbo) != 39
-                or set(archived_list) != former_bbo | set(RETIRED_PORTFOLIO_PATHS)
-                or set(archived_list) & approved_names):
+        if not valid_archive(archived_list, approved_names):
             findings.append('invalid curated-history path allowlist')
             archived_names = set()
         else:
             archived_names = set(archived_list)
-        allowed_history_names = approved_names | archived_names
+        # Only the ancestry already public at curation may contain retired paths.
+        prior_revisions = set(git('rev-list', LAST_FOUR_STUDY_MAIN).decode().splitlines())
         if set(git('ls-files').decode().splitlines()) != approved_names:
             findings.append('tracked files differ from the exact public inventory')
         checked_blobs = set()
         for revision in revisions:
+            allowed_history_names = approved_names | archived_names if revision in prior_revisions else approved_names
             # NUL records preserve exact paths instead of relying on shell quoting.
             for record in git('ls-tree', '-rz', revision).split(b'\0'):
                 if not record:
@@ -240,11 +255,11 @@ def audit_git(root: Path) -> dict:
                 if mode != '100644' or kind != 'blob' or name not in allowed_history_names:
                     findings.append('unapproved type or path in publication history')
                     continue
-                legacy = is_archived_landing_page(name, oid, revision)
+                legacy = is_archived_site_blob(name, oid, revision)
                 # Path-specific rules must still run when a blob appears at a new path.
                 key = (name, oid, legacy)
                 if key not in checked_blobs:
-                    findings.extend(text_findings(name, git('cat-file', 'blob', oid), legacy_index=legacy))
+                    findings.extend(text_findings(name, git('cat-file', 'blob', oid), archived_site=legacy))
                     checked_blobs.add(key)
             metadata = git('show', '-s', '--format=%an%n%ae%n%cn%n%ce%n%B', revision).decode('utf-8')
             parents = git('rev-list', '--parents', '-n', '1', revision).decode().split()

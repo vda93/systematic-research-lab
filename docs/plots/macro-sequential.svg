@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="921.6pt" height="424.8pt" viewBox="0 0 921.6 424.8" xmlns="http://www.w3.org/2000/svg" version="1.1" role="img" aria-labelledby="macro-title macro-desc">
+ <title id="macro-title">03  |  The reversal leg recovered part of the first-leg loss</title>
+ <desc id="macro-desc">All 139 groups were stop-then-opposite-trigger sequences. Components belong to the same groups; these are not independent equity paths.
+Source: canonical adjudication as reported. Blanket opposite-order suppression was REJECTED; commission and group-level uncertainty are unavailable.</desc>
+ <title>03  |  The reversal leg recovered part of the first-leg loss</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>03  |  The reversal leg recovered part of the first-leg loss</dc:title>
+    <dc:description>All 139 groups were stop-then-opposite-trigger sequences. Components belong to the same groups; these are not independent equity paths.
+Source: canonical adjudication as reported. Blanket opposite-order suppression was REJECTED; commission and group-level uncertainty are unavailable.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Systematic Research Lab</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 424.8
+L 921.6 424.8
+L 921.6 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 69.12 331.344
+L 884.736 331.344
+L 884.736 93.456
+L 69.12 93.456
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m1ff8e0cbd3" d="M 0 0
+L 0 3.5
+" style="stroke: #657684; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m1ff8e0cbd3" x="177.948528" y="331.344" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(158.196965 345.942438)">First leg</text>
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(137.465715 357.14025)">already stopped</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m1ff8e0cbd3" x="476.928" y="331.344" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(431.670187 345.942438)">Later opposite leg</text>
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(455.049094 357.14025)">recovery</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m1ff8e0cbd3" x="775.907472" y="331.344" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(750.503566 345.942438)">Combined</text>
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(732.445753 357.14025)">same 139 groups</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_4">
+      <path d="M 69.12 308.322581
+L 884.736 308.322581
+" clip-path="url(#p42dcbb3328)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_5">
+      <defs>
+       <path id="m623b3b5de8" d="M 0 0
+L -3.5 0
+" style="stroke: #657684; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m623b3b5de8" x="69.12" y="308.322581" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="62.12" y="312.121799" transform="rotate(-0 62.12 312.121799)">−300</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6">
+      <path d="M 69.12 269.953548
+L 884.736 269.953548
+" clip-path="url(#p42dcbb3328)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#m623b3b5de8" x="69.12" y="269.953548" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="62.12" y="273.752767" transform="rotate(-0 62.12 273.752767)">−200</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <path d="M 69.12 231.584516
+L 884.736 231.584516
+" clip-path="url(#p42dcbb3328)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m623b3b5de8" x="69.12" y="231.584516" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="62.12" y="235.383735" transform="rotate(-0 62.12 235.383735)">−100</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <path d="M 69.12 193.215484
+L 884.736 193.215484
+" clip-path="url(#p42dcbb3328)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m623b3b5de8" x="69.12" y="193.215484" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="62.12" y="197.014703" transform="rotate(-0 62.12 197.014703)">0</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_12">
+      <path d="M 69.12 154.846452
+L 884.736 154.846452
+" clip-path="url(#p42dcbb3328)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m623b3b5de8" x="69.12" y="154.846452" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="62.12" y="158.64567" transform="rotate(-0 62.12 158.64567)">100</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_14">
+      <path d="M 69.12 116.477419
+L 884.736 116.477419
+" clip-path="url(#p42dcbb3328)" style="fill: none; stroke: #e6ebef; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m623b3b5de8" x="69.12" y="116.477419" style="fill: #657684; stroke: #657684; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #657684" x="62.12" y="120.276638" transform="rotate(-0 62.12 120.276638)">200</text>
+     </g>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="28.573125" y="212.4" transform="rotate(-90 28.573125 212.4)">Spread-only USD, dependent leg aggregates</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 106.193455 193.215484
+L 249.703601 193.215484
+L 249.703601 303.71446
+L 106.193455 303.71446
+z
+" clip-path="url(#p42dcbb3328)" style="fill: #b85258; stroke: #b85258; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 405.172927 193.215484
+L 548.683073 193.215484
+L 548.683073 120.997291
+L 405.172927 120.997291
+z
+" clip-path="url(#p42dcbb3328)" style="fill: #318c88; stroke: #318c88; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 704.152399 193.215484
+L 847.662545 193.215484
+L 847.662545 231.496267
+L 704.152399 231.496267
+z
+" clip-path="url(#p42dcbb3328)" style="fill: url(#h03ecc7eb68); stroke: #213442; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 69.12 193.215484
+L 884.736 193.215484
+" clip-path="url(#p42dcbb3328)" style="fill: none; stroke: #213442; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 69.12 331.344
+L 69.12 93.456
+" style="fill: none; stroke: #b5c2c9; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 69.12 331.344
+L 884.736 331.344
+" style="fill: none; stroke: #b5c2c9; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="177.948528" y="318.196712" transform="rotate(-0 177.948528 318.196712)">$-287.99</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="476.928" y="113.689414" transform="rotate(-0 476.928 113.689414)">$+188.22</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #213442" x="775.907472" y="245.97852" transform="rotate(-0 775.907472 245.97852)">$-99.77</text>
+   </g>
+  </g>
+  <g id="text_14">
+   <text style="font-weight: 700; font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #213442" x="59.904" y="34.231719" transform="rotate(-0 59.904 34.231719)">03  |  The reversal leg recovered part of the first-leg loss</text>
+  </g>
+  <g id="text_15">
+   <text style="font-size: 10.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #657684" x="59.904" y="56.754375" transform="rotate(-0 59.904 56.754375)">139 sequential double-trigger groups · 278 positions · Exness 2021–2024 development · Spread-only USD</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(59.904 389.358633)">All 139 groups were stop-then-opposite-trigger sequences. Components belong to the same groups; these are not independent equity paths.</text>
+   <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #657684" transform="translate(59.904 401.488242)">Source: canonical adjudication as reported. Blanket opposite-order suppression was REJECTED; commission and group-level uncertainty are unavailable.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p42dcbb3328">
+   <rect x="69.12" y="93.456" width="815.616" height="237.888"/>
+  </clipPath>
+ </defs>
+ <defs>
+  <pattern id="h03ecc7eb68" patternUnits="userSpaceOnUse" x="0" y="0" width="72" height="72">
+   <rect x="0" y="0" width="73" height="73" fill="#ffffff"/>
+   <path d="M -36 36
+L 36 -36
+M -32 40
+L 40 -32
+M -28 44
+L 44 -28
+M -24 48
+L 48 -24
+M -20 52
+L 52 -20
+M -16 56
+L 56 -16
+M -12 60
+L 60 -12
+M -8 64
+L 64 -8
+M -4 68
+L 68 -4
+M 0 72
+L 72 0
+M 4 76
+L 76 4
+M 8 80
+L 80 8
+M 12 84
+L 84 12
+M 16 88
+L 88 16
+M 20 92
+L 92 20
+M 24 96
+L 96 24
+M 28 100
+L 100 28
+M 32 104
+L 104 32
+M 36 108
+L 108 36
+" style="fill: #213442; stroke: #213442; stroke-width: 1.0; stroke-linecap: butt; stroke-linejoin: miter"/>
+  </pattern>
+ </defs>
+</svg>

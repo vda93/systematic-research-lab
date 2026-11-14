@@ -1,39 +1,17 @@
-# Ownership, assistance and study identity
+# My contribution to the research
 
-[Portfolio](../README.md) · [Evidence register](evidence.md) · [Reproducibility boundary](provenance.md)
+[Portfolio](../README.md) · [Evidence register](evidence.md) · [Source provenance](provenance.md)
 
-TradingBotHQ is my research project. I direct this portfolio's questions, priorities and presentation, and take responsibility for preserving the research decisions and their limitations. Engineering, analysis, review and writing use automated systems and AI assistance.
+TradingBotHQ is my research project. I direct the questions, set priorities and decide which findings to publish. I use AI assistance for implementation, analysis, review and writing. Some of the trading ideas and reference rules came from other traders.
 
-Personal ownership does not mean that I manually wrote every line of code or originated every historical hypothesis. The study pages distinguish a documented research decision from a calculation performed by a research engine, a repair implemented with assistance, and a result retained from a canonical record. Git author names establish attribution metadata; they cannot establish manual implementation.
+## Decisions I made
 
-## Contribution evidence
+For [ORBINDEX](../studies/orbindex.md), I selected the German index portfolios for later testing. I closed them after they lost money at fixed volume on that sample. Implementation, parity checks, data audits, statistical review and drafting used AI assistance. The [later-period record](evidence.md#ix3) describes the evidence behind my decision.
 
-| Contribution | What the record establishes | What remains unverified |
-| --- | --- | --- |
-| A research direction | The [ORB work](../studies/opening-range.md) compares range boundaries with timing and placebo alternatives rather than selecting only the best backtest. | Whether every underlying mechanism idea originated with me; exact historical rule and code authorship are not assumed. |
-| A rule-interpretation study | The [EBP research](../studies/engulfing-and-support.md) reconstructs ambiguities in engulfing-bar entry, pending-order and retracement rules. | Source fidelity and the personal authorship of each implementation or statistical tool must be assessed separately. |
-| A personal research decision | The [NOWICK closeout](evidence.md#n1) explicitly records my decision to reject and shelve the original family. | That decision does not establish authorship of the matching engine or statistical analysis. |
-| A news-driven research program | [MacroImpulse](../studies/news-research.md) investigates event-triggered trades, management, execution and economic-calendar quality. | Vendor-origin rules, exact engine authorship and the completeness of each source stream require their own evidence. |
-| Public research engineering | [Research OS methods](research-os.md) and public source/tests expose inspectable methodological controls. | Unaided function-level implementation and independent technical defense have not been assessed. |
+For [MacroImpulse](../studies/news-research.md), I shelved the strategy after seeing the fills, spreads and slippage available across brokers. The [closeout clarification](provenance.md#macroimpulse-closeout-clarification) records that decision. The [controlled execution comparisons](evidence.md#b08) have a narrower scope than my practical experience.
 
-Personal hypothesis-origin, manual-authorship and review claims remain **HUMAN_ATTESTATION_REQUIRED** where the records do not identify them. Any later attestation must describe specific work and supporting evidence. The public prose and engineering also use AI assistance.
+I also set requirements for the [research infrastructure](research-os.md), including how to track source files and consumed samples. The [implementation record](evidence.md#e5) documents agent assistance. I claim personal code or hypothesis authorship only where I can identify my contribution. Git attribution by itself cannot establish who wrote a function unaided.
 
-## What the featured stories represent
+## What readers can check
 
-| Study or system | Identity | Documented contribution and boundary |
-| --- | --- | --- |
-| [ORB](../studies/opening-range.md) | Opening-range breakout on gold and US technology-index CFDs | I preserve its conflicting validation, placebo-range findings and closed deployment verdict. Automated campaigns and AI-assisted Python/MT5 checks supported the research, not independent proof of a profitable system. |
-| [EBP](../studies/engulfing-and-support.md) | Higher-timeframe engulfing/retracement rule family | The research studies rule-interpretation and pending-order ambiguity. I do not claim to have invented engulfing-bar trading or written every EA/test. |
-| [ORBINDEX](../studies/orbindex.md) | DE30X/JP225X/UK100X opening-range search and three frozen DE30 portfolios | I directed the research questions, selected the A/B/C portfolios for later testing, and rejected them after the economic OOS failure. AI-assisted implementation, MT5/Python parity, data audits, statistical review and drafting are not claimed as my unaided code. |
-| [MacroImpulse](../studies/news-research.md) | Scheduled news-driven event trading and event-calendar qualification | I preserve failed filter decisions and the corrected invalid-data-universe outcome. The research does not prove vendor-independent source parity, complete calendar coverage or net live alpha. |
-| [Research OS](../studies/research-engineering.md) | Evidence governance and research infrastructure rather than a trade signal | I set evidence and reproducibility requirements and use AI-assisted code and checks; public tools are not an export of the private operations system. |
-
-The former featured [NOWICK study](../studies/nowick.md) is retained as historical research. Its original user-directed rejection and agent-assisted analyses remain documented in the evidence register.
-
-## What a reviewer can verify
-
-Public code, tests, declared inputs and reproduction commands show the behavior of the released implementation. Original prose and figures explain selected historical results. A private claim-to-source ledger connects those summaries to canonical records, identities and hashes.
-
-The private historical backtests, account simulations, strategy code and raw market data remain outside this repository. Their aggregates are historical evidence summaries, with the [verification limits](evidence.md) stated beside them. Public test success does not independently authenticate unavailable private inputs, establish realized broker performance or authorize deployment.
-
-The record shows the decisions I take responsibility for preserving: keep failed stress tests visible, withhold promotion when sensitivities disagree, and correct explanations that the evidence no longer supports. Engineering correctness and economic support retain separate decisions.
+The public code, tests and disclosed inputs show how to reproduce the exhibits. The original market data, account simulations and strategy implementations remain private. Each historical result has a [source record](evidence.md) that explains what was inspected and what remains uncertain.

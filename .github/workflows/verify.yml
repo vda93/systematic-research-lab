@@ -52,6 +52,42 @@ jobs:
       - name: Audit every pinned runtime and developer package
         if: matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
         run: python -m pip_audit --strict --no-deps --disable-pip -r requirements-lock.txt
+      - name: Capture the website before and after this PR
+        id: review_images
+        if: github.event_name == 'pull_request' && matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          if git diff --quiet "$BASE_SHA" "$HEAD_SHA" -- 'docs/*.html' docs/site.css docs/plots; then
+            exit 0
+          fi
+          mkdir -p "$RUNNER_TEMP/site-review"
+          for version in before after; do
+            revision="$BASE_SHA"
+            if [[ "$version" == after ]]; then revision="$HEAD_SHA"; fi
+            snapshot="$RUNNER_TEMP/site-$version"
+            mkdir -p "$snapshot"
+            git archive "$revision" docs | tar -x -C "$snapshot"
+            for page in index orbindex macroimpulse; do
+              test -s "$snapshot/docs/$page.html"
+              for viewport in 1440,1000 390,844; do
+                google-chrome --headless --disable-gpu --disable-dev-shm-usage \
+                  --no-first-run --hide-scrollbars \
+                  --user-data-dir="$RUNNER_TEMP/review-chrome" --window-size="$viewport" \
+                  --screenshot="$RUNNER_TEMP/site-review/$version-$page-${viewport%,*}.png" \
+                  "file://$snapshot/docs/$page.html"
+              done
+            done
+          done
+          echo "captured=true" >> "$GITHUB_OUTPUT"
+      - name: Attach before and after screenshots to the review run
+        if: steps.review_images.outputs.captured == 'true'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: website-before-and-after
+          path: ${{ runner.temp }}/site-review/*.png
+          if-no-files-found: error
 
   secret-scan:
     runs-on: ubuntu-latest

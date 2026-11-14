@@ -6,7 +6,7 @@ Run the current public evidence check from the repository root:
 python scripts/research_os.py verify experiments/evidence-example.json
 ```
 
-The example checks the actual bytes of [the historical aggregate transcription](../data/historical-results.json). It labels that file `reported_aggregate`, `spent` and consumed. Its broad date envelope describes a presentation file containing several studies; it does not combine those studies into a return series. Historical conclusions and sample histories remain unchanged. This validator was independently authored for the public portfolio; no private execution or research implementation was imported.
+The example checks the bytes of the [ORBINDEX aggregate extract](../data/orbindex-public.json). The manifest labels the file as a consumed, reported aggregate. Its period describes the extract, which contains separate discovery and later-period results. The validator was written for this public repository.
 
 Create and check a portable evidence closeout:
 

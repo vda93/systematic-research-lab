@@ -1,7 +1,7 @@
 # Public aggregate inputs and provenance
 
-[historical-results.json](historical-results.json) contains selected **reported historical aggregate metrics** from ORB and NOWICK research. Source labels, sample periods and limitations accompany every record. There are no raw trades, proprietary ticks or broker account details here.
+[ORBINDEX](orbindex-public.json) contains the index discovery, portfolio, later-test and follow-up summaries. The [ORBINDEX source register](../docs/evidence.md#ix1) identifies which artifacts were checked against the original research packages and which follow-up summaries came through a handoff.
 
-[claim-registry.json](claim-registry.json) binds reviewed quantitative prose and figures to [documented source identities](../docs/evidence.md). The [generated tables](../results/historical-tables.md) preserve transcribed precision, while [aggregate diagnostics](../results/aggregate-diagnostics.json) check descriptive ORB and NOWICK identities. They do not independently replay historical research.
+[MacroImpulse](macro-public.json) contains the released news-study figures’ underlying aggregates and source identities. It includes historical cost and calendar records outside the featured article. The [figure evidence review](../docs/macro-visual-evidence.md) distinguishes reported outcomes from the fictional order illustration.
 
-[experiments/protocol.json](../experiments/protocol.json) and [results/study.json](../results/study.json) are a separate **synthetic methods illustration**, not market observations. [Scientific checks](../docs/scientific-checks.md) explain the release and reproduction boundaries.
+The [claim registry](claim-registry.json) binds quantitative paragraphs and figures to reviewed sources. The [synthetic protocol](../experiments/protocol.json) and [synthetic results](../results/study.json) demonstrate public methods on artificial data. [Scientific checks](../docs/scientific-checks.md) explain what reproduction verifies.

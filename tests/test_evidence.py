@@ -218,7 +218,7 @@ class EvidenceTests(unittest.TestCase):
         example = root / 'experiments/evidence-example.json'
         manifest = load_manifest(example)
         verified = verify_manifest(root, manifest)
-        self.assertIn('data/historical-results.json', [e.path for e in verified.evidence])
+        self.assertIn('data/orbindex-public.json', [e.path for e in verified.evidence])
         command = [sys.executable, str(root / 'scripts/research_os.py')]
         for args in [['verify', str(example)], ['pack', str(example), str(self.root / 'cli.zip')],
                      ['verify-pack', str(self.root / 'cli.zip')]]:

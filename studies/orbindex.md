@@ -12,7 +12,7 @@ The search led from individual configurations to three portfolios, then to an ex
 
 The source was **Exness historical Bid/Ask quotes**, imported into a separate **MT5 custom-symbol research environment**. DE30X, JP225X and UK100X represent German, Japanese and UK index CFD research symbols. Local clocks were Europe/Berlin, Asia/Tokyo and Europe/London, respectively, with historical timezone rules. Exchange-session anchor eligibility and observed CFD quotes were kept distinct: a no-quote window does not prove a scheduled broker closure. The discovery used February 2020 through November 2023 signal origins and December 2023 burnoff. [Source and frozen protocol](../docs/evidence.md#ix1)
 
-**EXP-ORBINDEX-001** was the earlier cash-open-centred discovery screen; **EXP-ORBINDEX-002** expanded the local clock under a new frozen design. Both belong to this index investigation. The older gold/US-technology [ORB program](opening-range.md) is a separate experiment lineage; its outcomes are not pooled with ORBINDEX. Original market data, account records and strategy execution code remain private.
+**EXP-ORBINDEX-001** was the earlier cash-open-centred discovery screen; **EXP-ORBINDEX-002** expanded the local clock under a new frozen design. Both belong to this index investigation. The older gold/US-technology ORB program is a separate experiment lineage; its outcomes are not pooled with ORBINDEX. Original market data, account records and strategy execution code remain private.
 
 ## 1. Search the clock, not just the market open
 

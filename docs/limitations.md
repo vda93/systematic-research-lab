@@ -16,4 +16,4 @@ The [synthetic study](study.md) deliberately generates artificial concentration 
 
 ## Publication scope
 
-Other historically published studies are excluded from the current curated public tree at the owner's direction. Their prior Git commits and independent private research decisions have not been rewritten.
+Earlier Git commits preserve the studies retired from this portfolio. The [publication record](provenance.md#publication-history-and-rights) describes the change in scope.

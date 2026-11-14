@@ -1,11 +1,11 @@
-# Evidence gates for future research
+# What would justify another test?
 
-New work needs admissible, clearly separated evidence rather than retuning completed historical tests.
+## ORBINDEX
 
-- **ORB:** register the candidate family, selection algorithm, costs, temporal fences and broker contract before any new validation. A failed historical block is still failed.
-- **EBP:** freeze retracement, order replacement, expiry and position-occupancy semantics before interpreting economics; retrospective associations do not authorize reverse trades.
-- **NOWICK:** the original family remains shelved. A new hypothesis requires a distinct frozen contract and clean evidence.
-- **MacroImpulse:** independently qualify current scheduled-release coverage and latency, trigger-time information and realistic execution costs before an unchanged-candidate rerun. Preserve the invalid-data-universe decision.
-- **Research infrastructure:** keep source/figure identities, claim register, internal links, generated output checks and scientific-role boundaries consistent.
+I closed the frozen German index portfolios after their later-period test. A different portfolio would need its own rules, a defensible execution and cost model, and an evaluation period with a documented access history. The existing follow-up explains how the trades behaved after selection. It cannot supply fresh validation for a revised strategy. [Decision and follow-up](../studies/orbindex.md)
 
-Potential ML extensions need an incremental falsifiable question and meaningful temporal baselines. No public research pass authorizes private deployments.
+## MacroImpulse
+
+The open practical question is whether orders can fill at usable prices around a release. I would need execution evidence for the broker, order type and release conditions I intended to use before reconsidering the strategy. Historical filter comparisons alone cannot answer that question. [Why I shelved this](../studies/news-research.md)
+
+Future publication work follows the [website maintenance guide](website-maintenance.md) and the [research publishing guide](research-publishing-guide.md).

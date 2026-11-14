@@ -1,6 +1,6 @@
 # Making research claims traceable from source to decision
 
-[Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Published aggregates](../results/historical-tables.md)
+[Portfolio](../README.md) · [Evidence register](../docs/evidence.md) · [Public inputs](../data/README.md)
 
 TradingBotHQ's AI-assisted engineering program built an offline analytics and closeout layer to trace research claims back to their evidence. It records source identities, evidence roles and verification checks, with a separate decision for public disclosure. The [ownership statement](../docs/ownership.md) explains project direction, automation and coding assistance; Git metadata alone cannot establish manual authorship. Software correctness, economic findings and permission to deploy each need their own evidence. [E1](../docs/evidence.md#e1)
 

@@ -10,55 +10,28 @@
 <a class="skip" href="#content">Skip to content</a>
 <header><div class="shell nav">
   <a class="logo" href="index.html"><span class="mark" aria-hidden="true">TB</span>TradingBotHQ</a>
-  <nav aria-label="Main navigation"><a href="index.html#research">Library</a>
+  <nav aria-label="Main navigation"><a href="index.html#research">Studies</a>
     <a href="index.html#method">Methods</a>
     <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence</a> <a href="https://github.com/vda93/systematic-research-lab">GitHub</a></nav>
 </div></header>
 <main id="content" tabindex="-1" class="shell">
 <section class="hero">
-  <div><p class="kicker">Systematic trading research</p><h1>Research library</h1>
-  <p class="lead">What happens to a trading idea when its rules, costs and validation period are fixed?</p></div>
-  <aside class="note"><strong>About the evidence</strong><p>Public code reproduces selected figures and synthetic examples.
-  Replaying the original market experiments requires private records.</p><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/provenance.md">Reproduction boundaries</a></aside>
+<div><p class="kicker">Systematic trading research</p><h1>Research library</h1>
+<p class="lead">I tested when to trade an index breakout and whether I could trade the first move after a news release. These are the results and the decisions I made.</p></div>
 </section>
-<section id="research"><h2>Featured studies</h2><div class="cards"><article class="card">
-  <div class="plot"><img src="plots/orb-summary.svg" width="418" height="562" alt="Compact empirical finding: USTEC passed its first validation block and failed its second; the separate gold monetary ledger shows recorded financing erased both candidates&#x27; Discovery gains" loading="lazy"></div>
-  <div class="card-body"><p class="kicker">Opening Range Breakout (ORB)</p>
-  <h3><a href="orb.html">Does the opening range tell us more than the time of day?</a></h3>
-  <p>The Nasdaq candidate passed its first validation block and failed its second. In a separate gold study, the implementations agreed, but financing erased the discovery gains of both candidates in the monetary comparison.</p>
-  <p class="qualification"><strong>Limitation</strong> Some successor candidates never reached an out-of-sample test and still have no verdict.</p>
-  <p class="verdict">Tested branches closed for deployment.</p>
-  <a class="read" href="orb.html">Read the ORB study <span aria-hidden="true">→</span></a></div>
+<section id="research"><h2>Case studies</h2><div class="cards"><article class="card">
+<div class="plot"><img src="plots/orbindex-search.svg" width="965" height="436" alt="Price-positive fractions by market and the DE30X LONG discovery heatmap across the local 24-hour clock" loading="lazy"></div>
+<div class="card-body"><h3><a href="orbindex.html">ORBINDEX</a></h3>
+<p>I searched for opening times that held up across nearby rules on the German, Japanese and UK indices. Only the German index supplied portfolios for a later test. All three lost euros at fixed volume before additional commission or financing, so I closed them. Earlier research may have seen part of the later period.</p><a class="read" href="orbindex.html">Read the ORBINDEX study <span aria-hidden="true">→</span></a></div>
 </article><article class="card">
-  <div class="plot"><img src="plots/ebp-order-policy.svg" width="965" height="439" alt="Four H002 contracts compare GTC and replacement pending policies under completed-H4 and intrabar break-even. Closed-trade counts are 3, 1257, 3 and 1297; replacement totals are negative and the positive GTC totals have only three trades." loading="lazy"></div>
-  <div class="card-body"><p class="kicker">Engulfing Bar Play (EBP)</p>
-  <h3><a href="ebp.html">Which engulfing-candle signals actually reach a trade?</a></h3>
-  <p>On four-hour gold signals, leaving a retracement order open could block later setups, while replacing it admitted a different set of trades.</p>
-  <p class="qualification"><strong>Limitation</strong> The positive good-till-cancelled variants each closed only 3 trades. That left too little evidence to choose an order policy.</p>
-  <p class="verdict">All order-policy variants parked.</p>
-  <a class="read" href="ebp.html">Read the EBP study <span aria-hidden="true">→</span></a></div>
-</article><article class="card">
-  <div class="plot"><img src="plots/orbindex-economics.svg" width="965" height="461" alt="Discovery versus OOS fixed-lot EUR and the three unchanged OOS economic scenarios" loading="lazy"></div>
-  <div class="card-body"><p class="kicker">ORBINDEX</p>
-  <h3><a href="orbindex.html">Did promising opening times hold up in a later period?</a></h3>
-  <p>The DE30, JP225 and UK100 discovery search compared overlapping opening times. All three DE30 portfolios subsequently lost euros at fixed lot size before additional commission or financing.</p>
-  <p class="qualification"><strong>Limitation</strong> Historical broker-net profit remains unverified, and earlier research may already have examined part of the later period.</p>
-  <p class="verdict">Three frozen German index portfolios rejected for economic promotion.</p>
-  <a class="read" href="orbindex.html">Read the ORBINDEX study <span aria-hidden="true">→</span></a></div>
-</article><article class="card">
-  <div class="plot"><img src="plots/macro-mechanics.svg" width="950" height="446" alt="Conceptual fictional two-sided event-order schematic: symbolic upper buy-stop and lower sell-stop levels before a scheduled announcement, Ask and Bid spread context, then possible protective or trailing exit and a later opposite trigger. No historical price path or observed latency is shown." loading="lazy"></div>
-  <div class="card-body"><p class="kicker">MacroImpulse</p>
-  <h3><a href="macroimpulse.html">Could scheduled currency news be traded at the available fills?</a></h3>
-  <p>The project owner reported wide fills, large spreads and slippage across brokers around scheduled releases. Those conditions made the strategy impractical to trade.</p>
-  <p class="qualification"><strong>Limitation</strong> A separate historical test relied on a calendar that missed medium-impact events. The missing releases left profitability on that event universe unresolved.</p>
-  <p class="verdict">Shelved over live execution.</p>
-  <a class="read" href="macroimpulse.html">Read the MacroImpulse study <span aria-hidden="true">→</span></a></div>
+<div class="plot"><img src="plots/macro-mechanics.svg" width="950" height="446" alt="Illustration of a two-sided news order with buy and sell triggers, a protective exit and a possible opposite-side entry." loading="lazy"></div>
+<div class="card-body"><h3><a href="macroimpulse.html">MacroImpulse</a></h3>
+<p>I tried to trade the first move after scheduled currency news. The historical baseline was promising, but across brokers the spread widened, fills came at worse prices and slippage took away too much of the move. I shelved the strategy.</p><a class="read" href="macroimpulse.html">Read the MacroImpulse study <span aria-hidden="true">→</span></a></div>
 </article></div></section>
-<section class="method" id="method"><h2>Research methods</h2>
-<p>Each study identifies the signal, order rules and costs, then explains which control or later sample determined the decision.</p>
+<section class="method" id="method"><h2>How I read the evidence</h2>
+<p>I keep the discovery period separate from later tests and ask what the quoted prices would have meant for a trade. The public code rebuilds the figures from research aggregates. Replaying the original trades requires private data.</p>
 <nav aria-label="Methods and sources"><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/empirical-methods.md">Empirical methods</a>
-<a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence register</a> <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/security.md#reproduce-the-checks">Reproduce the exhibits</a></nav></section>
-<section class="archive"><h2>Historical archive</h2><p><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/nowick.md">NOWICK and ANTI-NOWICK</a> · Matched-candle study and original closeout.</p></section>
+<a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence register</a> <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/security.md#reproduce-the-checks">Reproduce the figures</a></nav></section>
 </main>
 <footer><div class="shell foot"><span>TradingBotHQ · Public research</span>
 <nav aria-label="Publication information"><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/ownership.md">Contributions</a>
