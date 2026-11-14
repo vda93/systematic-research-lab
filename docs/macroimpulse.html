@@ -17,10 +17,10 @@
 <main id="content" tabindex="-1" class="shell">
 <nav class="crumb" aria-label="Breadcrumb"><a href="index.html#research">Studies</a>
 <span aria-hidden="true"> / </span><span aria-current="page">MacroImpulse</span></nav>
-<article><div class="article-head"><h1>MacroImpulse</h1>
+<article><div class="article-head"><h1>MacroImpulse: the execution problem</h1>
 <section id="section-1"><h2>Why I shelved this</h2>
-<p>I wanted to see whether I could trade the sharp moves around scheduled economic releases. The backtests gave me a reason to keep looking. In live trading across brokers, spreads widened around the release, my orders filled away from the prices I needed, and slippage ate into the move I was trying to catch. I shelved MacroImpulse because I couldn’t get execution conditions that justified trading it. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/provenance.md#macroimpulse-closeout-clarification">My closeout note</a></p>
-<p>That decision came from my experience trying to execute the strategy. I don’t have a verified broker-by-broker series of live costs to attach to the backtest. The figures below show what I learned from the historical tests.</p>
+<p>MacroImpulse tried to capture the abrupt price moves around scheduled economic releases. Historical results were encouraging under their stated cost assumptions, but live execution was the dealbreaker. Spreads widened around announcements, fills landed away from intended prices, and slippage ate into the move the strategy needed. <strong>That’s why I shelved it: the execution conditions weren’t workable across the brokers I tried.</strong> <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/provenance.md#macroimpulse-closeout-clarification">My closeout note</a></p>
+<p>This was a practical trading decision, not a new broker-by-broker measurement of live execution costs. The figures below show what the historical tests established and why those results were not enough.</p>
 </section></div><div class="article-layout">
 <nav class="contents" aria-label="Article contents"><strong>In this study</strong><ul><li><a href="#section-1">Why I shelved this</a></li><li><a href="#section-2">How the orders worked</a></li><li><a href="#section-3">What the baseline earned</a></li><li><a href="#section-4">Would a spread filter help?</a></li><li><a href="#section-5">What happened when both sides triggered?</a></li><li><a href="#section-6">What I could verify</a></li></ul></nav>
 <div class="reading"><section id="section-2"><h2>How the orders worked</h2>
@@ -31,7 +31,7 @@
 <section id="section-3"><h2>What the baseline earned</h2>
 <p>The 2023–2024 high-impact baseline recorded <strong>1,396 trades and +$4,250.48</strong> across ten currency-pair and year combinations. All ten finished positive. These are historical US-dollar results after the modelled spread, before commission. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b09">Baseline evidence</a></p>
 <p><a class="chart" href="plots/macro-baseline.svg"><img src="plots/macro-baseline.svg" width="922" height="425" alt="Historical baseline by currency pair and year, with completed trade counts and spread-only profit in US dollars." loading="lazy"></a></p>
-<p>That result made the idea worth investigating. It could tell me how the rules behaved on the historical quotes. It couldn’t tell me what price a broker would give me at the release.</p>
+<p>Those results described how the strategy behaved on historical quotes, not the prices a broker would actually fill during a release.</p>
 </section>
 <section id="section-4"><h2>Would a spread filter help?</h2>
 <p>I wanted to know whether skipping trades with a wide spread would keep the strategy out of its worst entries. In a separate frozen 2021–2022 comparison, the filter removed three completed trades. All three were winners. Spread-only profit fell by <strong>$7.62</strong>. Events that triggered both sides contributed the same total in both versions. I kept the decision to reject the filter. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b09">Spread-filter validation</a></p>
@@ -43,7 +43,7 @@
 <p>Those totals describe two legs of the same events during 2021–2024 development. Blocking every reversal would also have removed the recovery. The research did not support that change. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b10">Study scope</a></p>
 </section>
 <section id="section-6"><h2>What I could verify</h2>
-<p>The implementation was compared with a reference strategy on controlled events using the same ticks and parameters. Those checks covered order triggers, stops and exits. They helped establish whether the implementation followed the intended rules under those conditions. My practical question was whether I could get a usable fill when news broke. The comparison couldn’t answer it. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b08">Implementation checks</a></p>
+<p>Controlled comparisons with a reference strategy checked order triggers, stops and exits using the same ticks and parameters. They helped establish whether the implementation followed its intended rules. They could not establish whether a live trade during a news release would receive an economically viable fill. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b08">Implementation checks</a></p>
 <p>The public <a href="https://github.com/vda93/systematic-research-lab/blob/main/data/macro-public.json">aggregate data</a> and <a href="https://github.com/vda93/systematic-research-lab/blob/main/scripts/render_macro.py">figure renderer</a> reproduce these historical exhibits. Replaying the trades requires the original quotes and execution code. The <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/ownership.md">contribution record</a> explains my role and the AI assistance used in the research.</p>
 </section></div></div></article>
 <nav class="related" aria-label="Study navigation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/news-research.md">Original Markdown article</a> · <a href="orbindex.html">ORBINDEX</a></nav>

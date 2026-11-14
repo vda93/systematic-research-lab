@@ -81,6 +81,18 @@ class SiteRenderingTests(unittest.TestCase):
                 if name.startswith('docs/plots/'):
                     self.assertEqual((ROOT / 'figures' / Path(name).name).read_bytes(), payload)
 
+    def test_execution_closeout_is_prominent_and_explained(self):
+        landing = (ROOT / 'docs/index.html').read_text(encoding='utf-8')
+        macro = (ROOT / 'docs/macroimpulse.html').read_text(encoding='utf-8')
+        self.assertIn('<h1>MacroImpulse: the execution problem</h1>', macro)
+        self.assertIn('<h2>Why I shelved this</h2>', macro)
+        self.assertIn('spreads widened', macro.lower())
+        self.assertIn('fills landed away', macro.lower())
+        self.assertIn('slippage', macro.lower())
+        self.assertIn('Why I shelved this', landing)
+        self.assertNotIn('Read the MacroImpulse study', landing)
+        self.assertNotIn('the owner', macro.lower())
+
     def test_numeric_source_mutation_cannot_be_rendered_using_old_review(self):
         ledger = json.loads((ROOT / 'data/claim-registry.json').read_bytes())
         path = 'studies/orbindex.md'
