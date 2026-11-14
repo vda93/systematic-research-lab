@@ -45,7 +45,7 @@ class SiteRenderingTests(unittest.TestCase):
             self.assertIn("Complete research record", html)
             self.assertNotIn('class="mark"', html)
             self.assertLess(len(re.sub(r"<[^>]+>", " ", html).split()), 1000)
-        self.assertIn("not a completely fresh independent test", orb)
+        self.assertIn("cannot be treated as a completely fresh independent test", orb)
         self.assertIn("None of the frozen portfolios was promoted", orb)
         self.assertIn("News-Release Trading", news)
         self.assertIn("Why I shelved this", news)
