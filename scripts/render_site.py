@@ -144,8 +144,13 @@ def article(root: Path, slug: str, study: dict, values: dict[str, str]) -> bytes
             parts.append(figure(root, section["figure"], section["alt"]))
             parts.append(f'<p class="citation">{public_text(section["caption"], values)} · '
                          f'<a href="plots/{section["figure"]}">Open figure</a></p>')
-        parts.append('<p class="citation">Evidence: ' + " · ".join(
-            source("docs/evidence.md#" + evidence.lower(), evidence)
+        readable_sources = {
+            "IX1": "Timing search", "IX2": "Portfolio simulation",
+            "IX3": "Later-period results", "IX4": "Follow-up analysis",
+            "B08": "Execution rules", "B09": "Historical baseline",
+        }
+        parts.append('<p class="citation">Research evidence: ' + " · ".join(
+            source("docs/evidence.md#" + evidence.lower(), readable_sources[evidence])
             for evidence in section["sources"]) + "</p>")
         parts.append("</section>")
         sections.append("\n".join(parts))
@@ -172,7 +177,6 @@ def article(root: Path, slug: str, study: dict, values: dict[str, str]) -> bytes
 <p class="lead">{public_text(study["subtitle"], values)}</p>
 <p><strong>Decision.</strong> {public_text(study["decision"], values)}</p>
 <p><strong>Main limitation.</strong> {public_text(study["caveat"], values)}</p>
-<p class="citation">{technical} · {source("docs/evidence.md", "Evidence register")}</p>
 </div><div class="article-layout">
 <nav class="contents" aria-label="Article contents"><strong>In this study</strong>
 <ul>{"".join(links)}</ul></nav>
