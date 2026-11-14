@@ -23,7 +23,7 @@ GENERATED = {'.git', '.venv', '__pycache__', 'build', 'dist', '.pytest_cache'}
 # A file count or name prefix cannot establish which exact paths were removed.
 ARCHIVE_SHA256 = 'e06a9c112c02b25fc35e1ec88d0c5a78ef924e7e1bf0b0095764ddc39972439d'
 LAST_FOUR_STUDY_MAIN = 'b1a8b0874625dac0d11074c718ec25e8e154d63a'
-LAST_OWNERSHIP_MAIN = '4ed00d958ab0ee2ae989d15ab50e85f290f6ccf7'
+LAST_OWNERSHIP_MAIN = '42aa84af30f5a532f9897826f5cbfbd5398259b4'
 TEXT_TYPES = {'.py', '.json', '.md', '.toml', '.svg', '.yml', '.yaml', '.txt'}
 SPECIAL = {'LICENSE', '.gitignore', '.gitattributes'}
 # Previous publication policies applied to these exact Git trees and blobs.
