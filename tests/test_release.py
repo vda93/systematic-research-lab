@@ -82,5 +82,13 @@ class PublicationAuditTests(unittest.TestCase):
             self.assertEqual(audit_directory(root)['status'], 'PASS')
 
 
+    def test_public_research_site_is_bounded(self):
+        page = b'<!doctype html><html><main><h1>Research</h1><div id="research"></div><a href="#research">Studies</a></main></html>'
+        self.assertEqual(text_findings('docs/index.html', page), [])
+        self.assertTrue(text_findings('docs/other.html', page))
+        self.assertTrue(text_findings('docs/index.html', page.replace(b'#research', b'#missing')))
+        self.assertTrue(text_findings('docs/index.html', page.replace(b'#research', b'https://example.com')))
+        self.assertTrue(text_findings('docs/index.html', page + b'<script src="https://example.com"></script>'))
+
 if __name__ == '__main__':
     unittest.main()

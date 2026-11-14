@@ -18,6 +18,7 @@ GENERATED = {'.git', '.venv', '__pycache__', 'build', 'dist', '.pytest_cache'}
 RETIRED_PORTFOLIO_PATHS = ["DATA_LICENSE.md","data/ecb-acquisition.json","data/ecb-execution.json","data/ecb-fx-reference.csv","data/ecb-fx-results.json","experiments/ecb-fx-mom20-protocol.md","experiments/fx-evidence.json","figures/de30.svg","figures/fx-reference.svg","figures/momentum.svg","results/fx-tables.md","scripts/fx_study.py","scripts/render_fx.py","src/srl/fx_study.py","studies/de30-continuation.md","studies/fx-reference-momentum.md","studies/momentum-and-execution.md","studies/momentum-continuation.md","studies/reconstruction-and-timing.md","studies/vwap-research.md","tests/test_fx_figure.py","tests/test_fx_study.py"]
 TEXT_TYPES = {'.py', '.json', '.md', '.toml', '.svg', '.yml', '.yaml', '.txt'}
 SPECIAL = {'LICENSE', '.gitignore', '.gitattributes'}
+SITE_HTML = 'docs/index.html'
 LINK = re.compile(r'!?\[[^\]]*\]\(([^)]+)\)')
 PRIVATE = [re.compile(pattern, re.I) for pattern in (
     r'https?://(?:app\.notion\.com|(?:docs|drive)\.google\.com)/',
@@ -46,13 +47,33 @@ def text_findings(name: str, payload: bytes) -> list[str]:
     # One specifically reviewed, provider-permitted market snapshot. This does
     # not admit arbitrary raw vendor CSVs to the publication boundary.
     approved_csv = name == 'data/ecb-fx-reference.csv'
-    if len(payload) > 600_000 or (Path(name).suffix not in TEXT_TYPES and name not in SPECIAL and not approved_csv):
+    if len(payload) > 600_000 or (Path(name).suffix not in TEXT_TYPES and name not in SPECIAL and not approved_csv and name != SITE_HTML):
         return [f'unsupported source type or size: {name}']
     try:
         text = payload.decode('utf-8')
     except UnicodeDecodeError:
         return [f'non-text source: {name}']
-    return [f'private-content pattern in {name}' for pattern in PRIVATE if pattern.search(text)]
+    findings = [f'private-content pattern in {name}' for pattern in PRIVATE if pattern.search(text)]
+    if name == SITE_HTML:
+        if text.count('<h1') != 1 or '<main' not in text:
+            findings.append('static site requires one heading and a main landmark')
+        if re.search(r'<\s*(?:script|iframe|form)\b', text, re.I):
+            findings.append('static site embeds active code or form')
+        for target in re.findall(r'\b(?:href|src)="([^"]+)"', text, re.I):
+            if target.startswith('#'):
+                if not target[1:] or f'id="{target[1:]}"' not in text:
+                    findings.append('broken site in-page anchor')
+                continue
+            url = urlsplit(target)
+            trusted_repository = (url.scheme == 'https' and url.netloc == 'github.com'
+                                  and (url.path == '/vda93/systematic-research-lab'
+                                       or url.path.startswith('/vda93/systematic-research-lab/')))
+            trusted_figure = (url.scheme == 'https' and url.netloc == 'raw.githubusercontent.com'
+                              and url.path.startswith('/vda93/systematic-research-lab/main/figures/')
+                              and url.path.endswith('.svg'))
+            if not (trusted_repository or trusted_figure):
+                findings.append('unreviewed static site link or asset')
+    return findings
 
 
 def heading_anchors(text: str) -> set[str]:
