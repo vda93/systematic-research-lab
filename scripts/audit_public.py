@@ -11,6 +11,11 @@ import subprocess
 from pathlib import Path, PurePosixPath
 from urllib.parse import unquote, urlsplit
 
+if __package__:
+    from . import site_policy as site
+else:  # Direct CLI invocation: python scripts/audit_public.py
+    import site_policy as site
+
 
 GENERATED = {'.git', '.venv', '__pycache__', 'build', 'dist', '.pytest_cache'}
 
@@ -18,7 +23,13 @@ GENERATED = {'.git', '.venv', '__pycache__', 'build', 'dist', '.pytest_cache'}
 RETIRED_PORTFOLIO_PATHS = ["DATA_LICENSE.md","data/ecb-acquisition.json","data/ecb-execution.json","data/ecb-fx-reference.csv","data/ecb-fx-results.json","experiments/ecb-fx-mom20-protocol.md","experiments/fx-evidence.json","figures/de30.svg","figures/fx-reference.svg","figures/momentum.svg","results/fx-tables.md","scripts/fx_study.py","scripts/render_fx.py","src/srl/fx_study.py","studies/de30-continuation.md","studies/fx-reference-momentum.md","studies/momentum-and-execution.md","studies/momentum-continuation.md","studies/reconstruction-and-timing.md","studies/vwap-research.md","tests/test_fx_figure.py","tests/test_fx_study.py"]
 TEXT_TYPES = {'.py', '.json', '.md', '.toml', '.svg', '.yml', '.yaml', '.txt'}
 SPECIAL = {'LICENSE', '.gitignore', '.gitattributes'}
-SITE_HTML = 'docs/index.html'
+# V001 was published with inline handlers. Only these exact historical trees
+# may retain that archived blob; current content has no legacy allowance.
+LEGACY_INDEX_COMMITS = {
+    '24d794f5efcc0ba8b3911c5452f47e6d23223de8',
+    '4e787e90db81cc29336c163088c806b23bc6225c',
+}
+LEGACY_INDEX_BLOB = '35b280c49072484b6f6379707bf87ef0f374b874'
 LINK = re.compile(r'!?\[[^\]]*\]\(([^)]+)\)')
 PRIVATE = [re.compile(pattern, re.I) for pattern in (
     r'https?://(?:app\.notion\.com|(?:docs|drive)\.google\.com)/',
@@ -43,36 +54,37 @@ def source_files(root: Path):
             not any(part in GENERATED or part.endswith('.egg-info') for part in path.relative_to(root).parts)]
 
 
-def text_findings(name: str, payload: bytes) -> list[str]:
+def is_archived_landing_page(name: str, oid: str, revision: str) -> bool:
+    return (name == 'docs/index.html' and oid == LEGACY_INDEX_BLOB
+            and revision in LEGACY_INDEX_COMMITS)
+
+
+def text_findings(name: str, payload: bytes, *, legacy_index: bool = False,
+                  pages: dict[str, site.SitePage] | None = None) -> list[str]:
     # One specifically reviewed, provider-permitted market snapshot. This does
     # not admit arbitrary raw vendor CSVs to the publication boundary.
     approved_csv = name == 'data/ecb-fx-reference.csv'
-    if len(payload) > 600_000 or (Path(name).suffix not in TEXT_TYPES and name not in SPECIAL and not approved_csv and name != SITE_HTML):
+    approved_site_path = name in site.PAGES or name in {site.CSS, site.MARKER}
+    if (len(payload) > 600_000 or (Path(name).suffix not in TEXT_TYPES and
+            name not in SPECIAL and not approved_csv and not approved_site_path)):
         return [f'unsupported source type or size: {name}']
     try:
         text = payload.decode('utf-8')
     except UnicodeDecodeError:
         return [f'non-text source: {name}']
     findings = [f'private-content pattern in {name}' for pattern in PRIVATE if pattern.search(text)]
-    if name == SITE_HTML:
-        if text.count('<h1') != 1 or '<main' not in text:
-            findings.append('static site requires one heading and a main landmark')
-        if re.search(r'<\s*(?:script|iframe|form)\b', text, re.I):
-            findings.append('static site embeds active code or form')
-        for target in re.findall(r'\b(?:href|src)="([^"]+)"', text, re.I):
-            if target.startswith('#'):
-                if not target[1:] or f'id="{target[1:]}"' not in text:
-                    findings.append('broken site in-page anchor')
-                continue
-            url = urlsplit(target)
-            trusted_repository = (url.scheme == 'https' and url.netloc == 'github.com'
-                                  and (url.path == '/vda93/systematic-research-lab'
-                                       or url.path.startswith('/vda93/systematic-research-lab/')))
-            trusted_figure = (url.scheme == 'https' and url.netloc == 'raw.githubusercontent.com'
-                              and url.path.startswith('/vda93/systematic-research-lab/main/figures/')
-                              and url.path.endswith('.svg'))
-            if not (trusted_repository or trusted_figure):
-                findings.append('unreviewed static site link or asset')
+    if name in site.PAGES and not legacy_index:
+        page = site.SitePage(name, text)
+        findings.extend(f'{name}: {error}' for error in page.errors)
+        if pages is not None:
+            pages[name] = page
+    if name == site.CSS and hashlib.sha256(payload).hexdigest() != site.CSS_SHA256:
+        findings.append('unreviewed site stylesheet')
+    if name == site.MARKER and payload:
+        findings.append('Pages marker must be empty')
+    if name.startswith('docs/') and name.endswith('.svg'):
+        if site.PLOT_HASHES.get(name) != hashlib.sha256(payload).hexdigest():
+            findings.append(f'unreviewed site figure: {name}')
     return findings
 
 
@@ -92,6 +104,39 @@ def heading_anchors(text: str) -> set[str]:
     return anchors
 
 
+def site_references(pages: dict[str, site.SitePage], hashes: dict[str, str], root: Path) -> list[str]:
+    """Resolve all website links against safe, inventoried local source bytes."""
+    errors = []
+    anchors = {name: page.ids for name, page in pages.items()}
+    for name, page in pages.items():
+        for target, fragment in page.references:
+            if target not in hashes:
+                errors.append(f'broken site link: {name} -> {target}')
+                continue
+            if not fragment:
+                continue
+            if target.endswith('.md') and target not in anchors:
+                anchors[target] = heading_anchors((root / target).read_text(encoding='utf-8'))
+            if fragment not in anchors.get(target, set()):
+                errors.append(f'broken site fragment: {name} -> {target}#{fragment}')
+
+    copies = hashes.keys() & site.PLOT_HASHES.keys()
+    if copies:
+        try:
+            registry = 'data/claim-registry.json'
+            if registry not in hashes:
+                raise ValueError('missing figure provenance')
+            declared = json.loads((root / registry).read_bytes())['figures']
+            originals = {figure['path'] for figure in declared}
+        except (KeyError, TypeError, ValueError):
+            return errors + ['invalid source register for site figures']
+        for copy in copies:
+            original = 'figures/' + Path(copy).name
+            if original not in originals or hashes.get(original) != hashes[copy]:
+                errors.append(f'site figure differs from the registered original: {copy}')
+    return errors
+
+
 def audit_directory(root: Path) -> dict:
     root = root.resolve()
     findings = []
@@ -107,6 +152,7 @@ def audit_directory(root: Path) -> dict:
     if set(actual) != set(names):
         findings.append('actual source inventory differs from release-files.json')
     hashes = {}
+    pages = {}
     for name, path in actual.items():
         if (path.is_symlink() or not path.resolve().is_relative_to(root) or
                 any(getattr(part.lstat(), 'st_file_attributes', 0) & getattr(stat, 'FILE_ATTRIBUTE_REPARSE_POINT', 0)
@@ -115,7 +161,7 @@ def audit_directory(root: Path) -> dict:
             continue
         payload = path.read_bytes()
         hashes[name] = hashlib.sha256(payload).hexdigest()
-        problems = text_findings(name, payload)
+        problems = text_findings(name, payload, pages=pages)
         findings.extend(problems)
         if not problems and path.suffix == '.md':
             for raw in LINK.findall(payload.decode('utf-8')):
@@ -129,6 +175,7 @@ def audit_directory(root: Path) -> dict:
                 elif parts.fragment and named.suffix == '.md' and named.is_file():
                     if parts.fragment not in heading_anchors(named.read_text(encoding='utf-8')):
                         findings.append(f'broken heading fragment: {name} -> {target}')
+    findings.extend(site_references(pages, hashes, root))
     return {'status': 'PASS' if not findings else 'FAIL', 'files': hashes,
             'findings': sorted(set(findings))}
 
@@ -193,16 +240,19 @@ def audit_git(root: Path) -> dict:
                 if mode != '100644' or kind != 'blob' or name not in allowed_history_names:
                     findings.append('unapproved type or path in publication history')
                     continue
-                if oid not in checked_blobs:
-                    findings.extend(text_findings(name, git('cat-file', 'blob', oid)))
-                    checked_blobs.add(oid)
+                legacy = is_archived_landing_page(name, oid, revision)
+                # Path-specific rules must still run when a blob appears at a new path.
+                key = (name, oid, legacy)
+                if key not in checked_blobs:
+                    findings.extend(text_findings(name, git('cat-file', 'blob', oid), legacy_index=legacy))
+                    checked_blobs.add(key)
             metadata = git('show', '-s', '--format=%an%n%ae%n%cn%n%ce%n%B', revision).decode('utf-8')
             parents = git('rev-list', '--parents', '-n', '1', revision).decode().split()
             findings.extend(metadata_findings(metadata, merge=len(parents) > 2))
     except (subprocess.CalledProcessError, OSError, ValueError, IndexError):
         return {'status': 'FAIL', 'findings': ['Git audit could not complete']}
     return {'status': 'PASS' if not findings else 'FAIL', 'commits': len(revisions),
-            'root_commits': roots, 'unique_blobs_checked': len(checked_blobs), 'findings': sorted(set(findings))}
+            'root_commits': roots, 'unique_blobs_checked': len({oid for _, oid, _ in checked_blobs}), 'findings': sorted(set(findings))}
 
 
 def main() -> int:

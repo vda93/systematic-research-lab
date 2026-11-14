@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(ROOT / 'src'), str(ROOT)]
 
 from scripts.audit_public import audit_directory, safe_name
+from scripts.render_site import site_artifacts
 from srl.study import load_protocol, run_study
 from srl.visuals import render_summary
 from scripts.render_historical import historical_artifacts
@@ -86,6 +87,7 @@ def main() -> int:
     artifacts.update({f'figures/{name}': blob for name, blob in ebp_artifacts(ebp).items()})
     macro = json.loads((ROOT / 'data/macro-public.json').read_text(encoding='utf-8'))
     artifacts.update({f'figures/{name}': blob for name, blob in macro_artifacts(macro).items()})
+    artifacts.update(site_artifacts(ROOT))
     artifacts['results/aggregate-diagnostics.json'] = (json.dumps(
         derive_diagnostics(historical),sort_keys=True,indent=2,allow_nan=False)+'\n').encode()
     differences = check_artifacts(ROOT, artifacts)
