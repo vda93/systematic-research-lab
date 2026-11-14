@@ -84,13 +84,13 @@ def validate_study(root: Path, slug: str, study: dict, ledger: dict) -> dict[str
     return values
 
 
-def figure(root: Path, name: str, alt: str) -> str:
+def figure(root: Path, name: str, alt: str, *, linked: bool = True) -> str:
     original = root / FIGURE_ROOT / name
     node = ElementTree.fromstring(original.read_bytes())
     _, _, width, height = map(float, node.attrib["viewBox"].split())
     img = (f'<img src="plots/{name}" width="{round(width)}" '
            f'height="{round(height)}" alt="{escape(alt, quote=True)}" loading="lazy">')
-    return f'<a class="chart" href="plots/{name}">{img}</a>'
+    return f'<a class="chart" href="plots/{name}">{img}</a>' if linked else img
 
 
 def shell(title: str, content: str) -> bytes:
@@ -190,7 +190,7 @@ def landing(root: Path, studies: dict[str, dict[str, str]]) -> bytes:
     cards = []
     for slug, study in STUDIES.items():
         values = studies[slug]
-        cover = figure(root, study["cover"], study["cover_alt"])
+        cover = figure(root, study["cover"], study["cover_alt"], linked=False)
         cards.append(
             f'<article class="card"><div class="plot">{cover}</div>'
             f'<div class="card-body"><h3><a href="{slug}.html">'
