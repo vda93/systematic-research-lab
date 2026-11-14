@@ -16,6 +16,8 @@ The [public extract](../data/macro-public.json) records SHA-256 identities of or
 
 “APPROVED AS REPORTED” means suitable for this authorized aggregate publication with the stated source limits. It does not mean independently verified raw-market replication, research promotion or deployment approval. The original program remains shelved. The baseline/filter/medium/forensic samples are not pooled.
 
+The cost and calendar rows above are historical source records outside the featured MacroImpulse article. My practical reason for shelving the program was the execution I saw across brokers. [Closeout clarification](provenance.md#macroimpulse-closeout-clarification)
+
 ## Exact missing-artifact handoff
 
 1. **Sequential decomposition:** recover the original reviewed 2021–2024 139-group summary with a manifest tying group count, ordered first/reversal leg status and aggregate spread-only P&L to the EventPath run. A public replacement needs only group/leg aggregate totals and the original artifact hash. Position IDs, event-level rows and timestamps remain private. Until then, the canonical decision snapshot governs the reported figure.
@@ -33,6 +35,6 @@ python scripts/render_macro.py --check
 python -m unittest discover -s tests -p test_macro_figures.py -v
 ```
 
-The renderer has no dependency on private locations or on another study renderer. SVG dates are omitted, IDs use a fixed salt and text remains accessible SVG text. Native SVG title/description elements supply the ARIA accessible name and description; the article offers a full-resolution SVG link after every figure caption.
+The renderer has no dependency on private locations or on another study renderer. SVG dates are omitted, IDs use a fixed salt and text remains accessible SVG text. Each original SVG includes a title and description. The table above links directly to those files.
 
 Before rendering, validation rejects duplicate or missing baseline identities, nonfinite numbers and inconsistent cell/summary accounting. It also checks filter pair identities/deltas, dependent reversal totals, medium annual/pair/aggregate accounting, and 78 unique consecutive calendar months with consistent impact counts and forensic rates. Fixed scientific verdicts are explicit contracts: a replacement dataset that contradicts them fails closed rather than inheriting their captions. Quantitative annotations derive from validated disclosed data. The focused tests include consistent source mutations that update both marks and labels, contradictory mutations that raise `ValueError`, source identities, private-location exclusions and byte-for-byte figure determinism. No historical source value, new confidence interval or equity curve is calculated or changed by this publication repair.

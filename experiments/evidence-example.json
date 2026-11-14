@@ -2,20 +2,20 @@
   "version": 1,
   "evidence": [
     {
-      "id": "historical-reported-aggregates-v1",
-      "path": "data/historical-results.json",
-      "sha256": "db0e363c962d33195378206abec0d9acce89699db9a9f8fcf2ff1c6c98f3704a",
-      "bytes": 6175,
-      "source": "Owner-curated reported aggregates transcribed from completed research reports and primary decisions; see docs/provenance.md and docs/evidence.md.",
+      "id": "orbindex-reported-aggregates",
+      "path": "data/orbindex-public.json",
+      "sha256": "7942c6e8356fecbe362c16584eff6eb18c98088172618c6d7ae234d83f837a35",
+      "bytes": 106735,
+      "source": "The ORBINDEX publication extract identifies its discovery, portfolio, later-period and forensic sources. See IX1 through IX4 in docs/evidence.md for their different verification scopes.",
       "license": "MIT: original public aggregate transcription; no rights to excluded raw/vendor data or private code are conveyed.",
       "redistribution": "permitted",
       "disclosure": "Approved public reported aggregates only. This file supports presentation checks and qualified reporting, not public raw historical replay, unseen OOS, alpha or deployment claims.",
       "disclosure_approved": true,
       "owner": "vda93",
       "kind": "reported_aggregate",
-      "study_id": "portfolio-historical-presentation",
-      "sample_space": "orb-nowick-reported-aggregates",
-      "period_start": "2020-01-01",
+      "study_id": "orbindex-publication",
+      "sample_space": "orbindex-discovery-and-later-period-reported-aggregates",
+      "period_start": "2020-02-01",
       "period_end_exclusive": "2026-08-01",
       "sample_role": "spent",
       "consumed": true
@@ -27,7 +27,7 @@
       "kind": "historical_report",
       "text": "The public aggregate transcription has the recorded bytes and declared owner-approved disclosure. Individual historical findings retain their source limitations; file integrity does not independently validate the original research.",
       "evidence_ids": [
-        "historical-reported-aggregates-v1"
+        "orbindex-reported-aggregates"
       ],
       "disclosure_approved": true
     }

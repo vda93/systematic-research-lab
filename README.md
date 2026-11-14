@@ -1,21 +1,17 @@
-# TradingBotHQ systematic trading research
+# TradingBotHQ research
 
-I investigate what happens to familiar trading setups when their rules are made explicit. The studies follow each idea from the chart to a decision about whether it is worth trading.
+I study what happens between a trading idea and the price you can actually trade. These two projects stopped for different reasons.
 
-**[Browse the research library](studies/README.md)** for the questions, findings and decisions on opening-range breakouts, engulfing candles and scheduled news.
+**[Browse the illustrated research library](https://vda93.github.io/systematic-research-lab/)**
 
-## How much can one order rule change a test?
+## ORBINDEX
 
-In the gold Engulfing Bar Play study, keeping an unfilled order open could block the next signal. Each persistent-order version closed just 3 trades. Versions that could replace the pending order closed 1,257 and 1,297. The positive result on three trades was too sparse to select a winner. [Read the study](studies/engulfing-and-support.md) · [Order-policy evidence](docs/evidence.md#b21)
+Could an opening range work across nearby start times and markets? I tested the German, Japanese and UK indices, then froze three German-index portfolios for a later comparison. All three lost euros at fixed volume before additional commission or financing. The article follows the search through both heatmaps, portfolio selection, later results and the investigation into why the breakouts weakened. [Read the full ORBINDEX study](studies/orbindex.md)
 
-![Closed trades and total price R for the gold pending-order policies under two break-even rules](figures/ebp-order-policy.svg)
+## MacroImpulse
 
-*Each version saw the same signals. The counts show how often each set of order rules reached a closed trade on the historical sample. Price R measures the result relative to initial price risk.* [Figure source and limits](docs/ebp-visual-evidence.md)
+I wanted to trade the sharp moves around scheduled economic releases. Spreads widened across brokers, fills missed the prices I needed and slippage ate into the move. I shelved MacroImpulse. The historical studies explain why the idea interested me and what happened when I tried filtering its trades. [Why I shelved this](studies/news-research.md#why-i-shelved-this)
 
-## How to read the evidence
+[Research library](studies/README.md) · [Evidence register](docs/evidence.md) · [Reproduction instructions](docs/security.md#reproduce-the-checks)
 
-Each study specifies the signal, order rules and costs, then tests the proposed explanation against a relevant control or a later sample where available. The article identifies which evidence informed selection and which evidence determined the decision. [Research atlas](docs/research-atlas.md) · [Empirical methods](docs/empirical-methods.md)
-
-The public Python code reproduces selected aggregate figures and tables and runs synthetic examples. Replaying the original market experiments requires private inputs and implementations. [Code](src/srl) · [Reproduction instructions](docs/security.md#reproduce-the-checks) · [Evidence register](docs/evidence.md) · [Limitations](docs/limitations.md)
-
-I direct the research questions and priorities. Engineering, analysis and writing use AI assistance. The project draws on trading ideas with prior sources. [Contribution record](docs/ownership.md) · [Provenance](docs/provenance.md)
+The public code rebuilds figures from disclosed aggregates and runs synthetic methods examples. The historical backtests depend on private inputs. I directed the research questions and decisions, with AI assistance in engineering, analysis and writing. [Contribution record](docs/ownership.md) · [Provenance](docs/provenance.md)

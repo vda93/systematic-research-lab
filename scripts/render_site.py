@@ -1,11 +1,10 @@
-"""Render the public reading edition from selected, reviewed Markdown paragraphs."""
+"""Render the complete canonical Markdown articles as a static reading edition."""
 
 from argparse import ArgumentParser
 from html import escape
 import json
 from pathlib import Path
 import posixpath
-import re
 import sys
 from xml.etree import ElementTree
 
@@ -19,73 +18,29 @@ from srl.claims import digest, quantitative_blocks
 
 REPO = 'https://github.com/vda93/systematic-research-lab'
 LIBRARY = 'studies/README.md'
-SECTIONS = (
-    ('mechanism', 'Trading mechanism'), ('design', 'Test design'),
-    ('results', 'Results and figures'), ('controls', 'Controls and robustness'),
-    ('validation', 'Later validation'), ('limits', 'Limitations'),
-    ('decision', 'Final decision'),
-)
+MARKDOWN = MarkdownIt('commonmark', {'html': False}).enable('table')
 
 
 def source(path, label):
     return f'<a href="{REPO}/blob/main/{escape(path, quote=True)}">{escape(label)}</a>'
 
 
-def paragraphs(text):
-    return re.split(r'\n\s*\n', text.strip())
+def reviewed_markdown(path, text, ledger):
+    blocks = quantitative_blocks(text)
+    expected = [record['sha256'] for record in ledger['documents'][path]]
+    if [digest(block.encode()) for block in blocks] != expected:
+        raise ValueError(f'Quantitative Markdown differs from the reviewed claim registry: {path}')
+    return MARKDOWN.parse(text)
 
 
-def select_paragraph(blocks, prefix):
-    matches = [p for p in blocks if p.startswith(prefix)]
-    if len(matches) != 1:
-        raise ValueError(f'Expected one canonical paragraph beginning {prefix!r}')
-    return matches[0]
-
-
-def check_summary(sentence, blocks):
-    matches = [block for block in blocks if sentence in block]
-    if len(matches) != 1:
-        raise ValueError(f'Summary differs from the canonical library: {sentence}')
-    return matches[0]
-
-
-def check_excerpt(block, records, refs, source_ids):
-    if set(refs) - source_ids:
-        raise ValueError(f'Unknown evidence IDs: {refs}')
-    if quantitative_blocks(block):
-        sha = digest(block.encode())
-        record = next((r for r in records if r['sha256'] == sha), None)
-        if not record or not set(refs).intersection(record['source_ids']):
-            raise ValueError(f'Quantitative excerpt lacks a matching reviewed source: {block[:75]}')
-
-
-def display_prose(block, path):
-    # Render only the inline Markdown constructs used in the selected paragraphs.
-    # Every URL originates in the canonical document and is checked again by the site audit.
-    html = []
-    for token in MarkdownIt().parseInline(block)[0].children:
-        if token.type == 'text':
-            html.append(escape(token.content))
-        elif token.type == 'link_open':
-            href = token.attrGet('href')
-            if not href or any(c in href for c in ':\\%?') or href.startswith('/'):
-                raise ValueError(f'Expected a repository-relative citation in {path}')
-            dest = posixpath.normpath(posixpath.join(posixpath.dirname(path), href))
-            if dest.startswith('../'):
-                raise ValueError(f'Citation leaves repository: {href}')
-            html.append(f'<a href="{REPO}/blob/main/{escape(dest, quote=True)}">')
-        elif token.type == 'code_inline':
-            html.append(f'<code>{escape(token.content)}</code>')
-        elif token.type in ('strong_open', 'em_open', 'strong_close', 'em_close', 'link_close'):
-            slash = '/' if token.nesting < 0 else ''
-            html.append(f'<{slash}{token.tag}>')
-        else:
-            raise ValueError(f'Unsupported Markdown token {token.type} in {path}')
-    return ''.join(html)
-
-
-def evidence_links(refs):
-    return ' · '.join(source(f'docs/evidence.md#{ref.lower()}', ref) for ref in refs)
+def target_path(path, href):
+    if not href or href.startswith('/') or any(c in href for c in ':\\%?'):
+        raise ValueError(f'Expected a repository-relative link in {path}: {href}')
+    target, separator, fragment = href.partition('#')
+    dest = posixpath.normpath(posixpath.join(posixpath.dirname(path), target)) if target else path
+    if dest == '..' or dest.startswith('../'):
+        raise ValueError(f'Link leaves repository: {href}')
+    return dest + separator + fragment
 
 
 def shell(title, content):
@@ -101,7 +56,7 @@ def shell(title, content):
 <a class="skip" href="#content">Skip to content</a>
 <header><div class="shell nav">
   <a class="logo" href="index.html"><span class="mark" aria-hidden="true">TB</span>TradingBotHQ</a>
-  <nav aria-label="Main navigation"><a href="index.html#research">Library</a>
+  <nav aria-label="Main navigation"><a href="index.html#research">Studies</a>
     <a href="index.html#method">Methods</a>
     {source('docs/evidence.md', 'Evidence')} <a href="{REPO}">GitHub</a></nav>
 </div></header>
@@ -116,119 +71,163 @@ def shell(title, content):
 """.encode()
 
 
-def image(root, name, study, ledger, *, full=False):
-    figure_records = {f['path']: f for f in ledger['figures']}
-    record = figure_records[f'figures/{name}']
-    node = ElementTree.fromstring((root / record['path']).read_bytes())
-    title = node.findtext('{http://www.w3.org/2000/svg}title') or ''
-    title = title.split('|', 1)[-1].strip()
-    if not title:
-        raise ValueError(f'Figure lacks a title: {name}')
-    url = 'plots/' + name
-    blocks = paragraphs((root / study['article']).read_text(encoding='utf-8'))
-    image_line = next(p for p in blocks if p.startswith('![') and p.endswith(f'(../figures/{name})'))
-    check_excerpt(image_line, ledger['documents'][study['article']], record['source_ids'],
-                  {s['id'] for s in ledger['sources']})
-    alt = escape(image_line[2:image_line.index('](')], quote=True)
-    _, _, width, height = map(float, node.attrib['viewBox'].split())
-    img = (f'<img src="{url}" width="{round(width)}" height="{round(height)}" '
-           f'alt="{alt}" loading="lazy">')
-    if not full:
-        return f'<div class="plot">{img}</div>'
-    scope = 'Conceptual illustration' if record['scope'] == 'CONCEPTUAL_SCHEMATIC' else 'Reported historical figure'
-    return (f'<figure><a href="{url}">{img}</a>'
-            f'<figcaption><strong>{scope}</strong> · {escape(title)}. '
-            f'{evidence_links(record["source_ids"])} · <a href="{url}">Full size</a></figcaption></figure>')
+class ReadingEdition:
+    """Share the original figures and canonical document routes across one render."""
 
+    def __init__(self, root, ledger):
+        self.root = root
+        self.ledger = ledger
+        self.figures = {figure['path'] for figure in ledger['figures']}
+        self.outputs = {}
+        self.routes = {'README.md': 'index.html', LIBRARY: 'index.html#research'}
+        self.routes.update({study['article']: f'{slug}.html' for slug, study in STUDIES.items()})
 
-def landing(root, ledger):
-    cards = []
-    for slug, study in STUDIES.items():
-        cards.append(f"""<article class="card">
-  {image(root, study['hero'], study, ledger)}
-  <div class="card-body"><p class="kicker">{escape(study['title'])}</p>
-  <h3><a href="{slug}.html">{escape(study['question'])}</a></h3>
-  <p>{escape(study['finding'])}</p>
-  <p class="qualification"><strong>Limitation</strong> {escape(study['caveat'])}</p>
-  <p class="verdict">{escape(study['decision'])}</p>
-  <a class="read" href="{slug}.html">Read the {escape(slug.upper() if slug != 'macroimpulse' else 'MacroImpulse')} study <span aria-hidden="true">→</span></a></div>
+    def document(self, path):
+        text = (self.root / path).read_text(encoding='utf-8')
+        return reviewed_markdown(path, text, self.ledger)
+
+    def figure_url(self, path):
+        if path not in self.figures:
+            raise ValueError(f'Unregistered figure: {path}')
+        return 'plots/' + Path(path).name
+
+    def image(self, path, alt):
+        url = self.figure_url(path)
+        if not alt.strip():
+            raise ValueError(f'Missing alternative text: {path}')
+        data = (self.root / path).read_bytes()
+        self.outputs['docs/' + url] = data
+        _, _, width, height = map(float, ElementTree.fromstring(data).attrib['viewBox'].split())
+        return (f'<img src="{url}" width="{round(width)}" height="{round(height)}" '
+                f'alt="{escape(alt, quote=True)}" loading="lazy">')
+
+    def inline(self, children, path):
+        html = []
+        for token in children:
+            if token.type == 'text':
+                html.append(escape(token.content))
+            elif token.type == 'link_open':
+                dest = target_path(path, token.attrGet('href'))
+                if dest.startswith('figures/'):
+                    url = self.figure_url(dest)
+                else:
+                    url = self.routes.get(dest, f'{REPO}/blob/main/{dest}')
+                html.append(f'<a href="{escape(url, quote=True)}">')
+            elif token.type == 'image':
+                dest = target_path(path, token.attrGet('src'))
+                html.append(f'<a class="chart" href="{self.figure_url(dest)}">{self.image(dest, token.content)}</a>')
+            elif token.type == 'code_inline':
+                html.append(f'<code>{escape(token.content)}</code>')
+            elif token.type == 'softbreak':
+                html.append('\n')
+            elif token.type in ('strong_open', 'em_open', 'strong_close', 'em_close', 'link_close'):
+                slash = '/' if token.nesting < 0 else ''
+                html.append(f'<{slash}{token.tag}>')
+            else:
+                raise ValueError(f'Unsupported inline Markdown in {path}: {token.type}')
+        return ''.join(html)
+
+    @staticmethod
+    def inline_title(token):
+        # A source heading may contain evidence links. Its TOC entry is one anchor.
+        return escape(''.join(c.content for c in token.children if c.type in ('text', 'code_inline')))
+
+    def article(self, slug, study, tokens):
+        path = study['article']
+        if tokens[0].tag != 'h1' or sum(t.type == 'heading_open' and t.tag == 'h1' for t in tokens) != 1:
+            raise ValueError(f'Expected one article title at the start of {path}')
+        title = self.inline(tokens[1].children, path)
+        intro = []
+        sections = []
+        toc = []
+        body = intro
+        heading = ''
+        table_number = 0
+        for i, token in enumerate(tokens[3:], start=3):
+            if token.type == 'heading_open' and token.tag == 'h2':
+                heading = self.inline_title(tokens[i + 1])
+                section_id = f'section-{len(sections) + 1}'
+                body = []
+                sections.append((section_id, body))
+                toc.append(f'<li><a href="#{section_id}">{heading}</a></li>')
+            if token.type == 'inline':
+                body.append(self.inline(token.children, path))
+            elif token.type == 'table_open':
+                table_number += 1
+                body.append(f'<section class="table-scroll" tabindex="0" aria-label="Table {table_number}: {heading}"><table>')
+            elif token.type == 'table_close':
+                body.append('</table></section>')
+            elif token.tag in ('p', 'h2', 'h3', 'thead', 'tr', 'th', 'tbody', 'td'):
+                if token.tag == 'th' and token.nesting == 1:
+                    body.append('<th scope="col">')
+                else:
+                    slash = '/' if token.nesting < 0 else ''
+                    body.append(f'<{slash}{token.tag}>')
+                if token.nesting < 0:
+                    body.append('\n')
+            else:
+                raise ValueError(f'Unsupported Markdown block in {path}: {token.type}')
+        # When the article opens directly with a section, show that lead before
+        # the contents navigation, especially on mobile.
+        if not intro and sections:
+            key, parts = sections.pop(0)
+            intro.append(f'<section id="{key}">{"".join(parts)}</section>')
+        article_sections = '\n'.join(
+            f'<section id="{key}">{"".join(parts)}</section>' for key, parts in sections)
+        related = ' · '.join(f'<a href="{key}.html">{other["name"]}</a>'
+                             for key, other in STUDIES.items() if key != slug)
+        name = study['name']
+        return shell(name, f"""<nav class="crumb" aria-label="Breadcrumb"><a href="index.html#research">Studies</a>
+<span aria-hidden="true"> / </span><span aria-current="page">{name}</span></nav>
+<article><div class="article-head"><h1>{title}</h1>
+{''.join(intro)}</div><div class="article-layout">
+<nav class="contents" aria-label="Article contents"><strong>In this study</strong><ul>{''.join(toc)}</ul></nav>
+<div class="reading">{article_sections}</div></div></article>
+<nav class="related" aria-label="Study navigation">{source(path, 'Original Markdown article')} · {related}</nav>""")
+
+    def landing(self, articles):
+        tokens = self.document(LIBRARY)
+        headings = [i for i, t in enumerate(tokens) if t.type == 'heading_open' and t.tag == 'h2']
+        cards = []
+        for i, (slug, study) in zip(headings, STUDIES.items(), strict=True):
+            if tokens[i + 3].type != 'paragraph_open':
+                raise ValueError(f'Missing synopsis under {tokens[i+1].content}')
+            heading = self.inline_title(tokens[i + 1])
+            if heading != study['name']:
+                raise ValueError(f"Library needs a section headed {study['name']}")
+            summary = self.inline(tokens[i + 4].children, LIBRARY)
+            cover = study['cover']
+            path = study['article']
+            cover_image = next(c for t in articles[slug] for c in (t.children or [])
+                               if c.type == 'image' and target_path(path, c.attrGet('src')) == cover)
+            cards.append(f"""<article class="card">
+<div class="plot">{self.image(cover, cover_image.content)}</div>
+<div class="card-body"><h3><a href="{slug}.html">{heading}</a></h3>
+<p>{summary}</p><a class="read" href="{slug}.html">Read the {study['name']} study <span aria-hidden="true">→</span></a></div>
 </article>""")
-    return shell('Research library', f"""<section class="hero">
-  <div><p class="kicker">Systematic trading research</p><h1>Research library</h1>
-  <p class="lead">What happens to a trading idea when its rules, costs and validation period are fixed?</p></div>
-  <aside class="note"><strong>About the evidence</strong><p>Public code reproduces selected figures and synthetic examples.
-  Replaying the original market experiments requires private records.</p>{source('docs/provenance.md', 'Reproduction boundaries')}</aside>
+        return shell('Research library', f"""<section class="hero">
+<div><p class="kicker">Systematic trading research</p><h1>Research library</h1>
+<p class="lead">I tested when to trade an index breakout and whether I could trade the first move after a news release. These are the results and the decisions I made.</p></div>
 </section>
-<section id="research"><h2>Featured studies</h2><div class="cards">{''.join(cards)}</div></section>
-<section class="method" id="method"><h2>Research methods</h2>
-<p>Each study identifies the signal, order rules and costs, then explains which control or later sample determined the decision.</p>
+<section id="research"><h2>Case studies</h2><div class="cards">{''.join(cards)}</div></section>
+<section class="method" id="method"><h2>How I read the evidence</h2>
+<p>I keep the discovery period separate from later tests and ask what the quoted prices would have meant for a trade. The public code rebuilds the figures from research aggregates. Replaying the original trades requires private data.</p>
 <nav aria-label="Methods and sources">{source('docs/empirical-methods.md', 'Empirical methods')}
-{source('docs/evidence.md', 'Evidence register')} {source('docs/security.md#reproduce-the-checks', 'Reproduce the exhibits')}</nav></section>
-<section class="archive"><h2>Historical archive</h2><p>{source('studies/nowick.md', 'NOWICK and ANTI-NOWICK')} · Matched-candle study and original closeout.</p></section>""")
-
-
-def study_page(root, slug, study, ledger, source_ids):
-    sections = []
-    toc = []
-    for (anchor, role), (heading, excerpts) in zip(SECTIONS, study['sections'], strict=True):
-        toc.append(f'<li><a href="#{anchor}">{role}</a></li>')
-        body = []
-        for path, prefix, refs in excerpts:
-            block = select_paragraph(paragraphs((root / path).read_text(encoding='utf-8')), prefix)
-            check_excerpt(block, ledger['documents'][path], refs, source_ids)
-            refs_html = evidence_links(refs)
-            body.append(f'<p>{display_prose(block, path)}</p>')
-            if not refs:
-                refs_html = source('docs/provenance.md#macroimpulse-closeout-clarification', 'Owner’s closeout clarification')
-            body.append(f'<p class="citation">{source(path, "Source text")} · {refs_html}</p>')
-        if anchor == 'results':
-            body.append(image(root, study['result_figure'], study, ledger, full=True))
-        sections.append(f'<section id="{anchor}"><h2>{escape(heading)}</h2>{"".join(body)}</section>')
-
-    title = escape(study['title'])
-    related = ' · '.join(f'<a href="{key}.html">{escape(other["title"])}</a>'
-                         for key, other in STUDIES.items() if key != slug)
-    sources = (f'{source(study["article"], "Original Markdown article")} · {evidence_links(study["evidence"])}')
-    if slug == 'macroimpulse':
-        sources += ' · ' + source('docs/provenance.md#macroimpulse-closeout-clarification', 'Owner’s closeout clarification')
-    return shell(study['title'], f"""<nav class="crumb" aria-label="Breadcrumb"><a href="index.html#research">Research library</a>
-<span aria-hidden="true"> / </span><span aria-current="page">{title}</span></nav>
-<article><div class="article-head"><p class="kicker">{title}</p>
-<h1>{escape(study['question'])}</h1><p class="lead">{escape(study['finding'])}</p>
-<div class="summary"><p class="verdict"><strong>Decision</strong> {escape(study['decision'])}</p>
-<p><strong>Limitation</strong> {escape(study['caveat'])}</p></div>
-<p class="citation">{source(study['article'], 'Original Markdown article')} · <a href="#sources">Evidence and reproducibility</a></p></div>
-<div class="article-layout"><nav class="contents" aria-label="Article contents"><strong>In this study</strong>
-<ul>{''.join(toc)}<li><a href="#sources">Sources and reproducibility</a></li></ul></nav>
-<div class="reading">{''.join(sections)}
-<section id="sources"><h2>Source evidence and reproducibility</h2><p>{sources}</p>
-<p>The public scripts rebuild selected exhibits from disclosed aggregates. The historical backtests require private inputs and implementations.</p>
-<p>{source('docs/security.md#reproduce-the-checks', 'Reproduction instructions')} · {source('docs/provenance.md', 'Source boundaries')}</p></section>
-</div></div></article>
-<nav class="related" aria-label="Related studies"><strong>Other studies</strong> {related}</nav>""")
+{source('docs/evidence.md', 'Evidence register')} {source('docs/security.md#reproduce-the-checks', 'Reproduce the figures')}</nav></section>""")
 
 
 def site_artifacts(root):
-    ledger = json.loads((root / 'data/claim-registry.json').read_bytes())
-    figures = {f['path']: f for f in ledger['figures']}
-    source_ids = {s['id'] for s in ledger['sources']}
-    library = paragraphs((root / LIBRARY).read_text(encoding='utf-8'))
-    artifacts = {}
+    edition = ReadingEdition(root, json.loads((root / 'data/claim-registry.json').read_bytes()))
+    articles = {slug: edition.document(study['article']) for slug, study in STUDIES.items()}
     for slug, study in STUDIES.items():
-        for key in ('question', 'decision', 'finding', 'caveat'):
-            block = check_summary(study[key], library)
-            if quantitative_blocks(study[key]):
-                check_excerpt(block, ledger['documents'][LIBRARY], study['evidence'], source_ids)
-        artifacts[f'docs/{slug}.html'] = study_page(root, slug, study, ledger, source_ids)
-        for name in (study['hero'], study['result_figure']):
-            artifacts[f'docs/plots/{name}'] = (root / figures[f'figures/{name}']['path']).read_bytes()
-    artifacts['docs/index.html'] = landing(root, ledger)
-    return artifacts
+        edition.outputs[f'docs/{slug}.html'] = edition.article(slug, study, articles[slug])
+    edition.outputs['docs/index.html'] = edition.landing(articles)
+    return edition.outputs
 
 
 if __name__ == '__main__':
     parser = ArgumentParser(description=__doc__)
-    parser.add_argument('--write', action='store_true', help='regenerate the reviewed website outputs')
+    parser.add_argument('--write', action='store_true', help='regenerate reviewed website outputs')
     args = parser.parse_args()
     for name, payload in site_artifacts(ROOT).items():
         path = ROOT / name

@@ -1,18 +1,15 @@
-# Research decision timeline
+# How the research decisions unfolded
 
 [Portfolio](../README.md) · [Research atlas](research-atlas.md)
 
-Dates below describe research decisions, not the market observation timestamps.
+## ORBINDEX
 
-| Period | What changed |
-| --- | --- |
-| Early event-driven research | MacroImpulse event timing, broker execution parity and news filtering became separately testable questions. [B08](evidence.md#b08) |
-| August to September 2026 | Opening-range configuration sweeps yielded apparent local plateaus, but placebo ranges challenged whether precise boundary geometry supplied unique information. [O1](evidence.md#o1) |
-| September 2026 | A frozen Nasdaq ORB candidate passed one standalone validation block and failed the next; gold implementation parity did not rescue final financing economics. [ORB](../studies/opening-range.md) |
-| September 30, 2026 | The tested ORB program closed without deployment approval; distinct untested proposals remained unadjudicated. [O6](evidence.md#o6) |
-| Early October 2026 | NOWICK matched controls did not confirm a robust extra continuation effect; the separate reversal failed its own decision rule. [N1](evidence.md#n1) |
-| October 2026 | EBP source reconstruction exposed large exposure changes from pending-order rules and native-timeframe assumptions. [B21](evidence.md#b21) |
-| October 2026 | MacroImpulse calendar forensics replaced an apparent later-period clean failure with an **invalid data universe** verdict. [B15](evidence.md#b15) |
-| October 2026 | Research OS tools made source identities, evidence roles and disclosure checks explicit. [E1](evidence.md#e1) |
+I used the discovery search to identify opening-time regions and selected German index portfolios for a later test. Combining signals under a shared position limit changed the trades a portfolio could hold. [Search](evidence.md#ix1) · [Portfolio and execution checks](evidence.md#ix2)
 
-Scientific decisions remain bounded to the versions and evidence actually tested. A correct test can produce an economically unsuccessful result.
+All three portfolios lost euros at fixed volume in the later historical scenario before additional commission or financing. I closed them for economic promotion. The subsequent quote-path analysis investigated the weaker follow-through. That later history was already spent when the explanation was developed. [Decision](evidence.md#ix3) · [Follow-up](evidence.md#ix4)
+
+## MacroImpulse
+
+The controlled comparisons checked how the research implementation handled orders around a release. Historical tests then compared the baseline with proposed filters and changes to trade management. [Order checks](evidence.md#b08) · [Baseline and spread filter](evidence.md#b09) · [Opposite-side triggers](evidence.md#b10)
+
+I shelved the strategy because spreads widened and fills slipped across brokers. I recorded that distinction when an earlier description gave too much weight to a historical data problem. [Closeout clarification](provenance.md#macroimpulse-closeout-clarification)

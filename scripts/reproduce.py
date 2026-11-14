@@ -17,12 +17,8 @@ from scripts.audit_public import audit_directory, safe_name
 from scripts.render_site import site_artifacts
 from srl.study import load_protocol, run_study
 from srl.visuals import render_summary
-from scripts.render_historical import historical_artifacts
 from scripts.render_orbindex import orbindex_artifacts
-from scripts.render_orb import orb_artifacts
-from scripts.render_ebp import render_all as ebp_artifacts
 from scripts.render_macro import build_figures as macro_artifacts
-from srl.diagnostics import derive_diagnostics
 from srl.claims import audit_claims
 from srl.evidence import load_manifest, verify_manifest
 
@@ -76,20 +72,11 @@ def main() -> int:
     for name in ('experiments/evidence-example.json',):
         verify_manifest(ROOT, load_manifest(ROOT / name))
     artifacts = artifact_bytes(ROOT)
-    historical = json.loads((ROOT / 'data/historical-results.json').read_text(encoding='utf-8'))
-    artifacts.update(historical_artifacts(historical))
     orbindex = json.loads((ROOT / "data/orbindex-public.json").read_text(encoding="utf-8"))
     artifacts.update(orbindex_artifacts(orbindex))
-    artifacts.update(orb_artifacts(
-        json.loads((ROOT / 'data/orb-ustec-public.json').read_text(encoding='utf-8')),
-        json.loads((ROOT / 'data/orb-gold-public.json').read_text(encoding='utf-8'))))
-    ebp = json.loads((ROOT / 'data/ebp-public.json').read_text(encoding='utf-8'))
-    artifacts.update({f'figures/{name}': blob for name, blob in ebp_artifacts(ebp).items()})
     macro = json.loads((ROOT / 'data/macro-public.json').read_text(encoding='utf-8'))
     artifacts.update({f'figures/{name}': blob for name, blob in macro_artifacts(macro).items()})
     artifacts.update(site_artifacts(ROOT))
-    artifacts['results/aggregate-diagnostics.json'] = (json.dumps(
-        derive_diagnostics(historical),sort_keys=True,indent=2,allow_nan=False)+'\n').encode()
     differences = check_artifacts(ROOT, artifacts)
     if differences:
         print(json.dumps({'artifact_mismatch': differences}, indent=2))
