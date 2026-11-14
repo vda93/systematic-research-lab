@@ -7,31 +7,7 @@
         "source_ids": [
           "B21"
         ],
-        "sha256": "44dd1c5c99f518c12b32d3c852abb6e76b82fc2b588452d6dee3f463999a02a4"
-      },
-      {
-        "sha256": "2e65f7393718a743189baa98321e8a03d244f3ce57810f754656afc3ff36a8ff",
-        "kind": "historical_report",
-        "source_ids": [
-          "IX1",
-          "IX2",
-          "IX3",
-          "IX4"
-        ]
-      },
-      {
-        "kind": "historical_report",
-        "source_ids": [
-          "O1",
-          "O3",
-          "O4",
-          "N1",
-          "N2",
-          "B08",
-          "B14",
-          "B21"
-        ],
-        "sha256": "16bf50d279dc3ac3e8132995d9f1999077a927b2a921f4b178eb0a6786013977"
+        "sha256": "b0c95117d68fc366c55092bcd9a53e367c361646487b07ec359e812a7931db6e"
       }
     ],
     "SECURITY.md": [],
@@ -3954,7 +3930,46 @@
         "source_ids": [],
         "kind": "documentation"
       }
-    ]
+    ],
+    "studies/README.md": [
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "O2",
+          "O3",
+          "O4",
+          "O5",
+          "O6"
+        ],
+        "sha256": "09a7e425e2e991b8d73c8c0cdca9528dc12858c944466b998e0b78bc410ea458"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "O1",
+          "O6"
+        ],
+        "sha256": "a595cff1b8bd13028d2a59ef76f92fd390c33a381569f06e56079eb2ab293567"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "B21",
+          "B22"
+        ],
+        "sha256": "d60730402a7d173178196d0a6aecb81d9e8e14458b412e483ee9a3f5dc65ab34"
+      },
+      {
+        "kind": "historical_report",
+        "source_ids": [
+          "IX1",
+          "IX2",
+          "IX3"
+        ],
+        "sha256": "1a86fb682125d04ab5ff5c56a1526c1d444fd0437e35947b88e84813c5c2da8b"
+      }
+    ],
+    "docs/research-publishing-guide.md": []
   },
   "figures": [
     {
