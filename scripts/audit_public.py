@@ -21,8 +21,9 @@ GENERATED = {'.git', '.venv', '__pycache__', 'build', 'dist', '.pytest_cache'}
 
 # Digest of sorted newline-separated paths in the reviewed depublication ledger.
 # A file count or name prefix cannot establish which exact paths were removed.
-ARCHIVE_SHA256 = 'cdd44f8c480ac68a1bef453e3f9b9544c7d15c4769da6dd35f4d1dfc10f7112c'
+ARCHIVE_SHA256 = 'e06a9c112c02b25fc35e1ec88d0c5a78ef924e7e1bf0b0095764ddc39972439d'
 LAST_FOUR_STUDY_MAIN = 'b1a8b0874625dac0d11074c718ec25e8e154d63a'
+LAST_OWNERSHIP_MAIN = '4ed00d958ab0ee2ae989d15ab50e85f290f6ccf7'
 TEXT_TYPES = {'.py', '.json', '.md', '.toml', '.svg', '.yml', '.yaml', '.txt'}
 SPECIAL = {'LICENSE', '.gitignore', '.gitattributes'}
 # Previous publication policies applied to these exact Git trees and blobs.
@@ -238,13 +239,19 @@ def audit_git(root: Path) -> dict:
             archived_names = set()
         else:
             archived_names = set(archived_list)
-        # Only the ancestry already public at curation may contain retired paths.
+        # Each retired path is accepted only in its original, separately frozen ancestry.
         prior_revisions = set(git('rev-list', LAST_FOUR_STUDY_MAIN).decode().splitlines())
+        ownership_revisions = set(git('rev-list', LAST_OWNERSHIP_MAIN).decode().splitlines())
+        original_retired_names = archived_names - {'docs/ownership.md'}
         if set(git('ls-files').decode().splitlines()) != approved_names:
             findings.append('tracked files differ from the exact public inventory')
         checked_blobs = set()
         for revision in revisions:
-            allowed_history_names = approved_names | archived_names if revision in prior_revisions else approved_names
+            allowed_history_names = set(approved_names)
+            if revision in prior_revisions:
+                allowed_history_names.update(original_retired_names)
+            if revision in ownership_revisions and 'docs/ownership.md' in archived_names:
+                allowed_history_names.add('docs/ownership.md')
             # NUL records preserve exact paths instead of relying on shell quoting.
             for record in git('ls-tree', '-rz', revision).split(b'\0'):
                 if not record:

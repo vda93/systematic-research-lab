@@ -284,7 +284,6 @@
         "source_ids": []
       }
     ],
-    "docs/ownership.md": [],
     "docs/provenance.md": [
       {
         "sha256": "7fe7b63fee74e74a89ffd6b196610e18b5645030bdbb2348d526cc112b0eb836",
@@ -445,7 +444,7 @@
     "studies/research-engineering.md": [
       {
         "kind": "historical_report",
-        "sha256": "dadb0c30424f9abba5c3a371ebe2b7a7f7fb5bc405a8e4bd9233d06310ee3ee1",
+        "sha256": "c8df15c2dc2ccf3caa6b88915b636f6624b47cdc085d93ddcf3be9416b80dfae",
         "source_ids": [
           "E1"
         ]
