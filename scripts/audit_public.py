@@ -24,6 +24,8 @@ GENERATED = {'.git', '.venv', '__pycache__', 'build', 'dist', '.pytest_cache'}
 ARCHIVE_SHA256 = 'e06a9c112c02b25fc35e1ec88d0c5a78ef924e7e1bf0b0095764ddc39972439d'
 LAST_FOUR_STUDY_MAIN = 'b1a8b0874625dac0d11074c718ec25e8e154d63a'
 LAST_OWNERSHIP_MAIN = '42aa84af30f5a532f9897826f5cbfbd5398259b4'
+LAST_OLD_STYLESHEET_HEAD = '14281034fde2588b0afd90f2d6a04ca033ea205c'
+OLD_STYLESHEET_BLOB = '1638c07bc8273ac7bec4b4b989e9c200c9e28f45'
 TEXT_TYPES = {'.py', '.json', '.md', '.toml', '.svg', '.yml', '.yaml', '.txt'}
 SPECIAL = {'LICENSE', '.gitignore', '.gitattributes'}
 # Previous publication policies applied to these exact Git trees and blobs.
@@ -69,7 +71,11 @@ def source_files(root: Path):
             not any(part in GENERATED or part.endswith('.egg-info') for part in path.relative_to(root).parts)]
 
 
-def is_archived_site_blob(name: str, oid: str, revision: str) -> bool:
+def is_archived_site_blob(name: str, oid: str, revision: str, *,
+                          prior_style_revisions: set[str] | None = None) -> bool:
+    if (name == 'docs/site.css' and oid == OLD_STYLESHEET_BLOB
+            and prior_style_revisions is not None and revision in prior_style_revisions):
+        return True
     if revision in V001_COMMITS:
         return name == 'docs/index.html' and oid == '35b280c49072484b6f6379707bf87ef0f374b874'
     return revision in V002_COMMITS and V002_SITE_BLOBS.get(name) == oid
@@ -242,6 +248,7 @@ def audit_git(root: Path) -> dict:
         # Each retired path is accepted only in its original, separately frozen ancestry.
         prior_revisions = set(git('rev-list', LAST_FOUR_STUDY_MAIN).decode().splitlines())
         ownership_revisions = set(git('rev-list', LAST_OWNERSHIP_MAIN).decode().splitlines())
+        style_revisions = set(git('rev-list', LAST_OLD_STYLESHEET_HEAD).decode().splitlines())
         original_retired_names = archived_names - {'docs/ownership.md'}
         if set(git('ls-files').decode().splitlines()) != approved_names:
             findings.append('tracked files differ from the exact public inventory')
@@ -262,7 +269,8 @@ def audit_git(root: Path) -> dict:
                 if mode != '100644' or kind != 'blob' or name not in allowed_history_names:
                     findings.append('unapproved type or path in publication history')
                     continue
-                legacy = is_archived_site_blob(name, oid, revision)
+                legacy = is_archived_site_blob(name, oid, revision,
+                                               prior_style_revisions=style_revisions)
                 # Path-specific rules must still run when a blob appears at a new path.
                 key = (name, oid, legacy)
                 if key not in checked_blobs:

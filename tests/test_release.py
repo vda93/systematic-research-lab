@@ -171,6 +171,23 @@ class PublicationAuditTests(unittest.TestCase):
         self.assertFalse(archived('docs/orb.html', blob, introduction))
         self.assertFalse(archived(page, '0' * 40, introduction))
 
+    def test_old_stylesheet_is_allowed_only_at_its_original_history(self):
+        from scripts.audit_public import is_archived_site_blob, OLD_STYLESHEET_BLOB
+
+        old = {'previous-commit'}
+        self.assertTrue(is_archived_site_blob(
+            'docs/site.css', OLD_STYLESHEET_BLOB, 'previous-commit',
+            prior_style_revisions=old))
+        self.assertFalse(is_archived_site_blob(
+            'docs/site.css', OLD_STYLESHEET_BLOB, 'new-commit',
+            prior_style_revisions=old))
+        self.assertFalse(is_archived_site_blob(
+            'docs/site.css', '0' * 40, 'previous-commit',
+            prior_style_revisions=old))
+        self.assertFalse(is_archived_site_blob(
+            'docs/other.css', OLD_STYLESHEET_BLOB, 'previous-commit',
+            prior_style_revisions=old))
+
     def test_previous_site_bytes_are_bound_to_revision_and_path(self):
         from scripts.audit_public import is_archived_site_blob as archived
 

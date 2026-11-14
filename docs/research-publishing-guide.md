@@ -15,3 +15,10 @@ Use this reading order for the article.
 - **Evidence and reproducibility.** Cite the exact source IDs for each principal finding and link the relevant register entries. Identify what readers can rebuild from disclosed aggregates, what a synthetic example illustrates and which findings rely on private reports.
 
 Before publication, review the quantitative paragraphs against their sources, update the [claim registry](../data/claim-registry.json) and [release inventory](../release-files.json), and run the [verification checks](security.md#reproduce-the-checks). Preserve the original sample labels and [source limitations](provenance.md).
+
+
+## A short reading edition and a complete record
+
+The public website uses concise, source-checked editorial summaries defined in [the site copy](../scripts/site_studies.py). It should show the finding, the strongest visual evidence and the important limitation before asking readers to open the full technical record. The complete [ORBINDEX](../studies/orbindex.md) and [news-release](../studies/news-research.md) studies retain their original methodological detail.
+
+New public numeric statements must be represented as evidence-bound facts and verified against registered quantitative source paragraphs. Do not insert free-standing numerical claims into the website copy, relax the source checks or treat a previously examined period as an independent holdout.

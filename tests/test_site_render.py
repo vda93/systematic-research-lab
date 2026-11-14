@@ -1,121 +1,96 @@
-"""The reading edition must preserve the reviewed article, including its figure order."""
+"""Public reading editions must stay short, source-checked and reproducible."""
 
-from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
 import unittest
 
-from markdown_it import MarkdownIt
-
 from scripts import render_site
+from scripts.site_studies import STUDIES
 
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
-class ArticleReader(HTMLParser):
-    """Read article text and images in document order, excluding the table of contents."""
-
-    def __init__(self, html, inside=False):
-        super().__init__()
-        self.inside = inside
-        self.in_nav = False
-        self.text = []
-        self.images = []
-        self.tables = 0
-        self.feed(html)
-
-    def handle_starttag(self, tag, attrs):
-        if tag == 'article':
-            self.inside = True
-        if tag == 'nav':
-            self.in_nav = True
-        if self.inside and not self.in_nav:
-            if tag == 'img':
-                self.images.append(dict(attrs)['src'])
-            if tag == 'table':
-                self.tables += 1
-
-    def handle_endtag(self, tag):
-        if tag == 'article':
-            self.inside = False
-        if tag == 'nav':
-            self.in_nav = False
-
-    def handle_data(self, data):
-        if self.inside and not self.in_nav:
-            self.text.append(data)
-
-    def words(self):
-        return re.sub(r'\s+', '', ''.join(self.text))
-
-
 class SiteRenderingTests(unittest.TestCase):
-    def test_reading_editions_include_every_canonical_paragraph_and_table_in_order(self):
-        markdown = MarkdownIt('commonmark').enable('table')
-        for slug, source in (('orbindex', 'orbindex'), ('macroimpulse', 'news-research')):
+    def test_numeric_facts_are_bound_to_registered_technical_source(self):
+        ledger = json.loads((ROOT / "data/claim-registry.json").read_text(encoding="utf-8"))
+        for slug, study in STUDIES.items():
             with self.subTest(study=slug):
-                canonical = (ROOT / f'studies/{source}.md').read_text(encoding='utf-8')
-                expected = ArticleReader(markdown.render(canonical), inside=True)
-                actual = ArticleReader((ROOT / f'docs/{slug}.html').read_text(encoding='utf-8'))
-                self.assertEqual(expected.words(), actual.words())
-                self.assertEqual(expected.tables, actual.tables)
-                self.assertEqual([Path(x).name for x in expected.images],
-                                 [Path(x).name for x in actual.images])
+                values = render_site.validate_study(ROOT, slug, study, ledger)
+                self.assertEqual(set(values), set(study["facts"]))
+                for value in values.values():
+                    self.assertTrue(any(value in paragraph for paragraph in
+                                        (ROOT / study["technical"]).read_text(encoding="utf-8").split("\n\n")))
 
-    def test_original_orbindex_panels_keep_their_source_order_and_captions(self):
-        page = ArticleReader((ROOT / 'docs/orbindex.html').read_text(encoding='utf-8'))
-        self.assertEqual(page.images, [f'plots/orbindex-{panel}.svg' for panel in
-                         ('search', 'jp-uk-heatmaps', 'portfolios', 'curves', 'economics', 'forensics')])
-        self.assertIn('Figure 6 uses one zero-centred colour scale', ''.join(page.text))
-        self.assertEqual(page.tables, 4)
-
-    def test_outputs_are_current_and_all_offline_plots_match_their_sources(self):
-        outputs = render_site.site_artifacts(ROOT)
-        self.assertEqual({name for name in outputs if name.endswith('.html')},
-                         {'docs/index.html', 'docs/orbindex.html', 'docs/macroimpulse.html'})
-        for name, payload in outputs.items():
-            with self.subTest(path=name):
-                self.assertEqual((ROOT / name).read_bytes(), payload)
-                if name.startswith('docs/plots/'):
-                    self.assertEqual((ROOT / 'figures' / Path(name).name).read_bytes(), payload)
-
-    def test_execution_closeout_is_prominent_and_explained(self):
-        landing = (ROOT / 'docs/index.html').read_text(encoding='utf-8')
-        macro = (ROOT / 'docs/macroimpulse.html').read_text(encoding='utf-8')
-        self.assertIn('<h1>MacroImpulse: the execution problem</h1>', macro)
-        self.assertIn('<h2>Why I shelved this</h2>', macro)
-        self.assertIn('large spreads, poor fills and slippage around news releases', macro.lower())
-        self.assertIn('orders filled away from their intended prices', macro.lower())
-        self.assertIn('slippage', macro.lower())
-        self.assertIn('Why I shelved this', landing)
-        self.assertNotIn('Read the MacroImpulse study', landing)
-        self.assertNotIn('the owner', macro.lower())
-
-    def test_research_voice_without_changing_decisions(self):
-        orb = (ROOT / 'docs/orbindex.html').read_text(encoding='utf-8')
-        macro = (ROOT / 'docs/macroimpulse.html').read_text(encoding='utf-8')
-        self.assertNotIn('I wanted to know whether that idea', orb)
-        self.assertNotIn('I closed the program without promoting', orb)
-        self.assertIn('None of the portfolios was promoted.', orb)
-        self.assertIn('<h2>What the tests could verify</h2>', macro)
-        self.assertIn('Why I shelved this', macro)
-        self.assertIn('slippage', macro.lower())
-
-    def test_website_has_no_header_branding_and_shows_execution_reason(self):
-        for filename in ('index.html', 'orbindex.html', 'macroimpulse.html'):
-            html = (ROOT / 'docs' / filename).read_text(encoding='utf-8')
-            self.assertNotIn('class="logo"', html)
-            self.assertNotIn('class="mark"', html)
-            self.assertNotIn('docs/ownership.md', html)
-        macro = (ROOT / 'docs/macroimpulse.html').read_text(encoding='utf-8')
-        self.assertIn('large spreads, poor fills and slippage around news releases', macro)
-        self.assertIn('<strong>The reason I shelved MacroImpulse was live execution:', macro)
-
-    def test_numeric_source_mutation_cannot_be_rendered_using_old_review(self):
-        ledger = json.loads((ROOT / 'data/claim-registry.json').read_bytes())
-        path = 'studies/orbindex.md'
-        original = (ROOT / path).read_text(encoding='utf-8')
+    def test_unreviewed_numeric_public_copy_is_rejected(self):
         with self.assertRaises(ValueError):
-            render_site.reviewed_markdown(path, original.replace('3,456', '3,455', 1), ledger)
+            render_site.public_text("Backtest returned 999.9%", {})
+        ledger = json.loads((ROOT / "data/claim-registry.json").read_text(encoding="utf-8"))
+        original = STUDIES["orbindex"]["facts"]["a_eur"]["value"]
+        try:
+            STUDIES["orbindex"]["facts"]["a_eur"]["value"] = "+€999.99"
+            with self.assertRaises(ValueError):
+                render_site.validate_study(ROOT, "orbindex", STUDIES["orbindex"], ledger)
+        finally:
+            STUDIES["orbindex"]["facts"]["a_eur"]["value"] = original
+
+    def test_short_website_and_full_technical_record_are_distinct(self):
+        orb = (ROOT / "docs/orbindex.html").read_text(encoding="utf-8")
+        news = (ROOT / "docs/macroimpulse.html").read_text(encoding="utf-8")
+        for html in (orb, news):
+            self.assertNotIn("OOS_EXPLORATORY", html)
+            self.assertNotIn("POSSIBLE_PRIOR_EXPOSURE", html)
+            self.assertIn("Data and verification", html)
+            self.assertIn("Complete research record", html)
+            self.assertNotIn('class="mark"', html)
+            self.assertLess(len(re.sub(r"<[^>]+>", " ", html).split()), 1000)
+        self.assertIn("cannot be treated as a completely fresh independent test", orb)
+        self.assertIn("None of the frozen portfolios was promoted", orb)
+        self.assertIn("News-Release Trading", news)
+        self.assertIn("Why I shelved this", news)
+        self.assertIn("slippage", news)
+        self.assertNotIn("MacroImpulse", news)
+
+    def test_full_orbindex_record_and_verified_figures_remain(self):
+        article = (ROOT / "studies/orbindex.md").read_text(encoding="utf-8")
+        names = ("search", "jp-uk-heatmaps", "portfolios", "curves",
+                 "economics", "forensics")
+        for name in names:
+            with self.subTest(panel=name):
+                path = f"orbindex-{name}.svg"
+                self.assertIn(f"../figures/{path}", article)
+                self.assertEqual(
+                    (ROOT / "figures" / path).read_bytes(),
+                    (ROOT / "docs/plots" / path).read_bytes(),
+                )
+        self.assertEqual(sum(line.startswith("| Portfolio") or line.startswith("| Market")
+                             for line in article.splitlines()), 4)
+        self.assertIn("OOS_EXPLORATORY / POSSIBLE_PRIOR_EXPOSURE", article)
+
+    def test_site_outputs_and_offline_figures_are_exact(self):
+        outputs = render_site.site_artifacts(ROOT)
+        self.assertEqual(
+            {name for name in outputs if name.endswith(".html")},
+            {"docs/index.html", "docs/orbindex.html", "docs/macroimpulse.html"},
+        )
+        for path, payload in outputs.items():
+            with self.subTest(path=path):
+                self.assertEqual((ROOT / path).read_bytes(), payload)
+                if path.startswith("docs/plots/"):
+                    self.assertEqual(
+                        (ROOT / "figures" / Path(path).name).read_bytes(), payload
+                    )
+
+    def test_only_two_public_studies_and_plain_english_decisions(self):
+        landing = (ROOT / "docs/index.html").read_text(encoding="utf-8")
+        self.assertIn("ORBINDEX", landing)
+        self.assertIn("News-Release Trading", landing)
+        self.assertNotIn("MacroImpulse", landing)
+        self.assertNotIn("NOWICK", landing)
+        self.assertNotIn("Engulfing", landing)
+        self.assertIn("Main limitation.", (ROOT / "docs/orbindex.html").read_text())
+
+
+if __name__ == "__main__":
+    unittest.main()

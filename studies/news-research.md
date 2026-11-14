@@ -1,8 +1,8 @@
-# MacroImpulse: the execution problem
+# News-Release Trading: the execution problem
 
 ## Why I shelved this
 
-**The reason I shelved MacroImpulse was live execution: large spreads, poor fills and slippage around news releases.** Across brokers, orders filled away from their intended prices, and too much of the move disappeared into execution. The historical results looked encouraging under their stated cost assumptions, but those assumptions did not reflect the conditions I actually faced.
+**The reason I shelved the news-release strategy was live execution: large spreads, poor fills and slippage around news releases.** Across brokers, orders filled away from their intended prices, and too much of the move disappeared into execution. The historical results looked encouraging under their stated cost assumptions, but those assumptions did not reflect the conditions I actually faced.
 
 This is a practical trading decision, not a measured broker-by-broker slippage study. The figures below show what the historical tests established, and why those results were not enough.
 

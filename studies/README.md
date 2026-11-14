@@ -2,12 +2,12 @@
 
 ## ORBINDEX
 
-An opening-range timing search across German, Japanese and UK indices produced three frozen German-index portfolios. All three lost fixed-volume EUR in the later historical comparison before additional commission or financing. The heatmaps and full study trace the search, selection and later failure. Part of the later period may have been previously inspected.
+A broad search across opening times and three index CFD markets led to three frozen German-index portfolios. All three lost fixed-volume EUR in a later historical period. Part of that period may have been inspected previously, and historical broker-net results remain unverified.
 
-[Read the original ORBINDEX study](orbindex.md) · [Discovery evidence](../docs/evidence.md#ix1) · [Later-period economics](../docs/evidence.md#ix3)
+[Short research article](https://vda93.github.io/systematic-research-lab/orbindex.html) · [Full technical study](orbindex.md) · [Evidence](../docs/evidence.md#ix3)
 
-## MacroImpulse
+## News-Release Trading
 
-MacroImpulse investigated trades around scheduled currency releases. The historical baseline was encouraging under spread-only accounting, but live execution was the deciding factor: widening spreads, poor fills and slippage across brokers left the strategy impractical to trade.
+A news-trigger strategy looked encouraging on historical quotes, but the available live spreads, fills and slippage across brokers made it impractical to trade. This is a practical execution decision, not a measured broker-cost comparison.
 
-[Why I shelved this](news-research.md#why-i-shelved-this) · [Execution evidence](../docs/evidence.md#b08) · [My closeout note](../docs/provenance.md#macroimpulse-closeout-clarification)
+[Why I shelved this](https://vda93.github.io/systematic-research-lab/macroimpulse.html) · [Full technical study](news-research.md) · [Evidence](../docs/evidence.md#b09)

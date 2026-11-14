@@ -1,51 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MacroImpulse | TradingBotHQ</title>
-  <link rel="stylesheet" href="site.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>News-Release Trading | TradingBotHQ</title>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
 <header><div class="shell nav">
-  <nav aria-label="Main navigation"><a href="index.html#research">Studies</a>
-    <a href="index.html#method">Methods</a>
-    <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence</a> <a href="https://github.com/vda93/systematic-research-lab">GitHub</a></nav>
+<nav aria-label="Main navigation"><a href="index.html#research">Studies</a>
+<a href="index.html#method">Methods</a>
+<a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence</a> <a href="https://github.com/vda93/systematic-research-lab">GitHub</a></nav>
 </div></header>
 <main id="content" tabindex="-1" class="shell">
 <nav class="crumb" aria-label="Breadcrumb"><a href="index.html#research">Studies</a>
-<span aria-hidden="true"> / </span><span aria-current="page">MacroImpulse</span></nav>
-<article><div class="article-head"><h1>MacroImpulse: the execution problem</h1>
-<section id="section-1"><h2>Why I shelved this</h2>
-<p><strong>The reason I shelved MacroImpulse was live execution: large spreads, poor fills and slippage around news releases.</strong> Across brokers, orders filled away from their intended prices, and too much of the move disappeared into execution. The historical results looked encouraging under their stated cost assumptions, but those assumptions did not reflect the conditions I actually faced.</p>
-<p>This is a practical trading decision, not a measured broker-by-broker slippage study. The figures below show what the historical tests established, and why those results were not enough.</p>
-</section></div><div class="article-layout">
-<nav class="contents" aria-label="Article contents"><strong>In this study</strong><ul><li><a href="#section-1">Why I shelved this</a></li><li><a href="#section-2">How the orders worked</a></li><li><a href="#section-3">What the baseline earned</a></li><li><a href="#section-4">Would a spread filter help?</a></li><li><a href="#section-5">What happened when both sides triggered?</a></li><li><a href="#section-6">What the tests could verify</a></li></ul></nav>
-<div class="reading"><section id="section-2"><h2>How the orders worked</h2>
-<p>Before a scheduled release, the strategy set a buy trigger above the market and a sell trigger below it. A move through either level could open a position. A wider spread changed how close the Ask was to the buy trigger and the Bid to the sell trigger. If the first position stopped out, a reversal could trigger the opposite order. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b08">Execution rules</a></p>
-<p><a class="chart" href="plots/macro-mechanics.svg"><img src="plots/macro-mechanics.svg" width="950" height="446" alt="Illustration of a two-sided news order with buy and sell triggers, a protective exit and a possible opposite-side entry." loading="lazy"></a></p>
-<p>This diagram illustrates the order sequence. Its arrows represent possible actions. The distances between them have no measured price or time scale.</p>
-</section>
-<section id="section-3"><h2>What the baseline earned</h2>
-<p>The 2023–2024 high-impact baseline recorded <strong>1,396 trades and +$4,250.48</strong> across ten currency-pair and year combinations. All ten finished positive. These are historical US-dollar results after the modelled spread, before commission. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b09">Baseline evidence</a></p>
-<p><a class="chart" href="plots/macro-baseline.svg"><img src="plots/macro-baseline.svg" width="922" height="425" alt="Historical baseline by currency pair and year, with completed trade counts and spread-only profit in US dollars." loading="lazy"></a></p>
-<p>Those results described how the strategy behaved on historical quotes, not the prices a broker would actually fill during a release.</p>
-</section>
-<section id="section-4"><h2>Would a spread filter help?</h2>
-<p>I wanted to know whether skipping trades with a wide spread would keep the strategy out of its worst entries. In a separate frozen 2021–2022 comparison, the filter removed three completed trades. All three were winners. Spread-only profit fell by <strong>$7.62</strong>. Events that triggered both sides contributed the same total in both versions. I kept the decision to reject the filter. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b09">Spread-filter validation</a></p>
-<p><a class="chart" href="plots/macro-spread-filter.svg"><img src="plots/macro-spread-filter.svg" width="922" height="425" alt="The spread filter and its control produced nearly identical historical totals, with the filter slightly behind." loading="lazy"></a></p>
-</section>
-<section id="section-5"><h2>What happened when both sides triggered?</h2>
-<p>An event that triggered both orders looked like a natural candidate to skip. Looking at the sequence changed how I read it. In all <strong>139</strong> double-trigger groups examined on the Exness sample, the first position had already stopped out before the second opened. The first legs lost <strong>$287.99</strong> in total and the reversal legs recovered <strong>$188.22</strong>, under spread-only accounting. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b10">Sequential reversal evidence</a></p>
-<p><a class="chart" href="plots/macro-sequential.svg"><img src="plots/macro-sequential.svg" width="922" height="425" alt="First-leg losses, reversal-leg recovery and the combined result for the same historical groups." loading="lazy"></a></p>
-<p>Those totals describe two legs of the same events during 2021–2024 development. Blocking every reversal would also have removed the recovery. The research did not support that change. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b10">Study scope</a></p>
-</section>
-<section id="section-6"><h2>What the tests could verify</h2>
-<p>Controlled comparisons with a reference strategy checked order triggers, stops and exits using the same ticks and parameters. They helped establish whether the implementation followed its intended rules. They could not establish whether a live trade during a news release would receive an economically viable fill. <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b08">Implementation checks</a></p>
-<p>The public <a href="https://github.com/vda93/systematic-research-lab/blob/main/data/macro-public.json">aggregate data</a> and <a href="https://github.com/vda93/systematic-research-lab/blob/main/scripts/render_macro.py">figure renderer</a> reproduce these historical exhibits. Replaying the trades requires the original quotes and execution code.</p>
-</section></div></div></article>
-<nav class="related" aria-label="Study navigation"><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/news-research.md">Original Markdown article</a> · <a href="orbindex.html">ORBINDEX</a></nav>
+<span aria-hidden="true"> / </span><span aria-current="page">News-Release Trading</span></nav>
+<article><div class="article-head">
+<h1>News-Release Trading: poor live execution</h1>
+<p class="lead">A historically promising strategy became impractical when traded around real news releases.</p>
+<p><strong>Decision.</strong> Shelved because live spreads, fills and slippage across brokers made the trading conditions unworkable.</p>
+<p><strong>Main limitation.</strong> This is a practical execution decision, not a verified broker-by-broker measurement of live trading costs. The historical tests used narrower cost assumptions.</p>
+</div><div class="article-layout">
+<nav class="contents" aria-label="Article contents"><strong>In this study</strong>
+<ul><li><a href="#section-1">Why I shelved this</a></li><li><a href="#section-2">What the strategy attempted</a></li><li><a href="#section-3">What the backtest could, and couldn&#x27;t, show</a></li><li><a href="#verification">Data and verification</a></li></ul></nav>
+<div class="reading"><section id="section-1"><h2>Why I shelved this</h2>
+<p>The problem was execution, not a lack of interesting historical signals. Around scheduled releases, spreads widened, orders filled away from intended prices and slippage consumed too much of the move. Those were the conditions faced across the brokers tried.</p>
+<p>That was enough to stop pursuing the strategy. It does not establish that every news-trading approach is unworkable, and there is no new verified broker-level slippage study behind this decision.</p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b08">Execution rules</a></p>
+</section><section id="section-2"><h2>What the strategy attempted</h2>
+<p>Before a scheduled release, the strategy placed triggers on both sides of the market. A sharp move could activate one side; a stop-out could leave the opposite trigger available. Bid and Ask prices, order timing and broker fills are central to whether such a setup can be traded.</p>
+<a class="chart" href="plots/macro-mechanics.svg"><img src="plots/macro-mechanics.svg" width="950" height="446" alt="Fictional two-sided order triggers with protective and possible opposite-side exits" loading="lazy"></a>
+<p class="citation">Conceptual order mechanics, not a measured historical fill or price path. · <a href="plots/macro-mechanics.svg">Open figure</a></p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b08">Execution rules</a></p>
+</section><section id="section-3"><h2>What the backtest could, and couldn&#x27;t, show</h2>
+<p>The 2023–2024 high-impact baseline recorded 1,396 trades and +$4,250.48 under historical spread-only accounting, before commission. That justified further investigation; it did not prove that trades could be filled at those prices during live releases.</p>
+<p>A separate spread-filter comparison removed profitable trades rather than improving the historical result. The tested interventions did not solve the execution conditions that ultimately mattered.</p>
+<a class="chart" href="plots/macro-baseline.svg"><img src="plots/macro-baseline.svg" width="922" height="425" alt="Historical FX news baseline trades and spread-only results by currency pair and year" loading="lazy"></a>
+<p class="citation">Historical spread-only outcomes must not be read as independently verified live profitability. · <a href="plots/macro-baseline.svg">Open figure</a></p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#b09">Historical baseline</a></p>
+</section><section id="verification"><h2>Data and verification</h2><p>The public figures can be rebuilt from released aggregates. The original market backtests require private quotes and implementations, so they cannot be independently rerun from this website.</p><p><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/news-research.md">Complete research record</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/data/macro-public.json">Published aggregate data</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/security.md#reproduce-the-checks">Reproduce the figures</a></p></section></div>
+</div></article>
+<nav class="related" aria-label="Study navigation"><a href="orbindex.html">ORBINDEX</a></nav>
 </main>
 <footer><div class="shell foot"><span>TradingBotHQ · Public research</span>
 <nav aria-label="Publication information"><a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/provenance.md">Provenance</a> <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/limitations.md">Limitations</a></nav></div></footer>
