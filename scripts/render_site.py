@@ -7,14 +7,17 @@ from html import escape
 import json
 from pathlib import Path
 import re
+import sys
 from xml.etree import ElementTree
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(ROOT), str(ROOT / 'src')]
 
 from scripts.site_studies import STUDIES
 from scripts import site_policy
 from srl.claims import digest, quantitative_blocks
 
 
-ROOT = Path(__file__).resolve().parents[1]
 REPO = "https://github.com/vda93/systematic-research-lab"
 FIGURE_ROOT = "figures/"
 
