@@ -11,7 +11,7 @@ STUDIES = json.loads(r"""{
     "technical": "studies/orbindex.md",
     "cover": "orbindex-economics.svg",
     "cover_alt": "Fixed-volume EUR outcomes in discovery and the later historical comparison",
-    "subtitle": "A timing search across three index markets led to three German-index portfolios. The later historical results changed the decision.",
+    "subtitle": "An opening-range timing search tested neighbouring configurations, cross-market robustness and portfolio interactions before a later economic comparison.",
     "decision": "None of the frozen portfolios was promoted. Each lost fixed-volume EUR in the later historical comparison before additional commission or financing.",
     "caveat": "The later period may already have been inspected in other German-index research, so it cannot be treated as a completely fresh independent test. Broker-net returns also remain unverified.",
     "facts": {
@@ -124,7 +124,7 @@ STUDIES = json.loads(r"""{
     "technical": "studies/news-research.md",
     "cover": "macro-mechanics.svg",
     "cover_alt": "Conceptual buy-stop and sell-stop triggers around an economic release",
-    "subtitle": "A historically promising strategy became impractical when traded around real news releases.",
+    "subtitle": "A scheduled-news strategy tested historical momentum, then confronted the spreads, slippage and fills available around real releases.",
     "decision": "Shelved because live spreads, fills and slippage across brokers made the trading conditions unworkable.",
     "caveat": "This is a practical execution decision, not a verified broker-by-broker measurement of live trading costs. The historical tests used narrower cost assumptions.",
     "facts": {

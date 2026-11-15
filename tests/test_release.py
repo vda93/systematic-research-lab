@@ -9,6 +9,15 @@ from scripts.audit_public import audit_directory, text_findings, metadata_findin
 
 
 class PublicationAuditTests(unittest.TestCase):
+    def test_social_image_is_exact_and_other_binary_assets_are_rejected(self):
+        root = Path(__file__).resolve().parents[1]
+        image = (root / 'docs/social-preview.png').read_bytes()
+        self.assertEqual(text_findings('docs/social-preview.png', image), [])
+        altered = bytearray(image)
+        altered[-15] ^= 1
+        self.assertTrue(text_findings('docs/social-preview.png', bytes(altered)))
+        self.assertTrue(text_findings('docs/unreviewed.png', image))
+
     def test_csv_exception_is_specific_to_the_reviewed_provider_snapshot(self):
         from scripts.audit_public import text_findings
 

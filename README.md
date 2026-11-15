@@ -1,8 +1,8 @@
 # TradingBotHQ research
 
-These two research projects began with promising trading ideas. Neither reached the point where the evidence justified trading it.
+Systematic trading research focused on robustness, honest validation and realistic execution. These case studies examine how trading ideas behave under stricter tests and what evidence is sufficient to justify a decision.
 
-**[Browse the research library](https://vda93.github.io/systematic-research-lab/)**
+**[Browse the research library](https://vda93.github.io/systematic-research-lab/)** · [Research by Andrew Vu](https://www.linkedin.com/in/andrew-vu-4861b9191/)
 
 ## ORBINDEX
 
