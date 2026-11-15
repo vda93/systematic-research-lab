@@ -20,6 +20,17 @@ from srl.claims import digest, quantitative_blocks
 
 REPO = "https://github.com/vda93/systematic-research-lab"
 FIGURE_ROOT = "figures/"
+SITE_ROOT = "https://vda93.github.io/systematic-research-lab/"
+LINKEDIN = "https://www.linkedin.com/in/andrew-vu-4861b9191/"
+SOCIAL_PREVIEW = SITE_ROOT + "social-preview.png"
+META = {
+    "index": ("Systematic Trading Research | Andrew Vu",
+              "Robustness, validation and execution in systematic trading research. Selected studies by Andrew Vu."),
+    "orbindex": ("ORBINDEX | Robustness and Later Validation",
+                 "A timing search, frozen index portfolios and later economic evaluation, with source evidence and limitations."),
+    "macroimpulse": ("News-Release Trading | Execution Research",
+                      "News-release backtests met the reality of spreads, poor fills and slippage. Why the research was shelved."),
+}
 
 
 def source(path: str, label: str) -> str:
@@ -93,13 +104,26 @@ def figure(root: Path, name: str, alt: str, *, linked: bool = True) -> str:
     return f'<a class="chart" href="plots/{name}">{img}</a>' if linked else img
 
 
-def shell(title: str, content: str) -> bytes:
+def shell(title: str, content: str, *, page: str) -> bytes:
+    meta_title, description = META[page]
+    url = SITE_ROOT if page == "index" else SITE_ROOT + page + ".html"
+    meta = f"""<meta name="description" content="{escape(description, quote=True)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="{'website' if page == 'index' else 'article'}">
+<meta property="og:title" content="{escape(meta_title, quote=True)}">
+<meta property="og:description" content="{escape(description, quote=True)}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{SOCIAL_PREVIEW}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Systematic trading research: robustness, validation and execution">"""
     return f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(title)} | TradingBotHQ</title>
+{meta}
 <link rel="stylesheet" href="site.css">
 </head>
 <body>
@@ -113,7 +137,7 @@ def shell(title: str, content: str) -> bytes:
 {content}
 </main>
 <footer><div class="shell foot"><span>TradingBotHQ · Public research</span>
-<nav aria-label="Publication information">{source("docs/provenance.md", "Provenance")} {source("docs/limitations.md", "Limitations")}</nav></div></footer>
+<nav aria-label="Publication information"><a href="{LINKEDIN}">Andrew Vu on LinkedIn</a> {source("docs/provenance.md", "Provenance")} {source("docs/limitations.md", "Limitations")}</nav></div></footer>
 </body>
 </html>
 """.encode("utf-8")
@@ -183,7 +207,7 @@ def article(root: Path, slug: str, study: dict, values: dict[str, str]) -> bytes
 <div class="reading">{"".join(sections)}{verification}</div>
 </div></article>
 <nav class="related" aria-label="Study navigation">{related}</nav>"""
-    return shell(study["name"], html)
+    return shell(study["name"], html, page=slug)
 
 
 def landing(root: Path, studies: dict[str, dict[str, str]]) -> bytes:
@@ -202,15 +226,16 @@ def landing(root: Path, studies: dict[str, dict[str, str]]) -> bytes:
         )
     body = f"""<section class="hero">
 <p class="kicker">Independent systematic trading research</p>
-<h1>What survives after the backtest?</h1>
-<p class="lead">Two studies, two different reasons to stop. The conclusions come first; the evidence and full technical records remain available.</p>
+<h1>Testing ideas against evidence</h1>
+<p class="lead">Systematic trading research on robustness, validation and realistic execution. The goal is better decisions, not better-looking backtests.</p>
+<p class="citation">Research by <a href="{LINKEDIN}">Andrew Vu</a></p>
 </section>
 <section id="research"><h2>Research library</h2><div class="cards">{"".join(cards)}</div></section>
 <section class="method" id="method"><h2>How the evidence is used</h2>
 <p>Historical results are not live fills. Each study distinguishes what was tested, what failed and which uncertainties remain.</p>
 <nav aria-label="Methods and sources">{source("docs/empirical-methods.md", "Research methods")} {source("docs/evidence.md", "Evidence register")} {source("docs/security.md#reproduce-the-checks", "Reproduce figures")}</nav>
 </section>"""
-    return shell("Research library", body)
+    return shell("Research library", body, page="index")
 
 
 def site_artifacts(root: Path) -> dict[str, bytes]:
