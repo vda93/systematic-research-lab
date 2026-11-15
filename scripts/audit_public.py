@@ -96,10 +96,9 @@ def text_findings(name: str, payload: bytes, *, archived_site: bool = False,
     # The social preview is the only reviewed binary release asset.
     # Git's exact blob digest binds its payload to the approved image bytes.
     if name == SOCIAL_PNG_FILE:
-        git_blob = (f'blob {len(payload)}\\0'.replace('\\0', chr(0)).encode()
-                    + payload)
+        git_blob = b'blob ' + str(len(payload)).encode() + bytes([0]) + payload
         valid = (len(payload) == SOCIAL_PNG_LENGTH
-                 and payload.startswith(b'\\x89PNG\\r\\n\\x1a\\n'.encode('latin1').decode('unicode_escape').encode('latin1'))
+                 and payload.startswith(bytes.fromhex('89504e470d0a1a0a'))
                  and payload[16:24] == bytes.fromhex('000004b000000276')
                  and hashlib.sha1(git_blob).hexdigest() == SOCIAL_PNG_BLOB)
         return [] if valid else ['unreviewed social preview image']
