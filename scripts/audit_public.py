@@ -27,6 +27,9 @@ LAST_OWNERSHIP_MAIN = '42aa84af30f5a532f9897826f5cbfbd5398259b4'
 LAST_OLD_STYLESHEET_HEAD = '14281034fde2588b0afd90f2d6a04ca033ea205c'
 OLD_STYLESHEET_BLOB = '1638c07bc8273ac7bec4b4b989e9c200c9e28f45'
 TEXT_TYPES = {'.py', '.json', '.md', '.toml', '.svg', '.yml', '.yaml', '.txt'}
+SOCIAL_PNG_FILE = 'docs/social-preview.png'
+SOCIAL_PNG_BLOB = '22e0a624e4fa0f72f70c9a6c73c97f38e08fb643'
+SOCIAL_PNG_LENGTH = 756807
 SPECIAL = {'LICENSE', '.gitignore', '.gitattributes'}
 # Previous publication policies applied to these exact Git trees and blobs.
 # Generic type, size, encoding, privacy and identity checks still run.
@@ -90,6 +93,16 @@ def valid_archive(names: object, current: set[str]) -> bool:
 
 def text_findings(name: str, payload: bytes, *, archived_site: bool = False,
                   pages: dict[str, site.SitePage] | None = None) -> list[str]:
+    # The social preview is the only reviewed binary release asset.
+    # Git's exact blob digest binds its payload to the approved image bytes.
+    if name == SOCIAL_PNG_FILE:
+        git_blob = (f'blob {len(payload)}\\0'.replace('\\0', chr(0)).encode()
+                    + payload)
+        valid = (len(payload) == SOCIAL_PNG_LENGTH
+                 and payload.startswith(b'\\x89PNG\\r\\n\\x1a\\n'.encode('latin1').decode('unicode_escape').encode('latin1'))
+                 and payload[16:24] == bytes.fromhex('000004b000000276')
+                 and hashlib.sha1(git_blob).hexdigest() == SOCIAL_PNG_BLOB)
+        return [] if valid else ['unreviewed social preview image']
     # One specifically reviewed, provider-permitted market snapshot. This does
     # not admit arbitrary raw vendor CSVs to the publication boundary.
     approved_csv = name == 'data/ecb-fx-reference.csv'

@@ -13,6 +13,22 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class SiteRenderingTests(unittest.TestCase):
+    def test_social_metadata_and_linkedin_identity_are_present(self):
+        base = 'https://vda93.github.io/systematic-research-lab/'
+        linkedin = 'https://www.linkedin.com/in/andrew-vu-4861b9191/'
+        for page in ('index', 'orbindex', 'macroimpulse'):
+            with self.subTest(page=page):
+                html = (ROOT / 'docs' / f'{page}.html').read_text(encoding='utf-8')
+                expected_url = base if page == 'index' else base + f'{page}.html'
+                self.assertIn(f'property="og:url" content="{expected_url}"', html)
+                self.assertIn(f'property="og:image" content="{base}social-preview.png"', html)
+                self.assertIn('property="og:description"', html)
+                self.assertIn('property="og:title"', html)
+                self.assertIn('property="og:image:width" content="1200"', html)
+                self.assertIn('property="og:image:height" content="630"', html)
+                self.assertIn(linkedin, html)
+                self.assertIn('Andrew Vu', html)
+
     def test_numeric_facts_are_bound_to_registered_technical_source(self):
         ledger = json.loads((ROOT / "data/claim-registry.json").read_text(encoding="utf-8"))
         for slug, study in STUDIES.items():

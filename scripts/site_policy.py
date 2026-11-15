@@ -12,6 +12,10 @@ CSS = 'docs/site.css'
 MARKER = 'docs/.nojekyll'
 REPOSITORY = 'https://github.com/vda93/systematic-research-lab'
 SOURCE_PREFIX = REPOSITORY + '/blob/main/'
+LINKEDIN = 'https://www.linkedin.com/in/andrew-vu-4861b9191/'
+SITE_BASE = 'https://vda93.github.io/systematic-research-lab/'
+SOCIAL_IMAGE_URL = SITE_BASE + 'social-preview.png'
+SOCIAL_IMAGE_FILE = 'docs/social-preview.png'
 
 # These exact original public SVGs were approved for inclusion in the website.
 # A directly navigable SVG is a document. Its path alone cannot authorize it.
@@ -36,7 +40,7 @@ TAGS = set('html head body title meta link header div span nav main section arti
 VOID = {'meta', 'link', 'img'}
 COMMON_ATTRS = {'class', 'id', 'aria-label', 'aria-labelledby', 'aria-hidden', 'aria-current', 'tabindex'}
 ATTRS = {
-    'th': {'scope'}, 'html': {'lang'}, 'meta': {'charset', 'name', 'content'}, 'link': {'rel', 'href'},
+    'th': {'scope'}, 'html': {'lang'}, 'meta': {'charset', 'name', 'content', 'property'}, 'link': {'rel', 'href'},
     'a': {'href'}, 'img': {'src', 'alt', 'loading', 'width', 'height'},
 }
 ID = re.compile(r'[A-Za-z0-9][A-Za-z0-9_-]*')
@@ -100,9 +104,39 @@ class SitePage(HTMLParser):
         if tag == 'th' and attributes.get('scope', 'col') != 'col':
             self.errors.append('unapproved table heading scope')
         if tag == 'meta':
-            if not (attributes == {'charset': 'utf-8'} or (
-                    attributes.keys() == {'name', 'content'} and
-                    attributes['name'] in {'viewport', 'color-scheme', 'description'})):
+            keys = attributes.keys()
+            if attributes == {'charset': 'utf-8'}:
+                pass
+            elif keys == {'name', 'content'}:
+                name, value = attributes['name'], attributes['content']
+                if name in {'viewport', 'color-scheme'}:
+                    pass
+                elif name == 'description' and 30 <= len(value) <= 200:
+                    pass
+                elif name == 'twitter:card' and value == 'summary_large_image':
+                    pass
+                else:
+                    self.errors.append('unapproved page metadata')
+            elif keys == {'property', 'content'}:
+                prop, value = attributes['property'], attributes['content']
+                route = SITE_BASE if self.name == 'docs/index.html' else (
+                    SITE_BASE + self.name.removeprefix('docs/'))
+                expected = {
+                    'og:url': route,
+                    'og:image': SOCIAL_IMAGE_URL,
+                    'og:image:width': '1200',
+                    'og:image:height': '630',
+                    'og:type': 'website' if self.name == 'docs/index.html' else 'article',
+                }
+                if prop in expected:
+                    if value != expected[prop]:
+                        self.errors.append('unapproved social metadata destination')
+                elif prop in {'og:title', 'og:description', 'og:image:alt'}:
+                    if not 8 <= len(value) <= 200:
+                        self.errors.append('invalid social metadata text')
+                else:
+                    self.errors.append('unapproved social metadata')
+            else:
                 self.errors.append('unapproved metadata')
         elif tag == 'link':
             if attributes != {'rel': 'stylesheet', 'href': 'site.css'}:
@@ -126,7 +160,7 @@ class SitePage(HTMLParser):
             self.errors.append('unbalanced tags')
 
     def _link(self, target: str):
-        if target == REPOSITORY:
+        if target in {REPOSITORY, LINKEDIN}:
             return
         base, separator, fragment = target.partition('#')
         if separator and not ID.fullmatch(fragment):
