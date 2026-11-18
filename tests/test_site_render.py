@@ -84,6 +84,19 @@ class SiteRenderingTests(unittest.TestCase):
                              for line in article.splitlines()), 4)
         self.assertIn("OOS_EXPLORATORY / POSSIBLE_PRIOR_EXPOSURE", article)
 
+    def test_public_orbindex_curves_precede_economic_comparison(self):
+        page = (ROOT / "docs/orbindex.html").read_text(encoding="utf-8")
+        curve = 'src="plots/orbindex-curves.svg"'
+        economics = 'src="plots/orbindex-economics.svg"'
+        self.assertEqual(page.count(curve), 1)
+        self.assertLess(page.index(curve), page.index(economics))
+        self.assertIn("Quarter-end cumulative gross price R snapshots", page)
+        self.assertIn("not an annualized or broker-net comparison", page)
+        self.assertEqual(
+            (ROOT / "docs/plots/orbindex-curves.svg").read_bytes(),
+            (ROOT / "figures/orbindex-curves.svg").read_bytes(),
+        )
+
     def test_site_outputs_and_offline_figures_are_exact(self):
         outputs = render_site.site_artifacts(ROOT)
         self.assertEqual(

@@ -73,6 +73,18 @@ STUDIES = json.loads(r"""{
         ]
       },
       {
+        "heading": "Discovery versus later performance",
+        "paragraphs": [
+          "The discovery portfolios accumulated positive gross price R, but their later-period trajectories weakened considerably. Each sample restarts at zero, so these are not continuous account equity curves."
+        ],
+        "figure": "orbindex-curves.svg",
+        "alt": "Cumulative gross price R lines for frozen German-index portfolios in discovery and the later historical test",
+        "caption": "Quarter-end cumulative gross price R snapshots are connected by straight segments. They do not show intraperiod drawdowns, and the periods differ in length. This is not an annualized or broker-net comparison.",
+        "sources": [
+          "IX3"
+        ]
+      },
+      {
         "heading": "What happened later",
         "paragraphs": [
           "Across the {period} historical scenario, all three portfolios lost money in fixed-volume euros with Bid/Ask spread already included. The comparison below is gross of additional commission and financing; it is not verified historical broker-net profit."
