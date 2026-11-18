@@ -33,7 +33,7 @@
 <p><strong>Main limitation.</strong> The later period may already have been inspected in other German-index research, so it cannot be treated as a completely fresh independent test. Broker-net returns also remain unverified.</p>
 </div><div class="article-layout">
 <nav class="contents" aria-label="Article contents"><strong>In this study</strong>
-<ul><li><a href="#section-1">Where the candidates came from</a></li><li><a href="#section-2">Did the pattern hold across markets?</a></li><li><a href="#section-3">From individual trades to portfolios</a></li><li><a href="#section-4">What happened later</a></li><li><a href="#section-5">What the result means</a></li><li><a href="#verification">Data and verification</a></li></ul></nav>
+<ul><li><a href="#section-1">Where the candidates came from</a></li><li><a href="#section-2">Did the pattern hold across markets?</a></li><li><a href="#section-3">From individual trades to portfolios</a></li><li><a href="#section-4">Discovery versus later performance</a></li><li><a href="#section-5">What happened later</a></li><li><a href="#section-6">What the result means</a></li><li><a href="#verification">Data and verification</a></li></ul></nav>
 <div class="reading"><section id="section-1"><h2>Where the candidates came from</h2>
 <p>The discovery searched 3,456 opening-range configurations across German, Japanese and UK index CFDs. Different start times, range lengths and trade directions overlapped, so the strongest result was not automatically the most convincing.</p>
 <p>On the German index, some favourable timings had nearby settings that also looked promising. That mattered more than a single isolated peak, but the evidence was sensitive to even modest additional costs.</p>
@@ -49,7 +49,12 @@
 <p>The German candidates were combined into three frozen portfolios. A shared pending-order or position slot mattered: an earlier order could block a later opportunity, so simply adding standalone backtest returns would have been misleading.</p>
 <p>Each portfolio was evaluated under those same order-ownership rules before being carried into the later historical comparison.</p>
 <p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix2">Portfolio simulation</a></p>
-</section><section id="section-4"><h2>What happened later</h2>
+</section><section id="section-4"><h2>Discovery versus later performance</h2>
+<p>The discovery portfolios accumulated positive gross price R, but their later-period trajectories weakened considerably. Each sample restarts at zero, so these are not continuous account equity curves.</p>
+<a class="chart" href="plots/orbindex-curves.svg"><img src="plots/orbindex-curves.svg" width="979" height="468" alt="Cumulative gross price R lines for frozen German-index portfolios in discovery and the later historical test" loading="lazy"></a>
+<p class="citation">Quarter-end cumulative gross price R snapshots are connected by straight segments. They do not show intraperiod drawdowns, and the periods differ in length. This is not an annualized or broker-net comparison. · <a href="plots/orbindex-curves.svg">Open figure</a></p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">Later-period results</a></p>
+</section><section id="section-5"><h2>What happened later</h2>
 <p>Across the 2024–July 2026 historical scenario, all three portfolios lost money in fixed-volume euros with Bid/Ask spread already included. The comparison below is gross of additional commission and financing; it is not verified historical broker-net profit.</p>
 <section class="table-scroll" tabindex="0" aria-label="Historical portfolio comparison"><table>
 <thead><tr><th scope="col">Frozen portfolio</th><th scope="col">Later gross EUR</th></tr></thead><tbody>
@@ -60,7 +65,7 @@
 <a class="chart" href="plots/orbindex-economics.svg"><img src="plots/orbindex-economics.svg" width="965" height="461" alt="Discovery and later-period fixed-volume EUR results for three frozen German-index portfolios" loading="lazy"></a>
 <p class="citation">All three later monetary outcomes were negative before additional commission or financing. · <a href="plots/orbindex-economics.svg">Open figure</a></p>
 <p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#ix3">Later-period results</a></p>
-</section><section id="section-5"><h2>What the result means</h2>
+</section><section id="section-6"><h2>What the result means</h2>
 <p>The subsequent review found that spread costs contributed to weaker results, but unfavourable midquote movement mattered too. Breakouts could briefly move in the expected direction and still fail to finish as winners.</p>
 <p>The frozen portfolios were closed, not retuned using already-seen history. The finding is about these specific portfolios, not proof that opening-range strategies cannot work elsewhere.</p>
 <p>The later test is informative but not a pristine independent holdout, because some of its history may have been inspected in earlier research.</p>
