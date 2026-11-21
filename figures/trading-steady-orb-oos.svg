@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="427" viewBox="0 0 1020 427" role="img" aria-label="US500 out-of-sample commission-scenario R for four fixed strategy configurations in two historical cohorts">
+<rect x="0" y="0" width="1020" height="427" rx="0" fill="#FBFCFD"/>
+<text x="28" y="43" font-family="Arial,sans-serif" font-size="26" fill="#182D3A" text-anchor="start" font-weight="700">US500: later historical performance, four frozen variants</text>
+<text x="28" y="68" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="start" font-weight="400">Published-commission-scenario R, verified natural closes only. Cohort A has missing coverage.</text>
+<text x="365" y="111" font-family="Arial,sans-serif" font-size="16" fill="#273F4E" text-anchor="middle" font-weight="700">A | Jun 2025–Feb 2026</text>
+<line x1="435" y1="128" x2="435" y2="334" stroke="#4B6573" stroke-width="1.6"/>
+<text x="435" y="355" font-family="Arial,sans-serif" font-size="12" fill="#5A6F78" text-anchor="middle" font-weight="400">0R</text>
+<text x="750" y="111" font-family="Arial,sans-serif" font-size="16" fill="#273F4E" text-anchor="middle" font-weight="700">B | Apr–Oct 2026</text>
+<line x1="820" y1="128" x2="820" y2="334" stroke="#4B6573" stroke-width="1.6"/>
+<text x="820" y="355" font-family="Arial,sans-serif" font-size="12" fill="#5A6F78" text-anchor="middle" font-weight="400">0R</text>
+<text x="24" y="161" font-family="Arial,sans-serif" font-size="14" fill="#233D4B" text-anchor="start" font-weight="400">15m Both + ATR</text>
+<rect x="435" y="145" width="48.83820000000001" height="26" rx="4" fill="#197B66"/>
+<text x="491.83820000000003" y="163" font-family="Arial,sans-serif" font-size="13" fill="#243A45" text-anchor="start" font-weight="700">+3.539R</text>
+<rect x="820" y="145" width="24.564" height="26" rx="4" fill="#197B66"/>
+<text x="852.564" y="163" font-family="Arial,sans-serif" font-size="13" fill="#243A45" text-anchor="start" font-weight="700">+1.780R</text>
+<text x="24" y="212" font-family="Arial,sans-serif" font-size="14" fill="#233D4B" text-anchor="start" font-weight="400">15m Long</text>
+<rect x="324.393" y="196" width="110.60700000000001" height="26" rx="4" fill="#B45C43"/>
+<text x="316.393" y="214" font-family="Arial,sans-serif" font-size="13" fill="#243A45" text-anchor="end" font-weight="700">-8.015R</text>
+<rect x="812.548" y="196" width="7.452000000000001" height="26" rx="4" fill="#B45C43"/>
+<text x="804.548" y="214" font-family="Arial,sans-serif" font-size="13" fill="#243A45" text-anchor="end" font-weight="700">-0.540R</text>
+<text x="24" y="263" font-family="Arial,sans-serif" font-size="14" fill="#233D4B" text-anchor="start" font-weight="400">15m Long + ATR</text>
+<rect x="418.8402" y="247" width="16.1598" height="26" rx="4" fill="#B45C43"/>
+<text x="410.8402" y="265" font-family="Arial,sans-serif" font-size="13" fill="#243A45" text-anchor="end" font-weight="700">-1.171R</text>
+<rect x="800.0176" y="247" width="19.982400000000002" height="26" rx="4" fill="#B45C43"/>
+<text x="792.0176" y="265" font-family="Arial,sans-serif" font-size="13" fill="#243A45" text-anchor="end" font-weight="700">-1.448R</text>
+<text x="24" y="314" font-family="Arial,sans-serif" font-size="14" fill="#233D4B" text-anchor="start" font-weight="400">5m Long</text>
+<rect x="245.8296" y="298" width="189.1704" height="26" rx="4" fill="#B45C43"/>
+<text x="237.8296" y="316" font-family="Arial,sans-serif" font-size="13" fill="#243A45" text-anchor="end" font-weight="700">-13.708R</text>
+<rect x="757.7206" y="298" width="62.2794" height="26" rx="4" fill="#B45C43"/>
+<text x="749.7206" y="316" font-family="Arial,sans-serif" font-size="13" fill="#243A45" text-anchor="end" font-weight="700">-4.513R</text>
+<text x="28" y="382" font-family="Arial,sans-serif" font-size="12" fill="#5B6D79" text-anchor="start" font-weight="400">A: 187 eligible sessions, one incomplete confirmation window; two cutoff-censored trades across long-only variants.</text>
+<text x="28" y="404" font-family="Arial,sans-serif" font-size="12" fill="#5B6D79" text-anchor="start" font-weight="400">B: 148 eligible sessions. Bars are not broker-net results, continuous equity curves, or formal absolute-return tests.</text>
+</svg>
