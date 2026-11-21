@@ -4,4 +4,6 @@
 
 [MacroImpulse](macro-public.json) contains the released news-study figures’ underlying aggregates and source identities. It includes historical cost and calendar records outside the featured article. The [figure evidence review](../docs/macro-visual-evidence.md) distinguishes reported outcomes from the fictional order illustration.
 
+The [Trading Steady ORB aggregate](trading-steady-orb-public.json) contains the 48 recorded historical factorial cells and the eight later US500 cells, with private evidence hashes and explicit incompleteness/source-blocked status. The [independent reconstruction study](../studies/trading-steady-orb.md) documents the experiment and why a positive scenario is not a validated net edge.
+
 The [claim registry](claim-registry.json) binds quantitative paragraphs and figures to reviewed sources. The [synthetic protocol](../experiments/protocol.json) and [synthetic results](../results/study.json) demonstrate public methods on artificial data. [Scientific checks](../docs/scientific-checks.md) explain what reproduction verifies.
