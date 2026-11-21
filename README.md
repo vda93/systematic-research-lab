@@ -10,6 +10,12 @@ An opening-range timing search across German, Japanese and UK index CFDs produce
 
 [Read the study](https://vda93.github.io/systematic-research-lab/orbindex.html) · [Complete technical record](studies/orbindex.md)
 
+## Trading Steady ORB: independent reconstruction and later historical validation
+
+An independent reconstruction of a publicly described S&P 500 opening-range breakout was expanded into **48 fixed US500/USTEC real-tick configurations**. None of 27 corrected factor contrasts was significant. Later US500 data were much weaker than discovery, and USTEC's later period was source-blocked. No strategy was promoted; historical all-in broker net remains unknown.
+
+[Full case study](studies/trading-steady-orb.md) · [Released aggregate data](data/trading-steady-orb-public.json)
+
 ## News-Release Trading
 
 Historical FX news tests showed promise under their stated cost assumptions. Live spreads, slippage and poor fills across brokers made the strategy impractical to pursue.
