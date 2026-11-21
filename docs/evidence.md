@@ -6,6 +6,14 @@ This register identifies the reports behind the two published studies and the ev
 
 The historical MacroImpulse entries include costs and calendar coverage from a separate medium-impact evaluation. They preserve the recorded limitations of that sample. My practical decision to shelve the system is documented in the [execution closeout](provenance.md#macroimpulse-closeout-clarification).
 
+## TS1
+
+**Trading Steady independent ORB reconstruction and 48-configuration historical factorial.** Retained private v008 review ZIP SHA256: `9662b717d6f9187ab6c322d52507c26a604f71c05d938f818950dc6e4c2aef06`; private evidence commit `9ada0aac74cd5c64c4d956b724635aadf2942e16`. The source report contains all 48 native Model 4 configuration summaries, 10,895 overlapping trade observations, three opening-range durations across US500/USTEC, the declared current-commission scenarios, and 27 Holm-corrected main-effect/interaction tests (minimum adjusted p 0.4697). The report and ZIP were inspected and their hashes verified for this public aggregate release; this does **not** constitute an independent MT5 rerun or proof of historical broker net costs. Public extract: [Trading Steady aggregate data](../data/trading-steady-orb-public.json); [full case study](../studies/trading-steady-orb.md).
+
+## TS2
+
+**Trading Steady EXP-ORB-011 later-period native US500 OOS tranche and source limitations.** Retained private review ZIP SHA256: `e0fa1e2770ef46c374e5060f8b02a05ac2f1b8d08e4977e1c9263db3360e9579`; private evidence commit `d7185944446fe85a064c8e73193ec035a44bdf7d`. It records eight frozen native US500 cohort × strategy cells, 366 entries, 364 natural exits, two cutoff-censored positions, a missing Cohort A confirmation interval on October 16, 2025 and an unrecoverable complete-cohort primary statistic. The B-only primary supplemental interval was [−0.0573, +0.0870] R per eligible day (Holm p 1.0). USTEC later source defects prevented OOS tests. Public later-period numbers are closed-trade commission **scenario** R, not broker-net P&L or complete-cohort inference. The original callback-prefix failure and independently reviewed warmup-rebuild evidence are retained rather than silently erased. Public extract: [Trading Steady aggregate data](../data/trading-steady-orb-public.json).
+
 ## IX1
 
 **ORBINDEX 24-hour discovery, 2020–2023.** The private EXP-ORBINDEX-002 protocol and immutable review package supply the 3,456-cell enumeration, valid/invalid classifications, DE30/JP/UK positive-cell counts, six regions and ten rectangle memberships and hypothetical cost-debit stress. Source ZIP SHA-256: `659fac1dee8fa04aa59cbcb1bf9ccf7f6755080bf87f96758e01fe956a3b4b95`. The public source extract is a curated slice, not a raw-trade replay. The 2020–2023 selection set was spent before portfolio nomination.
