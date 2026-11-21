@@ -26,7 +26,7 @@ The independently tested optional filters were Wilder **ATR(1344)**, requiring o
 
 The discovery/retrospective study covered **March 2020 to March 2025 for US500** and **March 2020 to February 2025 for USTEC**. The original Exness Bid/Ask source had been audited and imported to isolated MT5 custom symbols. **48 of 48** configurations received native Model 4 qualification, with **10,895 trade observations across overlapping variants**. That trade count is **not** 10,895 independent experiments. Two previously qualified US500 runs were reused after identity checks; 46 runs were new. [Evidence TS1](../docs/evidence.md#ts1)
 
-![Full factorial gross and commission-scenario comparison](../figures/trading-steady-orb-factorial.svg)
+![Native historical gross profit factor by market and filter](../figures/trading-steady-orb-factorial.svg)
 
 **Figure 1.** Native historical *gross* profit factors for all 48 cases, arranged by market, range and filters. This is a retrospective visualization, not evidence that any particular cell will generalise. [Full numeric source](../data/trading-steady-orb-public.json).
 
