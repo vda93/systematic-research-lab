@@ -12,8 +12,12 @@ On 12 November 2026 I clarified why I shelved MacroImpulse. Around news releases
 
 A separate historical medium-impact evaluation had an incomplete event calendar. The original record preserves the invalid-data-universe finding and its limits. [Calendar evidence](evidence.md#b15)
 
+## ORB setup and filter study
+
+The [ORB setup and filter study](../studies/orb-setup-filters.md) is another investigation of a cash-open breakout idea. It documents the implemented rules, the later EMA extension, discovery comparisons, and later historical validation. The generic ORB concept is not claimed as an original invention. Its configuration and research record remain distinct from ORBINDEX and previously retired ORB publications. It publishes original prose and reviewed aggregates; third-party materials, private ticks, implementations, and source reports are not redistributed. Native tester qualification and positive scenario R do not authenticate historical broker-net profitability.
+
 ## Publication history and rights
 
-I selected ORBINDEX and MacroImpulse for the current portfolio. Earlier Git commits preserve the ordinary opening-range, Engulfing Bar Play and NOWICK publications and their research decisions. The [depublication inventory](../archived-public-paths.json) records the retired paths so the [history audit](../scripts/audit_public.py) can still check them.
+The portfolio includes ORBINDEX, MacroImpulse, and the later ORB setup and filter study. Earlier Git commits preserve the ordinary opening-range, Engulfing Bar Play and NOWICK publications and their research decisions. The [depublication inventory](../archived-public-paths.json) records the retired paths so the [history audit](../scripts/audit_public.py) can still check them.
 
 Public code and original writing are under [MIT](../LICENSE). External strategy PDFs, proprietary EAs and raw market data have separate rights and remain outside this repository.

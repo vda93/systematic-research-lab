@@ -19,6 +19,7 @@ from srl.study import load_protocol, run_study
 from srl.visuals import render_summary
 from scripts.render_orbindex import orbindex_artifacts
 from scripts.render_macro import build_figures as macro_artifacts
+from scripts.render_orb_setup_filters import build as orb_setup_filter_artifacts
 from srl.claims import audit_claims
 from srl.evidence import load_manifest, verify_manifest
 
@@ -76,6 +77,9 @@ def main() -> int:
     artifacts.update(orbindex_artifacts(orbindex))
     macro = json.loads((ROOT / 'data/macro-public.json').read_text(encoding='utf-8'))
     artifacts.update({f'figures/{name}': blob for name, blob in macro_artifacts(macro).items()})
+    orb_setup_filters = json.loads((ROOT / 'data/orb-setup-filters-public.json').read_text(encoding='utf-8'))
+    artifacts.update({f'figures/{name}': svg.encode('utf-8')
+                      for name, svg in orb_setup_filter_artifacts(orb_setup_filters).items()})
     artifacts.update(site_artifacts(ROOT))
     differences = check_artifacts(ROOT, artifacts)
     if differences:

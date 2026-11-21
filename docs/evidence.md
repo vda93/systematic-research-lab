@@ -2,9 +2,21 @@
 
 [Portfolio](../README.md) · [ORBINDEX aggregates](../data/orbindex-public.json) · [MacroImpulse aggregates](../data/macro-public.json)
 
-This register identifies the reports behind the two published studies and the evidence for the public engineering examples. The historical results come from private research. Public readers can check the disclosed figures, source hashes and arithmetic. Independent historical replay requires the original market records.
+This register identifies the reports behind the published studies and the evidence for the public engineering examples. The historical results come from private research. Public readers can check the disclosed figures, source hashes and arithmetic. Independent historical replay requires the original market records.
 
 The historical MacroImpulse entries include costs and calendar coverage from a separate medium-impact evaluation. They preserve the recorded limitations of that sample. My practical decision to shelve the system is documented in the [execution closeout](provenance.md#macroimpulse-closeout-clarification).
+
+## ORBF1
+
+**ORB setup, later EMA extension, and 48-configuration discovery study.** Retained review ZIP SHA256: `9662b717d6f9187ab6c322d52507c26a604f71c05d938f818950dc6e4c2aef06`; private source commit `9ada0aac74cd5c64c4d956b724635aadf2942e16`. The scientific report contains 48 native Model 4 summaries, 10,895 overlapping trade observations, the setup and filter definitions, published-commission scenarios, and 27 paired contrasts. Their family contains ten within-market main effects, twelve within-market interactions, and five between-market differences; none survived Holm correction (minimum adjusted p 0.4697). The EMA-on minus EMA-off daily estimates were -0.00535R for US500 and +0.00195R for USTEC, both Holm p 1.0. These are configuration contrasts, not tests of every absolute strategy expectancy.
+
+For this publication, the supplied 18,714,360-byte archive passed CRC and duplicate-member checks; all 1,500 checksum-listed members matched. The additional artifact manifest matched all 1,499 sizes and hashes. Scientific report SHA256: `1ac86e540589f4255b7de285779437e6ab33ef8f759bd287869552c9ddec1718`. The 48 public rows were reconciled against the report at its stated precision. These checks establish supplied-package integrity and transcription consistency; they are not a fresh native backtest or an independent replay from raw market ticks. [Public aggregates](../data/orb-setup-filters-public.json) · [Setup and study](../studies/orb-setup-filters.md).
+
+## ORBF2
+
+**EXP-ORB-011: frozen ORB candidates in later historical periods.** Retained review ZIP SHA256: `e0fa1e2770ef46c374e5060f8b02a05ac2f1b8d08e4977e1c9263db3360e9579`; private source commit `d7185944446fe85a064c8e73193ec035a44bdf7d`. The current observation section records eight US500 cohort/configuration cells, 366 entries, 364 natural closes, two cutoff-censored entries, and incomplete confirmation coverage on 16 October 2025. The complete-cohort primary statistic is currently unavailable. The B-only supplemental interval is [-0.0573, +0.0870] scenario R per eligible day (Holm p 1.0). Every executed later US500 configuration has EMA off. The nominated EMA-on USTEC candidate has no qualified later result because USTEC source defects blocked execution. Related cross-strategy prior exposure is documented for USTEC; the study does not claim globally untouched later samples.
+
+The supplied 276,055-byte archive passed CRC and duplicate-member checks; all 99 manifest-listed members matched. Analysis SHA256: `efde00ae6d56f01e2164bdbf90591110b0689fa0e4e46aab579daae7fee4a36c`. All eight public rows were reconciled against the current observation section. The package preserves the initial callback-prefix failure and the reviewed warmup-rebuild evidence. This publication did not rerun native tests, and the slim package does not include the full raw quote/trade tapes. Closed-trade scenario totals and complete-day inference use different observation sets; missing days and censored positions are not zero returns. [Public aggregates](../data/orb-setup-filters-public.json).
 
 ## IX1
 
@@ -54,7 +66,7 @@ E1 to E4 describe the maintained tooling checkout. Older research branches were 
 
 Historical figures use selected source aggregates rather than reconstructed equity curves or invented daily data. No confidence interval is manufactured for an aggregate lacking one. Price-space R, net R under the source cost model, monetary PF and account-model probabilities remain distinct. Rounding in figure labels is presentational; the machine-readable table retains transcribed precision.
 
-The [research atlas](research-atlas.md) connects the two studies to their decision records. Each result belongs to its own setup, sample and cost assumptions.
+The [research atlas](research-atlas.md) connects the studies to their decision records. Each result belongs to its own setup, sample and cost assumptions.
 
 ## B08
 
