@@ -12,8 +12,12 @@ On 12 November 2026 I clarified why I shelved MacroImpulse. Around news releases
 
 A separate historical medium-impact evaluation had an incomplete event calendar. The original record preserves the invalid-data-universe finding and its limits. [Calendar evidence](evidence.md#b15)
 
+## New independent Trading Steady ORB study
+
+The new [Trading Steady case study](../studies/trading-steady-orb.md) is an independent recreation of publicly explained strategy rules. It is separate from the ordinary historical ORB publication previously retired from the portfolio and separate from ORBINDEX. It publishes reviewed aggregates and conclusions only. The original Trading Steady videos, third-party transcripts, private market tick data, EA implementations and private reports are not distributed here. A successful native tester and positive scenario R do not prove actual historical broker-net profitability.
+
 ## Publication history and rights
 
-I selected ORBINDEX and MacroImpulse for the current portfolio. Earlier Git commits preserve the ordinary opening-range, Engulfing Bar Play and NOWICK publications and their research decisions. The [depublication inventory](../archived-public-paths.json) records the retired paths so the [history audit](../scripts/audit_public.py) can still check them.
+The earlier curated portfolio selected ORBINDEX and MacroImpulse; this later independent Trading Steady study adds a distinct new case study. Earlier Git commits preserve the ordinary opening-range, Engulfing Bar Play and NOWICK publications and their research decisions. The [depublication inventory](../archived-public-paths.json) records the retired paths so the [history audit](../scripts/audit_public.py) can still check them.
 
 Public code and original writing are under [MIT](../LICENSE). External strategy PDFs, proprietary EAs and raw market data have separate rights and remain outside this repository.
