@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="500" viewBox="0 0 1040 500" role="img" aria-label="Gross profit factors for 48 fixed opening-range breakout configurations on US500 and USTEC">
+<rect x="0" y="0" width="1040" height="500" rx="0" fill="#FBFCFD"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="27" fill="#182D3A" text-anchor="start" font-weight="700">48 fixed opening-range breakout configurations</text>
+<text x="28" y="68" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="start" font-weight="400">MT5 real-tick gross profit factor | Historical exploration | NOT verified net returns</text>
+<text x="335" y="103" font-family="Arial,sans-serif" font-size="20" fill="#183745" text-anchor="middle" font-weight="700">US500</text>
+<text x="236" y="125" font-family="Arial,sans-serif" font-size="13" fill="#4E6675" text-anchor="middle" font-weight="600">OR5</text>
+<text x="327" y="125" font-family="Arial,sans-serif" font-size="13" fill="#4E6675" text-anchor="middle" font-weight="600">OR15</text>
+<text x="418" y="125" font-family="Arial,sans-serif" font-size="13" fill="#4E6675" text-anchor="middle" font-weight="600">OR30</text>
+<text x="24" y="157" font-family="Arial,sans-serif" font-size="13" fill="#364C59" text-anchor="start" font-weight="400">Long only</text>
+<rect x="195" y="137" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="236.5" y="157" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.456</text>
+<rect x="286" y="137" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="327.5" y="157" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.298</text>
+<rect x="377" y="137" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="418.5" y="157" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.267</text>
+<text x="24" y="193" font-family="Arial,sans-serif" font-size="13" fill="#364C59" text-anchor="start" font-weight="400">Long + ATR</text>
+<rect x="195" y="173" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="236.5" y="193" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.394</text>
+<rect x="286" y="173" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="327.5" y="193" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.475</text>
+<rect x="377" y="173" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="418.5" y="193" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.386</text>
+<text x="24" y="229" font-family="Arial,sans-serif" font-size="13" fill="#364C59" text-anchor="start" font-weight="400">Long + EMA</text>
+<rect x="195" y="209" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="236.5" y="229" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.360</text>
+<rect x="286" y="209" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="327.5" y="229" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.319</text>
+<rect x="377" y="209" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="418.5" y="229" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.264</text>
+<text x="24" y="265" font-family="Arial,sans-serif" font-size="13" fill="#364C59" text-anchor="start" font-weight="400">Long + both</text>
+<rect x="195" y="245" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="236.5" y="265" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.360</text>
+<rect x="286" y="245" width="83" height="29" rx="5" fill="#58B08E"/>
+<text x="327.5" y="265" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.548</text>
+<rect x="377" y="245" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="418.5" y="265" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.324</text>
+<text x="24" y="301" font-family="Arial,sans-serif" font-size="13" fill="#364C59" text-anchor="start" font-weight="400">Both directions</text>
+<rect x="195" y="281" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="236.5" y="301" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.154</text>
+<rect x="286" y="281" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="327.5" y="301" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.168</text>
+<rect x="377" y="281" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="418.5" y="301" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.163</text>
+<text x="24" y="337" font-family="Arial,sans-serif" font-size="13" fill="#364C59" text-anchor="start" font-weight="400">Both + ATR</text>
+<rect x="195" y="317" width="83" height="29" rx="5" fill="#E7F0EB"/>
+<text x="236.5" y="337" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.149</text>
+<rect x="286" y="317" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="327.5" y="337" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.348</text>
+<rect x="377" y="317" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="418.5" y="337" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.229</text>
+<text x="24" y="373" font-family="Arial,sans-serif" font-size="13" fill="#364C59" text-anchor="start" font-weight="400">Both + EMA</text>
+<rect x="195" y="353" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="236.5" y="373" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.217</text>
+<rect x="286" y="353" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="327.5" y="373" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.232</text>
+<rect x="377" y="353" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="418.5" y="373" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.163</text>
+<text x="24" y="409" font-family="Arial,sans-serif" font-size="13" fill="#364C59" text-anchor="start" font-weight="400">Both + ATR+EMA</text>
+<rect x="195" y="389" width="83" height="29" rx="5" fill="#E7F0EB"/>
+<text x="236.5" y="409" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.143</text>
+<rect x="286" y="389" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="327.5" y="409" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.444</text>
+<rect x="377" y="389" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="418.5" y="409" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.202</text>
+<text x="780" y="103" font-family="Arial,sans-serif" font-size="20" fill="#183745" text-anchor="middle" font-weight="700">USTEC</text>
+<text x="681" y="125" font-family="Arial,sans-serif" font-size="13" fill="#4E6675" text-anchor="middle" font-weight="600">OR5</text>
+<text x="772" y="125" font-family="Arial,sans-serif" font-size="13" fill="#4E6675" text-anchor="middle" font-weight="600">OR15</text>
+<text x="863" y="125" font-family="Arial,sans-serif" font-size="13" fill="#4E6675" text-anchor="middle" font-weight="600">OR30</text>
+<rect x="640" y="137" width="83" height="29" rx="5" fill="#E7F0EB"/>
+<text x="681.5" y="157" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.020</text>
+<rect x="731" y="137" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="772.5" y="157" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.215</text>
+<rect x="822" y="137" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="863.5" y="157" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.293</text>
+<rect x="640" y="173" width="83" height="29" rx="5" fill="#FBE8DF"/>
+<text x="681.5" y="193" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">0.943</text>
+<rect x="731" y="173" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="772.5" y="193" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.226</text>
+<rect x="822" y="173" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="863.5" y="193" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.386</text>
+<rect x="640" y="209" width="83" height="29" rx="5" fill="#E7F0EB"/>
+<text x="681.5" y="229" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.095</text>
+<rect x="731" y="209" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="772.5" y="229" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.239</text>
+<rect x="822" y="209" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="863.5" y="229" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.376</text>
+<rect x="640" y="245" width="83" height="29" rx="5" fill="#FBE8DF"/>
+<text x="681.5" y="265" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">0.954</text>
+<rect x="731" y="245" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="772.5" y="265" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.167</text>
+<rect x="822" y="245" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="863.5" y="265" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.465</text>
+<rect x="640" y="281" width="83" height="29" rx="5" fill="#F4D0C3"/>
+<text x="681.5" y="301" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">0.814</text>
+<rect x="731" y="281" width="83" height="29" rx="5" fill="#E7F0EB"/>
+<text x="772.5" y="301" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.129</text>
+<rect x="822" y="281" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="863.5" y="301" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.258</text>
+<rect x="640" y="317" width="83" height="29" rx="5" fill="#F4D0C3"/>
+<text x="681.5" y="337" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">0.835</text>
+<rect x="731" y="317" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="772.5" y="337" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.158</text>
+<rect x="822" y="317" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="863.5" y="337" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.442</text>
+<rect x="640" y="353" width="83" height="29" rx="5" fill="#F4D0C3"/>
+<text x="681.5" y="373" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">0.886</text>
+<rect x="731" y="353" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="772.5" y="373" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.156</text>
+<rect x="822" y="353" width="83" height="29" rx="5" fill="#8CCDB4"/>
+<text x="863.5" y="373" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.337</text>
+<rect x="640" y="389" width="83" height="29" rx="5" fill="#F4D0C3"/>
+<text x="681.5" y="409" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">0.876</text>
+<rect x="731" y="389" width="83" height="29" rx="5" fill="#BDE0D0"/>
+<text x="772.5" y="409" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.177</text>
+<rect x="822" y="389" width="83" height="29" rx="5" fill="#58B08E"/>
+<text x="863.5" y="409" font-family="Arial,sans-serif" font-size="13" fill="#16323A" text-anchor="middle" font-weight="700">1.642</text>
+<text x="25" y="461" font-family="Arial,sans-serif" font-size="13" fill="#526976" text-anchor="start" font-weight="400">PF = gross winning price R / absolute gross losing price R; values do not include commission or financing.</text>
+<text x="25" y="484" font-family="Arial,sans-serif" font-size="12" fill="#526976" text-anchor="start" font-weight="400">Source: TS1 | 48 overlapping models on privately held US500 / USTEC Exness Bid/Ask quotes.</text>
+</svg>
