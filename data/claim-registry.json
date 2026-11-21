@@ -1,11 +1,67 @@
 {
   "boundary": "Claim/source provenance checks for curated public portfolio, not independent market-data replication.",
   "documents": {
-    "README.md": [],
+    "README.md": [
+      {
+        "sha256": "830877960a82276463dc0662b5da79833c3cc0179d159954797e0d6b4b26be9d",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      }
+    ],
     "SECURITY.md": [],
-    "data/README.md": [],
+    "data/README.md": [
+      {
+        "sha256": "cda4a20758a0dfa92ada247879c1abf49fecc33f1463dc854e2ecc8b9114c151",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      }
+    ],
     "docs/empirical-methods.md": [],
     "docs/evidence.md": [
+      {
+        "sha256": "92afd1da6f2ab78f68f766d7099f2cb8f5216892c843314a498a714dbe514698",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "028e596b7314aae77e7cc015fb3e3cf1a09403f4e3e59d8746a01e4c1d1e90e3",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "7f30d19aeae64173a4ef08c223c56f45c7bbe35aebc751d3dcfa5785cf51a48e",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "c931e538c8987e25a541eead6cded7bd481a7767f9f060a150c0e63c0808182a",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "b89445db0b9c9f0d3f9e48efa06e61922e97977a94103db418421cf517fc3772",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "434b6a2806c5ad55fc995d82956c2fd57541b583d16e82ba859e1189263ce81f",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
       {
         "sha256": "ce0bf7ba35fee199781a84c7162e9982e500c995193724b8944e5e1e5a5aca51",
         "kind": "documentation",
@@ -291,7 +347,16 @@
         "source_ids": []
       }
     ],
-    "docs/research-atlas.md": [],
+    "docs/research-atlas.md": [
+      {
+        "sha256": "12a127c230438273d2e8da88712d4d20db9b5fe2a8f7896d5cb533371f7eea8b",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      }
+    ],
     "docs/research-os.md": [
       {
         "kind": "documentation",
@@ -878,9 +943,281 @@
         ]
       }
     ],
-    "studies/README.md": [],
+    "studies/README.md": [
+      {
+        "sha256": "af922a2a44c6e02d0f7ab06c4cffe55b7805f1e802620d7cb0d000f22b310ade",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      }
+    ],
     "docs/research-publishing-guide.md": [],
-    "docs/website-maintenance.md": []
+    "docs/website-maintenance.md": [],
+    "studies/orb-setup-filters.md": [
+      {
+        "sha256": "c21f65663c563f5975a2763aadfee8ef375d05da14399af9bce02b5812ea5933",
+        "kind": "documentation",
+        "source_ids": []
+      },
+      {
+        "sha256": "3e9595773c970f18a6f6a2cedb2cce6fb00dee643b029c7b150f3aa00373277f",
+        "kind": "methods",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "6cd40432f4d7a9f8df5471bf0b63ed79b9701af2e9bb53b90597c9877f1f8925",
+        "kind": "methods",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "45f36ef477a31fd0adc2b0d2c10cc9d8858ca71bed7376b942c7a5947673504b",
+        "kind": "methods",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "7bc58731ea1f0b4806854a872706af841f23b430c7d42cc22493b98b95c4dedc",
+        "kind": "methods",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "2e53d3ba7e4e598e43558f7d502b02463a2595e1c607445768328b54264b1c3f",
+        "kind": "methods",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "89b55fce1a7b71b6c41940ac29ff9976c4236c12c9550977bd8eafd9b7013b96",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "66353e4e2b6f479be2a14aaadc73019b6a3af5cedfe369e9134a05ecdd4d0434",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "85f63fe25c3e5148f108c6e6848be413d28881bb045e3e48ba50ea0ca3914c04",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "05b63872b83434aafc7fbc04fbe19af8685f932dcddd875b82efe4d42ef15a90",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "f40372cea37359ce41df046670460b33be4f6f6300f1383c20257e39cf5daddd",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "f7d1245dfcc3a92b3f0c13e8420a1b8642b678e88a5df0219fcc336fe1ee80dc",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "24a2c6784a1927916318b6bddace512d622fa37ab0905f20569364fe5d64c8e2",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "661360eaba87e923c43a9ddeb7c0c01fc7b0d67168b0e7bdee774d2609789eba",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "7adaacce1df6b640c33a44166a9c97b8b9730fb49f583c213b369fc18fc1a855",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "cc9366199babcb2fae9145265a3e239e75a73d2076016da71a3736f79647b98d",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "590e1711e50ba685ad7bd2c95727d6af50e81522b92e01b66b04e5afdf99fd87",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "f7256ceb9439148cc325a36f0e26b517755d10c8e13c2a63301e2de6a6526f62",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "fe526a49926994752479eddaedf7f774c28bb2c83367a99954fe01d93ae50e34",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "eaf9cea61de0c726b59a29f56f0d6735a43deede0e737c77efa2b0bb96eb5e55",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "44e58a9d82d5a0224e64ad0885cdb8e321e2f72bfd22a270ef877d773a6ca4b5",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "7af54c77ebeefe40e8c4df632d8f3f4b0715486da48f426b3cfd8ffd3378545f",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "c142557fb412a0ab55812368b39113bd623cd0556d1939679b91c1f389be9f1c",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "667a5dfb084f9d88b846c31d1fd5b336622b8ece224ac6afc439f92fcf71c6a6",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "56ca82420fcad32dac193ab33d2cc95f23878e8531ee162cc5c27d05f0fa057d",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "4afd8ceff25f5e46e8f4574a41ffdc16afd502d75123f0d4095c7ec5c7a4703d",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "fb8f8df6ee6284c3a951eecfdb7fc826b028f66ff68b0dd73416820c1e873468",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "30dcf7979d067e2fd2cb458c21b968eb7a1f55abbd7bbd340bd479da62d71479",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "5d80c9a41a8c80d23292b699aab8221ef2f43d8b2f3b5978fa9dd1a7f25ef417",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "00458c0517826b2eabe26901e5411741fe0669d93a32e14da02c4c845c9da17d",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "305ba0788509e118438617e34498e9560b4f1b7cdaf82859b0dc789d1a9f2c5e",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "d2a874daf41be512107f5ba92921c5d3354fdc70083d16ab9bebc67639b72a84",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "277edd649b44f8a7fb49dbc5f4613738837e9a7ce514659fcd778200e0123a31",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "7eb630e53a105f2d1ff2cc8cf16a51b6913b9b4799946b09dcd44e0fd8129450",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "f9ac161791338ef62ab91e5f9d03032d79e4f40ed26aabb1a1f3c3e86bceaf7f",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "1dda90f1bc1dee5ffd7d7a336c71c6c878fe4f2358de2b42fd7a11b2563aed2d",
+        "kind": "documentation",
+        "source_ids": []
+      }
+    ]
   },
   "figures": [
     {
@@ -1028,9 +1365,43 @@
         "B15"
       ],
       "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/orb-setup-filters-factorial.svg",
+      "renderer": "scripts/render_orb_setup_filters.py",
+      "inputs": {
+        "data/orb-setup-filters-public.json": "bebc87635de589aea143e8a2f2755c6b2b0c3338a49c63b9cb655b5cd3fb7053"
+      },
+      "source_ids": [
+        "ORBF1"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/orb-setup-filters-oos.svg",
+      "renderer": "scripts/render_orb_setup_filters.py",
+      "inputs": {
+        "data/orb-setup-filters-public.json": "bebc87635de589aea143e8a2f2755c6b2b0c3338a49c63b9cb655b5cd3fb7053"
+      },
+      "source_ids": [
+        "ORBF2"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/orb-setup-filters-comparison.svg",
+      "renderer": "scripts/render_orb_setup_filters.py",
+      "inputs": {
+        "data/orb-setup-filters-public.json": "bebc87635de589aea143e8a2f2755c6b2b0c3338a49c63b9cb655b5cd3fb7053"
+      },
+      "source_ids": [
+        "ORBF1",
+        "ORBF2"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
     }
   ],
-  "reviewed_on": "2026-11-14",
+  "reviewed_on": "2026-11-21",
   "sources": [
     {
       "disclosure": "approved",
@@ -1171,6 +1542,20 @@
       "disclosure": "approved",
       "evidence_kind": "historical",
       "sample_role": "spent"
+    },
+    {
+      "id": "ORBF1",
+      "kind": "retained_private_report",
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "sample_role": "retrospective_spent"
+    },
+    {
+      "id": "ORBF2",
+      "kind": "retained_private_report",
+      "disclosure": "approved",
+      "evidence_kind": "historical",
+      "sample_role": "later_partial_and_missing"
     }
   ],
   "version": 1
