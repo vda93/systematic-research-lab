@@ -37,6 +37,10 @@ Native MT5 Model 4 tests used an isolated diagnostic contract: tick size 0.01, m
 
 **Raw off-grid stops and targets were rejected, not rounded.** The following mutually exclusive recorded statuses account for the selected US500 OR15 bidirectional ATR-on EMA-off discovery candidate. Counts follow the implementation's rejection precedence; a signal can violate more than one condition even though it receives one final status. [ORBF1](../docs/evidence.md#orbf1)
 
+![Recorded final statuses for every direction-permitted signal in the primary discovery candidate](../figures/orb-setup-filters-admission.svg)
+
+The bars show final-status accounting, not a sequence of hypothetical trades removed by each check. They sum to the same **1,890 direction-permitted signals** in the table below. Counts cannot establish how rejected signals would have performed. [ORBF1](../docs/evidence.md#orbf1)
+
 | Recorded status | Signals |
 | --- | ---: |
 | ATR filter | 693 |
@@ -157,6 +161,8 @@ For a fixed set of natural closes, the extra-cost calculation is `adjusted R = c
 
 The primary candidate has 114 natural closes. The rounded public cohort totals sum to 5.319R; the retained higher-precision source sum is approximately 5.318307R. Subtracting the extra debits from either basis gives the same two-decimal article values: +5.32R with none, -0.38R with 0.025R per side, and -6.08R with 0.05R per side. The public JSON records its rounding basis. These are hypothetical stresses, not observed cost estimates. [ORBF2](../docs/evidence.md#orbf2)
 
+The main article's cost curve uses that rounded public basis, with slope `-2 × 114 = -228` and an exact arithmetic zero at `5.319 / 228` R per fill side, displayed as approximately 0.0233R. This crossing describes only the fixed observed trade set, before extra financing; it does not estimate a broker's attainable execution costs. [ORBF2](../docs/evidence.md#orbf2)
+
 The previously released additional stress also charges 0.01R per New York date crossed, alongside 0.05R per fill side. It gives -4.061R for A and -2.400R for B. That includes financing sensitivity absent from the main article's simpler table. [ORBF2](../docs/evidence.md#orbf2)
 
 The complete primary H1 statistic is unavailable because A contains incomplete daily coverage. Primary H2 remains unavailable because USTEC is unqualified. The supplemental B-only H1 result uses 148 eligible days: mean +0.0120 scenario R/day, pointwise 95% interval [-0.0573, +0.0870], raw p 0.72545, Holm-adjusted p 1.0 in the frozen two-primary family. It uses 5,000 circular block draws, 20-session blocks, and PCG64 seed 20261119. It does not replace the unavailable complete primary test. [ORBF2](../docs/evidence.md#orbf2)
@@ -168,6 +174,7 @@ The complete primary H1 statistic is unavailable because A contains incomplete d
 | Charts from released aggregates | Native market replay from quotes, implementation, contract, and run artifacts |
 | Matching EMA-on/off configurations and published-precision comparison counts | Higher-precision results beyond the released rows |
 | Displayed mean-R and fixed-trade extra-cost arithmetic | Reported bootstrap intervals and adjusted p-values from the daily series and full analysis inputs |
+| Recorded signal-status totals and the illustrative setup from the declared rules | Counterfactual outcomes for rejected signals, which the status counts cannot establish |
 | Source bindings, file inventory, and deterministic output checks | Historical account execution and all-in costs, which remain unverified |
 
 The public file retains all 48 discovery rows and all eight later US500 rows. The source register records immutable research commits, archive hashes, checked manifests, and report hashes. The supplied review packages passed the documented integrity checks, and public values were reconciled against them. This revision changes presentation and adds derived summaries; it does not rerun the native experiments. [ORBF1](../docs/evidence.md#orbf1), [ORBF2](../docs/evidence.md#orbf2)

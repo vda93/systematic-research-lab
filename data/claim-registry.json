@@ -14,7 +14,7 @@
     "SECURITY.md": [],
     "data/README.md": [
       {
-        "sha256": "cda4a20758a0dfa92ada247879c1abf49fecc33f1463dc854e2ecc8b9114c151",
+        "sha256": "3f870f5f1ae63387661d6a1e5e29481cba31ef9ae773d99a44673976ce38ff7b",
         "kind": "historical_report",
         "source_ids": [
           "ORBF1",
@@ -984,6 +984,13 @@
         ]
       },
       {
+        "sha256": "9a87980d16b5cd5365b3208250c2a66356c0042184ab77f87c5418fb2bbc7f7f",
+        "kind": "methods",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
         "sha256": "d51251689f95ac38740fccb479935d1c6b8c5589e4c5847bf581511759df558e",
         "kind": "methods",
         "source_ids": [
@@ -1059,6 +1066,13 @@
         ]
       },
       {
+        "sha256": "ff02212654ca9e4693ee531043a5a77e30bc443ecabc93dbc55f3882a3781d67",
+        "kind": "historical_report",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
         "sha256": "66b424be26c546c99d2461f8d0f064b1ab3c413d78f99e949ea142421db2cf21",
         "kind": "historical_report",
         "source_ids": [
@@ -1083,6 +1097,13 @@
       {
         "sha256": "2df544b3ec7756cc9f7b7791ee4ab04adc383534c2bf2496576f6466e2ad7965",
         "kind": "historical_report",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
+      {
+        "sha256": "0cc3ce056dab9dab8f3c899486b95530a9f10b068b18d68fc48db67d4e9aaeef",
+        "kind": "methods",
         "source_ids": [
           "ORBF2"
         ]
@@ -1167,6 +1188,13 @@
       {
         "sha256": "c982078800d061c78f310fd0ef8e4b99d80cb358701580b8ae8b4e69ba23cee6",
         "kind": "methods",
+        "source_ids": [
+          "ORBF1"
+        ]
+      },
+      {
+        "sha256": "efbea5751f8e78a55da2dc655db1d7f7d4695b45923cd69078b8cefc1ce4f765",
+        "kind": "historical_report",
         "source_ids": [
           "ORBF1"
         ]
@@ -1395,6 +1423,13 @@
         ]
       },
       {
+        "sha256": "10f3067f1a39ac8907275e90326e63b32b812558f7f34a976ddb44792531aebb",
+        "kind": "methods",
+        "source_ids": [
+          "ORBF2"
+        ]
+      },
+      {
         "sha256": "051697244249b8c7485a0e47f01978fb0fe0417a187a205921c8a711c4f4ccb8",
         "kind": "historical_report",
         "source_ids": [
@@ -1569,7 +1604,7 @@
       "path": "figures/orb-setup-filters-factorial.svg",
       "renderer": "scripts/render_orb_setup_filters.py",
       "inputs": {
-        "data/orb-setup-filters-public.json": "9574449dcd864222a1ae8a91286d65ba50083adad66e784797024e8e1956928c"
+        "data/orb-setup-filters-public.json": "3e44dd87abd8655938a4d0d9f100c9ef0de149e25387f4a6032b8e72c0692ae3"
       },
       "source_ids": [
         "ORBF1"
@@ -1580,7 +1615,7 @@
       "path": "figures/orb-setup-filters-oos.svg",
       "renderer": "scripts/render_orb_setup_filters.py",
       "inputs": {
-        "data/orb-setup-filters-public.json": "9574449dcd864222a1ae8a91286d65ba50083adad66e784797024e8e1956928c"
+        "data/orb-setup-filters-public.json": "3e44dd87abd8655938a4d0d9f100c9ef0de149e25387f4a6032b8e72c0692ae3"
       },
       "source_ids": [
         "ORBF2"
@@ -1591,11 +1626,55 @@
       "path": "figures/orb-setup-filters-comparison.svg",
       "renderer": "scripts/render_orb_setup_filters.py",
       "inputs": {
-        "data/orb-setup-filters-public.json": "9574449dcd864222a1ae8a91286d65ba50083adad66e784797024e8e1956928c"
+        "data/orb-setup-filters-public.json": "3e44dd87abd8655938a4d0d9f100c9ef0de149e25387f4a6032b8e72c0692ae3"
       },
       "source_ids": [
         "ORBF1",
         "ORBF2"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/orb-setup-filters-setup.svg",
+      "renderer": "scripts/render_orb_setup_filters.py",
+      "inputs": {
+        "data/orb-setup-filters-public.json": "3e44dd87abd8655938a4d0d9f100c9ef0de149e25387f4a6032b8e72c0692ae3"
+      },
+      "source_ids": [
+        "ORBF1"
+      ],
+      "scope": "CONCEPTUAL_SCHEMATIC"
+    },
+    {
+      "path": "figures/orb-setup-filters-ema.svg",
+      "renderer": "scripts/render_orb_setup_filters.py",
+      "inputs": {
+        "data/orb-setup-filters-public.json": "3e44dd87abd8655938a4d0d9f100c9ef0de149e25387f4a6032b8e72c0692ae3"
+      },
+      "source_ids": [
+        "ORBF1"
+      ],
+      "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/orb-setup-filters-cost-sensitivity.svg",
+      "renderer": "scripts/render_orb_setup_filters.py",
+      "inputs": {
+        "data/orb-setup-filters-public.json": "3e44dd87abd8655938a4d0d9f100c9ef0de149e25387f4a6032b8e72c0692ae3"
+      },
+      "source_ids": [
+        "ORBF2"
+      ],
+      "scope": "FIXED_TRADE_COST_SENSITIVITY"
+    },
+    {
+      "path": "figures/orb-setup-filters-admission.svg",
+      "renderer": "scripts/render_orb_setup_filters.py",
+      "inputs": {
+        "data/orb-setup-filters-public.json": "3e44dd87abd8655938a4d0d9f100c9ef0de149e25387f4a6032b8e72c0692ae3"
+      },
+      "source_ids": [
+        "ORBF1"
       ],
       "scope": "EMPIRICAL_REPORTED"
     }

@@ -178,6 +178,30 @@
           }
         }
       }
+    },
+    "primary_signal_admission": {
+      "source_id": "ORBF1",
+      "id": "US500_OR15_LS_A1_E0",
+      "entry_session_period": {
+        "start": "2020-03-01",
+        "end_inclusive": "2025-03-31"
+      },
+      "total_direction_permitted_signals": 1890,
+      "status_counts": {
+        "ATR_FILTER": 693,
+        "PRICE_OFF_GRID": 715,
+        "FILLED": 377,
+        "SESSION_ALREADY_OPEN": 94,
+        "CALENDAR_UNKNOWN_OR_CLOSED": 5,
+        "MISSING_PRIOR_BAR": 2,
+        "STALE_NEXT_QUOTE": 2,
+        "STALE_PRIOR_BAR": 2
+      },
+      "interpretation": "Mutually exclusive recorded final statuses under the implementation rejection precedence. A signal can violate multiple conditions; these categories are not a sequential funnel or a causal estimate of foregone trades or profit.",
+      "independent_grid_diagnostic_count": 1192,
+      "independent_grid_diagnostic_scope": "Overlaps other conditions; excluded from the mutually exclusive status accounting.",
+      "verification": "Reconciled to the retained scored native signal records and qualified aggregate table. Warmup records excluded using the discovery entry-session period.",
+      "retained_signal_records_sha256": "1e6dc869489940d426b2c37c74ff16d22d47f0875888b4de0a9468b80003bf31"
     }
   },
   "factorial_cells": [

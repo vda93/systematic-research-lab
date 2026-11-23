@@ -72,16 +72,27 @@ STUDIES = json.loads(r"""{
       "contrasts": {
         "value": "27",
         "source": "ORBF1"
+      },
+      "ema_pairs": {
+        "value": "24",
+        "source": "ORBF1"
+      },
+      "break_even": {
+        "value": "0.0233",
+        "source": "ORBF2"
       }
     },
     "sections": [
       {
         "heading": "The setup and the research question",
         "paragraphs": [
-          "The reference setup measures the first {range} minutes after the {open} New York cash open. A completed fifteen-minute midpoint candle must close outside that range, after the preceding close was inside it. Entry uses the next eligible quote, with the stop at the opposite range boundary and a target of {target} times initial price risk.",
-          "Midpoint means the average of Bid and Ask; execution uses the tradeable side of the quote. The tests reject stop or target prices outside the contract's permitted price increments instead of rounding them, which materially changes trade selection. Positions may remain open beyond the entry day. Only one position may be open per entry session; positions from different sessions may overlap.",
-          "I compared range lengths, trade directions and a volatility filter based on average true range (ATR), then added an exponential moving average (EMA) trend filter during discovery. The research question was whether those choices improved the observed results and whether frozen candidates held up later. The full matrix contained {configurations} configurations across {us} and {tech} CFDs."
+          "The reference setup measures the first {range} minutes after the {open} New York cash open. A completed fifteen-minute midpoint candle must close outside that range after the preceding close was inside it. Entry uses the next eligible quote, the stop sits at the opposite boundary, and the target is {target} times initial price risk.",
+          "Midpoint is the average of Bid and Ask; execution uses the tradeable quote side. Off-grid stops and targets are rejected without rounding. Positions may span days, with one open position per entry session and possible overlap between sessions.",
+          "I compared range lengths, directions and an average true range (ATR) volatility filter, then added an exponential moving average (EMA) trend filter during discovery. The matrix covers {configurations} configurations across {us} and {tech} CFDs."
         ],
+        "figure": "orb-setup-filters-setup.svg",
+        "alt": "Illustrative long breakout showing the opening range, completed-candle confirmation, entry, stop, target, and optional filters",
+        "caption": "A setup schematic, not a historical trade. No later price outcome is invented. ATR and the later EMA extension are optional admission filters.",
         "sources": [
           "ORBF1"
         ]
@@ -89,8 +100,8 @@ STUDIES = json.loads(r"""{
       {
         "heading": "The same setups in discovery and later history",
         "paragraphs": [
-          "All four selected {us} setups had positive average gross R in discovery. The long-only alternatives became negative on observed natural closes in both later cohorts. The bidirectional setup with ATR stayed slightly positive, but its average outcome fell substantially.",
-          "R expresses an outcome relative to initial trade risk. These figures already include quoted spread through Bid/Ask execution but exclude commission and other account charges. The chart keeps the same setups and outcome measure across periods, and shows how many natural closes support each estimate."
+          "All four selected {us} setups had positive average gross R in discovery. The long-only alternatives turned negative on observed natural closes in both later cohorts. The bidirectional ATR setup stayed slightly positive, with a much smaller average outcome.",
+          "R expresses outcomes relative to initial trade risk. Gross R includes quoted spread through Bid/Ask execution but excludes commission and other account charges. The chart compares unchanged setups across periods and includes natural-close counts."
         ],
         "table": {
           "heading": [
@@ -123,10 +134,13 @@ STUDIES = json.loads(r"""{
       {
         "heading": "What adding the EMA actually showed",
         "paragraphs": [
-          "The EMA filter permits a long breakout only above the moving average and a short breakout only below it. I compared the filter on and off while holding the other settings fixed.",
-          "The discovery results were mixed. Some pairs improved profit factor, while others worsened. Drawdown often fell with participation, but those changes did not establish better daily returns. None of the {contrasts} fixed comparisons survived the multiple-testing correction. Those comparisons tested differences between configurations, not every strategy’s absolute expectancy.",
-          "The later-tested {us} setups all had EMA off. The shortlisted EMA-on {tech} candidate was blocked by source-data failures. There is therefore no qualified EMA out-of-sample improvement to report."
+          "EMA permits long breakouts only above the moving average and shorts only below it. Each matched pair holds the other settings fixed.",
+          "Discovery results were mixed. Profit factor sometimes improved; drawdown often fell with fewer trades. Neither establishes better daily returns. None of the {contrasts} fixed comparisons survived multiple-testing correction; they tested configuration differences, not every strategy's absolute expectancy.",
+          "All later-tested {us} setups had EMA off. The shortlisted EMA-on {tech} candidate was source-blocked, so EMA has no qualified out-of-sample result."
         ],
+        "figure": "orb-setup-filters-ema.svg",
+        "alt": "All matched EMA-on minus EMA-off differences in commission-scenario R per common eligible day, split by market",
+        "caption": "All {ema_pairs} matched comparisons, on the common discovery calendar. Positive values favor EMA. These overlapping configurations are descriptive comparisons, not independent trials or individual significance estimates.",
         "sources": [
           "ORBF1",
           "ORBF2"
@@ -135,9 +149,12 @@ STUDIES = json.loads(r"""{
       {
         "heading": "How much margin remained after costs?",
         "paragraphs": [
-          "The bidirectional ATR candidate made approximately {scenario_total}R across {closes} natural closes after the published-commission assumption. That is a closed-trade scenario total, not a continuous account return or a complete daily series.",
-          "An additional hypothetical {extra_cost}R per fill side reduced that total to approximately {stressed_total}R, before extra financing. This holds the trades fixed to measure cost sensitivity; it is not an estimate of actual slippage. Historical all-in broker net performance remains unknown."
+          "The bidirectional ATR candidate made approximately {scenario_total}R across {closes} natural closes under the published-commission assumption. This combines separately initialized cohorts, not a continuous account return or a complete daily series.",
+          "An extra hypothetical {extra_cost}R per fill side reduces that total to approximately {stressed_total}R, before extra financing. The trades stay fixed; this does not estimate actual slippage. Historical all-in broker net performance remains unknown."
         ],
+        "figure": "orb-setup-filters-cost-sensitivity.svg",
+        "alt": "Combined observed closed-trade scenario R falls as hypothetical extra cost per fill side increases",
+        "caption": "The line crosses zero at approximately {break_even}R extra per fill side, using rounded public aggregates. It describes only these observed closes; financing remains extra.",
         "sources": [
           "ORBF2"
         ]

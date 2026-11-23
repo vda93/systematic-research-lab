@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="730" viewBox="0 0 1120 730" role="img" aria-labelledby="title description">
+<title id="title">Which signals became trades?</title>
+<desc id="description">1890 direction-permitted discovery signals for the selected bidirectional ATR setup, assigned to mutually exclusive recorded final statuses under the implementation&#x27;s rejection precedence. This is a categorical accounting, not a sequential funnel or causal estimate of missed profit.</desc>
+<rect x="0" y="0" width="1120" height="730" rx="0" fill="#FBFCFD"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="26" fill="#182D3A" text-anchor="start" font-weight="700">Which signals became trades?</text>
+<text x="28" y="71" font-family="Arial,sans-serif" font-size="16" fill="#576A76" text-anchor="start" font-weight="400">US500 | 15m Both + ATR | EMA off | 1,890 direction-permitted discovery signals</text>
+<line x1="310" y1="125" x2="310" y2="542" stroke="#DCE5EA" stroke-width="1"/>
+<text x="310" y="571" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="middle" font-weight="400">0</text>
+<line x1="460" y1="125" x2="460" y2="542" stroke="#DCE5EA" stroke-width="1"/>
+<text x="460" y="571" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="middle" font-weight="400">200</text>
+<line x1="610" y1="125" x2="610" y2="542" stroke="#DCE5EA" stroke-width="1"/>
+<text x="610" y="571" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="middle" font-weight="400">400</text>
+<line x1="760" y1="125" x2="760" y2="542" stroke="#DCE5EA" stroke-width="1"/>
+<text x="760" y="571" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="middle" font-weight="400">600</text>
+<line x1="910" y1="125" x2="910" y2="542" stroke="#DCE5EA" stroke-width="1"/>
+<text x="910" y="571" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="middle" font-weight="400">800</text>
+<text x="28" y="159" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="400">Price grid</text>
+<rect x="310" y="137" width="536.25" height="31" rx="0" fill="#8099AC"/>
+<text x="1086" y="159" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="end" font-weight="700">715 (37.8%)</text>
+<text x="28" y="210" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="400">ATR filter</text>
+<rect x="310" y="188" width="519.75" height="31" rx="0" fill="#8099AC"/>
+<text x="1086" y="210" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="end" font-weight="700">693 (36.7%)</text>
+<text x="28" y="261" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="700">Filled</text>
+<rect x="310" y="239" width="282.75" height="31" rx="0" fill="#197B66"/>
+<text x="1086" y="261" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="end" font-weight="700">377 (19.9%)</text>
+<text x="28" y="312" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="400">Session occupied</text>
+<rect x="310" y="290" width="70.5" height="31" rx="0" fill="#8099AC"/>
+<text x="1086" y="312" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="end" font-weight="700">94 (5.0%)</text>
+<text x="28" y="363" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="400">Calendar</text>
+<rect x="310" y="341" width="3.75" height="31" rx="0" fill="#8099AC"/>
+<text x="1086" y="363" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="end" font-weight="700">5 (0.3%)</text>
+<text x="28" y="414" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="400">Missing prior bar</text>
+<rect x="310" y="392" width="1.5" height="31" rx="0" fill="#8099AC"/>
+<text x="1086" y="414" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="end" font-weight="700">2 (0.1%)</text>
+<text x="28" y="465" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="400">Stale next quote</text>
+<rect x="310" y="443" width="1.5" height="31" rx="0" fill="#8099AC"/>
+<text x="1086" y="465" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="end" font-weight="700">2 (0.1%)</text>
+<text x="28" y="516" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="400">Stale prior bar</text>
+<rect x="310" y="494" width="1.5" height="31" rx="0" fill="#8099AC"/>
+<text x="1086" y="516" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="end" font-weight="700">2 (0.1%)</text>
+<text x="610" y="603" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="middle" font-weight="700">Number of signals, grouped by recorded final status</text>
+<text x="28" y="641" font-family="Arial,sans-serif" font-size="14" fill="#526976" text-anchor="start" font-weight="400">The categories sum to 1,890; each signal is counted once, according to recorded rejection precedence.</text>
+<text x="28" y="667" font-family="Arial,sans-serif" font-size="14" fill="#526976" text-anchor="start" font-weight="400">A signal may violate several conditions. The independent price-grid diagnostic overlaps other checks and is excluded.</text>
+<text x="28" y="702" font-family="Arial,sans-serif" font-size="14" fill="#526976" text-anchor="start" font-weight="400">These are admission outcomes, not a causal estimate of foregone trades or profit. Source: ORBF1.</text>
+</svg>

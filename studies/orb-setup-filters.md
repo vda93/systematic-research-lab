@@ -14,6 +14,10 @@ The working hypothesis is that a confirmed move beyond the opening range can cap
 
 The reference setup uses a **15-minute range starting at 09:30 New York time**, a completed candle to confirm the breakout, and a **1.5R target**. Here, R measures outcome relative to the trade's initial price risk. [ORBF1](../docs/evidence.md#orbf1)
 
+![Illustrative long setup showing the opening range, completed-candle confirmation, entry, stop, and target](../figures/orb-setup-filters-setup.svg)
+
+*Setup schematic, not a historical trade.* The diagram illustrates a long signal without inventing a later price outcome. ATR and the later EMA extension are optional admission filters; they do not change the stop or target rule. [ORBF1](../docs/evidence.md#orbf1)
+
 | Component | Rule |
 | --- | --- |
 | Range | High and low of midpoint quotes, `(Bid + Ask) / 2`, from the cash open; alternatives use 5 or 30 minutes |
@@ -64,6 +68,10 @@ The long-only alternatives turned negative in both later cohorts. The bidirectio
 
 **I later added EMA200 during discovery**, before freezing the later shortlist. To avoid judging it from attractive examples, the summary below includes every matched EMA-off/on pair, holding market, range, direction, and ATR setting fixed. PF is gross winning R divided by the absolute value of gross losing R. [ORBF1](../docs/evidence.md#orbf1)
 
+![Every matched EMA-on minus EMA-off difference in commission-scenario R per common eligible day](../figures/orb-setup-filters-ema.svg)
+
+Each dot shows **EMA on minus off**, using the common discovery calendar. Positive values favor EMA. The chart contains all **24 matched comparisons**, twelve per market, on commission-scenario R per common eligible day. These configurations overlap; the dots are descriptive differences, not independent trials or individual significance estimates. [ORBF1](../docs/evidence.md#orbf1)
+
 | Effect of enabling EMA | US500, 12 pairs | USTEC, 12 pairs |
 | --- | ---: | ---: |
 | PF higher / lower / unchanged at published precision | 5 / 6 / 1 | 11 / 1 / 0 |
@@ -78,6 +86,10 @@ The paired daily-return analysis did not establish an EMA improvement. Across th
 ## Was the remaining positive result convincing?
 
 Under the published-commission assumption, the primary bidirectional ATR setup produced approximately **+5.32R across 114 natural closes**, or **+0.047R per close**, across the two separately initialized later cohorts. A fixed-trade sensitivity shows how little margin remained. [ORBF2](../docs/evidence.md#orbf2)
+
+![Observed closed-trade scenario total as additional hypothetical cost per fill side increases](../figures/orb-setup-filters-cost-sensitivity.svg)
+
+At the released rounding, the line is `adjusted R = 5.319 - 2 × 114 × c = 5.319 - 228c`, where c is the additional R debit per fill side. It crosses zero at approximately **0.0233R per side**. This is arithmetic on the same observed closes from separately initialized cohorts, not a complete-cohort or continuous account return. [ORBF2](../docs/evidence.md#orbf2)
 
 | Additional hypothetical cost per fill side | Combined observed scenario R |
 | --- | ---: |

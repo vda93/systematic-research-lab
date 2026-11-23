@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="700" viewBox="0 0 1120 700" role="img" aria-labelledby="title description">
+<title id="title">How sensitive was the remaining margin to extra cost?</title>
+<desc id="description">Fixed-trade sensitivity for 114 verified natural closes across two separately initialized later US500 cohorts. The released commission-scenario total starts at 5.319 R. An additional hypothetical cost is subtracted once at entry and once at exit.</desc>
+<rect x="0" y="0" width="1120" height="700" rx="0" fill="#FBFCFD"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="26" fill="#182D3A" text-anchor="start" font-weight="700">How sensitive was the remaining margin to extra cost?</text>
+<text x="28" y="71" font-family="Arial,sans-serif" font-size="16" fill="#576A76" text-anchor="start" font-weight="400">US500 | 15m Both + ATR | 114 observed natural closes | EMA off</text>
+<text x="105" y="132" font-family="Arial,sans-serif" font-size="16" fill="#243444" text-anchor="start" font-weight="700">Observed scenario total after extra cost (R)</text>
+<line x1="105" y1="485" x2="1000" y2="485" stroke="#DCE5EA" stroke-width="1"/>
+<text x="88" y="490" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="end" font-weight="400">-8</text>
+<line x1="105" y1="439.286" x2="1000" y2="439.286" stroke="#DCE5EA" stroke-width="1"/>
+<text x="88" y="444.286" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="end" font-weight="400">-6</text>
+<line x1="105" y1="393.571" x2="1000" y2="393.571" stroke="#DCE5EA" stroke-width="1"/>
+<text x="88" y="398.571" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="end" font-weight="400">-4</text>
+<line x1="105" y1="347.857" x2="1000" y2="347.857" stroke="#DCE5EA" stroke-width="1"/>
+<text x="88" y="352.857" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="end" font-weight="400">-2</text>
+<line x1="105" y1="302.143" x2="1000" y2="302.143" stroke="#67808C" stroke-width="1.6"/>
+<text x="88" y="307.143" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="end" font-weight="400">0</text>
+<line x1="105" y1="256.429" x2="1000" y2="256.429" stroke="#DCE5EA" stroke-width="1"/>
+<text x="88" y="261.429" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="end" font-weight="400">+2</text>
+<line x1="105" y1="210.714" x2="1000" y2="210.714" stroke="#DCE5EA" stroke-width="1"/>
+<text x="88" y="215.714" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="end" font-weight="400">+4</text>
+<line x1="105" y1="165" x2="1000" y2="165" stroke="#DCE5EA" stroke-width="1"/>
+<text x="88" y="170" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="end" font-weight="400">+6</text>
+<line x1="105" y1="165" x2="105" y2="485" stroke="#E6ECEF" stroke-width="1"/>
+<text x="105" y="515" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="middle" font-weight="400">0.00</text>
+<line x1="284" y1="165" x2="284" y2="485" stroke="#E6ECEF" stroke-width="1"/>
+<text x="284" y="515" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="middle" font-weight="400">0.01</text>
+<line x1="463" y1="165" x2="463" y2="485" stroke="#E6ECEF" stroke-width="1"/>
+<text x="463" y="515" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="middle" font-weight="400">0.02</text>
+<line x1="642" y1="165" x2="642" y2="485" stroke="#E6ECEF" stroke-width="1"/>
+<text x="642" y="515" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="middle" font-weight="400">0.03</text>
+<line x1="821" y1="165" x2="821" y2="485" stroke="#E6ECEF" stroke-width="1"/>
+<text x="821" y="515" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="middle" font-weight="400">0.04</text>
+<line x1="1000" y1="165" x2="1000" y2="485" stroke="#E6ECEF" stroke-width="1"/>
+<text x="1000" y="515" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="middle" font-weight="400">0.05</text>
+<polyline points="105.000000,180.565714 194.500000,206.622857 284.000000,232.680000 373.500000,258.737143 463.000000,284.794286 552.500000,310.851429 642.000000,336.908571 731.500000,362.965714 821.000000,389.022857 910.500000,415.080000 1000.000000,441.137143" fill="none" stroke="#416C96" stroke-width="3"/>
+<circle cx="105" cy="180.566" r="6" fill="#197B66"/>
+<text x="119" y="164.566" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="700">+5.319R</text>
+<circle cx="552.5" cy="310.851" r="6" fill="#B45C43"/>
+<text x="570.5" y="345.851" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="700">-0.381R</text>
+<circle cx="1000" cy="441.137" r="6" fill="#B45C43"/>
+<text x="986" y="475.137" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="end" font-weight="700">-6.081R</text>
+<circle cx="522.588" cy="302.143" r="6" fill="#182D3A"/>
+<line x1="522.588" y1="191" x2="522.588" y2="290.143" stroke="#8096A3" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="537.588" y="168" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">Break-even extra cost</text>
+<text x="537.588" y="192" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">about 0.0233R per side</text>
+<text x="552.5" y="550" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="middle" font-weight="700">Additional hypothetical cost per fill side (R)</text>
+<text x="28" y="591" font-family="Arial,sans-serif" font-size="17" fill="#416C96" text-anchor="start" font-weight="700">Fixed-trade arithmetic: R(c) = 5.319 - 2 x 114 x c</text>
+<text x="28" y="625" font-family="Arial,sans-serif" font-size="14" fill="#526976" text-anchor="start" font-weight="400">Same observed trades and fills; two fill-side debits per close. This is not measured slippage; financing remains extra.</text>
+<text x="28" y="651" font-family="Arial,sans-serif" font-size="14" fill="#526976" text-anchor="start" font-weight="400">Rounded released totals across separately initialized cohorts, not a continuous equity curve or complete-cohort return.</text>
+<text x="28" y="677" font-family="Arial,sans-serif" font-size="14" fill="#526976" text-anchor="start" font-weight="400">Quoted spread and the published-commission assumption are already in the starting total. Source: ORBF2.</text>
+</svg>

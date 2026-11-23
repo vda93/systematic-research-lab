@@ -11,7 +11,8 @@ import xml.etree.ElementTree as ET
 from scripts.render_orb_setup_filters import (
     SELECTED_LABELS, build, comparison_values, factorial_index, later_index,
     ema_pair_summary, primary_fixed_trade_costs,
-    render_comparison, render_factorial, render_oos,
+    ema_pair_deltas, primary_cost_curve, signal_admission_counts,
+    render_comparison, render_factorial, render_oos, render_setup,
 )
 
 
@@ -97,7 +98,9 @@ class PublicOrbSetupFilterStudyTests(unittest.TestCase):
         artifacts = build(self.data)
         self.assertEqual(set(artifacts), {
             "orb-setup-filters-factorial.svg", "orb-setup-filters-oos.svg",
-            "orb-setup-filters-comparison.svg",
+            "orb-setup-filters-comparison.svg", "orb-setup-filters-setup.svg",
+            "orb-setup-filters-ema.svg", "orb-setup-filters-cost-sensitivity.svg",
+            "orb-setup-filters-admission.svg",
         })
         for name, svg in artifacts.items():
             with self.subTest(name=name):
@@ -152,6 +155,66 @@ class PublicOrbSetupFilterStudyTests(unittest.TestCase):
         self.assertEqual([row["extra_round_trip_cost_R"] for row in result["scenarios"]], [0, 5.7, 11.4])
         self.assertEqual([row["closed_trade_scenario_R_after_extra_cost"] for row in result["scenarios"]],
                          [5.319, -0.381, -6.081])
+
+    def test_ema_deltas_match_complete_surface_on_common_day_basis(self) -> None:
+        pairs = ema_pair_deltas(self.data)
+        self.assertEqual({market: len(rows) for market, rows in pairs.items()},
+                         {"US500": 12, "USTEC": 12})
+        for market, rows in pairs.items():
+            self.assertEqual(len({row["off_id"] for row in rows}), 12)
+            self.assertTrue(all(row["off_id"].startswith(market) for row in rows))
+        tiny = next(row for row in pairs["USTEC"] if row["off_id"] == "USTEC_OR30_LS_A1_E0")
+        self.assertEqual(tiny["delta"], 0.00001)
+        data = deepcopy(self.data)
+        on = next(row for row in data["factorial_cells"] if row["id"] == "US500_OR05_L_A0_E1")
+        on["commission_scenario_R_per_eligible_day"] = 1000.0
+        self.assertEqual(ema_pair_deltas(data), pairs)
+        on["commission_scenario_R_per_common_day"] += 0.01
+        self.assertAlmostEqual(ema_pair_deltas(data)["US500"][0]["delta"], pairs["US500"][0]["delta"] + 0.01)
+        on["commission_scenario_R_per_common_day"] = float("nan")
+        with self.assertRaises(ValueError):
+            ema_pair_deltas(data)
+
+    def test_cost_curve_uses_exact_break_even_and_rounded_released_totals(self) -> None:
+        curve = primary_cost_curve(self.data)
+        self.assertEqual(curve["natural_closes"], 114)
+        self.assertAlmostEqual(curve["break_even_R_per_fill_side"], 5.319 / 228, places=15)
+        self.assertEqual(curve["points"][0], (0.0, 5.319))
+        self.assertEqual(curve["points"][5], (0.025, -0.381))
+        self.assertEqual(curve["points"][-1], (0.05, -6.081))
+        data = deepcopy(self.data)
+        primary_b = next(row for row in data["later_us500"]["results"]
+                         if row["id"] == curve["id"] and row["cohort"] == "B")
+        primary_b["closed_trade_published_commission_scenario_R"] += 1
+        changed = primary_cost_curve(data)
+        self.assertEqual(changed["points"][0], (0.0, 6.319))
+        self.assertAlmostEqual(changed["break_even_R_per_fill_side"], 6.319 / 228, places=15)
+
+    def test_signal_final_statuses_reconcile_without_overlapping_diagnostic(self) -> None:
+        rows = signal_admission_counts(self.data)
+        self.assertEqual(sum(count for _, _, count in rows), 1890)
+        self.assertEqual({key: count for key, _, count in rows}["FILLED"], 377)
+        self.assertEqual({key: count for key, _, count in rows}["PRICE_OFF_GRID"], 715)
+        data = deepcopy(self.data)
+        admission = data["study_design"]["primary_signal_admission"]
+        admission["independent_grid_diagnostic_count"] = 99999
+        self.assertEqual(signal_admission_counts(data), rows)
+        admission["status_counts"]["ATR_FILTER"] += 1
+        with self.assertRaises(ValueError):
+            signal_admission_counts(data)
+
+    def test_setup_schematic_parameters_follow_the_published_rules(self) -> None:
+        data = deepcopy(self.data)
+        data["study_design"]["take_profit_R"] = 2.0
+        data["study_design"]["ema"]["period"] = 100
+        data["study_design"]["opening_range_anchor"] = "08:30 America/New_York"
+        data["source_evidence"]["factorial"]["source_id"] = "TEST_RULES"
+        svg = render_setup(data)
+        self.assertIn("2R target", svg)
+        self.assertIn("EMA100", svg)
+        self.assertIn("08:30", svg)
+        self.assertIn("08:45", svg)
+        self.assertIn("TEST_RULES", svg)
 
     def test_figures_follow_period_coverage_and_source_metadata(self) -> None:
         data = deepcopy(self.data)
