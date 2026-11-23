@@ -6,7 +6,7 @@ The site has two layers: concise public reading editions and complete technical 
 
 Edit the study's presentation copy and keep the summary limited to the question, the actual decision, the evidence and the most consequential uncertainty. Numeric facts are bound to registered paragraphs of the complete studies. The renderer refuses unbound numeric claims or figures without matching source IDs.
 
-The ORB setup and filter study also links to a [technical appendix](../studies/orb-setup-filters-appendix.md) for implementation details, missing-data conventions, and statistical limits. Its reading edition keeps the setup, matched-period comparison, EMA uncertainty, and research decision visible.
+The ORB setup and filter study also links to a [technical appendix](../studies/orb-setup-filters-appendix.md) for implementation details, missing-data conventions, and statistical limits. Its reading edition shows the illustrative setup, matched-period results, complete EMA comparison, and fixed-trade cost sensitivity. The recorded signal-admission breakdown stays in the appendix. Preserve each figure's denominator and limits: the setup is schematic, EMA pairs overlap, and the cost curve holds the observed closes fixed.
 
 The original ORBINDEX figures, tables and technical classifications remain in its complete record. The public page should explain potential prior exposure of the later period in ordinary language, not print internal status flags.
 

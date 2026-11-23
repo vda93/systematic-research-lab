@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760" role="img" aria-labelledby="title description">
+<title id="title">The opening-range breakout setup</title>
+<desc id="description">Illustrative long-entry rule schematic, not historical prices. The prior completed close is inside the opening range, the signal close is above it, and entry uses the next eligible Ask quote. Stop and target levels are shown without any post-entry price outcome.</desc>
+<rect x="0" y="0" width="1120" height="760" rx="0" fill="#FBFCFD"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="26" fill="#182D3A" text-anchor="start" font-weight="700">The opening-range breakout setup</text>
+<text x="28" y="71" font-family="Arial,sans-serif" font-size="16" fill="#576A76" text-anchor="start" font-weight="400">Long example | 15-minute range | New York time | Illustrative geometry, not historical prices</text>
+<rect x="100" y="396" width="220" height="64" rx="4" fill="#E1EBF2"/>
+<text x="130" y="435" font-family="Arial,sans-serif" font-size="17" fill="#416C96" text-anchor="start" font-weight="700">Opening range</text>
+<line x1="100" y1="396" x2="895" y2="396" stroke="#8BA5B7" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="100" y1="460" x2="895" y2="460" stroke="#B45C43" stroke-width="2"/>
+<line x1="650" y1="370" x2="895" y2="370" stroke="#416C96" stroke-width="2"/>
+<line x1="650" y1="235" x2="895" y2="235" stroke="#197B66" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="916" y="241" font-family="Arial,sans-serif" font-size="19" fill="#197B66" text-anchor="start" font-weight="700">1.5R target</text>
+<text x="916" y="375" font-family="Arial,sans-serif" font-size="18" fill="#416C96" text-anchor="start" font-weight="700">Entry at Ask</text>
+<text x="916" y="417" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="start" font-weight="400">Range high</text>
+<text x="916" y="465" font-family="Arial,sans-serif" font-size="18" fill="#B45C43" text-anchor="start" font-weight="700">Stop: range low</text>
+<line x1="850" y1="235" x2="850" y2="370" stroke="#197B66" stroke-width="1.5"/>
+<line x1="842" y1="235" x2="858" y2="235" stroke="#197B66" stroke-width="1.5"/>
+<line x1="842" y1="370" x2="858" y2="370" stroke="#197B66" stroke-width="1.5"/>
+<text x="865" y="307.5" font-family="Arial,sans-serif" font-size="16" fill="#197B66" text-anchor="start" font-weight="700">1.5R</text>
+<line x1="850" y1="370" x2="850" y2="460" stroke="#B45C43" stroke-width="1.5"/>
+<line x1="842" y1="460" x2="858" y2="460" stroke="#B45C43" stroke-width="1.5"/>
+<text x="865" y="421" font-family="Arial,sans-serif" font-size="16" fill="#B45C43" text-anchor="start" font-weight="700">1R</text>
+<circle cx="320" cy="426" r="7" fill="#416C96"/>
+<circle cx="490" cy="382" r="7" fill="#416C96"/>
+<circle cx="650" cy="370" r="7" fill="#182D3A"/>
+<text x="105" y="275" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">Previous completed</text>
+<text x="105" y="300" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">M15 close inside</text>
+<line x1="264" y1="312" x2="314" y2="416" stroke="#8BA5B7" stroke-width="1.5"/>
+<text x="395" y="155" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">Completed M15 close</text>
+<text x="395" y="180" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">above the range</text>
+<line x1="492" y1="193" x2="492" y2="369" stroke="#8BA5B7" stroke-width="1.5"/>
+<text x="602" y="303" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">Next eligible quote</text>
+<line x1="651" y1="316" x2="651" y2="357" stroke="#8BA5B7" stroke-width="1.5"/>
+<line x1="100" y1="500" x2="795" y2="500" stroke="#8096A3" stroke-width="1.5"/>
+<line x1="100" y1="494" x2="100" y2="506" stroke="#8096A3" stroke-width="1.5"/>
+<text x="100" y="531" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="middle" font-weight="700">09:30</text>
+<line x1="320" y1="494" x2="320" y2="506" stroke="#8096A3" stroke-width="1.5"/>
+<text x="320" y="531" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="middle" font-weight="700">09:45</text>
+<line x1="490" y1="494" x2="490" y2="506" stroke="#8096A3" stroke-width="1.5"/>
+<text x="490" y="531" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="middle" font-weight="700">10:00</text>
+<line x1="650" y1="494" x2="650" y2="506" stroke="#8096A3" stroke-width="1.5"/>
+<text x="650" y="531" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="middle" font-weight="700">Next quote</text>
+<rect x="28" y="564" width="515" height="118" rx="8" fill="#EDF3F7"/>
+<rect x="562" y="564" width="530" height="118" rx="8" fill="#EDF3F7"/>
+<text x="48" y="596" font-family="Arial,sans-serif" font-size="19" fill="#243444" text-anchor="start" font-weight="700">Optional volatility filter</text>
+<text x="48" y="624" font-family="Arial,sans-serif" font-size="17" fill="#416C96" text-anchor="start" font-weight="400">Range width / ATR(1344): 1.25 to 3</text>
+<text x="48" y="651" font-family="Arial,sans-serif" font-size="16" fill="#576A76" text-anchor="start" font-weight="400">Requires a suitably sized opening range.</text>
+<text x="582" y="596" font-family="Arial,sans-serif" font-size="19" fill="#243444" text-anchor="start" font-weight="700">EMA200: later discovery addition</text>
+<text x="582" y="624" font-family="Arial,sans-serif" font-size="17" fill="#416C96" text-anchor="start" font-weight="400">Long close above EMA; short close below it.</text>
+<text x="582" y="651" font-family="Arial,sans-serif" font-size="16" fill="#576A76" text-anchor="start" font-weight="400">Optional filter; equality rejects the signal.</text>
+<text x="28" y="713" font-family="Arial,sans-serif" font-size="14" fill="#526976" text-anchor="start" font-weight="400">Initial price risk is measured from actual entry to the stop. Long exits use Bid; off-grid stop/target prices reject entry.</text>
+<text x="28" y="739" font-family="Arial,sans-serif" font-size="14" fill="#526976" text-anchor="start" font-weight="400">No post-entry outcome is illustrated. Indicators use all available completed CFD M15 bars. Source: ORBF1.</text>
+</svg>

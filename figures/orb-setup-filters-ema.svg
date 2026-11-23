@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="790" viewBox="0 0 1120 790" role="img" aria-labelledby="title description">
+<title id="title">What adding EMA changed across every matched pair</title>
+<desc id="description">All twenty-four EMA-on minus EMA-off discovery differences in commission-scenario R per common eligible day, holding range, direction and ATR fixed. Both markets use the same scale.</desc>
+<rect x="0" y="0" width="1120" height="790" rx="0" fill="#FBFCFD"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="26" fill="#182D3A" text-anchor="start" font-weight="700">What adding EMA changed across every matched pair</text>
+<text x="28" y="71" font-family="Arial,sans-serif" font-size="16" fill="#576A76" text-anchor="start" font-weight="400">EMA on minus off | Commission-scenario R per common eligible day | Same scale in both markets</text>
+<rect x="20" y="322" width="1080" height="156" rx="4" fill="#F0F4F7"/>
+<text x="30" y="141" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="start" font-weight="700">Range</text>
+<text x="110" y="141" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="start" font-weight="700">Direction</text>
+<text x="230" y="141" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="start" font-weight="700">ATR</text>
+<text x="497.5" y="124" font-family="Arial,sans-serif" font-size="21" fill="#243444" text-anchor="middle" font-weight="700">US500</text>
+<text x="687.5" y="148" font-family="Arial,sans-serif" font-size="13" fill="#576A76" text-anchor="end" font-weight="400">Change</text>
+<line x1="387.5" y1="167" x2="387.5" y2="641" stroke="#DCE5EA" stroke-width="1"/>
+<text x="387.5" y="671" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="middle" font-weight="400">-0.020</text>
+<line x1="442.5" y1="167" x2="442.5" y2="641" stroke="#DCE5EA" stroke-width="1"/>
+<text x="442.5" y="671" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="middle" font-weight="400">-0.010</text>
+<line x1="497.5" y1="167" x2="497.5" y2="641" stroke="#67808C" stroke-width="1.6"/>
+<text x="497.5" y="671" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="middle" font-weight="400">0</text>
+<line x1="552.5" y1="167" x2="552.5" y2="641" stroke="#DCE5EA" stroke-width="1"/>
+<text x="552.5" y="671" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="middle" font-weight="400">+0.010</text>
+<line x1="607.5" y1="167" x2="607.5" y2="641" stroke="#DCE5EA" stroke-width="1"/>
+<text x="607.5" y="671" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="middle" font-weight="400">+0.020</text>
+<text x="897.5" y="124" font-family="Arial,sans-serif" font-size="21" fill="#243444" text-anchor="middle" font-weight="700">USTEC</text>
+<text x="1087.5" y="148" font-family="Arial,sans-serif" font-size="13" fill="#576A76" text-anchor="end" font-weight="400">Change</text>
+<line x1="787.5" y1="167" x2="787.5" y2="641" stroke="#DCE5EA" stroke-width="1"/>
+<text x="787.5" y="671" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="middle" font-weight="400">-0.020</text>
+<line x1="842.5" y1="167" x2="842.5" y2="641" stroke="#DCE5EA" stroke-width="1"/>
+<text x="842.5" y="671" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="middle" font-weight="400">-0.010</text>
+<line x1="897.5" y1="167" x2="897.5" y2="641" stroke="#67808C" stroke-width="1.6"/>
+<text x="897.5" y="671" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="middle" font-weight="400">0</text>
+<line x1="952.5" y1="167" x2="952.5" y2="641" stroke="#DCE5EA" stroke-width="1"/>
+<text x="952.5" y="671" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="middle" font-weight="400">+0.010</text>
+<line x1="1007.5" y1="167" x2="1007.5" y2="641" stroke="#DCE5EA" stroke-width="1"/>
+<text x="1007.5" y="671" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="middle" font-weight="400">+0.020</text>
+<text x="30" y="191" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">5m</text>
+<text x="110" y="191" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Long</text>
+<text x="230" y="191" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Off</text>
+<line x1="497.5" y1="186" x2="412.47" y2="186" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="412.47" cy="186" r="5.5" fill="#B45C43"/>
+<text x="687.5" y="191" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.01546</text>
+<line x1="897.5" y1="186" x2="921.59" y2="186" stroke="#197B66" stroke-width="2.5"/>
+<circle cx="921.59" cy="186" r="5.5" fill="#197B66"/>
+<text x="1087.5" y="191" font-family="Arial,sans-serif" font-size="15" fill="#197B66" text-anchor="end" font-weight="700">+0.00438</text>
+<text x="30" y="230" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">5m</text>
+<text x="110" y="230" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Long</text>
+<text x="230" y="230" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">On</text>
+<line x1="497.5" y1="225" x2="457.79" y2="225" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="457.79" cy="225" r="5.5" fill="#B45C43"/>
+<text x="687.5" y="230" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00722</text>
+<line x1="897.5" y1="225" x2="907.84" y2="225" stroke="#197B66" stroke-width="2.5"/>
+<circle cx="907.84" cy="225" r="5.5" fill="#197B66"/>
+<text x="1087.5" y="230" font-family="Arial,sans-serif" font-size="15" fill="#197B66" text-anchor="end" font-weight="700">+0.00188</text>
+<text x="30" y="269" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">5m</text>
+<text x="110" y="269" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Both</text>
+<text x="230" y="269" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Off</text>
+<line x1="497.5" y1="264" x2="509.6" y2="264" stroke="#197B66" stroke-width="2.5"/>
+<circle cx="509.6" cy="264" r="5.5" fill="#197B66"/>
+<text x="687.5" y="269" font-family="Arial,sans-serif" font-size="15" fill="#197B66" text-anchor="end" font-weight="700">+0.00220</text>
+<line x1="897.5" y1="264" x2="1010.2" y2="264" stroke="#197B66" stroke-width="2.5"/>
+<circle cx="1010.2" cy="264" r="5.5" fill="#197B66"/>
+<text x="1087.5" y="269" font-family="Arial,sans-serif" font-size="15" fill="#197B66" text-anchor="end" font-weight="700">+0.02049</text>
+<text x="30" y="308" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">5m</text>
+<text x="110" y="308" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Both</text>
+<text x="230" y="308" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">On</text>
+<line x1="497.5" y1="303" x2="480.725" y2="303" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="480.725" cy="303" r="5.5" fill="#B45C43"/>
+<text x="687.5" y="308" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00305</text>
+<line x1="897.5" y1="303" x2="962.18" y2="303" stroke="#197B66" stroke-width="2.5"/>
+<circle cx="962.18" cy="303" r="5.5" fill="#197B66"/>
+<text x="1087.5" y="308" font-family="Arial,sans-serif" font-size="15" fill="#197B66" text-anchor="end" font-weight="700">+0.01176</text>
+<text x="30" y="347" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">15m</text>
+<text x="110" y="347" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Long</text>
+<text x="230" y="347" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Off</text>
+<line x1="497.5" y1="342" x2="459.935" y2="342" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="459.935" cy="342" r="5.5" fill="#B45C43"/>
+<text x="687.5" y="347" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00683</text>
+<line x1="897.5" y1="342" x2="881.385" y2="342" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="881.385" cy="342" r="5.5" fill="#B45C43"/>
+<text x="1087.5" y="347" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00293</text>
+<text x="30" y="386" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">15m</text>
+<text x="110" y="386" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Long</text>
+<text x="230" y="386" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">On</text>
+<line x1="497.5" y1="381" x2="470.825" y2="381" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="470.825" cy="381" r="5.5" fill="#B45C43"/>
+<text x="687.5" y="386" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00485</text>
+<line x1="897.5" y1="381" x2="874.015" y2="381" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="874.015" cy="381" r="5.5" fill="#B45C43"/>
+<text x="1087.5" y="386" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00427</text>
+<text x="30" y="425" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">15m</text>
+<text x="110" y="425" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Both</text>
+<text x="230" y="425" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Off</text>
+<line x1="497.5" y1="420" x2="503.495" y2="420" stroke="#197B66" stroke-width="2.5"/>
+<circle cx="503.495" cy="420" r="5.5" fill="#197B66"/>
+<text x="687.5" y="425" font-family="Arial,sans-serif" font-size="15" fill="#197B66" text-anchor="end" font-weight="700">+0.00109</text>
+<line x1="897.5" y1="420" x2="883.86" y2="420" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="883.86" cy="420" r="5.5" fill="#B45C43"/>
+<text x="1087.5" y="425" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00248</text>
+<text x="30" y="464" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">15m</text>
+<text x="110" y="464" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Both</text>
+<text x="230" y="464" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">On</text>
+<line x1="497.5" y1="459" x2="461.805" y2="459" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="461.805" cy="459" r="5.5" fill="#B45C43"/>
+<text x="687.5" y="464" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00649</text>
+<line x1="897.5" y1="459" x2="883.97" y2="459" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="883.97" cy="459" r="5.5" fill="#B45C43"/>
+<text x="1087.5" y="464" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00246</text>
+<text x="30" y="503" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">30m</text>
+<text x="110" y="503" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Long</text>
+<text x="230" y="503" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Off</text>
+<line x1="497.5" y1="498" x2="469.12" y2="498" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="469.12" cy="498" r="5.5" fill="#B45C43"/>
+<text x="687.5" y="503" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00516</text>
+<line x1="897.5" y1="498" x2="891.725" y2="498" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="891.725" cy="498" r="5.5" fill="#B45C43"/>
+<text x="1087.5" y="503" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00105</text>
+<text x="30" y="542" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">30m</text>
+<text x="110" y="542" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Long</text>
+<text x="230" y="542" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">On</text>
+<line x1="497.5" y1="537" x2="475.83" y2="537" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="475.83" cy="537" r="5.5" fill="#B45C43"/>
+<text x="687.5" y="542" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00394</text>
+<line x1="897.5" y1="537" x2="900.03" y2="537" stroke="#197B66" stroke-width="2.5"/>
+<circle cx="900.03" cy="537" r="5.5" fill="#197B66"/>
+<text x="1087.5" y="542" font-family="Arial,sans-serif" font-size="15" fill="#197B66" text-anchor="end" font-weight="700">+0.00046</text>
+<text x="30" y="581" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">30m</text>
+<text x="110" y="581" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Both</text>
+<text x="230" y="581" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Off</text>
+<line x1="497.5" y1="576" x2="457.24" y2="576" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="457.24" cy="576" r="5.5" fill="#B45C43"/>
+<text x="687.5" y="581" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00732</text>
+<line x1="897.5" y1="576" x2="884.19" y2="576" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="884.19" cy="576" r="5.5" fill="#B45C43"/>
+<text x="1087.5" y="581" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00242</text>
+<text x="30" y="620" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="700">30m</text>
+<text x="110" y="620" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">Both</text>
+<text x="230" y="620" font-family="Arial,sans-serif" font-size="17" fill="#243444" text-anchor="start" font-weight="400">On</text>
+<line x1="497.5" y1="615" x2="458.12" y2="615" stroke="#B45C43" stroke-width="2.5"/>
+<circle cx="458.12" cy="615" r="5.5" fill="#B45C43"/>
+<text x="687.5" y="620" font-family="Arial,sans-serif" font-size="15" fill="#B45C43" text-anchor="end" font-weight="700">-0.00716</text>
+<line x1="897.5" y1="615" x2="897.555" y2="615" stroke="#197B66" stroke-width="2.5"/>
+<circle cx="897.555" cy="615" r="5.5" fill="#197B66"/>
+<text x="1087.5" y="620" font-family="Arial,sans-serif" font-size="15" fill="#197B66" text-anchor="end" font-weight="700">+0.00001</text>
+<text x="28" y="714" font-family="Arial,sans-serif" font-size="14" fill="#526976" text-anchor="start" font-weight="400">Positive values favor EMA on. Range, direction and ATR stay fixed within each pair; configurations overlap.</text>
+<text x="28" y="740" font-family="Arial,sans-serif" font-size="14" fill="#526976" text-anchor="start" font-weight="400">These are descriptive differences at released precision, not confidence intervals or independent trials.</text>
+<text x="28" y="766" font-family="Arial,sans-serif" font-size="14" fill="#526976" text-anchor="start" font-weight="400">Discovery only; this chart does not establish an out-of-sample improvement. Source: ORBF1.</text>
+</svg>
