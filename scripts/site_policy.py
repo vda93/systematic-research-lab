@@ -22,6 +22,7 @@ SOCIAL_IMAGE_FILE = 'docs/social-preview.png'
 PLOT_HASHES = {
     'docs/plots/orb-setup-filters-comparison.svg': '3224f2f1854558fb270f8a7918fe1c3a6a887c4fb6462d6504e67d0c827fa328',
     'docs/plots/orb-setup-filters-setup.svg': 'c8870abf3ba6e9791b5a1ebf60bbcada92b66da45a91ef736163ad255db9bc10',
+    'docs/plots/orb-setup-filters-setup-candles.svg': '4296ced159263fb4e3adab629531dfbaff5c4a6da38db8875af59132cb8498af',
     'docs/plots/orb-setup-filters-ema.svg': 'd85f9146591c0425fc3dc8d13cd47232f785fb5332c6355f3d6ad60b48e9c32e',
     'docs/plots/orb-setup-filters-cost-sensitivity.svg': '2c237916d42469d50c0373920c53ac6ff5367fbaf66fb9004b136735b5650ee3',
     'docs/plots/orbindex-curves.svg': 'ba936bf42ac818587c19e386a1839b2d1633224b663fd854792be2861b5ccd75',

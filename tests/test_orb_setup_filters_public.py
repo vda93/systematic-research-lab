@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from copy import deepcopy
+from datetime import datetime, timedelta
 import json
 from pathlib import Path
 import unittest
@@ -13,6 +14,7 @@ from scripts.render_orb_setup_filters import (
     ema_pair_summary, primary_fixed_trade_costs,
     ema_pair_deltas, primary_cost_curve, signal_admission_counts,
     render_comparison, render_factorial, render_oos, render_setup,
+    setup_candle_fixture, render_setup_candles,
 )
 
 
@@ -100,7 +102,7 @@ class PublicOrbSetupFilterStudyTests(unittest.TestCase):
             "orb-setup-filters-factorial.svg", "orb-setup-filters-oos.svg",
             "orb-setup-filters-comparison.svg", "orb-setup-filters-setup.svg",
             "orb-setup-filters-ema.svg", "orb-setup-filters-cost-sensitivity.svg",
-            "orb-setup-filters-admission.svg",
+            "orb-setup-filters-admission.svg", "orb-setup-filters-setup-candles.svg",
         })
         for name, svg in artifacts.items():
             with self.subTest(name=name):
@@ -215,6 +217,63 @@ class PublicOrbSetupFilterStudyTests(unittest.TestCase):
         self.assertIn("08:30", svg)
         self.assertIn("08:45", svg)
         self.assertIn("TEST_RULES", svg)
+
+    def test_candles_preserve_interval_confirmation_and_ohlc_semantics(self) -> None:
+        fixture = setup_candle_fixture(self.data)
+        candles = fixture["candles"]
+        self.assertEqual(fixture["classification"], "SYNTHETIC_RULE_ILLUSTRATION")
+        for index, row in enumerate(candles):
+            start, end = (datetime.strptime(row[key], "%H:%M") for key in ("start", "end"))
+            self.assertEqual(end - start, timedelta(minutes=15))
+            self.assertLessEqual(row["low"], min(row["open"], row["close"]))
+            self.assertGreaterEqual(row["high"], max(row["open"], row["close"]))
+            if index:
+                self.assertEqual(row["start"], candles[index - 1]["end"])
+                self.assertEqual(row["open"], candles[index - 1]["close"])
+        opening, signal = candles[-2:]
+        self.assertEqual((opening["start"], opening["end"]), ("09:30", "09:45"))
+        self.assertEqual((signal["start"], signal["end"]), ("09:45", "10:00"))
+        self.assertEqual(opening["low"], fixture["range_low"])
+        self.assertEqual(opening["high"], fixture["range_high"])
+        self.assertLessEqual(opening["close"], fixture["range_high"])
+        self.assertGreaterEqual(opening["close"], fixture["range_low"])
+        self.assertGreater(signal["close"], fixture["range_high"])
+        self.assertGreater(fixture["entry_ask"], signal["close"])
+        node = ET.fromstring(render_setup_candles(self.data))
+        groups = node.findall("{http://www.w3.org/2000/svg}g")
+        self.assertEqual(len(groups), len(candles))
+
+    def test_candle_target_geometry_and_ema_include_the_completed_signal(self) -> None:
+        fixture = setup_candle_fixture(self.data)
+        self.assertEqual(fixture["entry_ask"], 101.4)
+        self.assertEqual(fixture["target"], 103.5)
+        self.assertAlmostEqual((fixture["target"] - fixture["entry_ask"]) /
+                               (fixture["entry_ask"] - fixture["range_low"]), 1.5)
+        candles = fixture["candles"]
+        alpha = 2 / (fixture["ema_period"] + 1)
+        # Closed-form EMA weights independently check every incremental update.
+        for index, row in enumerate(candles):
+            expected = fixture["ema_warmup_close"] * (1 - alpha) ** (index + 1)
+            expected += sum(alpha * candles[j]["close"] * (1 - alpha) ** (index - j)
+                            for j in range(index + 1))
+            self.assertAlmostEqual(row["ema"], expected, places=11)
+        self.assertEqual(fixture["ema_warmup_count"], 200)
+        self.assertGreater(candles[-1]["ema"], candles[-2]["ema"])
+        self.assertGreater(candles[-1]["close"], candles[-1]["ema"])
+        node = ET.fromstring(render_setup_candles(self.data))
+        levels = {line.attrib["stroke"]: float(line.attrib["y1"])
+                  for line in node.findall("{http://www.w3.org/2000/svg}line")
+                  if line.attrib.get("stroke-width") == "1.8"}
+        stop_y, entry_y, target_y = (levels[color] for color in ("#B45C43", "#416C96", "#197B66"))
+        self.assertAlmostEqual((entry_y - target_y) / (stop_y - entry_y), 1.5)
+        changed = deepcopy(self.data)
+        changed["study_design"]["take_profit_R"] = 2
+        changed["study_design"]["ema"]["period"] = 100
+        self.assertEqual(setup_candle_fixture(changed)["target"], 104.2)
+        self.assertEqual(setup_candle_fixture(changed)["ema_warmup_count"], 100)
+        changed["study_design"]["first_eligible_confirmation_NY"]["OR15"] = "09:45"
+        with self.assertRaises(ValueError):
+            render_setup_candles(changed)
 
     def test_figures_follow_period_coverage_and_source_metadata(self) -> None:
         data = deepcopy(self.data)

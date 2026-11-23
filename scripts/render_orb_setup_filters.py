@@ -514,6 +514,159 @@ def render_ema(data: dict) -> str:
     return "\n".join(out) + "\n"
 
 
+def setup_candle_fixture(data: dict) -> dict:
+    """Construct explicit synthetic M15 bars for the OR15 rule illustration.
+
+    None of these prices comes from a market record. The EMA is seeded by
+    ``period`` identical synthetic closes, then updated at each displayed close.
+    The fixture stops at confirmation; an Ask quote supplies entry geometry only.
+    """
+    design = data["study_design"]
+    anchor = datetime.strptime(design["opening_range_anchor"].split()[0], "%H:%M")
+    end = anchor + timedelta(minutes=15)
+    confirmation = end + timedelta(minutes=15)
+    if (15 not in design["opening_range_minutes"]
+            or confirmation.strftime("%H:%M") != design["first_eligible_confirmation_NY"]["OR15"]):
+        raise ValueError("The candle illustration requires the declared OR15/M15 confirmation clock")
+    period = design["ema"]["period"]
+    target_R = Decimal(str(design["take_profit_R"]))
+    if type(period) is not int or period <= 0 or not target_R.is_finite() or target_R <= 0:
+        raise ValueError("The illustrated EMA period and target must be positive and finite")
+    # Open, high, low, close. Consecutive bars meet at their open/close boundary.
+    prices = (
+        (100.25, 100.65, 100.10, 100.50),
+        (100.50, 100.75, 100.15, 100.30),
+        (100.30, 100.50, 99.85, 100.05),
+        (100.05, 100.60, 99.95, 100.40),
+        (100.40, 101.00, 100.00, 100.60),
+        (100.60, 101.50, 100.50, 101.30),
+    )
+    candles = []
+    first = anchor - timedelta(minutes=60)
+    ema = Decimal("100.20")
+    alpha = Decimal(2) / Decimal(period + 1)
+    for index, (open_, high, low, close) in enumerate(prices):
+        start = first + timedelta(minutes=15 * index)
+        ema += alpha * (Decimal(str(close)) - ema)
+        candles.append({
+            "start": start.strftime("%H:%M"),
+            "end": (start + timedelta(minutes=15)).strftime("%H:%M"),
+            "open": open_, "high": high, "low": low, "close": close, "ema": float(ema),
+        })
+    stop, entry = Decimal("100.00"), Decimal("101.40")
+    return {
+        "classification": "SYNTHETIC_RULE_ILLUSTRATION",
+        "bar_minutes": 15, "candles": candles, "range_index": 4,
+        "range_high": candles[4]["high"], "range_low": float(stop),
+        "range_start": anchor.strftime("%H:%M"), "range_end": end.strftime("%H:%M"),
+        "confirmation_time": confirmation.strftime("%H:%M"),
+        "ema_period": period, "ema_warmup_count": period, "ema_warmup_close": 100.20,
+        "entry_ask": float(entry), "initial_price_risk": float(entry - stop),
+        "target_R": float(target_R), "target": float(entry + target_R * (entry - stop)),
+    }
+
+
+def render_setup_candles(data: dict) -> str:
+    """Candles explain the tested entry sequence without inventing a trade result."""
+    fixture = setup_candle_fixture(data)
+    candles = fixture["candles"]
+    design = data["study_design"]
+    atr = design["atr"]
+    source = data["source_evidence"]["factorial"]["source_id"]
+    minimum, maximum = 99.5, max(fixture["target"], max(row["high"] for row in candles)) + 0.4
+
+    def price_y(price: float) -> float:
+        return 510 - (price - minimum) / (maximum - minimum) * 330
+
+    range_x, range_w, entry_x, level_end = 420, 80, 680, 900
+    high_y, stop_y = price_y(fixture["range_high"]), price_y(fixture["range_low"])
+    entry_y, target_y = price_y(fixture["entry_ask"]), price_y(fixture["target"])
+    out = chart_start(1120, 760, "Opening-range breakout: the candlestick setup", (
+        "Synthetic fifteen-minute midpoint candles illustrate a long OR15 setup. The shaded "
+        f'{fixture["range_start"]} to {fixture["range_end"]} candle defines the range and closes inside it. '
+        f'The following candle closes above the range at {fixture["confirmation_time"]}. '
+        "Entry uses the next eligible Ask quote, the stop is at the range low, and the target is "
+        f'{fixture["target_R"]:g} times entry-to-stop risk. No later outcome is shown.'))
+    out.extend((
+        text(28, 72, "Long example | Each candle spans 15 minutes | New York time | Synthetic prices", 16, "#576A76"),
+        text(28, 119, "Illustrative price", 14, "#576A76"),
+        text(100, 152, "COMPLETED MIDPOINT CANDLES", 13, "#576A76", weight=700),
+        text(680, 152, "ENTRY AND RISK LEVELS", 13, "#576A76", weight=700),
+        rect(range_x, high_y, range_w, stop_y - high_y, "#E1EBF2"),
+    ))
+    for price in (100, 101, 102, 103):
+        y = price_y(price)
+        if y >= 180:
+            out.extend((line(92, y, 600, y, "#E3EAEE"),
+                        text(78, y + 5, f"{price:.1f}", 13, "#576A76", "end")))
+    out.extend((
+        line(range_x, high_y, 612, high_y, "#799BB5", 1.5, True),
+        line(range_x, stop_y, level_end, stop_y, "#B45C43", 1.8, True),
+        line(entry_x, entry_y, level_end, entry_y, "#416C96", 1.8, True),
+        line(entry_x, target_y, level_end, target_y, "#197B66", 1.8, True),
+    ))
+    for i, row in enumerate(candles):
+        x = 140 + i * 80
+        color = "#197B66" if row["close"] >= row["open"] else "#B45C43"
+        upper, lower = price_y(max(row["open"], row["close"])), price_y(min(row["open"], row["close"]))
+        out.extend((f'<g id="candle-{i}" aria-label="Synthetic M15 candle {row["start"]} to {row["end"]}">',
+                    line(x, price_y(row["high"]), x, price_y(row["low"]), color, 2.2),
+                    rect(x - 16, upper, 32, lower - upper, color, 2), "</g>"))
+    # EMA points are completed-bar values, plotted at the interval end boundary.
+    ema_points = [(100, fixture["ema_warmup_close"])] + [
+        (180 + i * 80, row["ema"]) for i, row in enumerate(candles)]
+    points = " ".join(f"{x:g},{price_y(value):.6f}" for x, value in ema_points)
+    out.append(f'<polyline points="{points}" fill="none" stroke="#8265A6" '
+               'stroke-width="2" stroke-dasharray="7 5"/>')
+    close_y = price_y(candles[-1]["close"])
+    out.extend((
+        line(556, close_y, 580, close_y, "#243444", 1.5), dot(580, close_y, "#243444", 4),
+        dot(entry_x, entry_y, "#416C96", 6),
+        text(915, target_y + 6, f'Target = {fixture["target_R"]:g}R', 19, "#197B66", weight=700),
+        text(915, entry_y + 6, "Entry at Ask", 19, "#416C96", weight=700),
+        text(915, stop_y + 6, "Stop = range low", 18, "#B45C43", weight=700),
+        line(860, target_y, 860, entry_y, "#197B66", 1.6),
+        line(852, target_y, 868, target_y, "#197B66", 1.6),
+        line(852, entry_y, 868, entry_y, "#197B66", 1.6),
+        text(846, (target_y + entry_y) / 2 + 5, f'{fixture["target_R"]:g}R', 17, "#197B66", "end", 700),
+        line(860, entry_y, 860, stop_y, "#B45C43", 1.6),
+        line(852, stop_y, 868, stop_y, "#B45C43", 1.6),
+        text(846, (entry_y + stop_y) / 2 + 5, "1R", 17, "#B45C43", "end", 700),
+        text(280, 250, "Opening range", 18, "#416C96", weight=700),
+        text(280, 276, f'{fixture["range_start"]} to {fixture["range_end"]}', 16, "#576A76"),
+        line(400, 288, 456, high_y - 9, "#8BA5B7", 1.4),
+        text(465, 200, "Confirmation close", 18, "#243444", weight=700),
+        text(465, 226, f'Above range at {fixture["confirmation_time"]}', 16, "#576A76"),
+        line(580, 238, 580, close_y - 12, "#8BA5B7", 1.4),
+        text(650, 304, "Next eligible", 17, "#416C96", weight=700),
+        text(650, 329, "Ask quote", 17, "#416C96"),
+        line(entry_x, 340, entry_x, entry_y - 12, "#8BA5B7", 1.4),
+        text(600, high_y + 19, "Range high", 14, "#576A76"),
+        line(100, 520, 580, 520, "#8096A3", 1.4),
+    ))
+    times = [row["start"] for row in candles] + [candles[-1]["end"]]
+    for i, label in enumerate(times):
+        x = 100 + i * 80
+        out.extend((line(x, 515, x, 526, "#8096A3", 1.4),
+                    text(x, 550, label, 14, "#243444", "middle", 700 if i >= 4 else 400)))
+    out.extend((
+        text(340, 578, "Candle interval boundaries (New York time)", 15, "#576A76", "middle"),
+        text(800, 535, "Entry follows confirmation;", 14, "#576A76", "middle"),
+        text(800, 557, "no later candle is drawn.", 14, "#576A76", "middle"),
+        rect(28, 602, 515, 88, "#EDF3F7", 7),
+        rect(562, 602, 530, 88, "#EDF3F7", 7),
+        text(47, 632, "Optional ATR filter", 18, "#243444", weight=700),
+        text(47, 661, f'Range width / ATR({atr["period"]}): {atr["or_width_over_atr_min"]:g} to {atr["or_width_over_atr_max"]:g}', 16, "#416C96"),
+        line(582, 627, 620, 627, "#8265A6", 2, True),
+        text(633, 633, f'EMA{fixture["ema_period"]}: optional later filter', 18, "#243444", weight=700),
+        text(582, 661, "Long close above EMA; short close below it.", 16, "#8265A6"),
+        text(28, 717, "Synthetic candles and EMA illustrate the rules. Initial price risk runs from the actual Ask entry to the range low.", 14, "#526976"),
+        text(28, 742, f"Long exits use Bid. Off-grid stops or targets reject entry. The target line is a level, not an observed result. Source: {source}.", 13, "#526976"),
+        "</svg>",
+    ))
+    return "\n".join(out) + "\n"
+
+
 def render_cost_sensitivity(data: dict) -> str:
     curve = primary_cost_curve(data)
     source = data["source_evidence"]["later_us500"]["source_id"]
@@ -609,6 +762,7 @@ def build(data: dict) -> dict[str, str]:
         "orb-setup-filters-ema.svg": render_ema(data),
         "orb-setup-filters-cost-sensitivity.svg": render_cost_sensitivity(data),
         "orb-setup-filters-admission.svg": render_admission(data),
+        "orb-setup-filters-setup-candles.svg": render_setup_candles(data),
     }
 
 
