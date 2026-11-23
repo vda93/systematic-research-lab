@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="760" viewBox="0 0 1120 760" role="img" aria-labelledby="title description">
+<title id="title">Opening-range breakout: the candlestick setup</title>
+<desc id="description">Synthetic fifteen-minute midpoint candles illustrate a long OR15 setup. The shaded 09:30 to 09:45 candle defines the range and closes inside it. The following candle closes above the range at 10:00. Entry uses the next eligible Ask quote, the stop is at the range low, and the target is 1.5 times entry-to-stop risk. No later outcome is shown.</desc>
+<rect x="0" y="0" width="1120" height="760" rx="0" fill="#FBFCFD"/>
+<text x="28" y="42" font-family="Arial,sans-serif" font-size="26" fill="#182D3A" text-anchor="start" font-weight="700">Opening-range breakout: the candlestick setup</text>
+<text x="28" y="72" font-family="Arial,sans-serif" font-size="16" fill="#576A76" text-anchor="start" font-weight="400">Long example | Each candle spans 15 minutes | New York time | Synthetic prices</text>
+<text x="28" y="119" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="start" font-weight="400">Illustrative price</text>
+<text x="100" y="152" font-family="Arial,sans-serif" font-size="13" fill="#576A76" text-anchor="start" font-weight="700">COMPLETED MIDPOINT CANDLES</text>
+<text x="680" y="152" font-family="Arial,sans-serif" font-size="13" fill="#576A76" text-anchor="start" font-weight="700">ENTRY AND RISK LEVELS</text>
+<rect x="420" y="397.5" width="80" height="75" rx="0" fill="#E1EBF2"/>
+<line x1="92" y1="472.5" x2="600" y2="472.5" stroke="#E3EAEE" stroke-width="1"/>
+<text x="78" y="477.5" font-family="Arial,sans-serif" font-size="13" fill="#576A76" text-anchor="end" font-weight="400">100.0</text>
+<line x1="92" y1="397.5" x2="600" y2="397.5" stroke="#E3EAEE" stroke-width="1"/>
+<text x="78" y="402.5" font-family="Arial,sans-serif" font-size="13" fill="#576A76" text-anchor="end" font-weight="400">101.0</text>
+<line x1="92" y1="322.5" x2="600" y2="322.5" stroke="#E3EAEE" stroke-width="1"/>
+<text x="78" y="327.5" font-family="Arial,sans-serif" font-size="13" fill="#576A76" text-anchor="end" font-weight="400">102.0</text>
+<line x1="92" y1="247.5" x2="600" y2="247.5" stroke="#E3EAEE" stroke-width="1"/>
+<text x="78" y="252.5" font-family="Arial,sans-serif" font-size="13" fill="#576A76" text-anchor="end" font-weight="400">103.0</text>
+<line x1="420" y1="397.5" x2="612" y2="397.5" stroke="#799BB5" stroke-width="1.5" stroke-dasharray="6 5"/>
+<line x1="420" y1="472.5" x2="900" y2="472.5" stroke="#B45C43" stroke-width="1.8" stroke-dasharray="6 5"/>
+<line x1="680" y1="367.5" x2="900" y2="367.5" stroke="#416C96" stroke-width="1.8" stroke-dasharray="6 5"/>
+<line x1="680" y1="210" x2="900" y2="210" stroke="#197B66" stroke-width="1.8" stroke-dasharray="6 5"/>
+<g id="candle-0" aria-label="Synthetic M15 candle 08:30 to 08:45">
+<line x1="140" y1="423.75" x2="140" y2="465" stroke="#197B66" stroke-width="2.2"/>
+<rect x="124" y="435" width="32" height="18.75" rx="2" fill="#197B66"/>
+</g>
+<g id="candle-1" aria-label="Synthetic M15 candle 08:45 to 09:00">
+<line x1="220" y1="416.25" x2="220" y2="461.25" stroke="#B45C43" stroke-width="2.2"/>
+<rect x="204" y="435" width="32" height="15" rx="2" fill="#B45C43"/>
+</g>
+<g id="candle-2" aria-label="Synthetic M15 candle 09:00 to 09:15">
+<line x1="300" y1="435" x2="300" y2="483.75" stroke="#B45C43" stroke-width="2.2"/>
+<rect x="284" y="450" width="32" height="18.75" rx="2" fill="#B45C43"/>
+</g>
+<g id="candle-3" aria-label="Synthetic M15 candle 09:15 to 09:30">
+<line x1="380" y1="427.5" x2="380" y2="476.25" stroke="#197B66" stroke-width="2.2"/>
+<rect x="364" y="442.5" width="32" height="26.25" rx="2" fill="#197B66"/>
+</g>
+<g id="candle-4" aria-label="Synthetic M15 candle 09:30 to 09:45">
+<line x1="460" y1="397.5" x2="460" y2="472.5" stroke="#197B66" stroke-width="2.2"/>
+<rect x="444" y="427.5" width="32" height="15" rx="2" fill="#197B66"/>
+</g>
+<g id="candle-5" aria-label="Synthetic M15 candle 09:45 to 10:00">
+<line x1="540" y1="360" x2="540" y2="435" stroke="#197B66" stroke-width="2.2"/>
+<rect x="524" y="375" width="32" height="52.5" rx="2" fill="#197B66"/>
+</g>
+<polyline points="100,457.500000 180,457.276119 260,457.203720 340,457.318609 420,457.171160 500,456.875924 580,456.061238" fill="none" stroke="#8265A6" stroke-width="2" stroke-dasharray="7 5"/>
+<line x1="556" y1="375" x2="580" y2="375" stroke="#243444" stroke-width="1.5"/>
+<circle cx="580" cy="375" r="4" fill="#243444"/>
+<circle cx="680" cy="367.5" r="6" fill="#416C96"/>
+<text x="915" y="216" font-family="Arial,sans-serif" font-size="19" fill="#197B66" text-anchor="start" font-weight="700">Target = 1.5R</text>
+<text x="915" y="373.5" font-family="Arial,sans-serif" font-size="19" fill="#416C96" text-anchor="start" font-weight="700">Entry at Ask</text>
+<text x="915" y="478.5" font-family="Arial,sans-serif" font-size="18" fill="#B45C43" text-anchor="start" font-weight="700">Stop = range low</text>
+<line x1="860" y1="210" x2="860" y2="367.5" stroke="#197B66" stroke-width="1.6"/>
+<line x1="852" y1="210" x2="868" y2="210" stroke="#197B66" stroke-width="1.6"/>
+<line x1="852" y1="367.5" x2="868" y2="367.5" stroke="#197B66" stroke-width="1.6"/>
+<text x="846" y="293.75" font-family="Arial,sans-serif" font-size="17" fill="#197B66" text-anchor="end" font-weight="700">1.5R</text>
+<line x1="860" y1="367.5" x2="860" y2="472.5" stroke="#B45C43" stroke-width="1.6"/>
+<line x1="852" y1="472.5" x2="868" y2="472.5" stroke="#B45C43" stroke-width="1.6"/>
+<text x="846" y="425" font-family="Arial,sans-serif" font-size="17" fill="#B45C43" text-anchor="end" font-weight="700">1R</text>
+<text x="280" y="250" font-family="Arial,sans-serif" font-size="18" fill="#416C96" text-anchor="start" font-weight="700">Opening range</text>
+<text x="280" y="276" font-family="Arial,sans-serif" font-size="16" fill="#576A76" text-anchor="start" font-weight="400">09:30 to 09:45</text>
+<line x1="400" y1="288" x2="456" y2="388.5" stroke="#8BA5B7" stroke-width="1.4"/>
+<text x="465" y="200" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="700">Confirmation close</text>
+<text x="465" y="226" font-family="Arial,sans-serif" font-size="16" fill="#576A76" text-anchor="start" font-weight="400">Above range at 10:00</text>
+<line x1="580" y1="238" x2="580" y2="363" stroke="#8BA5B7" stroke-width="1.4"/>
+<text x="650" y="304" font-family="Arial,sans-serif" font-size="17" fill="#416C96" text-anchor="start" font-weight="700">Next eligible</text>
+<text x="650" y="329" font-family="Arial,sans-serif" font-size="17" fill="#416C96" text-anchor="start" font-weight="400">Ask quote</text>
+<line x1="680" y1="340" x2="680" y2="355.5" stroke="#8BA5B7" stroke-width="1.4"/>
+<text x="600" y="416.5" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="start" font-weight="400">Range high</text>
+<line x1="100" y1="520" x2="580" y2="520" stroke="#8096A3" stroke-width="1.4"/>
+<line x1="100" y1="515" x2="100" y2="526" stroke="#8096A3" stroke-width="1.4"/>
+<text x="100" y="550" font-family="Arial,sans-serif" font-size="14" fill="#243444" text-anchor="middle" font-weight="400">08:30</text>
+<line x1="180" y1="515" x2="180" y2="526" stroke="#8096A3" stroke-width="1.4"/>
+<text x="180" y="550" font-family="Arial,sans-serif" font-size="14" fill="#243444" text-anchor="middle" font-weight="400">08:45</text>
+<line x1="260" y1="515" x2="260" y2="526" stroke="#8096A3" stroke-width="1.4"/>
+<text x="260" y="550" font-family="Arial,sans-serif" font-size="14" fill="#243444" text-anchor="middle" font-weight="400">09:00</text>
+<line x1="340" y1="515" x2="340" y2="526" stroke="#8096A3" stroke-width="1.4"/>
+<text x="340" y="550" font-family="Arial,sans-serif" font-size="14" fill="#243444" text-anchor="middle" font-weight="400">09:15</text>
+<line x1="420" y1="515" x2="420" y2="526" stroke="#8096A3" stroke-width="1.4"/>
+<text x="420" y="550" font-family="Arial,sans-serif" font-size="14" fill="#243444" text-anchor="middle" font-weight="700">09:30</text>
+<line x1="500" y1="515" x2="500" y2="526" stroke="#8096A3" stroke-width="1.4"/>
+<text x="500" y="550" font-family="Arial,sans-serif" font-size="14" fill="#243444" text-anchor="middle" font-weight="700">09:45</text>
+<line x1="580" y1="515" x2="580" y2="526" stroke="#8096A3" stroke-width="1.4"/>
+<text x="580" y="550" font-family="Arial,sans-serif" font-size="14" fill="#243444" text-anchor="middle" font-weight="700">10:00</text>
+<text x="340" y="578" font-family="Arial,sans-serif" font-size="15" fill="#576A76" text-anchor="middle" font-weight="400">Candle interval boundaries (New York time)</text>
+<text x="800" y="535" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="middle" font-weight="400">Entry follows confirmation;</text>
+<text x="800" y="557" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="middle" font-weight="400">no later candle is drawn.</text>
+<rect x="28" y="602" width="515" height="88" rx="7" fill="#EDF3F7"/>
+<rect x="562" y="602" width="530" height="88" rx="7" fill="#EDF3F7"/>
+<text x="47" y="632" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="700">Optional ATR filter</text>
+<text x="47" y="661" font-family="Arial,sans-serif" font-size="16" fill="#416C96" text-anchor="start" font-weight="400">Range width / ATR(1344): 1.25 to 3</text>
+<line x1="582" y1="627" x2="620" y2="627" stroke="#8265A6" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="633" y="633" font-family="Arial,sans-serif" font-size="18" fill="#243444" text-anchor="start" font-weight="700">EMA200: optional later filter</text>
+<text x="582" y="661" font-family="Arial,sans-serif" font-size="16" fill="#8265A6" text-anchor="start" font-weight="400">Long close above EMA; short close below it.</text>
+<text x="28" y="717" font-family="Arial,sans-serif" font-size="14" fill="#526976" text-anchor="start" font-weight="400">Synthetic candles and EMA illustrate the rules. Initial price risk runs from the actual Ask entry to the range low.</text>
+<text x="28" y="742" font-family="Arial,sans-serif" font-size="13" fill="#526976" text-anchor="start" font-weight="400">Long exits use Bid. Off-grid stops or targets reject entry. The target line is a level, not an observed result. Source: ORBF1.</text>
+</svg>

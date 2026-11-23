@@ -90,9 +90,9 @@ STUDIES = json.loads(r"""{
           "Midpoint is the average of Bid and Ask; execution uses the tradeable quote side. Off-grid stops and targets are rejected without rounding. Positions may span days, with one open position per entry session and possible overlap between sessions.",
           "I compared range lengths, directions and an average true range (ATR) volatility filter, then added an exponential moving average (EMA) trend filter during discovery. The matrix covers {configurations} configurations across {us} and {tech} CFDs."
         ],
-        "figure": "orb-setup-filters-setup.svg",
-        "alt": "Illustrative long breakout showing the opening range, completed-candle confirmation, entry, stop, target, and optional filters",
-        "caption": "A setup schematic, not a historical trade. No later price outcome is invented. ATR and the later EMA extension are optional admission filters.",
+        "figure": "orb-setup-filters-setup-candles.svg",
+        "alt": "Illustrative candlesticks showing the opening range, completed confirmation, next-quote Ask entry, stop at the range low, target, and optional EMA filter",
+        "caption": "Illustrative fifteen-minute candles show the range and completed confirmation. The next-quote marker shows entry at Ask. Prices and the EMA line are synthetic; ATR and EMA are optional filters.",
         "sources": [
           "ORBF1"
         ]

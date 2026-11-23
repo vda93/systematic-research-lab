@@ -14,9 +14,9 @@ The working hypothesis is that a confirmed move beyond the opening range can cap
 
 The reference setup uses a **15-minute range starting at 09:30 New York time**, a completed candle to confirm the breakout, and a **1.5R target**. Here, R measures outcome relative to the trade's initial price risk. [ORBF1](../docs/evidence.md#orbf1)
 
-![Illustrative long setup showing the opening range, completed-candle confirmation, entry, stop, and target](../figures/orb-setup-filters-setup.svg)
+![Candlestick illustration of the opening range, completed confirmation, next-quote entry, stop, and target](../figures/orb-setup-filters-setup-candles.svg)
 
-*Setup schematic, not a historical trade.* The diagram illustrates a long signal without inventing a later price outcome. ATR and the later EMA extension are optional admission filters; they do not change the stop or target rule. [ORBF1](../docs/evidence.md#orbf1)
+*Illustrative M15 midpoint candles.* The highlighted candle spans 09:30 to 09:45 New York time; the following candle confirms the breakout at 10:00. Entry uses the next eligible Ask quote, with the stop exactly at the range low and a target 1.5 times initial price risk from entry. The EMA200 line illustrates the optional filter added later during discovery. Prices and EMA context are synthetic, and the trade's later outcome is unspecified. [ORBF1](../docs/evidence.md#orbf1)
 
 | Component | Rule |
 | --- | --- |

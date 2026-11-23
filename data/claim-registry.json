@@ -984,7 +984,7 @@
         ]
       },
       {
-        "sha256": "9a87980d16b5cd5365b3208250c2a66356c0042184ab77f87c5418fb2bbc7f7f",
+        "sha256": "600a51fd29b4d4a87ec8ecbeb6bfa7b2e9a2349c46e13c49fb056c2ec45cf99e",
         "kind": "methods",
         "source_ids": [
           "ORBF1"
@@ -1677,6 +1677,17 @@
         "ORBF1"
       ],
       "scope": "EMPIRICAL_REPORTED"
+    },
+    {
+      "path": "figures/orb-setup-filters-setup-candles.svg",
+      "renderer": "scripts/render_orb_setup_filters.py",
+      "inputs": {
+        "data/orb-setup-filters-public.json": "3e44dd87abd8655938a4d0d9f100c9ef0de149e25387f4a6032b8e72c0692ae3"
+      },
+      "source_ids": [
+        "ORBF1"
+      ],
+      "scope": "CONCEPTUAL_SCHEMATIC"
     }
   ],
   "reviewed_on": "2026-11-23",
