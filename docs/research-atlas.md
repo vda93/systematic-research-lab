@@ -10,7 +10,7 @@ I searched for opening times that worked across nearby settings, then tested the
 
 Another ORB study examines a New York cash-open breakout with candle-close confirmation and fixed stop/target geometry. The article explains the setup, the later EMA extension, 48 discovery variants, and how the same selected US500 configurations performed in sample versus later history. Its setup and results are recorded separately from ORBINDEX.
 
-[Read the setup and study](../studies/orb-setup-filters.md) · [Discovery evidence](evidence.md#orbf1) · [Later-period evidence](evidence.md#orbf2)
+[Read the article](https://vda93.github.io/systematic-research-lab/orb-setup-filters.html) · [Research case study](../studies/orb-setup-filters.md) · [Technical appendix](../studies/orb-setup-filters-appendix.md) · [Discovery evidence](evidence.md#orbf1) · [Later-period evidence](evidence.md#orbf2)
 
 ## News-Release Trading
 

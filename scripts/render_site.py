@@ -30,6 +30,8 @@ META = {
                  "A timing search, frozen index portfolios and later economic evaluation, with source evidence and limitations."),
     "macroimpulse": ("News-Release Trading | Execution Research",
                       "News-release backtests met the reality of spreads, poor fills and slippage. Why the research was shelved."),
+    "orb-setup-filters": ("Opening-Range Breakout | Filters and Later Performance",
+                          "Another opening-range breakout study: the setup, a later EMA extension, and weaker results in historical evaluation."),
 }
 
 
@@ -90,6 +92,8 @@ def validate_study(root: Path, slug: str, study: dict, ledger: dict) -> dict[str
                     public_text(cell, values)
     for key in ("name", "title", "subtitle", "decision", "caveat"):
         public_text(study[key], values)
+    for paragraph in study.get("verification", []):
+        public_text(paragraph, values)
     if "figures/" + study["cover"] not in figures:
         raise ValueError(f"Unknown cover in {slug}")
     return values
@@ -156,7 +160,7 @@ def article(root: Path, slug: str, study: dict, values: dict[str, str]) -> bytes
                      for paragraph in section["paragraphs"])
         if "table" in section:
             table = section["table"]
-            parts.append('<section class="table-scroll" tabindex="0" aria-label="Historical portfolio comparison"><table>')
+            parts.append('<section class="table-scroll" tabindex="0" aria-label="Historical results comparison"><table>')
             parts.append("<thead><tr>" + "".join(
                 f'<th scope="col">{public_text(h, values)}</th>'
                 for h in table["heading"]) + "</tr></thead><tbody>")
@@ -172,6 +176,7 @@ def article(root: Path, slug: str, study: dict, values: dict[str, str]) -> bytes
             "IX1": "Timing search", "IX2": "Portfolio simulation",
             "IX3": "Later-period results", "IX4": "Follow-up analysis",
             "B08": "Execution rules", "B09": "Historical baseline",
+            "ORBF1": "Discovery and filter comparisons", "ORBF2": "Later historical evaluation",
         }
         parts.append('<p class="citation">Research evidence: ' + " · ".join(
             source("docs/evidence.md#" + evidence.lower(), readable_sources[evidence])
@@ -179,13 +184,17 @@ def article(root: Path, slug: str, study: dict, values: dict[str, str]) -> bytes
         parts.append("</section>")
         sections.append("\n".join(parts))
     technical = source(study["technical"], "Complete research record")
-    data = ("data/orbindex-public.json" if slug == "orbindex" else "data/macro-public.json")
+    data = study["data"]
+    details = "".join(f'<p>{public_text(paragraph, values)}</p>'
+                      for paragraph in study.get("verification", []))
+    appendix = (" · " + source(study["appendix"], "Technical appendix")
+                if "appendix" in study else "")
     verification = (
         '<section id="verification"><h2>Data and verification</h2>'
         '<p>The public figures can be rebuilt from released aggregates. The original '
         'market backtests require private quotes and implementations, so they cannot '
         'be independently rerun from this website.</p>'
-        f'<p>{technical} · {source(data, "Published aggregate data")} · '
+        f'{details}<p>{technical}{appendix} · {source(data, "Published aggregate data")} · '
         f'{source("docs/security.md#reproduce-the-checks", "Reproduce the figures")}</p>'
         '</section>'
     )

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ORB Setup and Filters | TradingBotHQ</title>
+<meta name="description" content="Another opening-range breakout study: the setup, a later EMA extension, and weaker results in historical evaluation.">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Opening-Range Breakout | Filters and Later Performance">
+<meta property="og:description" content="Another opening-range breakout study: the setup, a later EMA extension, and weaker results in historical evaluation.">
+<meta property="og:url" content="https://vda93.github.io/systematic-research-lab/orb-setup-filters.html">
+<meta property="og:image" content="https://vda93.github.io/systematic-research-lab/social-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Systematic trading research: robustness, validation and execution">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header><div class="shell nav">
+<nav aria-label="Main navigation"><a href="index.html#research">Studies</a>
+<a href="index.html#method">Methods</a>
+<a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md">Evidence</a> <a href="https://github.com/vda93/systematic-research-lab">GitHub</a></nav>
+</div></header>
+<main id="content" tabindex="-1" class="shell">
+<nav class="crumb" aria-label="Breadcrumb"><a href="index.html#research">Studies</a>
+<span aria-hidden="true"> / </span><span aria-current="page">ORB Setup and Filters</span></nav>
+<article><div class="article-head">
+<h1>Opening-range breakout: filters and later performance</h1>
+<p class="lead">Another opening-range breakout study: define the setup, compare range and filter choices, then carry frozen candidates into later historical data.</p>
+<p><strong>Decision.</strong> No candidate promoted. Later results weakened, the remaining positive margin was sensitive to costs, and the available evidence did not establish positive expectancy.</p>
+<p><strong>Main limitation.</strong> This was a retrospective historical evaluation with incomplete coverage, not a live forward test. The EMA extension has no qualified later result.</p>
+</div><div class="article-layout">
+<nav class="contents" aria-label="Article contents"><strong>In this study</strong>
+<ul><li><a href="#section-1">The setup and the research question</a></li><li><a href="#section-2">The same setups in discovery and later history</a></li><li><a href="#section-3">What adding the EMA actually showed</a></li><li><a href="#section-4">How much margin remained after costs?</a></li><li><a href="#section-5">What the research can support</a></li><li><a href="#section-6">The decision and the next useful test</a></li><li><a href="#verification">Data and verification</a></li></ul></nav>
+<div class="reading"><section id="section-1"><h2>The setup and the research question</h2>
+<p>The reference setup measures the first 15 minutes after the 09:30 New York cash open. A completed fifteen-minute midpoint candle must close outside that range, after the preceding close was inside it. Entry uses the next eligible quote, with the stop at the opposite range boundary and a target of 1.5 times initial price risk.</p>
+<p>Midpoint means the average of Bid and Ask; execution uses the tradeable side of the quote. The tests reject stop or target prices outside the contract&#x27;s permitted price increments instead of rounding them, which materially changes trade selection. Positions may remain open beyond the entry day. Only one position may be open per entry session; positions from different sessions may overlap.</p>
+<p>I compared range lengths, trade directions and a volatility filter based on average true range (ATR), then added an exponential moving average (EMA) trend filter during discovery. The research question was whether those choices improved the observed results and whether frozen candidates held up later. The full matrix contained 48 configurations across US500 and USTEC CFDs.</p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#orbf1">Discovery and filter comparisons</a></p>
+</section><section id="section-2"><h2>The same setups in discovery and later history</h2>
+<p>All four selected US500 setups had positive average gross R in discovery. The long-only alternatives became negative on observed natural closes in both later cohorts. The bidirectional setup with ATR stayed slightly positive, but its average outcome fell substantially.</p>
+<p>R expresses an outcome relative to initial trade risk. These figures already include quoted spread through Bid/Ask execution but exclude commission and other account charges. The chart keeps the same setups and outcome measure across periods, and shows how many natural closes support each estimate.</p>
+<section class="table-scroll" tabindex="0" aria-label="Historical results comparison"><table>
+<thead><tr><th scope="col">US500 bidirectional ATR candidate</th><th scope="col">Average gross R per close</th></tr></thead><tbody>
+<tr><td>Discovery</td><td>+0.187R</td></tr>
+<tr><td>Later cohort A</td><td>+0.063R</td></tr>
+<tr><td>Later cohort B</td><td>+0.056R</td></tr>
+</tbody></table></section>
+<a class="chart" href="plots/orb-setup-filters-comparison.svg"><img src="plots/orb-setup-filters-comparison.svg" width="1120" height="630" alt="Four frozen US500 configurations show lower average gross R per natural close in the two later historical cohorts than in discovery" loading="lazy"></a>
+<p class="citation">All plotted setups have EMA off. Cohort A has incomplete coverage, so these observed-close outcomes do not establish a complete-cohort return. The comparison is descriptive and does not establish why performance changed. · <a href="plots/orb-setup-filters-comparison.svg">Open figure</a></p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#orbf1">Discovery and filter comparisons</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#orbf2">Later historical evaluation</a></p>
+</section><section id="section-3"><h2>What adding the EMA actually showed</h2>
+<p>The EMA filter permits a long breakout only above the moving average and a short breakout only below it. I compared the filter on and off while holding the other settings fixed.</p>
+<p>The discovery results were mixed. Some pairs improved profit factor, while others worsened. Drawdown often fell with participation, but those changes did not establish better daily returns. None of the 27 fixed comparisons survived the multiple-testing correction. Those comparisons tested differences between configurations, not every strategy’s absolute expectancy.</p>
+<p>The later-tested US500 setups all had EMA off. The shortlisted EMA-on USTEC candidate was blocked by source-data failures. There is therefore no qualified EMA out-of-sample improvement to report.</p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#orbf1">Discovery and filter comparisons</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#orbf2">Later historical evaluation</a></p>
+</section><section id="section-4"><h2>How much margin remained after costs?</h2>
+<p>The bidirectional ATR candidate made approximately +5.32R across 114 natural closes after the published-commission assumption. That is a closed-trade scenario total, not a continuous account return or a complete daily series.</p>
+<p>An additional hypothetical 0.025R per fill side reduced that total to approximately -0.38R, before extra financing. This holds the trades fixed to measure cost sensitivity; it is not an estimate of actual slippage. Historical all-in broker net performance remains unknown.</p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#orbf2">Later historical evaluation</a></p>
+</section><section id="section-5"><h2>What the research can support</h2>
+<p>The candidate list was frozen before its later strategy outcomes were opened, but the evaluation was historical and some related work had exposed later data. It should not be described as a completely untouched forward test.</p>
+<p>Incomplete confirmation coverage in cohort A prevents the full primary daily-return statistic from being estimated. Positions still open at the cutoff were censored rather than counted as ordinary exits. The supplemental estimate from the fully observed cohort B remained inconclusive.</p>
+<p>Discovery missing-source sessions contributed zero recorded execution while remaining in the calendar denominator. The later analysis instead leaves unavailable daily outcomes missing. Neither convention turns absent quotes into an observed no-signal day.</p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#orbf1">Discovery and filter comparisons</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#orbf2">Later historical evaluation</a></p>
+</section><section id="section-6"><h2>The decision and the next useful test</h2>
+<p>The study supports withholding promotion: the long-only results deteriorated, the remaining positive margin was fragile, and the EMA extension still lacks a qualified later evaluation.</p>
+<p>The next useful evidence would be a complete, admissible later sample evaluated under frozen rules and declared costs. Retuning on the outcomes already examined would create a new development exercise and require a fresh evaluation sample.</p>
+<p class="citation">Research evidence: <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#orbf1">Discovery and filter comparisons</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/evidence.md#orbf2">Later historical evaluation</a></p>
+</section><section id="verification"><h2>Data and verification</h2><p>The public figures can be rebuilt from released aggregates. The original market backtests require private quotes and implementations, so they cannot be independently rerun from this website.</p><p>The released aggregates reproduce the charts and selected arithmetic. They do not contain the daily inputs needed to recompute the reported bootstrap intervals or adjusted significance tests.</p><p>Research choices and final decisions were directed by the repository author, with AI-assisted implementation and test automation.</p><p><a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orb-setup-filters.md">Complete research record</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/studies/orb-setup-filters-appendix.md">Technical appendix</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/data/orb-setup-filters-public.json">Published aggregate data</a> · <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/security.md#reproduce-the-checks">Reproduce the figures</a></p></section></div>
+</div></article>
+<nav class="related" aria-label="Study navigation"><a href="orbindex.html">ORBINDEX</a> · <a href="macroimpulse.html">News-Release Trading</a></nav>
+</main>
+<footer><div class="shell foot"><span>TradingBotHQ · Public research</span>
+<nav aria-label="Publication information"><a href="https://www.linkedin.com/in/andrew-vu-4861b9191/">Andrew Vu on LinkedIn</a> <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/provenance.md">Provenance</a> <a href="https://github.com/vda93/systematic-research-lab/blob/main/docs/limitations.md">Limitations</a></nav></div></footer>
+</body>
+</html>

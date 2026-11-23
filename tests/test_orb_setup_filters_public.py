@@ -10,6 +10,7 @@ import xml.etree.ElementTree as ET
 
 from scripts.render_orb_setup_filters import (
     SELECTED_LABELS, build, comparison_values, factorial_index, later_index,
+    ema_pair_summary, primary_fixed_trade_costs,
     render_comparison, render_factorial, render_oos,
 )
 
@@ -114,6 +115,63 @@ class PublicOrbSetupFilterStudyTests(unittest.TestCase):
         self.assertIn("-9.000R", render_oos(data))
         self.assertNotEqual(render_comparison(data), render_comparison(self.data))
         self.assertNotEqual(render_oos(data), render_oos(self.data))
+
+    def test_ema_summary_covers_all_pairs_and_retains_mixed_results(self) -> None:
+        summary = ema_pair_summary(self.data)
+        self.assertEqual(self.data["study_design"]["ema_matched_summary"]["markets"], summary)
+        expected = {
+            "US500": {
+                "gross_profit_factor": (5, 6, 1),
+                "commission_scenario_R_per_common_day": (2, 10, 0),
+                "realized_drawdown_R": (0, 12, 0),
+                "closed_trades": (0, 12, 0),
+                "gross_price_R": (0, 12, 0),
+            },
+            "USTEC": {
+                "gross_profit_factor": (11, 1, 0),
+                "commission_scenario_R_per_common_day": (6, 6, 0),
+                "realized_drawdown_R": (3, 8, 1),
+                "closed_trades": (0, 12, 0),
+                "gross_price_R": (5, 7, 0),
+            },
+        }
+        for market, metrics in expected.items():
+            self.assertEqual(summary[market]["matched_pairs"], 12)
+            for metric, counts in metrics.items():
+                actual = summary[market]["metrics"][metric]
+                self.assertEqual(tuple(actual.values()), counts, (market, metric))
+                self.assertEqual(sum(actual.values()), 12)
+
+    def test_cost_sensitivity_uses_two_sides_per_natural_close(self) -> None:
+        result = primary_fixed_trade_costs(self.data)
+        released = self.data["later_us500"]["primary_fixed_trade_cost_sensitivity"]
+        for key, value in result.items():
+            self.assertEqual(released[key], value)
+        self.assertEqual(result["natural_closes"], 114)
+        self.assertEqual(result["combined_published_commission_scenario_R"], 5.319)
+        self.assertEqual([row["extra_round_trip_cost_R"] for row in result["scenarios"]], [0, 5.7, 11.4])
+        self.assertEqual([row["closed_trade_scenario_R_after_extra_cost"] for row in result["scenarios"]],
+                         [5.319, -0.381, -6.081])
+
+    def test_figures_follow_period_coverage_and_source_metadata(self) -> None:
+        data = deepcopy(self.data)
+        data["study_design"]["factorial_periods"]["US500"] = "2019-01-01 through 2024-02-29"
+        a = data["later_us500"]["score_periods"]["A"]
+        a.update(start="2024-02-01", end_exclusive="2025-01-01", eligible_NYSE_days=230,
+                 incomplete_confirmation_sessions=["2024-03-01", "2024-04-01"])
+        data["later_us500"]["score_periods"]["B"]["eligible_NYSE_days"] = 123
+        data["source_evidence"]["factorial"]["source_id"] = "TEST_DISCOVERY"
+        data["source_evidence"]["later_us500"]["source_id"] = "TEST_LATER"
+        comparison, oos = render_comparison(data), render_oos(data)
+        self.assertIn("Jan 2019 to Feb 2024", comparison)
+        for svg in (comparison, oos):
+            self.assertIn("Feb to Dec 2024", svg)
+            self.assertIn("2 incomplete confirmation", svg)
+            self.assertIn("TEST_LATER", svg)
+        self.assertIn("230 eligible sessions", oos)
+        self.assertIn("123 eligible sessions", oos)
+        self.assertIn("TEST_DISCOVERY", comparison)
+        self.assertIn("TEST_DISCOVERY", render_factorial(data))
 
 
 if __name__ == "__main__":

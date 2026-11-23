@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1020" height="427" viewBox="0 0 1020 427" role="img" aria-label="US500 out-of-sample commission-scenario R for four fixed strategy configurations in two historical cohorts">
 <rect x="0" y="0" width="1020" height="427" rx="0" fill="#FBFCFD"/>
 <text x="28" y="43" font-family="Arial,sans-serif" font-size="26" fill="#182D3A" text-anchor="start" font-weight="700">US500: later historical performance, four frozen variants</text>
-<text x="28" y="68" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="start" font-weight="400">Published-commission-scenario R, verified natural closes only. Cohort A has missing coverage.</text>
+<text x="28" y="68" font-family="Arial,sans-serif" font-size="14" fill="#576A76" text-anchor="start" font-weight="400">Published-commission-scenario R, verified natural closes only. Coverage and censors are noted below.</text>
 <text x="365" y="111" font-family="Arial,sans-serif" font-size="16" fill="#273F4E" text-anchor="middle" font-weight="700">A | Jun 2025 to Feb 2026</text>
 <line x1="435" y1="128" x2="435" y2="334" stroke="#4B6573" stroke-width="1.6"/>
 <text x="435" y="355" font-family="Arial,sans-serif" font-size="12" fill="#5A6F78" text-anchor="middle" font-weight="400">0R</text>
@@ -28,6 +28,6 @@
 <text x="237.83" y="316" font-family="Arial,sans-serif" font-size="13" fill="#243A45" text-anchor="end" font-weight="700">-13.708R</text>
 <rect x="757.721" y="298" width="62.2794" height="26" rx="4" fill="#B45C43"/>
 <text x="749.721" y="316" font-family="Arial,sans-serif" font-size="13" fill="#243A45" text-anchor="end" font-weight="700">-4.513R</text>
-<text x="28" y="382" font-family="Arial,sans-serif" font-size="12" fill="#5B6D79" text-anchor="start" font-weight="400">A: 187 eligible sessions, one incomplete confirmation window; two cutoff-censored trades across long-only variants.</text>
-<text x="28" y="404" font-family="Arial,sans-serif" font-size="12" fill="#5B6D79" text-anchor="start" font-weight="400">B: 148 eligible sessions. Bars are not broker-net results, continuous equity curves, or formal absolute-return tests.</text>
+<text x="28" y="382" font-family="Arial,sans-serif" font-size="12" fill="#5B6D79" text-anchor="start" font-weight="400">A: 187 eligible sessions; 1 incomplete confirmation day; 2 cutoff-censored entries across variants.</text>
+<text x="28" y="404" font-family="Arial,sans-serif" font-size="12" fill="#5B6D79" text-anchor="start" font-weight="400">B: 148 eligible sessions. Not broker-net returns, continuous equity or absolute-return tests. Source: ORBF2.</text>
 </svg>

@@ -19,6 +19,6 @@ Before publication, review the quantitative paragraphs against their sources, up
 
 ## A short reading edition and a complete record
 
-The public website uses concise, source-checked editorial summaries defined in [the site copy](../scripts/site_studies.py). It should show the finding, the strongest visual evidence and the important limitation before asking readers to open the full technical record. The complete [ORBINDEX](../studies/orbindex.md) and [news-release](../studies/news-research.md) studies retain their original methodological detail.
+The public website uses concise, source-checked editorial summaries defined in [the site copy](../scripts/site_studies.py). It should show the finding, the strongest visual evidence and the important limitation before asking readers to open the full technical record. The complete [ORBINDEX](../studies/orbindex.md) and [news-release](../studies/news-research.md) studies retain their original methodological detail. The [ORB setup and filter case study](../studies/orb-setup-filters.md) pairs a concise research narrative with its [technical appendix](../studies/orb-setup-filters-appendix.md).
 
 New public numeric statements must be represented as evidence-bound facts and verified against registered quantitative source paragraphs. Do not insert free-standing numerical claims into the website copy, relax the source checks or treat a previously examined period as an independent holdout.

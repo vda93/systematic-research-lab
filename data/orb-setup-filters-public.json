@@ -111,6 +111,73 @@
         ],
         "holm_p": 1.0
       }
+    },
+    "ema_matched_summary": {
+      "comparison": "EMA on versus off, holding market, opening range, direction and ATR setting fixed",
+      "precision": "Counts use released rounded aggregate values; ties are ties at reported precision.",
+      "interpretation": "Descriptive counts across overlapping configurations, not independent statistical tests; lower drawdown and trade count do not by themselves demonstrate greater return or risk-adjusted performance.",
+      "markets": {
+        "US500": {
+          "matched_pairs": 12,
+          "metrics": {
+            "gross_profit_factor": {
+              "higher": 5,
+              "lower": 6,
+              "tied_at_reported_precision": 1
+            },
+            "commission_scenario_R_per_common_day": {
+              "higher": 2,
+              "lower": 10,
+              "tied_at_reported_precision": 0
+            },
+            "realized_drawdown_R": {
+              "higher": 0,
+              "lower": 12,
+              "tied_at_reported_precision": 0
+            },
+            "closed_trades": {
+              "higher": 0,
+              "lower": 12,
+              "tied_at_reported_precision": 0
+            },
+            "gross_price_R": {
+              "higher": 0,
+              "lower": 12,
+              "tied_at_reported_precision": 0
+            }
+          }
+        },
+        "USTEC": {
+          "matched_pairs": 12,
+          "metrics": {
+            "gross_profit_factor": {
+              "higher": 11,
+              "lower": 1,
+              "tied_at_reported_precision": 0
+            },
+            "commission_scenario_R_per_common_day": {
+              "higher": 6,
+              "lower": 6,
+              "tied_at_reported_precision": 0
+            },
+            "realized_drawdown_R": {
+              "higher": 3,
+              "lower": 8,
+              "tied_at_reported_precision": 1
+            },
+            "closed_trades": {
+              "higher": 0,
+              "lower": 12,
+              "tied_at_reported_precision": 0
+            },
+            "gross_price_R": {
+              "higher": 5,
+              "lower": 7,
+              "tied_at_reported_precision": 0
+            }
+          }
+        }
+      }
     }
   },
   "factorial_cells": [
@@ -841,13 +908,17 @@
         "start": "2025-06-01",
         "end_exclusive": "2026-03-01",
         "eligible_NYSE_days": 187,
-        "coverage": "1 incomplete confirmation session on 2025-10-16; 2 right-censored entries in long-only variants"
+        "coverage": "1 incomplete confirmation session on 2025-10-16; 2 right-censored entries in long-only variants",
+        "incomplete_confirmation_sessions": [
+          "2025-10-16"
+        ]
       },
       "B": {
         "start": "2026-04-01",
         "end_exclusive": "2026-11-01",
         "eligible_NYSE_days": 148,
-        "coverage": "fully verified scored entry windows"
+        "coverage": "fully verified scored entry windows",
+        "incomplete_confirmation_sessions": []
       }
     },
     "former_march_2026": "excluded from scored entries because earlier engineering smoke disclosed an outcome",
@@ -995,7 +1066,33 @@
     },
     "formal_primary_full_cohort_result": "INDETERMINATE_due_to_missing_confirmation_window_and_unqualified_USTEC_H2",
     "ema_enabled_in_executed_variants": false,
-    "exposure_scope": "March 2026 US500 smoke outcome excluded from scored entries. USTEC A/B had related cross-strategy prior exposure. Audit did not establish global absence of previous inspection."
+    "exposure_scope": "March 2026 US500 smoke outcome excluded from scored entries. USTEC A/B had related cross-strategy prior exposure. Audit did not establish global absence of previous inspection.",
+    "primary_fixed_trade_cost_sensitivity": {
+      "basis": "Both separately initialized cohorts combined on verified natural closes only; this is not a complete daily series or a continuous portfolio return.",
+      "formula": "combined published commission scenario R - 2 * natural closes * extra R per fill side",
+      "precision": "Derived from the rounded public cohort totals; these reproduce released aggregate arithmetic, not the unrounded source totals.",
+      "limitations": "Hypothetical extra entry/exit cost on fixed observed trades, with no additional financing; not measured historical slippage and not a new replay.",
+      "id": "US500_OR15_LS_A1_E0",
+      "natural_closes": 114,
+      "combined_published_commission_scenario_R": 5.319,
+      "scenarios": [
+        {
+          "extra_R_per_fill_side": 0.0,
+          "extra_round_trip_cost_R": 0.0,
+          "closed_trade_scenario_R_after_extra_cost": 5.319
+        },
+        {
+          "extra_R_per_fill_side": 0.025,
+          "extra_round_trip_cost_R": 5.7,
+          "closed_trade_scenario_R_after_extra_cost": -0.381
+        },
+        {
+          "extra_R_per_fill_side": 0.05,
+          "extra_round_trip_cost_R": 11.4,
+          "closed_trade_scenario_R_after_extra_cost": -6.081
+        }
+      ]
+    }
   },
   "later_ustec": {
     "status": "NOT_RUN_SOURCE_BLOCKED",

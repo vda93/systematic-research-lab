@@ -67,6 +67,6 @@
 <rect x="878.186" y="431" width="56.8138" height="28" rx="3" fill="#B45C43"/>
 <text x="935" y="484" font-family="Arial,sans-serif" font-size="14" fill="#243A45" text-anchor="middle" font-weight="700">-0.142R | n=29</text>
 <text x="28" y="563" font-family="Arial,sans-serif" font-size="13" fill="#526976" text-anchor="start" font-weight="400">Price R includes quoted spread, excludes commissions and financing. Sample counts are verified closes.</text>
-<text x="28" y="586" font-family="Arial,sans-serif" font-size="13" fill="#526976" text-anchor="start" font-weight="400">A has incomplete confirmation coverage; its two censored long-only entries are excluded from closed-trade means.</text>
+<text x="28" y="586" font-family="Arial,sans-serif" font-size="13" fill="#526976" text-anchor="start" font-weight="400">A has 1 incomplete confirmation day; its 2 censored entries are excluded from closed-trade means.</text>
 <text x="28" y="609" font-family="Arial,sans-serif" font-size="13" fill="#526976" text-anchor="start" font-weight="400">Unequal periods and observation coverage: descriptive comparison, not a test of a structural break. Sources: ORBF1, ORBF2.</text>
 </svg>

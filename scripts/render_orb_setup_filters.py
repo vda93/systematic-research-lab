@@ -7,6 +7,8 @@ The charts visualize reported scenario aggregates, not historical broker-net P&L
 from __future__ import annotations
 
 import argparse
+from datetime import date, timedelta
+from decimal import Decimal
 import json
 from html import escape
 from pathlib import Path
@@ -57,6 +59,75 @@ def later_index(data: dict) -> dict[tuple[str, str], dict]:
     return by_id
 
 
+def ema_pair_summary(data: dict) -> dict[str, dict]:
+    """Count every matched EMA comparison at the released source precision.
+
+    Direction counts describe this finite discovery surface. They are not
+    independent trials or a replacement for the published paired inference.
+    """
+    rows = factorial_index(data)
+    metrics = ("gross_profit_factor", "commission_scenario_R_per_common_day",
+               "realized_drawdown_R", "closed_trades", "gross_price_R")
+    result = {}
+    for market in ("US500", "USTEC"):
+        pairs = [(row, rows[id_[:-1] + "1"])
+                 for id_, row in rows.items()
+                 if row["market"] == market and not row["ema200_enabled"]]
+        counts = {}
+        for metric in metrics:
+            counts[metric] = {
+                "higher": sum(on[metric] > off[metric] for off, on in pairs),
+                "lower": sum(on[metric] < off[metric] for off, on in pairs),
+                "tied_at_reported_precision": sum(on[metric] == off[metric] for off, on in pairs),
+            }
+        result[market] = {"matched_pairs": len(pairs), "metrics": counts}
+    return result
+
+
+def primary_fixed_trade_costs(data: dict) -> dict:
+    """Apply hypothetical extra entry/exit costs to the same observed closes.
+
+    Use Decimal to preserve the published three-decimal aggregate precision.
+    This does not reconstruct unrounded source totals, financing or fills.
+    """
+    rows = later_index(data)
+    id_ = data["later_us500"]["primary_candidate_id"]
+    primary = [rows[(id_, cohort)] for cohort in ("A", "B")]
+    closes = sum(row["natural_closes"] for row in primary)
+    base = sum((Decimal(str(row["closed_trade_published_commission_scenario_R"]))
+                for row in primary), Decimal(0))
+    return {
+        "id": id_,
+        "natural_closes": closes,
+        "combined_published_commission_scenario_R": float(base),
+        "scenarios": [
+            {"extra_R_per_fill_side": float(cost),
+             "extra_round_trip_cost_R": float(2 * closes * cost),
+             "closed_trade_scenario_R_after_extra_cost": float(base - 2 * closes * cost)}
+            for cost in (Decimal("0"), Decimal("0.025"), Decimal("0.05"))
+        ],
+    }
+
+
+def period_label(start: str, end_inclusive: str) -> str:
+    first, last = date.fromisoformat(start), date.fromisoformat(end_inclusive)
+    if last < first:
+        raise ValueError("A chart period must end on or after it starts")
+    first_label = first.strftime("%b") if first.year == last.year else first.strftime("%b %Y")
+    return f"{first_label} to {last.strftime('%b %Y')}"
+
+
+def discovery_period_label(data: dict, market: str) -> str:
+    start, end = data["study_design"]["factorial_periods"][market].split(" through ")
+    return period_label(start, end)
+
+
+def cohort_period_label(data: dict, cohort: str) -> str:
+    period = data["later_us500"]["score_periods"][cohort]
+    last = date.fromisoformat(period["end_exclusive"]) - timedelta(days=1)
+    return period_label(period["start"], last.isoformat())
+
+
 def rect(x: float, y: float, w: float, h: float, color: str, radius: int = 0) -> str:
     return (f'<rect x="{x:g}" y="{y:g}" width="{w:g}" height="{h:g}" '
             f'rx="{radius}" fill="{color}"/>')
@@ -85,6 +156,7 @@ def pf_color(pf: float) -> str:
 
 def render_factorial(data: dict) -> str:
     by_id = factorial_index(data)
+    source = data["source_evidence"]["factorial"]["source_id"]
     out = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="500" '
         'viewBox="0 0 1040 500" role="img" '
@@ -120,7 +192,7 @@ def render_factorial(data: dict) -> str:
                 out.append(text(x0 + j * 91 + 41.5, y + 20, f"{pf:.3f}", 13, "#16323A", "middle", 700))
     out.extend((
         text(25, 461, "PF = gross winning price R / absolute gross losing price R; values do not include commission or financing.", 13, "#526976"),
-        text(25, 484, "Source: ORBF1 | 48 overlapping models on privately held US500 / USTEC Exness Bid/Ask quotes.", 12, "#526976"),
+        text(25, 484, f"Source: {source} | {len(by_id)} overlapping models on privately held US500 / USTEC Exness Bid/Ask quotes.", 12, "#526976"),
         "</svg>",
     ))
     return "\n".join(out) + "\n"
@@ -128,6 +200,11 @@ def render_factorial(data: dict) -> str:
 
 def render_oos(data: dict) -> str:
     keyed = later_index(data)
+    periods = data["later_us500"]["score_periods"]
+    incomplete_a = len(periods["A"]["incomplete_confirmation_sessions"])
+    day_label = "day" if incomplete_a == 1 else "days"
+    censors_a = sum(row["right_censored_entries"] for (id_, cohort), row in keyed.items() if cohort == "A")
+    source = data["source_evidence"]["later_us500"]["source_id"]
     out = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="427" '
         'viewBox="0 0 1020 427" role="img" '
@@ -135,9 +212,10 @@ def render_oos(data: dict) -> str:
         'configurations in two historical cohorts">',
         rect(0, 0, 1020, 427, "#FBFCFD"),
         text(28, 43, "US500: later historical performance, four frozen variants", 26, "#182D3A", weight=700),
-        text(28, 68, "Published-commission-scenario R, verified natural closes only. Cohort A has missing coverage.", 14, "#576A76"),
+        text(28, 68, "Published-commission-scenario R, verified natural closes only. Coverage and censors are noted below.", 14, "#576A76"),
     ]
-    groups = (("A", "A | Jun 2025 to Feb 2026", 435), ("B", "B | Apr to Oct 2026", 820))
+    groups = tuple((cohort, f"{cohort} | {cohort_period_label(data, cohort)}", axis)
+                   for cohort, axis in (("A", 435), ("B", 820)))
     for cohort, name, axis in groups:
         out.append(text(axis - 70, 111, name, 16, "#273F4E", "middle", 700))
         out.append(f'<line x1="{axis}" y1="128" x2="{axis}" y2="334" stroke="#4B6573" stroke-width="1.6"/>')
@@ -154,8 +232,10 @@ def render_oos(data: dict) -> str:
                             f"{value:+.3f}R", 13, "#243A45",
                             "end" if value < 0 else "start", 700))
     out.extend((
-        text(28, 382, "A: 187 eligible sessions, one incomplete confirmation window; two cutoff-censored trades across long-only variants.", 12, "#5B6D79"),
-        text(28, 404, "B: 148 eligible sessions. Bars are not broker-net results, continuous equity curves, or formal absolute-return tests.", 12, "#5B6D79"),
+        text(28, 382, f'A: {periods["A"]["eligible_NYSE_days"]} eligible sessions; {incomplete_a} incomplete confirmation {day_label}; '
+             f'{censors_a} cutoff-censored entries across variants.', 12, "#5B6D79"),
+        text(28, 404, f'B: {periods["B"]["eligible_NYSE_days"]} eligible sessions. Not broker-net returns, continuous equity or absolute-return tests. '
+             f'Source: {source}.', 12, "#5B6D79"),
         "</svg>",
     ))
     return "\n".join(out) + "\n"
@@ -182,6 +262,11 @@ def comparison_values(data: dict) -> dict[str, list[tuple[float, int]]]:
 
 def render_comparison(data: dict) -> str:
     comparisons = comparison_values(data)
+    periods = data["later_us500"]["score_periods"]
+    incomplete_a = len(periods["A"]["incomplete_confirmation_sessions"])
+    day_label = "day" if incomplete_a == 1 else "days"
+    censors_a = sum(row["right_censored_entries"] for row in data["later_us500"]["results"] if row["cohort"] == "A")
+    sources = ", ".join(data["source_evidence"][key]["source_id"] for key in ("factorial", "later_us500"))
     out = [
         '<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="630" '
         'viewBox="0 0 1120 630" role="img" '
@@ -191,9 +276,9 @@ def render_comparison(data: dict) -> str:
         text(28, 42, "US500: in-sample discovery vs later historical periods", 26, "#182D3A", weight=700),
         text(28, 69, "Same four configurations, gross mean R per closed trade. EMA is off in every later-tested variant.", 15, "#576A76"),
     ]
-    groups = (("In-sample discovery", "Mar 2020 to Mar 2025", 365),
-              ("Later cohort A", "Jun 2025 to Feb 2026", 650),
-              ("Later cohort B", "Apr to Oct 2026", 935))
+    groups = (("In-sample discovery", discovery_period_label(data, "US500"), 365),
+              ("Later cohort A", cohort_period_label(data, "A"), 650),
+              ("Later cohort B", cohort_period_label(data, "B"), 935))
     scale = 400
     for title, dates, axis in groups:
         out.append(text(axis, 106, title, 17, "#273F4E", "middle", 700))
@@ -216,8 +301,8 @@ def render_comparison(data: dict) -> str:
             out.append(text(axis, y + 53, f"{value:+.3f}R | n={count}", 14, "#243A45", "middle", 700))
     out.extend((
         text(28, 563, "Price R includes quoted spread, excludes commissions and financing. Sample counts are verified closes.", 13, "#526976"),
-        text(28, 586, "A has incomplete confirmation coverage; its two censored long-only entries are excluded from closed-trade means.", 13, "#526976"),
-        text(28, 609, "Unequal periods and observation coverage: descriptive comparison, not a test of a structural break. Sources: ORBF1, ORBF2.", 13, "#526976"),
+        text(28, 586, f'A has {incomplete_a} incomplete confirmation {day_label}; its {censors_a} censored entries are excluded from closed-trade means.', 13, "#526976"),
+        text(28, 609, f"Unequal periods and observation coverage: descriptive comparison, not a test of a structural break. Sources: {sources}.", 13, "#526976"),
         "</svg>",
     ))
     return "\n".join(out) + "\n"

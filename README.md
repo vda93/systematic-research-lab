@@ -10,13 +10,13 @@ An opening-range timing search across German, Japanese and UK index CFDs produce
 
 [Read the study](https://vda93.github.io/systematic-research-lab/orbindex.html) · [Complete technical record](studies/orbindex.md)
 
-## ORB: cash-open setup, EMA filter, and later results
+## ORB: cash-open setup, filters, and historical OOS
 
 Another opening-range breakout study: form the range at the New York cash open, require a completed candle to confirm the breakout, place the stop across the range, and take profit at a fixed multiple of initial risk. I later added an EMA trend filter and compared the variants in discovery.
 
 The study reports **48 US500/USTEC configurations**, then compares the same selected US500 setups in sample and in later historical periods. All four weakened; the bidirectional ATR setup stayed slightly positive. The EMA extension has no qualified later result, and no candidate was promoted.
 
-[Setup and full study](studies/orb-setup-filters.md) · [Released aggregate data](data/orb-setup-filters-public.json)
+[Read the study](https://vda93.github.io/systematic-research-lab/orb-setup-filters.html) · [Research case study](studies/orb-setup-filters.md) · [Technical appendix](studies/orb-setup-filters-appendix.md) · [Released aggregate data](data/orb-setup-filters-public.json)
 
 ## News-Release Trading
 
