@@ -69,13 +69,20 @@ jobs:
             snapshot="$RUNNER_TEMP/site-$version"
             mkdir -p "$snapshot"
             git archive "$revision" docs | tar -x -C "$snapshot"
-            for page in index orbindex macroimpulse; do
+            for page in index orbindex macroimpulse orb-setup-filters; do
+              if [[ "$version" == before && "$page" == orb-setup-filters && ! -e "$snapshot/docs/$page.html" ]]; then
+                continue
+              fi
               test -s "$snapshot/docs/$page.html"
-              for viewport in 1440,1000 390,844; do
+              viewports=(1440,1000 390,844)
+              if [[ "$page" == orb-setup-filters ]]; then
+                viewports+=(1440,6000 390,10000)
+              fi
+              for viewport in "${viewports[@]}"; do
                 google-chrome --headless --disable-gpu --disable-dev-shm-usage \
                   --no-first-run --hide-scrollbars \
                   --user-data-dir="$RUNNER_TEMP/review-chrome" --window-size="$viewport" \
-                  --screenshot="$RUNNER_TEMP/site-review/$version-$page-${viewport%,*}.png" \
+                  --screenshot="$RUNNER_TEMP/site-review/$version-$page-${viewport/,/x}.png" \
                   "file://$snapshot/docs/$page.html"
               done
             done

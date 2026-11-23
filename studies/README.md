@@ -6,11 +6,11 @@ A broad search across opening times and three index CFD markets led to three fro
 
 [Short research article](https://vda93.github.io/systematic-research-lab/orbindex.html) · [Full technical study](orbindex.md) · [Evidence](../docs/evidence.md#ix3)
 
-## ORB: cash-open setup, EMA filter, and later results
+## ORB: cash-open setup, filters, and historical OOS
 
 Another ORB study starts with the exact cash-open range, candle confirmation, entry, stop, and target rules. It then follows the later EMA extension, the 48-configuration discovery comparison, and the selected US500 setups' weaker historical out-of-sample results. No EMA-filtered variant has a qualified later result. No candidate was promoted.
 
-[Setup and complete study](orb-setup-filters.md) · [Public aggregate table](../data/orb-setup-filters-public.json) · [Discovery evidence](../docs/evidence.md#orbf1) / [Later evidence](../docs/evidence.md#orbf2)
+[Short research article](https://vda93.github.io/systematic-research-lab/orb-setup-filters.html) · [Research case study](orb-setup-filters.md) · [Technical appendix](orb-setup-filters-appendix.md) · [Public aggregate table](../data/orb-setup-filters-public.json) · [Discovery evidence](../docs/evidence.md#orbf1) / [Later evidence](../docs/evidence.md#orbf2)
 
 ## News-Release Trading
 

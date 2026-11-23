@@ -5,6 +5,172 @@ from __future__ import annotations
 import json
 
 STUDIES = json.loads(r"""{
+  "orb-setup-filters": {
+    "name": "ORB Setup and Filters",
+    "title": "Opening-range breakout: filters and later performance",
+    "technical": "studies/orb-setup-filters.md",
+    "appendix": "studies/orb-setup-filters-appendix.md",
+    "data": "data/orb-setup-filters-public.json",
+    "cover": "orb-setup-filters-comparison.svg",
+    "cover_alt": "The same four opening-range setups compared on average gross risk units per close in discovery and two later historical cohorts",
+    "subtitle": "Another opening-range breakout study: define the setup, compare range and filter choices, then carry frozen candidates into later historical data.",
+    "decision": "No candidate promoted. Later results weakened, the remaining positive margin was sensitive to costs, and the available evidence did not establish positive expectancy.",
+    "caveat": "This was a retrospective historical evaluation with incomplete coverage, not a live forward test. The EMA extension has no qualified later result.",
+    "facts": {
+      "range": {
+        "value": "15",
+        "source": "ORBF1"
+      },
+      "open": {
+        "value": "09:30",
+        "source": "ORBF1"
+      },
+      "target": {
+        "value": "1.5",
+        "source": "ORBF1"
+      },
+      "configurations": {
+        "value": "48",
+        "source": "ORBF1"
+      },
+      "us": {
+        "value": "US500",
+        "source": "ORBF1"
+      },
+      "tech": {
+        "value": "USTEC",
+        "source": "ORBF1"
+      },
+      "discovery_mean": {
+        "value": "+0.187",
+        "source": "ORBF1"
+      },
+      "a_mean": {
+        "value": "+0.063",
+        "source": "ORBF2"
+      },
+      "b_mean": {
+        "value": "+0.056",
+        "source": "ORBF2"
+      },
+      "closes": {
+        "value": "114",
+        "source": "ORBF2"
+      },
+      "scenario_total": {
+        "value": "+5.32",
+        "source": "ORBF2"
+      },
+      "extra_cost": {
+        "value": "0.025",
+        "source": "ORBF2"
+      },
+      "stressed_total": {
+        "value": "-0.38",
+        "source": "ORBF2"
+      },
+      "contrasts": {
+        "value": "27",
+        "source": "ORBF1"
+      }
+    },
+    "sections": [
+      {
+        "heading": "The setup and the research question",
+        "paragraphs": [
+          "The reference setup measures the first {range} minutes after the {open} New York cash open. A completed fifteen-minute midpoint candle must close outside that range, after the preceding close was inside it. Entry uses the next eligible quote, with the stop at the opposite range boundary and a target of {target} times initial price risk.",
+          "Midpoint means the average of Bid and Ask; execution uses the tradeable side of the quote. The tests reject stop or target prices outside the contract's permitted price increments instead of rounding them, which materially changes trade selection. Positions may remain open beyond the entry day. Only one position may be open per entry session; positions from different sessions may overlap.",
+          "I compared range lengths, trade directions and a volatility filter based on average true range (ATR), then added an exponential moving average (EMA) trend filter during discovery. The research question was whether those choices improved the observed results and whether frozen candidates held up later. The full matrix contained {configurations} configurations across {us} and {tech} CFDs."
+        ],
+        "sources": [
+          "ORBF1"
+        ]
+      },
+      {
+        "heading": "The same setups in discovery and later history",
+        "paragraphs": [
+          "All four selected {us} setups had positive average gross R in discovery. The long-only alternatives became negative on observed natural closes in both later cohorts. The bidirectional setup with ATR stayed slightly positive, but its average outcome fell substantially.",
+          "R expresses an outcome relative to initial trade risk. These figures already include quoted spread through Bid/Ask execution but exclude commission and other account charges. The chart keeps the same setups and outcome measure across periods, and shows how many natural closes support each estimate."
+        ],
+        "table": {
+          "heading": [
+            "{us} bidirectional ATR candidate",
+            "Average gross R per close"
+          ],
+          "rows": [
+            [
+              "Discovery",
+              "{discovery_mean}R"
+            ],
+            [
+              "Later cohort A",
+              "{a_mean}R"
+            ],
+            [
+              "Later cohort B",
+              "{b_mean}R"
+            ]
+          ]
+        },
+        "figure": "orb-setup-filters-comparison.svg",
+        "alt": "Four frozen US500 configurations show lower average gross R per natural close in the two later historical cohorts than in discovery",
+        "caption": "All plotted setups have EMA off. Cohort A has incomplete coverage, so these observed-close outcomes do not establish a complete-cohort return. The comparison is descriptive and does not establish why performance changed.",
+        "sources": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "heading": "What adding the EMA actually showed",
+        "paragraphs": [
+          "The EMA filter permits a long breakout only above the moving average and a short breakout only below it. I compared the filter on and off while holding the other settings fixed.",
+          "The discovery results were mixed. Some pairs improved profit factor, while others worsened. Drawdown often fell with participation, but those changes did not establish better daily returns. None of the {contrasts} fixed comparisons survived the multiple-testing correction. Those comparisons tested differences between configurations, not every strategy’s absolute expectancy.",
+          "The later-tested {us} setups all had EMA off. The shortlisted EMA-on {tech} candidate was blocked by source-data failures. There is therefore no qualified EMA out-of-sample improvement to report."
+        ],
+        "sources": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "heading": "How much margin remained after costs?",
+        "paragraphs": [
+          "The bidirectional ATR candidate made approximately {scenario_total}R across {closes} natural closes after the published-commission assumption. That is a closed-trade scenario total, not a continuous account return or a complete daily series.",
+          "An additional hypothetical {extra_cost}R per fill side reduced that total to approximately {stressed_total}R, before extra financing. This holds the trades fixed to measure cost sensitivity; it is not an estimate of actual slippage. Historical all-in broker net performance remains unknown."
+        ],
+        "sources": [
+          "ORBF2"
+        ]
+      },
+      {
+        "heading": "What the research can support",
+        "paragraphs": [
+          "The candidate list was frozen before its later strategy outcomes were opened, but the evaluation was historical and some related work had exposed later data. It should not be described as a completely untouched forward test.",
+          "Incomplete confirmation coverage in cohort A prevents the full primary daily-return statistic from being estimated. Positions still open at the cutoff were censored rather than counted as ordinary exits. The supplemental estimate from the fully observed cohort B remained inconclusive.",
+          "Discovery missing-source sessions contributed zero recorded execution while remaining in the calendar denominator. The later analysis instead leaves unavailable daily outcomes missing. Neither convention turns absent quotes into an observed no-signal day."
+        ],
+        "sources": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      },
+      {
+        "heading": "The decision and the next useful test",
+        "paragraphs": [
+          "The study supports withholding promotion: the long-only results deteriorated, the remaining positive margin was fragile, and the EMA extension still lacks a qualified later evaluation.",
+          "The next useful evidence would be a complete, admissible later sample evaluated under frozen rules and declared costs. Retuning on the outcomes already examined would create a new development exercise and require a fresh evaluation sample."
+        ],
+        "sources": [
+          "ORBF1",
+          "ORBF2"
+        ]
+      }
+    ],
+    "verification": [
+      "The released aggregates reproduce the charts and selected arithmetic. They do not contain the daily inputs needed to recompute the reported bootstrap intervals or adjusted significance tests.",
+      "Research choices and final decisions were directed by the repository author, with AI-assisted implementation and test automation."
+    ]
+  },
   "orbindex": {
     "name": "ORBINDEX",
     "title": "ORBINDEX: promising timings, later losses",
@@ -128,7 +294,8 @@ STUDIES = json.loads(r"""{
           "IX4"
         ]
       }
-    ]
+    ],
+    "data": "data/orbindex-public.json"
   },
   "macroimpulse": {
     "name": "News-Release Trading",
@@ -189,6 +356,7 @@ STUDIES = json.loads(r"""{
           "B09"
         ]
       }
-    ]
+    ],
+    "data": "data/macro-public.json"
   }
 }""")

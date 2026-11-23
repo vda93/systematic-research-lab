@@ -16,7 +16,7 @@ class SiteRenderingTests(unittest.TestCase):
     def test_social_metadata_and_linkedin_identity_are_present(self):
         base = 'https://vda93.github.io/systematic-research-lab/'
         linkedin = 'https://www.linkedin.com/in/andrew-vu-4861b9191/'
-        for page in ('index', 'orbindex', 'macroimpulse'):
+        for page in ('index', 'orbindex', 'macroimpulse', 'orb-setup-filters'):
             with self.subTest(page=page):
                 html = (ROOT / 'docs' / f'{page}.html').read_text(encoding='utf-8')
                 expected_url = base if page == 'index' else base + f'{page}.html'
@@ -54,7 +54,8 @@ class SiteRenderingTests(unittest.TestCase):
     def test_short_website_and_full_technical_record_are_distinct(self):
         orb = (ROOT / "docs/orbindex.html").read_text(encoding="utf-8")
         news = (ROOT / "docs/macroimpulse.html").read_text(encoding="utf-8")
-        for html in (orb, news):
+        filters = (ROOT / "docs/orb-setup-filters.html").read_text(encoding="utf-8")
+        for html in (orb, news, filters):
             self.assertNotIn("OOS_EXPLORATORY", html)
             self.assertNotIn("POSSIBLE_PRIOR_EXPOSURE", html)
             self.assertIn("Data and verification", html)
@@ -101,7 +102,8 @@ class SiteRenderingTests(unittest.TestCase):
         outputs = render_site.site_artifacts(ROOT)
         self.assertEqual(
             {name for name in outputs if name.endswith(".html")},
-            {"docs/index.html", "docs/orbindex.html", "docs/macroimpulse.html"},
+            {"docs/index.html", "docs/orbindex.html", "docs/macroimpulse.html",
+             "docs/orb-setup-filters.html"},
         )
         for path, payload in outputs.items():
             with self.subTest(path=path):
@@ -111,14 +113,31 @@ class SiteRenderingTests(unittest.TestCase):
                         (ROOT / "figures" / Path(path).name).read_bytes(), payload
                     )
 
-    def test_only_two_public_studies_and_plain_english_decisions(self):
+    def test_three_public_studies_and_plain_english_decisions(self):
         landing = (ROOT / "docs/index.html").read_text(encoding="utf-8")
         self.assertIn("ORBINDEX", landing)
         self.assertIn("News-Release Trading", landing)
+        self.assertIn("ORB Setup and Filters", landing)
+        self.assertEqual(landing.count('<article class="card">'), 3)
         self.assertNotIn("MacroImpulse", landing)
         self.assertNotIn("NOWICK", landing)
         self.assertNotIn("Engulfing", landing)
         self.assertIn("Main limitation.", (ROOT / "docs/orbindex.html").read_text())
+
+    def test_each_study_links_its_own_aggregate_data(self):
+        expected = {
+            "orbindex": "data/orbindex-public.json",
+            "macroimpulse": "data/macro-public.json",
+            "orb-setup-filters": "data/orb-setup-filters-public.json",
+        }
+        for slug, data in expected.items():
+            with self.subTest(study=slug):
+                page = (ROOT / "docs" / f"{slug}.html").read_text(encoding="utf-8")
+                self.assertIn(f'{render_site.REPO}/blob/main/{data}', page)
+                for other in set(expected.values()) - {data}:
+                    self.assertNotIn(f'{render_site.REPO}/blob/main/{other}', page)
+        filters = (ROOT / "docs/orb-setup-filters.html").read_text(encoding="utf-8")
+        self.assertIn("studies/orb-setup-filters-appendix.md", filters)
 
 
 if __name__ == "__main__":
